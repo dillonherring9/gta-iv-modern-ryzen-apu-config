@@ -24,6 +24,7 @@ The Version 2 trio was supplied and tested together by the package publisher on 
 - [What This Package Does](#what-this-package-does)
 - [Package Contents](#package-contents)
 - [Recommended Installation Order](#recommended-installation-order)
+- [Automatic Installer](#automatic-installer)
 - [Graphics and Performance Profile](#graphics-and-performance-profile)
 - [DXVK Configuration](#dxvk-configuration)
 - [Shader Preloading](#shader-preloading)
@@ -121,6 +122,48 @@ Do not add a second ASI loader, `d3d9.dll`, `dxgi.dll`, DXVK wrapper, shader pro
 
 ---
 
+## Automatic Installer
+
+The **GTA IV Version 2 Automatic Installer** is an optional Windows installer for the complete, tested Version 2 configuration plus `stream.ini`. It is provided for users who want the supported files placed in their intended locations without manually sorting the paths. It does **not** include GTA IV, Rockstar Launcher files, save files, executable replacements, DXVK binaries, FusionFix binaries, or any third-party mod assets.
+
+> **Before running it:** Close GTA IV, the Rockstar Games Launcher, and any mod-management utility that might hold a configuration file open. Start the installer normally and approve the Windows administrator prompt. At the directory page, select the GTA IV installation folder that directly contains `GTAIV.EXE`—for example, `C:\Program Files (x86)\Rockstar Games\GTA IV`. The installer validates that `GTAIV.EXE` is present before it writes any files.
+
+### Exact file deployment
+
+| Installer file | Destination relative to selected GTA IV folder | Purpose |
+|---|---|---|
+| `dxvk.conf` | `\dxvk.conf` | Version 2 DXVK/Vulkan renderer profile. |
+| `stream.ini` | `\pc\stream.ini` | Streaming configuration supplied with the automatic-installer update. |
+| `AudioMap.ini` | `\plugins\AudioMap.ini` | Supplied custom audio mapping. |
+| `ConsoleSelectMenuIV.ini` | `\plugins\ConsoleSelectMenuIV.ini` | Supplied console-style menu configuration. |
+| `GTAIV.EFLC.FusionFix.cfg` | `\plugins\GTAIV.EFLC.FusionFix.cfg` | Main Version 2 FusionFix graphics and frame-pacing profile. |
+| `GTAIV.EFLC.FusionFix.ini` | `\plugins\GTAIV.EFLC.FusionFix.ini` | Advanced Version 2 FusionFix configuration. |
+| `GTAIV.XboxRainDroplets.ini` | `\plugins\GTAIV.XboxRainDroplets.ini` | Rain-droplet density configuration. |
+| `LibertyCityPlates.txt` | `\plugins\LibertyCityPlates.txt` | Supplied plate and vehicle-effect configuration. |
+| `preload.list` | `\common\shaders\preload.list` | Shader preload metadata required by the matching shader setup. |
+
+The installer overwrites an existing file at each of these exact paths. It does not relocate files, activate a second renderer or ASI loader, or change any game archives.
+
+### Backup and Windows compatibility behavior
+
+Before overwriting anything, the installer creates a timestamped backup beneath the selected game directory:
+
+```text
+<GTA IV folder>\GTAIV_V2_Installer_Backups\YYYY-MM-DD_HH-MM-SS\
+```
+
+Only files that existed before installation are copied into that timestamped folder. The installer also records its latest backup and the previous per-user Windows compatibility state in `GTAIV_V2_Installer_Backups\LAST_BACKUP.ini`. Existing backup folders are retained; the automatic uninstaller uses the most recent installer backup recorded in that state file.
+
+The installer sets **`GTAIV.EXE` to Run as administrator** through the current Windows user’s compatibility settings. If a prior compatibility value existed, it is retained in the backup state so a rollback can restore it rather than indiscriminately clearing it.
+
+### Reversible rollback
+
+Use **Apps & Features**, **Installed apps**, or `GTAIV_V2_Automatic_Installer_Uninstall.exe` in the selected GTA IV directory to launch the uninstaller. When it asks whether to restore the latest backup, choose **Yes** to restore the files that existed before installation. For a target that did not exist before the installer ran, rollback removes the installer-created file. The accepted rollback also restores the prior `GTAIV.EXE` compatibility value, including removal of the Run-as-administrator flag when there was no earlier compatibility setting.
+
+Choose **No** only if you want to remove the uninstaller registration while keeping the current Version 2 files and current compatibility setting in place. The automatic installer is intentionally limited to the nine files in the table above; use the manual `originals/` backups for changes outside that scope.
+
+---
+
 ## Graphics and Performance Profile
 
 The following values describe the Version 2 high-visual profile. These three configuration files are intended to be used as one matched set:
@@ -212,6 +255,10 @@ If dense traffic remains heavy, lower the in-game traffic-density slider from `1
 ---
 
 ## Rollback
+
+If the automatic installer was used, close GTA IV and its launcher, then launch `GTAIV_V2_Automatic_Installer_Uninstall.exe` from the selected GTA IV folder or use Windows **Installed apps**. Choose **Yes** when it offers to restore the latest backup. This restores the last pre-install copies of the nine installer-managed files and returns the prior `GTAIV.EXE` compatibility setting.
+
+For a manual installation, follow this sequence:
 
 1. Close GTA IV and its launcher.
 2. Restore the files from `originals/` to their original locations.
