@@ -83,11 +83,19 @@ A simple, honest report is enough. Tell me where it was smooth, where it stutter
 
 The current official FusionFix package and the supplied configuration files do **not** expose a verified `forceIntelGraphics=true` setting. Do not paste that unknown key into `dxvk.conf`, `GTAIV.EFLC.FusionFix.ini`, or another mod configuration file.
 
-For an Intel iGPU or hybrid system, use **Windows Settings > System > Display > Graphics** to add the selected `GTAIV.EXE` desktop app and choose its preferred GPU. Intel documents that Windows 10 and Windows 11 workflow for associating a desktop game or application with a preferred GPU.[^9] The Version 3 Advanced Executable Edition can apply the same integrated/power-saving preference automatically when you explicitly select its **unchecked-by-default Intel iGPU option**.
+For an Intel iGPU or hybrid system, use **Windows Settings > System > Display > Graphics** to add the selected `GTAIV.EXE` desktop app and choose its preferred GPU. Intel documents that Windows 10 and Windows 11 workflow for associating a desktop game or application with a preferred GPU.[^9]
 
-> **This is still conditional, not universal.** A Windows GPU preference expresses what you want Windows to favor; it does not guarantee a particular adapter will be available or override every laptop, driver, external-display, or hybrid-graphics limitation. Restart GTA IV after changing it, then test the base story and both EFLC episodes before deciding it helped.
+When its **unchecked-by-default Intel GPU / iGPU option** is deliberately selected, the Version 3 Advanced Executable Edition applies that Windows integrated/power-saving preference **and** replaces its newly installed game-root `dxvk.conf` with the included Intel variant:
 
-When you report back, include the actual GPU selected by Windows, your graphics driver, FusionFix/DXVK versions, resolution, and whether the preference changed launch behavior, stability, or frame pacing. That is the kind of detail that can turn a guess into useful cross-APU support.
+```ini
+dxvk.deviceFilter = "Intel"
+```
+
+That is the real supported DXVK device-name substring filter; it is not a FusionFix `forceIntelGraphics=true` setting.[^10] The `Intel` substring filters DXVK to matching Intel Vulkan devices. It is useful for the Intel systems this option is meant for, but it can be too broad on a computer containing both Intel integrated and Intel Arc graphics, and a wrong filter can stop DXVK from finding a usable device. Leave the option unchecked unless you actually intend to force Intel graphics; use the Version 3 uninstaller to restore the prior `dxvk.conf` and Windows preference if the game fails to start.
+
+> **This is still conditional, not universal.** A Windows preference plus a DXVK filter expresses an Intel-GPU selection path; it does not override every laptop, driver, external-display, or hybrid-graphics limitation. Restart GTA IV after changing it, then test the base story and both EFLC episodes before deciding it helped.
+
+When you report back, include the exact Intel GPU name, whether you also have Intel Arc or another GPU, your graphics driver, FusionFix/DXVK versions, resolution, and whether the preference changed launch behavior, stability, or frame pacing. That is the kind of detail that can turn a guess into useful cross-APU support.
 
 ---
 
@@ -211,7 +219,7 @@ The separate **Version 3 Advanced Executable Edition** keeps the same nine-file 
 
 | Version 3 choice | Default | Exact behavior |
 |---|---:|---|
-| **Intel iGPU: prefer the integrated GPU for GTAIV.exe** | Unchecked | When explicitly selected, writes the Windows per-app preference `GpuPreference=1;` for the chosen `GTAIV.EXE` under `HKCU\Software\Microsoft\DirectX\UserGpuPreferences`. It does not inject an unverified FusionFix/DXVK key. |
+| **Intel GPU / iGPU: prefer Intel graphics for GTAIV.exe** | Unchecked | When explicitly selected, writes the Windows per-app preference `GpuPreference=1;` for the chosen `GTAIV.EXE` and deploys DXVK’s supported `dxvk.deviceFilter = "Intel"` line in the managed game-root `dxvk.conf`. It does not inject an unverified FusionFix key. |
 | **Configure GTAIV.exe to run as administrator** | Checked | Unless the user unchecks it, stores the prior current-user compatibility value and writes `RUNASADMIN` for the selected executable. |
 
 Version 3 accepts only the real GTA IV folder—the one that directly contains `GTAIV.EXE`. It never adds or creates a second `GTAIV` child folder. Its uninstaller can restore the latest managed-file backup and the earlier Windows setting values that Version 3 changed. The Version 3 source, original installer artwork, documentation, and configuration material are covered by the **GPU All the Way** reuse permission above.
@@ -351,3 +359,4 @@ The configuration is provided as-is. Always keep a backup. A change that feels p
 [^7]: [Gillian’s mod-loading guide](https://gillian-guide.github.io/extras/modloading/) — Fusion Overloader precedence and update-folder guidance.
 [^8]: [DXVK GPLAsync project](https://gitlab.com/Ph42oN/dxvk-gplasync) — GPL/async cache behavior and fork-specific compatibility context.
 [^9]: [Intel: How To Set the Default GPU for Applications and Games](https://www.intel.com/content/www/us/en/support/articles/000090168/graphics.html) — Windows 10/11 per-app graphics-preference workflow.
+[^10]: [DXVK README: Device filter](https://github.com/doitsujin/dxvk#device-filter) — device-name substring filter syntax and warning that a bad filter can prevent D3D device creation.
