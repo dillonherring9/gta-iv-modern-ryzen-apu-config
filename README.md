@@ -1,219 +1,228 @@
-# Getting GTA IV to Run Smooth and Look Next Gen on PC on Modern Ryzen 5 PRO APUs
+# Getting GTA IV to Run Smooth and Look Next Gen on Modern APUs
 
-## And Possibly Other Hardware with Similar Specifications
+## A Tested Ryzen 5 PRO 6650U / Radeon 660M Configuration — and a Community Compatibility Project
 
-> **Community configuration guide — not an original mod**  
-> This is a community-oriented configuration package for **GTA IV Complete Edition** on modern Ryzen 5 PRO integrated-graphics systems. I did not create FusionFix, DXVK, the Drag-and-Drop Archive, Fusion Overloader, LibertyCityPlates, Xbox Rain Droplets, Project2DFX, restored vegetation, vehicle packs, traffic/popcycle files, or any other third-party project referenced here. Please preserve the original authors, licenses, and download information for every mod used.
+> **An honest community configuration package, not an original-mod claim.**
+> I put this together around the way I actually play GTA IV: a legitimate GTA IV Complete Edition install, a modern mod stack, a Ryzen 5 PRO 6650U with Radeon 660M integrated graphics, and **16 GB of dual-channel memory**. My goal was never to sell a miracle fix or promise the same numbers for every system. I wanted a cleaner, more consistent experience: modern visual fixes, better frame pacing, fewer ugly stalls, and a setup I could roll back when something did not feel right.
 
-This guide describes a balanced way to make GTA IV look substantially more modern while improving frame pacing on hardware similar to an **AMD Ryzen 5 PRO 6650U with Radeon 660M graphics and 16 GB of dual-channel memory**. It is also suitable as a starting point for other recent AMD APUs with comparable integrated graphics and shared-memory bandwidth.
-
-The objective is not to promise a constant 60 FPS in every situation. GTA IV can remain CPU-limited by traffic, world streaming, vehicle modifications, scripts, and weather even when the GPU has headroom. The objective is a stable and repeatable baseline: modern visual fixes, sensible shader loading, fewer expensive frame-time spikes, and a reversible installation.
-
-## Version 2 Tested Update
-
-Version 2 is the **same complete Version 1 package**, rebuilt with only the three matching configuration files replaced: `tuned/dxvk.conf`, `tuned/GTAIV.EFLC.FusionFix.cfg`, and `tuned/GTAIV.EFLC.FusionFix.ini`. Every other file, backup, companion configuration, validation record, and document remains in place.
-
-The Version 2 trio was supplied and tested together by the package publisher on the reference Ryzen 5 PRO 6650U / Radeon 660M system. The publisher reports smooth high-setting, high-resolution play without the earlier repeated skipping. This is a test result on the reference setup—not a performance guarantee on every driver, resolution, thermal profile, or mod stack.
+This repository is built from my tested configuration path and the work of the modding community. I did **not** create FusionFix, DXVK, Gillian’s Drag-and-Drop Archive, Fusion Overloader, LibertyCityPlates, Xbox Rain Droplets, Project2DFX, restored vegetation, vehicle packs, traffic/popcycle files, or any other third-party project discussed here. Their original authors deserve the credit. This package is my organized configuration, documentation, and installer layer for using those projects together responsibly.
 
 ---
 
 ## Table of Contents
 
-- [Version 2 Tested Update](#version-2-tested-update)
-- [Target Hardware](#target-hardware)
-- [What This Package Does](#what-this-package-does)
+- [My Reference Setup and Result](#my-reference-setup-and-result)
+- [Help Me Map APU Compatibility](#help-me-map-apu-compatibility)
+- [What This Package Is](#what-this-package-is)
+- [How I Put It Together](#how-i-put-it-together)
+- [What You Need to Install Separately](#what-you-need-to-install-separately)
 - [Package Contents](#package-contents)
-- [Recommended Installation Order](#recommended-installation-order)
+- [Recommended Installation Path](#recommended-installation-path)
 - [Automatic Installer](#automatic-installer)
-- [Graphics and Performance Profile](#graphics-and-performance-profile)
-- [DXVK Configuration](#dxvk-configuration)
+- [Version 2 Graphics and Performance Profile](#version-2-graphics-and-performance-profile)
+- [DXVK Configuration Notes](#dxvk-configuration-notes)
 - [Shader Preloading](#shader-preloading)
-- [Testing the Configuration](#testing-the-configuration)
-- [Troubleshooting](#troubleshooting)
-- [Rollback](#rollback)
-- [Credits and Attribution](#credits-and-attribution)
-- [Disclaimer](#disclaimer)
-- [References](#references)
+- [EFLC and Loose-File Compatibility Note](#eflc-and-loose-file-compatibility-note)
+- [Testing, Troubleshooting, and Rollback](#testing-troubleshooting-and-rollback)
+- [Credits, Boundaries, and Sources](#credits-boundaries-and-sources)
 
 ---
 
-## Target Hardware
+## My Reference Setup and Result
 
-The reference system for this configuration is an **AMD Ryzen 5 PRO 6650U** with integrated **Radeon 660M** graphics and **16 GB of dual-channel system memory**.
+I built and tested this Version 2 profile around the following system. It is the baseline for the claims in this README, not a requirement and not a guarantee that every APU will behave the same way.
 
-The Radeon 660M is an RDNA 2 integrated GPU. Unlike a discrete graphics card with a large dedicated VRAM pool, it shares system memory with the CPU. Dual-channel memory improves the available bandwidth, but GTA IV still benefits from controlling shader compilation, shadows, rain particles, full-screen post-processing, and traffic-related CPU load.
-
-| Component | Reference system | Configuration implication |
+| Component | My reference setup | Why it matters here |
 |---|---|---|
-| Processor | Ryzen 5 PRO 6650U | World streaming, traffic, scripts, and vehicle packs may remain CPU-limited. |
-| Graphics | Radeon 660M integrated GPU | Shadow filters, rain particles, shader compilation, and post-processing need careful balancing. |
-| Memory | 16 GB dual-channel | A strong configuration for an integrated GPU, but memory is shared with Windows and the game. |
-| Renderer | FusionFix with DXVK/Vulkan when stable | Use one renderer path and avoid stacking wrappers. |
-| Frame target | 60 FPS where the scene allows it | Evaluate frame-time consistency, not only the highest FPS number. |
+| Processor | AMD Ryzen 5 PRO 6650U | GTA IV still leans heavily on CPU work for streaming, traffic, scripts, weather, and complex mod stacks. |
+| Graphics | Integrated Radeon 660M, RDNA 2 | It uses shared system memory, so shadows, post-processing, rain, shader compilation, and display resolution need balance. |
+| Memory | 16 GB dual-channel system memory | Dual-channel bandwidth matters to an integrated GPU, but Windows and the game still share the same memory pool. |
+| Game | GTA IV Complete Edition, build 1.2.0.59 | This is the Complete Edition build context identified in Gillian’s FusionFix guide.[^1] |
+| Renderer path | FusionFix with one active DXVK/Vulkan path when stable | Stacking wrappers and loaders makes crashes and stutter harder to diagnose. |
+| Frame target | 60 FPS where the scene allows it | I judge this setup by frame-time consistency and actual playability, not only the highest FPS counter. |
 
-Results vary with display resolution, refresh rate, cooling, power limits, AMD driver version, Windows configuration, and the number of installed visual and vehicle mods.
+On my reference setup, I tested the three Version 2 configuration files together and found that they made high settings and a higher resolution feel much smoother, without the repeated skipping I was trying to get rid of. Traffic, weather, shader warm-up, drivers, thermals, resolution, power limits, and extra mods can still change the result. This is a **tested starting point**, not a universal performance promise.
 
 ---
 
-## What This Package Does
+## Help Me Map APU Compatibility
 
-Version 2 keeps the Version 1 package intact but replaces the three matching configuration files with a **tested high-visual DXVK and FusionFix profile**. It retains FusionFix as the single intended gameplay limiter while restoring the visual settings that the publisher was able to use smoothly on the reference system.
+My Ryzen/Radeon setup is the reference system because it is the hardware I can speak about honestly. I do **not** want the title or branding to make people think this is locked to AMD if the evidence starts showing that it works well on Intel, other AMD APUs, or similar integrated-graphics systems too.
 
-| Area | Configuration choice | Reason |
+If this works for you on another APU or iGPU, please open a GitHub issue or leave a release comment with the details below. I am especially interested in reports from **Intel Core Ultra/Arc iGPU, Intel Iris Xe, other Radeon 600M/700M/800M-class APUs, and comparable mobile systems**. Clear reports—good or bad—will help me turn this from one person’s reference build into something more useful for the wider GTA IV community.
+
+> If I receive enough consistent, useful reports across Intel and other non-reference systems, I may move the project toward more vendor-neutral **modern APU** branding. Until then, I will keep the Ryzen 5 PRO 6650U / Radeon 660M label visible so nobody mistakes my tested baseline for a claim of universal support.
+
+### Copy/paste compatibility report
+
+```text
+APU / CPU:
+Integrated GPU or discrete GPU:
+RAM amount and channel configuration:
+Windows version:
+Graphics-driver version:
+GTA IV build:
+FusionFix version:
+DXVK version or variant:
+Resolution and refresh rate:
+Extra mods installed:
+What felt good:
+What did not work:
+DLC test result (The Lost and Damned / The Ballad of Gay Tony):
+Anything you changed from this package:
+```
+
+A simple, honest report is enough. Tell me where it was smooth, where it stuttered, what crashed, and what you had to change. That is how we build something real—one clean test at a time.
+
+---
+
+## What This Package Is
+
+Version 2 preserves the complete Version 1 package and replaces the matched Version 2 configuration trio:
+
+| File | What Version 2 changes |
+|---|---|
+| `tuned/dxvk.conf` | Uses the tested DXVK configuration for the active DXVK/Vulkan path. |
+| `tuned/GTAIV.EFLC.FusionFix.cfg` | Uses the tested high-visual FusionFix graphics and frame-pacing profile. |
+| `tuned/GTAIV.EFLC.FusionFix.ini` | Uses the matching advanced FusionFix profile, including the tested limiter and shadow balance. |
+| `tuned/stream.ini` | Provides the supplied streaming configuration for manual placement in `pc\stream.ini`. |
+
+The package is meant to give you a controlled, repeatable configuration layer. It does **not** replace the game, the launcher, saves, game archives, FusionFix binaries, DXVK binaries, or any separately distributed mod assets.
+
+---
+
+## How I Put It Together
+
+I supplied the reference hardware context, the live configuration files, the Version 2 replacements, the tests I was able to run, and the decisions about how the package should feel. I used **Manus, an AI assistant**, as a research, organization, documentation, packaging, and validation partner. It helped me catalogue the configuration layer, compare the Version 1 and Version 2 files, research the documented behavior of the renderer and mods, organize the installation/rollback instructions, create the optional Windows installer, and verify archive and checksum integrity.
+
+That assistance did **not** make the original mods, test every hardware combination, own the results on a different system, or replace the judgment of the people who built the underlying tools. I made the final choices around my setup, and I want feedback from real players before widening the compatibility claims.
+
+| I provided and directed | Manus helped organize and validate | Supplied or installed separately |
 |---|---|---|
-| Graphics fixes | FusionFix | Provides modern fixes and additional graphics controls for the supported Complete Edition build. |
-| Renderer | DXVK/Vulkan when stable | Translates Direct3D 9 rendering to Vulkan through the active DXVK wrapper. |
-| Frame pacing | One FusionFix 60 FPS limiter | Avoids conflicts between FusionFix, DXVK, Radeon Chill, RTSS, and other limiters. |
-| Anti-aliasing | SMAA | Provides useful edge smoothing without relying on heavier multi-sample options. |
-| Shadows | Shadow Filter 5 with `ExtraDynamicShadows=1` retained | Restores the higher-quality shadow filter while keeping the previously compatible one-level dynamic-shadow setting. |
-| Post-processing | Sun shafts, ambient occlusion, and volumetric fog enabled | Restores the high-visual FusionFix presentation tested by the publisher. |
-| Rain | Reduced static and moving droplet counts | Prevents weather scenes from combining too many particle and lighting costs. |
-| Shader loading | Complete preload list | Helps prevent missing-resource errors when the matching shader files are installed. |
-| Shared-memory behavior | Tested DXVK memory, pipeline, frame-latency, fullscreen-exclusive, and async settings | Keeps the publisher-tested renderer profile while retaining an integrated-APU-aware memory hint. |
+| Reference-system details, target behavior, tested Version 2 files, desired paths, and final review direction | Research synthesis, file comparison, README structure, installer logic, checksum generation, packaging, and rollback documentation | GTA IV, FusionFix, DXVK/DXVK variants, Gillian’s archive, Fusion Overloader, visual mods, vehicles, traffic/popcycle content, and all third-party binaries/assets |
+
+---
+
+## What You Need to Install Separately
+
+This repository gives you configurations and an installer—not a complete pre-modded game. Start with a legitimate GTA IV Complete Edition installation and make sure the unmodified game launches before you begin. Then follow the current instructions from every project you choose to use.
+
+| Component or resource | Where it belongs in the process |
+|---|---|
+| [FusionFix](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix) | Install and configure the current official release before applying this profile. |
+| [DXVK](https://github.com/doitsujin/dxvk) or a compatible tested variant | Use only one intended Direct3D-to-Vulkan wrapper path. Keep the version and documentation in mind. |
+| [Gillian’s Drag-and-Drop Archive](https://gillian-guide.github.io/drag-and-drop-archive/) | Follow the archive’s own current instructions. It is an all-in-one resource, but it still has its own setup rules. |
+| Fusion Overloader | Install only when required by the archive or the mod documentation you are following. Respect its precedence rules. |
+| LibertyCityPlates, Xbox Rain Droplets, Project2DFX, vegetation, vehicle, traffic, and audio mods | Obtain these from their original sources, preserve their credits, and test them in small groups. |
+
+Do not add a second ASI loader, `d3d9.dll`, `dxgi.dll`, DXVK wrapper, shader proxy, or random `update`-folder priority layer on top of the path you intend to use. One loader path and one renderer path are easier to troubleshoot than a stack of overlapping fixes.[^7]
 
 ---
 
 ## Package Contents
 
-| Path | Purpose |
-|---|---|
-| `tuned/GTAIV.EFLC.FusionFix.cfg` | Main FusionFix graphics and frame-pacing settings. |
-| `tuned/GTAIV.EFLC.FusionFix.ini` | Advanced FusionFix shadow, streaming, and limiter settings. |
-| `tuned/dxvk.conf` | DXVK translation-layer settings for shader compilation, latency, memory reporting, and presentation. |
-| `tuned/GTAIV.XboxRainDroplets.ini` | Rain particle-density settings. |
-| `tuned/preload.list` | Shader preload list containing the base entries and the required mod shader names. |
-| `tuned/AudioMap.ini` | Supplied custom audio mapping. |
-| `tuned/ConsoleSelectMenuIV.ini` | Supplied console-style menu configuration. |
-| `tuned/LibertyCityPlates.txt` | Supplied license-plate and vehicle-effect configuration. |
-| `originals/` | Backups of the supplied configuration files. |
-| `docs/` | Hardware, configuration, and preload-list documentation. |
-| `validation_report.txt` | File-difference, duplicate-entry, and integrity checks. |
-| `PACKAGE_SHA256SUMS.txt` | Package checksums for maintainers. |
+The refreshed Version 2 **Release** and **Source** ZIPs both include the tuned files below. The Source ZIP also includes originals, assessment documents, the validation report, and a package checksum manifest.
 
-The package does not include GTA IV game files, Rockstar files, proprietary binaries, user saves, or launcher/account data.
+| Package path | Live-game destination for manual installation | Purpose |
+|---|---|---|
+| `tuned/dxvk.conf` | `\dxvk.conf` | Tested Version 2 DXVK renderer profile. |
+| `tuned/stream.ini` | `\pc\stream.ini` | Supplied streaming configuration. |
+| `tuned/AudioMap.ini` | `\plugins\AudioMap.ini` | Supplied custom audio mapping. |
+| `tuned/ConsoleSelectMenuIV.ini` | `\plugins\ConsoleSelectMenuIV.ini` | Supplied console-style menu configuration. |
+| `tuned/GTAIV.EFLC.FusionFix.cfg` | `\plugins\GTAIV.EFLC.FusionFix.cfg` | Main FusionFix graphics and frame-pacing profile. |
+| `tuned/GTAIV.EFLC.FusionFix.ini` | `\plugins\GTAIV.EFLC.FusionFix.ini` | Advanced FusionFix shadow, streaming, and limiter settings. |
+| `tuned/GTAIV.XboxRainDroplets.ini` | `\plugins\GTAIV.XboxRainDroplets.ini` | Reduced rain-droplet density profile. |
+| `tuned/LibertyCityPlates.txt` | `\plugins\LibertyCityPlates.txt` | Supplied license-plate and vehicle-effect configuration. |
+| `tuned/preload.list` | `\common\shaders\preload.list` | Shader preload metadata for the matching shader setup. |
+
+> **Important:** `preload.list` is metadata, not a general mod load order. It only helps when every shader it lists is actually installed in the expected shader directory.[^3] [^4]
 
 ---
 
-## Recommended Installation Order
+## Recommended Installation Path
 
-### 1. Begin with a legitimate working installation
+### 1. Start clean and make a backup
 
-Use **GTA IV Complete Edition** and confirm that the unmodified game launches. FusionFix’s guide identifies the Complete Edition as build **1.2.0.59**.[^1]
+Confirm that your legitimate GTA IV Complete Edition install starts before adding anything. Close GTA IV, Rockstar Games Launcher, and any mod manager. Back up the game folder, or at minimum the existing `plugins`, `pc`, `common\shaders`, `update`, and renderer/configuration files.
 
-### 2. Install the foundation fixes
+### 2. Build the foundation first
 
-Install the current official FusionFix release and the dependencies required by the Drag-and-Drop Archive. Install Fusion Overloader if the archive or the chosen mod documentation requires it. Follow the current instructions from each project rather than mixing DLLs from unrelated guides.
+Install FusionFix and the dependencies required by the Drag-and-Drop Archive. If your planned stack uses Fusion Overloader, install it only as directed by the relevant documentation. Test the game after the foundation layer before adding visual packs, vehicles, traffic, vegetation, or other extras.
 
-### 3. Install the archive and optional enhancements
+### 3. Choose manual installation or the automatic installer
 
-Install the Drag-and-Drop Archive and compatible visual, traffic, vehicle, vegetation, Project2DFX, and LibertyCityPlates components. it's an all in one package. https://gillian-guide.github.io/drag-and-drop-archive/ follow the guides instructions for it. Test the game after the foundation layer and again after groups of optional mods.
+For **manual installation**, copy the nine `tuned/` files to the exact live-game destinations in the Package Contents table. `stream.ini` belongs in `pc\stream.ini`; it is not a plugin file.
 
-### 4. Create a backup
+For the guided route, use the Version 2 Automatic Installer described below. It applies the same nine files to the correct destinations after you choose the GTA IV folder containing `GTAIV.EXE`.
 
-Close GTA IV and its launcher completely. Back up the game folder or at minimum the current `plugins`, `update`, shader, and configuration files. The package includes an `originals/` folder, but a second backup inside the live game folder is recommended.
+### 4. Keep the configuration readable
 
-### 5. Copy the tuned configuration files
-
-Copy each file from `tuned/` over the corresponding file in the same location where the existing installation already keeps that file. Do not invent a new path. Depending on the setup utility and FusionFix build, configuration files may be beside the plugin or in the game root.
-
-### 6. Keep one loader and one renderer path
-
-Do not add a second ASI loader, `d3d9.dll`, `dxgi.dll`, DXVK wrapper, shader proxy, or arbitrary `update`-folder priority layer. FusionFix and the intended Fusion Overloader structure should remain the active loader and file-precedence path.
+Use one primary frame limiter. For this profile, FusionFix is intended to be the limiter. During early testing, disable Radeon Chill, RTSS, extra DXVK caps, or other external caps so you can understand which change affects frame pacing.
 
 ---
 
 ## Automatic Installer
 
-The **GTA IV Version 2 Automatic Installer** is an optional Windows installer for the complete, tested Version 2 configuration plus `stream.ini`. It is provided for users who want the supported files placed in their intended locations without manually sorting the paths. It does **not** include GTA IV, Rockstar Launcher files, save files, executable replacements, DXVK binaries, FusionFix binaries, or any third-party mod assets.
+The **GTA IV Version 2 Automatic Installer** is optional. It deploys the same tested Version 2 configuration and `stream.ini` included in the refreshed ZIPs, but it puts them in the right places for you. It does **not** include GTA IV, launcher files, save files, executable replacements, FusionFix/DXVK binaries, or third-party mod assets.
 
-> **Before running it:** Close GTA IV, the Rockstar Games Launcher, and any mod-management utility that might hold a configuration file open. Start the installer normally and approve the Windows administrator prompt. At the directory page, select the GTA IV installation folder that directly contains `GTAIV.EXE`—for example, `C:\Program Files (x86)\Rockstar Games\GTA IV`. The installer validates that `GTAIV.EXE` is present before it writes any files.
+1. Close GTA IV, the Rockstar Games Launcher, and any mod tool that may hold a configuration file open.
+2. Run `GTAIV_V2_Automatic_Installer_v2.0.0.exe` and approve the Windows administrator prompt.
+3. Select the GTA IV folder that directly contains `GTAIV.EXE`, for example `C:\Program Files (x86)\Rockstar Games\GTA IV`.
+4. The installer validates `GTAIV.EXE`, creates a timestamped backup, writes the nine files shown above, and applies the current user’s **Run as administrator** compatibility flag to `GTAIV.EXE`.
 
-### Exact file deployment
-
-| Installer file | Destination relative to selected GTA IV folder | Purpose |
-|---|---|---|
-| `dxvk.conf` | `\dxvk.conf` | Version 2 DXVK/Vulkan renderer profile. |
-| `stream.ini` | `\pc\stream.ini` | Streaming configuration supplied with the automatic-installer update. |
-| `AudioMap.ini` | `\plugins\AudioMap.ini` | Supplied custom audio mapping. |
-| `ConsoleSelectMenuIV.ini` | `\plugins\ConsoleSelectMenuIV.ini` | Supplied console-style menu configuration. |
-| `GTAIV.EFLC.FusionFix.cfg` | `\plugins\GTAIV.EFLC.FusionFix.cfg` | Main Version 2 FusionFix graphics and frame-pacing profile. |
-| `GTAIV.EFLC.FusionFix.ini` | `\plugins\GTAIV.EFLC.FusionFix.ini` | Advanced Version 2 FusionFix configuration. |
-| `GTAIV.XboxRainDroplets.ini` | `\plugins\GTAIV.XboxRainDroplets.ini` | Rain-droplet density configuration. |
-| `LibertyCityPlates.txt` | `\plugins\LibertyCityPlates.txt` | Supplied plate and vehicle-effect configuration. |
-| `preload.list` | `\common\shaders\preload.list` | Shader preload metadata required by the matching shader setup. |
-
-The installer overwrites an existing file at each of these exact paths. It does not relocate files, activate a second renderer or ASI loader, or change any game archives.
-
-### Backup and Windows compatibility behavior
-
-Before overwriting anything, the installer creates a timestamped backup beneath the selected game directory:
+Before overwriting a file, the installer stores the previous copy beneath:
 
 ```text
 <GTA IV folder>\GTAIV_V2_Installer_Backups\YYYY-MM-DD_HH-MM-SS\
 ```
 
-Only files that existed before installation are copied into that timestamped folder. The installer also records its latest backup and the previous per-user Windows compatibility state in `GTAIV_V2_Installer_Backups\LAST_BACKUP.ini`. Existing backup folders are retained; the automatic uninstaller uses the most recent installer backup recorded in that state file.
-
-The installer sets **`GTAIV.EXE` to Run as administrator** through the current Windows user’s compatibility settings. If a prior compatibility value existed, it is retained in the backup state so a rollback can restore it rather than indiscriminately clearing it.
-
-### Reversible rollback
-
-Use **Apps & Features**, **Installed apps**, or `GTAIV_V2_Automatic_Installer_Uninstall.exe` in the selected GTA IV directory to launch the uninstaller. When it asks whether to restore the latest backup, choose **Yes** to restore the files that existed before installation. For a target that did not exist before the installer ran, rollback removes the installer-created file. The accepted rollback also restores the prior `GTAIV.EXE` compatibility value, including removal of the Run-as-administrator flag when there was no earlier compatibility setting.
-
-Choose **No** only if you want to remove the uninstaller registration while keeping the current Version 2 files and current compatibility setting in place. The automatic installer is intentionally limited to the nine files in the table above; use the manual `originals/` backups for changes outside that scope.
+Its uninstaller can restore the latest installer backup and the compatibility setting that existed before installation. Use **Installed apps** or `GTAIV_V2_Automatic_Installer_Uninstall.exe` in the game folder, then choose **Yes** when it offers to restore the latest backup. If a target file did not exist before installation, the accepted rollback removes the installer-created file.
 
 ---
 
-## Graphics and Performance Profile
+## Version 2 Graphics and Performance Profile
 
-The following values describe the Version 2 high-visual profile. These three configuration files are intended to be used as one matched set:
+These are the choices I kept together as the Version 2 profile. The three Version 2 files are a matched set; do not mix them with an unrelated DXVK or FusionFix profile unless you are ready to test the change yourself.
 
-| File | Original value | Profile value | Purpose |
-|---|---:|---:|---|
-| `GTAIV.EFLC.FusionFix.cfg` | `SunShafts=1` | `SunShafts=1` | Keeps the high-visual sun-shaft effect enabled. |
-| `GTAIV.EFLC.FusionFix.cfg` | `AmbientOcclusion=1` | `AmbientOcclusion=1` | Keeps ambient occlusion enabled. |
-| `GTAIV.EFLC.FusionFix.cfg` | `ShadowFilter=5` | `ShadowFilter=5` | Keeps the higher-quality shadow filter enabled. |
-| `GTAIV.EFLC.FusionFix.cfg` | `VolumetricFog=1` | `VolumetricFog=1` | Keeps volumetric fog enabled. |
-| `GTAIV.EFLC.FusionFix.cfg` | `DepthOfField=7` | `DepthOfField=10` | Uses the supplied Version 2 depth-of-field value. |
-| `GTAIV.EFLC.FusionFix.cfg` | `MotionBlur=1` | `MotionBlur=4` | Uses the supplied Version 2 motion-blur value. |
-| `GTAIV.EFLC.FusionFix.ini` | `ExtraDynamicShadows=2` | `ExtraDynamicShadows=1` | Retains vegetation shadows while reducing heavier secondary shadow work. |
-| `GTAIV.EFLC.FusionFix.ini` | `FpsLimit=-2` | `FpsLimit=60` | Makes the custom-mode fallback explicit. |
-| `GTAIV.XboxRainDroplets.ini` | `MaxDrops=1500` | `MaxDrops=900` | Reduces static rain-particle work. |
-| `GTAIV.XboxRainDroplets.ini` | `MaxMovingDrops=3000` | `MaxMovingDrops=1800` | Reduces moving rain-particle work. |
+| Area | Profile choice | Why I kept it |
+|---|---|---|
+| Frame pacing | FusionFix 60 FPS limit with accurate limiter mode | Keeps the limiter decision in one place. |
+| Anti-aliasing | SMAA | Useful edge smoothing without relying on a heavier multi-sample path. |
+| Shadows | Shadow Filter 5 with `ExtraDynamicShadows=1` | Keeps a richer image while avoiding the heavier second dynamic-shadow level. |
+| Post-processing | Sun shafts, ambient occlusion, and volumetric fog enabled | Part of the high-visual look I tested on the reference system. |
+| Rain | `MaxDrops=900`, `MaxMovingDrops=1800` | Pulls back weather-particle work before cutting the whole look. |
+| Shader loading | Complete supplied preload list | Helps avoid missing-resource errors when every matching shader is installed. |
+| Shared-memory approach | DXVK memory, pipeline, frame-latency, fullscreen, and async settings preserved as tested | Keeps the supplied renderer route while acknowledging the limits of a shared-memory APU. |
 
-The Version 2 trio keeps FusionFix’s 60 FPS preset, accurate limiter mode, SMAA, PC+ tree settings, tone mapping, bloom, distant lights, console vehicle reflections, extended limits, the supplied vehicle budget, and the Version 1 rain settings. It restores the listed high-visual effects because they were reported as stable in the reference-system test.
-
-> **Do not stack frame limiters.** During initial testing, disable Radeon Chill, RTSS, external DXVK caps, and other per-game limiters. A single limiter is easier to diagnose and usually produces more predictable frame pacing.
+If dense traffic remains heavy, lower the in-game traffic-density slider from `100` to `80` before lowering texture quality. If rain is the problem, try `MaxMovingDrops=1400` first. If shadows are still the bottleneck, try `ExtraDynamicShadows=0` as a second-stage fallback.
 
 ---
 
-## DXVK Configuration
+## DXVK Configuration Notes
 
-`dxvk.conf` controls the DXVK translation layer beneath FusionFix. DXVK translates GTA IV’s Direct3D 9 rendering calls into Vulkan, so the file can influence shader compilation, pipeline caching, frame latency, memory reporting, and presentation behavior. It matters only when the matching DXVK/Vulkan wrapper is active; it does not affect native Direct3D 9.
+`dxvk.conf` only matters when a matching DXVK/Vulkan wrapper is actually active. DXVK translates GTA IV’s Direct3D 9 calls to Vulkan, so it can affect shader compilation, pipeline caching, latency, memory reporting, and presentation behavior. It does nothing when the game is running on native Direct3D 9.
 
-| Setting | Value | Role in this profile |
+| Setting | Value in this profile | Practical role |
 |---|---:|---|
-| `dxvk.gplAsyncCache` | `True` | Supports shader-cache behavior on GPLAsync/GPLALL-style forks. |
-| `d3d9.maxAvailableMemory` | `4096` | Reports a 4 GiB memory-budget hint; it is not a hard VRAM reservation. |
-| `d3d9.maxFrameLatency` | `1` | Requests a one-frame queue for lower latency. Test for stutter. |
-| `dxvk.numCompilerThreads` | `4` | Uses four shader compiler threads as a conservative six-core mobile-CPU setting. |
-| `dxvk.enableGraphicsPipelineLibrary` | `Auto` | Lets DXVK and the Vulkan driver choose the compatible pipeline-library path. |
-| `d3d9.deviceLocalConstantBuffers` | `False` | Avoids forcing device-local constant-buffer placement on shared-memory graphics. |
-| `d3d9.presentInterval` | `-1` | Does not override the game’s presentation interval. |
-| `d3d9.maxFrameRate` | `0` | Disables DXVK’s own limiter so FusionFix remains the single 60 FPS limiter. |
-| `dxvk.allowFse` | `true` | Enables the supplied fullscreen-exclusive behavior where the active DXVK build and display path support it. |
-| `dxvk.enableAsync` | `true` | Enables the supplied async behavior on DXVK builds that support this build-specific setting. |
-| `dxvk.numAsyncThreads` | `4` | Uses the supplied four-thread async setting on DXVK builds that support it. |
+| `dxvk.gplAsyncCache` | `True` | Preserves shader-cache behavior for GPLAsync/GPLALL-style forks. |
+| `d3d9.maxAvailableMemory` | `4096` | Provides a 4 GiB memory-budget hint; it is not a hard VRAM reservation. |
+| `d3d9.maxFrameLatency` | `1` | Requests a one-frame queue for lower latency; test it if stutter changes. |
+| `dxvk.numCompilerThreads` | `4` | A conservative compiler-thread count for the six-core mobile reference CPU. |
+| `dxvk.enableGraphicsPipelineLibrary` | `Auto` | Lets the driver and DXVK select a compatible pipeline-library route. |
+| `d3d9.deviceLocalConstantBuffers` | `False` | Avoids forcing device-local placement on shared-memory graphics. |
+| `d3d9.maxFrameRate` | `0` | Leaves DXVK’s own cap off so FusionFix remains the intended limiter. |
+| `dxvk.allowFse` | `true` | Preserves the supplied fullscreen-exclusive behavior when the active DXVK build supports it. |
+| `dxvk.enableAsync` / `dxvk.numAsyncThreads` | `true` / `4` | Preserves the supplied async-capable configuration. |
 
-> **Compatibility warning:** `dxvk.gplAsyncCache`, `dxvk.enableAsync`, and `dxvk.numAsyncThreads` are associated with GPLAsync/GPLALL-style or other async-capable DXVK variants rather than the current standard upstream option set. They are preserved exactly because the package publisher tested this route. Users of stock upstream DXVK should keep the supported settings and remove only these build-specific lines if their own DXVK log reports them as unknown. `dxvk.allowFse` can affect Alt+Tab or GDI-window behavior on some systems; set it to `false` first if that specific issue appears. The standard upstream DXVK options are documented in the official configuration reference.[^2]
+> **Compatibility warning:** `dxvk.gplAsyncCache`, `dxvk.enableAsync`, and `dxvk.numAsyncThreads` are associated with GPLAsync/GPLALL-style or other async-capable variants, not the current standard upstream DXVK option set. I preserved them because they were part of the path I tested. If stock upstream DXVK reports them as unknown, keep supported lines and remove only those build-specific lines. The official DXVK configuration reference is the authority for upstream options.[^2] If Alt+Tab or window behavior breaks, test `dxvk.allowFse=false` first.
 
-If shader compilation causes first-run stutter, allow the cache to warm up before judging performance. If the CPU becomes saturated during compilation, test `dxvk.numCompilerThreads=2`. Do not add a second frame limiter through DXVK, Radeon Chill, RTSS, or another external tool until this single-limiter profile has been tested.
+Let shader caches warm up before judging a fresh run. If CPU use during compilation is the problem, test `dxvk.numCompilerThreads=2`. Keep external frame caps disabled until you know the base profile is behaving correctly.
 
 ---
 
 ## Shader Preloading
 
-`preload.list` is shader/resource preload metadata, not a general mod load order. The tuned list preserves the supplied base sequence and includes the following FusionFix/LibertyCityPlates-related shader names:
+The supplied `preload.list` includes the base entries and the following FusionFix/LibertyCityPlates-related shader names:
 
 ```text
 gta_trees_extended.fx
@@ -223,88 +232,76 @@ gta_vehicle_track2.fx
 gta_vehicle_track.fx
 ```
 
-These names are useful only when the matching shader files are installed in the correct GTA IV shader directory. Adding a filename to the list does not create the shader. FusionFix issue documentation connects missing entries for these shaders with invalid-resource crashes and incorrect LibertyCityPlates installations.[^3]
+Adding a filename to `preload.list` does **not** create the shader. The matching files must exist in the correct GTA IV shader directory. FusionFix issue documentation connects missing entries for these shaders with invalid-resource crashes and incorrect LibertyCityPlates installations.[^3]
 
-If a later FusionFix release dynamically registers the same shaders, follow the current upstream instructions and do not maintain duplicate or conflicting preload files.[^4]
-
----
-
-## Testing the Configuration
-
-Test one change group at a time. Start the game, load a save, enter and exit an interior, drive through dense daytime traffic, drive at night in rain, trigger a vehicle using custom audio, and reload once.
-
-Check for missing or invisible vehicles, black or corrupted materials, missing license-plate effects, audio dropouts, lighting corruption after interior transitions, crashes during loading, and uneven frame pacing despite a nominal 60 FPS reading.
-
-If dense traffic remains heavy, lower the in-game traffic-density slider from `100` to `80` before reducing texture quality. If necessary, test `70`. If rain remains the only problem, lower `MaxMovingDrops` from `1800` to `1400` before reducing `MaxDrops` further. If shadows remain the bottleneck, set `ExtraDynamicShadows=0` as a second-stage fallback.
+If a later FusionFix build dynamically registers the same shaders, follow the current upstream guidance instead of maintaining a duplicate or conflicting preload file.[^4]
 
 ---
 
-## Troubleshooting
+## EFLC and Loose-File Compatibility Note
 
-| Symptom | First action |
+I found an important difference between the base story and the EFLC episodes while working through this setup. If you choose to add the replacement linked below, my tested approach is to install it as **loose-file replacements**, not as an `update`-folder mod:
+
+- [Linked replacement resource on Nexus Mods](https://www.nexusmods.com/gta4/mods/781)
+
+In my experience, installing that content in the `update` folder could leave the base GTA IV story working while The Lost and Damned or The Ballad of Gay Tony crashed during launch. Replacing the corresponding loose files kept EFLC working and allowed the changes to appear in the episodes too.
+
+> This is an experience-based compatibility note, not a claim that every version of that mod or every installation will behave identically. Back up first, follow the mod author’s instructions where they differ, and test GTA IV, The Lost and Damned, and The Ballad of Gay Tony separately after each major change.
+
+---
+
+## Testing, Troubleshooting, and Rollback
+
+### Test the setup in real gameplay
+
+Do not judge the profile from one loading screen. Start a save, move between interiors and the street, drive through dense daytime traffic, drive at night in rain, use vehicles with custom audio, reload once, and test both EFLC episodes if you have them installed.
+
+Look for missing or invisible vehicles, black/corrupted materials, missing plate effects, audio dropouts, lighting changes after interiors, launch crashes, loading crashes, or uneven frame pacing even when an FPS counter looks fine.
+
+### Troubleshooting table
+
+| Symptom | First move |
 |---|---|
 | Game fails to start | Verify the game build, FusionFix installation, and active renderer DLL chain. Do not add another wrapper. |
-| Invalid resource or shader error | Restore `preload.list`, then verify every referenced shader file exists. |
-| Startup crash with a GPLAsync build | Comment out `dxvk.gplAsyncCache=True` and test again. |
-| Rain causes stutter | Lower `MaxMovingDrops` first. |
-| Shadows cause large frame-time dips | Set `ExtraDynamicShadows=0`. |
-| Vehicle audio breaks | Keep the vehicle budget unchanged and test the vehicle/audio pack combination. |
-| Traffic scenes remain slow | Lower traffic density before reducing texture quality. |
-| Vulkan is unstable | Use the supported FusionFix fallback path and record the driver/version combination. |
+| Invalid resource or shader error | Restore `preload.list`, then verify every listed shader exists. |
+| Startup crash with a GPLAsync-style build | Comment out `dxvk.gplAsyncCache=True` and test again. |
+| Rain stutter | Lower `MaxMovingDrops` first. |
+| Large shadow-related frame-time dips | Test `ExtraDynamicShadows=0`. |
+| Vehicle audio breaks | Keep the vehicle budget unchanged and retest the audio/vehicle combination. |
+| Traffic remains slow | Lower traffic density before cutting texture quality. |
+| Vulkan is unstable | Use the documented FusionFix fallback path and record the driver/version combination in your report. |
+| EFLC crashes while the base story works | Review the loose-file versus `update`-folder note above, then test each episode with recent changes removed. |
+
+### Rollback
+
+If you used the automatic installer, close GTA IV and the launcher, then run `GTAIV_V2_Automatic_Installer_Uninstall.exe` or use **Installed apps**. Choose **Yes** to restore the latest installer backup. That returns the prior copies of the nine managed files and restores the preceding `GTAIV.EXE` compatibility setting.
+
+For a manual install, restore the files from `originals/` to their former locations. If the problem looks shader-related, restore `preload.list` first. Then restore `GTAIV.EFLC.FusionFix.cfg`, `GTAIV.EFLC.FusionFix.ini`, `dxvk.conf`, `GTAIV.XboxRainDroplets.ini`, and `stream.ini` as needed. Do not delete saves or modify Rockstar game archives as a first troubleshooting step.
 
 ---
 
-## Rollback
+## Credits, Boundaries, and Sources
 
-If the automatic installer was used, close GTA IV and its launcher, then launch `GTAIV_V2_Automatic_Installer_Uninstall.exe` from the selected GTA IV folder or use Windows **Installed apps**. Choose **Yes** when it offers to restore the latest backup. This restores the last pre-install copies of the nine installer-managed files and returns the prior `GTAIV.EXE` compatibility setting.
+This is my community configuration package and documentation path. It is **not** an official Rockstar, AMD, FusionFix, DXVK, Gillian, LibertyCityPlates, or mod-author release. I will keep credit where it belongs and ask everyone who uses or redistributes this material to do the same.
 
-For a manual installation, follow this sequence:
-
-1. Close GTA IV and its launcher.
-2. Restore the files from `originals/` to their original locations.
-3. If the issue is shader-related, restore `preload.list` first.
-4. If the issue continues, restore `GTAIV.EFLC.FusionFix.cfg`, `GTAIV.EFLC.FusionFix.ini`, `dxvk.conf`, `GTAIV.XboxRainDroplets.ini`, and `preload.list`.
-5. Do not delete saves or modify Rockstar game archives as a first troubleshooting step.
-
----
-
-## Credits and Attribution
-
-This is a community configuration guide. It is **not an original mod**, and the person publishing this README should not be credited as the creator of the projects below.
-
-| Project or resource | Credit |
+| Project or resource | Credit and boundary |
 |---|---|
-| **FusionFix** | ThirteenAG and FusionFix contributors. See the [official repository](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix). |
-| **DXVK** | doitsujin and DXVK contributors. See the [official repository](https://github.com/doitsujin/dxvk). |
-| **DXVK GPLAsync** | Ph42oN and the GPLAsync contributors when that fork is used. See the [project page](https://gitlab.com/Ph42oN/dxvk-gplasync). |
-| **Gillian’s GTA IV Modding Guide** | Gillian and the guide’s contributors. See the [official guide](https://gillian-guide.github.io/). |
-| **Drag-and-Drop Archive** | The authors and maintainers credited by Gillian’s archive documentation. |
-| **LibertyCityPlates** | The LibertyCityPlates authors and contributors. Use the mod’s own distribution page for authoritative credits and licensing. |
-| **Fusion Overloader** | Its original authors and contributors. Follow its official documentation for current precedence rules. |
-| **Project2DFX, restored vegetation, vehicle packs, traffic/popcycle files, and other enhancements** | Credit the respective authors on their original mod pages. Do not redistribute their files without permission. |
-| **AMD Ryzen PRO and Radeon** | AMD owns the platform names, specifications, drivers, and related trademarks. |
-| **GTA IV** | Rockstar Games and its licensors. This is an unofficial community configuration guide. |
+| **FusionFix** | ThirteenAG and FusionFix contributors. Use the [official repository](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix). |
+| **DXVK** | doitsujin and DXVK contributors. Use the [official repository](https://github.com/doitsujin/dxvk). |
+| **DXVK GPLAsync** | Ph42oN and GPLAsync contributors when that fork is used. See the [project page](https://gitlab.com/Ph42oN/dxvk-gplasync). |
+| **Gillian’s GTA IV Modding Guide and Drag-and-Drop Archive** | Gillian and the guide/archive contributors. Follow the [official guide](https://gillian-guide.github.io/) and archive documentation. |
+| **LibertyCityPlates, Xbox Rain Droplets, Fusion Overloader, Project2DFX, vegetation, vehicles, traffic/popcycle, and other enhancements** | Their original authors and contributors. Use the original pages for licenses, credits, updates, and support. Do not redistribute their files without permission. |
+| **AMD Ryzen PRO and Radeon** | AMD owns the platform names, drivers, specifications, and trademarks. My reference hardware does not make this an AMD-only project. |
+| **GTA IV** | Rockstar Games and its licensors. This is an unofficial configuration project and includes no game content. |
 
-Preserve every original `LICENSE`, `README`, author notice, and download-page reference when distributing a complete installation.
-
----
-
-## Disclaimer
-
-This configuration is provided as-is for testing on similar hardware. It is not affiliated with Rockstar Games, AMD, ThirteenAG, FusionFix, Gillian, DXVK, LibertyCityPlates, or any other mod author. Performance varies with game version, drivers, cooling, power limits, resolution, memory speed, and installed content.
-
-Always keep a backup. A setting that improves one system may reduce stability on another. When reporting a problem, include the GTA IV build, FusionFix version, DXVK variant, Radeon driver version, resolution, memory configuration, installed visual and vehicle mods, and the exact symptom.
-
-if you add https://www.nexusmods.com/gta4/mods/781 you must install it as loose files replacing the old ones not as a mod in the update folder or the EFLC DLC will not work. the story will and mod will load, but the dlc won't even start the storys for their respective games and crash at launch. copying it in as loose files keeps EFLC working and the dlc will even use the mods in their own games. You won't have to change any settings if you do this. just replace the game files with these ones and it will work and look beautiful. no extra setup or settings to adjust. 
-
----
+The configuration is provided as-is. Always keep a backup. A change that feels perfect on one system may reduce stability on another because driver version, thermal behavior, power limits, display resolution, memory bandwidth, and installed content all matter.
 
 ## References
 
 [^1]: [Gillian’s FusionFix guide](https://gillian-guide.github.io/essential-modding/fusionfix/) — Complete Edition compatibility, installation, configuration, and build context.
 [^2]: [Official DXVK configuration reference](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf) — upstream option names, supported values, and behavior.
 [^3]: [FusionFix issue #1347](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/issues/1347) — LibertyCityPlates/FusionFix shader preload requirements and invalid-resource troubleshooting.
-[^4]: [FusionFix issue #1431](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/issues/1431) — preload.list correctness and dynamic shader-registration behavior.
+[^4]: [FusionFix issue #1431](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/issues/1431) — preload-list correctness and dynamic shader-registration behavior.
 [^5]: [FusionFix official repository](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix) — primary project documentation and configuration definitions.
 [^6]: [Gillian’s Drag-and-Drop Archive](https://gillian-guide.github.io/drag-and-drop-archive/) — archive installation and compatibility context.
 [^7]: [Gillian’s mod-loading guide](https://gillian-guide.github.io/extras/modloading/) — Fusion Overloader precedence and update-folder guidance.
