@@ -13,7 +13,7 @@ This repository is built from my tested configuration path and the work of the m
 
 - [My Reference Setup and Result](#my-reference-setup-and-result)
 - [Help Me Map APU Compatibility](#help-me-map-apu-compatibility)
-- [Intel iGPU Note: `forceIntelGraphics=true`](#intel-igpu-note-forceintelgraphicstrue)
+- [Attempting Version 2 on Intel Systems](#attempting-version-2-on-intel-systems)
 - [What This Package Is](#what-this-package-is)
 - [How I Put It Together](#how-i-put-it-together)
 - [What You Need to Install Separately](#what-you-need-to-install-separately)
@@ -77,13 +77,25 @@ A simple, honest report is enough. Tell me where it was smooth, where it stutter
 
 ---
 
-## Intel iGPU Note: `forceIntelGraphics=true`
+## Attempting Version 2 on Intel Systems
 
-If you are testing on an **Intel integrated GPU**, set `forceIntelGraphics=true` **where that option is actually available in your FusionFix build, setup utility, or matching configuration template**. Apply it only in the location documented or exposed by the version you have installed, restart the game, and test GTA IV plus both EFLC episodes before deciding that the change helped.
+The Version 2 installer is **CPU-agnostic**: it validates the folder containing `GTAIV.EXE`, backs up the nine managed files, and writes the same Version 2 configuration to the same locations. A strong Intel CPU can absolutely run this profile; the result depends much more on the **GPU that actually renders GTA IV**, its driver, the active DXVK/FusionFix path, output resolution, and the extra mods installed.
 
-> **This is conditional, not universal.** The supplied Version 2 configuration files do not currently expose this setting, so do not add an unknown line blindly or paste it into `dxvk.conf`. If your installed FusionFix build does not provide or recognize `forceIntelGraphics`, leave it absent, keep the rest of this profile unchanged, and include that detail in your compatibility report. Do not change the setting on AMD or other non-Intel systems unless the specific tool you are using documents a reason to do so.
+Do not add `forceIntelGraphics=true` blindly. The supplied Version 2 configuration does not expose that key, and an unknown line does not become useful merely because it sounds right. Keep the Version 2 files unchanged for the first run, make sure Windows is using the GPU you intend for `GTAIV.EXE`, and test the base story plus both EFLC episodes before deciding that an Intel-specific change helped.
 
-When you report back, include whether `forceIntelGraphics=true` was available, where you set it, the FusionFix version, and whether it changed launch behavior, GPU selection, stability, or frame pacing. That is the kind of detail that can turn a guess into useful cross-APU support.
+### Worked example: Intel Core i9-12900K
+
+The i9-12900K is an excellent CPU-side example because it has 8 Performance cores, 8 Efficient cores, 24 threads, and Intel UHD Graphics 770.[^9] Its CPU headroom is more than sufficient for GTA IV, FusionFix, DXVK shader work, streaming, traffic, and the Version 2 configuration. The question is not whether the CPU is fast enough—it is **which graphics hardware is doing the rendering**.
+
+| i9-12900K graphics setup | What I would expect from Version 2 |
+|---|---|
+| **NVIDIA or AMD discrete GPU installed** | This should be a strong fit. Use the normal Version 2 installer, make sure Windows selects the discrete GPU for `GTAIV.EXE`, and test normally. |
+| **Intel Arc discrete GPU installed** | The installer still works, but the graphics driver and the chosen DXVK/FusionFix route decide the result. Use a current Intel graphics driver and test GTA IV, The Lost and Damned, and The Ballad of Gay Tony separately. |
+| **Only the built-in Intel UHD 770 iGPU** | The installer still works, but the Radeon 660M high-visual reference result is not guaranteed. Begin at a lower sensible resolution, test frame pacing, then reduce the heaviest graphics settings only if needed. |
+
+The Version 2 `dxvk.conf` uses `dxvk.numCompilerThreads=4`, a conservative value chosen for the original six-core Ryzen reference system. It is safe on a 12900K, but it is not trying to use all 24 logical threads. Leave it at `4` for the first test and judge real frame pacing before changing it.
+
+> **Keep the first test simple.** Use the normal Version 2 installer, one active renderer path, the GPU you actually intend to use, and no extra experimental adapter-forcing line. If it runs well, send a compatibility report with the exact GPU, driver version, DXVK/FusionFix version, resolution, and both EFLC results. That is how this project becomes useful beyond the original Radeon 660M baseline.
 
 ---
 
@@ -323,3 +335,4 @@ The configuration is provided as-is. Always keep a backup. A change that feels p
 [^6]: [Gillian’s Drag-and-Drop Archive](https://gillian-guide.github.io/drag-and-drop-archive/) — archive installation and compatibility context.
 [^7]: [Gillian’s mod-loading guide](https://gillian-guide.github.io/extras/modloading/) — Fusion Overloader precedence and update-folder guidance.
 [^8]: [DXVK GPLAsync project](https://gitlab.com/Ph42oN/dxvk-gplasync) — GPL/async cache behavior and fork-specific compatibility context.
+[^9]: [Intel Core i9-12900K specifications](https://www.intel.com/content/www/us/en/products/sku/134599/intel-core-i912900k-processor-30m-cache-up-to-5-20-ghz/specifications.html) — 16 total cores, 8 Performance cores, 8 Efficient cores, 24 threads, and Intel UHD Graphics 770.
