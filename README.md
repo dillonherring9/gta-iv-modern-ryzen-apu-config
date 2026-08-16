@@ -105,7 +105,7 @@ Install the current official FusionFix release and the dependencies required by 
 
 ### 3. Install the archive and optional enhancements
 
-Install the Drag-and-Drop Archive and then add compatible visual, traffic, vehicle, vegetation, Project2DFX, and LibertyCityPlates components. Test the game after the foundation layer and again after groups of optional mods.
+Install the Drag-and-Drop Archive and compatible visual, traffic, vehicle, vegetation, Project2DFX, and LibertyCityPlates components. it's an all in one package. https://gillian-guide.github.io/drag-and-drop-archive/ follow the guides instructions for it. Test the game after the foundation layer and again after groups of optional mods.
 
 ### 4. Create a backup
 
