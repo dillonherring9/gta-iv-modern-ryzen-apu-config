@@ -9,10 +9,17 @@ This guide describes a balanced way to make GTA IV look substantially more moder
 
 The objective is not to promise a constant 60 FPS in every situation. GTA IV can remain CPU-limited by traffic, world streaming, vehicle modifications, scripts, and weather even when the GPU has headroom. The objective is a stable and repeatable baseline: modern visual fixes, sensible shader loading, fewer expensive frame-time spikes, and a reversible installation.
 
+## Version 2 Tested Update
+
+Version 2 is the **same complete Version 1 package**, rebuilt with only the three matching configuration files replaced: `tuned/dxvk.conf`, `tuned/GTAIV.EFLC.FusionFix.cfg`, and `tuned/GTAIV.EFLC.FusionFix.ini`. Every other file, backup, companion configuration, validation record, and document remains in place.
+
+The Version 2 trio was supplied and tested together by the package publisher on the reference Ryzen 5 PRO 6650U / Radeon 660M system. The publisher reports smooth high-setting, high-resolution play without the earlier repeated skipping. This is a test result on the reference setup—not a performance guarantee on every driver, resolution, thermal profile, or mod stack.
+
 ---
 
 ## Table of Contents
 
+- [Version 2 Tested Update](#version-2-tested-update)
 - [Target Hardware](#target-hardware)
 - [What This Package Does](#what-this-package-does)
 - [Package Contents](#package-contents)
@@ -49,7 +56,7 @@ Results vary with display resolution, refresh rate, cooling, power limits, AMD d
 
 ## What This Package Does
 
-This package harmonizes the configuration files around a **Balanced 60** profile. It preserves the main visual improvements while reducing the settings most likely to create frame-time spikes on an integrated Radeon GPU.
+Version 2 keeps the Version 1 package intact but replaces the three matching configuration files with a **tested high-visual DXVK and FusionFix profile**. It retains FusionFix as the single intended gameplay limiter while restoring the visual settings that the publisher was able to use smoothly on the reference system.
 
 | Area | Configuration choice | Reason |
 |---|---|---|
@@ -57,11 +64,11 @@ This package harmonizes the configuration files around a **Balanced 60** profile
 | Renderer | DXVK/Vulkan when stable | Translates Direct3D 9 rendering to Vulkan through the active DXVK wrapper. |
 | Frame pacing | One FusionFix 60 FPS limiter | Avoids conflicts between FusionFix, DXVK, Radeon Chill, RTSS, and other limiters. |
 | Anti-aliasing | SMAA | Provides useful edge smoothing without relying on heavier multi-sample options. |
-| Shadows | Soft shadows with reduced secondary dynamic shadows | Retains visual depth while reducing expensive shadow work. |
-| Post-processing | Sun shafts, ambient occlusion, and volumetric fog disabled | Removes several costly full-screen passes while retaining the core modern presentation. |
+| Shadows | Shadow Filter 5 with `ExtraDynamicShadows=1` retained | Restores the higher-quality shadow filter while keeping the previously compatible one-level dynamic-shadow setting. |
+| Post-processing | Sun shafts, ambient occlusion, and volumetric fog enabled | Restores the high-visual FusionFix presentation tested by the publisher. |
 | Rain | Reduced static and moving droplet counts | Prevents weather scenes from combining too many particle and lighting costs. |
 | Shader loading | Complete preload list | Helps prevent missing-resource errors when the matching shader files are installed. |
-| Shared-memory behavior | Conservative DXVK memory and pipeline settings | Avoids assuming discrete-GPU behavior on an integrated APU. |
+| Shared-memory behavior | Tested DXVK memory, pipeline, frame-latency, fullscreen-exclusive, and async settings | Keeps the publisher-tested renderer profile while retaining an integrated-APU-aware memory hint. |
 
 ---
 
@@ -116,20 +123,22 @@ Do not add a second ASI loader, `d3d9.dll`, `dxgi.dll`, DXVK wrapper, shader pro
 
 ## Graphics and Performance Profile
 
-The following values form the reference Balanced 60 profile:
+The following values describe the Version 2 high-visual profile. These three configuration files are intended to be used as one matched set:
 
 | File | Original value | Profile value | Purpose |
 |---|---:|---:|---|
-| `GTAIV.EFLC.FusionFix.cfg` | `SunShafts=1` | `SunShafts=0` | Removes a costly post-processing effect. |
-| `GTAIV.EFLC.FusionFix.cfg` | `AmbientOcclusion=1` | `AmbientOcclusion=0` | Removes a full-screen ambient-occlusion pass. |
-| `GTAIV.EFLC.FusionFix.cfg` | `ShadowFilter=5` | `ShadowFilter=4` | Uses soft shadows instead of CHSS/contact-hardening shadows. |
-| `GTAIV.EFLC.FusionFix.cfg` | `VolumetricFog=1` | `VolumetricFog=0` | Reduces volumetric post-processing cost. |
+| `GTAIV.EFLC.FusionFix.cfg` | `SunShafts=1` | `SunShafts=1` | Keeps the high-visual sun-shaft effect enabled. |
+| `GTAIV.EFLC.FusionFix.cfg` | `AmbientOcclusion=1` | `AmbientOcclusion=1` | Keeps ambient occlusion enabled. |
+| `GTAIV.EFLC.FusionFix.cfg` | `ShadowFilter=5` | `ShadowFilter=5` | Keeps the higher-quality shadow filter enabled. |
+| `GTAIV.EFLC.FusionFix.cfg` | `VolumetricFog=1` | `VolumetricFog=1` | Keeps volumetric fog enabled. |
+| `GTAIV.EFLC.FusionFix.cfg` | `DepthOfField=7` | `DepthOfField=10` | Uses the supplied Version 2 depth-of-field value. |
+| `GTAIV.EFLC.FusionFix.cfg` | `MotionBlur=1` | `MotionBlur=4` | Uses the supplied Version 2 motion-blur value. |
 | `GTAIV.EFLC.FusionFix.ini` | `ExtraDynamicShadows=2` | `ExtraDynamicShadows=1` | Retains vegetation shadows while reducing heavier secondary shadow work. |
 | `GTAIV.EFLC.FusionFix.ini` | `FpsLimit=-2` | `FpsLimit=60` | Makes the custom-mode fallback explicit. |
 | `GTAIV.XboxRainDroplets.ini` | `MaxDrops=1500` | `MaxDrops=900` | Reduces static rain-particle work. |
 | `GTAIV.XboxRainDroplets.ini` | `MaxMovingDrops=3000` | `MaxMovingDrops=1800` | Reduces moving rain-particle work. |
 
-The profile keeps FusionFix’s 60 FPS preset, accurate limiter mode, SMAA, PC+ tree settings, tone mapping, bloom, distant lights, console vehicle reflections, extended limits, and the supplied vehicle budget.
+The Version 2 trio keeps FusionFix’s 60 FPS preset, accurate limiter mode, SMAA, PC+ tree settings, tone mapping, bloom, distant lights, console vehicle reflections, extended limits, the supplied vehicle budget, and the Version 1 rain settings. It restores the listed high-visual effects because they were reported as stable in the reference-system test.
 
 > **Do not stack frame limiters.** During initial testing, disable Radeon Chill, RTSS, external DXVK caps, and other per-game limiters. A single limiter is easier to diagnose and usually produces more predictable frame pacing.
 
@@ -149,8 +158,11 @@ The profile keeps FusionFix’s 60 FPS preset, accurate limiter mode, SMAA, PC+ 
 | `d3d9.deviceLocalConstantBuffers` | `False` | Avoids forcing device-local constant-buffer placement on shared-memory graphics. |
 | `d3d9.presentInterval` | `-1` | Does not override the game’s presentation interval. |
 | `d3d9.maxFrameRate` | `0` | Disables DXVK’s own limiter so FusionFix remains the single 60 FPS limiter. |
+| `dxvk.allowFse` | `true` | Enables the supplied fullscreen-exclusive behavior where the active DXVK build and display path support it. |
+| `dxvk.enableAsync` | `true` | Enables the supplied async behavior on DXVK builds that support this build-specific setting. |
+| `dxvk.numAsyncThreads` | `4` | Uses the supplied four-thread async setting on DXVK builds that support it. |
 
-> **Compatibility warning:** `dxvk.gplAsyncCache` is associated with GPLAsync/GPLALL-style DXVK forks rather than the standard upstream option set. Use it when the installed DXVK build documents it. If a GPLAsync build crashes during startup, comment out that line first. The standard upstream DXVK options are documented in the official configuration reference.[^2]
+> **Compatibility warning:** `dxvk.gplAsyncCache`, `dxvk.enableAsync`, and `dxvk.numAsyncThreads` are associated with GPLAsync/GPLALL-style or other async-capable DXVK variants rather than the current standard upstream option set. They are preserved exactly because the package publisher tested this route. Users of stock upstream DXVK should keep the supported settings and remove only these build-specific lines if their own DXVK log reports them as unknown. `dxvk.allowFse` can affect Alt+Tab or GDI-window behavior on some systems; set it to `false` first if that specific issue appears. The standard upstream DXVK options are documented in the official configuration reference.[^2]
 
 If shader compilation causes first-run stutter, allow the cache to warm up before judging performance. If the CPU becomes saturated during compilation, test `dxvk.numCompilerThreads=2`. Do not add a second frame limiter through DXVK, Radeon Chill, RTSS, or another external tool until this single-limiter profile has been tested.
 
