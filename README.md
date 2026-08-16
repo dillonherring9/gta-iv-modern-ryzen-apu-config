@@ -257,7 +257,13 @@ I found an important difference between the base story and the EFLC episodes whi
 
 In my experience, installing that content in the `update` folder could leave the base GTA IV story working while The Lost and Damned or The Ballad of Gay Tony crashed during launch. Replacing the corresponding loose files kept EFLC working and allowed the changes to appear in the episodes too.
 
-> This is an experience-based compatibility note, not a claim that every version of that mod or every installation will behave identically. Back up first, follow the mod author’s instructions where they differ, and test GTA IV, The Lost and Damned, and The Ballad of Gay Tony separately after each major change.
+### Performance and resolution note
+
+The replacement files are much higher resolution than the original files, so adding this mod can require a **small reduction in the game’s output resolution** if you want the same frame-time consistency you had before adding it. That is not a downgrade in the way the final image feels: the improved replacement assets can still look better at one sensible resolution step below maximum than the base setup pushed to an unnecessarily extreme resolution.
+
+If your display supports very high resolutions, do not feel locked into the highest number just because it is available. Start with the resolution that kept this package smooth before the replacement, test dense traffic, rain, night driving, and both EFLC episodes, then lower the output one step only if the new assets create a performance cost. The goal is a clean, stable image with enough headroom—not maximum pixels for their own sake.
+
+> This is an experience-based compatibility and performance note, not a claim that every version of that mod or every installation will behave identically. Back up first, follow the mod author’s instructions where they differ, and test GTA IV, The Lost and Damned, and The Ballad of Gay Tony separately after each major change.
 
 ---
 
