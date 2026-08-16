@@ -13,6 +13,7 @@ This repository is built from my tested configuration path and the work of the m
 
 - [My Reference Setup and Result](#my-reference-setup-and-result)
 - [Help Me Map APU Compatibility](#help-me-map-apu-compatibility)
+- [Intel iGPU Note: `forceIntelGraphics=true`](#intel-igpu-note-forceintelgraphicstrue)
 - [What This Package Is](#what-this-package-is)
 - [How I Put It Together](#how-i-put-it-together)
 - [What You Need to Install Separately](#what-you-need-to-install-separately)
@@ -73,6 +74,16 @@ Anything you changed from this package:
 ```
 
 A simple, honest report is enough. Tell me where it was smooth, where it stuttered, what crashed, and what you had to change. That is how we build something real—one clean test at a time.
+
+---
+
+## Intel iGPU Note: `forceIntelGraphics=true`
+
+If you are testing on an **Intel integrated GPU**, set `forceIntelGraphics=true` **where that option is actually available in your FusionFix build, setup utility, or matching configuration template**. Apply it only in the location documented or exposed by the version you have installed, restart the game, and test GTA IV plus both EFLC episodes before deciding that the change helped.
+
+> **This is conditional, not universal.** The supplied Version 2 configuration files do not currently expose this setting, so do not add an unknown line blindly or paste it into `dxvk.conf`. If your installed FusionFix build does not provide or recognize `forceIntelGraphics`, leave it absent, keep the rest of this profile unchanged, and include that detail in your compatibility report. Do not change the setting on AMD or other non-Intel systems unless the specific tool you are using documents a reason to do so.
+
+When you report back, include whether `forceIntelGraphics=true` was available, where you set it, the FusionFix version, and whether it changed launch behavior, GPU selection, stability, or frame pacing. That is the kind of detail that can turn a guess into useful cross-APU support.
 
 ---
 
