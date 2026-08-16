@@ -248,6 +248,8 @@ This configuration is provided as-is for testing on similar hardware. It is not 
 
 Always keep a backup. A setting that improves one system may reduce stability on another. When reporting a problem, include the GTA IV build, FusionFix version, DXVK variant, Radeon driver version, resolution, memory configuration, installed visual and vehicle mods, and the exact symptom.
 
+if you add https://www.nexusmods.com/gta4/mods/781 you must install it as loose files replacing the old ones not as a mod in the update folder or the EFLC DLC will not work. the story will and mod will load, but the dlc won't even start the storys for their respective games and crash at launch. copying it in as loose files keeps EFLC working and the dlc will even use the mods in their own games. You won't have to change any settings if you do this. just replace the game files with these ones and it will work and look beautiful. no extra setup or settings to adjust. 
+
 ---
 
 ## References
