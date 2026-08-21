@@ -59,12 +59,12 @@ Use a disposable GTA IV installation or make a complete backup first. Close GTA 
 | Step | Expected result |
 |---|---|
 | Open the installer | The destination field is blank. |
-| Browse to the game folder | Select the folder that contains `GTAIV.EXE`; no duplicate Rockstar path should appear. |
+| Browse to the game folder | Select the folder that contains `GTAIV.exe`; no duplicate Rockstar path should appear. |
 | Click **Install** | The installer verifies the folder after the click and shows the full path if it needs clarification. |
 | Check `GTAIV_V3_Installer_Backups` | A timestamped backup contains copies of any managed files that existed before installation. |
 | Check `dxvk.conf` | The nine-file payload is present, including the logged GPLAsync `4 / 4` thread profile. |
 | Check Installed apps | The Version 3 entry is present; the obsolete Version 2 entry is removed after a successful upgrade. |
-| Run the Version 3 uninstaller and choose **Yes** | The latest backup and prior `GTAIV.EXE` compatibility value are restored. |
+| Run the Version 3 uninstaller and choose **Yes** | The latest backup and prior `GTAIV.exe` compatibility value are restored. |
 
 > **Do not add extra wrappers, ASI loaders, or frame limiters while testing.** The installer protects its own nine files; it cannot untangle unrelated DLL chains, mod precedence rules, driver changes, or loose-file replacements.
 

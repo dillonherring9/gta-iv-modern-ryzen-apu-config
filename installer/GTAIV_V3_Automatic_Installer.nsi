@@ -46,18 +46,18 @@ FunctionEnd
 
 Function VerifyGameDirectory
   ; Accept the usual root layout first.
-  IfFileExists "$INSTDIR\GTAIV.EXE" validGame
-  IfFileExists "$INSTDIR\PlayGTAIV.EXE" validGame
+  IfFileExists "$INSTDIR\GTAIV.exe" validGame
+  IfFileExists "$INSTDIR\PlayGTAIV.exe" validGame
 
   ; Also accept a parent folder that contains a common GTA IV game-folder name.
-IfFileExists "$INSTDIR\GTA IV\GTAIV.EXE" useSpacedGtaSubfolder
-IfFileExists "$INSTDIR\Grand Theft Auto IV\GTAIV.EXE" useGrandTheftAutoSubfolder
-IfFileExists "$INSTDIR\GTAIV\GTAIV.EXE" useCompactGtaSubfolder
-IfFileExists "$INSTDIR\GTA-IV\GTAIV.EXE" useDashedGtaSubfolder
+IfFileExists "$INSTDIR\GTA IV\GTAIV.exe" useSpacedGtaSubfolder
+IfFileExists "$INSTDIR\Grand Theft Auto IV\GTAIV.exe" useGrandTheftAutoSubfolder
+IfFileExists "$INSTDIR\GTAIV\GTAIV.exe" useCompactGtaSubfolder
+IfFileExists "$INSTDIR\GTA-IV\GTAIV.exe" useDashedGtaSubfolder
 
   ; Do not trap the user with a disabled Install button. They can deliberately continue
   ; after checking the path if their legitimate installation uses a different layout.
-  MessageBox MB_ICONEXCLAMATION|MB_YESNO "The installer could not automatically find GTAIV.EXE in the selected folder or its common GTA IV subfolders.$\r$\n$\r$\nSelected folder:$\r$\n$INSTDIR$\r$\n$\r$\nChoose Yes only if this is the GTA IV game folder. Choose No to go back and select a different folder." IDYES validGame IDNO invalidGame
+  MessageBox MB_ICONEXCLAMATION|MB_YESNO "The installer could not automatically find GTAIV.exe in the selected folder or its common GTA IV subfolders.$\r$\n$\r$\nSelected folder:$\r$\n$INSTDIR$\r$\n$\r$\nChoose Yes only if this is the GTA IV game folder. Choose No to go back and select a different folder." IDYES validGame IDNO invalidGame
 
 useSpacedGtaSubfolder:
   StrCpy $INSTDIR "$INSTDIR\GTA IV"
@@ -88,7 +88,7 @@ Function CreateBackup
   ; Preserve the prior per-user compatibility state before enabling RUNASADMIN.
   ; INI entries avoid text-line parsing ambiguity during uninstall restoration.
   ClearErrors
-  ReadRegStr $PreviousCompat HKCU "${LAYERS_KEY}" "$INSTDIR\GTAIV.EXE"
+  ReadRegStr $PreviousCompat HKCU "${LAYERS_KEY}" "$INSTDIR\GTAIV.exe"
   IfErrors compatMissing
   WriteINIStr "$BackupRoot\LAST_BACKUP.ini" "Compatibility" "Existed" "1"
   WriteINIStr "$BackupRoot\LAST_BACKUP.ini" "Compatibility" "Value" "$PreviousCompat"
@@ -131,8 +131,8 @@ Function SetRunAsAdmin
   ; Store the prior value in CreateBackup, then set the exact flag requested for this installer run.
   ; Uninstall restores the recorded prior value when one existed. Do not create a flag
   ; for a non-existent executable if the tester deliberately continued with an unusual layout.
-  IfFileExists "$INSTDIR\GTAIV.EXE" 0 +2
-    WriteRegStr HKCU "${LAYERS_KEY}" "$INSTDIR\GTAIV.EXE" "RUNASADMIN"
+  IfFileExists "$INSTDIR\GTAIV.exe" 0 +2
+    WriteRegStr HKCU "${LAYERS_KEY}" "$INSTDIR\GTAIV.exe" "RUNASADMIN"
 FunctionEnd
 
 Section "Install GTA IV Version 3 configuration" SEC_MAIN
@@ -174,7 +174,7 @@ Section "Install GTA IV Version 3 configuration" SEC_MAIN
   WriteRegDWORD HKLM "${UNINSTALL_KEY}" "NoRepair" 1
 
   IfSilent +2
-    MessageBox MB_ICONINFORMATION "Version 3 files were installed. The prior files, if any, were backed up in:$\r$\n$BackupDir$\r$\n$\r$\nThe log-validated DXVK GPLAsync profile is now in place. If GTAIV.EXE is present in the selected game folder, it was configured to run as administrator for the current Windows user."
+    MessageBox MB_ICONINFORMATION "Version 3 files were installed. The prior files, if any, were backed up in:$\r$\n$BackupDir$\r$\n$\r$\nThe log-validated DXVK GPLAsync profile is now in place. If GTAIV.exe is present in the selected game folder, it was configured to run as administrator for the current Windows user."
 SectionEnd
 
 Section "Uninstall"
@@ -238,10 +238,10 @@ compatibilityRestore:
 restorePriorCompat:
   ReadINIStr $PreviousCompat "$BackupRoot\LAST_BACKUP.ini" "Compatibility" "Value"
   StrCmp $PreviousCompat "" clearCompat
-  WriteRegStr HKCU "${LAYERS_KEY}" "$INSTDIR\GTAIV.EXE" "$PreviousCompat"
+  WriteRegStr HKCU "${LAYERS_KEY}" "$INSTDIR\GTAIV.exe" "$PreviousCompat"
   Goto finishUninstall
 clearCompat:
-  DeleteRegValue HKCU "${LAYERS_KEY}" "$INSTDIR\GTAIV.EXE"
+  DeleteRegValue HKCU "${LAYERS_KEY}" "$INSTDIR\GTAIV.exe"
   Goto finishUninstall
 
 noBackup:

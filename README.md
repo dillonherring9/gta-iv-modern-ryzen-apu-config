@@ -79,13 +79,13 @@ DLC test result (The Lost and Damned / The Ballad of Gay Tony):
 
 ### Intel systems
 
-The Version 3 installer is **CPU-agnostic**: it validates the folder holding `GTAIV.EXE`, backs up the nine managed files, and writes the same profile to the same destinations. A strong Intel CPU can run this profile. The real question is which GPU is rendering GTA IV, which driver it is using, whether DXVK/FusionFix is stable, which resolution is active, and what extra mods are in the room.
+The Version 3 installer is **CPU-agnostic**: it validates the folder holding `GTAIV.exe`, backs up the nine managed files, and writes the same profile to the same destinations. A strong Intel CPU can run this profile. The real question is which GPU is rendering GTA IV, which driver it is using, whether DXVK/FusionFix is stable, which resolution is active, and what extra mods are in the room.
 
-Do not add `forceIntelGraphics=true` just because it sounds like a solution. Keep Version 3 unchanged for the first run, choose the intended GPU for `GTAIV.EXE` in Windows, restart after renderer changes, let caches build, and test the base story plus both EFLC episodes before deciding an Intel-specific change helped.
+Do not add `forceIntelGraphics=true` just because it sounds like a solution. Keep Version 3 unchanged for the first run, choose the intended GPU for `GTAIV.exe` in Windows, restart after renderer changes, let caches build, and test the base story plus both EFLC episodes before deciding an Intel-specific change helped.
 
 | Intel graphics setup | First expectation |
 |---|---|
-| NVIDIA or AMD discrete GPU installed | A strong fit. Use the normal installer, force the discrete GPU for `GTAIV.EXE` in Windows, and test normally. |
+| NVIDIA or AMD discrete GPU installed | A strong fit. Use the normal installer, force the discrete GPU for `GTAIV.exe` in Windows, and test normally. |
 | Intel Arc discrete GPU installed | The installer still works, but driver quality and the DXVK/FusionFix route decide the outcome. Test GTA IV, TLAD, and TBoGT separately. |
 | Only Intel UHD 770 iGPU | The installer still works, but the Radeon 660M high-visual result is not guaranteed. Start at a sensible lower resolution and give caches time before reducing the heaviest settings. |
 
@@ -155,9 +155,9 @@ The **GTA IV Version 3 Automatic Installer** is the clean route through the city
 
 1. Close GTA IV, the Rockstar Games Launcher, mod managers, and every tool holding these files open.
 2. Run `GTAIV_V3_Automatic_Installer_v3.0.0.exe` and approve the Windows administrator prompt.
-3. The destination field starts blank. Click **Browse** and select the GTA IV game folder once, such as `C:\Program Files (x86)\Rockstar Games\GTA IV` when that folder contains `GTAIV.EXE`.
+3. The destination field starts blank. Click **Browse** and select the GTA IV game folder once, such as `C:\Program Files (x86)\Rockstar Games\GTA IV` when that folder contains `GTAIV.exe`.
 4. After you click **Install**, the installer checks the selected folder and common nested GTA IV layouts. If it cannot locate the executable, it shows the full selected path and lets you return to the chooser instead of trapping you with a disabled button.
-5. The installer creates a timestamped Version 3 backup, writes the nine managed files, restores the log-validated DXVK GPLAsync profile, applies the current user’s **Run as administrator** compatibility flag to `GTAIV.EXE` when present, and registers its uninstaller in Windows **Installed apps**.
+5. The installer creates a timestamped Version 3 backup, writes the nine managed files, restores the log-validated DXVK GPLAsync profile, applies the current user’s **Run as administrator** compatibility flag to `GTAIV.exe` when present, and registers its uninstaller in Windows **Installed apps**.
 6. A successful Version 3 upgrade removes the obsolete Version 2 Installed-apps entry and uninstaller only after the Version 3 uninstaller exists. The old Version 2 backup is left untouched; the new Version 3 backup captures every managed file it replaces.
 
 Backups land here before a file is overwritten:
@@ -263,7 +263,7 @@ Look for missing vehicles, black or corrupted materials, missing plate effects, 
 
 ### Rollback
 
-If you used the Version 3 installer, close GTA IV and the launcher, then run `GTAIV_V3_Automatic_Installer_Uninstall.exe` or use **Installed apps**. Choose **Yes** to restore the newest Version 3 installer backup. That returns the prior copies of the nine managed files and restores the previous `GTAIV.EXE` compatibility setting.
+If you used the Version 3 installer, close GTA IV and the launcher, then run `GTAIV_V3_Automatic_Installer_Uninstall.exe` or use **Installed apps**. Choose **Yes** to restore the newest Version 3 installer backup. That returns the prior copies of the nine managed files and restores the previous `GTAIV.exe` compatibility setting.
 
 For manual installation, restore files from `originals/` to their prior locations. If it feels shader-related, restore `preload.list` first. Then restore `GTAIV.EFLC.FusionFix.cfg`, `GTAIV.EFLC.FusionFix.ini`, `dxvk.conf`, `GTAIV.XboxRainDroplets.ini`, and `stream.ini` as needed. Do not delete saves or alter Rockstar game archives as the first move.
 

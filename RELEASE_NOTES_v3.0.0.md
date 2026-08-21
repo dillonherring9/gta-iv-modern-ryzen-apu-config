@@ -4,6 +4,10 @@
 
 Version 3 is the after-hours release: darker in mood, clearer in purpose, and built around what the machine already proved it could hold. We went back to the GTA IV runtime log instead of guessing. The reference Ryzen 5 PRO 6650U / Radeon 660M session reported **DXVK GPLAsync v2.6.2**, Graphics Pipeline Library support, full-screen-exclusive support, and a working `4 / 4` compiler-and-async worker balance. Version 3 brings those accepted settings back into the tracked package and the automatic installer.
 
+## Case-audit follow-up
+
+A post-release case audit confirmed that all nine managed payload names, payload paths, checksum entries, and published source-archive paths already match exactly. One source and documentation detail did not: the runtime log names the game executable `GTAIV.exe`, while several installer and README references had styled it as `GTAIV.EXE`. Version 3.0.0 now uses the logged `GTAIV.exe` spelling everywhere. Windows itself treats those spellings identically, so this is a precision and documentation correction—not a change to the DXVK profile or the managed payload.
+
 ## What returned from the log
 
 | Runtime proof | Version 3 action | Why it matters |
