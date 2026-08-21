@@ -149,6 +149,17 @@ Ultimate ASI Loader is the proxy that loads `.asi` plugins. GTA IV is 32-bit, so
 
 > **The quiet rule:** update DXVK or the loader, not both on the same night. If the log changes, you want one reason for it.
 
+#### Optional high-resolution vanilla textures
+
+The [HQ Vanilla Textures City Revitalization](https://www.nexusmods.com/gta4/mods/781) project replaces selected city textures with AI-enhanced versions of the original vanilla assets. It is not a generic texture dump: the author describes choosing the enhancement method and target resolution per material and asset, with some textures at 1x, others at 2x, and others at 4x. That care is why the result can look sharper without every file being enlarged blindly.[^12]
+
+The asset is optional, and its install path matters. While shaping this setup, I found one important difference between the base story and EFLC: the tested route is **loose-file replacement**, not an `update`-folder installation. The `update`-folder version could leave the base game running while **The Lost and Damned** or **The Ballad of Gay Tony** crashed at launch. Replacing the corresponding loose files kept EFLC alive and let the texture change appear in both episodes.
+
+1. Download the resource from Nexus Mods and follow its own file list; do not treat it as part of the nine-file Version 3 configuration package.
+2. Back up each original before replacing it, then use the mod’s **loose-file** layout in the GTA IV root. Do not move the replacement into an `update` folder for this tested EFLC route.
+3. Launch the base game, The Lost and Damned, and The Ballad of Gay Tony separately. A base-story launch is not enough to call the installation healthy.
+4. If the higher-resolution assets push the Radeon 660M too hard, lower output resolution one sensible step, restart GTA IV, and let the shader and pipeline caches rebuild before judging the tradeoff. A clean image with headroom is worth more than maximum pixels with no room to breathe.
+
 ### Package contents
 
 | Package path | Manual destination | Purpose |
@@ -191,7 +202,7 @@ Backups land here before a file is overwritten:
 <GTA IV folder>\GTAIV_V3_Installer_Backups\YYYY-MM-DD_HH-MM-SS\
 ```
 
-For a rollback, close GTA IV and the launcher, then use **Settings → Apps → Installed apps** or run `GTAIV_V3_Automatic_Installer_Uninstall.exe`. Choose **Yes** to restore the latest Version 3 backup and the prior compatibility setting. Keep the tested high-resolution replacement as a **loose-file** mod; do not move it to an `update` folder if you want EFLC to stay healthy. The auditable source, payload hashes, and build notes are in [`installer/`](installer/).
+For a rollback, close GTA IV and the launcher, then use **Settings → Apps → Installed apps** or run `GTAIV_V3_Automatic_Installer_Uninstall.exe`. Choose **Yes** to restore the latest Version 3 backup and the prior compatibility setting. The auditable source, payload hashes, and build notes are in [`installer/`](installer/).
 
 ---
 
@@ -254,16 +265,6 @@ If a future FusionFix release dynamically registers the same shaders, follow the
 
 ---
 
-## EFLC and Loose-File Compatibility Note
-
-I found one difference between the base story and EFLC while shaping this setup. If you add the [linked replacement resource on Nexus Mods](https://www.nexusmods.com/gta4/mods/781), my tested route is **loose-file replacement**, not an `update`-folder mod.
-
-In my testing, the `update`-folder version could leave the base game running while The Lost and Damned or The Ballad of Gay Tony crashed at launch. Replacing the corresponding loose files kept EFLC alive and let the change show up in both episodes.
-
-The replacement assets are much higher resolution than the originals. If they push the profile too hard, reduce output resolution one sensible step, restart, and give the changed graphics path time to rebuild its cache before calling the tradeoff. A clean, stable image with headroom is worth more than maximum pixels with no room to breathe.
-
----
-
 ## Testing, Troubleshooting, and Rollback
 
 ### Test it in the city, not just at the loading screen
@@ -323,3 +324,4 @@ The configuration is provided as-is. Keep a backup. A change that feels perfect 
 [^9]: [Intel Core i9-12900K specifications](https://www.intel.com/content/www/us/en/products/sku/134599/intel-core-i912900k-processor-30m-cache-up-to-5-20-ghz/specifications.html) — 16 total cores, 8 Performance cores, 8 Efficient cores, 24 threads, and Intel UHD Graphics 770.
 [^10]: [FusionFix issue #1079](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/issues/1079) — FusionFix’s Vulkan/DXVK placement context and its `vulkan.dll` naming path.
 [^11]: [Ultimate ASI Loader releases](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases) — official releases, x86/x64 proxy assets, and installation naming guidance.
+[^12]: [HQ Vanilla Textures City Revitalization](https://www.nexusmods.com/gta4/mods/781) — original vanilla texture replacements, selective AI enhancement, and asset-resolution context.
