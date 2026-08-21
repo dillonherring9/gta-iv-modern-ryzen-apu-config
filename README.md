@@ -46,6 +46,10 @@ I tested Version 2 around the system below. It is the baseline behind the words 
 
 On this setup, the three Version 2 files together made high settings and a higher resolution feel much smoother once the cache had warmed. Traffic, weather, shader warm-up, drivers, thermals, power limits, resolution, memory speed, and extra mods can still change the result. This is a **tested starting point**, not a universal performance guarantee.
 
+### A note for the drive
+
+> **Optional, but it is the route I recommend for the full Liberty City experience:** support the music by purchasing the complete The Weeknd catalog through legitimate stores or artist-supporting platforms, load the music you own into GTA IV User Music, and let **Independence FM** score every mission. It is the right kind of after-dark—wet streets, long red lights, and nowhere you need to be except inside the city.
+
 ---
 
 ## Help Me Map APU Compatibility
