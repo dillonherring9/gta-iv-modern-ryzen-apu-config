@@ -1,27 +1,29 @@
-# GTA IV Version 2 Automatic Installer — Build and Test Notes
+# GTA IV Version 3 Automatic Installer — Build and Test Notes
 
-This directory contains the auditable **NSIS source** for `GTAIV_V2_Automatic_Installer_v2.0.2.exe`, its nine-file configuration payload, and `INSTALLER_PAYLOAD_SHA256SUMS.txt` for payload verification. It does **not** include GTA IV, launcher files, saved games, executable replacements, DXVK binaries, FusionFix binaries, or other third-party mod assets.
+This directory is the complete auditable source for `GTAIV_V3_Automatic_Installer_v3.0.0.exe`. It carries the nine-file configuration payload, the payload checksum manifest, and the instructions needed to rebuild the installer. It does **not** include GTA IV, Rockstar launcher files, saves, DXVK/FusionFix binaries, executable replacements, or third-party mod assets.
 
-## What Version 2.0.2 fixes
+## Version 3: what changed after the city went quiet
 
-Version 2.0.2 aligns the embedded nine-file payload with the current tracked `tuned/` profile, stores the complete installer source in the repository, and makes the Windows rollback route discoverable through **Installed apps**. It also removes the stale Rockstar registry-path import that could preload duplicate GTA IV folder layers. The installer now begins with a blank destination field, lets the player select the actual game folder once, and validates the selection only after the player clicks **Install**.
+Version 3 returns to the runtime log rather than guessing. The user-tested Radeon 660M session reported **DXVK GPLAsync v2.6.2**, Graphics Pipeline Library support, full-screen-exclusive support, and an active `4 / 4` compiler-and-async worker balance. The package now preserves that working renderer profile instead of shipping a reduced file that had lost accepted settings.
 
-| Item | Version 2.0.2 behavior |
+| Area | Version 3 behavior |
 |---|---|
-| Game-folder check | The destination starts blank. The installer accepts common direct or nested GTA IV layouts after **Install** is clicked; if it cannot find an executable, it shows the full selected path and asks the player to continue or go back. |
-| Managed files | The installer writes exactly nine configuration files to the destinations documented in the main README. |
-| Backup | Existing managed files are copied to a timestamped folder under `GTAIV_V2_Installer_Backups` before replacement. |
-| Compatibility setting | The current user's prior `GTAIV.EXE` compatibility value is recorded; the installer sets `RUNASADMIN`, and a rollback restores the recorded value. |
-| Installed apps | The installer registers itself in Windows **Settings → Apps → Installed apps** with an uninstall command. |
-| Uninstall | Choosing **Yes** restores the latest installer backup; choosing **No** only removes the uninstaller registration and executable. |
+| DXVK profile | Restores the logged working `dxvk.enableAsync`, `dxvk.numAsyncThreads=4`, `dxvk.gplAsyncCache=True`, and `dxvk.allowFse=true` values alongside the existing four compiler threads. |
+| Folder selection | Starts blank and never imports a stale Rockstar registry path. The player selects the real game folder once. |
+| Validation | Checks direct and common nested layouts only after **Install** is clicked; it does not trap the player with a disabled button. |
+| Version 2 upgrade | Once the Version 3 uninstaller is written, the installer removes the obsolete Version 2 Installed-apps entry and uninstaller. Version 3 backs up the files it replaces before it writes anything. |
+| Loose replacement mod | The installer never moves or repackages loose mod files. Keep the tested loose-file route; do not move that replacement into an `update` folder. |
+| Rollback | Version 3 restores the latest Version 3 backup and the prior compatibility value when the user chooses **Yes** during uninstall. |
+
+> **After-hours rule:** one renderer, one limiter, one change at a time. Restart GTA IV after renderer or graphics-path changes, then judge the second or third pass—not the first cold lap.
 
 ## Prerequisites
 
-Build on Windows with **NSIS 3.09 or newer** installed. The `makensis` compiler must be available from Command Prompt or called by its full path. Keep the directory layout intact because the script uses relative `payload\` paths.
+Build on Windows with **NSIS 3.09 or newer**. The `makensis` compiler must be available from Command Prompt or called by its full path. Preserve this directory layout because the script uses relative `payload\` paths.
 
 ## Verify the payload
 
-From this directory, compare the SHA-256 hash of every file under `payload\` with `INSTALLER_PAYLOAD_SHA256SUMS.txt` before compiling. The manifest paths are relative to the `payload` directory.
+From the `installer` directory, enter `payload\` and compare each hash against `INSTALLER_PAYLOAD_SHA256SUMS.txt` before compiling:
 
 ```powershell
 Set-Location .\payload
@@ -41,29 +43,31 @@ Get-FileHash -Algorithm SHA256 .\common\shaders\preload.list
 Open Command Prompt in this `installer` directory and run:
 
 ```text
-makensis GTAIV_V2_Automatic_Installer.nsi
+makensis GTAIV_V3_Automatic_Installer.nsi
 ```
 
 A successful compilation writes:
 
 ```text
-build\GTAIV_V2_Automatic_Installer_v2.0.2.exe
+build\GTAIV_V3_Automatic_Installer_v3.0.0.exe
 ```
 
 ## Safe Windows test checklist
 
-Use a disposable copy of a legitimate GTA IV installation or back up the real game folder first. Close GTA IV and the Rockstar Games Launcher before the test.
+Use a disposable GTA IV installation or make a complete backup first. Close GTA IV, Rockstar Games Launcher, mod managers, and any tool that may hold game files open.
 
 | Step | Expected result |
 |---|---|
-| Select a folder without `GTAIV.EXE` | The installer displays the full selected path and offers a clear choice to continue or return to the chooser. |
-| Select the real game folder and install | Nine files are written, a timestamped backup is created, and the installer appears in Installed apps. |
-| Check `GTAIV_V2_Installer_Backups` | `LAST_BACKUP.ini`, `backup_manifest.txt`, and prior versions of files that existed before installation are present. |
-| Start the uninstaller and choose **Yes** | The latest backup is restored and the former compatibility value is restored. |
-| Check Installed apps again | The installer entry is removed. |
+| Open the installer | The destination field is blank. |
+| Browse to the game folder | Select the folder that contains `GTAIV.EXE`; no duplicate Rockstar path should appear. |
+| Click **Install** | The installer verifies the folder after the click and shows the full path if it needs clarification. |
+| Check `GTAIV_V3_Installer_Backups` | A timestamped backup contains copies of any managed files that existed before installation. |
+| Check `dxvk.conf` | The nine-file payload is present, including the logged GPLAsync `4 / 4` thread profile. |
+| Check Installed apps | The Version 3 entry is present; the obsolete Version 2 entry is removed after a successful upgrade. |
+| Run the Version 3 uninstaller and choose **Yes** | The latest backup and prior `GTAIV.EXE` compatibility value are restored. |
 
-> **Do not test this installer against an unbacked-up modded game folder.** The installer protects its nine managed files, but it cannot diagnose or reverse unrelated mod, launcher, driver, or renderer changes.
+> **Do not add extra wrappers, ASI loaders, or frame limiters while testing.** The installer protects its own nine files; it cannot untangle unrelated DLL chains, mod precedence rules, driver changes, or loose-file replacements.
 
 ## Attribution and distribution
 
-This source contains only the installer script, documentation, checksum manifest, and configuration payload supplied for this package. Preserve the original credits, licenses, and distribution terms for GTA IV, FusionFix, DXVK, Gillian’s resources, and every third-party mod used with the configuration.
+This source contains only the installer script, documentation, checksum manifest, and project configuration payload. Preserve the licenses, credits, and distribution terms for GTA IV, FusionFix, DXVK, Gillian’s resources, and every third-party mod used with this configuration.

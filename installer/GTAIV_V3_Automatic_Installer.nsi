@@ -3,16 +3,18 @@ Unicode True
 RequestExecutionLevel admin
 SetCompressor /SOLID lzma
 
-!define PRODUCT_NAME "GTA IV Version 2 Automatic Installer"
-!define PRODUCT_VERSION "2.0.2"
+!define PRODUCT_NAME "GTA IV Version 3 Automatic Installer"
+!define PRODUCT_VERSION "3.0.0"
 !define PRODUCT_PUBLISHER "LOST_MAN93"
-!define UNINSTALLER_NAME "GTAIV_V2_Automatic_Installer_Uninstall.exe"
-!define BACKUP_ROOT "GTAIV_V2_Installer_Backups"
+!define UNINSTALLER_NAME "GTAIV_V3_Automatic_Installer_Uninstall.exe"
+!define BACKUP_ROOT "GTAIV_V3_Installer_Backups"
 !define LAYERS_KEY "Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"
-!define UNINSTALL_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\GTAIV_V2_Automatic_Installer"
+!define UNINSTALL_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\GTAIV_V3_Automatic_Installer"
+!define V2_UNINSTALL_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\GTAIV_V2_Automatic_Installer"
+!define V2_UNINSTALLER_NAME "GTAIV_V2_Automatic_Installer_Uninstall.exe"
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "build\GTAIV_V2_Automatic_Installer_v2.0.2.exe"
+OutFile "build\GTAIV_V3_Automatic_Installer_v3.0.0.exe"
 ; Do not import Rockstar's InstallFolder registry value: it can be stale or contain duplicated folders.
 ; The tester selects the actual game folder once through Browse.
 InstallDir ""
@@ -116,7 +118,7 @@ compatRecorded:
     CopyFiles /SILENT "$INSTDIR\common\shaders\preload.list" "$BackupDir\common\shaders"
 
   FileOpen $Handle "$BackupDir\backup_manifest.txt" w
-  FileWrite $Handle "GTA IV Version 2 Automatic Installer backup$\r$\n"
+  FileWrite $Handle "GTA IV Version 3 Automatic Installer backup$\r$\n"
   FileWrite $Handle "Installation directory: $INSTDIR$\r$\n"
   FileWrite $Handle "Created: $Year-$Month-$Day $Hour:$Minute:$Second$\r$\n"
   FileWrite $Handle "The backup contains only pre-existing configuration files.$\r$\n"
@@ -133,7 +135,7 @@ Function SetRunAsAdmin
     WriteRegStr HKCU "${LAYERS_KEY}" "$INSTDIR\GTAIV.EXE" "RUNASADMIN"
 FunctionEnd
 
-Section "Install GTA IV Version 2 configuration" SEC_MAIN
+Section "Install GTA IV Version 3 configuration" SEC_MAIN
   Call CreateBackup
 
   SetOutPath "$INSTDIR"
@@ -156,6 +158,10 @@ Section "Install GTA IV Version 2 configuration" SEC_MAIN
   Call SetRunAsAdmin
   WriteUninstaller "$INSTDIR\${UNINSTALLER_NAME}"
 
+  ; This upgrade supersedes Version 2 only after the Version 3 uninstaller exists.
+  DeleteRegKey HKLM "${V2_UNINSTALL_KEY}"
+  Delete "$INSTDIR\${V2_UNINSTALLER_NAME}"
+
   ; Make the documented "Installed apps" route real and keep the uninstaller discoverable.
   WriteRegStr HKLM "${UNINSTALL_KEY}" "DisplayName" "${PRODUCT_NAME} ${PRODUCT_VERSION}"
   WriteRegStr HKLM "${UNINSTALL_KEY}" "DisplayVersion" "${PRODUCT_VERSION}"
@@ -168,7 +174,7 @@ Section "Install GTA IV Version 2 configuration" SEC_MAIN
   WriteRegDWORD HKLM "${UNINSTALL_KEY}" "NoRepair" 1
 
   IfSilent +2
-    MessageBox MB_ICONINFORMATION "Version 2 files were installed. The prior files, if any, were backed up in:$\r$\n$BackupDir$\r$\n$\r$\nIf GTAIV.EXE is present in the selected game folder, it was configured to run as administrator for the current Windows user."
+    MessageBox MB_ICONINFORMATION "Version 3 files were installed. The prior files, if any, were backed up in:$\r$\n$BackupDir$\r$\n$\r$\nThe log-validated DXVK GPLAsync profile is now in place. If GTAIV.EXE is present in the selected game folder, it was configured to run as administrator for the current Windows user."
 SectionEnd
 
 Section "Uninstall"

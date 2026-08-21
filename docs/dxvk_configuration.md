@@ -1,55 +1,55 @@
-# DXVK Configuration — Keep the Renderer Honest
+# DXVK Configuration — The Signal Behind the Streetlights
 
-The supplied `dxvk.conf` ships in the Source and Release packages because it describes the intended DXVK side of the Ryzen 5 PRO 6650U / Radeon 660M profile. It is preserved as tested, but it is an **optional renderer configuration**, never a universal requirement.
+The supplied `dxvk.conf` is the renderer side of the Ryzen 5 PRO 6650U / Radeon 660M profile. Version 3 does not present it as a universal magic file. It records the settings that the actual GTA IV runtime log accepted on the intended **DXVK GPLAsync v2.6.2-style path**.
 
-## What this file can—and cannot—do
+DXVK translates GTA IV’s Direct3D 9 calls into Vulkan. When the correct DXVK/Vulkan DLL is active, `dxvk.conf` can influence shader and pipeline work, CPU-to-GPU latency, frame pacing, memory reporting, and whether DXVK adds another FPS cap. FusionFix handles GTA IV fixes and features; this file governs the translation layer beneath it. A configuration file beside a DLL is read only by that DLL’s DXVK build. It does not change native Direct3D 9 and cannot wake up a missing Vulkan wrapper.
 
-DXVK translates GTA IV’s Direct3D 9 calls into Vulkan. When the correct DXVK/Vulkan DLL is active, its configuration can change shader and pipeline compilation, CPU-to-GPU latency, frame pacing, memory reporting, and whether DXVK adds another FPS cap. FusionFix handles GTA IV fixes and features; `dxvk.conf` controls the translation layer beneath it.
+> **Keep the path clean:** one renderer, one ASI-loader route, and one intentional frame limiter. A second wrapper or cap can turn a clean log into a long night of guessing.
 
-A configuration file beside a DLL is read only by that DLL’s DXVK build. It does not change native Direct3D 9, and it cannot wake up a missing Vulkan wrapper. Keep one renderer path active at a time.
+## The Version 3 profile
 
-## Supplied settings
-
-| Setting | Supplied value | Meaning in this profile |
+| Setting | Version 3 value | Why it is here |
 |---|---:|---|
-| `dxvk.gplAsyncCache` | `True` | Fork-specific GPL/async state-cache behavior. It is not in the current standard upstream DXVK reference; use it only with a DXVK-GPLAsync/GPLALL build that documents it. |
-| `d3d9.maxAvailableMemory` | `4096` | Reports 4 GiB to the D3D9 application. It is a compatibility hint, not a hard VRAM reservation. |
-| `d3d9.maxFrameLatency` | `1` | Requests one queued frame. It can reduce latency, but it can reveal rough pacing if the game or driver cannot hold the target. |
-| `dxvk.numCompilerThreads` | `4` | Uses four shader compiler threads. This can shorten first-run compilation, but it may compete with GTA IV streaming and simulation on a mobile Ryzen CPU. |
-| `dxvk.enableGraphicsPipelineLibrary` | `Auto` | Lets the driver and DXVK choose a compatible Graphics Pipeline Library route. |
-| `d3d9.deviceLocalConstantBuffers` | `False` | Avoids forcing a device-local memory policy on integrated graphics. |
-| `d3d9.presentInterval` | `-1` | Leaves presentation interval to the game instead of creating a second VSync policy. |
-| `d3d9.maxFrameRate` | `0` | Turns off DXVK’s own limiter so FusionFix remains the single intended 60 FPS limiter. |
+| `dxvk.gplAsyncCache` | `True` | The runtime log accepted this GPLAsync cache behavior. It is build-specific, not a stock-upstream guarantee. |
+| `dxvk.enableAsync` | `true` | Restored because the active GPLAsync v2.6.2-style runtime reported it as accepted. |
+| `dxvk.numAsyncThreads` | `4` | Restored to the working async-worker balance reported in the log. |
+| `dxvk.numCompilerThreads` | `4` | Keeps four compiler workers on a six-core mobile APU, leaving room for GTA IV streaming, traffic, scripts, and Windows. |
+| `d3d9.maxAvailableMemory` | `4096` | A 4 GiB compatibility hint for the 32-bit D3D9 application, not a reserved VRAM pool. |
+| `d3d9.maxFrameLatency` | `1` | Requests a one-frame queue for lower latency; test it only if repeatable pacing problems remain. |
+| `d3d9.maxFrameRate` | `0` | Leaves DXVK’s explicit cap off so FusionFix owns the intended 60 FPS target. |
+| `d3d9.presentInterval` | `-1` | Leaves the presentation interval to the game rather than layering a second VSync policy. |
+| `dxvk.enableGraphicsPipelineLibrary` | `Auto` | The Radeon 660M log confirmed Graphics Pipeline Library support; Auto lets DXVK and the driver choose the compatible path. |
+| `dxvk.allowFse` | `true` | The log confirmed full-screen-exclusive support on the active Radeon route. |
+| `d3d9.deviceLocalConstantBuffers` | `False` | Avoids forcing device-local placement on an integrated GPU that shares system memory. |
 
-The standard meanings of the upstream options are documented in DXVK’s configuration reference.[^1]
+## Cache reality on a shared-memory APU
 
-## **Cache reality for an APU**
+Shader and pipeline caches have to build. The first pass through new traffic, weather, lighting, a higher-resolution loose asset, or a changed render path can hitch while the renderer learns the work. A changed graphics setting, resolution, DXVK option, driver, renderer, or major mod can make earlier cache entries irrelevant. Restart GTA IV when the change calls for it, replay the same demanding route, then judge the second or third pass.
 
-> **Shader and pipeline caches have to build. On a shared-memory APU, a cold cache can hitch when you enter a new area, trigger a new effect, change weather, or use a new renderer path. This is expected during warm-up, and there is no setting that makes the cache-building phase disappear.**
->
-> **Changing in-game graphics settings, resolution, DXVK options, drivers, renderer selection, or significant mods can make old cache entries irrelevant. Some changes require a full GTA IV restart. If you leave the game open after a setting change that needs a restart, it can stutter until you relaunch it.**
+The tested high-resolution replacement remains a **loose-file** mod. Keep it loose. The `update`-folder alternative can leave the base story alive while making EFLC crash at launch. If the loose assets pressure the Radeon 660M too hard, lower output resolution one sensible step before raising DXVK thread counts.
 
-The right method is restrained: make one change, restart when required, replay the same demanding route, then judge the second or third pass. Do not tune against a first-run hitch by changing five other settings.
+## Compatibility boundary
 
-## Compatibility warning
+Version 3 targets the renderer behavior shown in the log: a DXVK GPLAsync v2.6.2-style build that accepts `dxvk.gplAsyncCache`, `dxvk.enableAsync`, and `dxvk.numAsyncThreads`. Those three values are **not** a universal stock DXVK profile. If a standard upstream DXVK build reports them as unknown, retain the standard settings and remove only those build-specific lines. Do not add another renderer DLL to silence the message.
 
-`dxvk.gplAsyncCache` belongs to GPLAsync/GPLALL-style builds rather than the standard upstream DXVK configuration. Ordinary upstream DXVK can ignore that line. A compatible GPLAsync fork may improve cache behavior, but it can also create driver-specific crashes. Keep a rollback copy and use the fork’s release notes.[^2]
+The profile intentionally stays at four compiler and four async workers. Raising both at once does not make GTA IV a modern multi-threaded game; it can instead pull CPU time away from traffic, scripts, streaming, and Windows during cache work. Treat a different count as a one-variable experiment after the profile has warmed and only if repeatable evidence says the CPU is clear.
 
-The profile intentionally uses `d3d9.presentInterval=-1` and `d3d9.maxFrameRate=0` so DXVK does not compete with FusionFix’s 60 FPS limiter. Do not add Radeon Chill, RTSS, another DXVK cap, or a second frame limiter while validating the single-limiter profile.
+## A clean test route
 
-## A clean testing sequence
-
-Start with the file unchanged and verify that the game loads the intended DXVK build by checking the DXVK log next to the active DLL. Test a save load, dense traffic, rain at night, an interior transition, and a vehicle with custom audio.
+Start with this file unchanged. Confirm `GTAIV_d3d9.log` reports the intended DXVK build, the expected effective configuration, and the intended Radeon device. Then test a save load, dense daytime traffic, a rainy night route, an interior transition, a vehicle with custom audio, and both EFLC episodes where installed.
 
 | Symptom | First move |
 |---|---|
-| Stutter only on the first run, then smoother repeat runs | Let the shader/pipeline cache warm up. This is consistent with compilation work. |
-| Stutter after graphics, resolution, renderer, driver, or DXVK changes | Restart GTA IV, then replay a demanding route until the new cache has settled. |
-| Immediate crash | Comment out only `dxvk.gplAsyncCache` or return it to the fork’s documented default. |
+| Stutter only on the first route, then smoother repeat runs | Let the cache warm. Do not tune against a first-run hitch. |
+| Stutter after a graphics, resolution, renderer, driver, or DXVK change | Restart GTA IV, then replay the same demanding route until the cache settles. |
+| Immediate crash with the GPLAsync path | Comment out `dxvk.gplAsyncCache`, then `dxvk.enableAsync` / `dxvk.numAsyncThreads` only if the first step does not resolve it. |
 | Rough pacing with `maxFrameLatency=1` | Restore `d3d9.maxFrameLatency=0` before changing FusionFix’s limiter. |
-| CPU contention during compilation | Test `dxvk.numCompilerThreads=2`. If the CPU is genuinely clear, test `6`—do not increase blindly. |
+| Loose high-resolution assets push the system too hard | Reduce output resolution before trimming texture quality; then test rain and EFLC again. |
 
 ## References
 
-[^1]: [Official DXVK configuration reference](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf) — upstream option names, supported values, and behavior.
-[^2]: [DXVK GPLAsync project](https://gitlab.com/Ph42oN/dxvk-gplasync) — fork-specific GPL/async cache behavior and compatibility context.
+[1]: [DXVK upstream configuration reference](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf).
+
+[2]: [DXVK GPLAsync project](https://gitlab.com/Ph42oN/dxvk-gplasync).
+
+[3]: [Gillian’s GTA IV optimization guide](https://gillian-guide.github.io/optimization/).
