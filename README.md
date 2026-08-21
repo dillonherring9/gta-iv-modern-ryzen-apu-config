@@ -124,6 +124,31 @@ Start with a legitimate GTA IV Complete Edition install that launches before you
 
 > **Do not stack a second ASI loader, `d3d9.dll`, `dxgi.dll`, DXVK wrapper, shader proxy, or random `update`-folder priority layer on top of the path you mean to use.** One loader and one renderer are easier to diagnose than a beautiful-looking pile of conflicting fixes.[^7]
 
+### Optional upgrades: keep the late-night signal current
+
+The Version 3 profile is built around the renderer and loader path that already works on the reference system. If you decide to update either binary, do it as a controlled replacement: save the current file first, change one component, restart GTA IV, and confirm the new `GTAIV_d3d9.log` before changing anything else.
+
+#### Upgrade DXVK for FusionFix
+
+FusionFix’s Vulkan route uses a **32-bit DXVK build renamed to `vulkan.dll`** in the GTA IV root. Do not leave the downloaded file as `d3d9.dll` beside the game when you are using FusionFix’s `API=1` Vulkan route; replace the existing `vulkan.dll` instead.[^10]
+
+1. Download the current Windows release from the [official DXVK releases](https://github.com/doitsujin/dxvk/releases). Keep the existing working `vulkan.dll` somewhere safe first; a newer DXVK build is an experiment, not an automatic performance win.
+2. Extract the archive and open its **`x32`** folder. GTA IV is a 32-bit process, so do not use the `x64` folder.
+3. Copy the `x32\d3d9.dll` file to a temporary location and rename that copy to **`vulkan.dll`**.
+4. Replace the existing `GTA IV\vulkan.dll` with the renamed file. Do not rename or replace `d3d9.dll` for this FusionFix path.
+5. Launch GTA IV once, confirm the Vulkan/DXVK backend in `GTAIV_d3d9.log`, and replay the same route after the shader and pipeline cache has warmed. If the game stops launching, restore the backed-up `vulkan.dll` before testing another variable.
+
+#### Upgrade Ultimate ASI Loader for FusionFix
+
+Ultimate ASI Loader is the proxy that loads `.asi` plugins. GTA IV is 32-bit, so the correct replacement is the **x86** `dinput8.dll`, not the Win64 build.[^11]
+
+1. Download the current release from the [official Ultimate ASI Loader releases](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases).
+2. Extract the archive and select the **x86** `dinput8.dll` asset.
+3. Back up the existing `GTA IV\dinput8.dll`, then copy the new x86 `dinput8.dll` into the GTA IV root and replace the old one.
+4. Launch the game and confirm that FusionFix and ScriptHook initialize normally. Keep one intended ASI loader only; do not add a second proxy under another DLL name unless the loader’s own documentation requires it.
+
+> **The quiet rule:** update DXVK or the loader, not both on the same night. If the log changes, you want one reason for it.
+
 ### Package contents
 
 | Package path | Manual destination | Purpose |
@@ -296,3 +321,5 @@ The configuration is provided as-is. Keep a backup. A change that feels perfect 
 [^7]: [Gillian’s mod-loading guide](https://gillian-guide.github.io/extras/modloading/) — Fusion Overloader precedence and update-folder guidance.
 [^8]: [DXVK GPLAsync project](https://gitlab.com/Ph42oN/dxvk-gplasync) — GPL/async cache behavior and fork-specific compatibility context.
 [^9]: [Intel Core i9-12900K specifications](https://www.intel.com/content/www/us/en/products/sku/134599/intel-core-i912900k-processor-30m-cache-up-to-5-20-ghz/specifications.html) — 16 total cores, 8 Performance cores, 8 Efficient cores, 24 threads, and Intel UHD Graphics 770.
+[^10]: [FusionFix issue #1079](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/issues/1079) — FusionFix’s Vulkan/DXVK placement context and its `vulkan.dll` naming path.
+[^11]: [Ultimate ASI Loader releases](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases) — official releases, x86/x64 proxy assets, and installation naming guidance.
