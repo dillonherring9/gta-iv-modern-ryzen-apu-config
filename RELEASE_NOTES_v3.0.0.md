@@ -33,6 +33,18 @@ It creates a timestamped `GTAIV_V3_Installer_Backups` folder before replacing ma
 | `GTAIV_V3_Automatic_Installer_v3.0.0.exe` | You want the clean folder chooser, timestamped managed-file backup, log-validated profile, and rollback route. |
 | `GTAIV_V3_Automatic_Installer_Source_v3.0.0.zip` | You want to audit or rebuild the NSIS installer and inspect the exact payload. |
 | `GTAIV_V3_Automatic_Installer_v3.0.0_SHA256SUMS.txt` | You want to verify the published executable and source archive before use. |
+| `dxvk.conf` | You want only the standalone Version 3 renderer configuration for a manual one-file replacement. |
+
+## Manual one-file route
+
+The release now includes a standalone **`dxvk.conf`** for users who already have Version 3 installed and only want the log-validated renderer profile. This is the quiet route: it changes one configuration file and does not run the installer, replace the nine-file package, create a backup, or modify Windows Installed apps.
+
+1. Download `dxvk.conf` from the release assets and back up the current `GTA IV\dxvk.conf` first.
+2. Copy the downloaded file into the GTA IV root folder and replace the existing `dxvk.conf`.
+3. Keep the existing DXVK/FusionFix binaries and loose-file mod route unchanged.
+4. Launch GTA IV and confirm the Vulkan/DXVK backend in `GTAIV_d3d9.log`. If the result is worse or the build does not recognize the GPLAsync keys, restore the backed-up configuration or use the full installer rollback path.
+
+Use the standalone file only with the compatible GPLAsync-style renderer path described below. It is provided for manual users who want the **one-file change**, not as a replacement for the full installer when backups, migration, or rollback are needed.
 
 ## Keep the loose route loose
 
@@ -58,4 +70,6 @@ The release contains configuration, installer source, checksums, and documentati
 
 [2]: [DXVK GPLAsync project](https://gitlab.com/Ph42oN/dxvk-gplasync).
 
-[3]: [Gillian’s GTA IV optimization guide](https://gillian-guide.github.io/optimization/).
+[3]: [FusionFix issue #1079](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/issues/1079) — FusionFix’s `vulkan.dll` path and DXVK replacement context.
+
+[4]: [Gillian’s GTA IV optimization guide](https://gillian-guide.github.io/optimization/).
