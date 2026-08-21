@@ -149,12 +149,15 @@ Start with a legitimate GTA IV Complete Edition install that launches before you
 
 ### Automatic installer
 
-The **GTA IV Version 2 Automatic Installer** is optional. It installs the same tested Version 2 configuration and `stream.ini` found in the ZIPs, but it places them for you. It does **not** contain GTA IV, launcher files, saves, executable replacements, FusionFix/DXVK binaries, or third-party assets.
+The **GTA IV Version 2 Automatic Installer** is optional. It places the same tested Version 2 configuration and `stream.ini` found in the ZIPs; it does **not** contain GTA IV, launcher files, saves, executable replacements, FusionFix/DXVK binaries, or third-party assets.
+
+> **The user-tested Version 2.0.2 installer is the clean setup path: choose your GTA IV folder once, then let it handle the profile, backup, and rollback.**
 
 1. Close GTA IV, the Rockstar Games Launcher, and every tool holding these files open.
-2. Run `GTAIV_V2_Automatic_Installer_v2.0.0.exe` and approve the Windows administrator prompt.
-3. Select the GTA IV folder that directly contains `GTAIV.EXE`, such as `C:\Program Files (x86)\Rockstar Games\GTA IV`.
-4. The installer validates `GTAIV.EXE`, creates a timestamped backup, writes the nine managed files, and applies the current user’s **Run as administrator** compatibility flag to `GTAIV.EXE`.
+2. Run `GTAIV_V2_Automatic_Installer_v2.0.2.exe` and approve the Windows administrator prompt.
+3. The destination field starts blank. Click **Browse** and select the GTA IV game folder once, such as `C:\Program Files (x86)\Rockstar Games\GTA IV` when that folder contains `GTAIV.EXE`.
+4. After you click **Install**, the installer checks the selected folder and common nested GTA IV layouts. If it cannot locate the executable, it shows the full selected path and lets you return to the chooser instead of trapping you with a disabled button.
+5. The installer creates a timestamped backup, writes the nine managed files, applies the current user’s **Run as administrator** compatibility flag to `GTAIV.EXE` when present, and registers its uninstaller in Windows **Installed apps**.
 
 Backups land here before a file is overwritten:
 
@@ -162,7 +165,7 @@ Backups land here before a file is overwritten:
 <GTA IV folder>\GTAIV_V2_Installer_Backups\YYYY-MM-DD_HH-MM-SS\
 ```
 
-The uninstaller can restore the latest installer backup and the previous compatibility setting. Use **Installed apps** or `GTAIV_V2_Automatic_Installer_Uninstall.exe`, then choose **Yes** when it offers the latest backup.
+For a rollback, close GTA IV and the launcher, then use **Settings → Apps → Installed apps** or run `GTAIV_V2_Automatic_Installer_Uninstall.exe`. Choose **Yes** to restore the latest installer backup and the prior compatibility setting. The auditable source, payload hashes, and build notes are in [`installer/`](installer/).
 
 ---
 
