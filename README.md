@@ -149,26 +149,20 @@ Start with a legitimate GTA IV Complete Edition install that launches before you
 
 ### Automatic installer
 
-The **GTA IV Version 2 Automatic Installer** is optional. It places the same nine tested Version 2 configuration files found in `tuned/`; it does **not** contain GTA IV, launcher files, saves, executable replacements, FusionFix/DXVK binaries, or third-party assets.
-
-| Download | Choose it when | Do not choose it when |
-|---|---|---|
-| [Latest installer test build](../../releases) | You want the installer to copy the profile, create the managed-file backup, and register an uninstaller. | You want to review or modify the installer source. |
-| [Release ZIP](../../releases) | You prefer manual placement of the configuration files. | You expect an executable installer. |
-| [`installer/` source](installer/) | You want to audit or compile the NSIS installer yourself. | You only need to install the profile. |
+The **GTA IV Version 2 Automatic Installer** is optional. It installs the same tested Version 2 configuration and `stream.ini` found in the ZIPs, but it places them for you. It does **not** contain GTA IV, launcher files, saves, executable replacements, FusionFix/DXVK binaries, or third-party assets.
 
 1. Close GTA IV, the Rockstar Games Launcher, and every tool holding these files open.
-2. Download **`GTAIV_V2_Automatic_Installer_v2.0.1.exe`** from the latest installer test release and approve the Windows administrator prompt.
+2. Run `GTAIV_V2_Automatic_Installer_v2.0.0.exe` and approve the Windows administrator prompt.
 3. Select the GTA IV folder that directly contains `GTAIV.EXE`, such as `C:\Program Files (x86)\Rockstar Games\GTA IV`.
-4. The installer validates `GTAIV.EXE`, creates a timestamped backup, writes the nine managed files, applies the current user’s **Run as administrator** compatibility flag to `GTAIV.EXE`, and registers itself in Windows **Installed apps**.
+4. The installer validates `GTAIV.EXE`, creates a timestamped backup, writes the nine managed files, and applies the current user’s **Run as administrator** compatibility flag to `GTAIV.EXE`.
 
-Backups land here before a managed file is overwritten:
+Backups land here before a file is overwritten:
 
 ```text
 <GTA IV folder>\GTAIV_V2_Installer_Backups\YYYY-MM-DD_HH-MM-SS\
 ```
 
-For a rollback, close GTA IV and the launcher, then use **Settings → Apps → Installed apps** or run `GTAIV_V2_Automatic_Installer_Uninstall.exe`. Choose **Yes** to restore the latest installer backup and the previous compatibility setting. Choose **No** only when you want to remove the installer entry without restoring the managed files. The test checklist and source-build instructions are in [`installer/BUILDING.md`](installer/BUILDING.md).
+The uninstaller can restore the latest installer backup and the previous compatibility setting. Use **Installed apps** or `GTAIV_V2_Automatic_Installer_Uninstall.exe`, then choose **Yes** when it offers the latest backup.
 
 ---
 
@@ -266,7 +260,7 @@ Look for missing vehicles, black or corrupted materials, missing plate effects, 
 
 ### Rollback
 
-If you used the installer, close GTA IV and the launcher, then run `GTAIV_V2_Automatic_Installer_Uninstall.exe` or use **Settings → Apps → Installed apps**. Choose **Yes** to restore the newest installer backup. That returns the prior copies of the nine managed files and restores the previous `GTAIV.EXE` compatibility setting. Choose **No** only when you want to remove the installer without restoring its managed files.
+If you used the installer, close GTA IV and the launcher, then run `GTAIV_V2_Automatic_Installer_Uninstall.exe` or use **Installed apps**. Choose **Yes** to restore the newest installer backup. That returns the prior copies of the nine managed files and restores the previous `GTAIV.EXE` compatibility setting.
 
 For manual installation, restore files from `originals/` to their prior locations. If it feels shader-related, restore `preload.list` first. Then restore `GTAIV.EFLC.FusionFix.cfg`, `GTAIV.EFLC.FusionFix.ini`, `dxvk.conf`, `GTAIV.XboxRainDroplets.ini`, and `stream.ini` as needed. Do not delete saves or alter Rockstar game archives as the first move.
 
