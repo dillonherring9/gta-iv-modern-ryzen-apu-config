@@ -5,7 +5,7 @@ RequestExecutionLevel admin
 SetCompressor /SOLID lzma
 
 !ifndef PRODUCT_VERSION
-!define PRODUCT_VERSION "3.0.3"
+!define PRODUCT_VERSION "3.0.4"
 !endif
 !define PRODUCT_NAME "GTA IV Core Configuration Installer"
 !define PRODUCT_PUBLISHER "LOST_MAN93"

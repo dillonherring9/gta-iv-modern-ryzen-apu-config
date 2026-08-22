@@ -30,6 +30,7 @@ jobs:
         shell: pwsh
         run: |
           $version = $env:GITHUB_REF_NAME.TrimStart('v')
+          New-Item -ItemType Directory -Force -Path installer\build | Out-Null
           $makensis = (Get-Command makensis.exe -ErrorAction Stop).Source
           & $makensis "/DPRODUCT_VERSION=$version" installer\GTAIV_V3_Automatic_Installer.nsi
           if ($LASTEXITCODE -ne 0) { throw "NSIS build failed." }

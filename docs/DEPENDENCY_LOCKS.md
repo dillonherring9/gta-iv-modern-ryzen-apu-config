@@ -1,6 +1,6 @@
-# Version 3.0.3 Dependency Locks
+# Version 3.0.4 Dependency Locks
 
-Version 3.0.3 does not redistribute third-party binaries. This document records the exact public artifacts relevant to the core installer and optional GPLAsync overlay so a configuration result can be reproduced or rejected on evidence.
+Version 3.0.4 does not redistribute third-party binaries. This document records the exact public artifacts relevant to the core installer and optional GPLAsync overlay so a configuration result can be reproduced or rejected on evidence.
 
 | Component | Required use | Artifact | SHA-256 | Boundary |
 |---|---|---|---|---|
@@ -17,7 +17,7 @@ Get-FileHash -Algorithm SHA256 .\GTAIV.EFLC.FusionFix.zip
 Get-FileHash -Algorithm SHA256 .\dxvk-gplasync-v2.6.2-1.tar.gz
 ```
 
-A different hash is not automatically malicious, but it is not the artifact described by this Version 3.0.3 contract. Do not call a result comparable to the reference configuration without recording the actual artifact and hash.
+A different hash is not automatically malicious, but it is not the artifact described by this Version 3.0.4 contract. Do not call a result comparable to the reference configuration without recording the actual artifact and hash.
 
 ## Source links
 

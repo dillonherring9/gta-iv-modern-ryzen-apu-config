@@ -1,6 +1,6 @@
-# Version 3.0.3 Components and Compatibility
+# Version 3.0.4 Components and Compatibility
 
-Version 3.0.3 is a configuration package for a legitimate **GTA IV Complete Edition** installation. It does not include GTA IV, Rockstar launcher files, saves, FusionFix/DXVK binaries, shader files, or third-party mod assets. The package is intentionally divided into a small default profile and optional component settings.
+Version 3.0.4 is a configuration package for a legitimate **GTA IV Complete Edition** installation. It does not include GTA IV, Rockstar launcher files, saves, FusionFix/DXVK binaries, shader files, or third-party mod assets. The package is intentionally divided into a small default profile and optional component settings.
 
 ## Default configuration scope
 

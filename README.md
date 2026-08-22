@@ -1,8 +1,8 @@
-# GTA IV, After Dark — Version 3.0.3 Core Configuration
+# GTA IV, After Dark — Version 3.0.4 Core Configuration
 
 ## A reversible FusionFix profile for a modern Ryzen APU reference setup
 
-> **Version 3.0.3 is a configuration package, not a complete GTA IV modpack or a universal performance fix.** It is organized around a Ryzen 5 PRO 6650U, Radeon 660M integrated graphics, and 16 GB of dual-channel memory, but it does not promise the same behavior on another laptop, driver, renderer build, or mod list.
+> **Version 3.0.4 is a configuration package, not a complete GTA IV modpack or a universal performance fix.** It is organized around a Ryzen 5 PRO 6650U, Radeon 660M integrated graphics, and 16 GB of dual-channel memory, but it does not promise the same behavior on another laptop, driver, renderer build, or mod list.
 
 The package supplies a narrow FusionFix/streaming configuration layer, optional renderer profiles, documentation, and an auditable installer. It does **not** redistribute GTA IV, launcher files, saves, FusionFix or DXVK binaries, shader files, plugin binaries, texture assets, vehicle packs, traffic files, or any other third-party mod content.
 
@@ -14,9 +14,9 @@ The package supplies a narrow FusionFix/streaming configuration layer, optional 
 | [`docs/VALIDATION_PROTOCOL.md`](docs/VALIDATION_PROTOCOL.md) | Before calling a configuration “tested,” comparing performance, or reporting an issue |
 | [`docs/DEPENDENCY_LOCKS.md`](docs/DEPENDENCY_LOCKS.md) | Before downloading FusionFix or selecting the exact GPLAsync overlay |
 | [`installer/BUILDING.md`](installer/BUILDING.md) | Before rebuilding or Windows-testing the installer |
-| [`RELEASE_NOTES_v3.0.3.md`](RELEASE_NOTES_v3.0.3.md) | To understand the corrective release scope and upgrade boundary |
+| [`RELEASE_NOTES_v3.0.4.md`](RELEASE_NOTES_v3.0.4.md) | To understand the corrective release scope and upgrade boundary |
 
-## What Version 3.0.3 actually changes
+## What Version 3.0.4 actually changes
 
 The default installer is deliberately small. It first confirms a GTA IV game root and the installed FusionFix plugin, refuses to proceed while `GTAIV.exe` is running, backs up pre-existing managed files, and writes only the following three files:
 
@@ -66,20 +66,20 @@ Current FusionFix guidance treats shader preload metadata as a correctness issue
 2. Verify the exact FusionFix v5.0.1 archive from [`docs/DEPENDENCY_LOCKS.md`](docs/DEPENDENCY_LOCKS.md), install it, and launch the game once. The core installer requires `plugins\GTAIV.EFLC.FusionFix.asi`.
 3. Install the renderer only when you intend to use FusionFix’s Vulkan route. Keep the renderer version and artifact hash in the test record.
 4. Close GTA IV, the Rockstar Games Launcher, mod managers, and tools that may lock the managed files.
-5. Run the Version 3.0.3 installer or manually copy only the three core files above. Preserve the installer backup.
+5. Run the Version 3.0.4 installer or manually copy only the three core files above. Preserve the installer backup.
 6. Choose a renderer profile manually, if needed. Do not mix the stock DXVK baseline and GPLAsync-specific overlay.
 7. Add optional plugin settings only after their dependencies and shader/content layout are known-good.
 8. Validate GTA IV, TLAD, and TBoGT separately where installed. Record cold and warm results before changing another quality layer.
 
 ## Rollback
 
-The Version 3.0.3 installer stores backups under:
+The Version 3.0.4 installer stores backups under:
 
 ```text
 <GTA IV folder>\GTAIV_Core_Configuration_Installer_Backups\YYYY-MM-DD_HH-MM-SS\
 ```
 
-Use Windows **Installed apps** or `GTAIV_Core_Configuration_Installer_Uninstall.exe`, then choose **Yes** to restore the latest core-configuration backup. The uninstaller restores only the files Version 3.0.3 managed. It does not alter renderer binaries, optional plugin files, game executables, shader layouts, or earlier installer backups.
+Use Windows **Installed apps** or `GTAIV_Core_Configuration_Installer_Uninstall.exe`, then choose **Yes** to restore the latest core-configuration backup. The uninstaller restores only the files Version 3.0.4 managed. It does not alter renderer binaries, optional plugin files, game executables, shader layouts, or earlier installer backups.
 
 If an older project installer is installed too, make a complete game-folder backup and remove installers in reverse installation order. Do not delete saves or game archives as a first troubleshooting step.
 
@@ -87,7 +87,7 @@ If an older project installer is installed too, make a complete game-folder back
 
 Each corrective release is generated from an immutable Git tag. The source archive carries `SOURCE_COMMIT.txt`; `SHA256SUMS.txt` covers every published asset, including the installer executable. The reproducibility contract and Windows toolchain are recorded in [`BUILD_ENVIRONMENT.md`](BUILD_ENVIRONMENT.md).
 
-The project previously shipped release assets whose source state was not represented by the public Version 3.0.0 tag. Version 3.0.3 corrects that process without moving historical tags or rewriting past releases.
+The project previously shipped release assets whose source state was not represented by the public Version 3.0.0 tag. Version 3.0.4 corrects that process without moving historical tags or rewriting past releases.
 
 ## Credits and boundaries
 

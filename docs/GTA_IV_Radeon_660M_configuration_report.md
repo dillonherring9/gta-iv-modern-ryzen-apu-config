@@ -1,6 +1,6 @@
-# GTA IV Radeon 660M Reference Context — Version 3.0.3
+# GTA IV Radeon 660M Reference Context — Version 3.0.4
 
-> **Status:** This is a hardware-context document, not an independently reproduced benchmark report. Version 3.0.3 does not publish frame-time captures or a retained renderer log for the stated reference machine.
+> **Status:** This is a hardware-context document, not an independently reproduced benchmark report. Version 3.0.4 does not publish frame-time captures or a retained renderer log for the stated reference machine.
 
 ## Reference context
 
