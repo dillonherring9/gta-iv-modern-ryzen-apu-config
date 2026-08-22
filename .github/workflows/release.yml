@@ -52,7 +52,7 @@ jobs:
           Copy-Item .github, installer, tuned, docs -Destination $sourceRoot -Recurse
           Remove-Item (Join-Path $sourceRoot "installer\build") -Recurse -Force -ErrorAction SilentlyContinue
 
-          Copy-Item README.md, RELEASE_NOTES.md -Destination $packageRoot
+          Copy-Item README.md, RELEASE_NOTES.md, BUILD_ENVIRONMENT.md, CONTRIBUTING.md -Destination $packageRoot
           Copy-Item docs, tuned -Destination $packageRoot -Recurse
           Copy-Item installer\INSTALLER_PAYLOAD_SHA256SUMS.txt -Destination $packageRoot
 

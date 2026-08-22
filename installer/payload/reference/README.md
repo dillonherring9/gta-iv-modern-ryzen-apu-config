@@ -58,6 +58,10 @@ Everything after this note is the preserved original maintenance guide. It is in
 
 For the complete comparison, including why these rules exist, read [`docs/ORIGINAL_README_RECONCILIATION.md`](docs/ORIGINAL_README_RECONCILIATION.md). For a shorter first-time walkthrough, read [`docs/GETTING_STARTED.md`](docs/GETTING_STARTED.md).
 
+### This project is meant to be handed on responsibly
+
+The current owner does not claim permanent support. If this project helps you and you have the patience to test, document, and preserve rollback behavior, the repository is prepared for a careful successor. Read [`docs/MAINTAINER_HANDOFF.md`](docs/MAINTAINER_HANDOFF.md) before proposing a takeover or fork, and use [`CONTRIBUTING.md`](CONTRIBUTING.md) for reports and improvements. Users may move to a better-maintained successor project when one exists; they should make that move cleanly, with backups, rather than mixing two complete configurations in one game folder.
+
 ---
 
 ## Original maintenance guide, preserved for self-maintenance

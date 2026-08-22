@@ -55,6 +55,12 @@ The GPLAsync alternative and legacy `preload.list` remain preserved as reference
 
 This installer does not support downgraded/legacy copies, Linux/Proton, multiplayer, arbitrary old mod combinations, or post-install “update everything” experimentation. It does not provide the game, bypass launchers/DRM, or guarantee a benchmark number. It provides a tidy, auditable Windows Complete Edition configuration path.
 
+## Community continuity and handoff
+
+This project is prepared for responsible maintenance by someone other than its current owner; it does not depend on a promise of indefinite personal support. A potential maintainer should read [`docs/MAINTAINER_HANDOFF.md`](docs/MAINTAINER_HANDOFF.md), follow [`CONTRIBUTING.md`](CONTRIBUTING.md), preserve the complete package/rollback/evidence model, and replace the existing `v3` assets in place only after a reproducible validation.
+
+Users are free to choose a better maintained successor, archive, or community route when one becomes available. They should first back up the game folder, restore/uninstall Version 3 if it manages the same files, and follow one complete configuration ecosystem at a time rather than mixing two competing setups.
+
 ## References
 
 [1] [ThirteenAG — GTAIV.EFLC.FusionFix](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix)
