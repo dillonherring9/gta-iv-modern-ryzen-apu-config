@@ -1,42 +1,35 @@
-# Version 3 Components and Compatibility
+# Components and Compatibility — Version 3
 
-Version 3 is a configuration package for a legitimate **GTA IV Complete Edition** installation. It does not include GTA IV, Rockstar launcher files, saves, FusionFix/DXVK binaries, shader files, or third-party mod assets. The package is intentionally divided into a small default profile and optional component settings.
+Version 3 configures **GTA IV Complete Edition with Gillian’s Drag-and-Drop Archive already installed**. The archive supplies FusionFix, its mod/plugin environment, content, and the Vulkan route. Version 3 supplies the seven configuration files below; it does not redistribute archive binaries or content.[^1]
 
-## Default configuration scope
+## Full installed configuration
 
-| File | Default installation status | Purpose |
+| Target | File | Contract |
 |---|---|---|
-| `GTAIV.EFLC.FusionFix.cfg` | Installed after FusionFix prerequisite check | FusionFix visible graphics, API, and frame-limit preferences |
-| `GTAIV.EFLC.FusionFix.ini` | Installed after FusionFix prerequisite check | Advanced FusionFix shadow, limiter, vehicle-budget, and Project2DFX settings |
-| `stream.ini` | Installed after game-root and FusionFix prerequisite checks | Streaming configuration supplied with the reference package |
-| Per-user `GTAIV.exe` `RUNASADMIN` entry | Installed and managed on every package installation | Required so GTA IV can create its configuration files in the documented installation layout; the prior value is preserved for uninstall rollback |
-| `dxvk-stock.conf` | Manual selection only | Upstream-compatible DXVK baseline; copy as `dxvk.conf` only when the FusionFix Vulkan route and a compatible DXVK build are active |
+| Game root | `dxvk.conf` | Stock upstream-compatible DXVK baseline. |
+| `pc\` | `stream.ini` | Streaming profile. |
+| `plugins\` | `ConsoleSelectMenuIV.ini` | Console Select Menu configuration for Complete Edition. |
+| `plugins\` | `GTAIV.EFLC.FusionFix.cfg` | Main FusionFix configuration. |
+| `plugins\` | `GTAIV.EFLC.FusionFix.ini` | Advanced FusionFix configuration. |
+| `plugins\` | `GTAIV.XboxRainDroplets.ini` | Xbox Rain Droplets configuration. |
+| `plugins\` | `LibertyCityPlates.txt` | LibertyCityPlates configuration. |
 
-## Optional configuration scope
+All seven are backed up before overwrite and restored by the uninstaller. `GTAIV.exe` is set to run as administrator because this layout requires it to create configuration files; the previous per-user compatibility value is restored on uninstall.
 
-| Component file | Required installed component | Default behavior |
-|---|---|---|
-| `AudioMap.ini` | The matching DualSense Audio Mapper plugin and its referenced audio files | Not installed unless selected and the plugin exists |
-| `ConsoleSelectMenuIV.ini` | Console Select Menu IV plugin | Not installed unless selected and the plugin exists |
-| `GTAIV.XboxRainDroplets.ini` | Xbox Rain Droplets plugin | Not installed unless selected and the plugin exists |
-| `LibertyCityPlates.txt` | LibertyCityPlates plugin plus its required shader/content installation | Not installed unless selected and the plugin exists |
-| `preload.list` | A legacy static shader setup whose exact shader files have been verified | Never installed by default; retain only as a legacy reference |
-| `dxvk-gplasync-v2.6.2-1.conf` | Exact GPLAsync v2.6.2-1 artifact named and hashed in the file | Manual selection only; never installed automatically |
+## What is deliberately retained but not overwritten
 
-## Renderer boundary
+The complete package includes `dxvk-gplasync-v2.6.2-1.conf` as a version-locked alternative, and `preload.list` as a legacy shader reference. Do not deploy either automatically. GPLAsync is valid only with its exact renderer artifact. A static preload list must match the actual installed shader set; a mismatched LibertyCityPlates/shader layout can cause resource failures.[^2] [^3]
 
-Verify the relevant FusionFix and GPLAsync archives against [`DEPENDENCY_LOCKS.md`](DEPENDENCY_LOCKS.md) before using this package. The installer can detect expected filenames, but it cannot prove third-party archive hashes at runtime.
-
-The stock profile has only upstream-compatible DXVK keys. The GPLAsync profile carries fork-specific async keys and is valid only with the exact renderer artifact described at the top of that file. Do not use a renderer update as a casual optimization change. Record the old artifact, replace one component, restart GTA IV, and collect a cold/warm comparison under the [validation protocol](VALIDATION_PROTOCOL.md).
-
-FusionFix’s current upstream project fully supports Complete Edition; legacy executable builds require its separately maintained Legacy Addon.[^1] The project’s current preload handling also makes manually overwriting a static list unnecessary for the normal 5.0.1 route, while maintainers still require preload metadata to be valid when a legacy/static setup relies on it.[^2] [^3]
+`AudioMap.ini` is excluded. It belongs to the separate DualSense Audio Mapper project and was an older installer carryover, not a documented Drag-and-Drop Archive component. Historical records retain its prior appearance without treating it as active configuration.
 
 ## Installer safety boundary
 
-The installer verifies the game root and the FusionFix plugin before it writes default configuration. It does not install or repair third-party binaries, confirm a game build from file metadata, override shader metadata, or prove performance on the target system. It **does** set the per-user `GTAIV.exe` `RUNASADMIN` compatibility entry on every installation because the documented layout otherwise prevents GTA IV from creating required configuration files. The installer records the previous value and restores it on uninstall. It is a reversible configuration writer, not a complete modpack installer.
+The installer verifies a real `GTAIV.exe` game root, `vulkan.dll`, and a closed `GTAIV.exe` process. It does not block on the absence of one FusionFix ASI filename, because valid archive layouts may differ. It cannot repair a broken archive, prove an external binary hash, replace shader content, or establish performance on another system.
 
 ## References
 
-[^1]: [FusionFix official repository](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix)
+[^1]: [Gillian’s Drag-and-Drop Archive](https://gillian-guide.github.io/drag-and-drop-archive/)
+
 [^2]: [FusionFix issue #1431 — preload-list behavior](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/issues/1431)
-[^3]: [FusionFix issue #1347 — invalid resource and LibertyCityPlates context](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/issues/1347)
+
+[^3]: [FusionFix issue #1347 — LibertyCityPlates shader-resource context](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/issues/1347)

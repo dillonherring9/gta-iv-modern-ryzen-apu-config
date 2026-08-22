@@ -4,7 +4,7 @@ Version 3 does not redistribute third-party binaries. This document records the 
 
 | Component | Required use | Artifact | SHA-256 | Boundary |
 |---|---|---|---|---|
-| FusionFix | Required before the core installer writes its FusionFix profiles | `GTAIV.EFLC.FusionFix.zip`, release `v5.0.1` | `3c202398c133392be985854654f169514e055812cc302ef24e6aa97495975b41` | The installer checks for `plugins\GTAIV.EFLC.FusionFix.asi` and `vulkan.dll`, but it cannot prove this hash at runtime. Verify it before installation. |
+| FusionFix | Required for the core profile | `GTAIV.EFLC.FusionFix.zip`, release `v5.0.1` | `3c202398c133392be985854654f169514e055812cc302ef24e6aa97495975b41` | The installer checks for `vulkan.dll` but does not block on one FusionFix plugin filename, because valid installations can use different loader/layout arrangements. Verify this hash before installation. |
 | DXVK GPLAsync | Optional renderer overlay only | `dxvk-gplasync-v2.6.2-1.tar.gz` | `c645d3f2550ff66d0a51ba27a535aaa7351fd087feb7b298e7283cb2a3ee173b` | Required only for `tuned/renderers/dxvk-gplasync-v2.6.2-1.conf`. Do not apply that configuration to upstream DXVK or another GPLAsync version. |
 | Upstream DXVK | Stock renderer profile | Player-selected compatible DXVK build | Not locked by this package | `tuned/dxvk-stock.conf` contains upstream-supported configuration keys. Record the exact artifact/hash in validation evidence. |
 

@@ -1,36 +1,37 @@
-# Version 3 — Complete Cumulative Configuration
+# Version 3 — Complete Drag-and-Drop Archive Configuration
 
-> **Version 3 is the complete recommended GTA IV, After Dark configuration package.** It is not a delta installer, a patch file, or a replacement for the history that came before it.
+> **Version 3 is one complete, cumulative configuration installer for a GTA IV Complete Edition installation that already has Gillian’s Drag-and-Drop Archive extracted into the game root.** It is not a patch, a partial update, or a modpack redistribution.
 
-## What Version 3 contains
+## What Version 3 installs
 
-The Version 3 installer carries the complete current package: the core FusionFix and streaming profile; stock DXVK and GPLAsync renderer profiles; AudioMap, Console Select Menu, Xbox Rain Droplets, and LibertyCityPlates settings; the legacy preload reference; dependency locks; validation protocol; build instructions; source links; credits; and the complete Version 1 through Version 3 decision history.
+The installer applies the complete documented configuration set for that archive environment. Before replacing anything, it creates a timestamped backup of every managed file and stores the prior per-user `GTAIV.exe` compatibility value.
 
-The installer safely applies the core configuration by default and stores the entire reference package at `GTAIV_After_Dark_Complete_Package` inside the game folder. This makes the release self-contained without blindly overwriting settings whose correct use depends on optional third-party plugins, exact renderer builds, or a verified shader layout.
+| Installed location | Version 3 file | Purpose |
+|---|---|---|
+| Game root | `dxvk.conf` | Upstream-compatible DXVK baseline; FusionFix remains the sole intended frame limiter. |
+| `pc\` | `stream.ini` | Streaming allocation profile. |
+| `plugins\` | `ConsoleSelectMenuIV.ini` | Console Select Menu setting for the Complete Edition archive route. |
+| `plugins\` | `GTAIV.EFLC.FusionFix.cfg` | Main FusionFix profile. |
+| `plugins\` | `GTAIV.EFLC.FusionFix.ini` | Advanced FusionFix profile. |
+| `plugins\` | `GTAIV.XboxRainDroplets.ini` | Xbox Rain Droplets setting. |
+| `plugins\` | `LibertyCityPlates.txt` | LibertyCityPlates setting, including the intended plate behavior. |
 
-| Applied automatically | Included for intentional manual use |
-|---|---|
-| `pc\stream.ini` | `dxvk-stock.conf` |
-| `plugins\GTAIV.EFLC.FusionFix.cfg` | `dxvk-gplasync-v2.6.2-1.conf` |
-| `plugins\GTAIV.EFLC.FusionFix.ini` | AudioMap, Console Select Menu, Xbox Rain Droplets, and LibertyCityPlates settings |
-| Per-user `GTAIV.exe` `RUNASADMIN` compatibility setting | Legacy `preload.list` reference and every guide, source, credit, and historical record |
+The installer sets **Run this program as an administrator** for `GTAIV.exe`, because this documented installation layout otherwise prevents GTA IV from creating its required configuration files. Its uninstaller restores the latest backup of all seven managed files and the exact prior compatibility value.
 
-## Required administrator compatibility
+## Prerequisite boundary
 
-Version 3 sets **Run this program as an administrator** for `GTAIV.exe` because the documented installation layout otherwise prevents GTA IV from creating its required configuration files. The installer records the prior per-user compatibility value before changing it. On uninstall, it restores that exact prior value, or removes the entry if the installer created it from an empty state.
+Install the complete Drag-and-Drop Archive into the folder containing `GTAIV.exe` first, then use its intended Vulkan route. The installer verifies the game root, `vulkan.dll`, and a closed `GTAIV.exe` process. It deliberately does **not** reject the archive based on the absence of one exact FusionFix ASI filename, since a valid archive can use a different loader or file layout.
 
-## Before installation
+Version 3 does not redistribute GTA IV, the Drag-and-Drop Archive, FusionFix, DXVK binaries, shaders, or third-party content. It writes the configuration that belongs to that pre-existing archive setup.
 
-Use a legitimate GTA IV Complete Edition installation. Install and launch a compatible FusionFix/Vulkan route first, close GTA IV and related tools, then select the actual folder containing `GTAIV.exe`. The installer verifies the game root, FusionFix plugin, Vulkan route, and running-game state before applying the core configuration.
+## Retained but not overwritten
 
-Version 3 does not redistribute GTA IV, Rockstar launcher files, saves, FusionFix, DXVK, GPLAsync, shader files, or third-party mod assets. Verify third-party prerequisites through [`docs/DEPENDENCY_LOCKS.md`](docs/DEPENDENCY_LOCKS.md) before choosing an optional renderer or component file.
+The executable and complete package archive preserve the GPLAsync renderer alternative, the legacy shader-preload reference, dependency locks, validation protocol, credits, sources, and all historical reasoning. The GPLAsync file is mutually exclusive with the stock DXVK baseline. The legacy `preload.list` remains a reference only: current FusionFix shader metadata depends on the actual installed shader layout, and blindly replacing it can cause resource errors with LibertyCityPlates.
 
-## Why the package is structured this way
+`AudioMap.ini` is intentionally absent. The audit found it was a DualSense Audio Mapper carryover from an older installer, not a documented Drag-and-Drop Archive component. Historical release records retain that fact for auditability, but Version 3 neither installs nor bundles its active configuration.
 
-A complete package is not the same as an unsafe universal overwrite. The retained optional files are part of the project’s full configuration knowledge, but their dependencies vary. Version 3 includes them, documents them, and preserves them in the embedded reference bundle; it applies only the configuration that the installer can validate safely.
+## Complete package and evidence
 
-Cache warm-up remains normal on a shared-memory APU. Test one change at a time, restart when needed, repeat the same demanding route, and compare warm passes under [`docs/VALIDATION_PROTOCOL.md`](docs/VALIDATION_PROTOCOL.md). Do not call an unrecorded first-run impression a universal performance result.
+The installer copies the full documentation, sources, credits, renderer alternative, preload reference, and historical records to `GTAIV_After_Dark_Complete_Package` in the game root. The public Version 3 release also includes a complete package archive, complete source archive, and SHA-256 manifest.
 
-## History and credits
-
-The reasoning from every prior iteration is retained in [`docs/PROJECT_HISTORY.md`](docs/PROJECT_HISTORY.md) and [`docs/history/`](docs/history/). The project remains an unofficial community configuration package. Credit remains with Rockstar Games; ThirteenAG and FusionFix contributors; DXVK contributors; GPLAsync contributors; Gillian’s GTA IV Modding Guide; LibertyCityPlates; Project2DFX; Xbox Rain Droplets; AudioMap; Console Select Menu; and all other original authors.
+Cache warm-up remains normal on a shared-memory APU. Change one variable at a time, restart when required, and compare cold and repeat warm passes according to [`docs/VALIDATION_PROTOCOL.md`](docs/VALIDATION_PROTOCOL.md). The project does not make universal performance claims.

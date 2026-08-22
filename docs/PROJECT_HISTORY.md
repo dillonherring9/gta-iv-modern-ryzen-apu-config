@@ -24,7 +24,7 @@ Version 3 combines the retained knowledge from Versions 1 and 2 with the current
 
 The default installation is intentionally conservative. It applies the three core configuration files and the required per-user `RUNASADMIN` compatibility setting for `GTAIV.exe`, because the documented installation layout otherwise prevents GTA IV from creating configuration files at launch. The installer records the prior compatibility value and restores it on uninstall.
 
-The same executable embeds the entire retained package. Renderer profiles, AudioMap, Console Select Menu, Xbox Rain Droplets, LibertyCityPlates, and the legacy preload reference are included in the installed `GTAIV_After_Dark_Complete_Package` directory. They are not overwritten automatically because their correct use depends on external plugins, an exact renderer build, or a verified shader layout. This is a complete package with safe deployment boundaries, not a partial installer.
+The same executable embeds the entire retained package. Renderer profiles, Console Select Menu, Xbox Rain Droplets, LibertyCityPlates, and the legacy preload reference are included in the installed `GTAIV_After_Dark_Complete_Package` directory. They are not overwritten automatically because their correct use depends on external plugins, an exact renderer build, or a verified shader layout. This is a complete package with safe deployment boundaries, not a partial installer.
 
 ## Renderer and optional-content boundary
 
@@ -34,7 +34,7 @@ Optional component files remain part of the complete package because they are pa
 
 ## Evidence, credits, and sources
 
-Version 3 makes no universal performance promise. The [Validation Protocol](VALIDATION_PROTOCOL.md) defines what must be recorded before describing a profile as tested or log-validated. Credits remain with Rockstar Games, ThirteenAG and FusionFix contributors, DXVK contributors, GPLAsync contributors, Gillian’s GTA IV Modding Guide, LibertyCityPlates, Project2DFX, Xbox Rain Droplets, AudioMap, Console Select Menu, and all other original authors.
+Version 3 makes no universal performance promise. The [Validation Protocol](VALIDATION_PROTOCOL.md) defines what must be recorded before describing a profile as tested or log-validated. Credits remain with Rockstar Games, ThirteenAG and FusionFix contributors, DXVK contributors, GPLAsync contributors, Gillian’s GTA IV Modding Guide, LibertyCityPlates, Project2DFX, Xbox Rain Droplets, Console Select Menu, and all other original authors.
 
 The detailed source material has been retained under [`docs/history/`](history/). Those records are historical context, not separate patch downloads.
 

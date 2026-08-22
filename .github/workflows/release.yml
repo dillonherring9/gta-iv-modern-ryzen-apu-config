@@ -70,16 +70,25 @@ jobs:
             "$((Get-FileHash -Algorithm SHA256 $_.FullName).Hash.ToLower())  $($_.Name)"
           } | Set-Content "$dist\SHA256SUMS.txt"
 
-      - name: Publish complete major release
+      - name: Publish or replace complete major release assets
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           $version = $env:GITHUB_REF_NAME.TrimStart('v')
-          gh release create $env:GITHUB_REF_NAME `
-            "dist\GTAIV_After_Dark_Complete_Configuration_v$version.exe" `
-            "dist\GTAIV_After_Dark_Complete_Package_v$version.zip" `
-            "dist\GTAIV_After_Dark_Source_v$version.zip" `
-            "dist\SHA256SUMS.txt" `
-            --title "Version $version — Complete Cumulative Configuration" `
-            --notes-file RELEASE_NOTES.md
+          $tag = $env:GITHUB_REF_NAME
+          $assets = @(
+            "dist\GTAIV_After_Dark_Complete_Configuration_v$version.exe",
+            "dist\GTAIV_After_Dark_Complete_Package_v$version.zip",
+            "dist\GTAIV_After_Dark_Source_v$version.zip",
+            "dist\SHA256SUMS.txt"
+          )
+          gh release view $tag 2>$null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload $tag $assets --clobber
+            if ($LASTEXITCODE -ne 0) { throw "Version $version asset replacement failed." }
+            gh release edit $tag --title "Version $version — Complete Cumulative Configuration" --notes-file RELEASE_NOTES.md
+          } else {
+            gh release create $tag $assets --title "Version $version — Complete Cumulative Configuration" --notes-file RELEASE_NOTES.md
+          }
+          if ($LASTEXITCODE -ne 0) { throw "Version $version release publication failed." }
