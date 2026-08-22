@@ -12,7 +12,7 @@ A contribution does **not** belong here merely because it is a popular mod, a vi
 
 ## Before you change a file
 
-Read the current README, [`docs/GETTING_STARTED.md`](docs/GETTING_STARTED.md), [`docs/COMPLETE_INSTALL_CONTRACT.md`](docs/COMPLETE_INSTALL_CONTRACT.md), [`docs/ORIGINAL_README_RECONCILIATION.md`](docs/ORIGINAL_README_RECONCILIATION.md), and [`docs/MAINTAINER_HANDOFF.md`](docs/MAINTAINER_HANDOFF.md). The original README teaches controlled self-maintenance; the current contract states what Version 3 actually installs automatically.
+Read the current README, [`docs/GETTING_STARTED.md`](docs/GETTING_STARTED.md), [`docs/V4_COMPLETE_INSTALL_CONTRACT.md`](docs/V4_COMPLETE_INSTALL_CONTRACT.md), [`docs/V4_AUDIT_ADOPTION.md`](docs/V4_AUDIT_ADOPTION.md), [`docs/ORIGINAL_README_RECONCILIATION.md`](docs/ORIGINAL_README_RECONCILIATION.md), and [`docs/MAINTAINER_HANDOFF.md`](docs/MAINTAINER_HANDOFF.md). The original README teaches controlled self-maintenance; the current contract states what Version 4 installs automatically. The preserved Version 3 contract is available under `docs/history/`.
 
 | Check | Why it matters |
 |---|---|
@@ -73,14 +73,14 @@ Run the checks appropriate to the change before asking a maintainer to publish a
 
 git diff --check
 (cd installer/payload && sha256sum -c ../INSTALLER_PAYLOAD_SHA256SUMS.txt)
-makensis -DPRODUCT_VERSION=3 installer/GTAIV_V3_Automatic_Installer.nsi
+makensis -DPRODUCT_VERSION=4 installer/GTAIV_V4_Automatic_Installer.nsi
 ```
 
 After source/payload files change, synchronize any embedded `installer/payload/reference/` copies and regenerate `installer/INSTALLER_PAYLOAD_SHA256SUMS.txt` before running the manifest check. The installed reference package must not tell a different story from the public repository.
 
 ## Release discipline
 
-Version 3 is the current cumulative release. Corrections that remain inside its defined Complete Edition/archive contract must replace the existing `v3` assets in place; do not create serial patch releases or partial installers. The release workflow builds the installer, complete package archive, complete source archive, and `SHA256SUMS.txt` from the tagged commit.
+Version 4 is the current cumulative release. Corrections that remain inside its defined Complete Edition/archive contract must replace the existing `v4` assets in place; do not create serial patch releases or partial installers. Version 3 is a protected historical release and must not be moved or replaced during Version 4 maintenance. The release workflow builds the installer, complete package archive, complete source archive, and `SHA256SUMS.txt` from the tagged commit.
 
 Before calling a release complete, download its public assets and verify the checksum manifest, `SOURCE_COMMIT.txt`, required documentation, seven-file installer contract, AudioMap exclusion, and current release notes. See [`BUILD_ENVIRONMENT.md`](BUILD_ENVIRONMENT.md) and [`installer/BUILDING.md`](installer/BUILDING.md) for the detailed complete-release contract.
 

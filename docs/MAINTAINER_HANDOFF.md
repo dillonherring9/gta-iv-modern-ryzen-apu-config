@@ -2,11 +2,11 @@
 
 > **Project posture:** This repository is intended to become self-sustaining. The current owner assembled and documented a reproducible GTA IV Complete Edition configuration path; they are not promising indefinite personal support. A future maintainer, organization, or independent successor may adopt the work only by preserving its evidence, credits, safety boundaries, and rollback behavior.
 
-The goal is not to make people dependent on one person’s computer or one installer. The goal is to leave a clear enough record that a careful new maintainer can understand what Version 3 does, reproduce its release, decide whether a reported issue is real, and improve or supersede it honestly.
+The goal is not to make people dependent on one person’s computer or one installer. The goal is to leave a clear enough record that a careful new maintainer can understand the preserved Version 3 release, reproduce the current Version 4 release, decide whether a reported issue is real, and improve or supersede the project honestly.
 
 ## What is stable today
 
-The current recommended release is **Version 3 — Complete Cumulative Configuration**. It is for Windows GTA IV Complete Edition after Gillian’s complete Drag-and-Drop Archive has been installed in the folder containing `GTAIV.exe`. Version 3 writes seven managed configuration files, backs them up, enables the required per-user `RUNASADMIN` compatibility setting for `GTAIV.exe`, and restores both the managed files and previous compatibility value during uninstall.
+The current recommended release is **Version 4 — Modern APU Configuration**. It is for Windows GTA IV Complete Edition after Gillian’s complete Drag-and-Drop Archive has been installed in the folder containing `GTAIV.exe`. Version 4 writes the same seven managed configuration files, backs them up, enables the required per-user `RUNASADMIN` compatibility setting for `GTAIV.exe`, and restores both the managed files and previous compatibility value during uninstall. It adds an explicit General-versus-Radeon-660M/GPLAsync configuration choice without installing renderer binaries. **Version 3 remains an unchanged historical complete release.**
 
 | Stable commitment | What a successor must preserve |
 |---|---|
@@ -25,7 +25,7 @@ A maintainer does not need to own the same laptop or promise support for every m
 | Responsibility | Minimum standard |
 |---|---|
 | **Triage** | Ask for the GTA IV build, archive version/date, GPU/driver, resolution, RAM channel configuration, changed files, a precise symptom, whether the game was restarted, and whether the same route was repeated after cache warm-up. |
-| **Scope control** | Separate archive/setup mistakes, third-party mod conflicts, graphics-driver problems, and Version 3 configuration regressions. Do not fix a one-off issue by silently adding more unrelated DLLs or plugins. |
+| **Scope control** | Separate archive/setup mistakes, third-party mod conflicts, graphics-driver problems, and Version 4 configuration regressions. Do not fix a one-off issue by silently adding more unrelated DLLs or plugins. |
 | **Source checking** | Prefer the original mod/guide documentation for FusionFix, DXVK, Gillian’s archive, and individual mods. Record the URL, version/date, and why it applies. |
 | **Controlled change** | Change one renderer, loader, configuration, or shader-metadata variable at a time. Preserve the prior file and define how to undo the test. |
 | **Testing** | Test game startup, a save/new game, interiors, dense daytime traffic, night/rain, a reload, and both EFLC episodes where available. Restart and repeat the same route before judging cache-related performance. |
@@ -42,14 +42,14 @@ A future maintainer should use this sequence for any non-trivial configuration, 
 4. **Test repeatably.** Restart when a graphics/renderer change requires it, replay the same demanding route after cache warm-up, and test both main game and episodes when the change can affect them.
 5. **Explain the decision.** If the change is accepted, write why it is safer/better, what it does not solve, where it was tested, and how to roll it back.
 6. **Update the cumulative package.** Update the source configuration, installer payload, embedded reference copies, checksums, README/release notes, dependency records, and history as appropriate.
-7. **Replace the current major asset in place.** Until there is a genuine long-lived compatibility break, Version 3 corrections replace the existing `v3` assets. Do not create `v3.0.1`, `v3.0.2`, or a string of partial installers.
+7. **Replace the current major asset in place.** Until there is a genuine long-lived compatibility break, Version 4 corrections replace the existing `v4` assets. Do not create `v4.0.1`, `v4.0.2`, or a string of partial installers. Do not move the protected `v3` tag as part of Version 4 work.
 8. **Verify the public artifact.** Download the release as an ordinary user would, run `sha256sum -c SHA256SUMS.txt`, confirm `SOURCE_COMMIT.txt`, and inspect the package/installer contents.
 
 ## Release decision rules
 
 | Situation | Correct action |
 |---|---|
-| Documentation correction, better explanation, checksum refresh, installer fix, or evidence-backed adjustment within the same Complete Edition/archive contract | Update source, move only the existing `v3` tag to the reviewed commit, and replace the four existing Version 3 assets in place. |
+| Documentation correction, better explanation, checksum refresh, installer fix, or evidence-backed adjustment within the Version 4 Complete Edition/archive contract | Update source, move only the existing `v4` tag to the reviewed commit, and replace the four existing Version 4 assets in place. Do not change the historical `v3` tag or assets. |
 | New statement based on one person’s test | Publish it as a clearly bounded observation, not a global recommendation. Ask for reproducible reports before promoting it to the default profile. |
 | A proposed DXVK, loader, FusionFix, shader, or archive change | Treat it as an advanced controlled experiment. Keep the known-good copy, change one component, inspect the log, test warm runs, and preserve a rollback path. |
 | A new requirement that materially breaks the established target | Create a documented compatibility decision first. A new major release is justified only if the new target is durable, complete, and cannot honestly remain Version 3’s contract. |
@@ -81,8 +81,9 @@ The repository currently has **no declared repository license**. That means a fu
 | If you need to understand… | Start here |
 |---|---|
 | The beginner installation path | [`GETTING_STARTED.md`](GETTING_STARTED.md) and the top of [`../README.md`](../README.md) |
-| The original self-maintenance logic and DXVK replacement procedure | [`../README.md`](../README.md), especially **Original maintenance guide, preserved for self-maintenance** |
-| What Version 3 is permitted to install | [`COMPLETE_INSTALL_CONTRACT.md`](COMPLETE_INSTALL_CONTRACT.md) |
+| The original self-maintenance logic and DXVK replacement procedure | [`COMPLETE_MAINTENANCE_REFERENCE.md`](COMPLETE_MAINTENANCE_REFERENCE.md) and the preserved [`history/README_VERSION_3_FINAL.md`](history/README_VERSION_3_FINAL.md) |
+| What current Version 4 is permitted to install | [`V4_COMPLETE_INSTALL_CONTRACT.md`](V4_COMPLETE_INSTALL_CONTRACT.md) |
+| The preserved Version 3 installer contract | [`history/V3_COMPLETE_INSTALL_CONTRACT.md`](history/V3_COMPLETE_INSTALL_CONTRACT.md) |
 | Why current rules differ from the original guide | [`ORIGINAL_README_RECONCILIATION.md`](ORIGINAL_README_RECONCILIATION.md) |
 | Renderer/component/shader boundaries | [`COMPONENTS_AND_COMPATIBILITY.md`](COMPONENTS_AND_COMPATIBILITY.md) and [`preload_reconciliation.md`](preload_reconciliation.md) |
 | Version/file context | [`DEPENDENCY_LOCKS.md`](DEPENDENCY_LOCKS.md) |

@@ -1,4 +1,6 @@
-# GTA IV, After Dark — Complete Install Contract Audit
+# GTA IV, After Dark — Version 3 Complete Install Contract Audit
+
+> **Historical Version 3 record.** The public `v3` release and this contract’s original source remain preserved. For the current separate Version 4 installer contract, see [`V4_COMPLETE_INSTALL_CONTRACT.md`](V4_COMPLETE_INSTALL_CONTRACT.md).
 
 ## Scope that was audited
 

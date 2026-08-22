@@ -22,7 +22,7 @@ You are not expected to know what an `.ini` file, a DLL, a renderer, a shader, a
 
 | Word you may see | Plain meaning | What a first-time user should do |
 |---|---|---|
-| **`.ini` / `.cfg` file** | A small text file that stores settings. | Let Version 3 place its seven managed settings files. Do not edit one unless a guide tells you exactly why. |
+| **`.ini` / `.cfg` file** | A small text file that stores settings. | Let Version 4 place its seven managed settings files. Do not edit one unless a guide tells you exactly why. |
 | **DLL** | A Windows support file used by a program. | Do not download individual DLLs from random DLL websites. Use the archive/setup helper or the original author’s release page. |
 | **DXVK** | A component that helps the game use Vulkan instead of its original DirectX 9 graphics path. | Use Gillian’s setup helper first. Only use the later DXVK-upgrade section after you have a working game and a saved copy of the old file. |
 | **Vulkan** | The modern graphics system selected inside FusionFix/GTA IV when its setup is working. | Select it in the game only after the archive has been set up. If it crashes, follow the `d3d9.cfg` recovery step in the table below. |
@@ -30,17 +30,17 @@ You are not expected to know what an `.ini` file, a DLL, a renderer, a shader, a
 | **ASI loader** | A helper that lets GTA IV load certain community plugins. | Keep one intended loader. Do not add another one because a video says it is required. |
 | **Shader/cache** | Graphics work the game/driver learns and stores while you play. | Expect some first-time stutter after important changes. Restart, repeat the route, and judge the repeat drive. |
 
-### The normal first-time route in current Version 3
+### The normal first-time route in current Version 4
 
 | Step | Do exactly this | What success looks like |
 |---|---|---|
 | **1. Start clean** | Install a legitimate **GTA IV Complete Edition** copy through Steam or Rockstar Games Launcher. If you previously followed several GTA IV videos/guides, make a clean game copy first rather than mixing them together. | You can open the game folder and see `GTAIV.exe`. |
 | **2. Install the foundation package** | Download Gillian’s **Complete Edition / 1.2.0.59 Drag-and-Drop Archive**. Extract the archive’s contents directly into the folder that contains `GTAIV.exe`. “Extract” means opening the downloaded archive with 7-Zip/WinRAR and copying the files inside it into the game folder—not leaving them inside an extra subfolder. | The archive’s files are beside `GTAIV.exe`. |
-| **3. Run the archive helper** | In that same folder, open `GTAIVSetupUtility.exe`. Select **Open…**, choose the folder containing `GTAIV.exe`, then choose **Reinstall DXVK** and **Setup launch options**. DXVK is the archive’s graphics-translation component; you do not need to edit it at this stage. | The helper finishes and copies launch-option text to the Windows clipboard. |
+| **3. Repair the archive route only if needed** | Launch once and use the archive’s `GTAIVSetupUtility.exe` only when the Vulkan route or launch options need repair. Select **Open…**, choose the `GTAIV.exe` folder, then use **Reinstall DXVK** and/or **Setup launch options** as needed. Gillian describes this utility as a failsafe, not a mandatory repeat step for a working install. | The game reaches its menu or save; repaired launch-option text is copied to the clipboard when requested. |
 | **4. Paste the copied launch options** | If you use Steam, right-click GTA IV in your Library, select **Properties**, and paste the text into **Launch Options**. If you use Rockstar Games Launcher, paste it into **Launcher arguments**. If you use a shortcut, right-click it, choose **Properties**, and paste the text at the end of **Target** without removing the existing game path. | Your normal launch method retains the text. |
 | **5. Launch once** | Launch GTA IV normally. In the game’s Graphics menu, select **Vulkan** for Graphics API only when the archive’s route works, then restart if the game requests it. | The game reaches its menu or a save. If it crashes when you select Vulkan, close it, delete `d3d9.cfg` from the game folder, and return to Step 3. |
 | **6. Close the game and launchers** | Close GTA IV, Steam or Rockstar Games Launcher, mod managers, and any file-copy program. | GTA IV is no longer running. |
-| **7. Run this project’s installer** | Run `GTAIV_After_Dark_Complete_Configuration_v3.exe`. When it asks where GTA IV is installed, choose the folder containing `GTAIV.exe`. | The installer backs up your prior configuration and tells you where that backup is stored. |
+| **7. Run this project’s installer** | Run `GTAIV_After_Dark_Complete_Configuration_v4.exe`. When it asks where GTA IV is installed, choose the folder containing `GTAIV.exe`, then choose General modern APU unless `GTAIV_d3d9.log` already confirms GPLAsync `v3.0-1`. | The installer backs up your prior configuration and tells you where that backup is stored. |
 | **8. Test instead of guessing** | Launch normally, drive through a daytime area, enter/leave one interior, then try night/rain. Restart the game and repeat the same route once before deciding whether it is good or bad. | You are judging a repeated, cache-warmed drive instead of the first minutes after a renderer/settings change. |
 
 ### What this installer does today
@@ -49,16 +49,16 @@ The current installer assumes that Gillian’s complete archive is already in th
 
 Before changing them, it creates a timestamped backup. It also enables **Run this program as an administrator** for `GTAIV.exe`, because this target layout needs the game to create required configuration files. The uninstaller offers to restore the latest backup and restores the exact Windows compatibility setting that existed first. The installer deliberately does **not** require one exact FusionFix `.asi` filename because valid archive loader/file layouts can differ.
 
-### Read the original guide below, but use these current Version 3 rules when they differ
+### Read the original guide below, but use these current Version 4 rules when they differ
 
-Everything after this note is the preserved original maintenance guide. It is intentionally kept because it explains the logic behind a clean renderer path, cache testing, controlled DXVK/ASI-loader upgrades, troubleshooting, rollback, credits, and sources. Its words were written for an older **nine-file GPLAsync-style profile**, so the table below prevents a beginner from accidentally applying an old instruction that no longer belongs to current Version 3.
+Everything after this note is the preserved original maintenance guide. It is intentionally kept because it explains the logic behind a clean renderer path, cache testing, controlled DXVK/ASI-loader upgrades, troubleshooting, rollback, credits, and sources. Its words were written for an older **nine-file GPLAsync-style profile**, so the table below prevents a beginner from accidentally applying an old instruction that no longer belongs to current Version 4.
 
-| Original-guide wording you will see below | Current Version 3 rule |
+| Original-guide wording you will see below | Current Version 4 rule |
 |---|---|
-| “Nine managed files,” old installer filenames, or the old Version 3.0.0 backup/uninstaller names | Use `GTAIV_After_Dark_Complete_Configuration_v3.exe`. It manages **seven** files and its own timestamped complete-configuration backup. |
+| “Nine managed files,” old installer filenames, or the old Version 3.0.0 backup/uninstaller names | Use `GTAIV_After_Dark_Complete_Configuration_v4.exe`. It manages **seven** files, a General-versus-advanced-Radeon profile choice, and its own timestamped Version 4 backup. |
 | `AudioMap.ini` as a package or manual-install file | Do **not** copy or recreate it. The audit found it was not a documented Drag-and-Drop Archive component. |
 | A static `preload.list` manual-install destination | Keep it as reference only. Do not overwrite the archive’s shader metadata unless you fully understand and verify the matching shader layout. |
-| GPLAsync values as the automatically installed renderer profile | Current Version 3 installs the upstream-compatible stock `dxvk.conf`; GPLAsync remains a preserved advanced alternative, not an automatic choice. |
+| GPLAsync values as the automatically installed renderer profile | Version 4 defaults to the upstream-compatible General `dxvk.conf`. The explicit Radeon 660M/GPLAsync `v3.0-1` choice adds only `dxvk.enableAsync = true` after renderer confirmation; it is not automatic hardware detection or a DLL installer. |
 | `dxvk.gplAsyncCache=True` as a generic GPLAsync setting | This is a historical 2.6.2-era value. GPLAsync removed it in v2.7-1, so do **not** copy it into GPLAsync `v3.0-1`; follow [`GPLASYNC_V3_0_1_MIGRATION.md`](GPLASYNC_V3_0_1_MIGRATION.md). |
 | Update FusionFix inside the archive | Do not casually update FusionFix in Gillian’s curated archive and do not enable its update check. |
 | The five-step DXVK upgrade that replaces `vulkan.dll` | Keep and use it only as an **advanced, controlled maintenance procedure**: save the currently working file, change only one binary, inspect `GTAIV_d3d9.log`, replay a route after caches build, and restore the old file if the game fails. It is not a required first-time step or a guaranteed performance upgrade. |
@@ -73,7 +73,7 @@ The current owner does not claim permanent support. If this project helps you an
 
 ## Original maintenance guide, preserved for self-maintenance
 
-> **Preservation note:** The original guide below is intentionally retained word-for-word so that users can learn the full logic, follow the historic maintenance procedures, retain the author’s thanks and sources, and understand what earlier versions attempted. The current Version 3 rules above take priority only where the original guide refers to old installer file counts, AudioMap, static preload installation, the former GPLAsync default, or retired installer names.
+> **Preservation note:** The original guide below is intentionally retained word-for-word so that users can learn the full logic, follow the historic maintenance procedures, retain the author’s thanks and sources, and understand what earlier versions attempted. The current Version 4 rules above take priority only where the original guide refers to old installer file counts, AudioMap, static preload installation, the former GPLAsync default, or retired installer names.
 
 
 ## **READ THIS BEFORE YOU JUDGE THE PERFORMANCE — CACHES HAVE TO BUILD**

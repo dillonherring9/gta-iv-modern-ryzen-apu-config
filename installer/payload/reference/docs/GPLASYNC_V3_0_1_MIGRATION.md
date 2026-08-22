@@ -1,6 +1,6 @@
 # GPLAsync `v3.0-1` Migration Note
 
-> **This is an advanced maintenance note, not a Version 3 installer requirement.** The default Version 3 installer keeps its stock upstream-compatible `dxvk.conf` and does not install or replace a renderer DLL. Use this document only when you have independently chosen the separate Ph42oN GPLAsync `v3.0-1` build.
+> **This is an advanced maintenance note, not a default Version 4 installer requirement.** The default Version 4 General modern APU profile keeps an upstream-compatible `dxvk.conf` and does not install or replace a renderer DLL. Version 4 offers its Radeon 660M option only after the user confirms the separate Ph42oN GPLAsync `v3.0-1` build in `GTAIV_d3d9.log`.
 
 The published tag is named **`v3.0-1`**. It updates the fork to upstream DXVK 3.0; it is sometimes informally called “3.0.1,” but it is not the old Version 3 project release and it is not the same renderer as `dxvk-gplasync-v2.6.2-1`.[1]
 
@@ -18,7 +18,7 @@ The existing `tuned/renderers/dxvk-gplasync-v2.6.2-1.conf` is preserved as a **h
 
 ## Safe minimum `dxvk.conf` for GPLAsync `v3.0-1`
 
-Start from the Version 3 stock baseline. Add only the following GPLAsync-specific line after recording a backup of the working `dxvk.conf`, `vulkan.dll`, and `GTAIV_d3d9.log`:
+Start from the Version 4 Radeon 660M/GPLAsync baseline or from the General profile only after preserving a backup. Add only the following GPLAsync-specific line after recording a backup of the working `dxvk.conf`, `vulkan.dll`, and `GTAIV_d3d9.log`:
 
 ```ini
 dxvk.enableAsync = true
@@ -52,7 +52,7 @@ For a Radeon 660M shared-memory APU, do **not** raise `d3d9.numBackBuffers` abov
 4. Test GTA IV, TLAD, and TBoGT where installed: one cold pass, then at least two warm passes on the same route.
 5. Restore the saved `vulkan.dll` and `dxvk.conf` if startup, visual output, sustained frame time, or input response is worse.
 
-> **Do not call GPLAsync `v3.0-1` a validated Version 3 renderer profile yet.** It is a separately maintained advanced experiment until a complete evidence directory records the exact artifact hash, driver, log, cold/warm results, and rollback result.
+> **Do not call GPLAsync `v3.0-1` a universally validated Version 4 renderer profile.** Version 4 offers its minimal configuration only as an explicit advanced choice; the renderer remains a separately maintained experiment until a complete evidence directory records the exact artifact hash, driver, log, cold/warm results, and rollback result.
 
 ## References
 

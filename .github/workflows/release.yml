@@ -32,8 +32,9 @@ jobs:
           $version = $env:GITHUB_REF_NAME.TrimStart('v')
           New-Item -ItemType Directory -Force -Path installer\build | Out-Null
           $makensis = (Get-Command makensis.exe -ErrorAction Stop).Source
-          & $makensis "/DPRODUCT_VERSION=$version" installer\GTAIV_V3_Automatic_Installer.nsi
-          if ($LASTEXITCODE -ne 0) { throw "NSIS build failed." }
+          $installerSource = if ($version -eq '4') { 'installer\GTAIV_V4_Automatic_Installer.nsi' } else { 'installer\GTAIV_V3_Automatic_Installer.nsi' }
+          & $makensis "/DPRODUCT_VERSION=$version" $installerSource
+          if ($LASTEXITCODE -ne 0) { throw "NSIS build failed for $installerSource." }
           $installer = "installer\build\GTAIV_After_Dark_Complete_Configuration_v$version.exe"
           if (-not (Test-Path $installer)) { throw "Expected installer was not produced: $installer" }
 

@@ -21,7 +21,7 @@ Describe the test machine, game/archive version, GPU/driver, resolution, changes
 
 ## Contract and documentation
 
-- [ ] I checked [`docs/COMPLETE_INSTALL_CONTRACT.md`](docs/COMPLETE_INSTALL_CONTRACT.md) and did not change the seven-file installer contract without fully documenting the reason.
+- [ ] I checked [`docs/V4_COMPLETE_INSTALL_CONTRACT.md`](docs/V4_COMPLETE_INSTALL_CONTRACT.md) and did not change the seven-file installer/profile-choice contract without fully documenting the reason.
 - [ ] I updated user documentation, sources/credits, dependency context, history, and embedded `installer/payload/reference/` copies where needed.
 - [ ] I regenerated `installer/INSTALLER_PAYLOAD_SHA256SUMS.txt` after payload changes.
 - [ ] I kept the installer backup/rollback behavior and GTAIV.exe administrator compatibility behavior intact, or documented a tested replacement.
@@ -30,8 +30,8 @@ Describe the test machine, game/archive version, GPU/driver, resolution, changes
 
 - [ ] `git diff --check` passed.
 - [ ] The payload SHA-256 manifest passed.
-- [ ] The Version 3 installer compiled successfully.
-- [ ] If this is released, the existing `v3` assets will be replaced in place—not published as a patch-number release or a partial installer.
+- [ ] The Version 4 installer compiled successfully.
+- [ ] If this is released, the existing `v4` assets will be replaced in place—not published as a patch-number release or a partial installer. I did not move or replace the protected `v3` assets.
 
 ## Rollback instructions
 
