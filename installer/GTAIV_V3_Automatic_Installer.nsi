@@ -5,13 +5,14 @@ RequestExecutionLevel admin
 SetCompressor /SOLID lzma
 
 !ifndef PRODUCT_VERSION
-!define PRODUCT_VERSION "3.0.4"
+!define PRODUCT_VERSION "3.0.5"
 !endif
 !define PRODUCT_NAME "GTA IV Core Configuration Installer"
 !define PRODUCT_PUBLISHER "LOST_MAN93"
 !define UNINSTALLER_NAME "GTAIV_Core_Configuration_Installer_Uninstall.exe"
 !define BACKUP_ROOT "GTAIV_Core_Configuration_Installer_Backups"
 !define UNINSTALL_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\GTAIV_Core_Configuration_Installer"
+!define APP_COMPAT_KEY "Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 OutFile "build\GTAIV_Core_Configuration_Installer_v${PRODUCT_VERSION}.exe"
@@ -36,6 +37,7 @@ Var Second
 Var Handle
 Var LastBackup
 Var ProcessOutput
+Var PriorCompatFlags
 
 Function .onInit
   SetShellVarContext current
@@ -65,6 +67,9 @@ useCompactGtaSubfolder:
 useDashedGtaSubfolder:
   StrCpy $INSTDIR "$INSTDIR\GTA-IV"
 gameRoot:
+  ; The directory page has now resolved the actual game root, so capture the exact
+  ; per-user compatibility value that will be restored by this installation's uninstaller.
+  ReadRegStr $PriorCompatFlags HKCU "${APP_COMPAT_KEY}" "$INSTDIR\GTAIV.exe"
 FunctionEnd
 
 ; This package is a FusionFix configuration layer. It must not install into an unprepared game
@@ -116,11 +121,13 @@ Function CreateBackup
   FileWrite $Handle "Created: $Year-$Month-$Day $Hour:$Minute:$Second$\r$\n"
   FileWrite $Handle "Managed files: pc\stream.ini, plugins\GTAIV.EFLC.FusionFix.cfg, plugins\GTAIV.EFLC.FusionFix.ini$\r$\n"
   FileWrite $Handle "The backup contains only pre-existing managed files.$\r$\n"
+  FileWrite $Handle "Previous GTAIV.exe compatibility flags: $PriorCompatFlags$\r$\n"
   FileClose $Handle
   WriteINIStr "$BackupRoot\LAST_BACKUP.ini" "Installer" "BackupPath" "$BackupDir"
+  WriteINIStr "$BackupRoot\LAST_BACKUP.ini" "Installer" "PreviousCompatFlags" "$PriorCompatFlags"
 FunctionEnd
 
-Section "Install Version 3.0.2 core configuration" SEC_MAIN
+Section "Install core configuration" SEC_MAIN
   Call VerifyPrerequisites
   Call VerifyGameClosed
   Call CreateBackup
@@ -131,6 +138,16 @@ Section "Install Version 3.0.2 core configuration" SEC_MAIN
   SetOutPath "$INSTDIR\plugins"
   File /oname=GTAIV.EFLC.FusionFix.cfg "payload\plugins\GTAIV.EFLC.FusionFix.cfg"
   File /oname=GTAIV.EFLC.FusionFix.ini "payload\plugins\GTAIV.EFLC.FusionFix.ini"
+
+  ; GTA IV must create configuration files in this installation layout. Preserve any existing
+  ; per-user compatibility flags and add RUNASADMIN for GTAIV.exe on every package installation.
+  StrCmp $PriorCompatFlags "" setAdminOnly setAdminPreservingPriorValue
+setAdminOnly:
+  WriteRegStr HKCU "${APP_COMPAT_KEY}" "$INSTDIR\GTAIV.exe" "RUNASADMIN"
+  Goto compatibilityWritten
+setAdminPreservingPriorValue:
+  WriteRegStr HKCU "${APP_COMPAT_KEY}" "$INSTDIR\GTAIV.exe" "$PriorCompatFlags RUNASADMIN"
+compatibilityWritten:
 
   ; Optional renderer and mod-specific settings are intentionally never installed automatically.
   ; They require a user-selected, documented compatibility path.
@@ -147,13 +164,14 @@ Section "Install Version 3.0.2 core configuration" SEC_MAIN
   WriteRegDWORD HKLM "${UNINSTALL_KEY}" "NoRepair" 1
 
   IfSilent +2
-    MessageBox MB_ICONINFORMATION "Version ${PRODUCT_VERSION} installed its three core configuration files. The prior copies, if any, were backed up in:$\r$\n$BackupDir$\r$\n$\r$\nNo DXVK configuration, preload list, optional plugin configuration, game executable, compatibility flag, or third-party binary was changed. Read COMPONENTS_AND_COMPATIBILITY.md before applying optional files."
+    MessageBox MB_ICONINFORMATION "Version ${PRODUCT_VERSION} installed its three core configuration files and set GTAIV.exe to run as administrator so the game can create its required configuration files. The prior files and compatibility value, if any, were backed up in:$\r$\n$BackupDir$\r$\n$\r$\nNo DXVK configuration, preload list, optional plugin configuration, game executable, or third-party binary was changed. Read COMPONENTS_AND_COMPATIBILITY.md before applying optional files."
 SectionEnd
 
 Section "Uninstall"
   StrCpy $BackupRoot "$INSTDIR\${BACKUP_ROOT}"
   ClearErrors
   ReadINIStr $LastBackup "$BackupRoot\LAST_BACKUP.ini" "Installer" "BackupPath"
+  ReadINIStr $PriorCompatFlags "$BackupRoot\LAST_BACKUP.ini" "Installer" "PreviousCompatFlags"
   StrCmp $LastBackup "" noBackup
 
   IfSilent restoreFiles
@@ -180,6 +198,13 @@ noBackup:
   MessageBox MB_ICONEXCLAMATION "No core-configuration backup record was found. The managed configuration files were left in place."
 
 finishUninstall:
+  ; Restore exactly the per-user GTAIV.exe compatibility value that existed before installation.
+  StrCmp $PriorCompatFlags "" removeManagedCompatibility
+  WriteRegStr HKCU "${APP_COMPAT_KEY}" "$INSTDIR\GTAIV.exe" "$PriorCompatFlags"
+  Goto compatibilityRestored
+removeManagedCompatibility:
+  DeleteRegValue HKCU "${APP_COMPAT_KEY}" "$INSTDIR\GTAIV.exe"
+compatibilityRestored:
   DeleteRegKey HKLM "${UNINSTALL_KEY}"
   Delete "$INSTDIR\${UNINSTALLER_NAME}"
 SectionEnd

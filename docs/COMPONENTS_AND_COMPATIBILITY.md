@@ -1,6 +1,6 @@
-# Version 3.0.4 Components and Compatibility
+# Version 3.0.5 Components and Compatibility
 
-Version 3.0.4 is a configuration package for a legitimate **GTA IV Complete Edition** installation. It does not include GTA IV, Rockstar launcher files, saves, FusionFix/DXVK binaries, shader files, or third-party mod assets. The package is intentionally divided into a small default profile and optional component settings.
+Version 3.0.5 is a configuration package for a legitimate **GTA IV Complete Edition** installation. It does not include GTA IV, Rockstar launcher files, saves, FusionFix/DXVK binaries, shader files, or third-party mod assets. The package is intentionally divided into a small default profile and optional component settings.
 
 ## Default configuration scope
 
@@ -9,6 +9,7 @@ Version 3.0.4 is a configuration package for a legitimate **GTA IV Complete Edit
 | `GTAIV.EFLC.FusionFix.cfg` | Installed after FusionFix prerequisite check | FusionFix visible graphics, API, and frame-limit preferences |
 | `GTAIV.EFLC.FusionFix.ini` | Installed after FusionFix prerequisite check | Advanced FusionFix shadow, limiter, vehicle-budget, and Project2DFX settings |
 | `stream.ini` | Installed after game-root and FusionFix prerequisite checks | Streaming configuration supplied with the reference package |
+| Per-user `GTAIV.exe` `RUNASADMIN` entry | Installed and managed on every package installation | Required so GTA IV can create its configuration files in the documented installation layout; the prior value is preserved for uninstall rollback |
 | `dxvk-stock.conf` | Manual selection only | Upstream-compatible DXVK baseline; copy as `dxvk.conf` only when the FusionFix Vulkan route and a compatible DXVK build are active |
 
 ## Optional configuration scope
@@ -32,7 +33,7 @@ FusionFix’s current upstream project fully supports Complete Edition; legacy e
 
 ## Installer safety boundary
 
-The installer verifies the game root and the FusionFix plugin before it writes default configuration. It does not install or repair third-party binaries, confirm a game build from file metadata, override shader metadata, set the game to run as administrator, or prove performance on the target system. It is a reversible configuration writer, not a complete modpack installer.
+The installer verifies the game root and the FusionFix plugin before it writes default configuration. It does not install or repair third-party binaries, confirm a game build from file metadata, override shader metadata, or prove performance on the target system. It **does** set the per-user `GTAIV.exe` `RUNASADMIN` compatibility entry on every installation because the documented layout otherwise prevents GTA IV from creating required configuration files. The installer records the previous value and restores it on uninstall. It is a reversible configuration writer, not a complete modpack installer.
 
 ## References
 
