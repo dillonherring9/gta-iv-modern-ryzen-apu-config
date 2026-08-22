@@ -1,73 +1,71 @@
-# GTA IV Version 3 Automatic Installer — Build and Test Notes
+# GTA IV Version 3.0.2 Core Configuration Installer — Build and Release Guide
 
-This directory is the complete auditable source for `GTAIV_V3_Automatic_Installer_v3.0.0.exe`. It carries the nine-file configuration payload, the payload checksum manifest, and the instructions needed to rebuild the installer. It does **not** include GTA IV, Rockstar launcher files, saves, DXVK/FusionFix binaries, executable replacements, or third-party mod assets.
+Version 3.0.2 is a **narrow, reversible FusionFix configuration installer**. It does not install GTA IV, renderer binaries, ASI loaders, shader files, optional mod plugins, saved games, or game archives. It writes only three core configuration files after positive game-root and FusionFix checks.
 
-## Version 3: what changed after the city went quiet
+## Managed installer payload
 
-Version 3 returns to the runtime log rather than guessing. The user-tested Radeon 660M session reported **DXVK GPLAsync v2.6.2**, Graphics Pipeline Library support, full-screen-exclusive support, and an active `4 / 4` compiler-and-async worker balance. The package now preserves that working renderer profile instead of shipping a reduced file that had lost accepted settings.
+| Payload file | Destination | Why it is in the automatic scope |
+|---|---|---|
+| `payload/pc/stream.ini` | `pc\stream.ini` | Core streaming configuration used with the reference package |
+| `payload/plugins/GTAIV.EFLC.FusionFix.cfg` | `plugins\GTAIV.EFLC.FusionFix.cfg` | Main FusionFix graphics and frame-limit profile |
+| `payload/plugins/GTAIV.EFLC.FusionFix.ini` | `plugins\GTAIV.EFLC.FusionFix.ini` | Advanced FusionFix shadow, limiter, vehicle-budget, and distant-light profile |
 
-| Area | Version 3 behavior |
-|---|---|
-| DXVK profile | Restores the logged working `dxvk.enableAsync`, `dxvk.numAsyncThreads=4`, `dxvk.gplAsyncCache=True`, and `dxvk.allowFse=true` values alongside the existing four compiler threads. |
-| Folder selection | Starts blank and never imports a stale Rockstar registry path. The player selects the real game folder once. |
-| Validation | Checks direct and common nested layouts only after **Install** is clicked; it does not trap the player with a disabled button. |
-| Version 2 upgrade | Once the Version 3 uninstaller is written, the installer removes the obsolete Version 2 Installed-apps entry and uninstaller. Version 3 backs up the files it replaces before it writes anything. |
-| Loose replacement mod | The installer never moves or repackages loose mod files. Keep the tested loose-file route; do not move that replacement into an `update` folder. |
-| Rollback | Version 3 restores the latest Version 3 backup and the prior compatibility value when the user chooses **Yes** during uninstall. |
+The installer does **not** automatically install `dxvk.conf`, `preload.list`, AudioMap, ConsoleSelectMenu, Xbox Rain Droplets, or LibertyCityPlates configuration. Those files are optional and require their separate dependency contracts; see [`docs/COMPONENTS_AND_COMPATIBILITY.md`](../docs/COMPONENTS_AND_COMPATIBILITY.md).
 
-> **After-hours rule:** one renderer, one limiter, one change at a time. Restart GTA IV after renderer or graphics-path changes, then judge the second or third pass—not the first cold lap.
+## Installer safety behavior
 
-## Prerequisites
+The installer requires a folder containing `GTAIV.exe` or one of the documented nested game-folder layouts. It also requires `plugins\GTAIV.EFLC.FusionFix.asi` and aborts when `GTAIV.exe` is running. It creates a timestamped backup of pre-existing managed files, installs the three core files, and provides an uninstaller that restores the latest Version 3.0.2 backup on request.
 
-Build on Windows with **NSIS 3.09 or newer**. The `makensis` compiler must be available from Command Prompt or called by its full path. Preserve this directory layout because the script uses relative `payload\` paths.
+It deliberately does not set a Windows **Run as administrator** flag on the game executable, cannot infer the player’s complete mod stack, and cannot validate performance. Close the Rockstar Games Launcher, GTA IV, mod managers, and tools that may hold files before installation.
 
-## Verify the payload
+## Local build
 
-From the `installer` directory, enter `payload\` and compare each hash against `INSTALLER_PAYLOAD_SHA256SUMS.txt` before compiling:
-
-```powershell
-Set-Location .\payload
-Get-FileHash -Algorithm SHA256 .\root\dxvk.conf
-Get-FileHash -Algorithm SHA256 .\pc\stream.ini
-Get-FileHash -Algorithm SHA256 .\plugins\AudioMap.ini
-Get-FileHash -Algorithm SHA256 .\plugins\ConsoleSelectMenuIV.ini
-Get-FileHash -Algorithm SHA256 .\plugins\GTAIV.EFLC.FusionFix.cfg
-Get-FileHash -Algorithm SHA256 .\plugins\GTAIV.EFLC.FusionFix.ini
-Get-FileHash -Algorithm SHA256 .\plugins\GTAIV.XboxRainDroplets.ini
-Get-FileHash -Algorithm SHA256 .\plugins\LibertyCityPlates.txt
-Get-FileHash -Algorithm SHA256 .\common\shaders\preload.list
-```
-
-## Build
-
-Open Command Prompt in this `installer` directory and run:
+Build on Windows with **NSIS 3.09 or newer**. Preserve the installer directory layout because the script uses relative `payload\` paths.
 
 ```text
+cd installer
 makensis GTAIV_V3_Automatic_Installer.nsi
 ```
 
-A successful compilation writes:
+The compiler writes:
 
 ```text
-build\GTAIV_V3_Automatic_Installer_v3.0.0.exe
+build\GTAIV_Core_Configuration_Installer_v3.0.2.exe
 ```
 
-## Safe Windows test checklist
+Before compiling, verify the exact embedded files from the `installer/payload` directory:
 
-Use a disposable GTA IV installation or make a complete backup first. Close GTA IV, Rockstar Games Launcher, mod managers, and any tool that may hold game files open.
+```powershell
+Set-Location .\payload
+Get-FileHash -Algorithm SHA256 .\pc\stream.ini
+Get-FileHash -Algorithm SHA256 .\plugins\GTAIV.EFLC.FusionFix.cfg
+Get-FileHash -Algorithm SHA256 .\plugins\GTAIV.EFLC.FusionFix.ini
+```
+
+Compare these hashes with [`INSTALLER_PAYLOAD_SHA256SUMS.txt`](INSTALLER_PAYLOAD_SHA256SUMS.txt).
+
+## Release process
+
+The authoritative release route is the Windows GitHub Actions workflow at [`.github/workflows/release.yml`](../.github/workflows/release.yml). It is triggered only by a `v*` tag and performs the following work from the tagged commit:
+
+1. Builds the NSIS installer on Windows.
+2. Generates `SOURCE_COMMIT.txt` from the checked-out commit.
+3. Creates a source archive containing the source, docs, payload, renderer profiles, and build metadata.
+4. Creates a SHA-256 manifest covering **every published asset**, including the installer EXE.
+5. Publishes the tagged release with those generated assets.
+
+The workflow records its toolchain expectations in [`BUILD_ENVIRONMENT.md`](../BUILD_ENVIRONMENT.md). A byte-identical EXE rebuild is preferred but not assumed across different NSIS stubs or Windows build environments. The complete manifest and source commit are the minimum release-integrity contract.
+
+## Windows smoke test checklist
+
+Use a disposable GTA IV Complete Edition installation or a complete backup. The test must verify the actual release artifact, not only the source tree.
 
 | Step | Expected result |
 |---|---|
-| Open the installer | The destination field is blank. |
-| Browse to the game folder | Select the folder that contains `GTAIV.exe`; no duplicate Rockstar path should appear. |
-| Click **Install** | The installer verifies the folder after the click and shows the full path if it needs clarification. |
-| Check `GTAIV_V3_Installer_Backups` | A timestamped backup contains copies of any managed files that existed before installation. |
-| Check `dxvk.conf` | The nine-file payload is present, including the logged GPLAsync `4 / 4` thread profile. |
-| Check Installed apps | The Version 3 entry is present; the obsolete Version 2 entry is removed after a successful upgrade. |
-| Run the Version 3 uninstaller and choose **Yes** | The latest backup and prior `GTAIV.exe` compatibility value are restored. |
-
-> **Do not add extra wrappers, ASI loaders, or frame limiters while testing.** The installer protects its own nine files; it cannot untangle unrelated DLL chains, mod precedence rules, driver changes, or loose-file replacements.
-
-## Attribution and distribution
-
-This source contains only the installer script, documentation, checksum manifest, and project configuration payload. Preserve the licenses, credits, and distribution terms for GTA IV, FusionFix, DXVK, Gillian’s resources, and every third-party mod used with this configuration.
+| Select a wrong folder | Installer stops before any file is changed. |
+| Select a valid root without FusionFix | Installer stops before any file is changed. |
+| Start `GTAIV.exe` and invoke installer | Installer stops before any file is changed. |
+| Install with a valid FusionFix root | Timestamped backup contains any pre-existing core files; only the three core files are changed. |
+| Inspect game root | No `dxvk.conf`, static `preload.list`, optional plugin configuration, third-party binary, or executable compatibility flag is added by the installer. |
+| Uninstall and choose restore | Latest Version 3.0.2 backup restores each managed file, or installer-created files are removed. |
+| Run the validation protocol | The game, all applicable episodes, and the selected renderer pass the evidence gates in [`docs/VALIDATION_PROTOCOL.md`](../docs/VALIDATION_PROTOCOL.md). |

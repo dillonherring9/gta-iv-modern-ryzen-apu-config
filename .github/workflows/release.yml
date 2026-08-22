@@ -1,0 +1,72 @@
+name: Build and publish release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - name: Check out the tagged source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install NSIS
+        shell: pwsh
+        run: choco install nsis --no-progress --yes
+
+      - name: Build the installer
+        shell: pwsh
+        run: |
+          $version = $env:GITHUB_REF_NAME.TrimStart('v')
+          & makensis "/DPRODUCT_VERSION=$version" installer\GTAIV_V3_Automatic_Installer.nsi
+          if ($LASTEXITCODE -ne 0) { throw "NSIS build failed." }
+          $installer = "installer\build\GTAIV_Core_Configuration_Installer_v$version.exe"
+          if (-not (Test-Path $installer)) { throw "Expected installer was not produced: $installer" }
+
+      - name: Assemble traceable assets
+        shell: pwsh
+        run: |
+          $version = $env:GITHUB_REF_NAME.TrimStart('v')
+          $dist = "dist"
+          $sourceName = "GTAIV_Core_Configuration_Installer_Source_v$version"
+          $sourceRoot = Join-Path $dist $sourceName
+          New-Item -ItemType Directory -Force -Path $sourceRoot | Out-Null
+
+          Copy-Item .gitignore, README.md, BUILD_ENVIRONMENT.md, "RELEASE_NOTES_v$version.md" -Destination $sourceRoot
+          Copy-Item .github, installer, tuned, docs -Destination $sourceRoot -Recurse
+          Remove-Item (Join-Path $sourceRoot "installer\build") -Recurse -Force -ErrorAction SilentlyContinue
+          $commit = git rev-parse HEAD
+          Set-Content -Path (Join-Path $sourceRoot "SOURCE_COMMIT.txt") -Value $commit -NoNewline
+
+          $installer = "installer\build\GTAIV_Core_Configuration_Installer_v$version.exe"
+          Copy-Item $installer -Destination $dist
+          Copy-Item tuned\dxvk-stock.conf -Destination $dist
+          Copy-Item tuned\renderers\dxvk-gplasync-v2.6.2-1.conf -Destination $dist
+          Compress-Archive -Path $sourceRoot -DestinationPath "$dist\$sourceName.zip" -Force
+
+          $assets = Get-ChildItem $dist -File | Where-Object { $_.Name -ne "SHA256SUMS.txt" }
+          $assets | ForEach-Object {
+            "$((Get-FileHash -Algorithm SHA256 $_.FullName).Hash.ToLower())  $($_.Name)"
+          } | Set-Content "$dist\SHA256SUMS.txt"
+
+      - name: Publish GitHub release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $version = $env:GITHUB_REF_NAME.TrimStart('v')
+          gh release create $env:GITHUB_REF_NAME `
+            "dist\GTAIV_Core_Configuration_Installer_v$version.exe" `
+            "dist\GTAIV_Core_Configuration_Installer_Source_v$version.zip" `
+            "dist\dxvk-stock.conf" `
+            "dist\dxvk-gplasync-v2.6.2-1.conf" `
+            "dist\SHA256SUMS.txt" `
+            --title "Version $version — Corrective Core Configuration Release" `
+            --notes-file "RELEASE_NOTES_v$version.md"
