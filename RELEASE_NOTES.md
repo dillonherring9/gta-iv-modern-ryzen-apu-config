@@ -38,7 +38,9 @@ The installer also sets **Run this program as an administrator** for `GTAIV.exe`
 
 The executable copies a complete reference package into `GTAIV_After_Dark_Complete_Package` in the game folder. It retains all sources, credits, history, validation material, component documentation, renderer-alternative information, and legacy shader-preload reasoning. The public release likewise includes the complete installer, complete package archive, source archive, and SHA-256 checksum manifest.
 
-The GPLAsync alternative and legacy `preload.list` remain preserved as reference material. They are not installed automatically because the renderer choice and static shader metadata must match the exact installed archive/shader layout; blindly overwriting them can introduce instability or LibertyCityPlates resource failures. The retained GPLAsync 2.6.2-1 reference is not a claim that every archive installation uses GPLAsync.
+The GPLAsync alternative and legacy `preload.list` remain preserved as reference material. They are not installed automatically because the renderer choice and static shader metadata must match the exact installed archive/shader layout; blindly overwriting them can introduce instability or LibertyCityPlates resource failures. The retained GPLAsync 2.6.2-1 file is now explicitly labeled a historical exact-artifact reference, not a claim that every archive installation uses GPLAsync.
+
+GPLAsync `v3.0-1` is separately documented as an advanced migration experiment. It removed the old `dxvk.gplAsyncCache` key, so the preserved 2.6.2 profile must not be copied into it. Version 3 does not distribute or automatically select the newer fork; use [`docs/GPLASYNC_V3_0_1_MIGRATION.md`](docs/GPLASYNC_V3_0_1_MIGRATION.md) only after backing up the working renderer and confirming the exact artifact/log.[4]
 
 `AudioMap.ini` is intentionally absent from Version 3’s active documentation, payload, and installer. The full audit identified it as a historical DualSense Audio Mapper carryover rather than a documented Drag-and-Drop Archive component. Its historical mention is retained in the archived records for transparency, but the configuration itself is not reintroduced.
 
@@ -68,3 +70,5 @@ Users are free to choose a better maintained successor, archive, or community ro
 [2] [Gillian’s GTA IV Modding Guide — Drag-and-Drop Archive](https://gillian-guide.github.io/drag-and-drop-archive/)
 
 [3] [Gillian’s GTA IV Modding Guide — FusionFix](https://gillian-guide.github.io/essential-modding/fusionfix/)
+
+[4] [GPLAsync v3.0-1 README](https://gitlab.com/Ph42oN/dxvk-gplasync/-/raw/v3.0-1/README.md)

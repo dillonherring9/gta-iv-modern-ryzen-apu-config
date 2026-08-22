@@ -22,14 +22,14 @@ Gillian’s optimization guidance describes upstream DXVK as the normal modern r
 Follow these steps in order. Reading a file is safe; do not run **Reinstall DXVK** merely to identify the current renderer.
 
 1. **Open the game folder.** It is the folder containing `GTAIV.exe` and `vulkan.dll`.
-2. **Open `dxvk.conf` in Notepad.** Look for the following lines:
+2. **Open `dxvk.conf` in Notepad.** Look for renderer-related lines, but do not use one setting as final proof:
 
    ```text
    dxvk.enableAsync = true
    dxvk.gplAsyncCache = true
    ```
 
-   `dxvk.gplAsyncCache = true` is the strongest configuration sign that a GPLAsync-specific configuration was used. `dxvk.enableAsync = true` alone means an async setting is active but is not proof of GPLAsync, because the Setup Utility can use another async-capable build.
+   `dxvk.enableAsync = true` means an async setting is active, but it is not proof of GPLAsync because another async-capable build can use it. `dxvk.gplAsyncCache = true` is a **legacy GPLAsync 2.6.2-era marker only**: GPLAsync removed that key in v2.7-1, so its absence does not rule out the current `v3.0-1` build. If the log calls the key unknown, remove it rather than adding it back.[^3]
 
 3. **Launch GTA IV once through your normal launcher with Vulkan selected, then close it.** Do not change settings during this identification run.
 4. **Open `GTAIV_d3d9.log` in the game folder.** Record the renderer version/path information and any accepted or unsupported configuration lines. Keep the useful version/API/error lines; redact only personal folder/account paths if you share the log.
@@ -45,7 +45,7 @@ Follow these steps in order. Reading a file is safe; do not run **Reinstall DXVK
 
 Version 3 intentionally installs the **stock upstream-compatible** `dxvk.conf` baseline. It contains no GPLAsync-only settings, so it is safe to use as the default configuration when the exact renderer installed by the archive has not yet been identified.
 
-The package retains a separate `dxvk-gplasync-v2.6.2-1.conf` only as an advanced, version-locked reference. Do not apply it to stock DXVK, DXVK 3.0.2, DXVK-Sarek, or a different GPLAsync release. If a future test uses another GPLAsync artifact, make a separate backup, record the exact version/hash/log, test cold and warm routes, test GTA IV/TLAD/TBoGT, and restore the known-good renderer if the result is worse.[3] [4]
+The package retains a separate `dxvk-gplasync-v2.6.2-1.conf` only as an advanced, historical version-locked reference. Do not apply it to stock DXVK, DXVK 3.0.2, DXVK-Sarek, or a different GPLAsync release. GPLAsync `v3.0-1` has its own migration boundary because it removed the old cache key; use [`GPLASYNC_V3_0_1_MIGRATION.md`](GPLASYNC_V3_0_1_MIGRATION.md) rather than copying the 2.6.2 profile. If a future test uses another GPLAsync artifact, make a separate backup, record the exact version/hash/log, test cold and warm routes, test GTA IV/TLAD/TBoGT, and restore the known-good renderer if the result is worse.[3] [4]
 
 > **Do not “upgrade” just to identify.** Keep the working `vulkan.dll` until you have a documented reason to test another one. A newer DXVK or a GPLAsync build is an experiment, not an automatic improvement.
 
@@ -55,6 +55,8 @@ The package retains a separate `dxvk-gplasync-v2.6.2-1.conf` only as an advanced
 
 [2] [Gillian’s GTA IV Setup Utility source](https://github.com/gillian-guide/GTAIVSetupUtility)
 
-[3] [DXVK GPLAsync project](https://gitlab.com/Ph42oN/dxvk-gplasync)
+[3] [GPLAsync `v3.0-1` README](https://gitlab.com/Ph42oN/dxvk-gplasync/-/raw/v3.0-1/README.md)
 
-[4] [Version 3 validation protocol](VALIDATION_PROTOCOL.md)
+[4] [DXVK GPLAsync project](https://gitlab.com/Ph42oN/dxvk-gplasync)
+
+[5] [Version 3 validation protocol](VALIDATION_PROTOCOL.md)

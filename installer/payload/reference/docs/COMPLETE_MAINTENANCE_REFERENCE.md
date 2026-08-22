@@ -59,6 +59,7 @@ Everything after this note is the preserved original maintenance guide. It is in
 | `AudioMap.ini` as a package or manual-install file | Do **not** copy or recreate it. The audit found it was not a documented Drag-and-Drop Archive component. |
 | A static `preload.list` manual-install destination | Keep it as reference only. Do not overwrite the archive’s shader metadata unless you fully understand and verify the matching shader layout. |
 | GPLAsync values as the automatically installed renderer profile | Current Version 3 installs the upstream-compatible stock `dxvk.conf`; GPLAsync remains a preserved advanced alternative, not an automatic choice. |
+| `dxvk.gplAsyncCache=True` as a generic GPLAsync setting | This is a historical 2.6.2-era value. GPLAsync removed it in v2.7-1, so do **not** copy it into GPLAsync `v3.0-1`; follow [`GPLASYNC_V3_0_1_MIGRATION.md`](GPLASYNC_V3_0_1_MIGRATION.md). |
 | Update FusionFix inside the archive | Do not casually update FusionFix in Gillian’s curated archive and do not enable its update check. |
 | The five-step DXVK upgrade that replaces `vulkan.dll` | Keep and use it only as an **advanced, controlled maintenance procedure**: save the currently working file, change only one binary, inspect `GTAIV_d3d9.log`, replay a route after caches build, and restore the old file if the game fails. It is not a required first-time step or a guaranteed performance upgrade. |
 

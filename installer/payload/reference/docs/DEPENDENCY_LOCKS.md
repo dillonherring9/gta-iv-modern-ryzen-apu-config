@@ -5,7 +5,8 @@ Version 3 does not redistribute third-party binaries. This document records the 
 | Component | Required use | Artifact | SHA-256 | Boundary |
 |---|---|---|---|---|
 | FusionFix | Required for the core profile | `GTAIV.EFLC.FusionFix.zip`, release `v5.0.1` | `3c202398c133392be985854654f169514e055812cc302ef24e6aa97495975b41` | The installer checks for `vulkan.dll` but does not block on one FusionFix plugin filename, because valid installations can use different loader/layout arrangements. Verify this hash before installation. |
-| DXVK GPLAsync | Optional renderer overlay only | `dxvk-gplasync-v2.6.2-1.tar.gz` | `c645d3f2550ff66d0a51ba27a535aaa7351fd087feb7b298e7283cb2a3ee173b` | Required only for `tuned/renderers/dxvk-gplasync-v2.6.2-1.conf`. It is not proof of the archive’s installed renderer. Do not apply that configuration to upstream DXVK, DXVK-Sarek, DXVK 3.0.2, or another GPLAsync version. |
+| DXVK GPLAsync 2.6.2-1 | Historical optional overlay reference only | `dxvk-gplasync-v2.6.2-1.tar.gz` | `c645d3f2550ff66d0a51ba27a535aaa7351fd087feb7b298e7283cb2a3ee173b` | Required only for the retained historical `tuned/renderers/dxvk-gplasync-v2.6.2-1.conf`. It is not proof of the archive’s installed renderer. Do not apply that configuration to upstream DXVK, DXVK-Sarek, DXVK 3.0.2, or another GPLAsync version. |
+| DXVK GPLAsync v3.0-1 | Advanced user-maintained experiment | `dxvk-gplasync-v3.0-1` | Not locked or claimed as tested by Version 3 | This release removed `dxvk.gplAsyncCache`; do not reuse the 2.6.2 overlay. Record the downloaded artifact hash, `vulkan.dll` hash, driver, log, cold/warm results, and rollback result before calling it a validated profile. See `GPLASYNC_V3_0_1_MIGRATION.md`. |
 | Upstream DXVK | Stock renderer profile | Player-selected compatible DXVK build | Not locked by this package | `tuned/dxvk-stock.conf` contains upstream-supported configuration keys. Record the exact artifact/hash in validation evidence. |
 
 ## Verification
@@ -15,6 +16,9 @@ Use the release pages named below and verify the downloaded archive before extra
 ```powershell
 Get-FileHash -Algorithm SHA256 .\GTAIV.EFLC.FusionFix.zip
 Get-FileHash -Algorithm SHA256 .\dxvk-gplasync-v2.6.2-1.tar.gz
+# For GPLAsync v3.0-1, hash the exact downloaded release archive and then hash the copied vulkan.dll.
+Get-FileHash -Algorithm SHA256 .\dxvk-gplasync-v3.0-1.zip
+Get-FileHash -Algorithm SHA256 .\vulkan.dll
 ```
 
 A different hash is not automatically malicious, but it is not the artifact described by this Version 3 contract. Do not call a result comparable to the reference configuration without recording the actual artifact and hash.
@@ -29,4 +33,6 @@ Before selecting an overlay, open the game folder’s `dxvk.conf`, save the effe
 
 - [FusionFix v5.0.1 release](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/releases/tag/v5.0.1)
 - [DXVK GPLAsync v2.6.2-1 release](https://gitlab.com/Ph42oN/dxvk-gplasync/-/releases/v2.6.2-1)
+- [DXVK GPLAsync v3.0-1 release](https://gitlab.com/Ph42oN/dxvk-gplasync/-/releases/v3.0-1)
+- [GPLAsync v3.0-1 README](https://gitlab.com/Ph42oN/dxvk-gplasync/-/raw/v3.0-1/README.md)
 - [DXVK upstream releases](https://github.com/doitsujin/dxvk/releases)

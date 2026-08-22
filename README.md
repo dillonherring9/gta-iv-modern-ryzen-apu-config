@@ -19,6 +19,7 @@ The project does **not** include GTA IV, the Drag-and-Drop Archive, FusionFix, D
 | Taking over the project or making a fork | Read [`docs/MAINTAINER_HANDOFF.md`](docs/MAINTAINER_HANDOFF.md) and [`CONTRIBUTING.md`](CONTRIBUTING.md). |
 | Looking for every original instruction, source, credit, historical detail, and older maintenance explanation | Read [`docs/COMPLETE_MAINTENANCE_REFERENCE.md`](docs/COMPLETE_MAINTENANCE_REFERENCE.md). It is the preserved full reference; this simpler page does not delete that information. |
 | Unsure whether the archive installed stock DXVK, GPLAsync, or another async-capable renderer | Read [`docs/ARCHIVE_RENDERER_IDENTIFICATION.md`](docs/ARCHIVE_RENDERER_IDENTIFICATION.md) **before** reinstalling or replacing `vulkan.dll`. |
+| Deliberately installed the separate GPLAsync `v3.0-1` build | Read [`docs/GPLASYNC_V3_0_1_MIGRATION.md`](docs/GPLASYNC_V3_0_1_MIGRATION.md). Do not copy the older 2.6.2 profile into it. |
 
 ## First: know the one folder that matters
 
@@ -94,7 +95,7 @@ For the reference APU, the tested starting point uses a FusionFix 60 FPS target,
 
 ## Advanced maintenance: only after the basic setup works
 
-The full step-by-step DXVK, Ultimate ASI Loader, high-resolution-texture, shader, and manual-install instructions are preserved in [`docs/COMPLETE_MAINTENANCE_REFERENCE.md`](docs/COMPLETE_MAINTENANCE_REFERENCE.md). Before changing any renderer file, first use [`docs/ARCHIVE_RENDERER_IDENTIFICATION.md`](docs/ARCHIVE_RENDERER_IDENTIFICATION.md) to identify what the archive currently installed. The short rules below are here so you know what matters most.
+The full step-by-step DXVK, Ultimate ASI Loader, high-resolution-texture, shader, and manual-install instructions are preserved in [`docs/COMPLETE_MAINTENANCE_REFERENCE.md`](docs/COMPLETE_MAINTENANCE_REFERENCE.md). Before changing any renderer file, first use [`docs/ARCHIVE_RENDERER_IDENTIFICATION.md`](docs/ARCHIVE_RENDERER_IDENTIFICATION.md) to identify what the archive currently installed. If you deliberately use GPLAsync `v3.0-1`, follow [`docs/GPLASYNC_V3_0_1_MIGRATION.md`](docs/GPLASYNC_V3_0_1_MIGRATION.md); its removed cache key makes the retained 2.6.2 profile unsafe to copy forward. The short rules below are here so you know what matters most.
 
 ### Update DXVK for FusionFix
 
@@ -131,7 +132,8 @@ Load a save or start a new game. Move between an interior and the street, drive 
 | First-drive stutter | Restart if you changed graphics/driver/renderer settings, then repeat the same route so caches can build. |
 | Stutter remains after repeat runs | Undo the last setting change, restart, test the previous working configuration, then check thermals, traffic density, and renderer compatibility. |
 | Invalid resource or shader error | Restore the matching shader metadata/reference, then verify every named shader actually exists. Do not copy a random preload list. |
-| GPLAsync-style startup crash | Comment out `dxvk.gplAsyncCache=True` and test again only if you deliberately installed that GPLAsync-style DXVK build. |
+| GPLAsync `v3.0-1` log says `Unknown option` for `dxvk.gplAsyncCache` | Remove that line. GPLAsync removed it in v2.7-1; do not copy it from the retained 2.6.2 reference. |
+| Older GPLAsync 2.6.2-style startup crash | Restore the exact renderer/configuration pair or switch back to the stock baseline. Do not copy old GPLAsync settings into a different build. |
 | Rain stutter after warm-up | Lower `MaxMovingDrops` first. |
 | Shadow frame-time dips | Test `ExtraDynamicShadows=0`. |
 | Vehicle audio breaks | Keep the vehicle budget unchanged and retest the audio/vehicle combination. |

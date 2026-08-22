@@ -34,7 +34,7 @@ warm-pass-2.csv or warm-pass-2.png
 notes.md
 ```
 
-`system.md` must contain the environment table above. `settings-hashes.txt` must contain SHA-256 values for every active configuration and renderer artifact. Record whether `dxvk.conf` contains `dxvk.enableAsync` and/or `dxvk.gplAsyncCache`; the latter is the stronger GPLAsync-specific configuration sign, while the former alone is not proof of GPLAsync. Redact account names and unrelated paths from `GTAIV_d3d9.log`; do not redact effective renderer version, accepted configuration lines, adapter name, API path, or errors. See [`ARCHIVE_RENDERER_IDENTIFICATION.md`](ARCHIVE_RENDERER_IDENTIFICATION.md) before replacing a working renderer.
+`system.md` must contain the environment table above. `settings-hashes.txt` must contain SHA-256 values for every active configuration and renderer artifact. Record `dxvk.enableAsync`, `dxvk.gplAsyncCache` if present, and every log line that accepts, rejects, or calls a key unknown. `dxvk.gplAsyncCache` is only a **legacy GPLAsync 2.6.2-era marker**: GPLAsync removed it in v2.7-1, so its absence is normal for v3.0-1 and is not evidence against that renderer. The exact artifact hash and effective `GTAIV_d3d9.log` identify the renderer; `dxvk.enableAsync` alone does not. Redact account names and unrelated paths from the log; do not redact effective renderer version, accepted configuration lines, adapter name, API path, or errors. See [`ARCHIVE_RENDERER_IDENTIFICATION.md`](ARCHIVE_RENDERER_IDENTIFICATION.md) and [`GPLASYNC_V3_0_1_MIGRATION.md`](GPLASYNC_V3_0_1_MIGRATION.md) before replacing a working renderer.
 
 ## 4. Report results honestly
 
@@ -56,7 +56,8 @@ GTA IV build:
 FusionFix version and SHA-256:
 Archive-selected renderer path (stock DXVK / GPLAsync / other / unknown):
 DXVK or GPLAsync artifact and SHA-256:
-Async/GPLAsync configuration lines present:
+Async/GPLAsync configuration lines present (including any unknown-option line):
+GPLAsync cache-key status (legacy 2.6.2 marker / absent on v3.0-1 / unknown):
 Resolution, refresh rate, limiter, and VSync:
 Active configuration hashes:
 Extra content/plugins/shaders:

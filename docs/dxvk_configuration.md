@@ -20,11 +20,15 @@ Gillian’s Setup Utility selects a DXVK path from local graphics hardware suppo
 
 Upstream DXVK documents these semantics in its configuration reference.[^2]
 
-## GPLAsync overlay
+## Historical GPLAsync 2.6.2 overlay
 
-`tuned/renderers/dxvk-gplasync-v2.6.2-1.conf` is an **optional, version-locked overlay**. It includes `dxvk.gplAsyncCache`, `dxvk.enableAsync`, and `dxvk.numAsyncThreads`, which are not a generic stock-DXVK configuration contract.
+`tuned/renderers/dxvk-gplasync-v2.6.2-1.conf` is an **optional, historical version-locked overlay**. It retains the exact former test profile, including `dxvk.gplAsyncCache`, `dxvk.enableAsync`, and `dxvk.numAsyncThreads`; those are not a generic stock-DXVK configuration contract.
 
-The file names the required `dxvk-gplasync-v2.6.2-1.tar.gz` artifact and its SHA-256. It is an optional reference, not proof that the archive selected GPLAsync for the local computer. Use it only after identifying the active renderer, verifying that exact archive, copying the 32-bit `d3d9.dll` through FusionFix’s documented Vulkan route, and recording the result in the validation evidence directory. If a log reports unsupported keys or the game becomes unstable, restore the stock file before changing any other variable.[^3]
+The file names the required `dxvk-gplasync-v2.6.2-1.tar.gz` artifact and its SHA-256. It is historical evidence, not proof that the archive selected GPLAsync for the local computer and not a profile to copy into another build. Use it only after identifying the active renderer, verifying that exact 2.6.2-1 archive, copying the 32-bit `d3d9.dll` through FusionFix’s documented Vulkan route, and recording the result in the validation evidence directory. If a log reports unsupported keys or the game becomes unstable, restore the stock file before changing any other variable.[^3]
+
+## GPLAsync `v3.0-1` is a separate advanced migration
+
+GPLAsync `v3.0-1` updates the fork to DXVK 3.0. It removed `dxvk.gplAsyncCache` in v2.7-1, so the old 2.6.2 overlay must not be copied forward. The current fork documents `dxvk.enableAsync`; it does not make the old cache key or old async-thread key a generic 3.0-1 contract. Version 3 does not yet claim `v3.0-1` as a validated renderer profile or distribute it. Follow [`GPLASYNC_V3_0_1_MIGRATION.md`](GPLASYNC_V3_0_1_MIGRATION.md) for a backup-first, log-checked experiment.[^4]
 
 ## Change protocol
 
@@ -42,4 +46,5 @@ Do not use a cold shader/pipeline pass as proof of a persistent performance prob
 [^1]: [Gillian’s GTA IV optimization guide](https://gillian-guide.github.io/optimization/)
 [^2]: [Gillian’s GTA IV Setup Utility](https://github.com/gillian-guide/GTAIVSetupUtility)
 [^3]: [DXVK GPLAsync v2.6.2-1 release](https://gitlab.com/Ph42oN/dxvk-gplasync/-/releases/v2.6.2-1)
-[^4]: [DXVK upstream configuration reference](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf)
+[^4]: [GPLAsync v3.0-1 README](https://gitlab.com/Ph42oN/dxvk-gplasync/-/raw/v3.0-1/README.md)
+[^5]: [DXVK upstream configuration reference](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf)
