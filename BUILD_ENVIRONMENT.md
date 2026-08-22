@@ -1,21 +1,27 @@
-# Build Environment Contract
+# Build Environment and Complete-Release Contract
 
-Version 3.0.5 releases are built from an immutable Git tag by the repository’s Windows release workflow. This document describes the expected environment; each generated release also includes a `SOURCE_COMMIT.txt` file containing the exact commit used to build it.
+Public releases use whole major version tags only: `v1`, `v2`, and `v3`. A public release is a complete cumulative package, never a delta installer or a patch-only asset.
 
-| Field | Release contract |
+| Field | Complete-release contract |
 |---|---|
 | Operating system | GitHub Actions `windows-latest` runner |
 | Installer compiler | NSIS 3.09 or newer, installed through Chocolatey |
-| Source revision | Exact commit resolved by the release tag; copied to `SOURCE_COMMIT.txt` |
-| Installer command | `makensis installer\GTAIV_V3_Automatic_Installer.nsi` |
-| Installer output | `installer\build\GTAIV_Core_Configuration_Installer_v<version>.exe` |
-| Asset integrity | SHA-256 manifest generated after all assets are built |
-| Source archive | Generated from the tagged checkout, excluding Git metadata and generated build directories |
+| Release trigger | Immutable whole-major tag: `v1`, `v2`, or `v3` |
+| Source revision | Exact commit resolved by the release tag; copied to every archive as `SOURCE_COMMIT.txt` |
+| Installer command | `makensis /DPRODUCT_VERSION=<major> installer\GTAIV_V3_Automatic_Installer.nsi` |
+| Installer output | `installer\build\GTAIV_After_Dark_Complete_Configuration_v<major>.exe` |
+| Complete package archive | README, current release note, full `docs/` tree including history, full `tuned/` tree, installer payload manifest, and `SOURCE_COMMIT.txt` |
+| Complete source archive | Entire tagged repository source, release workflow, installer source and payload, docs, tuned files, and `SOURCE_COMMIT.txt`; generated build directories are excluded |
+| Asset integrity | One SHA-256 manifest generated after all public assets are assembled |
+
+## Cumulative installer rule
+
+The installer payload must include the current core configuration, every retained optional component configuration, every retained renderer profile, the legacy shader-preload reference, documentation, sources, credits, and historical reasoning. It may apply only the safe core configuration automatically where optional files require external plugins, an exact renderer, or a verified shader layout. Those optional files must still be embedded in the executable and preserved in the installed reference bundle.
 
 ## Reproducibility boundary
 
-The source archive, source commit, build command, and all-assets SHA-256 manifest are required for every release. NSIS self-extracting archives may not be byte-identical when built with a different compiler stub, operating system, or compression environment. A byte mismatch alone is not proof that a published artifact is invalid; it is a signal to compare the source commit, compiler version, manifest, and embedded payload before trusting a rebuild.
+The complete package archive, source archive, source commit, build command, and all-assets SHA-256 manifest are required for every release. NSIS self-extracting archives may not be byte-identical across compiler stubs, operating systems, or compression environments. A byte mismatch alone is not proof that a published artifact is invalid; compare the source commit, compiler version, manifest, and embedded payload before trusting a rebuild.
 
 ## Release verification
 
-A release is complete only when the GitHub release, tag, `SOURCE_COMMIT.txt`, source archive, installer executable, selected renderer profiles, and SHA-256 manifest all identify the same version. Do not create a release from a branch tip and apply a tag later. Do not move or retag historical releases; publish a corrective version instead.
+A major release is complete only when its tag, installer, complete package archive, source archive, and SHA-256 manifest identify the same source commit. Do not create a release from a branch tip and apply a tag later. Do not ship a release with a subset-only installer, and do not remove historical rationale, credits, sources, or retained configuration files from a later major package.
