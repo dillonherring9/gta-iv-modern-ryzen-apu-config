@@ -1,6 +1,6 @@
-# Version 3.0.2 Validation Protocol
+# Version 3.0.3 Validation Protocol
 
-Version 3.0.2 deliberately does **not** claim a new independently reproduced performance result. This document defines the minimum evidence required before calling any renderer or quality profile “tested,” “log-validated,” or suitable for another hardware class.
+Version 3.0.3 deliberately does **not** claim a new independently reproduced performance result. This document defines the minimum evidence required before calling any renderer or quality profile “tested,” “log-validated,” or suitable for another hardware class.
 
 ## 1. Record the complete environment
 

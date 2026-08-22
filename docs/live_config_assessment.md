@@ -1,6 +1,6 @@
-# Version 3.0.2 Core Profile Assessment
+# Version 3.0.3 Core Profile Assessment
 
-This document describes the files actually shipped by the Version 3.0.2 **core** installer. It replaces earlier assessment language that referred to an intermediate CHSS configuration and a log-validated GPLAsync path. The package no longer presents either statement as an active release claim.
+This document describes the files actually shipped by the Version 3.0.3 **core** installer. It replaces earlier assessment language that referred to an intermediate CHSS configuration and a log-validated GPLAsync path. The package no longer presents either statement as an active release claim.
 
 ## Actual core profile
 

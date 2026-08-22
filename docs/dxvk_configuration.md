@@ -1,6 +1,6 @@
-# DXVK Configuration — Version 3.0.2
+# DXVK Configuration — Version 3.0.3
 
-Version 3.0.2 separates renderer configuration by compatibility contract. It does not bundle a DXVK binary and does not claim that DXVK improves every GTA IV installation. DXVK may improve a CPU-limited D3D9 path, may not help a GPU-limited path, and must be tested against the actual driver and mod stack.[^1]
+Version 3.0.3 separates renderer configuration by compatibility contract. It does not bundle a DXVK binary and does not claim that DXVK improves every GTA IV installation. DXVK may improve a CPU-limited D3D9 path, may not help a GPU-limited path, and must be tested against the actual driver and mod stack.[^1]
 
 ## Stock DXVK baseline
 

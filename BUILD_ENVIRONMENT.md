@@ -1,6 +1,6 @@
 # Build Environment Contract
 
-Version 3.0.2 releases are built from an immutable Git tag by the repository’s Windows release workflow. This document describes the expected environment; each generated release also includes a `SOURCE_COMMIT.txt` file containing the exact commit used to build it.
+Version 3.0.3 releases are built from an immutable Git tag by the repository’s Windows release workflow. This document describes the expected environment; each generated release also includes a `SOURCE_COMMIT.txt` file containing the exact commit used to build it.
 
 | Field | Release contract |
 |---|---|
