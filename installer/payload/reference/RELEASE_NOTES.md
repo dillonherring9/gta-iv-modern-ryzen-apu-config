@@ -30,7 +30,7 @@ Before it changes anything, the installer creates a timestamped backup of every 
 | `plugins\` | `GTAIV.XboxRainDroplets.ini` | Xbox Rain Droplets setting. |
 | `plugins\` | `LibertyCityPlates.txt` | LibertyCityPlates setting. |
 
-The installer verifies the selected GTA IV game root, requires the archive’s `vulkan.dll`, and refuses to run while `GTAIV.exe` is active. It deliberately does **not** reject an otherwise valid archive solely because `plugins\GTAIV.EFLC.FusionFix.asi` is absent: loader and plugin-file layouts can differ.
+The installer verifies the selected GTA IV game root, requires the archive’s `vulkan.dll`, and refuses to run while `GTAIV.exe` is active. `vulkan.dll` confirms that the archive’s Vulkan route exists; it does not identify whether Gillian’s hardware-aware Setup Utility selected stock DXVK, GPLAsync, or another compatible renderer. Read [`docs/ARCHIVE_RENDERER_IDENTIFICATION.md`](docs/ARCHIVE_RENDERER_IDENTIFICATION.md) before reinstalling or replacing a working renderer. The installer deliberately does **not** reject an otherwise valid archive solely because `plugins\GTAIV.EFLC.FusionFix.asi` is absent: loader and plugin-file layouts can differ.
 
 The installer also sets **Run this program as an administrator** for `GTAIV.exe`. This is required for the documented target layout because the game otherwise cannot create required configuration files. On uninstall, Version 3 offers to restore the latest backup of all seven files and restores the exact prior compatibility value.
 
@@ -38,7 +38,7 @@ The installer also sets **Run this program as an administrator** for `GTAIV.exe`
 
 The executable copies a complete reference package into `GTAIV_After_Dark_Complete_Package` in the game folder. It retains all sources, credits, history, validation material, component documentation, renderer-alternative information, and legacy shader-preload reasoning. The public release likewise includes the complete installer, complete package archive, source archive, and SHA-256 checksum manifest.
 
-The GPLAsync alternative and legacy `preload.list` remain preserved as reference material. They are not installed automatically because the renderer choice and static shader metadata must match the exact installed archive/shader layout; blindly overwriting them can introduce instability or LibertyCityPlates resource failures.
+The GPLAsync alternative and legacy `preload.list` remain preserved as reference material. They are not installed automatically because the renderer choice and static shader metadata must match the exact installed archive/shader layout; blindly overwriting them can introduce instability or LibertyCityPlates resource failures. The retained GPLAsync 2.6.2-1 reference is not a claim that every archive installation uses GPLAsync.
 
 `AudioMap.ini` is intentionally absent from Version 3’s active documentation, payload, and installer. The full audit identified it as a historical DualSense Audio Mapper carryover rather than a documented Drag-and-Drop Archive component. Its historical mention is retained in the archived records for transparency, but the configuration itself is not reintroduced.
 

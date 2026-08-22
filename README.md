@@ -18,6 +18,7 @@ The project does **not** include GTA IV, the Drag-and-Drop Archive, FusionFix, D
 | Updating DXVK, an ASI loader, or high-resolution textures yourself | Read **Advanced maintenance** and then the full reference. |
 | Taking over the project or making a fork | Read [`docs/MAINTAINER_HANDOFF.md`](docs/MAINTAINER_HANDOFF.md) and [`CONTRIBUTING.md`](CONTRIBUTING.md). |
 | Looking for every original instruction, source, credit, historical detail, and older maintenance explanation | Read [`docs/COMPLETE_MAINTENANCE_REFERENCE.md`](docs/COMPLETE_MAINTENANCE_REFERENCE.md). It is the preserved full reference; this simpler page does not delete that information. |
+| Unsure whether the archive installed stock DXVK, GPLAsync, or another async-capable renderer | Read [`docs/ARCHIVE_RENDERER_IDENTIFICATION.md`](docs/ARCHIVE_RENDERER_IDENTIFICATION.md) **before** reinstalling or replacing `vulkan.dll`. |
 
 ## First: know the one folder that matters
 
@@ -51,7 +52,7 @@ The **game folder** is the folder that contains `GTAIV.exe`. It may look like `C
 
 ## What Version 3 does for you
 
-Version 3 is a **configuration installer for a game folder where the complete Drag-and-Drop Archive already exists**. It checks that the selected folder contains `GTAIV.exe`, checks for `vulkan.dll`, and stops if GTA IV is open. It does not demand one exact FusionFix `.asi` filename because valid archive layouts can differ.
+Version 3 is a **configuration installer for a game folder where the complete Drag-and-Drop Archive already exists**. It checks that the selected folder contains `GTAIV.exe`, checks for `vulkan.dll`, and stops if GTA IV is open. It does not demand one exact FusionFix `.asi` filename because valid archive layouts can differ. The `vulkan.dll` check confirms a Vulkan route exists; it does **not** prove which DXVK family or version the archive selected. Use [`docs/ARCHIVE_RENDERER_IDENTIFICATION.md`](docs/ARCHIVE_RENDERER_IDENTIFICATION.md) to identify it safely.
 
 Before it changes anything, it makes a timestamped backup. It sets **Run this program as an administrator** for `GTAIV.exe`, because this target setup needs the game to create required configuration files. When you uninstall, it can restore the backed-up files and the exact Windows compatibility setting that was present before installation.
 
@@ -93,7 +94,7 @@ For the reference APU, the tested starting point uses a FusionFix 60 FPS target,
 
 ## Advanced maintenance: only after the basic setup works
 
-The full step-by-step DXVK, Ultimate ASI Loader, high-resolution-texture, shader, and manual-install instructions are preserved in [`docs/COMPLETE_MAINTENANCE_REFERENCE.md`](docs/COMPLETE_MAINTENANCE_REFERENCE.md). Read that page before doing an advanced change. The short rules below are here so you know what matters most.
+The full step-by-step DXVK, Ultimate ASI Loader, high-resolution-texture, shader, and manual-install instructions are preserved in [`docs/COMPLETE_MAINTENANCE_REFERENCE.md`](docs/COMPLETE_MAINTENANCE_REFERENCE.md). Before changing any renderer file, first use [`docs/ARCHIVE_RENDERER_IDENTIFICATION.md`](docs/ARCHIVE_RENDERER_IDENTIFICATION.md) to identify what the archive currently installed. The short rules below are here so you know what matters most.
 
 ### Update DXVK for FusionFix
 

@@ -2,6 +2,8 @@
 
 Version 3 separates renderer configuration by compatibility contract. It does not bundle a DXVK binary and does not claim that DXVK improves every GTA IV installation. DXVK may improve a CPU-limited D3D9 path, may not help a GPU-limited path, and must be tested against the actual driver and mod stack.[^1]
 
+Gillian’s Setup Utility selects a DXVK path from local graphics hardware support and settings. Therefore, `vulkan.dll` in an otherwise valid Drag-and-Drop Archive installation may be stock DXVK, GPLAsync, or another async-capable artifact. Identify the active renderer from `dxvk.conf`, `GTAIV_d3d9.log`, and the `vulkan.dll` hash before applying any renderer overlay.[^2]
+
 ## Stock DXVK baseline
 
 `tuned/dxvk-stock.conf` is the default manual renderer profile. It uses only keys documented by upstream DXVK and contains no GPLAsync-specific async settings.
@@ -22,7 +24,7 @@ Upstream DXVK documents these semantics in its configuration reference.[^2]
 
 `tuned/renderers/dxvk-gplasync-v2.6.2-1.conf` is an **optional, version-locked overlay**. It includes `dxvk.gplAsyncCache`, `dxvk.enableAsync`, and `dxvk.numAsyncThreads`, which are not a generic stock-DXVK configuration contract.
 
-The file names the required `dxvk-gplasync-v2.6.2-1.tar.gz` artifact and its SHA-256. Use it only after verifying that exact archive, copying the 32-bit `d3d9.dll` through FusionFix’s documented Vulkan route, and recording the result in the validation evidence directory. If a log reports unsupported keys or the game becomes unstable, restore the stock file before changing any other variable.[^3]
+The file names the required `dxvk-gplasync-v2.6.2-1.tar.gz` artifact and its SHA-256. It is an optional reference, not proof that the archive selected GPLAsync for the local computer. Use it only after identifying the active renderer, verifying that exact archive, copying the 32-bit `d3d9.dll` through FusionFix’s documented Vulkan route, and recording the result in the validation evidence directory. If a log reports unsupported keys or the game becomes unstable, restore the stock file before changing any other variable.[^3]
 
 ## Change protocol
 
@@ -38,5 +40,6 @@ Do not use a cold shader/pipeline pass as proof of a persistent performance prob
 ## References
 
 [^1]: [Gillian’s GTA IV optimization guide](https://gillian-guide.github.io/optimization/)
-[^2]: [DXVK upstream configuration reference](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf)
+[^2]: [Gillian’s GTA IV Setup Utility](https://github.com/gillian-guide/GTAIVSetupUtility)
 [^3]: [DXVK GPLAsync v2.6.2-1 release](https://gitlab.com/Ph42oN/dxvk-gplasync/-/releases/v2.6.2-1)
+[^4]: [DXVK upstream configuration reference](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf)

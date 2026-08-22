@@ -9,7 +9,7 @@ Capture the following before changing the game. A conclusion without this inform
 | Category | Required record |
 |---|---|
 | System | CPU/APU, GPU, RAM capacity, memory channel configuration, laptop power mode, and display resolution/refresh rate |
-| Software | Windows build, AMD/NVIDIA/Intel driver version, GTA IV build, FusionFix release and checksum, renderer artifact/version/checksum, and all load-order tools |
+| Software | Windows build, AMD/NVIDIA/Intel driver version, GTA IV build, FusionFix release and checksum, renderer artifact/version/checksum, all load-order tools, and whether Gillian’s Setup Utility selected stock DXVK, GPLAsync, or another async-capable route. Do not infer this from the filename `vulkan.dll`. |
 | Game settings | In-game graphics values, FusionFix `.cfg` and `.ini` hashes, active `dxvk.conf` hash, frame cap, VSync policy, resolution, and launch options |
 | Content | Archive/modpack revision, vehicle/traffic/texture content, plugins, shader files, and the episode under test |
 | Temperature/power | Whether AC power was used, and whether sustained thermal/power throttling appeared |
@@ -34,7 +34,7 @@ warm-pass-2.csv or warm-pass-2.png
 notes.md
 ```
 
-`system.md` must contain the environment table above. `settings-hashes.txt` must contain SHA-256 values for every active configuration and renderer artifact. Redact account names and unrelated paths from `GTAIV_d3d9.log`; do not redact effective renderer version, accepted configuration lines, adapter name, API path, or errors.
+`system.md` must contain the environment table above. `settings-hashes.txt` must contain SHA-256 values for every active configuration and renderer artifact. Record whether `dxvk.conf` contains `dxvk.enableAsync` and/or `dxvk.gplAsyncCache`; the latter is the stronger GPLAsync-specific configuration sign, while the former alone is not proof of GPLAsync. Redact account names and unrelated paths from `GTAIV_d3d9.log`; do not redact effective renderer version, accepted configuration lines, adapter name, API path, or errors. See [`ARCHIVE_RENDERER_IDENTIFICATION.md`](ARCHIVE_RENDERER_IDENTIFICATION.md) before replacing a working renderer.
 
 ## 4. Report results honestly
 
@@ -54,7 +54,9 @@ Windows version:
 Graphics driver and version:
 GTA IV build:
 FusionFix version and SHA-256:
+Archive-selected renderer path (stock DXVK / GPLAsync / other / unknown):
 DXVK or GPLAsync artifact and SHA-256:
+Async/GPLAsync configuration lines present:
 Resolution, refresh rate, limiter, and VSync:
 Active configuration hashes:
 Extra content/plugins/shaders:

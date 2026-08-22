@@ -1,3 +1,9 @@
+# Complete Maintenance Reference — Preserved Detailed Guide
+
+> **Read the current renderer rule first.** The detailed guide below is preserved because it contains the original maintenance instructions, sources, credits, test method, and historical configuration reasoning. It includes GPLAsync-era examples, but it does **not** prove that Gillian’s Setup Utility installed GPLAsync on your computer. Before replacing or configuring a renderer, follow [`ARCHIVE_RENDERER_IDENTIFICATION.md`](ARCHIVE_RENDERER_IDENTIFICATION.md). For the current beginner route and seven-file installer contract, start with [`../README.md`](../README.md).
+
+---
+
 # GTA IV, After Dark — Modern Ryzen APU Configuration
 
 ## A Ryzen 5 PRO 6650U / Radeon 660M Profile for a Smoother Night in Liberty City
