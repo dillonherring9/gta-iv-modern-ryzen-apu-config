@@ -37,6 +37,10 @@ The General choice is recommended when uncertain. The advanced choice does **not
 
 FusionFix documents that most settings are available through its in-game settings, with `.ini`/`.cfg` files available for advanced or outside-menu changes.[3] Version 4 keeps the complete archive configuration files but no longer presents a fixed `.ini` dump as the only current adjustment surface. Its README gives a clear starting point: Vulkan only when the archive route works; one 60 FPS FusionFix limiter; SMAA; high-resolution shadows, ambient occlusion, sun shafts, and volumetric fog off initially; conservative reflection MSAA; and cache-warmed testing before judging traffic/rain/shadow changes.
 
+## Dependency freshness without unsafe auto-updates
+
+Version 4 now includes [`docs/DEPENDENCY_FRESHNESS_CHECK.md`](docs/DEPENDENCY_FRESHNESS_CHECK.md). It gives users a manual, evidence-first way to record the archive, FusionFix, renderer, GPLAsync, and loader state; compare primary release sources; and decide whether a change is justified. It makes the key boundary explicit: a newer upstream version is **not** an instruction to update a working curated archive. Version 4 continues to avoid downloading, replacing, or guessing any third-party binary.
+
 ## Honest dependency boundary
 
 Gillian’s Complete Edition archive is still the required baseline. The guide says the site is in minimal-maintenance mode and future updates may be sparse, so Version 4 documents the dependency rather than implying permanent upstream support.[1] It retains full sources, credits, validation procedures, original Version 3 documents, current Version 4 audit-adoption reasoning, and a successor-maintenance path.

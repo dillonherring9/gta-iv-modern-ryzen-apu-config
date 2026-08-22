@@ -112,6 +112,14 @@ After an install or a graphics change, drive the same route in dense daylight tr
 | Radeon GPLAsync choice shows unsupported keys | Stop copying old profiles. Read [`docs/GPLASYNC_V3_0_1_MIGRATION.md`](docs/GPLASYNC_V3_0_1_MIGRATION.md), save the log, and restore the General backup if needed. |
 | You want to switch profiles | Uninstall Version 4 and restore its backup, then reinstall and make one different choice. |
 
+## Check freshness without breaking a working setup
+
+Version 4 records a current dependency context, but it does **not** treat a newer upstream number as an automatic update instruction. Gillian’s archive is curated, and component versions can depend on one another. Before you update FusionFix, the archive, DXVK, GPLAsync, a loader, or `vulkan.dll`, identify what is installed, save the working renderer/log/configuration, and make one reversible decision.
+
+Read [`docs/DEPENDENCY_FRESHNESS_CHECK.md`](docs/DEPENDENCY_FRESHNESS_CHECK.md) for the plain-language table: what Version 4 assumes; how to identify your exact archive, FusionFix, renderer, and GPLAsync state; which upstream pages to compare; and when **not** to update a working installation.
+
+> **A version check is a record, not a command to update.** The General profile is intentionally safe when the renderer is unknown. Do not replace DLLs merely to match a table.
+
 ## Important boundaries and continuity
 
 Gillian’s guide remains the required archive baseline, but its site is in minimal-maintenance mode and says future archive updates may be sparse. Version 4 records that dependency honestly; it does not claim to replace Gillian, FusionFix, DXVK, or their support channels.[2]
