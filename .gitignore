@@ -1,5 +1,0 @@
-*.zip
-.DS_Store
-Thumbs.db
-installer/build/
-dist/
