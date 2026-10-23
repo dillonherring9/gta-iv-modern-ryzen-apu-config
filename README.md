@@ -13,7 +13,7 @@ on Windows.
 > I did not make these mods. This is a port and integration of other people's work, assembled and
 > debugged with AI assistance. All credit goes to the original authors listed below.
 
-## Featuresa
+## Features
 
 - Vice City NextGen (Revolution Team), via Kn4ckers' Complete Edition release
 - VCANGE 7.0.1 content: reworked scripts and missions, restored weapons and aircraft, extra vehicles,
@@ -29,6 +29,30 @@ on Windows.
 - Repeatable Downtown shooting range and wheelie/stoppie cash bonuses (native scripts, experimental)
 - Volumetric light beams (VolumetricLights plugin)
 - Optional DLSS / FSR upscaling through DLSS-IV — works on NVIDIA, AMD and Intel cards
+
+## Waiting for VCANGE 8.0
+
+**Vice City Actual Next-Gen Edition 8.0 is not out yet — and I'm waiting for it too.** The VCANGE
+team has shown 8.0 as a work in progress, described as a total overhaul of the project, with more
+content than 7.0.1, which this build is based on. Until it is officially released there is
+nothing to port, so please don't ask me (or them) for 8.0 builds, leaks or ETAs. Just keep an eye on
+their channels below.
+
+VCANGE is made by **GTATrilogyGames** together with the **VCNE modding community** and
+**DayL's modding community**. Huge props to them: they spent months restoring missions, weapons,
+vehicles, map areas and countless details so Vice City NextGen feels like Vice City. This build would
+not exist without their work. Please support them directly:
+
+- GitHub (official releases): <https://github.com/GTATrilogyGames/ViceCityActualNextGenEditionModpack>
+- YouTube (showcases and 8.0 progress): <https://www.youtube.com/@GTATrilogyGames>
+- GTAForums thread: <https://gtaforums.com/topic/1002512-grand-theft-auto-vice-city-actual-nextgen-edition/>
+
+**A note for Linux and Steam Deck players:** this port exists to show that there are a lot of us who
+want to play VCANGE through Proton. If you play this build on Linux, let the VCANGE team know with a
+friendly comment on their channels. My hope is that 8.0, or a later release, can run on the
+Complete Edition without .NET script hooks so it works on Linux out of the box. That's a wish, not a
+request: it's their project and their call. When 8.0 is released, I'll look at porting it here as
+well.
 
 ## What is different from VCANGE
 
