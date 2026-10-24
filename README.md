@@ -1,4 +1,4 @@
-# Vice City NextGen — Linux/Proton-friendly build for GTA IV: The Complete Edition
+[# Vice City NextGen — Linux/Proton-friendly build for GTA IV: The Complete Edition
 
 A community build of **GTA Vice City NextGen** for the current Steam/Rockstar release of
 **GTA IV: The Complete Edition (1.2.0.59)**. Everything installs into GTA IV's `update` folder
@@ -138,3 +138,4 @@ This is an unofficial fan project, not affiliated with Rockstar Games, Take-Two 
 authors of the included mods. It contains only modified/added files — you need your own legal copy
 of GTA IV: The Complete Edition. Please support the original mod authors and respect their
 redistribution terms.
+](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config)
