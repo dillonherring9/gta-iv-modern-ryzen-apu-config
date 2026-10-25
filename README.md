@@ -1,17 +1,65 @@
-# Vice City Actual Next Gen — Release 5
+ice City Actual Next Gen — Release 6
 
 **GTA Vice City NextGen + VCANGE 7.0.1, ported to GTA IV: The Complete Edition (1.2.0.59).**
 Windows, Linux and Steam Deck (Proton). No .NET script hooks. FusionFix 5.1.2 and DLSS-IV are included and already set up.
-Copy one folder next to `GTAIV.exe` and start a New Game.
+Copy everything inside the extracted R6 folder next to `GTAIV.exe` and start a New Game.
 
-Everything installs into GTA IV's `update` and `plugins` folders through FusionFix's overloader. No original game files are
-replaced, so the launcher has nothing to "repair".
+The conversion uses FusionFix's `update` overlay, native plugins and the included loader/upscaler files.
+It does not replace `GTAIV.exe` or the original Rockstar data archives.
 
 > [!IMPORTANT]
 > I did not create the original mod assets or code. I ported, fixed and packaged them to run natively on the
 > Complete Edition with FusionFix. All credit for the mods goes to the authors listed under [Credits](#credits).
 
-## What's new in Release 5
+## What's new in Release 6
+
+### User-confirmed improvements
+
+- **Photoreal texture overhaul across the build:** brings together our photoreal passes for city surfaces, palms and
+  plants, grass, sand, water, Tommy, cutscene and story characters, pedestrians, clothing and props. Text, logos and
+  important original details are preserved, and original textures remain where replacements failed review.
+- **Final city texture pass:** 298 of 301 selected map textures upgraded across 34 map archives, covering common
+  surfaces, building details and more blurry 256-pixel textures. Twenty-eight results use the original layout with fine
+  generated detail added; three were left original after review. These counts describe this pass, not a unique total
+  across all releases.
+- **Independence FM included:** GTA IV's station is now the tenth station alongside Vice City's nine, with its IV logo
+  and the correct name in the radio settings. The separate Release 5 add-on is no longer needed.
+- **Revised health regeneration included:** after five seconds without damage, health regenerates up to half the bar,
+  including while walking, running or driving. Cutscenes refill health to full and keep it full for two seconds afterward.
+  Armour is unchanged. The separate Release 5 health patch is no longer needed.
+- **Miami sky and 1980s colour grade:** seamless cloud noise, a denser starfield, and warmer pink/peach dawns and sunsets.
+  Fair-weather lighting has a more vivid Miami palette; the later colour-grade pass leaves rain, fog and storms unchanged.
+- **Vehicle and menu corrections:** repaired handling records, invalid paint choices and RC Baron colour grouping;
+  restored Contender and Washington names; corrected F7 vehicle labels, previous-spawn deletion, per-car door locks and
+  failed model-load cleanup. Vehicle material links and the Dinghy's shared texture link were also repaired.
+- **Pool Cue fighting:** the cue now receives the enhanced melee moves. Katana support is retained.
+- **Jury Fury loading hang fixed:** Ken's cutscene face texture was reduced from 4096 to 2048 pixels to reduce its memory
+  allocation. The user confirmed this resolved the hang before that cutscene.
+- **Cutscene memory helper:** reduces pedestrian/vehicle model budgets during cutscene loading and playback, then restores
+  them afterward. Its current cleanup targets distant ambient entities outside a protected 150-metre area around the
+  player. The user reported success in cutscenes played so far; this is not a guarantee that every cutscene has been tested.
+
+### Included fixes awaiting gameplay confirmation
+
+These changes are verified in the R6 files. Their specific feature/mission tests and the latest combined New Game → save →
+quit → relaunch → load test remain pending.
+
+- **Story-based wanted limits:** outside missions, the cap is four stars initially, five after Guardian Angels, and six
+  after Rub Out. Trespass checks no longer block the progression logic or reduce an existing wanted level. Missions keep
+  control of their own temporary limits.
+- **Six-star army response:** a native script adds a Rhino, a Barracks and soldiers during suitable outdoor free-roam
+  pursuits. Enemy tanks ram rather than fire their cannon. Spawning, pursuit and cleanup still need an in-game test.
+- **F7 Malibu Club teleport:** the destination now uses Malibu's entrance area instead of the Links View Apartment area.
+  Arrival on foot and in a car still needs checking.
+- **Failed animation/model requests:** the F7 animation player and the Sparrow helper release requests when loading times out.
+- **Missing vehicle textures and bus repair:** 24 missing texture entries were added across 11 vehicle dictionaries, using
+  original sources where available and documented substitutes elsewhere. The dictionaries were then rebuilt with corrected
+  memory-page layouts to address the bus texture noise introduced by the first repair. Vehicle appearance needs checking.
+- **Mission animations and messages:** corrected Cortez/Love Fist animation references and a map-blip label; supplied nine
+  missing Sunshine Autos race messages; restored the original film-studio tax and Kickstart wreck messages; corrected
+  classic vehicle names and matching F7 labels. These mission/UI paths still need testing.
+
+## What was new in Release 5
 
 - **Photoreal environment:** 130 textures for palm trees and plants, grass, beach sand and water (pools, lake bed, seabed).
   Each one was checked at full size and repeated across a surface, so the seams don't show.
@@ -71,44 +119,62 @@ replaced, so the launcher has nothing to "repair".
 - VCNG HD Pedestrians with photoreal textures; photoreal Tommy, cutscene characters and props
 - Photoreal palm trees, grass, sand, water and city surfaces
 - Clear "Mint" turquoise water, turquoise Miami ocean and pools, and a 1980s Miami weather and lighting palette
-- GTA V-style health regeneration (native script; refills to half the bar while standing still)
+- Native health regeneration after five seconds without damage, while moving or driving, up to half the bar; full health during cutscenes
+- Independence FM as the tenth radio station, with its correct name and logo
+- Miami sky with seamless clouds, more stars and the revised 1980s colour grade
 - Native F7 Vice City Menu with Gameplay Tweaks
 - Native Euphoria ragdolls and Army/MMA melee moves
+- Story-based wanted limits and a native six-star army response (included; gameplay confirmation pending)
+- Cutscene memory helper and the user-confirmed Jury Fury loading repair
 - Repeatable Downtown shooting range and wheelie/stoppie cash bonuses
 - Project Thunder lightning and Xbox rain droplets
 - DLSS / FSR upscaling through DLSS-IV, on NVIDIA, AMD and Intel cards
-- FusionFix 5.1.2 included; nothing else to download
+- FusionFix 5.1.2 included
 
 ## Controls added by this build
 
-| Key (controller) | Action |
+| Key / controller input | Action |
 |---|---|
-| **F7** (D-pad up, or hold LB + D-pad right) | Open/close the Vice City Menu. Arrows/numpad to move, Enter to select, Backspace/numpad 0 (B) to go back |
-| **Ctrl+F7** | Project Thunder menu (force a storm, bolts, a blackout) |
-| **N** (in a vehicle) | Skip to the next radio track |
-| **Tab** (on foot) | Holster / draw your weapon |
-| **F1** (in a car) | Seatbelt on/off |
-| **Space** (after a fall) | Get up |
-| Hold aim with fists, bat, knife or cue, then **Z / V / C / X / G** | Melee moves. **F5** switches between Army and MMA style |
+| **F7** / **LB + D-pad right** | Toggle the Vice City Menu. **D-pad up** also opens it when closed. |
+| Arrows / numpad / D-pad | Navigate the menu. |
+| Enter / numpad 5 / A | Select. |
+| Backspace / numpad 0 / B | Go back. |
+| **Ctrl+F7** | Open the Project Thunder menu. |
+| **Alt+V** | Toggle the first-person camera. |
+| **N**, in a vehicle | Skip to the next radio track. |
+| **Tab**, on foot | Holster / draw your weapon. |
+| **F1**, in a car | Toggle the seatbelt. |
+| **Space**, after a fall | Get up. |
+| Hold aim with fists, bat, knife, Pool Cue or Katana, then **Z / V / C / X / G** | Enhanced melee moves. **F5** switches Army/MMA style. |
 
-The N and Tab tweaks can be switched off in the F7 menu under Gameplay Tweaks.
+The N and Tab tweaks can be disabled under F7 → Gameplay Tweaks. Additional trainer shortcut keys are off by default.
+When using Project Thunder to force weather, return to normal weather before saving, as directed by its included configuration.
+
+## Independence FM and your own music
+
+Independence FM is already enabled; its station audio comes from your own GTA IV installation.
+
+For personal tracks, put MP3s in `Documents\Rockstar Games\GTA IV\User Music`, scan them from the pause menu's Audio
+settings, and enable Independence FM Mode. Under Proton, use the equivalent folder inside the game's Wine prefix.
+The normal station has been user-tested; playback of personal music under Linux/Proton remains unconfirmed.
 
 ## What is different from VCANGE
 
 VCANGE replaces your game with the 2008 `GTAIV.exe` 1.0.8.0 (Games for Windows Live) and relies on .NET script mods.
 This build keeps the Complete Edition. The important .NET features were rebuilt as native game scripts instead.
 
-| VCANGE component | In this build |
+| VCANGE component | Complete Edition build |
 |---|---|
-| `update` folder content | Included in full, plus the fixes listed here |
-| Downgrade to GTAIV.exe 1.0.8.0 + xlive | Not used; stays on Complete Edition 1.2.0.59 |
-| ZMenu | Replaced by the native F7 Vice City Menu |
-| LibertyTweaks, HPAPRegen, Enhanced Fighting And Euphoria (.NET) | Rebuilt as native scripts (Gameplay Tweaks, health regen, Euphoria & fighting) |
-| ProjectThunderIV (.NET) | Replaced by Project Thunder CE (native plugin) |
-| Other .NET scripts (WeapFuncs, MoveImprove, wanted/flying/death music, …) | Not included (they don't run under Proton) |
-| Plugins built for 1.0.7/1.0.8 only (IVTweaker, ScriptHook, XLivelessAddon, V-Handling) | Not included. FusionFix covers the limit increases |
-| ZolikaPatch | Not included (no confirmed Complete Edition support). Pop-up headlights on three cars stay fixed |
-| VCANGE's own sound set | **Not included** (see Known limitations) |
+| Main conversion content | Adapted for the FusionFix overlay, with repaired dependencies and the changes listed above. |
+| Downgraded `GTAIV.exe` 1.0.8.0 and xlive | Uses Complete Edition 1.2.0.59. |
+| ZMenu | Replaced by the native F7 Vice City Menu. |
+| Selected LibertyTweaks, HPAPRegen and Enhanced Fighting And Euphoria features | Rebuilt as native game scripts. |
+| ProjectThunderIV .NET version | Replaced by the native Project Thunder CE plugin. |
+| Other .NET scripts | Excluded from this build. |
+| Old-version plugins such as IVTweaker, ScriptHook, XLivelessAddon and V-Handling | Excluded; the build uses FusionFix's available fixes and limits. |
+| ZolikaPatch | Excluded. |
+| VCANGE audio configuration | Replaced by the working original Vice City NextGen audio configuration, with Independence FM added. |
+| VolumetricLights plugin | Removed in Release 5; FusionFix's own light volumes remain enabled. |
 
 ### Fixes applied while porting (Releases 1–3)
 
@@ -127,84 +193,94 @@ This build keeps the Complete Edition. The important .NET features were rebuilt 
 
 ## Requirements
 
-- A legal copy of **GTA IV: The Complete Edition**, updated to **1.2.0.59** (Steam or Rockstar Games Launcher)
-- About **9 GB** of free space
-- Linux / Steam Deck: Proton (tested with Proton-CachyOS through Lutris/umu). Windows: nothing extra
+- Your own legal copy of **GTA IV: The Complete Edition 1.2.0.59**.
+- About **10 GB** for the extracted build, in addition to GTA IV and the downloaded archive parts. The extracted build occupies approximately 8.84 GiB.
+- On Linux / Steam Deck: Proton. Local gameplay testing was performed with Proton-CachyOS through Lutris/umu.
+  Separate Windows and Steam Deck testing is not documented in the current test record.
 
 ## Installation
 
-> [!WARNING]
-> Follow these steps exactly. Skipping one will most likely make the game crash on startup.
+1. Close the game. Start from an unmodded Complete Edition installation and launch it once before adding the conversion.
+2. If the game already has modded `update`, `plugins` or `DLSSIV` folders, move them somewhere safe outside the game folder
+   before installing. Back up existing loader/upscaler files if another setup already uses them.
+3. Download **all five parts**, `R6.7z.001` through `R6.7z.005`, into the same folder. Open `.001` with 7-Zip and extract it;
+   the other parts are read automatically.
+4. Copy **everything inside the extracted R6 folder** into the GTA IV folder containing `GTAIV.exe`. The copied `update`
+   and `plugins` folders must sit directly beside the executable.
+5. **Keep your GTA IV Documents folder, `Profiles` saves and `User Music`. No Documents-folder deletion is required.**
+6. Launch the game and choose **New Game** for a fresh installation.
 
-### Step 1: Clean base
-1. Start with a **fresh, unmodded** installation of GTA IV: The Complete Edition, and start the game once.
-2. If your game folder already has `plugins` or `update` folders (from FusionFix or another mod), delete them.
+On Linux / Steam Deck, if the loader does not activate, use this Steam launch option:
 
-### Step 2: Copy the build into the game
-1. Download **all** the `.7z.00x` parts of Release 5 into one folder and extract the first one (`.001`) with 7-Zip.
-   You get a folder called **Vice City Actual Next Gen**.
-2. Copy **everything inside** that folder into your GTA IV folder, next to `GTAIV.exe`. Replace files when asked.
-3. **Linux / Steam Deck only:** if the mod doesn't load, add this to the game's Steam launch options:
-   `WINEDLLOVERRIDES="dinput8=n,b" %command%`
-   (In Lutris: *Runner options → DLL overrides →* `dinput8` = `n,b`.)
+```text
+WINEDLLOVERRIDES="dinput8=n,b" %command%
+```
 
-### Step 3: Clear the old configuration (mandatory for new installs)
-Delete your old GTA IV documents folder so settings from a previous setup don't carry over.
+In Lutris, add the equivalent DLL override: `dinput8` = `n,b`.
 
-> [!CAUTION]
-> This folder also holds your **save games** (in `Profiles`). Copy it somewhere safe first if you want to keep them.
+### Graphics and upscaling
 
-- **Windows:** delete `Documents\Rockstar Games\GTA IV`.
-- **Linux / Steam Deck (Proton):** delete the `GTA IV` folder in the game's prefix:
-  - Steam: `~/.steam/steam/steamapps/compatdata/12210/pfx/drive_c/users/steamuser/Documents/Rockstar Games/GTA IV/`
-  - Lutris or other launchers: `<your prefix>/drive_c/users/steamuser/Documents/Rockstar Games/GTA IV/`
+- R6 includes `d3d9.cfg` with Vulkan selected. In Display settings, verify **Graphics API: Vulkan** and set
+  **Anti-aliasing: Off** for DLSS-IV.
+- The bundled DLSS-IV configuration selects its upscaler automatically: DLSS on supported NVIDIA RTX hardware, with FSR
+  for other supported GPUs. The chosen FSR implementation depends on hardware and the bundled DLSS-IV version.
+- NVIDIA under Proton needs NVAPI available; the existing setup uses `PROTON_ENABLE_NVAPI=1` or the launcher's DLSS/NVAPI option.
+- The bundled configuration has HDR disabled.
 
-### First launch
-- Start the game and choose **New Game**.
-- For DLSS / FSR, open the game's **Display** settings and set **Graphics API: Vulkan** and **Anti-aliasing: Off**.
-  DLSS-IV then chooses automatically: DLSS on NVIDIA RTX cards, FSR on AMD, Intel and older NVIDIA cards (FSR 4 on Radeon
-  RX 7000/9000, FSR 3.1 elsewhere).
-- Linux with an NVIDIA card: DLSS needs NVAPI enabled in Proton (`PROTON_ENABLE_NVAPI=1`, or the DLSS option in Lutris).
-  AMD and Intel cards need nothing extra.
+## Updating from Release 5
 
-## Updating from Release 4
+1. Close the game and back up your saves and any personal mod settings.
+2. Move the existing build's `update`, `plugins` and `DLSSIV` folders out of the game folder.
+3. Copy the complete R6 contents beside `GTAIV.exe`, replacing the previous build's loader/upscaler files when prompted.
+4. Keep your Documents folder and saves. Test New Game, then save → quit → relaunch → load, plus the features you use.
 
-Delete the `update` and `plugins` folders from your game folder, then do **Step 2** above. You don't need Step 3.
-Release 4 saves keep working (Release 5 changes textures, the water colour, one map placement and two weapon models, not the
-save format). Coming from Release 3: the same steps work, and your saves should load too.
+R6 incorporates both R5 add-ons. **Do not apply their old Install or Uninstall folders over R6:** they contain older files,
+including a whole `script.img`, and would overwrite later fixes.
+
+Compatibility of existing R5 saves with the latest combined R6 batch has not yet been confirmed. Keep your saves and a
+backup, then test your own save. VCANGE's incompatible audio configuration previously caused save-loading failures;
+start a New Game when moving from that configuration.
 
 ## Uninstalling
 
-Delete everything you copied from the **Vice City Actual Next Gen** folder: the `update`, `plugins` and `DLSSIV` folders and
-the loose files next to `GTAIV.exe` (`dinput8.dll`, `d3d9.dll`, `DLSS-IV.asi`, `DLSS-IV.cfg`, `DLSS-IV README.txt`, `vulkan.dll`,
-`update.txt`, `README.md`). The original game files were never changed.
+Close the game, then remove this build's `update`, `plugins` and `DLSSIV` folders and its loose files beside `GTAIV.exe`:
+`dinput8.dll`, `d3d9.dll`, `d3d9.cfg`, `DLSS-IV.asi`, `DLSS-IV.cfg`, `vulkan.dll` and `update.txt`.
+Remove the build's README if you copied it there. Restore any files you backed up from a previous mod setup.
+
+Keep the GTA IV Documents folder and its saves. The conversion does not replace the original Rockstar executable or data archives.
 
 ## Saves
 
-- Saves made with VCANGE itself (on 1.0.8.0), or with VCANGE's sound set, are not compatible. Start a New Game.
-- The F7 menu's "Save Game Now" refuses to save during a mission, because a mid-mission save can break mission progress.
-  Use it in free roam.
+Use F7 → Gameplay Tweaks → Save Game Now in free roam. It refuses to save while a mission is active.
+
+Save locations:
+
+- **Windows:** `Documents\Rockstar Games\GTA IV\Profiles\`.
+- **Steam / Proton:** `<Steam library>/steamapps/compatdata/12210/pfx/drive_c/users/steamuser/Documents/Rockstar Games/GTA IV/Profiles/`.
+- **Lutris / other Wine prefixes:** `<prefix>/drive_c/users/steamuser/Documents/Rockstar Games/GTA IV/Profiles/`.
+
+Back up `Profiles` before changing builds. Preserve `User Music` separately if you use custom radio tracks.
 
 ## Known limitations
 
-- **VCANGE's Vice City sounds** (original sirens, tyre skids, weapon sounds) are not included. Every variant tried still
-  crashed when loading a save, so the original Vice City NextGen audio is used.
-- The shooting range and stunt bonuses are lightly tested.
-- Some reports on VCANGE's tracker could not be confirmed in this build's files and are not changed. Please report them if
-  you hit them, with the mission and what you were doing:
-  - Crashes in Vigilante and in Gun Runner (grenades on the trucks).
-  - Paramedic level 10.
-  - The V.I.P. waiting at the airport.
-  - Martha's Mug Shot.
-  - Police sitting on air in No Escape.
-  - FPS drops on the new islands and around the Diaz mansion.
-- The Taxi side mission shows its "100 fares" completion message only when you leave the taxi (the reward itself arrives on time).
-- A desk prop in the bank interior is missing (it is missing from the base mod as well).
-- The airport seaplane dock was disabled by VCANGE and stays disabled.
-- The AUG looks like GTA IV's M4 and the tear gas like GTA IV's grenade when held or thrown, because VCANGE's own models are
-  broken. Their HUD icons are still the Vice City ones.
-- Ocean Beach lost the dirt streaks on one building north of the Ammu-Nation (the layer that caused the glitch).
-- Some IaCF interior models reference a few detail textures that exist nowhere; those surfaces look slightly flatter.
+**User-tested** means the result is recorded in the current rebuild log, not that every mission has been completed.
+**Verified in files** means installation and static checks passed; it is not an in-game test.
+The pending items above correspond to steps 60–65 and 70–73. The current cutscene helper has only the reported
+“success so far” coverage. R6 should not be described as a fully tested playthrough.
+
+- VCANGE's extra sound configuration repeatedly broke save loading and remains excluded. The working original VCNG audio
+  configuration is retained.
+- The shooting range and wheelie/stoppie bonuses have not yet received a documented user test.
+- Unconfirmed VCANGE tracker reports remain open: Vigilante crashes, Gun Runner truck/grenade crashes, Paramedic level 10,
+  The V.I.P. airport wait, Martha's Mug Shot, police sitting on air in No Escape, and performance on the additional islands
+  or around Diaz's mansion. These are reports to reproduce, not confirmed failures of R6.
+- The Taxi side mission's “100 fares” message appears when leaving the taxi; its reward arrives at the intended point.
+- A bank desk prop is absent from the base conversion. VCANGE's disabled airport seaplane dock remains disabled.
+- The AUG and tear gas retain their gameplay slots and HUD icons but use the replacement IV models described above.
+- The repaired Ocean Beach building no longer has the removed dirt-streak layer.
+- Some IaCF models reference unavailable detail textures, leaving those surfaces less detailed.
+- Higher-resolution cutscene assets remain installed. The Jury Fury repair and memory helper do not establish that every
+  other cutscene is free from loading or memory issues.
 
 ## Credits
 
