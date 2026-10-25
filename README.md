@@ -1,4 +1,4 @@
-ice City Actual Next Gen — Release 6
+Vice City Actual Next Gen — Release 6
 
 **GTA Vice City NextGen + VCANGE 7.0.1, ported to GTA IV: The Complete Edition (1.2.0.59).**
 Windows, Linux and Steam Deck (Proton). No .NET script hooks. FusionFix 5.1.2 and DLSS-IV are included and already set up.
