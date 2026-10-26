@@ -1,8 +1,9 @@
-Vice City Actual Next Gen — Release 6
+# Vice City Actual Next Gen — Release 7
 
 **GTA Vice City NextGen + VCANGE 7.0.1, ported to GTA IV: The Complete Edition (1.2.0.59).**
-Windows, Linux and Steam Deck (Proton). No .NET script hooks. FusionFix 5.1.2 and DLSS-IV are included and already set up.
-Copy everything inside the extracted R6 folder next to `GTAIV.exe` and start a New Game.
+For Windows, Linux and Steam Deck (Proton); documented local gameplay testing is on Linux/Proton.
+No .NET script hooks. FusionFix 5.1.2 and DLSS-IV are included and already set up.
+Copy everything inside the extracted R7 folder next to `GTAIV.exe` and start a New Game.
 
 The conversion uses FusionFix's `update` overlay, native plugins and the included loader/upscaler files.
 It does not replace `GTAIV.exe` or the original Rockstar data archives.
@@ -11,9 +12,69 @@ It does not replace `GTAIV.exe` or the original Rockstar data archives.
 > I did not create the original mod assets or code. I ported, fixed and packaged them to run natively on the
 > Complete Edition with FusionFix. All credit for the mods goes to the authors listed under [Credits](#credits).
 
-## What's new in Release 6
+## What's new in Release 7
 
-### User-confirmed improvements
+Release 7 focuses on vehicle physics, the Fairmont police cruiser, clearer mission text, a tidier runtime layout and corrected
+health regeneration. It carries forward the photoreal textures, native F7 menu and Complete Edition port from Release 6.
+
+**User-tested** means a result was explicitly reported in the current rebuild record. **Verified in files** means resource,
+dependency or script checks passed; it does not mean the feature has been tested in game.
+
+### User-tested improvements
+
+- **RC helicopter and Sparrow corrections:** the RC helicopter's physical settings were matched to its toy model, and the
+  Sparrow received an isolated centre-of-gravity correction. Both fixes received positive gameplay feedback. Completion of
+  every affected mission and side activity has not been separately documented.
+- **Better vehicle handling:** the user reported that cars handle dramatically better after the vehicle physics batch.
+  Repairs include the DF8/Baller's centre of gravity, Bobber and Hellfury wheel/rider physics transforms, and wheel-physics
+  positions in the Emperor, Infernus and Patriot. Individual coverage of every repaired model was not specified.
+- **1978 Ford Fairmont VCPD:** the Fairmont replaces the **Beater Police Cruiser** (`policew`) slot, with its author's
+  handling, matching wheel settings and four-channel colours. The regular police cruiser keeps its existing model and
+  handling. The installed Fairmont received positive in-game feedback.
+- **Cleaner project layout:** 324 authoring and reference files were preserved outside the runtime overlay, leaving active
+  assets intact. Relaunch, New Game and save → quit → relaunch → load passed for that cleanup checkpoint. Sources and
+  reference material are maintained separately from the files used to play.
+
+### Included changes awaiting specific gameplay confirmation
+
+- **Corrected health regeneration:** normal recovery still starts after five seconds without damage and gradually restores
+  health up to half the bar. Health or armour damage restarts the delay; armour is not regenerated. Full health is restored
+  **once when a cutscene loads/starts and once when it ends/unloads**. The repeated full-heal loop and the extra two-second
+  healing window have been removed. This addresses the script behavior associated with prolonged apparent mission immunity;
+  actual mission and cutscene behavior still needs an in-game test.
+- **Additional vehicle data and resource repairs:** corrected reversed traction values for Sentinel and Sultan and repaired
+  vehicle archive resource flags and compressed-stream lengths. These file checks preserve the installed model payloads;
+  they do not certify every vehicle's behavior.
+- **Clearer Demolition Man warning:** the RC helicopter now has its own out-of-range message instead of displaying a mission
+  activation prompt. Ordinary activation prompts keep their existing wording.
+- **Completed text entries:** added two labels present in the copied text source but missing from compiled text, and supplied
+  the missing English “Japanese” caption in language settings. The two source-only labels have unverified visible triggers;
+  the menu-caption repair does not add a new translation. Supplemental text lookup order was also corrected.
+- **Blue Vice City menu artwork:** the selected title picture is installed in both main-menu background dictionaries, with
+  fitted 16:9, 4:3 and 21:9 versions. Existing buttons and icons are retained. Appearance in game, 16:10 behavior and displays
+  wider than 21:9 still need checking.
+- **Consolidated runtime archives:** total IMG archives reduced from **57 to 24**. Thirty-eight map archives became seven
+  regional packs; weapon and Fairmont resources were consolidated into their main archives. Seven identical resource copies
+  were removed while all unique moved resource payloads were preserved. Supplemental text catalogs were reduced from sixteen
+  to seven, retaining the same effective text values. These changes reduce package and registration counts; FPS, startup and
+  frame-time gains have not been measured.
+
+### Current test coverage
+
+Save/load success, broad driving improvement, the RC/Sparrow fixes and the Fairmont have recorded positive user results.
+The last explicitly confirmed combined relaunch, New Game and save → quit → relaunch → load test was **before the later
+archive consolidation and health-script correction**. Those final changes passed file checks; the health script also passed
+thirteen mocked bytecode scenarios. Their combined gameplay test remains pending.
+
+A scoped dialogue/audio audit found no verified missing dependency among the inspected mission conversation groups,
+cutscene captions and requested audio banks. This is an audit result, not a complete mission playthrough or a new voice pack.
+
+## What was new in Release 6
+
+The following sections retain the earlier release history. Historical gameplay reports are not a new certification of the
+current Release 7 checkpoint; use the current test coverage above for the recovered build.
+
+### Improvements introduced in Release 6
 
 - **Photoreal texture overhaul across the build:** brings together our photoreal passes for city surfaces, palms and
   plants, grass, sand, water, Tommy, cutscene and story characters, pedestrians, clothing and props. Text, logos and
@@ -24,9 +85,9 @@ It does not replace `GTAIV.exe` or the original Rockstar data archives.
   across all releases.
 - **Independence FM included:** GTA IV's station is now the tenth station alongside Vice City's nine, with its IV logo
   and the correct name in the radio settings. The separate Release 5 add-on is no longer needed.
-- **Revised health regeneration included:** after five seconds without damage, health regenerates up to half the bar,
-  including while walking, running or driving. Cutscenes refill health to full and keep it full for two seconds afterward.
-  Armour is unchanged. The separate Release 5 health patch is no longer needed.
+- **Native health regeneration included:** recovery after five seconds without damage, up to half the bar, including
+  while walking, running or driving. Release 7 replaces the older cutscene healing behavior with one refill at each boundary,
+  as described above. Armour is not regenerated. The separate Release 5 health patch is no longer needed.
 - **Miami sky and 1980s colour grade:** seamless cloud noise, a denser starfield, and warmer pink/peach dawns and sunsets.
   Fair-weather lighting has a more vivid Miami palette; the later colour-grade pass leaves rain, fog and storms unchanged.
 - **Vehicle and menu corrections:** repaired handling records, invalid paint choices and RC Baron colour grouping;
@@ -39,10 +100,10 @@ It does not replace `GTAIV.exe` or the original Rockstar data archives.
   them afterward. Its current cleanup targets distant ambient entities outside a protected 150-metre area around the
   player. The user reported success in cutscenes played so far; this is not a guarantee that every cutscene has been tested.
 
-### Included fixes awaiting gameplay confirmation
+### Earlier fixes with feature tests still pending
 
-These changes are verified in the R6 files. Their specific feature/mission tests and the latest combined New Game → save →
-quit → relaunch → load test remain pending.
+These changes were listed as file-verified in Release 6. Their specific feature and mission results have not been fully
+documented in the recovered gameplay record. Current Release 7 startup and save/load coverage is described above.
 
 - **Story-based wanted limits:** outside missions, the cap is four stars initially, five after Guardian Angels, and six
   after Rub Out. Trespass checks no longer block the progression logic or reduce an existing wanted level. Missions keep
@@ -119,13 +180,15 @@ quit → relaunch → load test remain pending.
 - VCNG HD Pedestrians with photoreal textures; photoreal Tommy, cutscene characters and props
 - Photoreal palm trees, grass, sand, water and city surfaces
 - Clear "Mint" turquoise water, turquoise Miami ocean and pools, and a 1980s Miami weather and lighting palette
-- Native health regeneration after five seconds without damage, while moving or driving, up to half the bar; full health during cutscenes
+- Native health regeneration after five seconds without damage, while moving or driving, up to half the bar; one full-health refill at cutscene entry and one at exit
 - Independence FM as the tenth radio station, with its correct name and logo
 - Miami sky with seamless clouds, more stars and the revised 1980s colour grade
 - Native F7 Vice City Menu with Gameplay Tweaks
 - Native Euphoria ragdolls and Army/MMA melee moves
 - Story-based wanted limits and a native six-star army response (included; gameplay confirmation pending)
-- Cutscene memory helper and the user-confirmed Jury Fury loading repair
+- Cutscene memory helper and the Jury Fury loading repair carried forward from earlier releases
+- Corrected RC helicopter/Sparrow physics, targeted car and motorcycle physics repairs, and the 1978 Ford Fairmont VCPD
+- Blue Vice City menu artwork, corrected mission/help text and consolidated runtime archives
 - Repeatable Downtown shooting range and wheelie/stoppie cash bonuses
 - Project Thunder lightning and Xbox rain droplets
 - DLSS / FSR upscaling through DLSS-IV, on NVIDIA, AMD and Intel cards
@@ -156,7 +219,8 @@ Independence FM is already enabled; its station audio comes from your own GTA IV
 
 For personal tracks, put MP3s in `Documents\Rockstar Games\GTA IV\User Music`, scan them from the pause menu's Audio
 settings, and enable Independence FM Mode. Under Proton, use the equivalent folder inside the game's Wine prefix.
-The normal station has been user-tested; playback of personal music under Linux/Proton remains unconfirmed.
+The earlier release record reports successful normal-station playback; personal music playback under Linux/Proton remains
+unconfirmed.
 
 ## What is different from VCANGE
 
@@ -194,7 +258,8 @@ This build keeps the Complete Edition. The important .NET features were rebuilt 
 ## Requirements
 
 - Your own legal copy of **GTA IV: The Complete Edition 1.2.0.59**.
-- About **10 GB** for the extracted build, in addition to GTA IV and the downloaded archive parts. The extracted build occupies approximately 8.84 GiB.
+- Free space for the extracted conversion, downloaded archive parts and backups, in addition to the installed GTA IV game.
+  Use the final Release 7 download listing for its packaged and extracted sizes.
 - On Linux / Steam Deck: Proton. Local gameplay testing was performed with Proton-CachyOS through Lutris/umu.
   Separate Windows and Steam Deck testing is not documented in the current test record.
 
@@ -203,9 +268,9 @@ This build keeps the Complete Edition. The important .NET features were rebuilt 
 1. Close the game. Start from an unmodded Complete Edition installation and launch it once before adding the conversion.
 2. If the game already has modded `update`, `plugins` or `DLSSIV` folders, move them somewhere safe outside the game folder
    before installing. Back up existing loader/upscaler files if another setup already uses them.
-3. Download **all five parts**, `R6.7z.001` through `R6.7z.005`, into the same folder. Open `.001` with 7-Zip and extract it;
-   the other parts are read automatically.
-4. Copy **everything inside the extracted R6 folder** into the GTA IV folder containing `GTAIV.exe`. The copied `update`
+3. Extract the Release 7 download with 7-Zip. If it is supplied as numbered parts, download **all parts** into the same
+   folder and open the first `.001` file; the remaining parts are read automatically.
+4. Copy **everything inside the extracted R7 folder** into the GTA IV folder containing `GTAIV.exe`. The copied `update`
    and `plugins` folders must sit directly beside the executable.
 5. **Keep your GTA IV Documents folder, `Profiles` saves and `User Music`. No Documents-folder deletion is required.**
 6. Launch the game and choose **New Game** for a fresh installation.
@@ -220,26 +285,43 @@ In Lutris, add the equivalent DLL override: `dinput8` = `n,b`.
 
 ### Graphics and upscaling
 
-- R6 includes `d3d9.cfg` with Vulkan selected. In Display settings, verify **Graphics API: Vulkan** and set
+- The build includes `d3d9.cfg` with Vulkan selected. In Display settings, verify **Graphics API: Vulkan** and set
   **Anti-aliasing: Off** for DLSS-IV.
 - The bundled DLSS-IV configuration selects its upscaler automatically: DLSS on supported NVIDIA RTX hardware, with FSR
   for other supported GPUs. The chosen FSR implementation depends on hardware and the bundled DLSS-IV version.
 - NVIDIA under Proton needs NVAPI available; the existing setup uses `PROTON_ENABLE_NVAPI=1` or the launcher's DLSS/NVAPI option.
 - The bundled configuration has HDR disabled.
 
-## Updating from Release 5
+## Updating from Release 6 or earlier
 
-1. Close the game and back up your saves and any personal mod settings.
-2. Move the existing build's `update`, `plugins` and `DLSSIV` folders out of the game folder.
-3. Copy the complete R6 contents beside `GTAIV.exe`, replacing the previous build's loader/upscaler files when prompted.
-4. Keep your Documents folder and saves. Test New Game, then save → quit → relaunch → load, plus the features you use.
+1. Close the game and back up your saves and personal mod settings.
+2. Move the existing build's `update`, `plugins` and `DLSSIV` folders somewhere safe outside the game folder. Release 7
+   consolidates archives and text catalogs, so an older overlay must be removed before copying the new one.
+3. Copy the complete R7 contents beside `GTAIV.exe`, replacing the previous build's loader/upscaler files when prompted.
+4. Keep your Documents folder, saves and User Music. No save or configuration reset is required by the new layout or
+   health-script correction. Avoid restoring entire old config or archive sets over the new build.
+5. Test New Game using a spare slot, then save → quit → relaunch → load. Check the features below during the same test pass.
 
-R6 incorporates both R5 add-ons. **Do not apply their old Install or Uninstall folders over R6:** they contain older files,
-including a whole `script.img`, and would overwrite later fixes.
+Release 7 carries forward the R5 add-ons and R6 fixes. **Do not apply the old R5 Install or Uninstall folders over R7:**
+they contain older files, including a whole `script.img`, and would overwrite later fixes. Do not add the former separate
+Fairmont archive, map packs or supplemental text files back over the consolidated layout.
 
-Compatibility of existing R5 saves with the latest combined R6 batch has not yet been confirmed. Keep your saves and a
-backup, then test your own save. VCANGE's incompatible audio configuration previously caused save-loading failures;
-start a New Game when moving from that configuration.
+Earlier checkpoints have successful save/load reports. Compatibility of every existing R5/R6 save with the final combined
+R7 checkpoint remains unconfirmed. Keep a backup and test your existing save separately. If moving from VCANGE's incompatible
+audio configuration, use a New Game for that transition; keep the old save files.
+
+### One combined gameplay check
+
+- **Startup and saves:** relaunch, check New Game, then save → quit → relaunch → load. Keep your desired save in another slot.
+- **Health:** take damage below half health, avoid damage for five seconds and confirm gradual recovery stops halfway.
+  Take another hit during the wait to check the delay restarts. Check a cutscene entry and exit refill, then take damage
+  during normal mission play to confirm full health is not repeatedly restored.
+- **Vehicles and weapons:** try the Fairmont and normal cars, an affected motorcycle, the Sparrow/RC helicopter and a custom
+  weapon. Detailed Demolition Man flight, bomb handling and mission completion still need confirmation.
+- **World and UI:** drive through beach, mainland, airport and bridge areas, enter an interior and check night props.
+  Check the blue menu picture, readable buttons, the RC range warning and the English language-option caption.
+
+This checks the changed systems in one pass; it does not certify every mission or resource.
 
 ## Uninstalling
 
@@ -264,30 +346,39 @@ Back up `Profiles` before changing builds. Preserve `User Music` separately if y
 ## Known limitations
 
 **User-tested** means the result is recorded in the current rebuild log, not that every mission has been completed.
-**Verified in files** means installation and static checks passed; it is not an in-game test.
-The pending items above correspond to steps 60–65 and 70–73. The current cutscene helper has only the reported
-“success so far” coverage. R6 should not be described as a fully tested playthrough.
+**Verified in files** means file and dependency checks passed; it is not an in-game test. The current Release 7 archive
+consolidation and health correction still await their combined gameplay test. A fully tested playthrough is not claimed.
 
-- VCANGE's extra sound configuration repeatedly broke save loading and remains excluded. The working original VCNG audio
-  configuration is retained.
-- The shooting range and wheelie/stoppie bonuses have not yet received a documented user test.
-- Unconfirmed VCANGE tracker reports remain open: Vigilante crashes, Gun Runner truck/grenade crashes, Paramedic level 10,
-  The V.I.P. airport wait, Martha's Mug Shot, police sitting on air in No Escape, and performance on the additional islands
-  or around Diaz's mansion. These are reports to reproduce, not confirmed failures of R6.
-- The Taxi side mission's “100 fares” message appears when leaving the taxi; its reward arrives at the intended point.
+- FPS, load-time and frame-time improvement from the project cleanup and archive consolidation are **unmeasured**.
+- Windows and Steam Deck have no separately documented current test pass; local gameplay testing is on Linux/Proton.
+- Older per-feature results for the story-based wanted limits, six-star army response, Malibu teleport, vehicle textures,
+  mission messages, shooting range and wheelie/stoppie bonuses remain incomplete in the recovered test record.
+- RC/Sparrow success does not establish completion of every RC mission or checkpoint activity. Broad driving improvement
+  does not establish that every vehicle physics issue is resolved; several ambiguous model observations remain unpatched.
+- The new main-menu picture and language/RC text changes still need specific display checks. The two added source-only
+  labels have no verified visible triggers. Menu behavior at 16:10 or wider than 21:9 is not certified.
+- VCANGE's extra sound configuration previously broke save loading and remains excluded. The working original VCNG audio
+  configuration is retained. Personal Independence FM music playback under Linux/Proton remains unconfirmed.
+- Unconfirmed reports carried forward from the VCANGE tracker include Vigilante crashes, Gun Runner truck/grenade crashes,
+  Paramedic level 10, The V.I.P. airport wait, Martha's Mug Shot, police sitting on air in No Escape, and performance on the
+  additional islands or around Diaz's mansion. These are reports to reproduce, not confirmed failures of Release 7.
+- The Taxi side mission's “100 fares” message appears when leaving the taxi; its reward arrives at the intended point,
+  according to the earlier release record.
 - A bank desk prop is absent from the base conversion. VCANGE's disabled airport seaplane dock remains disabled.
-- The AUG and tear gas retain their gameplay slots and HUD icons but use the replacement IV models described above.
+- The AUG and tear gas retain their gameplay slots and HUD icons but use replacement GTA IV models.
 - The repaired Ocean Beach building no longer has the removed dirt-streak layer.
 - Some IaCF models reference unavailable detail textures, leaving those surfaces less detailed.
-- Higher-resolution cutscene assets remain installed. The Jury Fury repair and memory helper do not establish that every
-  other cutscene is free from loading or memory issues.
+- Higher-resolution cutscene assets remain installed. The earlier Jury Fury repair and memory helper do not establish that
+  every cutscene is free from loading or memory issues. The recovered record does not provide a new complete cutscene test.
 
 ## Credits
 
 - **Revolution Team**: GTA Vice City NextGen Edition
-- **Kn4ckers**: [Vice City for GTAIV: The Complete Edition](https://github.com/knackers4/vce) (legal release, used as the base)
+- **Kn4ckers**: [Vice City for GTAIV: The Complete Edition](https://github.com/knackers4/vce) (Complete Edition base release)
 - **GTATrilogyGames** and contributors: [Vice City Actual Next-Gen Edition (VCANGE)](https://github.com/GTATrilogyGames/ViceCityActualNextGenEditionModpack)
 - **ThirteenAG** and contributors: [FusionFix](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix) and Xbox Rain Droplets
+- **1978 Ford Fairmont VCPD:** **Driver [GCU Modding Team]** (original model), **DMN [GTA-Unlimited Team]** (GTA IV conversion),
+  **BubLik [GCU Modding Team]** (updates) and **deepcover0000** (VCPD livery)
 - **ItsClonkAndre**: Project Thunder (GPL-3.0), here as the Complete Edition port Project Thunder CE
 - **CGP**: Enhanced Fighting And Euphoria (rebuilt natively here)
 - **LibertyTweaks** authors (features rebuilt natively); **Zolika1351**: ZMenu (the inspiration for the F7 menu's layout)
