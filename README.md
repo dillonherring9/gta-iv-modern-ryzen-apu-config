@@ -1,9 +1,9 @@
-# Vice City Actual Next Gen — Release 7
+# Vice City Actual Next Gen — Release 8
 
 **GTA Vice City NextGen + VCANGE 7.0.1, ported to GTA IV: The Complete Edition (1.2.0.59).**
 For Windows, Linux and Steam Deck (Proton); documented local gameplay testing is on Linux/Proton.
 No .NET script hooks. FusionFix 5.1.2 and DLSS-IV are included and already set up.
-Copy everything inside the extracted R7 folder next to `GTAIV.exe` and start a New Game.
+Copy everything inside the extracted `Vice City Actual Next Gen` folder next to `GTAIV.exe` and start a New Game.
 
 The conversion uses FusionFix's `update` overlay, native plugins and the included loader/upscaler files.
 It does not replace `GTAIV.exe` or the original Rockstar data archives.
@@ -12,7 +12,51 @@ It does not replace `GTAIV.exe` or the original Rockstar data archives.
 > I did not create the original mod assets or code. I ported, fixed and packaged them to run natively on the
 > Complete Edition with FusionFix. All credit for the mods goes to the authors listed under [Credits](#credits).
 
-## What's new in Release 7
+## What's new in Release 8
+
+Release 8 brings 1980s Miami crowds, the Ballad of Gay Tony parachute, a rebuilt Pole Position strip club and a simpler,
+more reliable health system. Everything from Release 7 is included.
+
+> [!NOTE]
+> **Adult content:** the Pole Position strip club's dancers are nude, and so is the stripper in the club's purchase cutscene.
+> Nudity appears only inside the club: the Malibu Club dancer, street pedestrians and F7 menu spawns stay clothed.
+
+- **1980s Miami pedestrians:** about 400 pedestrian textures across 246 models were redone with 1980s Miami clothing.
+  Faces and skin keep their original identity, uniformed roles (police, SWAT, FBI, firefighters, paramedics, doctors,
+  security, guards) keep their department look, and chefs and cooks wear all-white uniforms with their stains kept.
+- **A real Miami population:** Vice City's districts still used Liberty City's crowd mixes, which is why streets were full of
+  clones (Ocean Beach at night spawned only taxi drivers; the golf club was mostly Russian mob). All 13 districts now draw on
+  20 rebuilt 1980s Miami groups (Little Haiti, Little Havana, Ocean Beach retirees, South Beach fashion, nightlife, beach,
+  golf, business, docks and more) that change by time of day and on weekends. Cubans hold Little Havana, Haitians Little
+  Haiti and bikers Downtown. The Malibu dance floor has 12 different club-goers. The pedestrian streaming budget is doubled
+  (FusionFix PedBudget 100,000,000) so more distinct models can be on screen; it uses about 48 MB more memory.
+- **TBoGT parachute:** The Ballad of Gay Tony's parachute, with FusionFix's fixed scripts. 26 parachute pickups sit on
+  Vice City rooftops, from the tallest Downtown towers (up to 368 m) to hidden-package and mission roofs. You're also given
+  one automatically in any helicopter or plane. Select it, press attack to put it on, jump, press sprint to open and enter to
+  detach. It has no parachute sounds yet, and nothing new is written into your saves.
+- **Pole Position strip club:** six new dancers (pole, lap, sitting and private dances) replace the street models the club
+  used to borrow, with real skin detail added. They exist only in the club.
+- **Health: cutscene refills only.** The ordinary over-time regeneration didn't work reliably and has been removed. You're
+  refilled to full health once when a cutscene starts and once when it ends, as in Release 7. Armour isn't affected.
+- **Data fix:** the truncated Liberty Rush pedestrian row in `peds.ide` was completed from the matching runner definition.
+
+### FusionFix episodic support (needed for the parachute)
+
+`EpisodicWeapons`, `OtherEpisodicChecks` and `TBoGTHelicopterHeightLimit` are switched on in `plugins/GTAIV.EFLC.FusionFix.ini`.
+They provide the parachute's animations, camera and wind, the altimeter, and helicopter flight high enough for the tower
+pickups. Some Vice City weapons share episodic weapon slots, so they also pick up episode behaviour: the grenade launcher
+explodes on impact, remote grenades can be planted like sticky bombs, the sniper rifle gets the DSR-1 scope, the Tec-9 may be
+blocked during car entry/drive-bys, and the screwdriver may show a drop prompt. If these bother you more than the parachute
+helps, set `EpisodicWeapons = 0` (this turns the parachute off too).
+
+### Release 8 test status
+
+These changes passed file, archive and script-decode checks and a full hash check of all 419 runtime files. The
+first parachute version could not be put on; that bug (the launcher waits for the phone to be idle) is fixed in this
+build, but the fix hasn't been confirmed in game yet. The dancers, the 80s pedestrians and the new population mixes are
+also still awaiting gameplay confirmation.
+
+## What was new in Release 7
 
 Release 7 focuses on vehicle physics, the Fairmont police cruiser, clearer mission text, a tidier runtime layout and corrected
 health regeneration. It carries forward the photoreal textures, native F7 menu and Complete Edition port from Release 6.
@@ -37,7 +81,7 @@ dependency or script checks passed; it does not mean the feature has been tested
 
 ### Included changes awaiting specific gameplay confirmation
 
-- **Corrected health regeneration:** normal recovery still starts after five seconds without damage and gradually restores
+- **Corrected health regeneration** (ordinary regeneration later removed in Release 8)**:** normal recovery still starts after five seconds without damage and gradually restores
   health up to half the bar. Health or armour damage restarts the delay; armour is not regenerated. Full health is restored
   **once when a cutscene loads/starts and once when it ends/unloads**. The repeated full-heal loop and the extra two-second
   healing window have been removed. This addresses the script behavior associated with prolonged apparent mission immunity;
@@ -59,7 +103,7 @@ dependency or script checks passed; it does not mean the feature has been tested
   to seven, retaining the same effective text values. These changes reduce package and registration counts; FPS, startup and
   frame-time gains have not been measured.
 
-### Current test coverage
+### Release 7 test coverage
 
 Save/load success, broad driving improvement, the RC/Sparrow fixes and the Fairmont have recorded positive user results.
 The last explicitly confirmed combined relaunch, New Game and save → quit → relaunch → load test was **before the later
@@ -72,7 +116,7 @@ cutscene captions and requested audio banks. This is an audit result, not a comp
 ## What was new in Release 6
 
 The following sections retain the earlier release history. Historical gameplay reports are not a new certification of the
-current Release 7 checkpoint; use the current test coverage above for the recovered build.
+current checkpoint; use the Release 8 test status above for the current build.
 
 ### Improvements introduced in Release 6
 
@@ -103,7 +147,7 @@ current Release 7 checkpoint; use the current test coverage above for the recove
 ### Earlier fixes with feature tests still pending
 
 These changes were listed as file-verified in Release 6. Their specific feature and mission results have not been fully
-documented in the recovered gameplay record. Current Release 7 startup and save/load coverage is described above.
+documented in the recovered gameplay record. Release 7 and 8 test coverage is described above.
 
 - **Story-based wanted limits:** outside missions, the cap is four stars initially, five after Guardian Angels, and six
   after Rub Out. Trespass checks no longer block the progression logic or reduce an existing wanted level. Missions keep
@@ -180,7 +224,10 @@ documented in the recovered gameplay record. Current Release 7 startup and save/
 - VCNG HD Pedestrians with photoreal textures; photoreal Tommy, cutscene characters and props
 - Photoreal palm trees, grass, sand, water and city surfaces
 - Clear "Mint" turquoise water, turquoise Miami ocean and pools, and a 1980s Miami weather and lighting palette
-- Native health regeneration after five seconds without damage, while moving or driving, up to half the bar; one full-health refill at cutscene entry and one at exit
+- One full-health refill at cutscene entry and one at exit (ordinary regeneration removed in Release 8)
+- 1980s Miami pedestrian clothing and rebuilt district/time-of-day crowds
+- TBoGT parachute with 26 rooftop pickups, and auto-equip in helicopters and planes
+- Pole Position strip club with its own dancers (nudity, club only)
 - Independence FM as the tenth radio station, with its correct name and logo
 - Miami sky with seamless clouds, more stars and the revised 1980s colour grade
 - Native F7 Vice City Menu with Gameplay Tweaks
@@ -259,7 +306,7 @@ This build keeps the Complete Edition. The important .NET features were rebuilt 
 
 - Your own legal copy of **GTA IV: The Complete Edition 1.2.0.59**.
 - Free space for the extracted conversion, downloaded archive parts and backups, in addition to the installed GTA IV game.
-  Use the final Release 7 download listing for its packaged and extracted sizes.
+  The Release 8 download is about 7 GB in 1800 MB parts and about 8.9 GB once extracted.
 - On Linux / Steam Deck: Proton. Local gameplay testing was performed with Proton-CachyOS through Lutris/umu.
   Separate Windows and Steam Deck testing is not documented in the current test record.
 
@@ -268,9 +315,9 @@ This build keeps the Complete Edition. The important .NET features were rebuilt 
 1. Close the game. Start from an unmodded Complete Edition installation and launch it once before adding the conversion.
 2. If the game already has modded `update`, `plugins` or `DLSSIV` folders, move them somewhere safe outside the game folder
    before installing. Back up existing loader/upscaler files if another setup already uses them.
-3. Extract the Release 7 download with 7-Zip. If it is supplied as numbered parts, download **all parts** into the same
+3. Extract the Release 8 download with 7-Zip. If it is supplied as numbered parts, download **all parts** into the same
    folder and open the first `.001` file; the remaining parts are read automatically.
-4. Copy **everything inside the extracted R7 folder** into the GTA IV folder containing `GTAIV.exe`. The copied `update`
+4. Copy **everything inside the extracted `Vice City Actual Next Gen` folder** into the GTA IV folder containing `GTAIV.exe`. The copied `update`
    and `plugins` folders must sit directly beside the executable.
 5. **Keep your GTA IV Documents folder, `Profiles` saves and `User Music`. No Documents-folder deletion is required.**
 6. Launch the game and choose **New Game** for a fresh installation.
@@ -292,30 +339,34 @@ In Lutris, add the equivalent DLL override: `dinput8` = `n,b`.
 - NVIDIA under Proton needs NVAPI available; the existing setup uses `PROTON_ENABLE_NVAPI=1` or the launcher's DLSS/NVAPI option.
 - The bundled configuration has HDR disabled.
 
-## Updating from Release 6 or earlier
+## Updating from Release 7 or earlier
 
 1. Close the game and back up your saves and personal mod settings.
 2. Move the existing build's `update`, `plugins` and `DLSSIV` folders somewhere safe outside the game folder. Release 7
-   consolidates archives and text catalogs, so an older overlay must be removed before copying the new one.
-3. Copy the complete R7 contents beside `GTAIV.exe`, replacing the previous build's loader/upscaler files when prompted.
-4. Keep your Documents folder, saves and User Music. No save or configuration reset is required by the new layout or
-   health-script correction. Avoid restoring entire old config or archive sets over the new build.
+   consolidated archives and text catalogs, so an older overlay must be removed before copying the new one.
+3. Copy the complete Release 8 contents beside `GTAIV.exe`, replacing the previous build's loader/upscaler files when prompted.
+4. Keep your Documents folder, saves and User Music. No save or configuration reset is required. If you keep your own
+   `GTAIV.EFLC.FusionFix.ini`, copy the four changed lines into it (`PedBudget`, `EpisodicWeapons`, `OtherEpisodicChecks`,
+   `TBoGTHelicopterHeightLimit`), or the crowds and parachute won't work fully. Avoid restoring entire old config or archive sets over the new build.
 5. Test New Game using a spare slot, then save → quit → relaunch → load. Check the features below during the same test pass.
 
-Release 7 carries forward the R5 add-ons and R6 fixes. **Do not apply the old R5 Install or Uninstall folders over R7:**
+Release 8 carries forward the R5 add-ons and R6/R7 fixes. **Do not apply the old R5 Install or Uninstall folders over R8:**
 they contain older files, including a whole `script.img`, and would overwrite later fixes. Do not add the former separate
 Fairmont archive, map packs or supplemental text files back over the consolidated layout.
 
-Earlier checkpoints have successful save/load reports. Compatibility of every existing R5/R6 save with the final combined
-R7 checkpoint remains unconfirmed. Keep a backup and test your existing save separately. If moving from VCANGE's incompatible
+Earlier checkpoints have successful save/load reports. Compatibility of every existing R5–R7 save with Release 8
+remains unconfirmed. Keep a backup and test your existing save separately. If moving from VCANGE's incompatible
 audio configuration, use a New Game for that transition; keep the old save files.
 
 ### One combined gameplay check
 
 - **Startup and saves:** relaunch, check New Game, then save → quit → relaunch → load. Keep your desired save in another slot.
-- **Health:** take damage below half health, avoid damage for five seconds and confirm gradual recovery stops halfway.
-  Take another hit during the wait to check the delay restarts. Check a cutscene entry and exit refill, then take damage
-  during normal mission play to confirm full health is not repeatedly restored.
+- **Health:** check full health on entering and leaving a cutscene, then take damage in normal mission play and confirm
+  health is not refilled outside cutscenes.
+- **Parachute:** grab a rooftop pickup (or board a helicopter), select the parachute, press attack to put it on, jump,
+  press sprint to open and enter to detach.
+- **Crowds and club:** walk Ocean Beach by day and night, Little Havana and Downtown; visit the Malibu dance floor and the
+  Pole Position (pole, lap and sitting dancers, private dance).
 - **Vehicles and weapons:** try the Fairmont and normal cars, an affected motorcycle, the Sparrow/RC helicopter and a custom
   weapon. Detailed Demolition Man flight, bomb handling and mission completion still need confirmation.
 - **World and UI:** drive through beach, mainland, airport and bridge areas, enter an interior and check night props.
@@ -326,7 +377,7 @@ This checks the changed systems in one pass; it does not certify every mission o
 ## Uninstalling
 
 Close the game, then remove this build's `update`, `plugins` and `DLSSIV` folders and its loose files beside `GTAIV.exe`:
-`dinput8.dll`, `d3d9.dll`, `d3d9.cfg`, `DLSS-IV.asi`, `DLSS-IV.cfg`, `vulkan.dll` and `update.txt`.
+`dinput8.dll`, `d3d9.dll`, `d3d9.cfg`, `DLSS-IV.asi`, `DLSS-IV.cfg`, `DLSS-IV README.txt`, `vulkan.dll` and `update.txt`.
 Remove the build's README if you copied it there. Restore any files you backed up from a previous mod setup.
 
 Keep the GTA IV Documents folder and its saves. The conversion does not replace the original Rockstar executable or data archives.
@@ -346,9 +397,11 @@ Back up `Profiles` before changing builds. Preserve `User Music` separately if y
 ## Known limitations
 
 **User-tested** means the result is recorded in the current rebuild log, not that every mission has been completed.
-**Verified in files** means file and dependency checks passed; it is not an in-game test. The current Release 7 archive
-consolidation and health correction still await their combined gameplay test. A fully tested playthrough is not claimed.
+**Verified in files** means file and dependency checks passed; it is not an in-game test. The Release 8 parachute, crowds,
+pedestrian textures and strip club still await their combined gameplay test. A fully tested playthrough is not claimed.
 
+- The parachute has no sound yet, and the FusionFix episodic options change a few weapons (see Release 8 above).
+- Busy areas now stream more distinct pedestrians; on low-memory GPUs, lower `PedBudget` in the FusionFix ini if you see stutter.
 - FPS, load-time and frame-time improvement from the project cleanup and archive consolidation are **unmeasured**.
 - Windows and Steam Deck have no separately documented current test pass; local gameplay testing is on Linux/Proton.
 - Older per-feature results for the story-based wanted limits, six-star army response, Malibu teleport, vehicle textures,
@@ -361,7 +414,7 @@ consolidation and health correction still await their combined gameplay test. A 
   configuration is retained. Personal Independence FM music playback under Linux/Proton remains unconfirmed.
 - Unconfirmed reports carried forward from the VCANGE tracker include Vigilante crashes, Gun Runner truck/grenade crashes,
   Paramedic level 10, The V.I.P. airport wait, Martha's Mug Shot, police sitting on air in No Escape, and performance on the
-  additional islands or around Diaz's mansion. These are reports to reproduce, not confirmed failures of Release 7.
+  additional islands or around Diaz's mansion. These are reports to reproduce, not confirmed failures of Release 8.
 - The Taxi side mission's “100 fares” message appears when leaving the taxi; its reward arrives at the intended point,
   according to the earlier release record.
 - A bank desk prop is absent from the base conversion. VCANGE's disabled airport seaplane dock remains disabled.
@@ -380,6 +433,9 @@ consolidation and health correction still await their combined gameplay test. A 
 - **1978 Ford Fairmont VCPD:** **Driver [GCU Modding Team]** (original model), **DMN [GTA-Unlimited Team]** (GTA IV conversion),
   **BubLik [GCU Modding Team]** (updates) and **deepcover0000** (VCPD livery)
 - **ItsClonkAndre**: Project Thunder (GPL-3.0), here as the Complete Edition port Project Thunder CE
+- **Rockstar Games**: The Ballad of Gay Tony parachute scripts, animations and models, ported from your own Complete Edition files;
+  FusionFix's fixed parachute scripts
+- **metalwars** and **Kevin1230san**: the GTA IV nude female models used for the Pole Position dancers
 - **CGP**: Enhanced Fighting And Euphoria (rebuilt natively here)
 - **LibertyTweaks** authors (features rebuilt natively); **Zolika1351**: ZMenu (the inspiration for the F7 menu's layout)
 - Authors of **Proper HD Era Vehicles – Lore Friendly**, **Realistic Handling & Physics** (Shturmovik2), **VCNG HD Pedestrians**,
