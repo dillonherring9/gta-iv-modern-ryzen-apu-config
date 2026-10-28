@@ -17,6 +17,11 @@ It does not replace `GTAIV.exe` or the original Rockstar data archives.
 > Install Release 8 first, then the patch. It brings HD vehicle textures, more realistic vehicle weight and balance and
 > more detail on the strip club dancers. See [8.1 Patch](#81-patch).
 
+> [!TIP]
+> **Prefer an easier game?** The optional `Vice City Actual Next Gen - Alternate Euphoria Patch for Lowered Game Difficulty.7z`
+> puts ragdolls back to the GTA IV defaults and keeps the Army/MMA melee moves. The realistic, harder Euphoria stays the
+> default. See [Alternate Euphoria Patch](#alternate-euphoria-patch-for-lowered-game-difficulty).
+
 ## 8.1 Patch
 
 The 8.1 Patch is a small add-on (about 840 MB) that contains only the 6 files changed since Release 8. It needs Release 8
@@ -293,6 +298,42 @@ documented in the recovered gameplay record. Release 7 and 8 test coverage is de
 - DLSS / FSR upscaling through DLSS-IV, on NVIDIA, AMD and Intel cards
 - FusionFix 5.1.2 included
 
+## Alternate Euphoria Patch for Lowered Game Difficulty
+
+The Euphoria (ragdoll) system in Release 8 and 8.1 is built for a more realistic, harder style of play, and it stays the
+default. If you'd rather have an easier game, `Vice City Actual Next Gen - Alternate Euphoria Patch for Lowered Game Difficulty.7z`
+(about 3 MB) is a separate optional download on this release. It works on Release 8 with or without the 8.1 Patch.
+
+Turned off (back to stock GTA IV behaviour):
+
+- Extra injuries and forced ragdolls from car crashes and from falls or jumps
+- Randomly collapsing into a ragdoll when your health is low
+- The **F1** seatbelt (going through the windscreen works as in stock GTA IV) and **Space** to get up
+- Extra stumble reactions on falling pedestrians, and nearby pedestrians being sent away when your health is low
+
+Kept exactly as in Release 8: the **Army/MMA melee moves** (**Z / V / C / X / G**, **F5** to switch style) and their hit
+reactions, so enemies you hit can still be knocked out, stagger, or get knocked down by the low kick.
+
+Only one file changes: `update/common/data/cdimages/script.img`, with 9 bytes changed in its Euphoria script. The other
+81 scripts, including the melee scripts, are the same as in Release 8.
+
+### Installing the alternate patch
+
+1. Close the game.
+2. Extract the patch. Copy the `update` folder from inside
+   `Vice City Actual Next Gen - Alternate Euphoria Patch for Lowered Game Difficulty` next to `GTAIV.exe` and choose
+   **Replace / Overwrite**.
+3. Start the game. Existing saves keep working.
+
+**To go back** to the realistic Euphoria, close the game and copy the `update` folder from the patch's
+`Restore Realistic Euphoria (Release 8 default)` folder the same way. The patch's own `README.md` and `SHA256SUMS-files.txt`
+have the same steps and checksums.
+
+### Alternate patch test status
+
+It passed file and script checks. It hasn't been tested in game yet, so please report any problems with New Game,
+save → quit → relaunch → load, falls, crashes or melee.
+
 ## Controls added by this build
 
 | Key / controller input | Action |
@@ -305,8 +346,8 @@ documented in the recovered gameplay record. Release 7 and 8 test coverage is de
 | **Alt+V** | Toggle the first-person camera. |
 | **N**, in a vehicle | Skip to the next radio track. |
 | **Tab**, on foot | Holster / draw your weapon. |
-| **F1**, in a car | Toggle the seatbelt. |
-| **Space**, after a fall | Get up. |
+| **F1**, in a car | Toggle the seatbelt (not with the Alternate Euphoria Patch). |
+| **Space**, after a fall | Get up (not with the Alternate Euphoria Patch). |
 | Hold aim with fists, bat, knife, Pool Cue or Katana, then **Z / V / C / X / G** | Enhanced melee moves. **F5** switches Army/MMA style. |
 
 The N and Tab tweaks can be disabled under F7 → Gameplay Tweaks. Additional trainer shortcut keys are off by default.
