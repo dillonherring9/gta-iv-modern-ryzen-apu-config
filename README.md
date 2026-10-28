@@ -12,6 +12,58 @@ It does not replace `GTAIV.exe` or the original Rockstar data archives.
 > I did not create the original mod assets or code. I ported, fixed and packaged them to run natively on the
 > Complete Edition with FusionFix. All credit for the mods goes to the authors listed under [Credits](#credits).
 
+> [!TIP]
+> **8.1 Patch available:** `Vice City Actual Next Gen 8.1 Patch.7z` is attached to this release as a separate download.
+> Install Release 8 first, then the patch. It brings HD vehicle textures, more realistic vehicle weight and balance and
+> more detail on the strip club dancers. See [8.1 Patch](#81-patch).
+
+## 8.1 Patch
+
+The 8.1 Patch is a small add-on (about 840 MB) that contains only the 6 files changed since Release 8. It needs Release 8
+installed and does not work on its own or on Release 7 or older. The full Release 8 download doesn't include these changes.
+
+### What's in 8.1
+
+- **HD vehicle textures:** every vehicle whose textures were below 1024 pixels (about 90 cars, bikes, boats and
+  helicopters, the Hunter included) has been upscaled to 1024. Text, logos, badges and insignia were upscaled as a
+  separate layer so they stay crisp. The Barracks OL got its camo, canvas and star redone in HD. Vehicles with very small
+  originals (such as the 128-pixel boats) are sharper but still fairly soft.
+- **Texture loading fix:** the upscaled textures are packed so the engine loads them correctly (early test builds showed
+  "colourful static" on the Cheetah).
+- **More vehicle memory:** FusionFix `VehicleBudget` goes from 146552832 to 219829248 (x1.5), so the bigger textures don't
+  cause the "taxi bug" (traffic turning into all taxis).
+- **Realistic weight and balance:** vehicles whose centre of mass sat too high (rolling or flipping easily, like the
+  Sentinel XS) or too low were moved into the normal range. Masses more than 15% off the real vehicle were corrected,
+  for example Windsor 990 → 2200 kg, BF Injection 1680 → 900, Rumpo 4500 → 2300, Forklift 500 → 2600, Cheetah 1800 → 1500
+  and the city bus 23000 → 12500. Seven new handling rows let vehicles that used to share a row have their own values.
+  Helicopters, planes, boats, RC vehicles and the Rhino are unchanged.
+- **Sentinel XS:** centre of mass lowered to match the other sports cars.
+- **Pole Position dancers:** more skin detail on the six club dancers and the stripper in the club's purchase cutscene,
+  plus hair fixes. Nudity still appears only inside the strip club.
+
+Euphoria (ragdoll) behaviour is unchanged from Release 8.
+
+### Installing the patch
+
+1. Close the game.
+2. If you want to be able to go back to plain Release 8, back up these 6 files from your game folder:
+   `plugins/GTAIV.EFLC.FusionFix.ini`, `update/common/data/handling.dat`, `update/common/data/vehicles.ide`,
+   `update/pc/anim/cutsprops.img`, `update/pc/models/cdimages/componentpeds.img`, `update/pc/models/cdimages/vehicles.img`.
+3. Extract the patch and copy the `plugins` and `update` folders from inside `Vice City Actual Next Gen 8.1 Patch` next to
+   `GTAIV.exe`, choosing **Replace / Overwrite**.
+4. Start the game. Existing saves keep working; nothing new is written into them.
+
+If you edited `GTAIV.EFLC.FusionFix.ini` yourself, don't copy the patch's copy. Keep yours and set
+`VehicleBudget = 219829248`. To remove the patch, put the 6 backed-up files back (or extract them from the Release 8
+archive). The patch's own `README.md` and `SHA256SUMS-files.txt` have the same steps and file checksums.
+
+### 8.1 test status
+
+Tested in game: the HD Cheetah and Barracks, the 1024 textures on the other vehicles, and the club dancers. Not yet confirmed
+in game: the final texture-packing pass, the weight and balance changes, the Sentinel XS fix and a full New Game → save →
+quit → relaunch → load run with all of 8.1. If traffic turns into all taxis or you get new stuttering, the bigger vehicle
+textures are the first thing to check.
+
 ## What's new in Release 8
 
 Release 8 brings 1980s Miami crowds, the Ballad of Gay Tony parachute, a rebuilt Pole Position strip club and a simpler,
@@ -321,6 +373,7 @@ This build keeps the Complete Edition. The important .NET features were rebuilt 
    and `plugins` folders must sit directly beside the executable.
 5. **Keep your GTA IV Documents folder, `Profiles` saves and `User Music`. No Documents-folder deletion is required.**
 6. Launch the game and choose **New Game** for a fresh installation.
+7. Optional: install the [8.1 Patch](#81-patch) on top.
 
 On Linux / Steam Deck, if the loader does not activate, use this Steam launch option:
 
@@ -378,7 +431,7 @@ This checks the changed systems in one pass; it does not certify every mission o
 
 Close the game, then remove this build's `update`, `plugins` and `DLSSIV` folders and its loose files beside `GTAIV.exe`:
 `dinput8.dll`, `d3d9.dll`, `d3d9.cfg`, `DLSS-IV.asi`, `DLSS-IV.cfg`, `DLSS-IV README.txt`, `vulkan.dll` and `update.txt`.
-Remove the build's README if you copied it there. Restore any files you backed up from a previous mod setup.
+Remove the build's README if you copied it there. The 8.1 Patch adds no extra files, so this also removes it. Restore any files you backed up from a previous mod setup.
 
 Keep the GTA IV Documents folder and its saves. The conversion does not replace the original Rockstar executable or data archives.
 
