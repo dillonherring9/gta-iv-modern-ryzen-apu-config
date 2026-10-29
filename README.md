@@ -1,159 +1,167 @@
-# Vice City NextGen — Linux/Proton-friendly build for GTA IV: The Complete Edition
+# GTA Vice City Actual Next Gen 7.0.1 — Final Port for GTA IV: The Complete Edition
 
-A community build of **GTA Vice City NextGen** for the current Steam/Rockstar release of
-**GTA IV: The Complete Edition (1.2.0.59)**. Everything installs into GTA IV's `update` folder
-through FusionFix's overloader, so no original game files are replaced, and the Rockstar Games
-Launcher has nothing to "repair".
+**A port of Vice City Actual Next Gen Edition (VCANGE) 7.0.1 to GTA IV: The Complete Edition (1.2.0.59).**
 
-It brings together the content of **Vice City Actual Next-Gen Edition (VCANGE) 7.0.1** and several
-HD packs on top of Kn4ckers' legal Complete Edition release of Vice City NextGen — **without any
-.NET script hooks** (ScriptHookDotNet / IVSDK .NET), so it runs on Linux through Proton as well as
-on Windows.
+VCANGE 7.0.1 is built for the old 1.0.8.0 game; this port runs it natively on the Complete Edition.
+For Windows, Linux and Steam Deck (Proton). FusionFix 5.1.2 and DLSS-IV are included and already set up.
 
-> I did not make these mods. This is a port and integration of other people's work, assembled and
-> debugged with AI assistance. All credit goes to the original authors listed below.
+No .NET script mods and no ScriptHook: everything runs through FusionFix's `update` overlay, native plugins and native
+game scripts. `GTAIV.exe` and the original Rockstar data archives are not replaced.
 
-## Features
+> [!IMPORTANT]
+> I did not create the original mods. I ported, fixed and packaged them to run on the Complete Edition. All credit goes to
+> the authors listed under [Credits](#credits).
 
-- Vice City NextGen (Revolution Team), via Kn4ckers' Complete Edition release
-- VCANGE 7.0.1 content: reworked scripts and missions, restored weapons and aircraft, extra vehicles,
-  map areas (Everglades and more), HUD, fonts, loading screens and fixes
-- Proper HD Era Vehicles – Lore Friendly, with its VCANGE handling tweaks
-- Realistic Handling & Physics
-- Restored weapons with their animations
-- HD map textures (visually reviewed — replacements that changed the art or the 1986 look were left out)
-- Interior and cutscene-prop improvements (IaCF_VC, CRTP) and outfit-aware cutscenes (Cutscene Recognition)
-- VCNG HD Pedestrians with photoreal textures, and photoreal Tommy/cutscene characters
-- Clear "Mint" turquoise water and a 1980s Miami weather/lighting palette
-- GTA V-style health regeneration (native script — refills to half the bar while standing still)
-- Repeatable Downtown shooting range and wheelie/stoppie cash bonuses (native scripts, experimental)
-- Volumetric light beams (VolumetricLights plugin)
-- Optional DLSS / FSR upscaling through DLSS-IV — works on NVIDIA, AMD and Intel cards
+> [!NOTE]
+> **Adult content:** the Pole Position strip club's dancers are nude, and so is the stripper in the club's purchase
+> cutscene. Nudity appears only inside the club.
 
-## VCANGE 8.0
+## What's in it
 
-VCANGE 8.0 is not out yet — I'm waiting for it too. GTATrilogyGames has been showing it as a work in
-progress: a total overhaul with more content than 7.0.1, which this build is based on. Please don't
-ask me or the VCANGE team for 8.0 builds, leaks or release dates; follow their channels instead.
+### Vice City
 
-VCANGE is made by **GTATrilogyGames** with the **VCNE modding community** and **DayL's modding
-community**. They spent months restoring missions, weapons, vehicles, map areas and countless
-details, and this build would not exist without them. Please support them directly:
+- Vice City NextGen (Revolution Team) through Kn4ckers' Complete Edition release, with VCANGE 7.0.1's reworked scripts and
+  missions, restored weapons and aircraft, extra vehicles, extra map areas (Everglades, Gator Keys and more), HUD, fonts
+  and loading screens.
+- Classic Vice City activities as native scripts: **all 35 rampages** with a skull pickup, **insane stunt bonuses**,
+  **shop hold-ups** at 12 stores, **fast-food counters** that heal you, **Leaf Links security**, the Downtown shooting
+  range and wheelie/stoppie bonuses.
+- **Parachute:** you carry one in any helicopter or plane. Jump, press **Sprint** to open, steer with the movement keys
+  or stick, and press **Enter Vehicle** to cut away. It closes by itself when you land.
+- Story-based wanted limits and a six-star army response.
+- Pole Position strip club with its own dancers (club only).
+- Independence FM as a tenth radio station.
 
-- GitHub (official releases): <https://github.com/GTATrilogyGames/ViceCityActualNextGenEditionModpack>
-- YouTube (showcases and 8.0 progress): <https://www.youtube.com/@GTATrilogyGames>
-- GTAForums: <https://gtaforums.com/topic/1002512-grand-theft-auto-vice-city-actual-nextgen-edition/>
+### Look
 
-Linux and Steam Deck players: if you enjoy this build, leave the VCANGE team a friendly comment saying
-you play through Proton. I hope 8.0, or a later release, runs on the Complete Edition without .NET
-script hooks so it works on Linux out of the box — a wish, not a request; it's their project and their
-call.
+- Proper HD Era Vehicles with upscaled vehicle textures and sharper badges and logos.
+- Photoreal Tommy, cutscene and story characters, pedestrians, props, palms, grass, sand, water and city surfaces.
+- HD map textures, IaCF_VC and CRTP interiors, and outfit-aware cutscenes.
+- 1980s Miami pedestrian clothing and 1980s Miami crowds for every district by time of day.
+- Turquoise Miami ocean and pools, Mint water, a Miami sky and a 1980s colour grade.
+- Project Thunder lightning and storms, Xbox rain droplets, and DLSS / FSR upscaling through DLSS-IV.
 
-## What is different from VCANGE
+### Gameplay
 
-VCANGE replaces your game with the 2008 `GTAIV.exe` 1.0.8.0 (Games for Windows Live) and relies on
-.NET script mods. This build keeps the Complete Edition and leaves those out.
+- Realistic Handling & Physics, with revised weight and balance for cars, bikes, helicopters, planes, boats and RC toys.
+- Restored weapons and animations; 20 guns with adjusted damage, fire rate, magazines and range; rifles pierce armour.
+- Realistic Euphoria ragdolls for pedestrians, GTA IV's default ragdoll for Tommy, and Army/MMA melee moves.
+- Native **F7 Vice City Menu** with Gameplay Tweaks (save anywhere outside missions, skip radio track, holster and more).
+- Full health when a cutscene starts and ends.
 
-| VCANGE component | In this build |
-|---|---|
-| `update` folder content | Included in full (plus the fixes below) |
-| Downgrade to GTAIV.exe 1.0.8.0 + xlive | Not used — stays on Complete Edition 1.2.0.59 |
-| IVSDK .NET / ScriptHookDotNet scripts (LibertyTweaks, WeapFuncs, MoveImprove, wanted/flying music, …) | Not included (do not run under Proton). Health regen was re-made as a native script |
-| Plugins built for 1.0.7/1.0.8 only (IVTweaker, ZMenu, ScriptHook, XLivelessAddon, V-Handling) | Not included |
-| ZolikaPatch | Not included (no confirmed Complete Edition support; FusionFix covers most of it). Pop-up headlights on three cars therefore stay fixed |
-| VCANGE's own sound set | **Not included** — see Known limitations |
+## Added and fixed in this port
 
-### Fixes applied while porting
+This release brings together the original authors' work with additional scripting, tuning and repairs made for this
+Complete Edition build. The highlights below describe the work added to the port; see [Credits](#credits) for the
+original mods and assets.
 
-- Save loading crash: two props (`amb_paperbag05`, `amb_comb`) were registered by two collision
-  dictionaries in the RestoredWeapons archive; the duplicates were removed.
-- Save loading crash: VCANGE's audio configuration breaks loading saves — the original Vice City
-  audio set is used.
-- "Riot" mission: the player could lose control after the intro cutscene (the script waited for a
-  sound bank that does not exist); fixed.
-- Damaged textures repaired: APC and Infernus (vehicles), tear gas, AUG and P90 (weapons).
-- Missing weapon animation sets added (AK-47, Tec-9, Uzi, minigun, flamethrower, AUG, M16, AA-12,
-  sawn-off, grenade launcher) — VCANGE expected them from an optional pack.
-- Missing assets VCANGE's scripts use: bribe-star pickups, the adrenaline pickup animation, two
-  Ocean Beach neon signs, alternate outfit cutscenes.
-- Data fixes: vehicle colour names (Armadillo, Grancher), traffic-group typo (Schafter), sniper
-  animation set.
+### Classic Vice City activities
+
+- **Rampages:** 35 original-style challenges, marked by a skull pickup, with target spawning and kill tracking.
+- **Insane stunts:** earn stunt bonuses while driving. The stunt script checks that you remain the driver.
+- **Shop hold-ups:** rob 12 stores; shopkeepers can return after their cooldown if they are killed.
+- **Food counters:** buy food to restore health. Counters remain available if you first visit with full health or too
+  little money.
+- **Leaf Links security:** a native script handles golf-course security and weapon pickups.
+
+### Parachute and gameplay
+
+- A new native **aircraft parachute**, using the credited 2009 mod's canopy and pack models. Jump from a helicopter or
+  plane, deploy with Sprint, steer and cut away; the canopy closes on landing or water entry.
+- **Weapon tuning:** damage, fire rate, magazine size, range and other values adjusted for 20 guns. Rifle-calibre weapons
+  can penetrate armour, and selected mission enemies have revised health.
+- **Ragdoll and fighting:** realistic Euphoria behaviour for NPCs, GTA IV's default ragdoll behaviour for Tommy, and
+  Army/MMA moves retained.
+- **Cutscene healing:** Tommy returns to full health at the start and end of cutscenes.
+
+### Vehicles and visuals
+
+- **Handling and physics:** adjusted vehicle mass and balance across cars, motorcycles, aircraft, boats and RC toys;
+  repaired wheel and rider physics data for selected vehicles.
+- **Helicopters:** handling fixes for the Demolition Man RC helicopter and Sparrow.
+- **Beater police cruiser:** a 1978 Ford Fairmont VCPD model with matched handling, wheels and colours.
+- **Vehicle textures:** upscaled vehicle texture dictionaries with extra attention to badges and lettering; corrected
+  texture packaging that caused visible corruption on affected vehicles and pickups.
+- **Miami atmosphere:** district- and time-based pedestrian populations, period clothing, updated environmental textures
+  and a reworked Pole Position club.
+
+### Compatibility and fixes
+
+- Ported and configured for **GTA IV: The Complete Edition 1.2.0.59** with FusionFix, native scripts and plugins.
+- Mission text corrections and a revised main-menu background.
+- Original Vice City NextGen audio configuration retained for save loading, with Independence FM added.
+- APC cannon and restored weapons configured to work in the Complete Edition build.
+- New Game and save → quit → relaunch → load tested on Linux/Proton alongside the final feature checks.
 
 ## Requirements
 
-- A legal copy of **GTA IV: The Complete Edition**, updated to **1.2.0.59** (Steam or Rockstar Games Launcher)
-- **FusionFix 5.1.2 or newer** — <https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/releases>
-- Linux: Proton (tested with Proton-CachyOS through Lutris/umu). Windows: nothing extra
-- Optional: **DLSS-IV** for DLSS/FSR upscaling (download it from its own page; not bundled here)
+- Your own legal copy of **GTA IV: The Complete Edition 1.2.0.59**.
+- About 9 GB free for the extracted files, plus space for the download.
+- Linux / Steam Deck: Proton.
 
 ## Installation
 
-1. Install GTA IV: The Complete Edition and start it once.
-2. Install FusionFix (copy its files into the GTA IV folder).
-3. **Linux only:** make sure the game loads FusionFix's `dinput8.dll` instead of Wine's.
-   In Steam launch options: `WINEDLLOVERRIDES="dinput8=n,b" %command%`.
-   In Lutris: *Runner options → DLL overrides → `dinput8` = `n,b`*.
-4. Download every part of this release and extract it into the GTA IV folder, merging folders:
-   - `update/` — everything for Vice City
-   - `plugins/VolumetricLights.asi` and `VolumetricLights.ini`
-5. Set these in `plugins/GTAIV.EFLC.FusionFix.ini`:
-   ```ini
-   UnlockFramerateDuringLoadscreens = 0
-   VehicleBudget = 146552832
-   ExtendedLimits = 1
-   EpisodicVehicles = 1
-   ```
-6. Start the game and choose **New Game**.
+1. Close the game. Start from an unmodded Complete Edition and launch it once.
+2. Move any existing `update`, `plugins` or `DLSSIV` folders out of the game folder.
+3. Download **all** archive parts from the [release](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/releases/tag/R1)
+   into one folder. Check them against `SHA256SUMS.txt`, then open the `.001` part with 7-Zip.
+4. Copy **everything inside the extracted `Release` folder** next to `GTAIV.exe`.
+5. Start the game and choose **New Game**. Your Documents folder, saves and `User Music` stay as they are.
 
-### Optional: DLSS-IV (any graphics card)
+Linux / Steam Deck: if the loader doesn't start, use the Steam launch option
+`WINEDLLOVERRIDES="dinput8=n,b" %command%` (in Lutris: DLL override `dinput8` = `n,b`).
 
-1. Install DLSS-IV following its readme (it brings its own `vulkan.dll` and `DLSSIV` folder).
-2. In the game's graphics menu, set FusionFix's **Graphics API to Vulkan** and **Anti-aliasing to Off**.
-3. In `DLSS-IV.cfg` leave `upscaler=-1` (automatic): DLSS on NVIDIA RTX cards, FSR on everything else
-   (FSR 4 on Radeon RX 7000/9000, FSR 3.1 on other cards).
-4. Linux with an NVIDIA card: DLSS needs NVAPI enabled in Proton
-   (`PROTON_ENABLE_NVAPI=1`, or the DLSS option in Lutris). AMD and Intel cards use FSR and need nothing extra.
+**Graphics:** check **Graphics API: Vulkan** and **Anti-aliasing: Off** in Display settings. DLSS-IV uses DLSS on NVIDIA
+RTX cards and FSR on others; NVIDIA under Proton needs NVAPI (`PROTON_ENABLE_NVAPI=1`).
 
-## Uninstalling
+## Controls
 
-Delete the Vice City files you added to `update/` and the two VolumetricLights files from `plugins/`.
-The original game files were never changed.
+| Input | Action |
+|---|---|
+| **F7** / **LB + D-pad right** | Vice City Menu (D-pad up also opens it) |
+| Arrows / numpad / D-pad · Enter / A · Backspace / B | Move · select · back in the menu |
+| **Ctrl+F7** | Project Thunder menu |
+| **Alt+V** | First-person camera |
+| **N** in a vehicle · **Tab** on foot | Next radio track · holster weapon |
+| **Sprint** while falling from an aircraft · **Enter Vehicle** | Open the parachute · cut away |
+| Aim with fists, bat, knife, Pool Cue or Katana, then **Z / V / C / X / G** | Army/MMA moves (**F5** switches style) |
 
 ## Saves
 
-Saves are stored by the game as usual. Saves made with VCANGE's own sound set (or with VCANGE on
-1.0.8.0) are not compatible with this build — start a New Game.
+Save at a safehouse or with F7 → Gameplay Tweaks → Save Game Now (not during missions). Saves are in
+`Documents\Rockstar Games\GTA IV\Profiles\` (on Proton, inside the game's Wine prefix).
 
-## Known limitations
+## Uninstalling
 
-- **VCANGE's Vice City sounds** (original sirens, tyre skids, weapon sounds) are not included. Every
-  variant tried — trimming slots, removing duplicated sound banks, removing episode banks — still
-  crashed when loading a save. The original Vice City NextGen audio is used instead.
-- The shooting range and stunt bonuses are new, lightly tested scripts.
-- A desk prop in the bank interior is missing (it is missing from the base mod as well).
-- The airport seaplane dock was disabled by VCANGE and stays disabled.
-- Some interior models from IaCF reference a few detail textures that do not exist anywhere; affected
-  surfaces look slightly flatter.
+Remove the `update`, `plugins` and `DLSSIV` folders and the loose files `dinput8.dll`, `d3d9.dll`, `d3d9.cfg`,
+`DLSS-IV.asi`, `DLSS-IV.cfg`, `DLSS-IV README.txt`, `vulkan.dll`, `update.txt` and this README from the game folder.
+
+## Notes
+
+- Tested in game on Linux/Proton, including New Game and save → quit → relaunch → load. Windows and Steam Deck weren't
+  tested separately.
+- The original Vice City NextGen audio configuration is used, because VCANGE's breaks save loading.
+- The parachute has no sounds. Rampages count target kills without checking the weapon or drive-by condition.
 
 ## Credits
 
-- **Revolution Team** — GTA Vice City NextGen Edition
-- **Kn4ckers** — Vice City for GTAIV: The Complete Edition (legal release, used as the base):
-  <https://github.com/knackers4/vce>
-- **GTATrilogyGames** and the contributors credited in VCANGE — Vice City Actual Next-Gen Edition 7.0.1
-- Authors of **Proper HD Era Vehicles – Lore Friendly** and the creators it credits
-- **Shturmovik2** — Realistic Handling & Physics
-- Authors of **VCNG HD Pedestrians**, the **VCNE HD map pack**, **RestoredWeapons**, **IaCF_VC**, **CRTP**,
-  **Cutscene Recognition**, **OG-LikeBehaviour** (weapon animation sets only) and **Various Map Edits**
-  (bribe-star and pickup animation files only)
-- **Mint Ocean Waters** mod authors
-- Author of **VolumetricLights**
-- **ThirteenAG** and contributors — FusionFix
-- Author of **DLSS-IV** (not bundled)
+- **Revolution Team**: GTA Vice City NextGen Edition
+- **Kn4ckers**: [Vice City for GTAIV: The Complete Edition](https://github.com/knackers4/vce)
+- **GTATrilogyGames** and contributors: [Vice City Actual Next-Gen Edition (VCANGE)](https://github.com/GTATrilogyGames/ViceCityActualNextGenEditionModpack)
+- **ThirteenAG** and contributors: [FusionFix](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix) and Xbox Rain Droplets
+- **ItsClonkAndre**: Project Thunder (GPL-3.0), as Project Thunder CE
+- **DLSS-IV** author
+- **1978 Ford Fairmont VCPD:** **Driver [GCU Modding Team]**, **DMN [GTA-Unlimited Team]**, **BubLik [GCU Modding Team]** and **deepcover0000**
+- Author of the 2009 GTA IV **parachute mod** (`para.asi`): canopy and pack models and the parachute behaviour
+- **metalwars** and **Kevin1230san**: the nude female models used for the Pole Position dancers
+- **CGP**: Enhanced Fighting And Euphoria (rebuilt natively)
+- **LibertyTweaks** authors (rebuilt natively); **Zolika1351**: ZMenu (inspiration for the F7 menu)
+- Authors of **Proper HD Era Vehicles – Lore Friendly**, **Realistic Handling & Physics** (Shturmovik2), **VCNG HD Pedestrians**,
+  the **VCNE HD map pack**, **RestoredWeapons**, **IaCF_VC**, **CRTP**, **Cutscene Recognition**, **Mint Ocean Waters** and **TreesMod**
+- **Rockstar Games**: Grand Theft Auto: Vice City and Grand Theft Auto IV
 
 ## Disclaimer
 
-This is an unofficial fan project, not affiliated with Rockstar Games, Take-Two Interactive or the
-authors of the included mods. It contains only modified/added files — you need your own legal copy
-of GTA IV: The Complete Edition. Please support the original mod authors and respect their
-redistribution terms.
+Unofficial fan project, not affiliated with Rockstar Games, Take-Two Interactive or the authors of the included mods.
+It contains only modified and added files; you need your own legal copy of GTA IV: The Complete Edition. Please support
+the original mod authors and respect their redistribution terms.
