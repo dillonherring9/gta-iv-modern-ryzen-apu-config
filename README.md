@@ -25,7 +25,8 @@ game scripts. `GTAIV.exe` and the original Rockstar data archives are not replac
   **shop hold-ups** at 12 stores, **fast-food counters** that heal you, **Leaf Links security**, the Downtown shooting
   range and wheelie/stoppie bonuses.
 - **Parachute:** you carry one in any helicopter or plane. Jump, press **Sprint** to open, steer with the movement keys
-  or stick, press **Enter Vehicle** to cut away. It closes by itself when you land.
+  or stick, press **Enter Vehicle** to cut away. It closes by itself when you land. With the
+  [Parachute Backpack Patch](#parachute-backpack-patch), Tommy wears the real TBoGT parachute backpack.
 - Story-based wanted limits and a six-star army response.
 - Pole Position strip club with its own dancers (club only).
 - Independence FM as a tenth radio station.
@@ -67,6 +68,16 @@ Linux / Steam Deck: if the loader doesn't start, use the Steam launch option
 **Graphics:** check **Graphics API: Vulkan** and **Anti-aliasing: Off** in Display settings. DLSS-IV uses DLSS on NVIDIA
 RTX cards and FSR on others; NVIDIA under Proton needs NVAPI (`PROTON_ENABLE_NVAPI=1`).
 
+## Parachute Backpack Patch
+
+A small optional add-on (`Vice City Actual Next Gen - Parachute Backpack Patch.7z`, about 3 MB). With the parachute
+equipped, Tommy wears the red ProLaps backpack from *The Ballad of Gay Tony*, fitted to his back, instead of the loose pack
+model that sat sideways. Everything else about the parachute works as before, and existing saves keep working.
+
+To install, close the game and copy the `update` folder from inside the patch folder next to `GTAIV.exe`, choosing
+**Replace / Overwrite**. The patch's `Restore Final Release Backpack` folder undoes it the same way. It changes only
+`update/common/data/cdimages/script.img`.
+
 ## Controls
 
 | Input | Action |
@@ -106,6 +117,7 @@ Remove the `update`, `plugins` and `DLSSIV` folders and the loose files `dinput8
 - **DLSS-IV** author
 - **1978 Ford Fairmont VCPD:** **Driver [GCU Modding Team]**, **DMN [GTA-Unlimited Team]**, **BubLik [GCU Modding Team]** and **deepcover0000**
 - Author of the 2009 GTA IV **parachute mod** (`para.asi`): canopy and pack models and the parachute behaviour
+- **Rockstar Games** (*The Ballad of Gay Tony*): the parachute backpack used by the Parachute Backpack Patch
 - **metalwars** and **Kevin1230san**: the nude female models used for the Pole Position dancers
 - **CGP**: Enhanced Fighting And Euphoria (rebuilt natively)
 - **LibertyTweaks** authors (rebuilt natively); **Zolika1351**: ZMenu (inspiration for the F7 menu)
