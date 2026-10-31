@@ -1,4 +1,4 @@
-# GTA Vice City Actual Next Gen 7.0.1 — Final Port for GTA IV: The Complete Edition
+# GTA Vice City Actual Next Gen 7.0.1 — Final Release for GTA IV: The Complete Edition
 
 **A port of Vice City Actual Next Gen Edition (VCANGE) 7.0.1 to GTA IV: The Complete Edition (1.2.0.59).**
 VCANGE 7.0.1 is built for the old 1.0.8.0 game; this port runs it natively on the Complete Edition.
@@ -25,8 +25,8 @@ game scripts. `GTAIV.exe` and the original Rockstar data archives are not replac
   **shop hold-ups** at 12 stores, **fast-food counters** that heal you, **Leaf Links security**, the Downtown shooting
   range and wheelie/stoppie bonuses.
 - **Parachute:** you carry one in any helicopter or plane. Jump, press **Sprint** to open, steer with the movement keys
-  or stick, press **Enter Vehicle** to cut away. It closes by itself when you land. With the
-  [Parachute Backpack Patch](#parachute-backpack-patch), Tommy wears the real TBoGT parachute backpack.
+  or stick, press **Enter Vehicle** to cut away. It closes by itself when you land. Tommy wears
+  the real red ProLaps parachute backpack from *The Ballad of Gay Tony* while he carries one.
 - Story-based wanted limits and a six-star army response.
 - Pole Position strip club with its own dancers (club only).
 - Independence FM as a tenth radio station.
@@ -35,6 +35,9 @@ game scripts. `GTAIV.exe` and the original Rockstar data archives are not replac
 
 - Proper HD Era Vehicles with every vehicle texture at 1024 pixels and crisp badges and logos.
 - Photoreal Tommy, cutscene and story characters, pedestrians, props, palms, grass, sand, water and city surfaces.
+- Street lamps where the original 2002 Vice City had them, using the original lamp designs; every lamp is breakable and lights up at night.
+- Solid palm and tree trunks: you crash into them instead of driving through. Bushes, hedges and ferns stay passable.
+- Distant palms and buildings (the airport terminal, the North Beach seawalls) match their close-up models, so they no longer change shape or pop in.
 - HD map textures, IaCF_VC and CRTP interiors, and outfit-aware cutscenes.
 - 1980s Miami pedestrian clothing and 1980s Miami crowds for every district by time of day.
 - Turquoise Miami ocean and pools, Mint water, a Miami sky and a 1980s colour grade.
@@ -58,8 +61,9 @@ game scripts. `GTAIV.exe` and the original Rockstar data archives are not replac
 
 1. Close the game. Start from an unmodded Complete Edition and launch it once.
 2. Move any existing `update`, `plugins` or `DLSSIV` folders out of the game folder.
-3. Download **all** archive parts into one folder and open the `.001` part with 7-Zip.
-4. Copy **everything inside the extracted `Release` folder** next to `GTAIV.exe`.
+3. Download **all** parts (`FinalRelease.zip.001`, `.002`, …) into one folder and open `FinalRelease.zip.001` with 7-Zip
+   (Windows) or run `7z x FinalRelease.zip.001` (Linux). Windows Explorer can't open split archives.
+4. Copy **everything inside the extracted `FinalRelease` folder** next to `GTAIV.exe`.
 5. Start the game and choose **New Game**. Your Documents folder, saves and `User Music` stay as they are.
 
 Linux / Steam Deck: if the loader doesn't start, use the Steam launch option
@@ -67,16 +71,6 @@ Linux / Steam Deck: if the loader doesn't start, use the Steam launch option
 
 **Graphics:** check **Graphics API: Vulkan** and **Anti-aliasing: Off** in Display settings. DLSS-IV uses DLSS on NVIDIA
 RTX cards and FSR on others; NVIDIA under Proton needs NVAPI (`PROTON_ENABLE_NVAPI=1`).
-
-## Parachute Backpack Patch
-
-A small optional add-on (`Vice City Actual Next Gen - Parachute Backpack Patch.7z`, about 3 MB). With the parachute
-equipped, Tommy wears the red ProLaps backpack from *The Ballad of Gay Tony*, fitted to his back, instead of the loose pack
-model that sat sideways. Everything else about the parachute works as before, and existing saves keep working.
-
-To install, close the game and copy the `update` folder from inside the patch folder next to `GTAIV.exe`, choosing
-**Replace / Overwrite**. The patch's `Restore Final Release Backpack` folder undoes it the same way. It changes only
-`update/common/data/cdimages/script.img`.
 
 ## Controls
 
@@ -117,7 +111,7 @@ Remove the `update`, `plugins` and `DLSSIV` folders and the loose files `dinput8
 - **DLSS-IV** author
 - **1978 Ford Fairmont VCPD:** **Driver [GCU Modding Team]**, **DMN [GTA-Unlimited Team]**, **BubLik [GCU Modding Team]** and **deepcover0000**
 - Author of the 2009 GTA IV **parachute mod** (`para.asi`): canopy and pack models and the parachute behaviour
-- **Rockstar Games** (*The Ballad of Gay Tony*): the parachute backpack used by the Parachute Backpack Patch
+- **Rockstar Games** (*The Ballad of Gay Tony*): the parachute backpack
 - **metalwars** and **Kevin1230san**: the nude female models used for the Pole Position dancers
 - **CGP**: Enhanced Fighting And Euphoria (rebuilt natively)
 - **LibertyTweaks** authors (rebuilt natively); **Zolika1351**: ZMenu (inspiration for the F7 menu)
