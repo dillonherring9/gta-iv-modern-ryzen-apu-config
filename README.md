@@ -1,5 +1,7 @@
 # 🌴 GTA Vice City Actual Next Gen 7.0.1 for GTA IV: The Complete Edition
 
+**Release: AllFixedUp**
+
 **A port of Vice City Actual Next Gen Edition (VCANGE) 7.0.1 to GTA IV: The Complete Edition (1.2.0.59).**
 VCANGE 7.0.1 was built for the old 1.0.8.0 game. This port runs it natively on the Complete Edition, on Windows, Linux
 and Steam Deck (Proton). FusionFix 5.1.2 and DLSS-IV are included and already set up.
@@ -21,9 +23,23 @@ native game scripts. `GTAIV.exe` and the original Rockstar data archives are not
 - Vice City NextGen (Revolution Team) through Kn4ckers' Complete Edition release, with VCANGE 7.0.1's reworked scripts and
   missions, restored weapons and aircraft, extra vehicles, extra map areas (Everglades, Gator Keys and more), fonts and
   loading screens.
-- Classic Vice City activities as native scripts: **all 35 rampages** with a skull pickup 💀, **insane stunt bonuses**,
-  **shop hold-ups** at 12 stores, **fast-food counters** that heal you, **Leaf Links security**, the Downtown shooting
-  range and wheelie/stoppie bonuses.
+- Classic Vice City activities as native scripts:
+  - **All 35 rampages 💀** at their 2002 places, each with a briefing, a countdown and a kill counter. You're handed the
+    rampage weapon and it's named on screen. On foot, only kills made with it count; vehicle rampages count every car
+    you destroy.
+  - **Hidden packages** at their 2002 places, including inside the police station and the mall, with the 2002 rewards
+    (chainsaw, Python, flamethrower, minigun and more).
+  - **Business revenue:** a gold **$** at every business you own fills up each day; walk in to collect it.
+  - **Shop hold-ups** at 12 stores, **fast-food counters** that heal you, **Leaf Links security**, the Downtown shooting
+    range, **insane stunt bonuses** and wheelie/stoppie bonuses.
+- **2002-style pickups:** a clean adrenaline pill, the rampage skull, a heart for health, **save cassettes** at every save
+  point, and **green / red house icons** at properties that are for sale or still locked.
+- **Completion counted out of 154, like 2002:** rampages, the shooting range and shop hold-ups count towards it.
+- **A Vice City stats screen:** the Liberty City lines are gone, and it lists rampages passed, stores knocked off,
+  properties and assets owned, revenue collected, people saved, fires put out, pizzas delivered, hidden packages found
+  and your best paramedic and firefighter levels.
+- **Club crowds react:** fire a gun or hit someone inside the Malibu or Pole Position and the crowd stops dancing; most
+  run from you and some cower.
 - **Walk into Ken Rosenberg's office** in free roam as well as in missions: the Washington Beach building has its
   corridors, stairwell, collision and HD office.
 - **VCANGE's map edits:** the overhauled Vercetti mansion inside and out on Starfish Island, Ocean View Hotel room 317,
@@ -73,9 +89,12 @@ native game scripts. `GTAIV.exe` and the original Rockstar data archives are not
 
 ### 🗣️ Languages
 
-- Play in **English, French, German, Italian or Spanish**: pick the language in **Settings → Display → Language**.
+- Play in **English, French, German, Italian, Spanish, Russian or Japanese**: pick the language in
+  **Settings → Display → Language**.
 - The text, mission titles, passed/failed banners and intro images are translated, and so are the extra Vice City
-  activities. Vehicle, radio station and brand names stay in English.
+  activities and the stats screen. Vehicle, radio station and brand names stay in English.
+- **日本語:** the full Japanese translation with its own Japanese font. The pause menu tabs stay in Latin letters because
+  the Vice City menu font has no Japanese characters.
 
 ### 🎨 Look
 
@@ -141,7 +160,7 @@ can crash or hang. Leftover plugins and script hooks can also clash with this re
 
 - **Download every part fresh** and check it against `SHA256SUMS.txt`. A broken or incomplete part gives you broken files.
 - **Extract into a new, empty folder.**
-- **Copy everything** inside the `AVCNGPortDone` folder into the game folder. Don't skip, rename or swap files, and don't
+- **Copy everything** inside the `AllFixedUp` folder into the game folder. Don't skip, rename or swap files, and don't
   add files from other mods or packs on top.
 - To reinstall, delete everything the mod installed first (see *Uninstalling*), or do the clean game install again.
 
@@ -151,9 +170,9 @@ doesn't touch them. Start a **New Game**: saves made with other mods may not loa
 ## 📦 Installation
 
 1. Close the game. Make sure you have a **clean install** (see above) that you have launched once.
-2. Download **all** parts (`AVCNGPortDone.zip.001`, `.002`, …) into one folder and open `AVCNGPortDone.zip.001` with
-   7-Zip (Windows) or run `7z x AVCNGPortDone.zip.001` (Linux). Windows Explorer can't open split archives.
-3. Copy **everything inside the extracted `AVCNGPortDone` folder** next to `GTAIV.exe`.
+2. Download **all** parts (`AllFixedUp.zip.001`, `.002`, …) into one folder and open `AllFixedUp.zip.001` with
+   7-Zip (Windows) or run `7z x AllFixedUp.zip.001` (Linux). Windows Explorer can't open split archives.
+3. Copy **everything inside the extracted `AllFixedUp` folder** next to `GTAIV.exe`.
 4. Start the game and choose **New Game**. Your Documents folder, saves and `User Music` stay as they are.
 
 Linux / Steam Deck: if the loader doesn't start, use the Steam launch option
@@ -180,7 +199,7 @@ RTX cards and FSR on others; NVIDIA under Proton needs NVAPI (`PROTON_ENABLE_NVA
   chase music. Add your own `.mp3`, `.wav` or `.ogg` files to `plugins/VCMusic/Wanted`, `Death` or `Flying` (up to 16
   each).
 - `plugins/VCMemory.ini`: the cutscene flush (on/off, clear radius, model budgets, traffic pause) and `[Outfits]`
-  (`Enabled=1` makes cutscenes follow your outfit).
+  (`Enabled=1` makes cutscenes follow your outfit). The same plugin adds Japanese to the language menu.
 - The plugins write logs next to themselves (`VCMusic.log`, `VCMemory.log`, `mjolnir_cpu_fix.log`).
 
 ## 💾 Saves
@@ -198,8 +217,10 @@ Remove the `update`, `plugins` and `DLSSIV` folders and the loose files `dinput8
 - Developed and played on Linux/Proton. Windows and Steam Deck weren't tested separately.
 - VCANGE's sound configuration is merged in, except its radio station list, which would break save loading. The radio is
   the Vice City NextGen set.
-- The parachute has no sounds. Rampages count target kills without checking the weapon or drive-by condition.
-- Translations cover the text only; voices and radio stay in English.
+- The parachute has no sounds.
+- Start a **New Game** for the rampage, revenue and stats counters to start from zero.
+- Translations cover the text only; voices and radio stay in English. The Russian and Japanese text for the newest Vice
+  City activities was written for this release and hasn't had a native speaker's review.
 - The Classic HUD's positions are built into its script; they follow your screen's aspect ratio.
 
 ## 🙏 Credits
@@ -220,6 +241,7 @@ Remove the `update`, `plugins` and `DLSSIV` folders and the loose files `dinput8
 - **DLSS-IV** author
 - **AIO All Classic Language Patch v2.0** author, shared by **Contremaitre**: French, German, Italian and Spanish text,
   fonts and translated images
+- **Arcenciel1991**: the Japanese translation and Japanese font (GTA VC Actual NextGen 日本語化 mod)
 - **1978 Ford Fairmont VCPD:** **Driver [GCU Modding Team]**, **DMN [GTA-Unlimited Team]**, **BubLik [GCU Modding Team]** and **deepcover0000**
 - Author of the 2009 GTA IV **parachute mod** (`para.asi`): canopy model and the parachute behaviour
 - Author of **"Parachute port from GTA 5 to GTA 4"**: the parachute backpack
