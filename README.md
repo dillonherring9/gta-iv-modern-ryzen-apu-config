@@ -1,16 +1,14 @@
 # 🌴 GTA Vice City Actual Next Gen 7.0.1 for GTA IV: The Complete Edition
 
-**Release: AllFixedUp**
+**Release: FixedAndOptimised**
 
-**A port of Vice City Actual Next Gen Edition (VCANGE) 7.0.1 to GTA IV: The Complete Edition (1.2.0.59).**
-VCANGE 7.0.1 was built for the old 1.0.8.0 game. This port runs it natively on the Complete Edition, on Windows, Linux
-and Steam Deck (Proton). FusionFix 5.1.2 and DLSS-IV are included and already set up.
-There are no .NET script mods and no ScriptHook. Everything runs through FusionFix's `update` overlay, native plugins and
-native game scripts. `GTAIV.exe` and the original Rockstar data archives are not touched.
+**Vice City Actual Next Gen Edition (VCANGE) 7.0.1, running natively on GTA IV: The Complete Edition (1.2.0.59).**
+Windows, Linux and Steam Deck (Proton). FusionFix 5.1.2, DLSS-IV and full DualSense support come included and set up.
+Nothing else to install: no .NET, no ScriptHook .NET, no ViGEm. Everything runs through FusionFix's `update` overlay,
+native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data archives are never touched.
 
 > [!IMPORTANT]
-> I did not create the original mods. I ported, fixed and packaged them to run on the Complete Edition. All credit goes to
-> the authors listed under [Credits](#-credits).
+> This release builds on the work of many mod authors. All credit goes to them; see [Credits](#-credits).
 
 > [!NOTE]
 > **Adult content:** the Pole Position strip club's dancers are nude, and so is the stripper in the club's purchase
@@ -35,9 +33,8 @@ native game scripts. `GTAIV.exe` and the original Rockstar data archives are not
 - **2002-style pickups:** a clean adrenaline pill, the rampage skull, a heart for health, **save cassettes** at every save
   point, and **green / red house icons** at properties that are for sale or still locked.
 - **Completion counted out of 154, like 2002:** rampages, the shooting range and shop hold-ups count towards it.
-- **A Vice City stats screen:** the Liberty City lines are gone, and it lists rampages passed, stores knocked off,
-  properties and assets owned, revenue collected, people saved, fires put out, pizzas delivered, hidden packages found
-  and your best paramedic and firefighter levels.
+- **A Vice City stats screen:** rampages passed, stores knocked off, properties and assets owned, revenue collected,
+  people saved, fires put out, pizzas delivered, hidden packages found and your best paramedic and firefighter levels.
 - **Club crowds react:** fire a gun or hit someone inside the Malibu or Pole Position and the crowd stops dancing; most
   run from you and some cower.
 - **Walk into Ken Rosenberg's office** in free roam as well as in missions: the Washington Beach building has its
@@ -45,6 +42,7 @@ native game scripts. `GTAIV.exe` and the original Rockstar data archives are not
 - **VCANGE's map edits:** the overhauled Vercetti mansion inside and out on Starfish Island, Ocean View Hotel room 317,
   the Malibu Club interior, the V-Rock building, Phil's place and the junkyard, the airport access road, the Little
   Havana coast road, the Leaf Links walls and hedges, and 1980s street litter, plants and phones.
+- **The airport seaplane dock is back:** walk down its stairs onto the deck, or pull up to it by boat.
 - **Parachute:** you carry one in any helicopter or plane. Jump, press **Sprint** to open, steer with the movement keys
   or stick, press **Enter Vehicle** to cut away. It closes by itself when you land. Real parachute animations from
   *The Ballad of Gay Tony*, and Tommy wears a GTA V-style parachute backpack while he carries one.
@@ -55,6 +53,21 @@ native game scripts. `GTAIV.exe` and the original Rockstar data archives are not
   their health meter runs out.
 - Story-based wanted limits and a six-star army response.
 - Pole Position strip club with its own dancers (club only), and Independence FM as a tenth radio station.
+
+### 🎮 DualSense
+
+- **Full PlayStation 5 DualSense support, built in.** Connect it over USB or Bluetooth and play: it works as a normal
+  game controller with no DS4Windows, ViGEm or Steam Input needed.
+- **Adaptive triggers** for driving and shooting: throttle and brake resistance, ABS stutter, redline buzz, road-surface
+  texture and weapon trigger feel.
+- **Haptics matched to Vice City:** every vehicle follows the engine sound it really uses in Vice City, and every gun
+  follows its Vice City firing and reload sounds. Impacts, explosions, rough roads, gear changes and nearby traffic are
+  felt too.
+- **Controller speaker and HD haptics, like GTA V on PS5:** the mod's sound effects (gunshots, reloads, engines, impacts
+  and more) play on the controller's own speaker and through its HD voice coils, at the moment they happen. Your game
+  sound stays on your PC or TV; only these effects go to the controller.
+- Works **over Bluetooth and USB**, with nothing extra to install on your computer.
+- **Lightbar and player LEDs**, touchpad gestures, and optional gyro aiming and motion steering.
 
 ### 🖥️ Classic HUD
 
@@ -72,10 +85,6 @@ native game scripts. `GTAIV.exe` and the original Rockstar data archives are not
 - **Full health** when a cutscene starts and ends.
 - **Low-health recovery:** when your health bar is below 25% and nothing has hurt you for 3 seconds, it refills 1% per
   second up to 25%. Any hit pauses it, so it never makes you invincible.
-- **Cutscene memory flush:** every cutscene starts with a clean slate. Before it loads, every ambient car, ped and object
-  is cleared, and traffic stays paused until it ends. Mission characters and the car you're sitting in stay. A car you
-  left parked doesn't, so steal another one.
-- Large cutscene models are split into smaller memory pages, so cutscenes load instead of hanging on the loading screen.
 
 ### 🔊 Sound and music
 
@@ -91,9 +100,10 @@ native game scripts. `GTAIV.exe` and the original Rockstar data archives are not
 
 - Play in **English, French, German, Italian, Spanish, Russian or Japanese**: pick the language in
   **Settings → Display → Language**.
-- The text, mission titles, passed/failed banners and intro images are translated, and so are the extra Vice City
-  activities and the stats screen. Vehicle, radio station and brand names stay in English.
-- **日本語:** the full Japanese translation with its own Japanese font. The pause menu tabs stay in Latin letters because
+- Everything on screen is translated: missions, mission titles, passed/failed banners, intro images, the Vice City
+  activities, the stats screen, race messages and the graphics options. Vehicle, radio station and brand names stay in
+  English, as in the original game.
+- **日本語:** the full Japanese translation with its own Japanese font. The pause menu tabs use Latin letters because
   the Vice City menu font has no Japanese characters.
 
 ### 🎨 Look
@@ -118,10 +128,18 @@ native game scripts. `GTAIV.exe` and the original Rockstar data archives are not
 - Realistic Euphoria ragdolls for pedestrians, GTA IV's default ragdoll for Tommy, and Army/MMA melee moves.
 - Native **F7 Vice City Menu** with Gameplay Tweaks (save anywhere outside missions, skip radio track, holster and more).
 
-### ⚙️ Performance
+### ⚙️ Performance and stability
 
 - **Mjolnir IV:** unpins the game's main thread from CPU core 0 so the work spreads across all your cores, lets a
   busy-wait loop yield, and turns off the engine's automatic quality limiter. Helpful on modern 6–16 core CPUs and APUs.
+- **Cutscene memory flush:** every cutscene starts with a clean slate. Before it loads, every ambient car, ped and object
+  is cleared, and traffic stays paused until it ends. Mission characters and the car you're sitting in stay. A car you
+  left parked doesn't, so steal another one.
+- Large cutscene models are split into smaller memory pages, so every cutscene loads instead of hanging on the loading
+  screen.
+- **DLSS / FSR** through DLSS-IV for a sharper picture at a higher frame rate.
+- Every archive, script, map placement, model, collision, texture reference and translation in this release is
+  checked for consistency before it ships.
 
 ## 📋 Requirements
 
@@ -129,6 +147,7 @@ native game scripts. `GTAIV.exe` and the original Rockstar data archives are not
 - About 9.5 GB free for the extracted files, plus space for the download.
 - Windows: the **Microsoft Visual C++ 2015–2022 Redistributable (x86)** (most PCs already have it).
 - Linux / Steam Deck: Proton.
+- Optional: a **DualSense** (PS5) controller. Any other controller, keyboard and mouse work as usual.
 
 ## 🧼 Clean install: please read this first
 
@@ -160,8 +179,8 @@ can crash or hang. Leftover plugins and script hooks can also clash with this re
 
 - **Download every part fresh** and check it against `SHA256SUMS.txt`. A broken or incomplete part gives you broken files.
 - **Extract into a new, empty folder.**
-- **Copy everything** inside the `AllFixedUp` folder into the game folder. Don't skip, rename or swap files, and don't
-  add files from other mods or packs on top.
+- **Copy everything** inside the `FixedAndOptimised` folder into the game folder. Don't skip, rename or swap files, and
+  don't add files from other mods or packs on top.
 - To reinstall, delete everything the mod installed first (see *Uninstalling*), or do the clean game install again.
 
 Your saves are not in the game folder (they're in `Documents\Rockstar Games\GTA IV\Profiles\`), so a clean install
@@ -170,16 +189,28 @@ doesn't touch them. Start a **New Game**: saves made with other mods may not loa
 ## 📦 Installation
 
 1. Close the game. Make sure you have a **clean install** (see above) that you have launched once.
-2. Download **all** parts (`AllFixedUp.zip.001`, `.002`, …) into one folder and open `AllFixedUp.zip.001` with
-   7-Zip (Windows) or run `7z x AllFixedUp.zip.001` (Linux). Windows Explorer can't open split archives.
-3. Copy **everything inside the extracted `AllFixedUp` folder** next to `GTAIV.exe`.
+2. Download **all** parts (`FixedAndOptimised.zip.001`, `.002`, …) into one folder and open `FixedAndOptimised.zip.001`
+   with 7-Zip (Windows) or run `7z x FixedAndOptimised.zip.001` (Linux). Windows Explorer can't open split archives.
+3. Copy **everything inside the extracted `FixedAndOptimised` folder** next to `GTAIV.exe`.
 4. Start the game and choose **New Game**. Your Documents folder, saves and `User Music` stay as they are.
 
 Linux / Steam Deck: if the loader doesn't start, use the Steam launch option
 `WINEDLLOVERRIDES="dinput8=n,b" %command%` (in Lutris: DLL override `dinput8` = `n,b`).
 
-**Graphics:** check **Graphics API: Vulkan** and **Anti-aliasing: Off** in Display settings. DLSS-IV uses DLSS on NVIDIA
+**Graphics:** set **Graphics API: Vulkan** and **Anti-aliasing: Off** in Display settings. DLSS-IV uses DLSS on NVIDIA
 RTX cards and FSR on others; NVIDIA under Proton needs NVAPI (`PROTON_ENABLE_NVAPI=1`).
+
+### 🎮 DualSense setup
+
+- **Windows:** connect the controller and start the game.
+- **Linux / Steam Deck:** turn **Steam Input off** for the game (Steam: game *Properties* → *Controller* → *Disable
+  Steam Input*). If you launch from Steam's Game Mode, also add `SDL_GAMECONTROLLER_IGNORE_DEVICES=` (empty) to the
+  launch options or the game's environment variables (Lutris: *System options* → *Environment variables*), so Steam
+  doesn't hide the controller from the game.
+- **KDE Plasma:** if the touchpad moves the camera like a mouse, open *System Settings* → *Touchpad*, select
+  **DualSense Wireless Controller Touchpad** and untick **Device enabled**.
+- Controller speaker and HD haptics work over Bluetooth out of the box. Over a USB cable they use the controller's own
+  sound device; on Linux, pick its **Analog Surround 4.0** profile in your sound settings.
 
 ## 🎮 Controls
 
@@ -193,14 +224,21 @@ RTX cards and FSR on others; NVIDIA under Proton needs NVAPI (`PROTON_ENABLE_NVA
 | **Sprint** while falling from an aircraft · **Enter Vehicle** | Open the parachute · cut away |
 | Aim with fists, bat, knife, Pool Cue or Katana, then **Z / V / C / X / G** | Army/MMA moves (**F5** switches style) |
 
+A DualSense uses the standard controller layout (Cross = A, Circle = B, Square = X, Triangle = Y).
+
 ## ⚙️ Settings
 
+- `plugins/GTA_IV_DualSense.ini` (created on first start): haptic and trigger strength, which effects are on, lightbar
+  colour and brightness, player LEDs, touchpad gestures, gyro aiming and motion steering.
+- `plugins/VCScriptHook.ini` → `[ControllerAudio]`: controller speaker on/off and volume, Bluetooth audio on/off,
+  haptic strength.
+- `plugins/AudioMap.ini`: which sound each vehicle and weapon plays on the controller. Editing it is safe.
 - `plugins/VCMusic.ini`: turn each kind of music on or off, set the volume and fades, and choose how many stars start the
   chase music. Add your own `.mp3`, `.wav` or `.ogg` files to `plugins/VCMusic/Wanted`, `Death` or `Flying` (up to 16
   each).
 - `plugins/VCMemory.ini`: the cutscene flush (on/off, clear radius, model budgets, traffic pause) and `[Outfits]`
   (`Enabled=1` makes cutscenes follow your outfit). The same plugin adds Japanese to the language menu.
-- The plugins write logs next to themselves (`VCMusic.log`, `VCMemory.log`, `mjolnir_cpu_fix.log`).
+- The plugins write logs next to themselves (`VCMusic.log`, `VCMemory.log`, `VCScriptHook.log`, `mjolnir_cpu_fix.log`).
 
 ## 💾 Saves
 
@@ -214,13 +252,12 @@ Remove the `update`, `plugins` and `DLSSIV` folders and the loose files `dinput8
 
 ## 📝 Notes
 
-- Developed and played on Linux/Proton. Windows and Steam Deck weren't tested separately.
+- Developed and tested on Linux with Proton.
 - VCANGE's sound configuration is merged in, except its radio station list, which would break save loading. The radio is
   the Vice City NextGen set.
 - The parachute has no sounds.
 - Start a **New Game** for the rampage, revenue and stats counters to start from zero.
-- Translations cover the text only; voices and radio stay in English. The Russian and Japanese text for the newest Vice
-  City activities was written for this release and hasn't had a native speaker's review.
+- Translations cover the on-screen text; voices and radio stay in English.
 - The Classic HUD's positions are built into its script; they follow your screen's aspect ratio.
 
 ## 🙏 Credits
@@ -233,10 +270,15 @@ Remove the `update`, `plugins` and `DLSSIV` folders and the loose files `dinput8
 - **DrAnusTart**: Access Rosenberg's Office and HD Overhaul
 - **CyanFire**: Vice City NextGen Edition Classic HUD (rebuilt here as a native script)
 - **A.R Scorpion** (cutscene outfit models) and **xdd5110** (the original cutscene outfit concept): VCNG Cutscene Patch
+- **NodixTech**: [GTA IV DualSense](https://www.nexusmods.com/gta4/mods/1136), adapted here for Vice City
+- **GeorgLegato**: [LinuxAudio4Dualsense5](https://github.com/GeorgLegato/LinuxAudio4Dualsense5) (AGPL-3.0), the DualSense
+  Bluetooth speaker and haptics protocol
+- **Xiph.Org Foundation**: [Opus](https://opus-codec.org) audio codec (BSD licence)
 - **llamacomma**: [Mjolnir IV](https://github.com/llamacomma/Mjolnir_IV) (MIT licence)
 - **ThirteenAG** and contributors: [FusionFix](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix) and Xbox Rain Droplets
 - **ItsClonkAndre**: Project Thunder (GPL-3.0), as Project Thunder CE; VWantedMusic, DeathMusicIV and VFlyingMusic; the
   IV-SDK .NET native list
+- **SC-CL** authors: the GTA IV native name table
 - **Un4seen Developments**: BASS audio library
 - **DLSS-IV** author
 - **AIO All Classic Language Patch v2.0** author, shared by **Contremaitre**: French, German, Italian and Spanish text,
@@ -255,6 +297,6 @@ Remove the `update`, `plugins` and `DLSSIV` folders and the loose files `dinput8
 
 ## ⚖️ Disclaimer
 
-Unofficial fan project, not affiliated with Rockstar Games, Take-Two Interactive or the authors of the included mods.
-It contains only modified and added files; you need your own legal copy of GTA IV: The Complete Edition. Please support
-the original mod authors and respect their redistribution terms.
+Unofficial fan project, not affiliated with Rockstar Games, Take-Two Interactive or Sony Interactive Entertainment. It
+contains only modified and added files; you need your own legal copy of GTA IV: The Complete Edition. Please support
+the original mod authors.
