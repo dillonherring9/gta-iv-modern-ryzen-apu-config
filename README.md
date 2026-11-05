@@ -1,6 +1,6 @@
 # 🌴 GTA Vice City Actual Next Gen 7.0.1 for GTA IV: The Complete Edition
 
-**Release: FixedAndOptimised**
+**Release: PortDone**
 
 **Vice City Actual Next Gen Edition (VCANGE) 7.0.1, running natively on GTA IV: The Complete Edition (1.2.0.59).**
 Windows, Linux and Steam Deck (Proton). FusionFix 5.1.2, DLSS-IV and full DualSense support come included and set up.
@@ -30,8 +30,16 @@ native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data
   - **Business revenue:** a gold **$** at every business you own fills up each day; walk in to collect it.
   - **Shop hold-ups** at 12 stores, **fast-food counters** that heal you, **Leaf Links security**, the Downtown shooting
     range, **insane stunt bonuses** and wheelie/stoppie bonuses.
-- **2002-style pickups:** a clean adrenaline pill, the rampage skull, a heart for health, **save cassettes** at every save
-  point, and **green / red house icons** at properties that are for sale or still locked.
+- **2002-style pickups:** a clean adrenaline pill, the rampage skull, **save cassettes** at every save point, and
+  **green / red house icons** at properties that are for sale or still locked. Health is GTA IV's own green first-aid kit.
+- **2002 population and traffic:** every area has the people, gangs and traffic it had in 2002 Vice City, by day and by
+  night: Cubans in Little Havana, Haitians in Little Haiti, bikers downtown, soldiers at the army base, workers at the
+  airport and docks, and golfers in Caddies at Leaf Links. Street traffic is made of 2002 cars, matched to each area's
+  2002 mix of cheap and expensive cars, and the boats out on the water are the 2002 leisure and work boats.
+- **Every vehicle has a place to find it:** parked cars stand at their 2002 spots with their 2002 models, the 2002 car
+  spawns are back, and vehicles with no 2002 home are parked somewhere that makes sense (the Biplane at the airport, the
+  Armadillo on a downtown roof pad, Hotring cars beside the stadium, the RC Baron by the RC race van). Mission and reward
+  vehicles still come with their missions.
 - **Completion counted out of 154, like 2002:** rampages, the shooting range and shop hold-ups count towards it.
 - **A Vice City stats screen:** rampages passed, stores knocked off, properties and assets owned, revenue collected,
   people saved, fires put out, pizzas delivered, hidden packages found and your best paramedic and firefighter levels.
@@ -54,6 +62,24 @@ native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data
 - Story-based wanted limits and a six-star army response.
 - Pole Position strip club with its own dancers (club only), and Independence FM as a tenth radio station.
 
+### 🚗 Real-world physics
+
+- **Every vehicle has its own handling**, tuned to the real vehicle it's based on: what the community says each Vice City
+  car is modelled on, checked against the car's own model. Weight, power and acceleration, top speed, gears, front-,
+  rear- or four-wheel drive, brakes, tyre grip, ABS where the real car had it, and a centre of gravity placed by the real
+  car's front/rear weight split. A few examples: Infernus = Lamborghini Countach, Cheetah = Ferrari Testarossa,
+  Turismo = Ferrari F40, Banshee = Corvette C4, Stinger = Ferrari Daytona Spyder, Comet = Porsche 911, Sentinel = BMW 535i,
+  Sentinel XS = BMW M3, Deluxo = DeLorean, Bullet = Ford GT, Patriot = Humvee.
+- Supercars are as fast as the real ones; 1950s cruisers, vans and trucks feel heavy and slow, with period tyres and
+  brakes. The cars that come from GTA IV keep their own suspension geometry, so they stay planted over bumps and jumps.
+- **Boats** reach their real counterparts' top speeds, and the **RC Bandit** drives like a large RC buggy.
+- **People weigh what real people do:** about 56–66 kg for women and 76–81 kg for men, more for big builds and for
+  uniformed police, firefighters and guards. **Tommy weighs 92 kg (203 lb).**
+- **Street furniture has real weights:** lamp posts, signs, bins, benches, hydrants, mailboxes, newspaper boxes, the beach
+  ball and shop windows (by their glass). Cars no longer stop dead against a rubbish bag.
+- **Odd-job time limits fit the real vehicles:** Paramedic, Firefighter, Vigilante, Pizza Boy, Taxi and the Bloodring get
+  the extra time their slower vehicles need.
+
 ### 🎮 DualSense
 
 - **Full PlayStation 5 DualSense support, built in.** Connect it over USB or Bluetooth and play: it works as a normal
@@ -67,6 +93,7 @@ native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data
   and more) play on the controller's own speaker and through its HD voice coils, at the moment they happen. Your game
   sound stays on your PC or TV; only these effects go to the controller.
 - Works **over Bluetooth and USB**, with nothing extra to install on your computer.
+- **Controller speaker volume** right in the game: **Settings → Audio**, just under Music Volume, 0–100% in 5% steps.
 - **Lightbar and player LEDs**, touchpad gestures, and optional gyro aiming and motion steering.
 
 ### 🖥️ Classic HUD
@@ -93,6 +120,10 @@ native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data
 - **Proper sounds for 23 vehicles and 13 weapons** that would otherwise use generic ones, including the Fairmont VCPD,
   the VCN Maverick, the Rio, the Coast Guard boat, the Speeder, the Sea Sparrow, the Infernus, the Pizza Boy, the Tec-9,
   the minigun, the sniper rifle, the M16 and the AUG.
+- **Original 2002 voices and sounds restored:** Tommy orders at the food stands and the staff answer (Burger Shot, Cheezy
+  Crust, Shaft and Bandit each have their own lines), the Leaf Links guards speak when you walk in armed, the Hotring
+  announcer and crowd call the race, the Pole Position dancers talk during a private dance, and the Cherry Popper
+  purchase scene ends with its original sound.
 - **Wanted, death and flying music:** chase music from 3 stars, music when you die or are nearly dead, and music while
   you fly. The music pauses with the menu.
 
@@ -120,9 +151,8 @@ native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data
 
 ### 🔫 Gameplay
 
-- Realistic Handling & Physics, with realistic weight and balance for cars, bikes, helicopters, planes, boats and RC toys.
-  The cars that come from GTA IV keep their own suspension geometry, so sports cars such as the Turismo, Banshee, Comet,
-  Coquette and Super GT stay planted over bumps and jumps instead of bouncing.
+- Realistic Handling & Physics as the base for the real-world tuning above, with realistic weight and balance for
+  helicopters, planes and RC toys as well.
 - The 1978 Ford Fairmont as the VCPD police car.
 - Restored weapons and animations; 20 guns with real-world damage, fire rate, magazines and range; rifles pierce armour.
 - Realistic Euphoria ragdolls for pedestrians, GTA IV's default ragdoll for Tommy, and Army/MMA melee moves.
@@ -179,7 +209,7 @@ can crash or hang. Leftover plugins and script hooks can also clash with this re
 
 - **Download every part fresh** and check it against `SHA256SUMS.txt`. A broken or incomplete part gives you broken files.
 - **Extract into a new, empty folder.**
-- **Copy everything** inside the `FixedAndOptimised` folder into the game folder. Don't skip, rename or swap files, and
+- **Copy everything** inside the `PortDone` folder into the game folder. Don't skip, rename or swap files, and
   don't add files from other mods or packs on top.
 - To reinstall, delete everything the mod installed first (see *Uninstalling*), or do the clean game install again.
 
@@ -189,9 +219,9 @@ doesn't touch them. Start a **New Game**: saves made with other mods may not loa
 ## 📦 Installation
 
 1. Close the game. Make sure you have a **clean install** (see above) that you have launched once.
-2. Download **all** parts (`FixedAndOptimised.zip.001`, `.002`, …) into one folder and open `FixedAndOptimised.zip.001`
-   with 7-Zip (Windows) or run `7z x FixedAndOptimised.zip.001` (Linux). Windows Explorer can't open split archives.
-3. Copy **everything inside the extracted `FixedAndOptimised` folder** next to `GTAIV.exe`.
+2. Download **all** parts (`PortDone.zip.001`, `.002`, …) into one folder and open `PortDone.zip.001`
+   with 7-Zip (Windows) or run `7z x PortDone.zip.001` (Linux). Windows Explorer can't open split archives.
+3. Copy **everything inside the extracted `PortDone` folder** next to `GTAIV.exe`.
 4. Start the game and choose **New Game**. Your Documents folder, saves and `User Music` stay as they are.
 
 Linux / Steam Deck: if the loader doesn't start, use the Steam launch option
@@ -230,10 +260,10 @@ A DualSense uses the standard controller layout (Cross = A, Circle = B, Square =
 
 - `plugins/GTA_IV_DualSense.ini` (created on first start): haptic and trigger strength, which effects are on, lightbar
   colour and brightness, player LEDs, touchpad gestures, gyro aiming and motion steering.
-- `plugins/VCScriptHook.ini` → `[ControllerAudio]`: controller speaker on/off and volume, Bluetooth audio on/off,
-  haptic strength.
+- `plugins/VCScriptHook.ini` → `[ControllerAudio]`: controller speaker on/off and volume (the volume is also in
+  Settings → Audio), Bluetooth audio on/off, haptic strength.
 - `plugins/AudioMap.ini`: which sound each vehicle and weapon plays on the controller. Editing it is safe.
-- `plugins/VCMusic.ini`: turn each kind of music on or off, set the volume and fades, and choose how many stars start the
+- `plugins/VCMusic.ini`: `[VC2002Sounds]` turns the restored 2002 voices on or off and sets their volume. Turn each kind of music on or off, set the volume and fades, and choose how many stars start the
   chase music. Add your own `.mp3`, `.wav` or `.ogg` files to `plugins/VCMusic/Wanted`, `Death` or `Flying` (up to 16
   each).
 - `plugins/VCMemory.ini`: the cutscene flush (on/off, clear radius, model budgets, traffic pause) and `[Outfits]`
@@ -256,8 +286,10 @@ Remove the `update`, `plugins` and `DLSSIV` folders and the loose files `dinput8
 - VCANGE's sound configuration is merged in, except its radio station list, which would break save loading. The radio is
   the Vice City NextGen set.
 - The parachute has no sounds.
-- Start a **New Game** for the rampage, revenue and stats counters to start from zero.
+- Start a **New Game** for the rampage, revenue and stats counters to start from zero, and for the 2002 parked cars
+  (a save keeps the parked cars it was made with).
 - Translations cover the on-screen text; voices and radio stay in English.
+- Real-world handling means slow cars really are slow: a 1950s cruiser, a golf cart or a forklift won't keep up with traffic.
 - The Classic HUD's positions are built into its script; they follow your screen's aspect ratio.
 
 ## 🙏 Credits
@@ -293,7 +325,11 @@ Remove the `update`, `plugins` and `DLSSIV` folders and the loose files `dinput8
 - **LibertyTweaks** authors (rebuilt natively); **Zolika1351**: ZMenu (inspiration for the F7 menu)
 - Authors of **Proper HD Era Vehicles – Lore Friendly**, **Realistic Handling & Physics** (Shturmovik2), **VCNG HD Pedestrians**,
   the **VCNE HD map pack**, **RestoredWeapons**, **CRTP**, **Cutscene Recognition**, **Mint Ocean Waters** and **TreesMod**
-- **Rockstar Games**: Grand Theft Auto: Vice City and Grand Theft Auto IV
+- **Sergeanur**: [SCFIX-Miami](https://github.com/Sergeanur/SCFIX-Miami), the 2002 Vice City script reference for the
+  rampage, hidden package, population and parked-car data
+- **GTABase** and the GTA community wikis: which real vehicle each Vice City car is based on
+- **Rockstar Games**: Grand Theft Auto: Vice City (including the original voices and sounds restored here) and Grand
+  Theft Auto IV
 
 ## ⚖️ Disclaimer
 
