@@ -1,11 +1,11 @@
-# 🌴 GTA Vice City Actual Next Gen 7.0.1 for GTA IV: The Complete Edition
+# 🌴 AVCNG CE 7.0.1: GTA Vice City Actual Next Gen for GTA IV: The Complete Edition
 
-**Release: PortDone**
+**Release: AVCNGCE701**
 
-**Vice City Actual Next Gen Edition (VCANGE) 7.0.1, running natively on GTA IV: The Complete Edition (1.2.0.59).**
+**Grand Theft Auto: Vice City, rebuilt inside GTA IV, running natively on GTA IV: The Complete Edition (1.2.0.59).**
 Windows, Linux and Steam Deck (Proton). FusionFix 5.1.2, DLSS-IV and full DualSense support come included and set up.
-Nothing else to install: no .NET, no ScriptHook .NET, no ViGEm. Everything runs through FusionFix's `update` overlay,
-native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data archives are never touched.
+Nothing else to install: no .NET, no ScriptHook .NET, no ViGEm, no downgraded game. `GTAIV.exe` and Rockstar's original
+data archives are never touched.
 
 > [!IMPORTANT]
 > This release builds on the work of many mod authors. All credit goes to them; see [Credits](#-credits).
@@ -14,11 +14,60 @@ native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data
 > **Adult content:** the Pole Position strip club's dancers are nude, and so is the stripper in the club's purchase
 > cutscene. Nudity appears only inside the club.
 
+## ❓ What is this?
+
+You play the whole story of 2002's **GTA Vice City**: Tommy Vercetti, the full city, its missions, characters, cars,
+radio and 1980s Miami. It runs on **GTA IV's engine**, with GTA IV's lighting, physics, Euphoria ragdolls and driving.
+
+It is built from three fan projects, and you don't need to download any of them. Everything is in this package:
+
+1. **Vice City NextGen Edition** by Revolution Team converted Vice City's map, missions and characters into GTA IV.
+2. **Vice City for GTA IV: The Complete Edition** by Kn4ckers made that conversion run on GTA IV: The Complete Edition.
+3. **GTA Vice City Actual Next-Gen Edition 7.0.1** (**AVCNG**, also called VCANGE) by GTATrilogyGames and contributors
+   added a big modpack on top: reworked missions and scripts, restored weapons and aircraft, extra vehicles and map
+   areas, new sounds, HD textures and map edits.
+
+**AVCNG CE 7.0.1** is AVCNG 7.0.1 rebuilt so that it runs on the current Complete Edition, on Windows, Linux and Steam
+Deck. Its crashes are fixed, and it adds 2002 Vice City features, real-world physics, a classic HUD and full DualSense
+support.
+
+## 🔁 How it differs from the original AVCNG 7.0.1
+
+The original AVCNG 7.0.1 is made for Windows. It replaces your game's `GTAIV.exe` with the 2008 version 1.0.8.0 plus
+Games for Windows Live's `xlive.dll`, and many of its features run through .NET script hooks. On Linux (Proton) it did
+not work for us. AVCNG CE leaves your game as it is and runs everything natively:
+
+| Original AVCNG 7.0.1 | AVCNG CE 7.0.1 (this release) |
+|---|---|
+| Replaces `GTAIV.exe` with the 2008 1.0.8.0 executable and adds `xlive.dll` | Your own GTA IV: The Complete Edition 1.2.0.59; `GTAIV.exe` and Rockstar's archives stay untouched |
+| .NET script hooks (IV-SDK .NET, ScriptHookDotNet) running .NET scripts for the wanted, death and flying music, traffic, Classic HUD and tweaks | No .NET at all: those features are rebuilt as native game scripts and native plugins |
+| ScriptHook, ZolikaPatch, IVTweaker, XLivelessAddon, V-Handling and the ZMenu plugin | FusionFix 5.1.2 and a native **F7 Vice City Menu** |
+| A Windows clean-up batch file and a list of optional packs to pick from | Copy one folder into a clean game; the options are already chosen and merged |
+| Made for Windows; did not run for us on Linux | Windows, Linux and Steam Deck (Proton); developed and tested on Linux |
+
+**Problems in the original that are fixed here:**
+
+- **Loading a save crashed.** Two props were registered twice in the weapons collision archive, and AVCNG's sound
+  configuration changes the save format. Both are fixed; AVCNG's sounds are still here, merged into the original Vice
+  City sound setup.
+- **"Riot":** you could lose control after the intro cutscene, because the script waited for a sound bank that doesn't
+  exist.
+- **Damaged textures and models:** APC, Infernus, tear gas, AUG and P90. The broken AUG and tear-gas models are replaced
+  with working GTA IV ones.
+- **Missing weapon animations** (AK-47, Tec-9, Uzi, minigun, flamethrower, AUG, M16, AA-12, sawn-off, grenade launcher)
+  that AVCNG expected from an optional pack.
+- **Missing pieces its scripts use:** bribe-star pickups, the adrenaline pickup animation, two Ocean Beach neon signs and
+  the alternate-outfit cutscenes.
+- **Data typos:** vehicle colour names (Armadillo, Grancher), a traffic-group name (Schafter) and the sniper animation set.
+- **Silent missions:** 62 lines of 2002 mission dialogue that the conversion never played are back (see *Sound and music*).
+
+Everything else that AVCNG CE adds is listed below.
+
 ## ✨ Features
 
 ### 🌴 Vice City
 
-- Vice City NextGen (Revolution Team) through Kn4ckers' Complete Edition release, with VCANGE 7.0.1's reworked scripts and
+- Vice City NextGen (Revolution Team) through Kn4ckers' Complete Edition release, with AVCNG 7.0.1's reworked scripts and
   missions, restored weapons and aircraft, extra vehicles, extra map areas (Everglades, Gator Keys and more), fonts and
   loading screens.
 - Classic Vice City activities as native scripts:
@@ -47,7 +96,7 @@ native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data
   run from you and some cower.
 - **Walk into Ken Rosenberg's office** in free roam as well as in missions: the Washington Beach building has its
   corridors, stairwell, collision and HD office.
-- **VCANGE's map edits:** the overhauled Vercetti mansion inside and out on Starfish Island, Ocean View Hotel room 317,
+- **AVCNG's map edits:** the overhauled Vercetti mansion inside and out on Starfish Island, Ocean View Hotel room 317,
   the Malibu Club interior, the V-Rock building, Phil's place and the junkyard, the airport access road, the Little
   Havana coast road, the Leaf Links walls and hedges, and 1980s street litter, plants and phones.
 - **The airport seaplane dock is back:** walk down its stairs onto the deck, or pull up to it by boat.
@@ -86,15 +135,19 @@ native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data
   game controller with no DS4Windows, ViGEm or Steam Input needed.
 - **Adaptive triggers** for driving and shooting: throttle and brake resistance, ABS stutter, redline buzz, road-surface
   texture and weapon trigger feel.
-- **Haptics matched to Vice City:** every vehicle follows the engine sound it really uses in Vice City, and every gun
+- **HD haptics matched to Vice City:** every vehicle follows the engine sound it really uses in Vice City, and every gun
   follows its Vice City firing and reload sounds. Impacts, explosions, rough roads, gear changes and nearby traffic are
-  felt too.
-- **Controller speaker and HD haptics, like GTA V on PS5:** the mod's sound effects (gunshots, reloads, engines, impacts
-  and more) play on the controller's own speaker and through its HD voice coils, at the moment they happen. Your game
-  sound stays on your PC or TV; only these effects go to the controller.
+  felt too. All of these are felt through the controller's HD haptics, not heard from its speaker.
+- **The controller speaker plays only what matters:**
+  - a **police siren** while you're wanted, louder the closer the police are and silent when they're far away;
+  - a **heartbeat** when you're nearly dead (20% health or less), faster as your health drops. It plays on your
+    PC/TV and on the controller at the same moment, and stops when you heal.
+  Your game sound stays on your PC or TV.
+- **The light bar shows your health:** green at full health, yellow at half, red near death. While you're wanted it
+  flashes red and blue like police lights.
 - Works **over Bluetooth and USB**, with nothing extra to install on your computer.
 - **Controller speaker volume** right in the game: **Settings → Audio**, just under Music Volume, 0–100% in 5% steps.
-- **Lightbar and player LEDs**, touchpad gestures, and optional gyro aiming and motion steering.
+- Player LEDs, touchpad gestures, and optional gyro aiming and motion steering.
 
 ### 🖥️ Classic HUD
 
@@ -115,11 +168,18 @@ native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data
 
 ### 🔊 Sound and music
 
-- **AVCNG sound:** Vice City Actual Next-Gen Edition's weapon, horn, tyre, footstep, ambience and engine sounds, death
-  and start tunes, and the police scanner's Vice City car names.
+- **AVCNG sound:** AVCNG's weapon, horn, tyre, footstep, ambience and engine sounds, death and start tunes, and the
+  police scanner's Vice City car names.
 - **Proper sounds for 23 vehicles and 13 weapons** that would otherwise use generic ones, including the Fairmont VCPD,
   the VCN Maverick, the Rio, the Coast Guard boat, the Speeder, the Sea Sparrow, the Infernus, the Pizza Boy, the Tec-9,
   the minigun, the sniper rifle, the M16 and the AUG.
+- **2002 mission dialogue:** 62 lines that 2002 Vice City's missions played but the conversion never did, now spoken at
+  the same moments as in 2002, with subtitles where 2002 showed them, in all seven languages. Across 13 missions: the
+  French courier taunting you in **Mall Shootout**, Lance calling for help in **Guardian Angels**, the soldiers and the
+  tank crew in **Sir, Yes Sir!**, the Colonel and his helicopter runs in **All Hands On Deck!**, Candy and Mercedes in
+  **Recruitment Drive**, the builders and guards who turn on you in **Demolition Man**, plus **Supply & Demand**,
+  **Gun Runner**, **Cap the Collector**, **Keep Your Friends Close**, **Four Iron**, **Back Alley Brawl** and **Waste
+  the Wife**. A line never talks over a conversation that's already playing.
 - **Original 2002 voices and sounds restored:** Tommy orders at the food stands and the staff answer (Burger Shot, Cheezy
   Crust, Shaft and Bandit each have their own lines), the Leaf Links guards speak when you walk in armed, the Hotring
   announcer and crowd call the race, the Pole Position dancers talk during a private dance, and the Cherry Popper
@@ -132,8 +192,8 @@ native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data
 - Play in **English, French, German, Italian, Spanish, Russian or Japanese**: pick the language in
   **Settings → Display → Language**.
 - Everything on screen is translated: missions, mission titles, passed/failed banners, intro images, the Vice City
-  activities, the stats screen, race messages and the graphics options. Vehicle, radio station and brand names stay in
-  English, as in the original game.
+  activities, the stats screen, race messages, the restored mission subtitles and the graphics options. Vehicle, radio
+  station and brand names stay in English, as in the original game.
 - **日本語:** the full Japanese translation with its own Japanese font. The pause menu tabs use Latin letters because
   the Vice City menu font has no Japanese characters.
 
@@ -173,8 +233,8 @@ native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data
 
 ## 📋 Requirements
 
-- Your own legal copy of **GTA IV: The Complete Edition 1.2.0.59**.
-- About 9.5 GB free for the extracted files, plus space for the download.
+- Your own legal copy of **GTA IV: The Complete Edition 1.2.0.59** (the current Steam / Rockstar version). No downgrade.
+- About 10 GB free for the extracted files, plus space for the download.
 - Windows: the **Microsoft Visual C++ 2015–2022 Redistributable (x86)** (most PCs already have it).
 - Linux / Steam Deck: Proton.
 - Optional: a **DualSense** (PS5) controller. Any other controller, keyboard and mouse work as usual.
@@ -188,10 +248,10 @@ native plugins and native game scripts. `GTAIV.exe` and Rockstar's original data
 **What a clean install is:** an untouched GTA IV: The Complete Edition 1.2.0.59 with no mod files in the game folder.
 That means none of these:
 
-- `update`, `plugins`, `scripts` or `DLSSIV` folders
+- `update`, `plugins`, `scripts`, `IVSDKDotNet` or `DLSSIV` folders
 - loose `.asi`, `.dll` or `.ini` files you or another mod added, such as `dinput8.dll`, `d3d9.dll`, `vulkan.dll`,
   `xlive.dll`, ScriptHook, ZolikaPatch or other ASI loaders
-- files from another Vice City port
+- files from another Vice City port, **including the original AVCNG** and its downgraded `GTAIV.exe`
 
 **Why it matters:** FusionFix loads every file in the `update` folder over the game's own data. A single leftover file
 from another mod replaces the matching file in this release. The game then mixes files that don't belong together and
@@ -209,19 +269,19 @@ can crash or hang. Leftover plugins and script hooks can also clash with this re
 
 - **Download every part fresh** and check it against `SHA256SUMS.txt`. A broken or incomplete part gives you broken files.
 - **Extract into a new, empty folder.**
-- **Copy everything** inside the `PortDone` folder into the game folder. Don't skip, rename or swap files, and
+- **Copy everything** inside the `AVCNGCE701` folder into the game folder. Don't skip, rename or swap files, and
   don't add files from other mods or packs on top.
 - To reinstall, delete everything the mod installed first (see *Uninstalling*), or do the clean game install again.
 
 Your saves are not in the game folder (they're in `Documents\Rockstar Games\GTA IV\Profiles\`), so a clean install
-doesn't touch them. Start a **New Game**: saves made with other mods may not load.
+doesn't touch them. Start a **New Game**: saves made with other mods, including the original AVCNG, may not load.
 
 ## 📦 Installation
 
 1. Close the game. Make sure you have a **clean install** (see above) that you have launched once.
-2. Download **all** parts (`PortDone.zip.001`, `.002`, …) into one folder and open `PortDone.zip.001`
-   with 7-Zip (Windows) or run `7z x PortDone.zip.001` (Linux). Windows Explorer can't open split archives.
-3. Copy **everything inside the extracted `PortDone` folder** next to `GTAIV.exe`.
+2. Download **all** parts (`AVCNGCE701.zip.001`, `.002`, …) into one folder and open `AVCNGCE701.zip.001`
+   with 7-Zip (Windows) or run `7z x AVCNGCE701.zip.001` (Linux). Windows Explorer can't open split archives.
+3. Copy **everything inside the extracted `AVCNGCE701` folder** next to `GTAIV.exe`.
 4. Start the game and choose **New Game**. Your Documents folder, saves and `User Music` stay as they are.
 
 Linux / Steam Deck: if the loader doesn't start, use the Steam launch option
@@ -237,10 +297,12 @@ RTX cards and FSR on others; NVIDIA under Proton needs NVAPI (`PROTON_ENABLE_NVA
   Steam Input*). If you launch from Steam's Game Mode, also add `SDL_GAMECONTROLLER_IGNORE_DEVICES=` (empty) to the
   launch options or the game's environment variables (Lutris: *System options* → *Environment variables*), so Steam
   doesn't hide the controller from the game.
+- **Bluetooth:** pair and connect the controller **before** you start the game. If the game hangs while starting or the
+  light bar stays dark, turn the controller off, reconnect it, and start the game again.
 - **KDE Plasma:** if the touchpad moves the camera like a mouse, open *System Settings* → *Touchpad*, select
   **DualSense Wireless Controller Touchpad** and untick **Device enabled**.
-- Controller speaker and HD haptics work over Bluetooth out of the box. Over a USB cable they use the controller's own
-  sound device; on Linux, pick its **Analog Surround 4.0** profile in your sound settings.
+- The controller speaker and HD haptics work over Bluetooth out of the box. Over a USB cable they use the controller's
+  own sound device; on Linux, pick its **Analog Surround 4.0** profile in your sound settings.
 
 ## 🎮 Controls
 
@@ -258,14 +320,19 @@ A DualSense uses the standard controller layout (Cross = A, Circle = B, Square =
 
 ## ⚙️ Settings
 
-- `plugins/GTA_IV_DualSense.ini` (created on first start): haptic and trigger strength, which effects are on, lightbar
-  colour and brightness, player LEDs, touchpad gestures, gyro aiming and motion steering.
-- `plugins/VCScriptHook.ini` → `[ControllerAudio]`: controller speaker on/off and volume (the volume is also in
-  Settings → Audio), Bluetooth audio on/off, haptic strength.
+- `plugins/GTA_IV_DualSense.ini` (created on first start): haptic and trigger strength, which effects are on, light bar
+  brightness and its colour in menus, player LEDs, touchpad gestures, gyro aiming and motion steering.
+- `plugins/VCScriptHook.ini`:
+  - `[ControllerAudio]`: controller speaker on/off and volume (the volume is also in Settings → Audio), Bluetooth audio
+    on/off, haptic strength; which kinds of effects also play on the speaker (`SpeakerEngine`, `SpeakerRoad`,
+    `SpeakerImpacts`, `SpeakerWeapons`, `SpeakerExplosions`, `SpeakerAmbient`, `SpeakerOther`, all 0 = haptics only;
+    `SpeakerFilter=0` puts every effect on the speaker); the police siren (`Siren`, `SirenVolume`, `SirenRange` in metres)
+    and the heartbeat (`Heartbeat`, `HeartbeatBelowPercent`, `HeartbeatControllerVolume`, `HeartbeatTvVolume`).
+  - `[Lightbar]`: `HealthColours` (health colours) and `PoliceFlash` (red/blue flash while wanted), 1 = on, 0 = off.
 - `plugins/AudioMap.ini`: which sound each vehicle and weapon plays on the controller. Editing it is safe.
-- `plugins/VCMusic.ini`: `[VC2002Sounds]` turns the restored 2002 voices on or off and sets their volume. Turn each kind of music on or off, set the volume and fades, and choose how many stars start the
-  chase music. Add your own `.mp3`, `.wav` or `.ogg` files to `plugins/VCMusic/Wanted`, `Death` or `Flying` (up to 16
-  each).
+- `plugins/VCMusic.ini`: `[VC2002Sounds]` turns the restored 2002 voices on or off and sets their volume. Turn each kind
+  of music on or off, set the volume and fades, and choose how many stars start the chase music. Add your own `.mp3`,
+  `.wav` or `.ogg` files to `plugins/VCMusic/Wanted`, `Death` or `Flying` (up to 16 each).
 - `plugins/VCMemory.ini`: the cutscene flush (on/off, clear radius, model budgets, traffic pause) and `[Outfits]`
   (`Enabled=1` makes cutscenes follow your outfit). The same plugin adds Japanese to the language menu.
 - The plugins write logs next to themselves (`VCMusic.log`, `VCMemory.log`, `VCScriptHook.log`, `mjolnir_cpu_fix.log`).
@@ -283,12 +350,13 @@ Remove the `update`, `plugins` and `DLSSIV` folders and the loose files `dinput8
 ## 📝 Notes
 
 - Developed and tested on Linux with Proton.
-- VCANGE's sound configuration is merged in, except its radio station list, which would break save loading. The radio is
+- AVCNG's sound configuration is merged in, except its radio station list, which would break save loading. The radio is
   the Vice City NextGen set.
 - The parachute has no sounds.
 - Start a **New Game** for the rampage, revenue and stats counters to start from zero, and for the 2002 parked cars
   (a save keeps the parked cars it was made with).
-- Translations cover the on-screen text; voices and radio stay in English.
+- Translations cover the on-screen text; voices and radio stay in English. The Russian and Japanese subtitles of the
+  restored 2002 mission lines are new translations; corrections are welcome.
 - Real-world handling means slow cars really are slow: a 1950s cruiser, a golf cart or a forklift won't keep up with traffic.
 - The Classic HUD's positions are built into its script; they follow your screen's aspect ratio.
 
@@ -296,8 +364,8 @@ Remove the `update`, `plugins` and `DLSSIV` folders and the loose files `dinput8
 
 - **Revolution Team**: GTA Vice City NextGen Edition
 - **Kn4ckers**: [Vice City for GTAIV: The Complete Edition](https://github.com/knackers4/vce)
-- **GTATrilogyGames** and contributors: [Vice City Actual Next-Gen Edition (VCANGE)](https://github.com/GTATrilogyGames/ViceCityActualNextGenEditionModpack), including its sounds and its Various Map Edits
-- Authors of the map edits collected in VCANGE: the **Starfish Mansion Overhaul Project** and **Vercetti Mansion
+- **GTATrilogyGames** and contributors: [GTA Vice City Actual Next-Gen Edition (AVCNG / VCANGE)](https://github.com/GTATrilogyGames/ViceCityActualNextGenEditionModpack), including its sounds and its Various Map Edits
+- Authors of the map edits collected in AVCNG: the **Starfish Mansion Overhaul Project** and **Vercetti Mansion
   Overhaul**, the **V-Rock building** interior, the **Ocean View Hotel** rework and **Interiors and Cutscene Fixes (IaCF_VC)**
 - **DrAnusTart**: Access Rosenberg's Office and HD Overhaul
 - **CyanFire**: Vice City NextGen Edition Classic HUD (rebuilt here as a native script)
@@ -326,10 +394,10 @@ Remove the `update`, `plugins` and `DLSSIV` folders and the loose files `dinput8
 - Authors of **Proper HD Era Vehicles – Lore Friendly**, **Realistic Handling & Physics** (Shturmovik2), **VCNG HD Pedestrians**,
   the **VCNE HD map pack**, **RestoredWeapons**, **CRTP**, **Cutscene Recognition**, **Mint Ocean Waters** and **TreesMod**
 - **Sergeanur**: [SCFIX-Miami](https://github.com/Sergeanur/SCFIX-Miami), the 2002 Vice City script reference for the
-  rampage, hidden package, population and parked-car data
+  rampage, hidden package, population, parked-car and mission-dialogue data
 - **GTABase** and the GTA community wikis: which real vehicle each Vice City car is based on
-- **Rockstar Games**: Grand Theft Auto: Vice City (including the original voices and sounds restored here) and Grand
-  Theft Auto IV
+- **Rockstar Games**: Grand Theft Auto: Vice City (including the original voices, mission dialogue and sounds restored
+  here) and Grand Theft Auto IV (including the police siren used on the controller speaker)
 
 ## ⚖️ Disclaimer
 
