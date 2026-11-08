@@ -1,0 +1,299 @@
+; CE startup adapter for the exact imported AVCNG 8.0 parachute SCOs.
+; Flight/control/animation state machines remain in original parachute_player.
+.script vc8_parachute.sco
+.encrypted 1
+.statics 0
+.globals 0
+.flags 0x00000000
+.signature 0x7E204400
+
+.code
+    Function 0 6
+L_loop:
+    Push_0
+    CallNative WAIT 1 0
+    CallNative GET_PLAYER_ID 0 1
+    CallNative CONVERT_INT_TO_PLAYERINDEX 1 1
+    CallNative PLAYER_HAS_CHAR 1 1
+    JumpFalse @L_loop
+    CallNative GET_PLAYER_ID 0 1
+    CallNative CONVERT_INT_TO_PLAYERINDEX 1 1
+    GetLocalPv2
+    CallNative GET_PLAYER_CHAR 2 0
+    GetLocalPv2
+    pGet
+    CallNative IS_CHAR_INJURED 1 1
+    JumpFalse @L_player_alive
+    Jump @L_loop
+L_player_alive:
+    ; A wearable pack never occupies weapon41. Clear an old inventory token
+    ; without changing any ordinary gun or its ammunition.
+    GetLocalPv2
+    pGet
+    PushS 41
+    CallNative HAS_CHAR_GOT_WEAPON 2 1
+    JumpFalse @L_inventory_clean
+    GetLocalPv2
+    pGet
+    PushS 41
+    CallNative REMOVE_WEAPON_FROM_CHAR 2 0
+L_inventory_clean:
+    CallNative IS_MOBILE_PHONE_CALL_ONGOING 0 1
+    JumpFalse @L_phone_idle
+    Push_0
+    PushS 60240
+    GetGlobalPs
+    pSet
+    Jump @L_phone_done
+L_phone_idle:
+    Push_9
+    PushS 60240
+    GetGlobalPs
+    pSet
+L_phone_done:
+    PushString "parachutelauncher\0"
+    CallNative GET_NUMBER_OF_INSTANCES_OF_STREAMED_SCRIPT 1 1
+    Push_0
+    CmpEQ
+    JumpFalse @L_aircraft
+    PushString "parachutelauncher\0"
+    CallNative REQUEST_SCRIPT 1 0
+    PushString "parachutelauncher\0"
+    CallNative HAS_SCRIPT_LOADED 1 1
+    JumpFalse @L_loop
+    ; Exact five-slot array; setting original flag 2792 asks the imported
+    ; launcher's own L_00015a routine to reset every shared slot and flag.
+    Push_5
+    PushS 60000
+    GetGlobalPs
+    pSet
+    Push_1
+    PushS 60100
+    GetGlobalPs
+    pSet
+    ; Ambient priority/mission override defaults. The launcher's original
+    ; player-control, object-holding, injury and phone checks stay active.
+    Push_0
+    PushS 60241
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60242
+    GetGlobalPs
+    pSet
+    ; Original completion array indices 4 and 65 gate Liberty City pickups.
+    PushS 66
+    PushS 60250
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60255
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60316
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60320
+    GetGlobalPs
+    pSet
+    ; Player history table: five entries of two words, initialized to -1
+    ; handles just as expected by the imported player's search routine.
+    Push_5
+    PushS 60330
+    GetGlobalPs
+    pSet
+    Push_0
+    GetLocalPv3
+    pSet
+L_history:
+    GetLocalPv3
+    pGet
+    Push_5
+    CmpLT
+    JumpFalse @L_start
+    Push_Neg1
+    GetLocalPv3
+    pGet
+    Push_2
+    PushS 60330
+    GetGlobalPs
+    GetArrayPs
+    Push_0
+    Add
+    pSet
+    Push_0
+    GetLocalPv3
+    pGet
+    Push_2
+    PushS 60330
+    GetGlobalPs
+    GetArrayPs
+    Push_4
+    Add
+    pSet
+    GetLocalPv3
+    pGet
+    Push_1
+    Add
+    GetLocalPv3
+    pSet
+    Jump @L_history
+L_start:
+    PushString "parachutelauncher\0"
+    ; CE selects an existing stack class by exact size. Its pool has
+    ; 68 stacks of 1024 words and no 2048-word class (B8191C..B8199E).
+    PushS 1024
+    CallNative START_NEW_SCRIPT 2 1
+    Drop
+    PushString "parachutelauncher\0"
+    CallNative MARK_SCRIPT_AS_NO_LONGER_NEEDED 1 0
+    ; Yield once so the launcher's original reset completes before equip.
+    Jump @L_loop
+L_aircraft:
+    ; Mirror the imported launcher's mode-4 eligibility routine before
+    ; extending its equip contract to aircraft. Mode4 deliberately bypasses
+    ; the free-ambient-task test; preserve that original eligibility behavior.
+    CallNative GET_PLAYER_ID 0 1
+    CallNative CONVERT_INT_TO_PLAYERINDEX 1 1
+    CallNative IS_PLAYER_PLAYING 1 1
+    JumpFalse @L_loop
+    CallNative IS_PLAYER_BEING_ARRESTED 0 1
+    Not
+    JumpFalse @L_loop
+    CallNative IS_SCREEN_FADED_IN 0 1
+    JumpFalse @L_loop
+    CallNative GET_PLAYER_ID 0 1
+    CallNative CONVERT_INT_TO_PLAYERINDEX 1 1
+    CallNative IS_PLAYER_CONTROL_ON 1 1
+    JumpFalse @L_loop
+    PushS 60242
+    GetGlobalPs
+    pGet
+    Push_4
+    CmpLE
+    JumpFalse @L_loop
+    ; Original2800 is the explicit disable-equip flag following L_000e92.
+    PushS 60108
+    GetGlobalPs
+    pGet
+    Not
+    JumpFalse @L_loop
+    GetLocalPv2
+    pGet
+    CallNative IS_CHAR_IN_ANY_HELI 1 1
+    GetLocalPv2
+    pGet
+    CallNative IS_CHAR_IN_ANY_PLANE 1 1
+    Or
+    JumpFalse @L_loop
+    ; Every current plane/helicopter and every seat qualifies, except the
+    ; two RC aircraft definitions: rcbaron/RCPLE and tourmav/RCHELI.
+    GetLocalPv2
+    pGet
+    GetLocalPv4
+    CallNative STORE_CAR_CHAR_IS_IN_NO_SAVE 2 0
+    GetLocalPv4
+    pGet
+    Push_0
+    CmpEQ
+    JumpFalse @L_aircraft_model
+    Jump @L_loop
+L_aircraft_model:
+    GetLocalPv4
+    pGet
+    GetLocalPv5
+    CallNative GET_CAR_MODEL 2 0
+    GetLocalPv5
+    pGet
+    Push -895824047
+    CmpEQ
+    JumpFalse @L_not_rcbaron
+    Jump @L_loop
+L_not_rcbaron:
+    GetLocalPv5
+    pGet
+    Push 2027357303
+    CmpEQ
+    JumpFalse @L_not_tourmav
+    Jump @L_loop
+L_not_tourmav:
+    PushS 60015
+    GetGlobalPs
+    pGet
+    JumpFalse @L_equip
+    Jump @L_loop
+L_equip:
+    ; These writes mirror original8 launcher L_0010f9..L_0011cd for slot0.
+    GetLocalPv2
+    pGet
+    PushS 60001
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60002
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60003
+    GetGlobalPs
+    pSet
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    Push_3
+    PushS 60004
+    GetGlobalPs
+    FromStack
+    Push_0
+    PushS 60016
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60017
+    GetGlobalPs
+    pSet
+    PushF -60.0
+    PushS 60013
+    GetGlobalPs
+    pSet
+    PushF -7.0
+    PushS 60014
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60099
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60097
+    GetGlobalPs
+    pSet
+    Push_1
+    PushS 60093
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60092
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60091
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60094
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60098
+    GetGlobalPs
+    pSet
+    ; Commit active only after every source-contract field is initialized.
+    Push_1
+    PushS 60015
+    GetGlobalPs
+    pSet
+    Jump @L_loop
+.data

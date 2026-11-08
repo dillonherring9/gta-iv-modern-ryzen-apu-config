@@ -41,7 +41,7 @@ L_000004:
     Call @L_0001d9
     PushString "vc_security\0"
     Call @L_0001d9
-    PushString "vc_native_chute\0"
+    PushString "vc8_parachute\0"
     Call @L_0001d9
     PushString "vc_skimmer\0"
     Call @L_0001d9

@@ -1,0 +1,2433 @@
+; CE adapter of exact AVCNG 8.0 source; see port-report.json.
+; parachutelauncher.sco - GTA IV SCO assembly source (scoasm). Rebuild: scoasm.py asm parachutelauncher.scasm --exe GTAIV.exe
+; original sha256 b11aa9c6ab5a11edb9a493ab4c0a737a932c06f8a76d9052388c5c89587826ed
+.script parachutelauncher.sco
+.encrypted 1
+.statics 44
+.globals 0
+.flags 0x00000000
+.signature 0x7E204400
+
+.code
+
+    Function 0 16
+    PushF 86.0
+    Push_0
+    GetStaticPs
+    pSet
+    PushF 274.0
+    Push_1
+    GetStaticPs
+    pSet
+    Push_0
+    PushS 35
+    GetStaticPs
+    pSet
+    Push_0
+    PushS 36
+    GetStaticPs
+    pSet
+    Push_0
+    PushS 37
+    GetStaticPs
+    pSet
+    Push_0
+    PushS 38
+    GetStaticPs
+    pSet
+    Push_0
+    PushS 39
+    GetStaticPs
+    pSet
+    Push_0
+    PushS 41
+    GetStaticPs
+    pSet
+    Push_0
+    PushS 42
+    GetStaticPs
+    pSet
+    Push_0
+    PushS 43
+    GetStaticPs
+    pSet
+L_00004b:
+    Push_1
+    JumpFalse @L_001842
+    Push_0
+    CallNative WAIT 1 0
+    PushS 60100
+    GetGlobalPs
+    pGet
+    PushS 60107
+    GetGlobalPs
+    pGet
+    Or
+    JumpFalse @L_0002d3
+    PushS 40
+    GetStaticPs
+    pGet
+    CallNative DOES_OBJECT_EXIST 1 1
+    JumpFalse @L_000085
+    PushS 40
+    GetStaticPs
+    CallNative DELETE_OBJECT 1 0
+L_000085:
+    PushS 60107
+    GetGlobalPs
+    pGet
+    Not
+    JumpFalse @L_000120
+    Push_0
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 56
+    Add
+    pGet
+    JumpFalse @L_00011b
+    Push_0
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_4
+    Add
+    pGet
+    Push_0
+    CmpEQ
+    Push_0
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_4
+    Add
+    pGet
+    Push_1
+    CmpEQ
+    Or
+    JumpFalse @L_00011b
+    Jump @L_0000e3
+
+L_0000c4:
+    Function 0 3
+    CallNative GET_PLAYER_ID 0 1
+    CallNative CONVERT_INT_TO_PLAYERINDEX 1 1
+    GetLocalPv2
+    CallNative GET_PLAYER_CHAR 2 0
+    GetLocalPv2
+    pGet
+    Return 0 1
+L_0000e3:
+    Call @L_0000c4
+    CallNative IS_CHAR_INJURED 1 1
+    Not
+    JumpFalse @L_00011b
+    Call @L_0000c4
+    PushS 41
+    CallNative HAS_CHAR_GOT_WEAPON 2 1
+    Not
+    JumpFalse @L_00011b
+    ; Wearable inventory state is held in the slot globals; no weapon41 grant.
+L_00011b:
+    Jump @L_000155
+L_000120:
+    Call @L_0000c4
+    CallNative IS_CHAR_INJURED 1 1
+    Not
+    JumpFalse @L_000155
+    Call @L_0000c4
+    PushS 41
+    CallNative HAS_CHAR_GOT_WEAPON 2 1
+    JumpFalse @L_000155
+    Call @L_0000c4
+    PushS 41
+    CallNative REMOVE_WEAPON_FROM_CHAR 2 0
+L_000155:
+    Jump @L_0002c5
+
+L_00015a:
+    Function 0 3
+    Push_1
+    PushS 60091
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60092
+    GetGlobalPs
+    pSet
+    Push_1
+    PushS 60093
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60094
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60095
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60103
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60096
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60097
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60098
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60099
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60097
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60100
+    GetGlobalPs
+    pSet
+    Push_1
+    PushS 60102
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60105
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60106
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60107
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60108
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60109
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60110
+    GetGlobalPs
+    pSet
+    Push_0
+    GetLocalPv2
+    pSet
+    Push_0
+    GetLocalPv2
+    pSet
+L_0001d6:
+    GetLocalPv2
+    pGet
+    PushS 60000
+    GetGlobalPs
+    pGet
+    CmpLT
+    JumpFalse @L_0002c2
+    PushStringNull
+    pGet
+    GetLocalPv2
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_0
+    Add
+    pSet
+    Push_0
+    GetLocalPv2
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_4
+    Add
+    pSet
+    Push_0
+    GetLocalPv2
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_8
+    Add
+    pSet
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    Push_3
+    GetLocalPv2
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_12
+    Add
+    FromStack
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    Push_3
+    GetLocalPv2
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_24
+    Add
+    FromStack
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    Push_3
+    GetLocalPv2
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 36
+    Add
+    FromStack
+    PushF -60.0
+    GetLocalPv2
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 48
+    Add
+    pSet
+    PushF -7.0
+    GetLocalPv2
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 52
+    Add
+    pSet
+    Push_0
+    GetLocalPv2
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 56
+    Add
+    pSet
+    Push_0
+    GetLocalPv2
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 60
+    Add
+    pSet
+    Push_0
+    GetLocalPv2
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 64
+    Add
+    pSet
+    Push_0
+    GetLocalPv2
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 68
+    Add
+    pSet
+    GetLocalPv2
+    pGet
+    Push_1
+    Add
+    GetLocalPv2
+    pSet
+    Jump @L_0001d6
+L_0002c2:
+    Return 0 0
+L_0002c5:
+    Call @L_00015a
+    Push_8
+    Push_0
+    CallNative SET_DRAW_PLAYER_COMPONENT 2 0
+L_0002d3:
+    Call @L_0000c4
+    CallNative IS_CHAR_INJURED 1 1
+    Not
+    JumpFalse @L_000b25
+    PushS 36
+    GetStaticPs
+    pGet
+    Not
+    JumpFalse @L_00082d
+    Push_0
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Not
+    JumpFalse @L_000828
+    PushS 65
+    Push_1
+    PushS 60250
+    GetGlobalPs
+    GetArrayPs
+    pGet
+    JumpFalse @L_000828
+    Jump @L_00081d
+
+L_000317:
+    Function 0 2
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 796.1799926757812
+    PushF 426.17999267578125
+    fNeg
+    PushF 84.4000015258789
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_0
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 809.75
+    fNeg
+    PushF 884.25
+    PushF 135.94000244140625
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_1
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 814.010009765625
+    fNeg
+    PushF 777.8900146484375
+    PushF 3.4700000286102295
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_2
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 605.4600219726562
+    fNeg
+    PushF 749.52001953125
+    fNeg
+    PushF 92.62999725341797
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_3
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 1565.4599609375
+    PushF 862.780029296875
+    PushF 88.70999908447266
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_4
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 412.1199951171875
+    PushF 638.8200073242188
+    fNeg
+    PushF 3.700000047683716
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_5
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 300.2799987792969
+    fNeg
+    PushF 513.72998046875
+    PushF 174.33999633789062
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_6
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 1202.68994140625
+    fNeg
+    PushF 97.69999694824219
+    fNeg
+    PushF 49.15999984741211
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_7
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 369.3699951171875
+    PushF 1442.260009765625
+    PushF 88.81999969482422
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_8
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 909.8499755859375
+    PushF 627.6699829101562
+    PushF 72.41999816894531
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_9
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 17.59000015258789
+    fNeg
+    PushF 164.33999633789062
+    PushF 219.44000244140625
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_10
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 138.22000122070312
+    fNeg
+    PushF 1288.8900146484375
+    PushF 148.57000732421875
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_11
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 157.5
+    fNeg
+    PushF 599.4400024414062
+    PushF 124.5199966430664
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_12
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 144.4499969482422
+    fNeg
+    PushF 203.47999572753906
+    PushF 278.57000732421875
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_13
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 167.38999938964844
+    fNeg
+    PushF 348.2200012207031
+    PushF 202.4499969482422
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_14
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 280.07000732421875
+    fNeg
+    PushF 346.239990234375
+    PushF 119.12999725341797
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_15
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 195.1300048828125
+    fNeg
+    PushF 474.0899963378906
+    fNeg
+    PushF 239.41000366210938
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_16
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 0.7099999785423279
+    fNeg
+    PushF 566.8699951171875
+    PushF 205.16000366210938
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_17
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 77.81999969482422
+    fNeg
+    PushF 408.04998779296875
+    fNeg
+    PushF 161.19000244140625
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_18
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 576.02001953125
+    fNeg
+    PushF 267.57000732421875
+    fNeg
+    PushF 120.38999938964844
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_19
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 280.6000061035156
+    PushF 357.1499938964844
+    fNeg
+    PushF 161.32000732421875
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_20
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 40.650001525878906
+    PushF 716.739990234375
+    fNeg
+    PushF 115.69999694824219
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_21
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 152.8300018310547
+    PushF 580.9400024414062
+    fNeg
+    PushF 262.2699890136719
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_22
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 78.6500015258789
+    fNeg
+    PushF 140.6300048828125
+    fNeg
+    PushF 122.5
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_23
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 330.010009765625
+    fNeg
+    PushF 492.1700134277344
+    fNeg
+    PushF 140.22000122070312
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    Push_24
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Return 0 0
+L_00081d:
+    Call @L_000317
+    Push_1
+    PushS 36
+    GetStaticPs
+    pSet
+L_000828:
+    Jump @L_000893
+L_00082d:
+    Jump @L_00088e
+
+L_000832:
+    Function 0 3
+    Push_0
+    GetLocalPv2
+    pSet
+    Push_0
+    GetLocalPv2
+    pSet
+L_00083c:
+    GetLocalPv2
+    pGet
+    Push_6
+    GetStaticPs
+    pGet
+    CmpLT
+    JumpFalse @L_00088b
+    GetLocalPv2
+    pGet
+    Push_1
+    Push_6
+    GetStaticPs
+    GetArrayPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    JumpFalse @L_000880
+    Call @L_0000c4
+    PushS 41
+    CallNative HAS_CHAR_GOT_WEAPON 2 1
+    Not
+    JumpFalse @L_000880
+    ; Wearable inventory state is held in the slot globals; no weapon41 grant.
+L_000880:
+    GetLocalPv2
+    pGet
+    Push_1
+    Add
+    GetLocalPv2
+    pSet
+    Jump @L_00083c
+L_00088b:
+    Return 0 0
+L_00088e:
+    Call @L_000832
+L_000893:
+    PushS 37
+    GetStaticPs
+    pGet
+    Not
+    JumpFalse @L_000929
+    PushS 32
+    GetStaticPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Not
+    JumpFalse @L_000924
+    PushS 60320
+    GetGlobalPs
+    pGet
+    JumpFalse @L_000924
+    Jump @L_000919
+
+L_0008c1:
+    Function 0 2
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 433.8420104980469
+    fNeg
+    PushF 1392.39697265625
+    PushF 15.458000183105469
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    PushS 32
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    PushS 32
+    GetStaticPs
+    pGet
+    PushString "E2_luisapartment\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Return 0 0
+L_000919:
+    Call @L_0008c1
+    Push_1
+    PushS 37
+    GetStaticPs
+    pSet
+L_000924:
+    Jump @L_000966
+L_000929:
+    PushS 32
+    GetStaticPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    JumpFalse @L_000966
+    Call @L_0000c4
+    PushS 41
+    CallNative HAS_CHAR_GOT_WEAPON 2 1
+    Not
+    JumpFalse @L_000966
+    ; Wearable inventory state is held in the slot globals; no weapon41 grant.
+    Push_1
+    PushS 60106
+    GetGlobalPs
+    pSet
+L_000966:
+    PushS 39
+    GetStaticPs
+    pGet
+    Not
+    JumpFalse @L_0009de
+    PushS 34
+    GetStaticPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Not
+    JumpFalse @L_0009d9
+    Push_4
+    Push_1
+    PushS 60250
+    GetGlobalPs
+    GetArrayPs
+    pGet
+    JumpFalse @L_0009d9
+    Jump @L_0009ce
+
+L_000995:
+    Function 0 2
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 707.894287109375
+    fNeg
+    PushF 345.92169189453125
+    PushF 3.052500009536743
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    PushS 34
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Return 0 0
+L_0009ce:
+    Call @L_000995
+    Push_1
+    PushS 39
+    GetStaticPs
+    pSet
+L_0009d9:
+    Jump @L_000a15
+L_0009de:
+    PushS 34
+    GetStaticPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    JumpFalse @L_000a15
+    Call @L_0000c4
+    PushS 41
+    CallNative HAS_CHAR_GOT_WEAPON 2 1
+    Not
+    JumpFalse @L_000a15
+    ; Wearable inventory state is held in the slot globals; no weapon41 grant.
+L_000a15:
+    PushS 38
+    GetStaticPs
+    pGet
+    Not
+    JumpFalse @L_000aab
+    PushS 33
+    GetStaticPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Not
+    JumpFalse @L_000aa6
+    PushS 65
+    Push_1
+    PushS 60250
+    GetGlobalPs
+    GetArrayPs
+    pGet
+    JumpFalse @L_000aa6
+    PushString "yusuf2\0"
+    CallNative GET_NUMBER_OF_INSTANCES_OF_STREAMED_SCRIPT 1 1
+    GetLocalPv2
+    pSet
+    GetLocalPv2
+    pGet
+    Push_0
+    CmpEQ
+    JumpFalse @L_000aa6
+    Jump @L_000a9b
+
+L_000a61:
+    Function 0 2
+    Push 833537224
+    Push_2
+    Push_0
+    PushF 279.94000244140625
+    fNeg
+    PushF 100.41999816894531
+    fNeg
+    PushF 389.6300048828125
+    PushF 90.0
+    fNeg
+    PushF 0.0
+    PushF 0.0
+    PushS 33
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Return 0 0
+L_000a9b:
+    Call @L_000a61
+    Push_1
+    PushS 38
+    GetStaticPs
+    pSet
+L_000aa6:
+    Jump @L_000b25
+L_000aab:
+    PushString "yusuf2\0"
+    CallNative GET_NUMBER_OF_INSTANCES_OF_STREAMED_SCRIPT 1 1
+    GetLocalPv2
+    pSet
+    GetLocalPv2
+    pGet
+    Push_0
+    CmpEQ
+    JumpFalse @L_000b02
+    PushS 33
+    GetStaticPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    JumpFalse @L_000afd
+    Call @L_0000c4
+    PushS 41
+    CallNative HAS_CHAR_GOT_WEAPON 2 1
+    Not
+    JumpFalse @L_000afd
+    ; Wearable inventory state is held in the slot globals; no weapon41 grant.
+L_000afd:
+    Jump @L_000b25
+L_000b02:
+    PushS 33
+    GetStaticPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    JumpFalse @L_000b25
+    PushS 33
+    GetStaticPs
+    pGet
+    CallNative REMOVE_PICKUP 1 0
+    Push_0
+    PushS 38
+    GetStaticPs
+    pSet
+L_000b25:
+    PushS 60103
+    GetGlobalPs
+    pGet
+    Not
+    JumpFalse @L_000c62
+    Jump @L_000bff
+
+L_000b35:
+    Function 0 4
+    Call @L_0000c4
+    CallNative IS_CHAR_INJURED 1 1
+    Not
+    JumpFalse @L_000bfb
+    Jump @L_000bd7
+
+L_000b50:
+    Function 0 3
+    Call @L_0000c4
+    CallNative IS_CHAR_INJURED 1 1
+    Not
+    JumpFalse @L_000bd3
+    Call @L_0000c4
+    Push_1
+    CallNative GET_CHAR_DRAWABLE_VARIATION 2 1
+    GetLocalPv2
+    pSet
+    GetLocalPv2
+    pGet
+    Switch 0=@L_000ba6, 1=@L_000baf, 2=@L_000bb8, 3=@L_000bc1, 4=@L_000bca
+    Jump @L_000bd3
+L_000ba6:
+    Push_1
+    Return 0 1
+    Jump @L_000bd3
+L_000baf:
+    Push_2
+    Return 0 1
+    Jump @L_000bd3
+L_000bb8:
+    Push_2
+    Return 0 1
+    Jump @L_000bd3
+L_000bc1:
+    Push_1
+    Return 0 1
+    Jump @L_000bd3
+L_000bca:
+    Push_1
+    Return 0 1
+    Jump @L_000bd3
+L_000bd3:
+    Push_1
+    Return 0 1
+L_000bd7:
+    Call @L_000b50
+    GetLocalPv2
+    pSet
+    Call @L_0000c4
+    Push_8
+    CallNative GET_CHAR_DRAWABLE_VARIATION 2 1
+    GetLocalPv3
+    pSet
+    GetLocalPv2
+    pGet
+    GetLocalPv3
+    pGet
+    CmpNE
+    JumpFalse @L_000bfb
+    Push_0
+    Return 0 1
+L_000bfb:
+    Push_1
+    Return 0 1
+L_000bff:
+    Call @L_000b35
+    Not
+    JumpFalse @L_000c4e
+    Jump @L_000c49
+
+L_000c0f:
+    Function 0 3
+    Call @L_000b50
+    GetLocalPv2
+    pSet
+    Call @L_0000c4
+    Push_8
+    GetLocalPv2
+    pGet
+    Push_0
+    CallNative SET_CHAR_COMPONENT_VARIATION 4 0
+    Push_0
+    CallNative WAIT 1 0
+    PushS 60095
+    GetGlobalPs
+    pGet
+    Not
+    JumpFalse @L_000c46
+    Push_8
+    Push_0
+    CallNative SET_DRAW_PLAYER_COMPONENT 2 0
+L_000c46:
+    Return 0 0
+L_000c49:
+    Call @L_000c0f
+L_000c4e:
+    PushS 60095
+    GetGlobalPs
+    pGet
+    Not
+    JumpFalse @L_000c62
+    Push_8
+    Push_0
+    CallNative SET_DRAW_PLAYER_COMPONENT 2 0
+L_000c62:
+    Push_0
+    GetLocalPv3
+    pSet
+    Push_0
+    GetLocalPv4
+    pSet
+    Push_0
+    GetLocalPv4
+    pSet
+L_000c6b:
+    GetLocalPv4
+    pGet
+    PushS 60000
+    GetGlobalPs
+    pGet
+    CmpLT
+    JumpFalse @L_000de2
+    GetLocalPv4
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 56
+    Add
+    pGet
+    JumpFalse @L_000dd7
+    Push 1490460832
+    CallNative HAS_MODEL_LOADED 1 1
+    Not
+    PushString "PARACHUTE\0"
+    CallNative HAVE_ANIMS_LOADED 1 1
+    Not
+    Or
+    JumpFalse @L_000ce6
+    Jump @L_000cdc
+
+L_000cb6:
+    Function 0 2
+    Push 1490460832
+    CallNative REQUEST_MODEL 1 0
+    PushString "PARACHUTE\0"
+    CallNative REQUEST_ANIMS 1 0
+    Return 0 0
+L_000cdc:
+    Call @L_000cb6
+    Jump @L_000dd1
+L_000ce6:
+    GetLocalPv4
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 60
+    Add
+    pGet
+    Not
+    JumpFalse @L_000dd1
+    GetLocalPv4
+    pGet
+    Push_0
+    CmpEQ
+    JumpFalse @L_000d7f
+    PushS 40
+    GetStaticPs
+    pGet
+    CallNative DOES_OBJECT_EXIST 1 1
+    JumpFalse @L_000d1e
+    PushS 40
+    GetStaticPs
+    CallNative DELETE_OBJECT 1 0
+L_000d1e:
+    PushString "parachute_player\0"
+    CallNative HAS_SCRIPT_LOADED 1 1
+    JumpFalse @L_000d60
+    PushString "parachute_player\0"
+    PushS 512
+    CallNative START_NEW_SCRIPT 2 1
+    Drop
+    Jump @L_000d7a
+L_000d60:
+    PushString "parachute_player\0"
+    CallNative REQUEST_SCRIPT 1 0
+L_000d7a:
+    Jump @L_000dd1
+L_000d7f:
+    PushString "parachute_ai\0"
+    CallNative HAS_SCRIPT_LOADED 1 1
+    JumpFalse @L_000dbb
+    PushString "parachute_ai\0"
+    GetLocalPv4
+    Push_1
+    PushS 512
+    CallNative START_NEW_SCRIPT_WITH_ARGS 4 1
+    Drop
+    Jump @L_000dd1
+L_000dbb:
+    PushString "parachute_ai\0"
+    CallNative REQUEST_SCRIPT 1 0
+L_000dd1:
+    GetLocalPv3
+    pGet
+    Push_1
+    Add
+    GetLocalPv3
+    pSet
+L_000dd7:
+    GetLocalPv4
+    pGet
+    Push_1
+    Add
+    GetLocalPv4
+    pSet
+    Jump @L_000c6b
+L_000de2:
+    GetLocalPv3
+    pGet
+    Push_0
+    CmpEQ
+    JumpFalse @L_000e5b
+    PushS 40
+    GetStaticPs
+    pGet
+    CallNative DOES_OBJECT_EXIST 1 1
+    Not
+    JumpFalse @L_000e56
+    Jump @L_000e51
+
+L_000e02:
+    Function 0 2
+    Push 1490460832
+    CallNative HAS_MODEL_LOADED 1 1
+    JumpFalse @L_000e23
+    Push 1490460832
+    CallNative MARK_MODEL_AS_NO_LONGER_NEEDED 1 0
+L_000e23:
+    PushString "PARACHUTE\0"
+    CallNative HAVE_ANIMS_LOADED 1 1
+    JumpFalse @L_000e4e
+    PushString "PARACHUTE\0"
+    CallNative REMOVE_ANIMS 1 0
+L_000e4e:
+    Return 0 0
+L_000e51:
+    Call @L_000e02
+L_000e56:
+    Jump @L_000e60
+L_000e5b:
+    Call @L_000cb6
+L_000e60:
+    Call @L_0000c4
+    CallNative IS_CHAR_INJURED 1 1
+    Not
+    JumpFalse @L_00125f
+    Call @L_0000c4
+    GetLocalPv5
+    CallNative GET_CURRENT_CHAR_WEAPON 2 1
+    Drop
+    GetLocalPv5
+    pGet
+    PushS 41
+    CmpEQ
+    JumpFalse @L_00122f
+    Push_4
+    Push_0
+    Jump @L_000fac
+
+L_000e92:
+    Function 2 4
+    Jump @L_000eb0
+
+L_000e9b:
+    Function 0 2
+    CallNative GET_PLAYER_ID 0 1
+    CallNative CONVERT_INT_TO_PLAYERINDEX 1 1
+    Return 0 1
+L_000eb0:
+    Call @L_000e9b
+    CallNative IS_PLAYER_PLAYING 1 1
+    JumpFalse @L_000fa8
+    CallNative IS_SCREEN_FADED_IN 0 1
+    JumpFalse @L_000fa8
+    Call @L_000e9b
+    CallNative IS_PLAYER_CONTROL_ON 1 1
+    GetLocalPv0
+    pGet
+    Push_5
+    CmpEQ
+    Or
+    JumpFalse @L_000fa8
+    Call @L_000e9b
+    CallNative IS_PLAYER_FREE_FOR_AMBIENT_TASK 1 1
+    GetLocalPv0
+    pGet
+    Push_5
+    CmpEQ
+    Or
+    GetLocalPv0
+    pGet
+    Push_4
+    CmpEQ
+    Or
+    GetLocalPv1
+    pGet
+    PushS 60241
+    GetGlobalPs
+    pGet
+    And
+    Or
+    JumpFalse @L_000fa8
+    Jump @L_000f24
+
+L_000f0c:
+    Function 0 2
+    PushS 60240
+    GetGlobalPs
+    pGet
+    Push_9
+    CmpEQ
+    JumpFalse @L_000f20
+    Push_0
+    Return 0 1
+L_000f20:
+    Push_1
+    Return 0 1
+L_000f24:
+    Call @L_000f0c
+    Not
+    JumpFalse @L_000fa8
+    Call @L_0000c4
+    CallNative GET_OBJECT_PED_IS_HOLDING 1 1
+    PushStringNull
+    pGet
+    CmpEQ
+    JumpFalse @L_000fa8
+    PushS 60242
+    GetGlobalPs
+    pGet
+    GetLocalPv0
+    pGet
+    CmpLE
+    JumpFalse @L_000fa8
+    Jump @L_000f9a
+
+L_000f55:
+    Function 0 2
+    Push_0
+    Push_0
+    Jump @L_000f92
+
+L_000f60:
+    Function 2 4
+    GetLocalPv0
+    pGet
+    JumpFalse @L_000f75
+    Push_1
+    PushS 60200
+    GetGlobalPs
+    PushS 104
+    Add
+    pSet
+L_000f75:
+    GetLocalPv1
+    pGet
+    PushS 60240
+    GetGlobalPs
+    pGet
+    Push_9
+    CmpNE
+    And
+    JumpFalse @L_000f8e
+    Push_1
+    PushS 60200
+    GetGlobalPs
+    PushS 100
+    Add
+    pSet
+L_000f8e:
+    Push_1
+    Return 2 1
+L_000f92:
+    Call @L_000f60
+    Return 0 1
+L_000f9a:
+    Call @L_000f55
+    JumpFalse @L_000fa8
+    Push_1
+    Return 2 1
+L_000fa8:
+    Push_0
+    Return 2 1
+L_000fac:
+    Call @L_000e92
+    PushS 60108
+    GetGlobalPs
+    pGet
+    Not
+    And
+    JumpFalse @L_00122a
+    PushS 43
+    GetStaticPs
+    pGet
+    Not
+    PushS 42
+    GetStaticPs
+    pGet
+    Push_2
+    CmpLT
+    And
+    CallNative IS_HELP_MESSAGE_BEING_DISPLAYED 0 1
+    Not
+    And
+    JumpFalse @L_000fff
+    PushString "PARA_EQUIP\0"
+    CallNative PRINT_HELP 1 0
+    Push_1
+    PushS 43
+    GetStaticPs
+    pSet
+    PushS 42
+    GetStaticPs
+    pGet
+    Push_1
+    Add
+    PushS 42
+    GetStaticPs
+    pSet
+L_000fff:
+    Push_0
+    Push_4
+    CallNative IS_CONTROL_JUST_PRESSED 2 1
+    JumpFalse @L_00122a
+    Call @L_0000c4
+    PushS 41
+    CallNative REMOVE_WEAPON_FROM_CHAR 2 0
+    Call @L_0000c4
+    Push_0
+    Push_0
+    Push_1
+    CallNative GIVE_WEAPON_TO_CHAR 4 0
+    Call @L_0000c4
+    Jump @L_001225
+
+L_001035:
+    Function 1 5
+    GetLocalPv0
+    pGet
+    Jump @L_001090
+
+L_001040:
+    Function 1 4
+    Push_0
+    GetLocalPv3
+    pSet
+    Push_0
+    GetLocalPv3
+    pSet
+L_00104a:
+    GetLocalPv3
+    pGet
+    PushS 60000
+    GetGlobalPs
+    pGet
+    CmpLT
+    JumpFalse @L_00108c
+    GetLocalPv3
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_0
+    Add
+    pGet
+    GetLocalPv0
+    pGet
+    CmpEQ
+    JumpFalse @L_001081
+    GetLocalPv3
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 56
+    Add
+    pGet
+    JumpFalse @L_001081
+    GetLocalPv3
+    pGet
+    Return 1 1
+L_001081:
+    GetLocalPv3
+    pGet
+    Push_1
+    Add
+    GetLocalPv3
+    pSet
+    Jump @L_00104a
+L_00108c:
+    Push_Neg1
+    Return 1 1
+L_001090:
+    Call @L_001040
+    GetLocalPv3
+    pSet
+    GetLocalPv3
+    pGet
+    Push_Neg1
+    CmpEQ
+    JumpFalse @L_001222
+    GetLocalPv0
+    pGet
+    CallNative IS_CHAR_INJURED 1 1
+    Not
+    JumpFalse @L_001222
+    GetLocalPv0
+    pGet
+    Call @L_0000c4
+    CmpNE
+    JumpFalse @L_0010f6
+    Push_1
+    GetLocalPv4
+    pSet
+    Push_0
+    GetLocalPv4
+    pSet
+L_0010c2:
+    GetLocalPv4
+    pGet
+    PushS 60000
+    GetGlobalPs
+    pGet
+    CmpLT
+    JumpFalse @L_0010f1
+    GetLocalPv4
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 56
+    Add
+    pGet
+    Not
+    JumpFalse @L_0010e6
+    GetLocalPv4
+    pGet
+    GetLocalPv3
+    pSet
+L_0010e6:
+    GetLocalPv4
+    pGet
+    Push_1
+    Add
+    GetLocalPv4
+    pSet
+    Jump @L_0010c2
+L_0010f1:
+    Jump @L_0010f9
+L_0010f6:
+    Push_0
+    GetLocalPv3
+    pSet
+L_0010f9:
+    GetLocalPv3
+    pGet
+    Push_Neg1
+    CmpNE
+    JumpFalse @L_0011d2
+    GetLocalPv3
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 56
+    Add
+    pGet
+    Not
+    JumpFalse @L_0011cd
+    GetLocalPv0
+    pGet
+    GetLocalPv3
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_0
+    Add
+    pSet
+    Push_0
+    GetLocalPv3
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_4
+    Add
+    pSet
+    Push_0
+    GetLocalPv3
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_8
+    Add
+    pSet
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    Push_3
+    GetLocalPv3
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_12
+    Add
+    FromStack
+    Push_1
+    GetLocalPv3
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 56
+    Add
+    pSet
+    Push_0
+    GetLocalPv3
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 60
+    Add
+    pSet
+    Push_0
+    GetLocalPv3
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 64
+    Add
+    pSet
+    PushF -60.0
+    GetLocalPv3
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 48
+    Add
+    pSet
+    PushF -7.0
+    GetLocalPv3
+    pGet
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 52
+    Add
+    pSet
+    Push_0
+    PushS 60099
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60097
+    GetGlobalPs
+    pSet
+    Push_1
+    PushS 60093
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60092
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60091
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60094
+    GetGlobalPs
+    pSet
+    Push_0
+    PushS 60098
+    GetGlobalPs
+    pSet
+L_0011cd:
+    Jump @L_001222
+L_0011d2:
+    PushString "GIVE_PED_A_PARACHUTE: All AI parachute ped slots are currently in use.\0"
+    CallNative SCRIPT_ASSERT 1 0
+L_001222:
+    Return 1 0
+L_001225:
+    Call @L_001035
+L_00122a:
+    Jump @L_00125f
+L_00122f:
+    PushS 43
+    GetStaticPs
+    pGet
+    JumpFalse @L_00125f
+    PushString "PARA_EQUIP\0"
+    CallNative IS_THIS_HELP_MESSAGE_BEING_DISPLAYED 1 1
+    JumpFalse @L_001259
+    CallNative CLEAR_HELP 0 0
+L_001259:
+    Push_0
+    PushS 43
+    GetStaticPs
+    pSet
+L_00125f:
+    Call @L_0000c4
+    CallNative IS_CHAR_INJURED 1 1
+    Not
+    JumpFalse @L_0017c5
+    Push_0
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 56
+    Add
+    pGet
+    JumpFalse @L_00141e
+    PushS 60095
+    GetGlobalPs
+    pGet
+    Not
+    JumpFalse @L_001315
+    Push_1
+    Jump @L_001310
+
+L_001293:
+    Function 1 3
+    GetLocalPv0
+    pGet
+    Not
+    JumpFalse @L_0012b3
+    Push_8
+    Push_0
+    CallNative SET_DRAW_PLAYER_COMPONENT 2 0
+    Push_0
+    PushS 60095
+    GetGlobalPs
+    pSet
+    Jump @L_00130d
+L_0012b3:
+    Jump @L_0012ee
+
+L_0012b8:
+    Function 0 3
+    Call @L_0000c4
+    CallNative IS_CHAR_INJURED 1 1
+    Not
+    JumpFalse @L_0012ea
+    Call @L_0000c4
+    Push_8
+    CallNative GET_CHAR_DRAWABLE_VARIATION 2 1
+    GetLocalPv2
+    pSet
+    GetLocalPv2
+    pGet
+    Push_0
+    CmpEQ
+    JumpFalse @L_0012ea
+    Push_0
+    Return 0 1
+L_0012ea:
+    Push_1
+    Return 0 1
+L_0012ee:
+    Call @L_0012b8
+    Not
+    JumpFalse @L_0012fe
+    Call @L_000c0f
+L_0012fe:
+    Push_8
+    Push_1
+    CallNative SET_DRAW_PLAYER_COMPONENT 2 0
+    Push_1
+    PushS 60095
+    GetGlobalPs
+    pSet
+L_00130d:
+    Return 1 0
+L_001310:
+    Call @L_001293
+L_001315:
+    PushS 40
+    GetStaticPs
+    pGet
+    CallNative DOES_OBJECT_EXIST 1 1
+    Not
+    JumpFalse @L_001419
+    Push_0
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_4
+    Add
+    pGet
+    Push_3
+    CmpEQ
+    Push_0
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_4
+    Add
+    pGet
+    Push_5
+    CmpEQ
+    Or
+    Push_0
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_4
+    Add
+    pGet
+    Push_7
+    CmpEQ
+    Or
+    Push_0
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_4
+    Add
+    pGet
+    Push_8
+    CmpEQ
+    Or
+    JumpFalse @L_001419
+    Jump @L_001414
+
+L_001364:
+    Function 0 5
+    Push 1276771907
+    CallNative HAS_MODEL_LOADED 1 1
+    Not
+    JumpFalse @L_00138b
+    Push 1276771907
+    CallNative REQUEST_MODEL 1 0
+    Jump @L_001411
+L_00138b:
+    Call @L_0000c4
+    CallNative IS_CHAR_INJURED 1 1
+    Not
+    JumpFalse @L_001411
+    Call @L_0000c4
+    GetLocalPv2
+    Push_0
+    Add
+    GetLocalPv2
+    Push_4
+    Add
+    GetLocalPv2
+    Push_8
+    Add
+    CallNative GET_CHAR_COORDINATES 4 0
+    Push 1276771907
+    GetLocalPv2
+    Push_0
+    Add
+    pGet
+    GetLocalPv2
+    Push_4
+    Add
+    pGet
+    PushF 25.0
+    fNeg
+    PushS 40
+    GetStaticPs
+    Push_1
+    CallNative CREATE_OBJECT_NO_OFFSET 6 0
+    PushS 40
+    GetStaticPs
+    pGet
+    Push_0
+    CallNative SET_OBJECT_DYNAMIC 2 0
+    PushS 40
+    GetStaticPs
+    pGet
+    Push_0
+    CallNative SET_OBJECT_COLLISION 2 0
+    PushS 40
+    GetStaticPs
+    pGet
+    Push_0
+    CallNative SET_OBJECT_VISIBLE 2 0
+    PushS 40
+    GetStaticPs
+    pGet
+    Push_1
+    CallNative SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN 2 0
+    Push 1276771907
+    CallNative MARK_MODEL_AS_NO_LONGER_NEEDED 1 0
+L_001411:
+    Return 0 0
+L_001414:
+    Call @L_001364
+L_001419:
+    Jump @L_0017c0
+L_00141e:
+    PushS 40
+    GetStaticPs
+    pGet
+    CallNative DOES_OBJECT_EXIST 1 1
+    JumpFalse @L_0017a3
+    CallNative IS_SCREEN_FADED_OUT 0 1
+    Not
+    JumpFalse @L_001799
+    Call @L_0000c4
+    CallNative IS_CHAR_IN_WATER 1 1
+    Not
+    JumpFalse @L_00178f
+    PushString "PARACHUTE\0"
+    CallNative HAVE_ANIMS_LOADED 1 1
+    JumpFalse @L_001785
+    PushS 60095
+    GetGlobalPs
+    pGet
+    JumpFalse @L_00177b
+    PushS 35
+    GetStaticPs
+    pGet
+    Not
+    JumpFalse @L_00158b
+    Push_4
+    Push_0
+    Call @L_000e92
+    Call @L_0000c4
+    CallNative IS_CHAR_IN_ANY_CAR 1 1
+    Not
+    And
+    JumpFalse @L_001586
+    Jump @L_00157b
+
+L_00149a:
+    Function 0 2
+    PushS 40
+    GetStaticPs
+    pGet
+    CallNative DOES_OBJECT_EXIST 1 1
+    JumpFalse @L_001578
+    PushS 40
+    GetStaticPs
+    pGet
+    Push_1
+    CallNative SET_OBJECT_DYNAMIC 2 0
+    PushS 40
+    GetStaticPs
+    pGet
+    Push_1
+    CallNative SET_OBJECT_COLLISION 2 0
+    PushS 40
+    GetStaticPs
+    pGet
+    Push_1
+    CallNative SET_OBJECT_VISIBLE 2 0
+    PushS 40
+    GetStaticPs
+    pGet
+    Call @L_0000c4
+    PushS 1202
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    Push_1
+    CallNative ATTACH_OBJECT_TO_PED 10 0
+    PushS 40
+    GetStaticPs
+    pGet
+    PushString "obj_chute_off\0"
+    PushString "PARACHUTE\0"
+    PushF 1000.0
+    Push_0
+    Push_1
+    CallNative PLAY_OBJECT_ANIM 6 1
+    Drop
+    Call @L_0000c4
+    CallNative IS_CHAR_INJURED 1 1
+    Not
+    JumpFalse @L_001578
+    Call @L_0000c4
+    PushString "chute_off\0"
+    PushString "PARACHUTE\0"
+    PushF 3.0
+    Push_0
+    PushS 1280
+    CallNative TASK_PLAY_ANIM_WITH_FLAGS 6 0
+L_001578:
+    Return 0 0
+L_00157b:
+    Call @L_00149a
+    Push_1
+    PushS 35
+    GetStaticPs
+    pSet
+L_001586:
+    Jump @L_001776
+L_00158b:
+    PushS 41
+    GetStaticPs
+    pGet
+    Push_0
+    CmpEQ
+    JumpFalse @L_0016b8
+    Push_8
+    Push_0
+    CallNative SET_DRAW_PLAYER_COMPONENT 2 0
+    PushS 40
+    GetStaticPs
+    pGet
+    PushString "obj_chute_off\0"
+    PushString "PARACHUTE\0"
+    CallNative IS_OBJECT_PLAYING_ANIM 3 1
+    JumpFalse @L_0016b3
+    PushS 40
+    GetStaticPs
+    pGet
+    PushString "obj_chute_off\0"
+    PushString "PARACHUTE\0"
+    GetLocalPv6
+    CallNative GET_OBJECT_ANIM_CURRENT_TIME 4 0
+    GetLocalPv6
+    pGet
+    PushF 0.949999988079071
+    fCmpGT
+    JumpFalse @L_001650
+    PushS 40
+    GetStaticPs
+    pGet
+    Push_1
+    CallNative DETACH_OBJECT 2 0
+    PushS 40
+    GetStaticPs
+    pGet
+    PushString "obj_chute_off_idle\0"
+    PushString "PARACHUTE\0"
+    PushF 8.0
+    Push_1
+    Push_0
+    CallNative PLAY_OBJECT_ANIM 6 1
+    Drop
+    PushS 41
+    GetStaticPs
+    CallNative GET_GAME_TIMER 1 0
+L_001650:
+    Call @L_0000c4
+    PushString "PARACHUTE\0"
+    PushString "chute_off\0"
+    CallNative IS_CHAR_PLAYING_ANIM 3 1
+    Not
+    JumpFalse @L_0016b3
+    Jump @L_0016ae
+
+L_00167f:
+    Function 0 2
+    PushS 40
+    GetStaticPs
+    pGet
+    CallNative DOES_OBJECT_EXIST 1 1
+    JumpFalse @L_0016ab
+    PushS 40
+    GetStaticPs
+    CallNative DELETE_OBJECT 1 0
+    Push_0
+    PushS 41
+    GetStaticPs
+    pSet
+    Push_0
+    PushS 35
+    GetStaticPs
+    pSet
+L_0016ab:
+    Return 0 0
+L_0016ae:
+    Call @L_00167f
+L_0016b3:
+    Jump @L_001776
+L_0016b8:
+    GetLocalPv7
+    CallNative GET_GAME_TIMER 1 0
+    PushS 40
+    GetStaticPs
+    pGet
+    Push_10
+    GetLocalPs
+    Push_0
+    Add
+    Push_10
+    GetLocalPs
+    Push_4
+    Add
+    Push_10
+    GetLocalPs
+    Push_8
+    Add
+    CallNative GET_OBJECT_COORDINATES 4 0
+    Push_10
+    GetLocalPs
+    Push_0
+    Add
+    pGet
+    Push_10
+    GetLocalPs
+    Push_4
+    Add
+    pGet
+    Push_10
+    GetLocalPs
+    Push_8
+    Add
+    pGet
+    PushF 1000.0
+    fAdd
+    Push_9
+    GetLocalPs
+    CallNative GET_GROUND_Z_FOR_3D_COORD 4 1
+    Drop
+    Push_10
+    GetLocalPs
+    Push_8
+    Add
+    pGet
+    Push_9
+    GetLocalPs
+    pGet
+    PushF 1.0
+    fAdd
+    fCmpLT
+    JumpFalse @L_001718
+    PushS 40
+    GetStaticPs
+    pGet
+    Push_1
+    CallNative FREEZE_OBJECT_POSITION 2 0
+L_001718:
+    GetLocalPv7
+    pGet
+    PushS 41
+    GetStaticPs
+    pGet
+    Sub
+    Push_8
+    GetLocalPs
+    pSet
+    Push_8
+    GetLocalPs
+    pGet
+    PushS 2000
+    CmpGT
+    JumpFalse @L_001739
+    Call @L_00167f
+    Jump @L_001776
+L_001739:
+    Push_8
+    GetLocalPs
+    pGet
+    PushS 1000
+    CmpGT
+    JumpFalse @L_001776
+    PushS 40
+    GetStaticPs
+    pGet
+    PushS 255
+    Push_8
+    GetLocalPs
+    pGet
+    PushS 1000
+    Sub
+    CallNative TO_FLOAT 1 1
+    PushF 1000.0
+    fDiv
+    PushF 255.0
+    fMult
+    CallNative ROUND 1 1
+    Sub
+    CallNative SET_OBJECT_ALPHA 2 0
+L_001776:
+    Jump @L_001780
+L_00177b:
+    Call @L_00167f
+L_001780:
+    Jump @L_00178a
+L_001785:
+    Call @L_00167f
+L_00178a:
+    Jump @L_001794
+L_00178f:
+    Call @L_00167f
+L_001794:
+    Jump @L_00179e
+L_001799:
+    Call @L_00167f
+L_00179e:
+    Jump @L_0017c0
+L_0017a3:
+    PushS 60095
+    GetGlobalPs
+    pGet
+    JumpFalse @L_0017c0
+    CallNative IS_PLAYER_BEING_ARRESTED 0 1
+    Not
+    JumpFalse @L_0017c0
+    Push_0
+    Call @L_001293
+L_0017c0:
+    Jump @L_0017ca
+L_0017c5:
+    Call @L_00167f
+L_0017ca:
+    Jump @L_001838
+
+L_0017cf:
+    Function 0 2
+    Call @L_0000c4
+    CallNative IS_CHAR_INJURED 1 1
+    Not
+    JumpFalse @L_001835
+    Push_0
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    PushS 56
+    Add
+    pGet
+    Push_0
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_4
+    Add
+    pGet
+    Push_3
+    CmpEQ
+    Push_0
+    Push_18
+    PushS 60000
+    GetGlobalPs
+    GetArrayPs
+    Push_4
+    Add
+    pGet
+    Push_5
+    CmpEQ
+    Or
+    And
+    Call @L_0000c4
+    CallNative IS_CHAR_IN_ANY_HELI 1 1
+    Or
+    CallNative ARE_WIDESCREEN_BORDERS_ACTIVE 0 1
+    Not
+    And
+    CallNative IS_HUD_PREFERENCE_SWITCHED_ON 0 1
+    And
+    JumpFalse @L_001835
+    CallNative DISPLAY_ALTIMETER_THIS_FRAME 0 0
+L_001835:
+    Return 0 0
+L_001838:
+    Call @L_0017cf
+    Jump @L_00004b
+L_001842:
+    Return 0 0
+
+.data   ; statics + globals and any trailing bytes, verbatim
+    20094b5d897cd228d6395cc4b89feb97f6e6adf2aebb26f890126661a69445ad
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb97

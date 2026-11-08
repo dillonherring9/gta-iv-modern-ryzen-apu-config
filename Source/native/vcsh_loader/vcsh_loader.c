@@ -10,12 +10,11 @@
 #include <stdint.h>
 #include <ctype.h>
 
+#include "startup_log.h"
+
 static char g_dir[MAX_PATH], g_log[MAX_PATH], g_ini[MAX_PATH];
 static void llog(const char *fmt, ...) {
-    FILE *f = fopen(g_log, "a"); if (!f) return;
-    SYSTEMTIME t; GetLocalTime(&t);
-    fprintf(f, "[%02d:%02d:%02d] loader: ", t.wHour, t.wMinute, t.wSecond);
-    va_list a; va_start(a, fmt); vfprintf(f, fmt, a); va_end(a); fputc('\n', f); fclose(f);
+    va_list a; va_start(a, fmt); vc_log_v(g_log, "loader: ", fmt, a); va_end(a);
 }
 static int readable(uintptr_t a, size_t n) {
     MEMORY_BASIC_INFORMATION mi;

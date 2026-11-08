@@ -19,14 +19,13 @@
 #include <stdint.h>
 
 /* ---------------- log ---------------- */
+#include "startup_log.h"
+#include "profile_snapshot.h"
+
 static char g_dir[MAX_PATH];      /* ...\plugins */
 static char g_logpath[MAX_PATH];
 static void vlog(const char *fmt, ...) {
-    FILE *f = fopen(g_logpath, "a"); if (!f) return;
-    SYSTEMTIME t; GetLocalTime(&t);
-    fprintf(f, "[%02d:%02d:%02d] ", t.wHour, t.wMinute, t.wSecond);
-    va_list a; va_start(a, fmt); vfprintf(f, fmt, a); va_end(a);
-    fputc('\n', f); fclose(f);
+    va_list a; va_start(a, fmt); vc_log_v(g_logpath, "", fmt, a); va_end(a);
 }
 
 /* ---------------- BASS ---------------- */
@@ -113,7 +112,7 @@ static struct {
 } S;
 static int ini(const char *sec, const char *key, int def) {
     char p[MAX_PATH]; snprintf(p, sizeof p, "%s\\VCMusic.ini", g_dir);
-    return GetPrivateProfileIntA(sec, key, def, p);
+    return vc_profile_int(sec, key, def, p);
 }
 static void settings_load(void) {
     S.wantedOn = ini("Wanted", "Enabled", 1); S.wantedStart = ini("Wanted", "StartAt", 3);
@@ -452,6 +451,9 @@ BOOL WINAPI DllMain(HINSTANCE inst, DWORD reason, LPVOID _) {
         snprintf(g_logpath, sizeof g_logpath, "%s\\VCMusic.log", g_dir);
         DeleteFileA(g_logpath);
         InitializeCriticalSection(&g_cs);
+        char config[MAX_PATH]; snprintf(config, sizeof config, "%s\\VCMusic.ini", g_dir);
+        vc_profile_load(config);
+        if (vc_ini_status < 0) { vlog("settings unreadable or oversized; inactive before hooks"); return TRUE; }
         init();
     }
     return TRUE;

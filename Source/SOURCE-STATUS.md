@@ -1,34 +1,69 @@
 # Source status
 
-Snapshot: **7 November 2026**. This export covers the maintained code needed
-for the current AVCNGCE release through checkpoint 215.
+Snapshot: **8 November 2026**. This export covers maintained code for
+**Vice City Actual Next Gen CE** through checkpoint **221**.
+
+## Covered code
+
+- All **96** current SCO scripts are editable assembly, including the three
+  imported parachute controllers, the wearable-aircraft adapter and movement
+  compatibility changes.
+- Five release-native modules are included: `VCMusic.asi`, `VCMemory.asi`,
+  `VCScriptHook.asi`, `ScriptHook.dll` and `VCAudioHeap.asi`. Their current
+  authoring sources include the checkpoint 219–220 startup-lock repairs.
+- The two hash-guarded DualSense patches are included. The original vendor
+  binary and its full source are not included.
+
+The current installed/release script image SHA256 is
+`45d88ccd17266d11def98ff9715afa82f128d3d8a24a37541c2baf48d439aa64`.
+[scripts/manifest.json](scripts/manifest.json) records member metadata and
+source hashes. Native builds write `native-build.json` with output identities.
+
+## Reproduction results
 
 | Component | Verified result |
 |---|---|
-| 93 SCO scripts | Fresh assembly reproduces every member and the entire current installed/release `script.img`, including archive metadata and padding |
-| `VCMusic.asi`, `VCMemory.asi`, `VCScriptHook.asi`, `ScriptHook.dll` | Fresh Zig 0.13.0 builds match the release after setting the PE COFF timestamp to zero in both files |
-| `VCAudioHeap.asi` | Fresh build also matches the raw release bytes |
-| `GTA_IV_DualSense.asi` | Included patch chain reproduces the release hash from the supported original 1.4 binary; full vendor source is not included |
+| All 96 SCO scripts | Fresh assembly from this export reproduces every member and the complete current installed/release `script.img`, including metadata and padding |
+| `VCMusic.asi`, `VCMemory.asi`, `VCScriptHook.asi`, `ScriptHook.dll`, `VCAudioHeap.asi` | Fresh Zig 0.13.0 builds match the current release bytes exactly, including zero PE COFF timestamps; Opus is rebuilt from the bundled source subset |
+| `GTA_IV_DualSense.asi` | The unchanged two-patch chain has retained verification against the supported original 1.4 binary; full vendor source is not included |
 
-The script image SHA256 is
-`5da9c42a6b82039aaccac0d468c4d11f2bc672dbf10b1e8bdeaca6de8110ef71`.
-The exported member manifest restores two stale resource-type fields to the
-current image values; all 93 `.scasm` files retain their maintained bytes.
-[scripts/manifest.json](scripts/manifest.json) records the source and member
-hashes. Native builds write `native-build.json` with their output identities.
+[VALIDATION.json](VALIDATION.json) records these export comparisons and their
+scope. The maintained checkpoint also passed executable-backed stack/opcode
+checks and 23 compiled aircraft fixtures. Those runtime-development checks
+are separate from the fresh source-export builds. The audio-heap fixture was
+compiled during export verification; it was not run as part of publication.
 
-This is a curated source export, not a complete release build system.
-FusionFix and its D3D9 proxy have retained matching-version reference source,
-but exact binary reproduction was not established here. The retained DLSS-IV
-checkout is newer than the installed binary. Exact local source/build mappings
-were not established for Project Thunder CE, Mjolnir IV or Xbox Rain Droplets.
-Those vendor components and game assets are outside this export. The optional
-local `VCPhysicsCheck` diagnostic is deliberately excluded. Historical recovered
-C script variants are also excluded because bulk rebuilding them would lose
-later mission changes.
+## Current behavior and evidence
 
-On 7 November the project owner reported that “everything works.” This is a
-positive general gameplay report. The export checks establish file identities
-and reproducible builds; they do not provide comprehensive mission, language,
-platform or save/load coverage. The historically intermittent no-window
-startup issue has no established permanent cure.
+The parachute is automatically wearable in full-size planes and helicopters,
+excludes the two RC aircraft, and lets the player keep a gun without selecting
+a parachute weapon. The imported controller's unsupported stack request and
+two reachable invalid CE opcodes were corrected. Native startup logging and
+settings reads were revised after live thread captures established loader-lock
+cycles. These changes retain the existing content and controller features.
+
+On 8 November the project owner confirmed save loading and play, automatic
+pack with a gun, and parachute deployment, steering and landing, then reported
+that everything seemed to work well. These are observed gameplay reports.
+They do not certify every aircraft/seat, mission, language or platform, or
+long-term repeated cold-start reliability.
+
+## Source scope
+
+This is a curated source export, not a complete release build system. The
+96 assembly sources preserve current compiled scripts; they are not a
+collection of all original C or .NET projects. Historical recovered C script
+variants are excluded because bulk rebuilding them can discard later fixes.
+
+Parachute, blue Soiree suit and other map/model/texture/collision/audio assets
+are not included or regenerated by these builders. Current credits identify
+the upstream 8.0 material, Rockstar/TBoGT parachute work and MoveImprove
+compatibility reference. Their attribution does not imply that their full
+original source projects are present here.
+
+FusionFix and its D3D9 proxy have retained matching-version reference source
+outside this export; exact binary reproduction was not established here.
+The retained DLSS-IV checkout is newer than the installed binary. Exact local
+source/build mappings were not established for Project Thunder CE, Mjolnir IV
+or Xbox Rain Droplets. Those vendor components remain outside this export.
+The optional local `VCPhysicsCheck` diagnostic is also excluded.

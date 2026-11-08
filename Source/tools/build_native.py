@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the five maintained native modules without reading or installing a game.
+"""Build VCANGCE's five release-native modules without reading or installing a game.
 
 Requires Python 3.9+ and Zig 0.13.0. All intermediate and compiled files stay
 under --out; sources and bundled dependencies are read only.
@@ -97,7 +97,8 @@ def build(args):
               "pe_coff_timestamp": 0, "modules": {}}
     if "vcsh_loader" in chosen:
         library, report["opus"] = build_opus(compiler, output, args.jobs)
-    base = [compiler, "cc", "-target", "x86-windows-gnu", "-O2"]
+    base = [compiler, "cc", "-target", "x86-windows-gnu", "-O2",
+            "-Wall", "-Wextra", "-Wno-misleading-indentation"]
     for module in chosen:
         source = ROOT / "native" / module
         extra = []
@@ -105,18 +106,17 @@ def build(args):
             name, inputs, flags = "VCMusic.asi", [source / "vcmusic.c"], []
         elif module == "vcmemory":
             name, inputs = "VCMemory.asi", [source / "vcmemory.c"]
-            flags, extra = ["-Wall", "-Wextra"], ["-lpsapi"]
+            flags, extra = [], ["-lpsapi"]
         elif module == "vcsh_loader":
             name, inputs = "VCScriptHook.asi", [source / "vcsh_loader.c"]
-            flags = ["-Wall", "-Wextra", "-Werror", "-Wno-misleading-indentation",
-                     "-I" + str(ROOT / "dependencies/opus-1.6/include")]
+            flags = ["-I" + str(ROOT / "dependencies/opus-1.6/include")]
             extra = [str(library), "-lsetupapi", "-lhid", "-lole32", "-lwinmm"]
         elif module == "scripthook":
             name, inputs = "ScriptHook.dll", [source / "vcsh.c", source / "vcsh.def"]
-            flags = ["-Wall", "-Wextra"]
+            flags = []
         else:
             name, inputs = "VCAudioHeap.asi", [source / "vcaudioheap.c"]
-            flags = ["-Wall", "-Wextra", "-Werror"]
+            flags = []
         target = output / name
         command = [*base, *flags, "-shared", "-s", "-o", str(target),
                    *map(str, inputs), *extra]

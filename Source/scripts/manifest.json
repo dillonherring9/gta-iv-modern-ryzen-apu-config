@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "project": "Advanced Vice City Next Gen CE",
-  "scope": "Current release script.img source snapshot; source and file identity only.",
+  "project": "Vice City Actual Next Gen CE",
+  "scope": "Checkpoint-221 release script.img source snapshot; source and file identity only.",
   "image": {
-    "bytes": 5939200,
-    "sha256": "5da9c42a6b82039aaccac0d468c4d11f2bc672dbf10b1e8bdeaca6de8110ef71",
+    "bytes": 5967872,
+    "sha256": "45d88ccd17266d11def98ff9715afa82f128d3d8a24a37541c2baf48d439aa64",
     "resource_header": 233,
     "members": [
       {
@@ -690,12 +690,12 @@
       {
         "name": "range_bootstrap.sco",
         "resource_type": 1,
-        "size": 1046,
+        "size": 1044,
         "offset": 5312512,
         "allocated_bytes": 2048,
-        "padding_bytes": 1002,
-        "sha256": "39c36271eb47ad43ece7cae9cdcd58ec687398b49c734e2a32e76c3ec7bb9435",
-        "allocation_sha256": "b6aaca87f0a9b401a6f889b729899fcf9688e92cf1446aa65aa3039c9e5c32e1"
+        "padding_bytes": 1004,
+        "sha256": "5ab2083243d1f4d6ff05fff412e473276e0c9d75bfd30890c75a9c99eccb2b6a",
+        "allocation_sha256": "e8bf2455322a4fff16a0f02512a4ae114e9e00495c45510a089df72514538493"
       },
       {
         "name": "vc_range.sco",
@@ -730,12 +730,12 @@
       {
         "name": "vc_euphoria.sco",
         "resource_type": 1,
-        "size": 17015,
+        "size": 17684,
         "offset": 5343232,
         "allocated_bytes": 18432,
-        "padding_bytes": 1417,
-        "sha256": "d0e14f71cdea905f7ab680a847ed5dcb198a98a70acc043949989e26e7043270",
-        "allocation_sha256": "3bbc7f6a6eaff4d9fd340bdc202383d25c74aea259727e2933081b19ecb791fa"
+        "padding_bytes": 748,
+        "sha256": "bb4d1b6327d18d0687c3e71e85f8cd4e11e99a77d5944605c16b9922ec04b84a",
+        "allocation_sha256": "0c8fad4981ca60ae3a7ee6247e0fab9ba8b031bf444401ee4d7ac7fac02721e5"
       },
       {
         "name": "vc_fighting.sco",
@@ -838,20 +838,10 @@
         "allocation_sha256": "fdcb94d984367eafd23107b2a3c96675ccd1ec1a88920e5931197da748c08ede"
       },
       {
-        "name": "vc_native_chute.sco",
-        "resource_type": 1,
-        "size": 13153,
-        "offset": 5804032,
-        "allocated_bytes": 14336,
-        "padding_bytes": 1183,
-        "sha256": "a3a3e2c38b3006b00ae971db9072f349451068a19bd4740fce5ac516b4bf809c",
-        "allocation_sha256": "d65fc5b03378b57a3f5b7f9a358e08674bfada5405c5f17893f5f62724f1f79e"
-      },
-      {
         "name": "vc_skimmer.sco",
         "resource_type": 1,
         "size": 1824,
-        "offset": 5818368,
+        "offset": 5804032,
         "allocated_bytes": 2048,
         "padding_bytes": 224,
         "sha256": "f57e37069aa154e4ef55134d1e9fe05ac687dfba5762c6d69d5ec94e73ff8693",
@@ -861,7 +851,7 @@
         "name": "vc_office.sco",
         "resource_type": 1,
         "size": 2072,
-        "offset": 5820416,
+        "offset": 5806080,
         "allocated_bytes": 4096,
         "padding_bytes": 2024,
         "sha256": "0927fd6ed7c0f001892ac5bec2013546bddc4855a5bc070d45f6866fa784917c",
@@ -871,7 +861,7 @@
         "name": "vc_classichud.sco",
         "resource_type": 1,
         "size": 25932,
-        "offset": 5824512,
+        "offset": 5810176,
         "allocated_bytes": 26624,
         "padding_bytes": 692,
         "sha256": "3c896997166f9d43812e761363249cd2afac99989996526f544b8ee1ce74401a",
@@ -881,7 +871,7 @@
         "name": "vc_lowheal.sco",
         "resource_type": 1,
         "size": 2651,
-        "offset": 5851136,
+        "offset": 5836800,
         "allocated_bytes": 4096,
         "padding_bytes": 1445,
         "sha256": "e99b56e0eaf8a14863fbf6dab9ab47cc9372e4d39e26ba86b18268de4ce6b412",
@@ -891,7 +881,7 @@
         "name": "vc_revenue.sco",
         "resource_type": 1,
         "size": 13920,
-        "offset": 5855232,
+        "offset": 5840896,
         "allocated_bytes": 14336,
         "padding_bytes": 416,
         "sha256": "bd91b1d597ddcbd20aca5769aab4ecf3202b552fe14a8f1a242931bf2f6c5043",
@@ -901,7 +891,7 @@
         "name": "vc_props.sco",
         "resource_type": 1,
         "size": 17643,
-        "offset": 5869568,
+        "offset": 5855232,
         "allocated_bytes": 18432,
         "padding_bytes": 789,
         "sha256": "d717ff52c12db1ddd9a29499091ab788841fd7ccd390f4a2e7674e5c7ccbae7a",
@@ -911,7 +901,7 @@
         "name": "vc_stats.sco",
         "resource_type": 1,
         "size": 3733,
-        "offset": 5888000,
+        "offset": 5873664,
         "allocated_bytes": 4096,
         "padding_bytes": 363,
         "sha256": "a3792eb3f61d2e033a939e4337a5cd190db0f21aa4b1a51df24b4dcfeb30b47d",
@@ -921,7 +911,7 @@
         "name": "vc_mvoice.sco",
         "resource_type": 1,
         "size": 41720,
-        "offset": 5892096,
+        "offset": 5877760,
         "allocated_bytes": 43008,
         "padding_bytes": 1288,
         "sha256": "7f90455397671e93080331fe1fd3d2a418a936cf6d369492ac13165c85497810",
@@ -931,11 +921,51 @@
         "name": "vc_tutorial.sco",
         "resource_type": 1,
         "size": 3698,
-        "offset": 5935104,
+        "offset": 5920768,
         "allocated_bytes": 4096,
         "padding_bytes": 398,
         "sha256": "7c942ec105e179251f544b5ded384b7f3fae5a1965758ae4628c19f99eef4d1b",
         "allocation_sha256": "4ee4a93e3e1c279c4b3f9a4bd8f567631f0f691f6d4b69700f0afed9906f8557"
+      },
+      {
+        "name": "parachutelauncher.sco",
+        "resource_type": 1,
+        "size": 6319,
+        "offset": 5924864,
+        "allocated_bytes": 8192,
+        "padding_bytes": 1873,
+        "sha256": "c2c19dfa6cf414c999a246b31f7bd178ae455c6995ef64ec8b78b710559874a0",
+        "allocation_sha256": "fdcee7b256ce40a2b20ca539a8e9b882849098d468ab00f5171893d587504b22"
+      },
+      {
+        "name": "parachute_player.sco",
+        "resource_type": 1,
+        "size": 23615,
+        "offset": 5933056,
+        "allocated_bytes": 24576,
+        "padding_bytes": 961,
+        "sha256": "b6f6bc140250e1d7546e77a211dc390143f49f71cba593fe110c3e795a2d1013",
+        "allocation_sha256": "4774343e951f919194523601054d5455106b1fcdf2c008cb06e5df070dcd375e"
+      },
+      {
+        "name": "parachute_ai.sco",
+        "resource_type": 1,
+        "size": 7795,
+        "offset": 5957632,
+        "allocated_bytes": 8192,
+        "padding_bytes": 397,
+        "sha256": "b217f67036e8fcacd2cc6d688e4200089597c40db001b4368619a5c7b8c7ad07",
+        "allocation_sha256": "3945d7187f5f8ce7dcb6706b3f6357c629ebdeef0086ba1dcdcced72b52749dd"
+      },
+      {
+        "name": "vc8_parachute.sco",
+        "resource_type": 1,
+        "size": 754,
+        "offset": 5965824,
+        "allocated_bytes": 2048,
+        "padding_bytes": 1294,
+        "sha256": "9d48f076ada858ac015a6bb13d06567f531f3148036b866a9ebfc69a2a3c767a",
+        "allocation_sha256": "70a06d11ff1f92d450a6eec3f5e748117611b741252421103dca4e1636e41946"
       }
     ]
   },
@@ -1101,6 +1131,18 @@
       "sha256": "c1b73ffa0169c252f88160a3a5913b0ae6e98c4f68c8d5928ab23dc393afdf6a"
     },
     {
+      "path": "scripts/parachute_ai.scasm",
+      "sha256": "7822c8af09f30d5f1746b485831f94e9831474e850f40ccc2e322ce2b144669f"
+    },
+    {
+      "path": "scripts/parachute_player.scasm",
+      "sha256": "aa7957d04b290d0a3400c7388edfaa423e2fb597b445f80eb687b3f74e65804c"
+    },
+    {
+      "path": "scripts/parachutelauncher.scasm",
+      "sha256": "2236a6f440c5f421e1d1a93fa3e8af4f77ca2772fff0e72fcce3a6ede4859f1d"
+    },
+    {
       "path": "scripts/pcj.scasm",
       "sha256": "fecb29cf74d2ce8794513d135ff3e29ad52a3f1b1af529da46f899b28d284e0b"
     },
@@ -1122,7 +1164,7 @@
     },
     {
       "path": "scripts/range_bootstrap.scasm",
-      "sha256": "d01021f1b451918d9dca8778493c75980b7beb42d147020a8cf8392594778635"
+      "sha256": "d0455466585b9b607a561de1f2fa8ed0f1b015edf4ad58192b39d240c697a5bf"
     },
     {
       "path": "scripts/rcheli.scasm",
@@ -1197,6 +1239,10 @@
       "sha256": "dfbe29adba86c0133715bf4beb419cc4bf483e7218854e98e09ae8252ff2ea43"
     },
     {
+      "path": "scripts/vc8_parachute.scasm",
+      "sha256": "4e969e63648d4e32a304e612fa7b62538e254af61599a450068b756e18db8da0"
+    },
+    {
       "path": "scripts/vc_army.scasm",
       "sha256": "10098243bb5a4db7d3effca94b2ff6d1774733912fd1cac3deb991307cdc2d30"
     },
@@ -1210,7 +1256,7 @@
     },
     {
       "path": "scripts/vc_euphoria.scasm",
-      "sha256": "ef8523b2db114c0667bd1f703ac05b6fb062dc8d81a52424a81411d4ed56876b"
+      "sha256": "978f042c7118078f7244b5d3c799ac257ebe27435d03a374a02cfd085774948d"
     },
     {
       "path": "scripts/vc_fighting.scasm",
@@ -1239,10 +1285,6 @@
     {
       "path": "scripts/vc_mvoice.scasm",
       "sha256": "253262aaf17b25df5ffc819cd98ecb99d25e1b22fd936c147844acd71e10d0f9"
-    },
-    {
-      "path": "scripts/vc_native_chute.scasm",
-      "sha256": "96f3d67b0cbb6251732ed13ac803f9e6234ad46221f7deca8165adcf53bdc1f9"
     },
     {
       "path": "scripts/vc_office.scasm",
@@ -1311,19 +1353,6 @@
     {
       "path": "scripts/weap_sounds.scasm",
       "sha256": "e4a5dda8e98c717e8d1bab4065b7c3717ddabc3077d7a8de8cb202f7f77a4630"
-    }
-  ],
-  "member_manifest_sha256": "bc46be12c17950c6b126be99c159f8408055b3e1e2fd0da07fcdf70d906da621",
-  "metadata_restoration": [
-    {
-      "member": "mob_phone.sco",
-      "old_resource_type": 0,
-      "current_resource_type": 1
-    },
-    {
-      "member": "bribestar_wanted.sco",
-      "old_resource_type": 0,
-      "current_resource_type": 1
     }
   ]
 }

@@ -118,7 +118,12 @@ void *__cdecl sh_native(const char *name) {
 
 /* ---------------- frame ---------------- */
 static int g_ready_logged;
+static LONG g_loaded_logged;
 void __cdecl VCSH_Frame(void) {
+    /* fopen can take a CRT stream lock whose owner needs the DLL loader lock.
+     * DllMain holds the loader lock: defer file logging to this game-frame entry. */
+    if (!InterlockedExchange(&g_loaded_logged, 1))
+        slog("ScriptHook.dll (VC native CE shim, step 161) loaded; %u native names", (unsigned)(sizeof k_natives / sizeof *k_natives));
     LONG n = g_nthreads;
     if (!n || !ce_ok() || !table_built() || !player_ready()) return;
     if (!g_ready_logged) { g_ready_logged = 1; slog("first game frame with player: ticking %ld thread(s)", (long)n); }
@@ -141,7 +146,6 @@ BOOL WINAPI DllMain(HINSTANCE inst, DWORD reason, LPVOID r) {
         GetModuleFileNameA(inst, g_log, MAX_PATH);
         char *s = strrchr(g_log, '\\'); if (s) s[1] = 0; else g_log[0] = 0;
         strncat(g_log, "VCScriptHook.log", MAX_PATH - strlen(g_log) - 1);
-        slog("ScriptHook.dll (VC native CE shim, step 161) loaded; %u native names", (unsigned)(sizeof k_natives / sizeof *k_natives));
     }
     return TRUE;
 }

@@ -1,56 +1,57 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-07",
+  "snapshot_date": "2026-11-08",
   "target": "x86-windows-gnu",
   "script_image": {
     "file": "update/common/data/cdimages/script.img",
-    "sha256": "5da9c42a6b82039aaccac0d468c4d11f2bc672dbf10b1e8bdeaca6de8110ef71",
-    "members": 93,
+    "sha256": "45d88ccd17266d11def98ff9715afa82f128d3d8a24a37541c2baf48d439aa64",
+    "members": 96,
     "whole_image_exact_match_to_release": true,
-    "member_bytes_metadata_and_allocations_exact": true
+    "member_bytes_metadata_and_allocations_exact": true,
+    "bytes": 5967872
   },
   "native_modules": [
     {
       "file": "VCMusic.asi",
-      "bytes": 55808,
-      "release_sha256": "4b659ebac428b7198c6763c70fd3e446108d4a58b84fae9fe2e0079bd83957b7",
-      "rebuilt_sha256": "c5ab1de4cb011a434ce31148ea8d19951c024fde3611d9c198115f348606d045",
-      "exact_raw_match": false,
+      "bytes": 57856,
+      "release_sha256": "0078d8acc3f3dbc18ea0046cf10e393593a6b55a69693994db0069737a199c56",
+      "rebuilt_sha256": "0078d8acc3f3dbc18ea0046cf10e393593a6b55a69693994db0069737a199c56",
+      "exact_raw_match": true,
       "exact_timestamp_normalized_match": true,
       "difference_count": 0
     },
     {
       "file": "VCMemory.asi",
-      "bytes": 46592,
-      "release_sha256": "080f2c40eb24947eec861cd258801c85d75c19aa2024b47aa486e08fae62c44d",
-      "rebuilt_sha256": "b284b90fa3cd1b376908e89a93e51cc94444d74dada84b8bc2e2d0a5f89013ed",
-      "exact_raw_match": false,
+      "bytes": 48128,
+      "release_sha256": "5ad580be6c58661dac25e4aa8831e6f74ac6926f49fa2b8391d38173b31028fb",
+      "rebuilt_sha256": "5ad580be6c58661dac25e4aa8831e6f74ac6926f49fa2b8391d38173b31028fb",
+      "exact_raw_match": true,
       "exact_timestamp_normalized_match": true,
       "difference_count": 0
     },
     {
       "file": "VCScriptHook.asi",
       "bytes": 493056,
-      "release_sha256": "f7acfaf8fa4ffe92fa39d273d0cf7f67f0f8bbc91e9305b27f937d8d1effb099",
-      "rebuilt_sha256": "8a2740ff3e46040a69194144f049a69b84886cfc1e56de6e2bbb0f9640085c13",
-      "exact_raw_match": false,
+      "release_sha256": "c52896b80abfaa9e4f69dfc95c3653d9e46ec07087ec96f6d183641e8bac835c",
+      "rebuilt_sha256": "c52896b80abfaa9e4f69dfc95c3653d9e46ec07087ec96f6d183641e8bac835c",
+      "exact_raw_match": true,
       "exact_timestamp_normalized_match": true,
       "difference_count": 0
     },
     {
       "file": "ScriptHook.dll",
       "bytes": 133632,
-      "release_sha256": "5eb8bee88248ca48be349131f6e1bafbc100686f8c0577f1ef196e01cff4d034",
-      "rebuilt_sha256": "bbded7a96ea64a4c01ea9fffcb70b6537f8fe869f6204b01869b776c45f9d0d3",
-      "exact_raw_match": false,
+      "release_sha256": "5071926931d9f82285cb0e7fade442fd9cf7743877109201980f08b6926bf1b9",
+      "rebuilt_sha256": "5071926931d9f82285cb0e7fade442fd9cf7743877109201980f08b6926bf1b9",
+      "exact_raw_match": true,
       "exact_timestamp_normalized_match": true,
       "difference_count": 0
     },
     {
       "file": "VCAudioHeap.asi",
-      "bytes": 32768,
-      "release_sha256": "925bf51b6c891f11f46105d7ea6c2825c00e8420268d8eb49eac3cfd6c1747d6",
-      "rebuilt_sha256": "925bf51b6c891f11f46105d7ea6c2825c00e8420268d8eb49eac3cfd6c1747d6",
+      "bytes": 33280,
+      "release_sha256": "9dbe0eae16c6c5f1909efed2955d44a8a5d68b772b65ba02631c45a185105b7c",
+      "rebuilt_sha256": "9dbe0eae16c6c5f1909efed2955d44a8a5d68b772b65ba02631c45a185105b7c",
       "exact_raw_match": true,
       "exact_timestamp_normalized_match": true,
       "difference_count": 0
@@ -77,12 +78,23 @@
     "input_sha256": "ba15d63140a05359b762abe1bdde09bda7f6204bec33b2614e19d2602e72a8b4",
     "final_sha256": "03bae1ada2e9b9503233f10810118c4bb37d9ee152371abbf38f5130999240eb",
     "exact_release_match": true,
-    "vendor_binary_included": false
+    "vendor_binary_included": false,
+    "verification_scope": "Retained exact chain result from2026-11-07; both exported patch scripts, original supported input identity and current release output identity are unchanged."
   },
-  "native_fixture": "Not run in this packaging check. Fixture compiled; prior installed-step native guard evidence remains separate.",
+  "native_fixture": {
+    "status": "Compiled, not run during this source update. Prior installed-step loader/guard fixtures and user play reports remain separate.",
+    "sha256": "8f9b56000ab77a58ce2c6fc78efd70dbefaa301dbc9994bf7c9f96bdd87cf749"
+  },
   "gameplay": {
-    "latest_general_user_report": "everything works",
-    "reported_date": "2026-11-07",
-    "scope": "General user play report. Packaging compiled and compared files, did not launch or exhaustively test the game. Intermittent startup cause remains undiagnosed."
-  }
+    "latest_general_user_report": "everythin seems to work really well",
+    "reported_date": "2026-11-08",
+    "confirmed": [
+      "Same save loads and Tommy can move/play",
+      "Automatic wearable aircraft pack and gun work together",
+      "Parachute deployment, steering and landing"
+    ],
+    "scope": "User gameplay before source publication. Source update compiles/compares files without launching the game. Captured startup/save faults were repaired; long-term repeated cold starts and all missions/platforms/save paths are not separately certified."
+  },
+  "project": "Vice City Actual Next Gen CE",
+  "release_checkpoint": 221
 }

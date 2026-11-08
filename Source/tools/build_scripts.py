@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the 93 AVCNGCE scripts into an external directory; never install them."""
+"""Build the 96 VCANGCE scripts into an external directory; never install them."""
 from __future__ import annotations
 
 import argparse
@@ -14,7 +14,7 @@ import sys
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES = ROOT / "scripts"
-EXPECTED_COUNT = 93
+EXPECTED_COUNT = 96
 
 
 def sha(data: bytes) -> str:
@@ -27,7 +27,7 @@ def inspect_image(data: bytes) -> dict:
         raise ValueError("truncated IMG header")
     magic, version, count, table_size, item_size, resource = struct.unpack_from("<IIIIHH", data)
     if (magic, version, item_size, count) != (0xA94E2A52, 3, 16, EXPECTED_COUNT):
-        raise ValueError("expected the plain IMG3 archive with exactly 93 entries")
+        raise ValueError("expected the plain IMG3 archive with exactly 96 entries")
     table_end = 20 + table_size
     if table_size < count * 16 or table_end > len(data):
         raise ValueError("invalid IMG3 directory bounds")
@@ -60,7 +60,7 @@ def validate_sources() -> list[dict]:
     lines = [line.split() for line in (SOURCES / "members.txt").read_text().splitlines()
              if line.strip() and not line.lstrip().startswith("#")]
     if len(lines) != EXPECTED_COUNT + 1 or lines[0][0] != "res" or len(lines[0]) != 2:
-        raise ValueError("members.txt must contain its res header and exactly 93 members")
+        raise ValueError("members.txt must contain its res header and exactly 96 members")
     int(lines[0][1], 0)
     names = []
     for fields in lines[1:]:
@@ -127,10 +127,10 @@ def main() -> int:
             raise ValueError("output files may not be symbolic links")
         (out / "script.img").write_bytes(image)
         (out / "build-report.json").write_text(json.dumps(result, indent=2) + "\n")
-        print(f"Built 93 scripts: {out / 'script.img'}")
+        print(f"Built 96 scripts: {out / 'script.img'}")
         print(f"SHA256 {result['sha256']}")
         if reference_info is not None:
-            print("PASS: reference image, 93 members and allocations are identical" if passed
+            print("PASS: reference image, 96 members and allocations are identical" if passed
                   else "FAIL: output differs from the comparison image; inspect build-report.json")
         return 0 if passed else 1
     except (OSError, ValueError, KeyError) as exc:

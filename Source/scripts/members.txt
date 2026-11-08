@@ -83,7 +83,6 @@ vc_insane.sco 1
 vc_robbery.sco 1
 vc_food.sco 1
 vc_security.sco 1
-vc_native_chute.sco 1
 vc_skimmer.sco 1
 vc_office.sco 1
 vc_classichud.sco 1
@@ -93,3 +92,7 @@ vc_props.sco 1
 vc_stats.sco 1
 vc_mvoice.sco 1
 vc_tutorial.sco 1
+parachutelauncher.sco 1
+parachute_player.sco 1
+parachute_ai.sco 1
+vc8_parachute.sco 1

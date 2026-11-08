@@ -8,6 +8,8 @@ Vice City is Rockstar’s 2002 game set in a fictional city based on Miami in 19
 
 **Download:** open [Releases](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/releases) and expand **Assets**. Download every numbered `VCANGCE.zip` part and follow [Installation](#installation). If your download host supplies the single **VCANGCE.zip**, use that instead. GitHub’s automatic **Source code** downloads are not the playable mod.
 
+**Developer sources:** [Source/](Source/) contains the current VCANGCE script and native-module sources, portable build tools, provenance and verification results. See [Source/BUILDING.md](Source/BUILDING.md) to build them; the playable mod is in Releases.
+
 **Content note:** this is an adult GTA game; the Pole Position dancers and the stripper in its purchase cutscene are nude.
 
 ## How this differs from the other Vice City NextGen projects

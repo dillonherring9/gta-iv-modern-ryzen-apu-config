@@ -26,13 +26,12 @@
 #include <stdint.h>
 #include "outfit_select.h"
 
+#include "startup_log.h"
+#include "profile_snapshot.h"
+
 static char g_dir[MAX_PATH], g_logpath[MAX_PATH];
 static void vlog(const char *fmt, ...) {
-    FILE *f = fopen(g_logpath, "a"); if (!f) return;
-    SYSTEMTIME t; GetLocalTime(&t);
-    fprintf(f, "[%02d:%02d:%02d] ", t.wHour, t.wMinute, t.wSecond);
-    va_list a; va_start(a, fmt); vfprintf(f, fmt, a); va_end(a);
-    fputc('\n', f); fclose(f);
+    va_list a; va_start(a, fmt); vc_log_v(g_logpath, "", fmt, a); va_end(a);
 }
 static unsigned mem_mb(void) {
     PROCESS_MEMORY_COUNTERS pmc; pmc.cb = sizeof pmc;
@@ -77,7 +76,7 @@ static const FlagFn reduce_ped_budget = (FlagFn)0xBB7E20, reduce_veh_budget = (F
 /* ---------------- settings / state ---------------- */
 static struct { int on, radius, budgets, zeroDensity, fallbackMin, outfits; } S;
 static int ini(const char *sec, const char *key, int def) {
-    char p[MAX_PATH]; snprintf(p, sizeof p, "%s\\VCMemory.ini", g_dir); return GetPrivateProfileIntA(sec, key, def, p);
+    char p[MAX_PATH]; snprintf(p, sizeof p, "%s\\VCMemory.ini", g_dir); return vc_profile_int(sec, key, def, p);
 }
 static float g_carDens = 1.0f, g_pedDens = 1.0f;   /* what scripts last asked for */
 static int g_active; static uint32_t g_thread; static DWORD g_start;
@@ -339,6 +338,9 @@ BOOL WINAPI DllMain(HINSTANCE inst, DWORD reason, LPVOID _) {
         DisableThreadLibraryCalls(inst);
         GetModuleFileNameA(inst, g_dir, MAX_PATH); char *s = strrchr(g_dir, '\\'); if (s) *s = 0;
         snprintf(g_logpath, sizeof g_logpath, "%s\\VCMemory.log", g_dir); DeleteFileA(g_logpath);
+        char config[MAX_PATH]; snprintf(config, sizeof config, "%s\\VCMemory.ini", g_dir);
+        vc_profile_load(config);
+        if (vc_ini_status < 0) { vlog("settings unreadable or oversized; inactive before hooks"); return TRUE; }
         init();
     }
     return TRUE;
