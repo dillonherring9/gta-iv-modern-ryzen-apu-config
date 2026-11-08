@@ -1,14 +1,12 @@
-# Advanced Vice City Next Gen CE
+# Vice City Actual Next Gen CE
 
-**Advanced Vice City Next Gen CE** brings Tommy Vercetti’s story and the city from **Grand Theft Auto: Vice City** into **Grand Theft Auto IV: The Complete Edition**, with community visual upgrades, extra areas and vehicles, restored activities and dialogue, and the fixes and native features developed for this project.
+**Vice City Actual Next Gen CE** brings Tommy Vercetti’s story and the city from **Grand Theft Auto: Vice City** into **Grand Theft Auto IV: The Complete Edition**, with community visual upgrades, extra areas and vehicles, restored activities and dialogue, and the fixes and native features developed for this project.
 
 Vice City is Rockstar’s 2002 game set in a fictional city based on Miami in 1986. This is an unofficial PC modification: it uses GTA IV’s engine, lighting, physics and Euphoria to play that city and story. **CE** means **The Complete Edition** of GTA IV. You need your own copy of **GTA IV: The Complete Edition, version 1.2.0.59**. The base game executable and Rockstar’s base archives are not included.
 
 **This is the complete mod package.** It includes the Vice City conversion and the selected community additions described here. You do not need another Vice City conversion, modpack, previous release or separate patch first. FusionFix 5.1.2, DLSS-IV and the native plugins used by this build are included. The supplied gameplay features require no ScriptHook .NET or .NET runtime.
 
-**Download:** open this repository’s **Releases** page and expand **Assets**. Download every numbered `AVCNGCE.zip` part and follow [Installation](#installation). GitHub’s automatic **Source code** downloads are not the playable mod.
-
-**Developer source:** [Source/](Source/) contains the current editable game scripts, maintained native modules, DualSense patch tools and dependency notices. Start with the [source README](Source/README.md) and [build instructions](Source/BUILDING.md).
+**Download:** open [Releases](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/releases) and expand **Assets**. Download every numbered `VCANGCE.zip` part and follow [Installation](#installation). If your download host supplies the single **VCANGCE.zip**, use that instead. GitHub’s automatic **Source code** downloads are not the playable mod.
 
 **Content note:** this is an adult GTA game; the Pole Position dancers and the stripper in its purchase cutscene are nude.
 
@@ -20,10 +18,10 @@ Several separate projects contribute to this release. Their similar names can be
 |---|---|
 | **Vice City NextGen Edition — Revolution Team** | The underlying Vice City conversion for GTA IV: the city, story and conversion work on which these later projects build. |
 | **Vice City for GTAIV: The Complete Edition — Kn4ckers** | The Complete Edition adaptation used as a foundation here. This release targets CE **1.2.0.59**, without downgrading GTA IV. |
-| **GTA Vice City Actual NextGen Edition — GTATrilogyGames and contributors** | The upstream community modpack, also called **AVCNG / VCANGE**. This is the project people may mean by “Vice City Advanced Next Gen”; its published name uses **Actual**. Our foundation is its **7.0.1** content, with selected compatible additions from **8.0**. |
-| **Advanced Vice City Next Gen CE — this project** | A separately maintained CE adaptation and curated build, with native gameplay systems, controller integration and fixes described below. Our **Advanced** title identifies this release; it is not an official release from the upstream teams. |
+| **GTA Vice City Actual NextGen Edition — GTATrilogyGames and contributors** | The upstream community modpack, also called **AVCNG / VCANGE**. Our foundation is its **7.0.1** content, with selected compatible additions from **8.0**. |
+| **Vice City Actual Next Gen CE — this project** | This separately maintained Complete Edition build, abbreviated **VCANGCE**, with the native gameplay systems, controller integration and fixes described below. It is an unofficial adaptation of the credited upstream work. |
 
-This build keeps the inherited missions, HD assets, extra vehicles, map areas and sounds. Selected 8.0 material includes wounded cutscene outfits, mall furniture placement, mainland neon corrections, Gator Keys accent lights and pause-map transparency/mipmaps. It does **not** include every 8.0 option or script change. For example, Treacherous Swine retains its balcony route; the optional Gonzalez escape scene is not included. Install this package as one complete build rather than combining files from the different projects.
+This build keeps the inherited missions, HD assets, extra vehicles, map areas and sounds. Selected 8.0 material includes the native parachute system and its assets/sounds, Tommy’s blue Soiree suit in gameplay and clean/wounded cutscenes, other wounded cutscene outfits, mall furniture placement, mainland neon corrections, Gator Keys accent lights and pause-map transparency/mipmaps. It does **not** include every 8.0 option or script change. For example, Treacherous Swine retains its balcony route; the optional Gonzalez escape scene is not included. Install this package as one complete build rather than combining files from the different projects.
 
 ## Work made here and work from the community
 
@@ -35,10 +33,11 @@ Work developed or adapted **in this project** includes:
 - **City and vehicle corrections:** original-game population and parked-car placement, handling and mass tuning, object and tree collision work, amphibious aircraft protection, mission vehicle-health behavior and adjusted activity timers.
 - **Dialogue and sound integration:** a native mission-voice bridge, restored dialogue and subtitles, activity sounds, vehicle/weapon sound assignments and native music behavior. The recordings and source sounds remain their original creators’ work.
 - **Controller integration:** Vice City-specific DualSense mappings, native game integration, controller audio, lighting and Bluetooth support, built around credited community implementations and protocol work.
-- **CE fixes and asset integration:** cutscene outfit matching, selected upstream 8.0 map/UI additions, repaired pickup texture packing and three consolidated world-map archives. Consolidation reduces separate map files; no measured performance gain is claimed.
-- **Current included fixes:** BeamNG-derived road tyre squeals adapted for game and controller playback; easier Skimmer takeoff from water; restoration of the player prop assets needed for motorcycle helmets; and a guarded native audio-memory capacity increase addressing the allocation failure found during Riot.
+- **CE fixes and asset integration:** cutscene outfit matching, selected upstream 8.0 outfits, parachute and map/UI additions, repaired pickup texture packing and three consolidated world-map archives. Consolidation reduces separate map files; no measured performance gain is claimed.
+- **Startup and save-load repairs:** corrected the parachute’s CE script startup and execution faults, repaired its audio-bank directory, and removed the captured native-plugin startup lock conflicts. Save loading and normal play have passed the latest user retest.
+- **Additional included fixes:** BeamNG-derived road tyre squeals adapted for game and controller playback; easier Skimmer takeoff from water; restoration of the player prop assets needed for motorcycle helmets; and a guarded native audio-memory capacity increase addressing the allocation failure found during Riot.
 
-The last four changes pass file and build checks, but their latest listening, takeoff, helmet-fit and Riot gameplay tests remain pending. The audio-memory change is included as an attempted correction of a diagnosed allocation failure; the Riot crash is **not yet confirmed resolved**. See [Testing and known issues](#testing-and-known-issues).
+The tyre sounds, Skimmer tuning, motorcycle helmet assets and Riot audio-memory change pass file and build checks, but their specific listening, takeoff, helmet-fit and Riot replay tests remain pending. The audio-memory change is included as an attempted correction of a diagnosed allocation failure; the Riot crash is **not yet confirmed resolved**. See [Testing and known issues](#testing-and-known-issues).
 
 ## ✨ The game you get
 
@@ -79,7 +78,7 @@ The world uses three consolidated map archives for the east, west and shared are
 - **Odd-job timers** for Paramedic, Firefighter, Vigilante, Pizza Boy, Taxi and Bloodring allow extra time for the slower vehicle handling.
 - **Amphibious aircraft:** the Skimmer can float and idle on water, with stronger thrust/lift settings to ease water takeoff; the Sea Sparrow can land on water. Occupants are protected from drowning while seated in them. The latest Skimmer tuning awaits gameplay confirmation.
 - **Rhino cannon** fires explosive shells. The helicopters in **Phnom Penh '86** and the boat in **Supply & Demand** have doubled health and explode when their health meter is exhausted.
-- **Parachute:** carried in helicopters and planes. Jump and press **Sprint** to open, steer with movement controls, and press **Enter Vehicle** to cut away. It closes on landing. It uses *The Ballad of Gay Tony* animations and a GTA V-style backpack.
+- **Automatic wearable parachute:** entering any full-size helicopter or plane gives Tommy the pack immediately, in any seat. RC aircraft are excluded. The pack stays separate from weapon selection: Tommy can wear it while holding and using a gun. Jump and press **Sprint** to deploy, steer with movement controls, and press **Enter Vehicle** to cut away. Follow the on-screen air-brake prompts for your controller layout. The imported native system includes its canopy, pack, animations, landing behavior and sound effects. Pack-and-gun operation, deployment, steering and landing passed the latest user gameplay test.
 - **1978 Ford Fairmont VCPD car**, restored weapons and animations, and 20 guns tuned for damage, fire rate, magazine size and range. Rifles pierce armour.
 - **Motorcycle helmet assets restored:** the original player props are supplied for the engine’s automatic helmet behavior. Appearance on Tommy and put-on/removal behavior still need gameplay confirmation.
 - **Pedestrian Euphoria**, GTA IV's default player ragdoll and Army/MMA melee moves.
@@ -89,7 +88,7 @@ The world uses three consolidated map archives for the east, west and shared are
 - **Classic Vice City HUD**, rebuilt as a native script: clock, rolling eight-digit money, health and armour with damage flashes, weapon icon, reserve/clip ammunition, six wanted stars and the pink radar ring.
 - **HUD visibility follows the game:** it hides for cutscenes, fades, Pay 'n' Spray, wasted/busted states and the HUD setting. The F7 menu's **Hide HUD** and **No HUD in Cinematic Camera** options also apply.
 - **Native F7 Vice City Menu**, including saving outside missions, radio-track skipping, weapon holstering and gameplay options.
-- **Outfits carry into cutscenes:** supported standard outfits use matching high-detail Tommy models, including wounded versions. Custom outfits use the default cutscene appearance.
+- **Outfits carry into cutscenes:** supported standard outfits use matching high-detail Tommy models, including wounded versions. The blue Soiree suit uses selected 8.0 gameplay and clean/wounded cutscene models. Custom outfits use the default cutscene appearance.
 - **Full health at the start and end of cutscenes.** Below 25% health, going three seconds without damage starts recovery at 1% per second, stopping at 25%. Taking a hit interrupts recovery.
 
 ### 🔊 Sound, music and dialogue
@@ -141,13 +140,13 @@ Newly restored dialogue plays in English with translated subtitles. The inherite
 
 1. **Install and check the base game.** Install your owned **GTA IV: The Complete Edition 1.2.0.59**, launch the unmodified game once through your normal launcher, then quit. Close the game before copying files. This package does not install GTA IV itself.
 2. **Use a clean game folder.** Back up your saves and any files being replaced. A clean folder has no other Vice City conversion, extra scripts or third-party plugins already added. If your game is already modded, restore a clean copy or use a separate clean installation first; verifying the game alone may leave added mod files behind.
-3. **Download every numbered part from Assets:** `AVCNGCE.zip.001`, `AVCNGCE.zip.002` and every later numbered part shown. Save all of them in the **same folder**, keeping their names unchanged. They are pieces of one ZIP, not separate patches. Download **README.md** as a handy copy of this guide. Do not use **Code → Download ZIP** or the automatic **Source code** ZIP/TAR files.
-4. **Extract once with [7-Zip](https://www.7-zip.org/).** Open `AVCNGCE.zip.001` in 7-Zip and extract to a new empty folder; it reads the other parts automatically. Do not extract each part separately. Windows File Explorer alone may not handle the split archive. On Linux, with 7-Zip installed: `7z x AVCNGCE.zip.001 -oAVCNGCE-extracted`. If you were given the single full `AVCNGCE.zip` instead, extract that file directly; you do not also need the numbered parts.
+3. **Download every numbered part from Assets:** `VCANGCE.zip.001`, `VCANGCE.zip.002` and every later numbered part shown. Save all of them in the **same folder**, keeping their names unchanged. They are pieces of one ZIP, not separate patches. Download **README.md** as a handy copy of this guide. Do not use **Code → Download ZIP** or the automatic **Source code** ZIP/TAR files.
+4. **Extract once with [7-Zip](https://www.7-zip.org/).** Open `VCANGCE.zip.001` in 7-Zip and extract to a new empty folder; it reads the other parts automatically. Do not extract each part separately. Windows File Explorer alone may not handle the split archive. On Linux, with 7-Zip installed: `7z x VCANGCE.zip.001 -oVCANGCE-extracted`. If you were given the single full `VCANGCE.zip` instead, extract that file directly; you do not also need the numbered parts.
 5. **Find your GTA IV game folder.** This is the folder that contains **`GTAIV.exe`**. In Steam, right-click the game → **Manage → Browse local files**; in other launchers, use their installed-files/open-folder option. If the opened folder contains a `GTAIV` subfolder, open it to find the executable.
 6. **Copy the mod into that folder.** Open the extracted **`release`** folder and copy **everything inside it** (`update`, `plugins`, `DLSSIV` and the loose files) into the folder containing `GTAIV.exe`. Merge folders and replace files when prompted. The result should have `GTAIV.exe`, `update` and `plugins` side by side. Do not place the `release` folder itself inside the game directory.
 7. **Launch GTA IV normally and choose New Game.** On Proton, see the loader setting below if the conversion does not load. A new game gives activities, statistics and parked cars their intended starting state. Make a spare save, quit, relaunch and load it before committing to a playthrough. Saves from other builds are not certified compatible; keep backups.
 
-To verify downloads, compare the numbered parts with **`PARTS-SHA256SUMS.txt`**. The single full ZIP has its own **`AVCNGCE.zip.sha256`** file. The extracted **`SHA256SUMS.txt`** verifies the mod's individual files; on Linux, run `sha256sum -c SHA256SUMS.txt` inside the extracted `release` folder.
+To verify downloads, compare the numbered parts with **`PARTS-SHA256SUMS.txt`**. The single full ZIP has its own **`VCANGCE.zip.sha256`** file. The extracted **`SHA256SUMS.txt`** verifies the mod's individual files; on Linux, run `sha256sum -c SHA256SUMS.txt` inside the extracted `release` folder.
 
 ### Linux / Steam Deck and graphics
 
@@ -161,7 +160,7 @@ For the supplied DLSS-IV setup, choose **Graphics API: Vulkan** and **Anti-alias
 - **Linux / Steam Deck:** disable Steam Input for this game in Steam **Properties → Controller**. In Steam Game Mode, set `SDL_GAMECONTROLLER_IGNORE_DEVICES=` to an empty value in the game's environment so Steam does not hide the controller. Lutris exposes this under **System options → Environment variables**.
 - **KDE Plasma:** if the controller touchpad also moves the mouse/camera, disable **DualSense Wireless Controller Touchpad** under **System Settings → Touchpad**.
 - **USB audio:** use the controller's sound device; Linux may expose an **Analog Surround 4.0** profile. Speaker and haptic behavior, particularly over Bluetooth, depends on the audio setup.
-- If startup hangs or the light bar stays dark, reconnect the controller before another launch. Preserve current logs first if you are reporting a failure.
+- If the light bar or controller effects do not initialize, check the controller connection and preserve current logs before another launch if you are reporting a failure.
 
 ## 🎮 Controls
 
@@ -173,7 +172,9 @@ For the supplied DLSS-IV setup, choose **Graphics API: Vulkan** and **Anti-alias
 | **Ctrl+F7** | Project Thunder menu |
 | **Alt+V** | First-person camera |
 | **N** in a vehicle · **Tab** on foot | Next radio track · holster weapon |
-| **Sprint** while falling from an aircraft | Open parachute |
+| Enter a full-size plane or helicopter | Automatically receive the wearable parachute; guns remain available |
+| **Sprint** while falling with the pack | Open parachute |
+| Movement controls / displayed air-brake controls | Steer / brake while parachuting |
 | **Enter Vehicle** while parachuting | Cut away |
 | Aim with fists, bat, knife, Pool Cue or Katana, then **Z / V / C / X / G** | Army/MMA moves; **F5** changes style |
 
@@ -201,16 +202,16 @@ Save at a safehouse or use **F7 → Gameplay Tweaks → Save Game Now** outside 
 
 ## Testing and known issues
 
-The underlying build has been reported working well in general play. Files, scripts, resource references and texture packing have also been checked. This is not an exhaustive playthrough or a fresh-install certification for every machine, mission branch, translation, controller setup or save/reload combination.
+The current build has positive general-play reports. In the latest gameplay retest, the same save loaded successfully, Tommy could move and play, the automatic pack worked while holding a gun, and the parachute deployed, steered and landed successfully. Script, resource, native-build and installed-file checks also pass. These checks cover the reported faults and requested behavior; a complete playthrough, every aircraft/seat, every save path and all hardware combinations have not been separately certified.
 
-- **Latest changes awaiting gameplay:** road tyre-sound listening, the revised Skimmer water takeoff, motorcycle helmet fit/automatic behavior and Riot after the audio-memory change.
-- **Riot audio-memory correction:** a crash log identified a failed physical audio allocation followed by a null write. The included `VCAudioHeap.asi` increases the shared audio heap to 192 MiB before audio initialization. Build and guard checks pass; restart and replay Riot to establish whether the reported crash is resolved. The plugin writes its result to `plugins/VCAudioHeap.log`.
-- **Intermittent startup issue:** a process can remain running without opening a game window; the cause remains undiagnosed. If reporting it, preserve the game/plugin/Proton logs before restarting Wine. If a previous `GTAIV.exe` is still running, close it before trying again.
+- **Startup and save loading:** captured causes of the immediate post-save crash and two no-window startup lock conflicts have been corrected. The latest launches and save-load gameplay succeeded. If a no-window failure returns, preserve the current game/plugin/Proton logs before restarting Wine, and close a remaining `GTAIV.exe` process before trying again. Long-term cold-start reliability remains subject to wider play testing.
+- **Specific checks still pending:** road tyre-sound listening, revised Skimmer water takeoff, motorcycle helmet fit/automatic behavior, blue Soiree appearance in each supported cutscene, and Riot after the audio-memory change. The general positive report does not individually verify these cases.
+- **Riot audio-memory correction:** a crash log identified a failed physical audio allocation followed by a null write. The included `VCAudioHeap.asi` increases the shared audio heap to 192 MiB before audio initialization. Build and guard checks pass; a Riot replay is still needed to establish whether that separate reported crash is resolved. The plugin writes its result to `plugins/VCAudioHeap.log`.
 - **Platform coverage:** development and play reports are primarily from Linux with Proton. Windows and Steam Deck are not comprehensively tested. Do not read included Windows instructions as a claim of exhaustive platform validation.
 
 When reporting a problem, include your operating system, game version, mission/location, steps to reproduce, added mods and relevant logs. Keep your save backed up.
 
-The Vice City NextGen radio list is retained alongside the selected AVCNG sound configuration. The parachute has no sound effects. The classic HUD adjusts its positions for the screen aspect ratio.
+The Vice City NextGen radio list is retained alongside the selected AVCNG sound configuration. The parachute includes its imported sound bank and events. The classic HUD adjusts its positions for the screen aspect ratio.
 
 ## 🗑️ Uninstalling
 
@@ -218,12 +219,12 @@ Restore backed-up files that the overlay replaced, then remove its added files u
 
 ## Credits
 
-Advanced Vice City Next Gen CE brings together the work of many creators. The original games, the Vice City conversion and the community assets belong to their respective authors. Our contribution is the Complete Edition integration, native adaptations, fixes and additions described in this release.
+Vice City Actual Next Gen CE brings together the work of many creators. The original games, the Vice City conversion and the community assets belong to their respective authors. Our contribution is the Complete Edition integration, native adaptations, fixes and additions described in this release.
 
 - **Rockstar Games and the original development teams** — Grand Theft Auto: Vice City, Grand Theft Auto IV and The Ballad of Gay Tony; the original city, characters, missions, voices, music, animations and game technology.
 - **Revolution Team** — GTA Vice City NextGen Edition, the foundation that brings Vice City to GTA IV's RAGE engine.
 - **Kn4ckers** — [Vice City for GTA IV: The Complete Edition](https://github.com/knackers4/vce), the Complete Edition base conversion used by this project.
-- **GTATrilogyGames and the VCNE / DayL modding communities** — [GTA Vice City Actual NextGen Edition](https://github.com/GTATrilogyGames/ViceCityActualNextGenEditionModpack), the 7.0.1 foundation and selected 8.0 material, including its collected map, vehicle, weapon, sound and presentation work.
+- **GTATrilogyGames and the VCNE / DayL modding communities** — [GTA Vice City Actual NextGen Edition](https://github.com/GTATrilogyGames/ViceCityActualNextGenEditionModpack), the 7.0.1 foundation and selected 8.0 material, including collected map, vehicle, weapon, sound and presentation work, and this release’s parachute and blue Soiree suit source assets.
 - **ThirteenAG and FusionFix contributors** — [FusionFix](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix), the [Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader) and [Xbox Rain Droplets](https://github.com/ThirteenAG/XboxRainDroplets).
 - **ChunkLeChuck** — [DLSS-IV](https://github.com/ChunkLeChuck/DLSSIV). Its bundled components retain their own notices, including AMD FidelityFX, NVIDIA DLSS, Intel XeSS, DXVK and Khronos/Vulkan components; see `DLSSIV/licenses`.
 - **llamacomma** — [Mjolnir IV](https://github.com/llamacomma/Mjolnir_IV), adapted for this build (MIT).
@@ -238,19 +239,23 @@ Advanced Vice City Next Gen CE brings together the work of many creators. The or
 - **MrOort** — [Proper HD Vehicles for GTA Vice City NextGen / Proper HD Era Vehicles – Lore Friendly](https://www.nexusmods.com/gta4/mods/1012). The pack credits **Myst, BigDudeManzo, Mr.Lorenzo, MeehmetEmin07, Excelsior, Budilov_Play, Saharov Channel, Svetlakov, Spartan112, AIGE, R&E, Peerless, RE, Vsoreny, YSS323, Dr_CHANI, Claude_Lib, DK22Pac, Thundersmacker, MGgames100, cromchen, Nitroflasche, K.E.Y (shaxtar), Milcin, Tonebee / twattyballs2011, Algonquin Hood, Ixl_Vanquish_MK, ThatOneHick, SimpleUnknown, KevinDV, deepcover0000, M4k3, G.C.T., direct_UA, Alex_SS, Ross [BloggerRoss], _CP_, dirprof, Diporrison's Lair, AXL163, Carface / Bigfoot2003, RoadRunner71, Intensified / Compeast, universetwisters, AlexandreRR, Milcin7, Rockstar Games and Ubisoft Reflections**. This carries forward the source pack's contributor credits; individual upstream variants may have been superseded in this CE build.
 - **Driver [GCU Modding Team]**, **DMN [GTA-Unlimited Team]**, **BubLik [GCU Modding Team]** and **deepcover0000** — the 1978 Ford Fairmont VCPD model, conversion, updates and police livery.
 - **R0NALDMCDONLD / RONALDMCDONLD** — [Vice City Next Gen Edition HD Pedestrians](https://www.nexusmods.com/gta4/mods/539); its page also credits **Riot-MH** for the US Army pedestrian.
-- **Diya** and **XCLSIOR** — [Cutscene Retexture Project](https://libertycity.net/files/gta-4/222231-cutscene-retexture-project-vice-city.html), including character, prop, clothing and environment textures and the Ken Rosenberg/Mercedes retextures.
-- **Nixolas1** — the 2009 GTA IV parachute script used as a behavior reference; **Quechus13** — its parachute models.
-- **gongel** — [GTA 5 Parachute](https://www.nexusmods.com/gta4/mods/888), the GTA V backpack port. **Rockstar Games / The Ballad of Gay Tony** — parachute animations.
+- **Diya / _BasicallyDiya** and **XCLSIOR** — [Cutscene Retexture Project](https://libertycity.net/files/gta-4/222231-cutscene-retexture-project-vice-city.html), including character, prop, clothing and environment textures and the Ken Rosenberg/Mercedes retextures.
+- **Lukakion** — Improved Tommy’s Clothes, credited by the upstream 8.0 package. The blue Soiree suit and its clean/wounded cutscene forms are adapted from that package’s player and Cutscene Retexture Project assets.
+- **Rockstar Games / The Ballad of Gay Tony** — the original parachute scripts, models, animations and sounds used by the native parachute integration supplied through 8.0 and adapted for CE here.
+- **LotsofEds / ServalEd** — [MoveImprove](https://github.com/LotsofEds/MoveImproveIV-SDK), whose parachute animation/ragdoll compatibility predicate is translated into the existing native movement script.
 - **mmtsrn1** — [New Tire Skid Sound / BeamNG Sound Mod V2](https://www.beamng.com/threads/new-tire-skid-sound-updated.9056/), adapted into the road-skid sounds and matching controller audio.
 - **metalwars** and **Kevin1230san** — the Pole Position nude dancer models.
 - **CGP** — Enhanced Fighting And Euphoria, with features rebuilt natively here.
 - **catsmackaroo, ItsClonkAndre and LibertyTweaks contributors** — [LibertyTweaks](https://github.com/catsmackaroo/LibertyTweaks), with selected features reimplemented natively; **Zolika1351** — ZMenu, a reference for the F7 menu.
 - **Arcenciel1991** — [GTA VC Actual NextGen Japanese Translation](https://www.nexusmods.com/grandtheftautovicecity/mods/695), including its Japanese font.
 - **AIO All Classic Language Patch v2.0 creators**, shared by **Contremaitre** — French, German, Italian and Spanish text, fonts and translated images. Contremaitre is credited as the known source/distributor, rather than assigned sole translation authorship.
-- The creators of the inherited **Various Map Edits, Starfish Mansion Overhaul Project, Interiors and Cutscene Fixes (IaCF_VC), Realistic Handling & Physics (Shturmovik2), VCNE HD map pack, RestoredWeapons, Cutscene Recognition, Mint Ocean Waters and TreesMod**. Some author identities were not recoverable from the preserved packages; their work is still acknowledged by its published mod name.
+- **Fizzora** — Interiors and Cutscenes Fixes (IaCF_VC), as credited by the upstream package; **Ivan992** — Gator Keys.
+- The creators of the inherited **Various Map Edits, Starfish Mansion Overhaul Project, Realistic Handling & Physics (Shturmovik2), VCNE HD map pack, RestoredWeapons, Cutscene Recognition, Mint Ocean Waters and TreesMod**. Some author identities were not recoverable from the preserved packages; their work is still acknowledged by its published mod name.
 - **gutbash** — [revd](https://github.com/gutbash/revd), technical reference for the physical audio heap location and 192 MiB capacity precedent. The included audio-heap plugin is independent project code; revd’s engine-slot relocation and config writer are not included.
 - **Sergeanur** — [SCFIX-Miami](https://github.com/Sergeanur/SCFIX-Miami), an original Vice City script reference for activities, population, parked cars and restored dialogue.
 - **Alexander Blade / scocl** and **SC-CL contributors** — compiler/header/native-reference work used for native script development; **FourFury** — RAGE-format tooling used during inspection and authoring. These development credits do not mean the tools are player requirements.
 - **GTABase, GTAMods Wiki and the wider GTA modding community** — vehicle and format references, documentation and shared research.
+
+Earlier project prototypes used **Nixolas1**’s 2009 GTA IV parachute behavior reference, **Quechus13**’s canopy models, and **gongel**’s [GTA V backpack port](https://www.nexusmods.com/gta4/mods/888). Those controller, canopy and backpack implementations have been replaced by the native 8.0-derived integration in this release; this acknowledgment preserves their development contribution.
 
 If a name or contribution is missing or incorrect, please open a GitHub issue with the original mod link or readme so the credit can be corrected. This is an unofficial fan project; these credits do not imply endorsement by the original authors.
