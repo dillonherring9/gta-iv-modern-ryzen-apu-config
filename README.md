@@ -8,6 +8,8 @@ Vice City is Rockstar’s 2002 game set in a fictional city based on Miami in 19
 
 **Download:** open this repository’s **Releases** page and expand **Assets**. Download every numbered `AVCNGCE.zip` part and follow [Installation](#installation). GitHub’s automatic **Source code** downloads are not the playable mod.
 
+**Developer source:** [Source/](Source/) contains the current editable game scripts, maintained native modules, DualSense patch tools and dependency notices. Start with the [source README](Source/README.md) and [build instructions](Source/BUILDING.md).
+
 **Content note:** this is an adult GTA game; the Pole Position dancers and the stripper in its purchase cutscene are nude.
 
 ## How this differs from the other Vice City NextGen projects

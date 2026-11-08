@@ -1,0 +1,260 @@
+; range_bootstrap.sco - GTA IV SCO assembly source (scoasm). Rebuild: scoasm.py asm range_bootstrap.scasm --exe GTAIV.exe
+; original sha256 39c36271eb47ad43ece7cae9cdcd58ec687398b49c734e2a32e76c3ec7bb9435
+.script range_bootstrap.sco
+.encrypted 1
+.statics 0
+.globals 0
+.flags 0x00000000
+.signature 0x7E204400
+
+.code
+
+    Function 0 2
+L_000004:
+    PushString "wanted_progression\0"
+    Call @L_0001d9
+    PushString "vc_range\0"
+    Call @L_0001d9
+    PushString "vc_stunts\0"
+    Call @L_0001d9
+    PushString "vc_regen\0"
+    Call @L_0001d9
+    PushString "vc_euphoria\0"
+    Call @L_0001d9
+    PushString "vc_fighting\0"
+    Call @L_0001d9
+    PushString "vc_menu\0"
+    Call @L_0001d9
+    PushString "vc_sparrows\0"
+    Call @L_0001d9
+    PushString "vc_cutmem\0"
+    Call @L_0001d9
+    PushString "vc_army\0"
+    Call @L_0001d9
+    PushString "vc_rampage\0"
+    Call @L_0001d9
+    PushString "vc_insane\0"
+    Call @L_0001d9
+    PushString "vc_robbery\0"
+    Call @L_0001d9
+    PushString "vc_food\0"
+    Call @L_0001d9
+    PushString "vc_security\0"
+    Call @L_0001d9
+    PushString "vc_native_chute\0"
+    Call @L_0001d9
+    PushString "vc_skimmer\0"
+    Call @L_0001d9
+    PushString "vc_office\0"
+    Call @L_0001d9
+    PushString "vc_classichud\0"
+    Call @L_0001d9
+    PushString "vc_lowheal\0"
+    Call @L_0001d9
+    PushString "vc_revenue\0"
+    Call @L_0001d9
+    PushString "vc_props\0"
+    Call @L_0001d9
+    PushString "vc_stats\0"
+    Call @L_0001d9
+    PushString "vc_mvoice\0"
+    Call @L_0001d9
+    PushString "vc_tutorial\0"
+    Call @L_0001d9
+    Push 1000
+    CallNative WAIT 1 0
+    Jump @L_000004
+    Return 0 0
+
+L_0001d9:
+    Function 1 8
+    Push 0
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 6
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    CallNative GET_NUMBER_OF_INSTANCES_OF_STREAMED_SCRIPT 1 1
+    Push 6
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 6
+    GetLocalPs
+    pSet
+    Push 0
+    Push 6
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0003d4
+    Push 3
+    GetLocalPs
+    pGet
+    Push 6
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    CallNative REQUEST_SCRIPT 1 0
+    Push 4
+    GetLocalPs
+    CallNative GET_GAME_TIMER 1 0
+    Jump @L_0002f9
+L_000262:
+    Push 0
+    CallNative WAIT 1 0
+    Push 5
+    GetLocalPs
+    CallNative GET_GAME_TIMER 1 0
+    Push 5
+    GetLocalPs
+    pGet
+    Push 6
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 7
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    Push 7
+    GetLocalPs
+    pGet
+    Sub
+    Push 6
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    Push 5000
+    CmpGT
+    Push 6
+    GetLocalPs
+    pSet
+    Push 0
+    Push 6
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0002d8
+    Jump @L_0002f9
+L_0002d8:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 6
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    CallNative MARK_SCRIPT_AS_NO_LONGER_NEEDED 1 0
+    Jump @L_0003d4
+L_0002f9:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 6
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    CallNative HAS_SCRIPT_LOADED 1 1
+    Push 6
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 6
+    GetLocalPs
+    pSet
+    Push 0
+    Push 6
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_000262
+    Push 3
+    GetLocalPs
+    pGet
+    Push 6
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    CallNative GET_NUMBER_OF_INSTANCES_OF_STREAMED_SCRIPT 1 1
+    Push 6
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 6
+    GetLocalPs
+    pSet
+    Push 0
+    Push 6
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_000390
+    Jump @L_0003b8
+L_000390:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 6
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    Push 1024
+    CallNative START_NEW_SCRIPT 2 1
+    Push 6
+    GetLocalPs
+    pSet
+L_0003b8:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 7
+    GetLocalPs
+    pSet
+    Push 7
+    GetLocalPs
+    pGet
+    CallNative MARK_SCRIPT_AS_NO_LONGER_NEEDED 1 0
+L_0003d4:
+    Return 1 0
+
+.data   ; statics + globals and any trailing bytes, verbatim
+    636f6d70696c6564207573696e672073636f636c20627920416c6578616e6465
+    7220426c616465

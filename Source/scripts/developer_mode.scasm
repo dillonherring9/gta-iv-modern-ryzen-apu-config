@@ -1,0 +1,352 @@
+; developer_mode.sco - GTA IV SCO assembly source (scoasm). Rebuild: scoasm.py asm developer_mode.scasm --exe GTAIV.exe
+; original sha256 ac71427944deae3f3e615e5f7ec544ed3406625c4e7078e6ca5e7b951535195d
+.script developer_mode.sco
+.encrypted 1
+.statics 0
+.globals 0
+.flags 0x00000000
+.signature 0x7E204400
+
+.code
+
+    Function 0 3
+    Push 1000
+    CallNative WAIT 1 0
+    Push 363
+    Push 4
+    CallNative SET_INT_STAT 2 0
+    Push 1
+    Push 7
+    GetGlobalPs
+    pSet
+    Push 0
+    Push 33
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 90
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 95
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 64
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 34
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 109
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 23
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 81
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 86
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 87
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 42
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 92
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 98
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 61
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 79
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 0
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 99
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 82
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 43
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 40
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 63
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 107
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 111
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 35
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 60
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 100
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 106
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 103
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 44
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 48
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 46
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 11
+    GetGlobalPs
+    pSet
+    Push 1
+    Push 8
+    GetGlobalPs
+    pSet
+    Push 151
+    Push 80
+    GetGlobalPs
+    pSet
+    Push 80
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    ItoF
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushF 100.0
+    fMult
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushF 151.0
+    fDiv
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative SET_FLOAT_STAT 2 0
+    Push 10
+    Push 66
+    GetGlobalPs
+    pSet
+    Call @L_0003c4
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 99999999
+    CallNative ADD_SCORE 2 0
+    Call @L_0002f8
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushF 664.6010131835938
+    PushF -745.6480102539062
+    PushF 7.040999889373779
+    CallNative SET_CHAR_COORDINATES 4 0
+    Call @L_0002f8
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushF 250.0
+    CallNative SET_CHAR_HEADING 2 0
+    PushString "STRING\0"
+    PushString "DEVELOPER MODE ENABLED: ALL MISSIONS & ISLANDS UNLOCKED\0"
+    Push 12000
+    Push 1
+    CallNative PRINT_STRING_WITH_LITERAL_STRING_NOW 4 0
+L_0002e4:
+    Push 0
+    CallNative WAIT 1 0
+    Jump @L_0002e4
+    Return 0 0
+
+L_0002f8:
+    Function 0 6
+    Push 0
+    Push 4
+    GetLocalPs
+    pSet
+    Call @L_0003c4
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    CallNative PLAYER_HAS_CHAR 1 1
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 5
+    GetLocalPs
+    pSet
+    Push 0
+    Push 5
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_000354
+    Jump @L_000374
+L_000354:
+    Call @L_0003c4
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    CallNative GET_PLAYER_CHAR 2 0
+L_000374:
+    Push 4
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Return 0 1
+
+L_0003c4:
+    Function 0 5
+    CallNative GET_PLAYER_ID 0 1
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Return 0 1
+
+.data   ; statics + globals and any trailing bytes, verbatim
+    636f6d70696c6564207573696e672073636f636c20627920416c6578616e6465
+    7220426c616465

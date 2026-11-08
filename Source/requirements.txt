@@ -1,0 +1,2 @@
+# Script assembler dependency; Python 3.11+ and openssl in PATH are also required.
+fourfury==0.13.3

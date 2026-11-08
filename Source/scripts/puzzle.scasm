@@ -1,0 +1,57 @@
+; puzzle.sco - GTA IV SCO assembly source (scoasm). Rebuild: scoasm.py asm puzzle.scasm --exe GTAIV.exe
+; original sha256 fa1d5c659d71bdec982a8a53f8f517ecb52b97d499c290af50f7edec82eeef52
+.script puzzle.sco
+.encrypted 1
+.statics 0
+.globals 0
+.flags 0x00000000
+.signature 0x7E204400
+
+.code
+
+    Function 0 2
+    PushString "string\0"
+    PushString "DUMMY PUZZLE SCRIPT\0"
+    Push 5000
+    Push 1
+    CallNative PRINT_STRING_WITH_LITERAL_STRING_NOW 4 0
+    CallNative TERMINATE_THIS_SCRIPT 0 0
+    Return 0 0
+
+    Function 0 5
+    CallNative GET_PLAYER_ID 0 1
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Return 0 1
+
+.data   ; statics + globals and any trailing bytes, verbatim
+    636f6d70696c6564207573696e672073636f636c20627920416c6578616e6465
+    7220426c616465

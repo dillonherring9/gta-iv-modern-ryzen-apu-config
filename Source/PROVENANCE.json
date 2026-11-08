@@ -1,0 +1,2732 @@
+{
+  "schema_version": 1,
+  "project": "Advanced Vice City Next Gen CE",
+  "snapshot_date": "2026-11-07",
+  "game_version": "GTA IV Complete Edition 1.2.0.59",
+  "release_checkpoint": 215,
+  "purpose": "Current maintained script and project-native sources for the AVCNGCE release. Origin identifiers are relative paths in the retained authoring archive, not dependencies on that archive.",
+  "files": [
+    {
+      "path": "dependencies/opus-1.6/COPYING",
+      "origin": "tools/dualsense-build-deps/opus-1.6/COPYING",
+      "original_sha256": "01e1167d54a096d123cf6dfbbeb19587278845c6481d2d66d545669846079551",
+      "export_sha256": "01e1167d54a096d123cf6dfbbeb19587278845c6481d2d66d545669846079551",
+      "bytes": 1945
+    },
+    {
+      "path": "dependencies/opus-1.6/LICENSE_PLEASE_READ.txt",
+      "origin": "tools/dualsense-build-deps/opus-1.6/LICENSE_PLEASE_READ.txt",
+      "original_sha256": "7efb4989e0cd1b256229bdf2f09300c5d14e35db0e7476bfb87fac243498273d",
+      "export_sha256": "7efb4989e0cd1b256229bdf2f09300c5d14e35db0e7476bfb87fac243498273d",
+      "bytes": 703
+    },
+    {
+      "path": "dependencies/opus-1.6/README",
+      "origin": "tools/dualsense-build-deps/opus-1.6/README",
+      "original_sha256": "9bdf02594da8c33af8b7bdb7a2ac98f6fdc6abc71d5fb198e7b186286a681dca",
+      "export_sha256": "9bdf02594da8c33af8b7bdb7a2ac98f6fdc6abc71d5fb198e7b186286a681dca",
+      "bytes": 7198
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/_kiss_fft_guts.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/_kiss_fft_guts.h",
+      "original_sha256": "374d4edc9e4f82da271a12fa9675c3f2f595a3b465544fbd05eca53818320c3a",
+      "export_sha256": "374d4edc9e4f82da271a12fa9675c3f2f595a3b465544fbd05eca53818320c3a",
+      "bytes": 6200
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/arch.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/arch.h",
+      "original_sha256": "fc1d7aae69fec75b97566fd6b260e76d4339242f34470230dc390878c2131884",
+      "export_sha256": "fc1d7aae69fec75b97566fd6b260e76d4339242f34470230dc390878c2131884",
+      "bytes": 12574
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/arm/armcpu.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/arm/armcpu.h",
+      "original_sha256": "9bfc2da335b5a37cde9dbeb16c9666c9678f0d8487466825678f6c2bbc4b520d",
+      "export_sha256": "9bfc2da335b5a37cde9dbeb16c9666c9678f0d8487466825678f6c2bbc4b520d",
+      "bytes": 2830
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/arm/fft_arm.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/arm/fft_arm.h",
+      "original_sha256": "c23b268a1e646e0a9a3637df8e2e425ad8d41f7b19aaa184da3112549b16c41b",
+      "export_sha256": "c23b268a1e646e0a9a3637df8e2e425ad8d41f7b19aaa184da3112549b16c41b",
+      "bytes": 2428
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/arm/fixed_arm64.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/arm/fixed_arm64.h",
+      "original_sha256": "36b30b4ae61eb54631afa262acc85bbd4a5d50c4d7d6a49d698791e4b79b657e",
+      "export_sha256": "36b30b4ae61eb54631afa262acc85bbd4a5d50c4d7d6a49d698791e4b79b657e",
+      "bytes": 1484
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/arm/fixed_armv4.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/arm/fixed_armv4.h",
+      "original_sha256": "2ca28bd5f429c412f2695c70c6de278cc292f527d3ac6467681e96b6cc7d222e",
+      "export_sha256": "2ca28bd5f429c412f2695c70c6de278cc292f527d3ac6467681e96b6cc7d222e",
+      "bytes": 2952
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/arm/fixed_armv5e.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/arm/fixed_armv5e.h",
+      "original_sha256": "378844bbe1a5844d0acdf94932fa2563dfc7b2cb2ce553db9ef2bc4b793b4115",
+      "export_sha256": "378844bbe1a5844d0acdf94932fa2563dfc7b2cb2ce553db9ef2bc4b793b4115",
+      "bytes": 4284
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/arm/kiss_fft_armv4.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/arm/kiss_fft_armv4.h",
+      "original_sha256": "6dd2447644f7f255fc6c4e12174fcf8b06ce5eb838d59ce0f5358941617ed555",
+      "export_sha256": "6dd2447644f7f255fc6c4e12174fcf8b06ce5eb838d59ce0f5358941617ed555",
+      "bytes": 4465
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/arm/kiss_fft_armv5e.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/arm/kiss_fft_armv5e.h",
+      "original_sha256": "f13a165fe38f4dc7ede8926407eb8b2118889a7674ab65dea6db25183c74eac3",
+      "export_sha256": "f13a165fe38f4dc7ede8926407eb8b2118889a7674ab65dea6db25183c74eac3",
+      "bytes": 4101
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/arm/mathops_arm.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/arm/mathops_arm.h",
+      "original_sha256": "a9a8361ee8ed4c442bb820126be1f5b5612386db4268fb8c0de93dceadb9b2db",
+      "export_sha256": "a9a8361ee8ed4c442bb820126be1f5b5612386db4268fb8c0de93dceadb9b2db",
+      "bytes": 3884
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/arm/mdct_arm.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/arm/mdct_arm.h",
+      "original_sha256": "e33da2e6ef87bf80bb5ea116b35bc8e6f615a541fb6bb88b4d4ca2b484849f64",
+      "export_sha256": "e33da2e6ef87bf80bb5ea116b35bc8e6f615a541fb6bb88b4d4ca2b484849f64",
+      "bytes": 2621
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/arm/pitch_arm.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/arm/pitch_arm.h",
+      "original_sha256": "6c941e3c917e60b6b10df2ca594be14ad43c21cf8ad9d0bf78fe6537b308ae09",
+      "export_sha256": "6c941e3c917e60b6b10df2ca594be14ad43c21cf8ad9d0bf78fe6537b308ae09",
+      "bytes": 6631
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/bands.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/bands.c",
+      "original_sha256": "fc7ddcc7a46135c2cd89016025e4b96d30e9b514565610115467405d78d63ec6",
+      "export_sha256": "fc7ddcc7a46135c2cd89016025e4b96d30e9b514565610115467405d78d63ec6",
+      "bytes": 61074
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/bands.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/bands.h",
+      "original_sha256": "2167a3fcca0789942d46cdc2f870d77d66d09ec1840ee1db8a508ae16126fad8",
+      "export_sha256": "2167a3fcca0789942d46cdc2f870d77d66d09ec1840ee1db8a508ae16126fad8",
+      "bytes": 5577
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/celt.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/celt.c",
+      "original_sha256": "d3c1b484c4d895bceda7c543534fc607bf4c6e2b1ca4b080dee8a5b8433a95d9",
+      "export_sha256": "d3c1b484c4d895bceda7c543534fc607bf4c6e2b1ca4b080dee8a5b8433a95d9",
+      "bytes": 11029
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/celt.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/celt.h",
+      "original_sha256": "290d8b2e20f2ee0dd7177fbbcdc557c81ca5eadf61a7971772d27a77d9e86cae",
+      "export_sha256": "290d8b2e20f2ee0dd7177fbbcdc557c81ca5eadf61a7971772d27a77d9e86cae",
+      "bytes": 8947
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/celt_decoder.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/celt_decoder.c",
+      "original_sha256": "a53393c70ae917d39229f34bce2c16ada535807e095cad00a4580aee48c9bfdb",
+      "export_sha256": "a53393c70ae917d39229f34bce2c16ada535807e095cad00a4580aee48c9bfdb",
+      "bytes": 61451
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/celt_encoder.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/celt_encoder.c",
+      "original_sha256": "cb583401a273167399d486a0e4e5ead26a9a263355e1bab123f400b8d2085ec2",
+      "export_sha256": "cb583401a273167399d486a0e4e5ead26a9a263355e1bab123f400b8d2085ec2",
+      "bytes": 106653
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/celt_lpc.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/celt_lpc.c",
+      "original_sha256": "8c6eb20b52aa9d52a83453fd3e33372f2faf1791ea6cfcd8d9d294b005cd0801",
+      "export_sha256": "8c6eb20b52aa9d52a83453fd3e33372f2faf1791ea6cfcd8d9d294b005cd0801",
+      "bytes": 10753
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/celt_lpc.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/celt_lpc.h",
+      "original_sha256": "e10b2e2e610b16a2003d00599467dfed45d300726eb28d0934857ebe2dc822cf",
+      "export_sha256": "e10b2e2e610b16a2003d00599467dfed45d300726eb28d0934857ebe2dc822cf",
+      "bytes": 2240
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/cpu_support.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/cpu_support.h",
+      "original_sha256": "02bf67720c974a87fa96aad556c4847acc3370ecd16a95170193724197bc9c0e",
+      "export_sha256": "02bf67720c974a87fa96aad556c4847acc3370ecd16a95170193724197bc9c0e",
+      "bytes": 2434
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/cwrs.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/cwrs.c",
+      "original_sha256": "6579428627c7cbdc5de0e977bd81559f1e75cc7dd620bcb29ef7b4770ae13e44",
+      "export_sha256": "6579428627c7cbdc5de0e977bd81559f1e75cc7dd620bcb29ef7b4770ae13e44",
+      "bytes": 28394
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/cwrs.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/cwrs.h",
+      "original_sha256": "7705be67d58e7fbdea384dde5f3c404ef814fbb8ecbfca61f731d11e8201bdc7",
+      "export_sha256": "7705be67d58e7fbdea384dde5f3c404ef814fbb8ecbfca61f731d11e8201bdc7",
+      "bytes": 1885
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/dump_modes/dump_modes_arch.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/dump_modes/dump_modes_arch.h",
+      "original_sha256": "980144dabc228cd8b2b9532632fa8796a5d84c3661d5e05e56fc1ca262e568eb",
+      "export_sha256": "980144dabc228cd8b2b9532632fa8796a5d84c3661d5e05e56fc1ca262e568eb",
+      "bytes": 1765
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/ecintrin.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/ecintrin.h",
+      "original_sha256": "c1100f45bdf70d2243740a7891a5def54cf483b51d024a35ac915b630639b556",
+      "export_sha256": "c1100f45bdf70d2243740a7891a5def54cf483b51d024a35ac915b630639b556",
+      "bytes": 3679
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/entcode.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/entcode.c",
+      "original_sha256": "fb52778fb752126b6da6366d29d532ee98d66eb366a28e913562eb9520ba9208",
+      "export_sha256": "fb52778fb752126b6da6366d29d532ee98d66eb366a28e913562eb9520ba9208",
+      "bytes": 5700
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/entcode.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/entcode.h",
+      "original_sha256": "97e7742ae4251b545326aadcc898635e90f22d5dc18fa63471c118b8bd79d1e8",
+      "export_sha256": "97e7742ae4251b545326aadcc898635e90f22d5dc18fa63471c118b8bd79d1e8",
+      "bytes": 5423
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/entdec.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/entdec.c",
+      "original_sha256": "f2d74695ceeb927210dcf76d653241ebdfd465a1c23128604640d218cdd93c38",
+      "export_sha256": "f2d74695ceeb927210dcf76d653241ebdfd465a1c23128604640d218cdd93c38",
+      "bytes": 8374
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/entdec.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/entdec.h",
+      "original_sha256": "31485453c516ad9be38a03b50a3c450fd5a9b7c7fad2d9e6c05357fd07efe0a9",
+      "export_sha256": "31485453c516ad9be38a03b50a3c450fd5a9b7c7fad2d9e6c05357fd07efe0a9",
+      "bytes": 5348
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/entenc.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/entenc.c",
+      "original_sha256": "56e0843479ae5db15696125ba6ac3d0a0c26fa8b677d4d6bd457686865408572",
+      "export_sha256": "56e0843479ae5db15696125ba6ac3d0a0c26fa8b677d4d6bd457686865408572",
+      "bytes": 9881
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/entenc.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/entenc.h",
+      "original_sha256": "b54d50fa515e4cf2f4b5a5a7a99269b85e24aefb533dd55d407660d1105b5a01",
+      "export_sha256": "b54d50fa515e4cf2f4b5a5a7a99269b85e24aefb533dd55d407660d1105b5a01",
+      "bytes": 5905
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/fixed_c5x.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/fixed_c5x.h",
+      "original_sha256": "22b33645dcdbc52a949fdd39de23797cb4908f0ef6b231c5032979f490827bef",
+      "export_sha256": "22b33645dcdbc52a949fdd39de23797cb4908f0ef6b231c5032979f490827bef",
+      "bytes": 2525
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/fixed_c6x.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/fixed_c6x.h",
+      "original_sha256": "e78714ffbdf4a6e240fd8a3b79d0227193492276c0ad29c08f1b62947ef24720",
+      "export_sha256": "e78714ffbdf4a6e240fd8a3b79d0227193492276c0ad29c08f1b62947ef24720",
+      "bytes": 2189
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/fixed_debug.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/fixed_debug.h",
+      "original_sha256": "8265b7f025643b936d28649dad15a1db43daa737be767963ae8aba18250eee06",
+      "export_sha256": "8265b7f025643b936d28649dad15a1db43daa737be767963ae8aba18250eee06",
+      "bytes": 23609
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/fixed_generic.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/fixed_generic.h",
+      "original_sha256": "961144146a13b36e54132024795ae66cd2957b902a5594f7398bafc85eb310e1",
+      "export_sha256": "961144146a13b36e54132024795ae66cd2957b902a5594f7398bafc85eb310e1",
+      "bytes": 10083
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/float_cast.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/float_cast.h",
+      "original_sha256": "ff1fab31ec21c933229a4525706fbfe98970c3ce4359e4698d38b18b220c1123",
+      "export_sha256": "ff1fab31ec21c933229a4525706fbfe98970c3ce4359e4698d38b18b220c1123",
+      "bytes": 5738
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/kiss_fft.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/kiss_fft.c",
+      "original_sha256": "0ff3c57ce9dededbf9925338808223ee8e164b5847f2b320da49b11bac4024d0",
+      "export_sha256": "0ff3c57ce9dededbf9925338808223ee8e164b5847f2b320da49b11bac4024d0",
+      "bytes": 18531
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/kiss_fft.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/kiss_fft.h",
+      "original_sha256": "1226ddcfdef87bc5169116e1188d370c8cc6a4e49f62eada6c7da808d19665af",
+      "export_sha256": "1226ddcfdef87bc5169116e1188d370c8cc6a4e49f62eada6c7da808d19665af",
+      "bytes": 6823
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/laplace.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/laplace.c",
+      "original_sha256": "6a33bdc5bf3a3350f51f92aafa281e4163fdffc88c9e7b0718f6eb770dc595e7",
+      "export_sha256": "6a33bdc5bf3a3350f51f92aafa281e4163fdffc88c9e7b0718f6eb770dc595e7",
+      "bytes": 6257
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/laplace.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/laplace.h",
+      "original_sha256": "27102a1e7f24879c6871df971b7215b119d574bc25a3af9740c343d3b285ae82",
+      "export_sha256": "27102a1e7f24879c6871df971b7215b119d574bc25a3af9740c343d3b285ae82",
+      "bytes": 2349
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/mathops.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/mathops.c",
+      "original_sha256": "25199450cc613fc9784add776204dc81d12478fde0d00c746fb1ac62ba85c10e",
+      "export_sha256": "25199450cc613fc9784add776204dc81d12478fde0d00c746fb1ac62ba85c10e",
+      "bytes": 11265
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/mathops.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/mathops.h",
+      "original_sha256": "79bf06946bf6ab97e6eb933193bcc654d0a7503132044c22714d7cdcc22ba22f",
+      "export_sha256": "79bf06946bf6ab97e6eb933193bcc654d0a7503132044c22714d7cdcc22ba22f",
+      "bytes": 22889
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/mdct.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/mdct.c",
+      "original_sha256": "8a21116be9b1332926586f8f44af0e1afd9bb7e8a65614683f972654a0668dcb",
+      "export_sha256": "8a21116be9b1332926586f8f44af0e1afd9bb7e8a65614683f972654a0668dcb",
+      "bytes": 12338
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/mdct.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/mdct.h",
+      "original_sha256": "fe4d55da1aa03159403379a1cf9d6373da7b27ed0f1de63f8f726e9d9cffd41a",
+      "export_sha256": "fe4d55da1aa03159403379a1cf9d6373da7b27ed0f1de63f8f726e9d9cffd41a",
+      "bytes": 4771
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/mfrngcod.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/mfrngcod.h",
+      "original_sha256": "5974c2341889a1c2e9775c2a21b3a55d4cbc1ebef90fe4412789aca4f4a19504",
+      "export_sha256": "5974c2341889a1c2e9775c2a21b3a55d4cbc1ebef90fe4412789aca4f4a19504",
+      "bytes": 2232
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/mips/celt_mipsr1.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/mips/celt_mipsr1.h",
+      "original_sha256": "83b62f49eb94bddc26f29e8e945bbf147248c64485cb28f760b5097877605f15",
+      "export_sha256": "83b62f49eb94bddc26f29e8e945bbf147248c64485cb28f760b5097877605f15",
+      "bytes": 5781
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/mips/fixed_generic_mipsr1.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/mips/fixed_generic_mipsr1.h",
+      "original_sha256": "ebbe5110bb581614b905c5682fcc571a2ffe0faf5621e45b36eb21374e2cec88",
+      "export_sha256": "ebbe5110bb581614b905c5682fcc571a2ffe0faf5621e45b36eb21374e2cec88",
+      "bytes": 4854
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/mips/kiss_fft_mipsr1.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/mips/kiss_fft_mipsr1.h",
+      "original_sha256": "c4b44780228dd53198e396db5cd0f1e62d24e30377d046856d41ad784bf2947a",
+      "export_sha256": "c4b44780228dd53198e396db5cd0f1e62d24e30377d046856d41ad784bf2947a",
+      "bytes": 8542
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/mips/mdct_mipsr1.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/mips/mdct_mipsr1.h",
+      "original_sha256": "9cb8459d5044ea1b36bc8819b93180070cfce21b90f098f561e784e7e1c9f0f8",
+      "export_sha256": "9cb8459d5044ea1b36bc8819b93180070cfce21b90f098f561e784e7e1c9f0f8",
+      "bytes": 11932
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/mips/pitch_mipsr1.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/mips/pitch_mipsr1.h",
+      "original_sha256": "ced0e8b13f68a8a3f28b240e146c28f652acbf42180bd732587045b7a41686fa",
+      "export_sha256": "ced0e8b13f68a8a3f28b240e146c28f652acbf42180bd732587045b7a41686fa",
+      "bytes": 10276
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/modes.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/modes.c",
+      "original_sha256": "03e61ddf326812e4d0d7c00067319af74e1cc5653e2c9551e5a322cad1f73480",
+      "export_sha256": "03e61ddf326812e4d0d7c00067319af74e1cc5653e2c9551e5a322cad1f73480",
+      "bytes": 16674
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/modes.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/modes.h",
+      "original_sha256": "f1e503db4939cefaaaf9b5c744023223de0acdb51d2e33238e60bb0495e81c3f",
+      "export_sha256": "f1e503db4939cefaaaf9b5c744023223de0acdb51d2e33238e60bb0495e81c3f",
+      "bytes": 2665
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/os_support.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/os_support.h",
+      "original_sha256": "9e0b4572b0c5f366fd6f954d8f70d598d5f2b9d6cd7d123fc0f57cfff54abfd6",
+      "export_sha256": "9e0b4572b0c5f366fd6f954d8f70d598d5f2b9d6cd7d123fc0f57cfff54abfd6",
+      "bytes": 3291
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/pitch.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/pitch.c",
+      "original_sha256": "ad93368ae01b6fcadd28905e6ed5a55ad165ae5031654540af77d1ffe55acfd5",
+      "export_sha256": "ad93368ae01b6fcadd28905e6ed5a55ad165ae5031654540af77d1ffe55acfd5",
+      "bytes": 15133
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/pitch.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/pitch.h",
+      "original_sha256": "546220cfc7b32796a1f18b37ce75864e94b0016ea8a5eaace1f06c70aa8e20e2",
+      "export_sha256": "546220cfc7b32796a1f18b37ce75864e94b0016ea8a5eaace1f06c70aa8e20e2",
+      "bytes": 6284
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/quant_bands.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/quant_bands.c",
+      "original_sha256": "bec6e7ac19ff02b83480c6ca6a01c084566781856a1e3442b7468bf25a4b937b",
+      "export_sha256": "bec6e7ac19ff02b83480c6ca6a01c084566781856a1e3442b7468bf25a4b937b",
+      "bytes": 18965
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/quant_bands.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/quant_bands.h",
+      "original_sha256": "ea86cddfd98268902f37662cbe67d168fb8c1d5d23ad6e6a82b8f6f511048874",
+      "export_sha256": "ea86cddfd98268902f37662cbe67d168fb8c1d5d23ad6e6a82b8f6f511048874",
+      "bytes": 2998
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/rate.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/rate.c",
+      "original_sha256": "f288c8b88882e6500ee5fbb9036eef1ee572e0301d28cd686061c815747a7b9e",
+      "export_sha256": "f288c8b88882e6500ee5fbb9036eef1ee572e0301d28cd686061c815747a7b9e",
+      "bytes": 29415
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/rate.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/rate.h",
+      "original_sha256": "7bc335949f2e6e7d4e28c23681c4fc6f3c99733848deb7d1a24e908431f0d8a6",
+      "export_sha256": "7bc335949f2e6e7d4e28c23681c4fc6f3c99733848deb7d1a24e908431f0d8a6",
+      "bytes": 3606
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/stack_alloc.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/stack_alloc.h",
+      "original_sha256": "d0b2c8eabad72faede82e18ea57f5713731b84b9c7212593613bb62199a6aaf7",
+      "export_sha256": "d0b2c8eabad72faede82e18ea57f5713731b84b9c7212593613bb62199a6aaf7",
+      "bytes": 6378
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/static_modes_fixed.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/static_modes_fixed.h",
+      "original_sha256": "75a8932d1c3681fae719b58c4495914e4cdb2826efdf5809d73f64c4e05d4387",
+      "export_sha256": "75a8932d1c3681fae719b58c4495914e4cdb2826efdf5809d73f64c4e05d4387",
+      "bytes": 203202
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/static_modes_fixed_arm_ne10.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/static_modes_fixed_arm_ne10.h",
+      "original_sha256": "9c49d71262dc31eecef4612291b98f9284bc702b8f1257dd549a2bc7ff6d1503",
+      "export_sha256": "9c49d71262dc31eecef4612291b98f9284bc702b8f1257dd549a2bc7ff6d1503",
+      "bytes": 25209
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/static_modes_float.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/static_modes_float.h",
+      "original_sha256": "c3cf8439cdcf9281a5a0a66eefd5f9d0c82537c6f88e33b53ace9c9b3880f60c",
+      "export_sha256": "c3cf8439cdcf9281a5a0a66eefd5f9d0c82537c6f88e33b53ace9c9b3880f60c",
+      "bytes": 149322
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/static_modes_float_arm_ne10.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/static_modes_float_arm_ne10.h",
+      "original_sha256": "f17e57248f303d0fa87f099ebb8bb3d6361497c90b3fd614c17522be5c20135a",
+      "export_sha256": "f17e57248f303d0fa87f099ebb8bb3d6361497c90b3fd614c17522be5c20135a",
+      "bytes": 28613
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/vq.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/vq.c",
+      "original_sha256": "7f488e7ced4080d267e4ff44cb512861a47a49d45891277f4e898fe680dad0e5",
+      "export_sha256": "7f488e7ced4080d267e4ff44cb512861a47a49d45891277f4e898fe680dad0e5",
+      "bytes": 25048
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/vq.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/vq.h",
+      "original_sha256": "b6c4c1ff9eb7aeb71cef86fe18d33446c9b9a71b4e82f002840d7f13028195f5",
+      "export_sha256": "b6c4c1ff9eb7aeb71cef86fe18d33446c9b9a71b4e82f002840d7f13028195f5",
+      "bytes": 3921
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/x86/celt_lpc_sse.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/x86/celt_lpc_sse.h",
+      "original_sha256": "ed9c69b4f64a234a15374a8a7c0bed584c316b2f9ddc583f06efc129ecc37e9c",
+      "export_sha256": "ed9c69b4f64a234a15374a8a7c0bed584c316b2f9ddc583f06efc129ecc37e9c",
+      "bytes": 2273
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/x86/pitch_sse.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/x86/pitch_sse.h",
+      "original_sha256": "610c078ff00a4c841def50cac60092d72adcc6fc88c735f14c87b7ed4df83de2",
+      "export_sha256": "610c078ff00a4c841def50cac60092d72adcc6fc88c735f14c87b7ed4df83de2",
+      "bytes": 7273
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/x86/vq_sse.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/x86/vq_sse.h",
+      "original_sha256": "26ec674e13a6c6c4c87e7fc04d8f3bcec47276c8022b2d0a03763db8d6541ae2",
+      "export_sha256": "26ec674e13a6c6c4c87e7fc04d8f3bcec47276c8022b2d0a03763db8d6541ae2",
+      "bytes": 1996
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/x86/x86_arch_macros.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/x86/x86_arch_macros.h",
+      "original_sha256": "b6118942870b62ff78731edc3025e55230c3fadaf28ec2f4024d786210631505",
+      "export_sha256": "b6118942870b62ff78731edc3025e55230c3fadaf28ec2f4024d786210631505",
+      "bytes": 1618
+    },
+    {
+      "path": "dependencies/opus-1.6/celt/x86/x86cpu.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt/x86/x86cpu.h",
+      "original_sha256": "82297f62289e349b30f6d0d01e07a3dce2b162d1b8c2754c5751bcc459134f52",
+      "export_sha256": "82297f62289e349b30f6d0d01e07a3dce2b162d1b8c2754c5751bcc459134f52",
+      "bytes": 4247
+    },
+    {
+      "path": "dependencies/opus-1.6/celt_sources.mk",
+      "origin": "tools/dualsense-build-deps/opus-1.6/celt_sources.mk",
+      "original_sha256": "0ecbea48a3344b76a83887247aebbfd04e6d297087a0297b3744f5006dad2209",
+      "export_sha256": "0ecbea48a3344b76a83887247aebbfd04e6d297087a0297b3744f5006dad2209",
+      "bytes": 961
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/arm/dnn_arm.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/arm/dnn_arm.h",
+      "original_sha256": "9b87598ef5707e008811e7db1c94c67678552758af11aa5a5d97488cfd5a1574",
+      "export_sha256": "9b87598ef5707e008811e7db1c94c67678552758af11aa5a5d97488cfd5a1574",
+      "bytes": 4440
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/burg.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/burg.h",
+      "original_sha256": "866d915ee4046e126dd3e7c87d822cbcf6c691e59f32e8ebf4715bfacf3f6ba7",
+      "export_sha256": "866d915ee4046e126dd3e7c87d822cbcf6c691e59f32e8ebf4715bfacf3f6ba7",
+      "bytes": 2464
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/common.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/common.h",
+      "original_sha256": "012ec8b0166d54a5cb096e0c1d47765156d8f69537f1317dd98c5e87fd94e8c8",
+      "export_sha256": "012ec8b0166d54a5cb096e0c1d47765156d8f69537f1317dd98c5e87fd94e8c8",
+      "bytes": 1040
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/dred_coding.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/dred_coding.h",
+      "original_sha256": "fc3e86fcfa6bf4c7f2da662629dee6a81e4d71c8956d1c4549d6d554733c9910",
+      "export_sha256": "fc3e86fcfa6bf4c7f2da662629dee6a81e4d71c8956d1c4549d6d554733c9910",
+      "bytes": 1511
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/dred_config.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/dred_config.h",
+      "original_sha256": "52b1e4019880966ae809613fd07f40ff8e8a8d25f45435b7737d17bf85379339",
+      "export_sha256": "52b1e4019880966ae809613fd07f40ff8e8a8d25f45435b7737d17bf85379339",
+      "bytes": 2165
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/dred_decoder.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/dred_decoder.h",
+      "original_sha256": "6f976fc27029af9f5c54702edf086e8850cbd73e5a7dfd2a55777f38f412f517",
+      "export_sha256": "6f976fc27029af9f5c54702edf086e8850cbd73e5a7dfd2a55777f38f412f517",
+      "bytes": 1969
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/dred_encoder.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/dred_encoder.h",
+      "original_sha256": "453b2d47226c35cf0d0ec77fd2c84934971cf657fba095a1086cf73454ed0173",
+      "export_sha256": "453b2d47226c35cf0d0ec77fd2c84934971cf657fba095a1086cf73454ed0173",
+      "bytes": 2655
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/dred_rdovae.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/dred_rdovae.h",
+      "original_sha256": "7b1b0c292f7a06fcb3e282717adb34ed89ed9f23840aea04c5aaadf9683ca58d",
+      "export_sha256": "7b1b0c292f7a06fcb3e282717adb34ed89ed9f23840aea04c5aaadf9683ca58d",
+      "bytes": 1623
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/dred_rdovae_dec.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/dred_rdovae_dec.h",
+      "original_sha256": "0e647b4ea6ffaec294850e0d1be9266f16ccee98f1532e2f1cd9129bc9a1f793",
+      "export_sha256": "0e647b4ea6ffaec294850e0d1be9266f16ccee98f1532e2f1cd9129bc9a1f793",
+      "bytes": 2352
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/dred_rdovae_enc.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/dred_rdovae_enc.h",
+      "original_sha256": "71b5efa375d93fac6c249ee5524bb0a69349cb3d9ec3a7af7a2de2cfe09bb840",
+      "export_sha256": "71b5efa375d93fac6c249ee5524bb0a69349cb3d9ec3a7af7a2de2cfe09bb840",
+      "bytes": 2128
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/fargan.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/fargan.h",
+      "original_sha256": "e1761b61669f70ed6ae918772b8fae3ed9fe5c65f67d2ce3d68749ac4bd9a4ad",
+      "export_sha256": "e1761b61669f70ed6ae918772b8fae3ed9fe5c65f67d2ce3d68749ac4bd9a4ad",
+      "bytes": 2641
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/freq.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/freq.h",
+      "original_sha256": "8cf2a319c99a14daebb368919344975b44ce6d299ebc1a0ac17ae73af80a8372",
+      "export_sha256": "8cf2a319c99a14daebb368919344975b44ce6d299ebc1a0ac17ae73af80a8372",
+      "bytes": 2258
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/fwgan.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/fwgan.h",
+      "original_sha256": "1e6313e19d3cc3fa528bcedab9836f75e965982f6b39b27bda46aab9b5b1dfb6",
+      "export_sha256": "1e6313e19d3cc3fa528bcedab9836f75e965982f6b39b27bda46aab9b5b1dfb6",
+      "bytes": 2942
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/kiss99.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/kiss99.h",
+      "original_sha256": "56d3880aa188612d31f3f6ebed29437f7bd6691e20a385228bf754ecc7211545",
+      "export_sha256": "56d3880aa188612d31f3f6ebed29437f7bd6691e20a385228bf754ecc7211545",
+      "bytes": 1882
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/lossgen.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/lossgen.h",
+      "original_sha256": "738e377ae6f7adddc522df7f0129f96c4631634672f699e6212f69891f31d47c",
+      "export_sha256": "738e377ae6f7adddc522df7f0129f96c4631634672f699e6212f69891f31d47c",
+      "bytes": 1895
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/lpcnet.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/lpcnet.h",
+      "original_sha256": "31d773c937996174bb38233390b58da8459ff6cadda5a5f4cfb085f57ab90518",
+      "export_sha256": "31d773c937996174bb38233390b58da8459ff6cadda5a5f4cfb085f57ab90518",
+      "bytes": 7193
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/lpcnet_private.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/lpcnet_private.h",
+      "original_sha256": "31bacd0b49cf76df0f379b553cdd899cdc11fbba9c1a815525e123c79c178aea",
+      "export_sha256": "31bacd0b49cf76df0f379b553cdd899cdc11fbba9c1a815525e123c79c178aea",
+      "bytes": 2563
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/nndsp.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/nndsp.h",
+      "original_sha256": "0da4042f6b0ffdaf684f1ed06ace42142ae78341325a8474d014e0a51490e7f2",
+      "export_sha256": "0da4042f6b0ffdaf684f1ed06ace42142ae78341325a8474d014e0a51490e7f2",
+      "bytes": 4152
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/nnet.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/nnet.h",
+      "original_sha256": "d90f8b0371c39eb4dfa02b1d87120e09f37e8e4c309cf979a5650f121f9dac4b",
+      "export_sha256": "d90f8b0371c39eb4dfa02b1d87120e09f37e8e4c309cf979a5650f121f9dac4b",
+      "bytes": 5574
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/nnet_arch.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/nnet_arch.h",
+      "original_sha256": "3b227cd54ae376c21050a1116261665c9c8d82b9ec46b1c9aed9af6a6cd444d0",
+      "export_sha256": "3b227cd54ae376c21050a1116261665c9c8d82b9ec46b1c9aed9af6a6cd444d0",
+      "bytes": 9293
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/osce.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/osce.h",
+      "original_sha256": "e9f1784cf1372d95ca75eff9a778e9d297ed45af4be6fc82c52d0a79d15f10d0",
+      "export_sha256": "e9f1784cf1372d95ca75eff9a778e9d297ed45af4be6fc82c52d0a79d15f10d0",
+      "bytes": 4088
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/osce_config.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/osce_config.h",
+      "original_sha256": "7e5cce5ad1f2b0dbbba2766bb7f92ec821abd78d374ddfc760f872e9d2bd0cf3",
+      "export_sha256": "7e5cce5ad1f2b0dbbba2766bb7f92ec821abd78d374ddfc760f872e9d2bd0cf3",
+      "bytes": 2222
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/osce_features.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/osce_features.h",
+      "original_sha256": "d482f57c0771caf588a6ad0328e33cae6373f834aff95887bfdbbe516eba151d",
+      "export_sha256": "d482f57c0771caf588a6ad0328e33cae6373f834aff95887bfdbbe516eba151d",
+      "bytes": 3054
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/osce_structs.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/osce_structs.h",
+      "original_sha256": "4c460b9fd382c8fbf97f81a4067a8628932403e18fc8004654ca423a3bf02cc2",
+      "export_sha256": "4c460b9fd382c8fbf97f81a4067a8628932403e18fc8004654ca423a3bf02cc2",
+      "bytes": 4667
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/pitchdnn.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/pitchdnn.h",
+      "original_sha256": "deb690e8a4c80e224ca3ff7f115388969560704147db8ec90357fd67cf225d54",
+      "export_sha256": "deb690e8a4c80e224ca3ff7f115388969560704147db8ec90357fd67cf225d54",
+      "bytes": 710
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/tansig_table.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/tansig_table.h",
+      "original_sha256": "9c865491efad7e1b05946636987fe923265a6fd4e1950d0870b45a930fed1472",
+      "export_sha256": "9c865491efad7e1b05946636987fe923265a6fd4e1950d0870b45a930fed1472",
+      "bytes": 2378
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/torch/rdovae/packets/fec_packets.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/torch/rdovae/packets/fec_packets.h",
+      "original_sha256": "6bde0942030ba0a7ab89de148b1426dd739c3122ce5097f08954738b0c3688dc",
+      "export_sha256": "6bde0942030ba0a7ab89de148b1426dd739c3122ce5097f08954738b0c3688dc",
+      "bytes": 1578
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/training_tf2/fec_packets.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/training_tf2/fec_packets.h",
+      "original_sha256": "5682885160ce25055f196b95c63770434f430c622a97c1f8d6b07400c37c5861",
+      "export_sha256": "5682885160ce25055f196b95c63770434f430c622a97c1f8d6b07400c37c5861",
+      "bytes": 1577
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/vec.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/vec.h",
+      "original_sha256": "fbdf49c54d60cfaa81607caef2f2d83bebde51de2a53aee2607b114350425a8e",
+      "export_sha256": "fbdf49c54d60cfaa81607caef2f2d83bebde51de2a53aee2607b114350425a8e",
+      "bytes": 11175
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/vec_avx.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/vec_avx.h",
+      "original_sha256": "c7d296bbc2f8a920b08e2b895831bfe2343a4b0180367d934a8b77a1e4042cc7",
+      "export_sha256": "c7d296bbc2f8a920b08e2b895831bfe2343a4b0180367d934a8b77a1e4042cc7",
+      "bytes": 25068
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/vec_neon.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/vec_neon.h",
+      "original_sha256": "0fa404539200c5149adfd212ea0eebce1b22529a917b6a051a727d797a6964bb",
+      "export_sha256": "0fa404539200c5149adfd212ea0eebce1b22529a917b6a051a727d797a6964bb",
+      "bytes": 13641
+    },
+    {
+      "path": "dependencies/opus-1.6/dnn/x86/dnn_x86.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/dnn/x86/dnn_x86.h",
+      "original_sha256": "473284fd36146b937ce163affaa3d18e7207db21056e548a5dc9f1de5596d601",
+      "export_sha256": "473284fd36146b937ce163affaa3d18e7207db21056e548a5dc9f1de5596d601",
+      "bytes": 5717
+    },
+    {
+      "path": "dependencies/opus-1.6/include/opus.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/include/opus.h",
+      "original_sha256": "036f6a6e83a20e943505743e113e90d6278cbe8240f7d5bb90b3f86261e783e3",
+      "export_sha256": "036f6a6e83a20e943505743e113e90d6278cbe8240f7d5bb90b3f86261e783e3",
+      "bytes": 59505
+    },
+    {
+      "path": "dependencies/opus-1.6/include/opus_custom.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/include/opus_custom.h",
+      "original_sha256": "3b67a36b36eac7d712f712a4e57d602a7ff9df753d184b0743bbca8628ccff4b",
+      "export_sha256": "3b67a36b36eac7d712f712a4e57d602a7ff9df753d184b0743bbca8628ccff4b",
+      "bytes": 16965
+    },
+    {
+      "path": "dependencies/opus-1.6/include/opus_defines.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/include/opus_defines.h",
+      "original_sha256": "bbd4d4e3ba99f6982b1c8d8f5541814ad77d8e8babf3cc788cf23d517b2ca9d6",
+      "export_sha256": "bbd4d4e3ba99f6982b1c8d8f5541814ad77d8e8babf3cc788cf23d517b2ca9d6",
+      "bytes": 38558
+    },
+    {
+      "path": "dependencies/opus-1.6/include/opus_multistream.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/include/opus_multistream.h",
+      "original_sha256": "fd99c4594b4b57e406e9cab45a777895dd1b4c8de067088aa54ed7ae100b13f0",
+      "export_sha256": "fd99c4594b4b57e406e9cab45a777895dd1b4c8de067088aa54ed7ae100b13f0",
+      "bytes": 38267
+    },
+    {
+      "path": "dependencies/opus-1.6/include/opus_projection.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/include/opus_projection.h",
+      "original_sha256": "11b3427e9ca342308a93adc9a081e2479685e5b7811a3a53540609f1bbc488ad",
+      "export_sha256": "11b3427e9ca342308a93adc9a081e2479685e5b7811a3a53540609f1bbc488ad",
+      "bytes": 32998
+    },
+    {
+      "path": "dependencies/opus-1.6/include/opus_types.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/include/opus_types.h",
+      "original_sha256": "19cb301ea1eedbcbdbb5049363de061893bf11c20e505a657b69ce6ffa5b11fa",
+      "export_sha256": "19cb301ea1eedbcbdbb5049363de061893bf11c20e505a657b69ce6ffa5b11fa",
+      "bytes": 5157
+    },
+    {
+      "path": "dependencies/opus-1.6/opus_sources.mk",
+      "origin": "tools/dualsense-build-deps/opus-1.6/opus_sources.mk",
+      "original_sha256": "43dced503e1ba8a9d7328615e16b878f6041502e28279d43c1335612e35450f9",
+      "export_sha256": "43dced503e1ba8a9d7328615e16b878f6041502e28279d43c1335612e35450f9",
+      "bytes": 356
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/A2NLSF.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/A2NLSF.c",
+      "original_sha256": "8552687904b2db168cf9787aa2700369ae9bc76ee0f36dd77fe9b1bf32cce465",
+      "export_sha256": "8552687904b2db168cf9787aa2700369ae9bc76ee0f36dd77fe9b1bf32cce465",
+      "bytes": 10759
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/API.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/API.h",
+      "original_sha256": "9cd93c2e6656fcabb3e4d7207c6bd62b3bd6e7389b990436fd32e41ee3a06e60",
+      "export_sha256": "9cd93c2e6656fcabb3e4d7207c6bd62b3bd6e7389b990436fd32e41ee3a06e60",
+      "bytes": 8421
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/CNG.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/CNG.c",
+      "original_sha256": "e3741a6e4f23f941c1dc4589a7254d5d21f12ae01002376ec36270992daa8b52",
+      "export_sha256": "e3741a6e4f23f941c1dc4589a7254d5d21f12ae01002376ec36270992daa8b52",
+      "bytes": 9920
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/HP_variable_cutoff.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/HP_variable_cutoff.c",
+      "original_sha256": "e528fcf0eebc186dcb31e751e27892ea144c94af1f4fe5749890e7297f986184",
+      "export_sha256": "e528fcf0eebc186dcb31e751e27892ea144c94af1f4fe5749890e7297f986184",
+      "bytes": 3989
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/Inlines.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/Inlines.h",
+      "original_sha256": "d8d637375bd1e1525ba20dfb9103781becabd9aef9decd64cc3a5402cbc2e838",
+      "export_sha256": "d8d637375bd1e1525ba20dfb9103781becabd9aef9decd64cc3a5402cbc2e838",
+      "bytes": 7314
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/LPC_analysis_filter.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/LPC_analysis_filter.c",
+      "original_sha256": "5cd8edb8558515d477f7c65c4f597d15c68d65b6d90cc303965d317666821c23",
+      "export_sha256": "5cd8edb8558515d477f7c65c4f597d15c68d65b6d90cc303965d317666821c23",
+      "bytes": 5015
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/LPC_fit.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/LPC_fit.c",
+      "original_sha256": "27e0d8a40024c0d6532705792c7278a3ca280e408da71993efeb485fd8f03ea6",
+      "export_sha256": "27e0d8a40024c0d6532705792c7278a3ca280e408da71993efeb485fd8f03ea6",
+      "bytes": 4042
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/LPC_inv_pred_gain.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/LPC_inv_pred_gain.c",
+      "original_sha256": "c2cc22922cd31554eaa8920ac31238a901139b9cb7964621f6f5f49bedd2b720",
+      "export_sha256": "c2cc22922cd31554eaa8920ac31238a901139b9cb7964621f6f5f49bedd2b720",
+      "bytes": 6161
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/LP_variable_cutoff.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/LP_variable_cutoff.c",
+      "original_sha256": "e17cec3098ec1df1529cef41dbd9a83ec7d54477fea7b593b3331171927af481",
+      "export_sha256": "e17cec3098ec1df1529cef41dbd9a83ec7d54477fea7b593b3331171927af481",
+      "bytes": 6552
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/MacroCount.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/MacroCount.h",
+      "original_sha256": "8d822f074a31b6edf49c1a9b45f6cab36d5193393aef94b73c6ff3c4d64ac4fc",
+      "export_sha256": "8d822f074a31b6edf49c1a9b45f6cab36d5193393aef94b73c6ff3c4d64ac4fc",
+      "bytes": 20763
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/MacroDebug.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/MacroDebug.h",
+      "original_sha256": "aefab84ea6848a81b1c48bbcf60935f70751ded68853d5c7d0ebb1249bd75773",
+      "export_sha256": "aefab84ea6848a81b1c48bbcf60935f70751ded68853d5c7d0ebb1249bd75773",
+      "bytes": 33581
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/NLSF2A.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/NLSF2A.c",
+      "original_sha256": "ce17793880db88d7247596f30415f86ceda690e2ea289a6eff27f2665bc8633c",
+      "export_sha256": "ce17793880db88d7247596f30415f86ceda690e2ea289a6eff27f2665bc8633c",
+      "bytes": 6361
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/NLSF_VQ.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/NLSF_VQ.c",
+      "original_sha256": "a918199e31254c639ee9f18ce24c4676c7bc9cc3a58fb1296cc416b8ee123e10",
+      "export_sha256": "a918199e31254c639ee9f18ce24c4676c7bc9cc3a58fb1296cc416b8ee123e10",
+      "bytes": 3975
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/NLSF_VQ_weights_laroia.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/NLSF_VQ_weights_laroia.c",
+      "original_sha256": "5b44c124016b70dd95b94dd66bdf70d4ce6db0fc5dd52420466720c1fcce8cec",
+      "export_sha256": "5b44c124016b70dd95b94dd66bdf70d4ce6db0fc5dd52420466720c1fcce8cec",
+      "bytes": 3937
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/NLSF_decode.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/NLSF_decode.c",
+      "original_sha256": "3d723c92896df39bf399e7758b119d641261048f5e199935e61cab287cf8b8e1",
+      "export_sha256": "3d723c92896df39bf399e7758b119d641261048f5e199935e61cab287cf8b8e1",
+      "bytes": 4766
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/NLSF_del_dec_quant.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/NLSF_del_dec_quant.c",
+      "original_sha256": "3d045d2d59317aa7bd7ea277936ddf34770588931065ac34f3400c14234a5509",
+      "export_sha256": "3d045d2d59317aa7bd7ea277936ddf34770588931065ac34f3400c14234a5509",
+      "bytes": 11896
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/NLSF_encode.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/NLSF_encode.c",
+      "original_sha256": "e0bb31a1fe04f30fa2f10a06ee31179293198702b2ddf9bb3bdbde449e119121",
+      "export_sha256": "e0bb31a1fe04f30fa2f10a06ee31179293198702b2ddf9bb3bdbde449e119121",
+      "bytes": 6129
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/NLSF_stabilize.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/NLSF_stabilize.c",
+      "original_sha256": "14c69720cd90614d8fdf1a0bb05a051598b00783370633323bafec8ff310e2ac",
+      "export_sha256": "14c69720cd90614d8fdf1a0bb05a051598b00783370633323bafec8ff310e2ac",
+      "bytes": 6347
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/NLSF_unpack.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/NLSF_unpack.c",
+      "original_sha256": "049555e005febe8cedd19e72886f108835e4883e69013bf95050984de070faac",
+      "export_sha256": "049555e005febe8cedd19e72886f108835e4883e69013bf95050984de070faac",
+      "bytes": 2948
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/NSQ.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/NSQ.c",
+      "original_sha256": "bce8cb89be691137a0ca9d92e4d5998aad67fb77f6eebbedf67246e8fd12cf8a",
+      "export_sha256": "bce8cb89be691137a0ca9d92e4d5998aad67fb77f6eebbedf67246e8fd12cf8a",
+      "bytes": 22868
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/NSQ.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/NSQ.h",
+      "original_sha256": "db57d49d839862a0da83585b75e7a436fc80e1e2b25e82aeb66a8afd9ccaf951",
+      "export_sha256": "db57d49d839862a0da83585b75e7a436fc80e1e2b25e82aeb66a8afd9ccaf951",
+      "bytes": 4343
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/NSQ_del_dec.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/NSQ_del_dec.c",
+      "original_sha256": "5b7cc8f24a00f5d7094f8c632b517d034f39628147918c4f89c72327bc773b63",
+      "export_sha256": "5b7cc8f24a00f5d7094f8c632b517d034f39628147918c4f89c72327bc773b63",
+      "bytes": 39492
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/PLC.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/PLC.c",
+      "original_sha256": "914eb9ce1f7bd3cf68cbe5f8e91f5411c872006a99a6665409e66f307af01427",
+      "export_sha256": "914eb9ce1f7bd3cf68cbe5f8e91f5411c872006a99a6665409e66f307af01427",
+      "bytes": 21986
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/PLC.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/PLC.h",
+      "original_sha256": "013f9159a95bf705df435a11cbe0b1ec39d207db8bac9a7180585657f130db32",
+      "export_sha256": "013f9159a95bf705df435a11cbe0b1ec39d207db8bac9a7180585657f130db32",
+      "bytes": 3339
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/SigProc_FIX.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/SigProc_FIX.h",
+      "original_sha256": "2b8e5f5afc6aa42585fc5f7c017c09da33d0411fcc37f3799bd91e6e53cf1066",
+      "export_sha256": "2b8e5f5afc6aa42585fc5f7c017c09da33d0411fcc37f3799bd91e6e53cf1066",
+      "bytes": 39462
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/VAD.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/VAD.c",
+      "original_sha256": "710ca80daa272b7a3d2965caf335ab165bb1cc7c8260ef89d79ccf386c587ff4",
+      "export_sha256": "710ca80daa272b7a3d2965caf335ab165bb1cc7c8260ef89d79ccf386c587ff4",
+      "bytes": 15007
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/VQ_WMat_EC.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/VQ_WMat_EC.c",
+      "original_sha256": "0cf17b00ece99000bc536ddb479a619362194b228e2563223b211453359412b4",
+      "export_sha256": "0cf17b00ece99000bc536ddb479a619362194b228e2563223b211453359412b4",
+      "bytes": 7139
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/ana_filt_bank_1.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/ana_filt_bank_1.c",
+      "original_sha256": "23ab2f6ef89e6106f8a8a417f07055b091f7b25c5693f7f2007d5e82edb4f849",
+      "export_sha256": "23ab2f6ef89e6106f8a8a417f07055b091f7b25c5693f7f2007d5e82edb4f849",
+      "bytes": 3782
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/arm/LPC_inv_pred_gain_arm.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/arm/LPC_inv_pred_gain_arm.h",
+      "original_sha256": "8ea077fa01c4d1fff026c049aef8b45244283c9e5252d8e2137c335f93eba5d7",
+      "export_sha256": "8ea077fa01c4d1fff026c049aef8b45244283c9e5252d8e2137c335f93eba5d7",
+      "bytes": 3243
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/arm/NSQ_del_dec_arm.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/arm/NSQ_del_dec_arm.h",
+      "original_sha256": "62562cc02daee5b58e47b1bd2c3627ac156a916b2979d88f7b6be744b13ba709",
+      "export_sha256": "62562cc02daee5b58e47b1bd2c3627ac156a916b2979d88f7b6be744b13ba709",
+      "bytes": 5450
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/arm/NSQ_neon.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/arm/NSQ_neon.h",
+      "original_sha256": "7b9a67fe7b93362fefc6fac31b06d6104beb44c3056b159cba82da24ffcdbb5c",
+      "export_sha256": "7b9a67fe7b93362fefc6fac31b06d6104beb44c3056b159cba82da24ffcdbb5c",
+      "bytes": 4991
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/arm/SigProc_FIX_armv4.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/arm/SigProc_FIX_armv4.h",
+      "original_sha256": "13a42ba7bf226dd2325f074f825d8fd69b1ae7e7acb0a188bc7683b420590ad3",
+      "export_sha256": "13a42ba7bf226dd2325f074f825d8fd69b1ae7e7acb0a188bc7683b420590ad3",
+      "bytes": 2064
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/arm/SigProc_FIX_armv5e.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/arm/SigProc_FIX_armv5e.h",
+      "original_sha256": "49844e22c381ccac30d6a8a1f0fdfeeeb68d7325f6d741b0e1a0c12033f7f948",
+      "export_sha256": "49844e22c381ccac30d6a8a1f0fdfeeeb68d7325f6d741b0e1a0c12033f7f948",
+      "bytes": 2390
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/arm/biquad_alt_arm.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/arm/biquad_alt_arm.h",
+      "original_sha256": "f252b371df2859167ce6d703ccad896b1a26f991bf5db4a20465b801c541f001",
+      "export_sha256": "f252b371df2859167ce6d703ccad896b1a26f991bf5db4a20465b801c541f001",
+      "bytes": 4430
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/arm/macros_arm64.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/arm/macros_arm64.h",
+      "original_sha256": "868478b984f4fdaf1c13eea31c1f04a687537cf31e9837c3e9dddafada6a7f79",
+      "export_sha256": "868478b984f4fdaf1c13eea31c1f04a687537cf31e9837c3e9dddafada6a7f79",
+      "bytes": 1878
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/arm/macros_armv4.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/arm/macros_armv4.h",
+      "original_sha256": "5b66d8f8f0cdd89b7d11ea5b0ed6548122a401a77e188f8294151e9f12914b6e",
+      "export_sha256": "5b66d8f8f0cdd89b7d11ea5b0ed6548122a401a77e188f8294151e9f12914b6e",
+      "bytes": 3835
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/arm/macros_armv5e.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/arm/macros_armv5e.h",
+      "original_sha256": "7185f1caebd4e429a29fba2dec43b7abbcd5377117fab3070cd3cf83322d2af1",
+      "export_sha256": "7185f1caebd4e429a29fba2dec43b7abbcd5377117fab3070cd3cf83322d2af1",
+      "bytes": 6263
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/biquad_alt.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/biquad_alt.c",
+      "original_sha256": "cab5911f028eb96570859f2608bec00bdef8bc2ba338019b414abf583b12fdf3",
+      "export_sha256": "cab5911f028eb96570859f2608bec00bdef8bc2ba338019b414abf583b12fdf3",
+      "bytes": 6886
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/bwexpander.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/bwexpander.c",
+      "original_sha256": "f01c2e6752d806974054c5b0ac5b9fbe1fef88b59873dcaae87974521f2d0256",
+      "export_sha256": "f01c2e6752d806974054c5b0ac5b9fbe1fef88b59873dcaae87974521f2d0256",
+      "bytes": 2760
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/bwexpander_32.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/bwexpander_32.c",
+      "original_sha256": "695726d8e425b68ecd9e2af47fef31246066c01303f6d37dffba709462584474",
+      "export_sha256": "695726d8e425b68ecd9e2af47fef31246066c01303f6d37dffba709462584474",
+      "bytes": 2574
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/check_control_input.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/check_control_input.c",
+      "original_sha256": "739c90c5e6e5bad607d720dc34f39a4f36147fc63d42bc399cc0a1d739cf18f6",
+      "export_sha256": "739c90c5e6e5bad607d720dc34f39a4f36147fc63d42bc399cc0a1d739cf18f6",
+      "bytes": 5029
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/code_signs.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/code_signs.c",
+      "original_sha256": "becd3134a77e972d70e2845cf10ac4a597233040c37d58338ffe9085859660a2",
+      "export_sha256": "becd3134a77e972d70e2845cf10ac4a597233040c37d58338ffe9085859660a2",
+      "bytes": 5554
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/control.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/control.h",
+      "original_sha256": "d6c47008eb809bd6a5b65df8c6dd364659604d3bab186451c22d2eca954534a2",
+      "export_sha256": "d6c47008eb809bd6a5b65df8c6dd364659604d3bab186451c22d2eca954534a2",
+      "bytes": 6729
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/control_SNR.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/control_SNR.c",
+      "original_sha256": "4b6b102ebc8acdc0bd44c5beab07032b15b69b20631e933def5a3781f7a63808",
+      "export_sha256": "4b6b102ebc8acdc0bd44c5beab07032b15b69b20631e933def5a3781f7a63808",
+      "bytes": 5447
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/control_audio_bandwidth.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/control_audio_bandwidth.c",
+      "original_sha256": "3282b7f2833226e70c1291e4a92f3a63d724da60323c263dab822df6740223e5",
+      "export_sha256": "3282b7f2833226e70c1291e4a92f3a63d724da60323c263dab822df6740223e5",
+      "bytes": 5919
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/control_codec.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/control_codec.c",
+      "original_sha256": "9c84153924c2033d1c539b97d1bb358d6c63a451883971745c6c9a550de2053b",
+      "export_sha256": "9c84153924c2033d1c539b97d1bb358d6c63a451883971745c6c9a550de2053b",
+      "bytes": 20591
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/debug.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/debug.c",
+      "original_sha256": "1958d5e7580532722c590bac325ac5873da69712c13f187f2c5284d2b7ead48b",
+      "export_sha256": "1958d5e7580532722c590bac325ac5873da69712c13f187f2c5284d2b7ead48b",
+      "bytes": 6941
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/debug.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/debug.h",
+      "original_sha256": "90ac71f372fb650f3918e0c9b4144a0bd2874d0df0b308426187a5fd236955fd",
+      "export_sha256": "90ac71f372fb650f3918e0c9b4144a0bd2874d0df0b308426187a5fd236955fd",
+      "bytes": 12994
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/dec_API.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/dec_API.c",
+      "original_sha256": "1b88250834e3f2c5ab1e0d3e7d71522f1756a861278105209ff36a50edc2d31f",
+      "export_sha256": "1b88250834e3f2c5ab1e0d3e7d71522f1756a861278105209ff36a50edc2d31f",
+      "bytes": 22754
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/decode_core.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/decode_core.c",
+      "original_sha256": "9bec65a48d32f0b4843eaaa02cd6b49b0e853186f47695ce3f3c178d4bd3452f",
+      "export_sha256": "9bec65a48d32f0b4843eaaa02cd6b49b0e853186f47695ce3f3c178d4bd3452f",
+      "bytes": 12216
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/decode_frame.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/decode_frame.c",
+      "original_sha256": "d76755eb49d7e2ee5106945948c4613d6fbaceeec90d41f5ddc51956e185716d",
+      "export_sha256": "d76755eb49d7e2ee5106945948c4613d6fbaceeec90d41f5ddc51956e185716d",
+      "bytes": 7388
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/decode_indices.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/decode_indices.c",
+      "original_sha256": "4d872038c93a2e16c266b1d29f400ffa8f5a4ccf57e50cbdc4cc5fa17623f5f5",
+      "export_sha256": "4d872038c93a2e16c266b1d29f400ffa8f5a4ccf57e50cbdc4cc5fa17623f5f5",
+      "bytes": 7245
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/decode_parameters.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/decode_parameters.c",
+      "original_sha256": "d86e43fd07b72472baa5036bacb277600312afc0153d243324b89d8699c8df1b",
+      "export_sha256": "d86e43fd07b72472baa5036bacb277600312afc0153d243324b89d8699c8df1b",
+      "bytes": 5527
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/decode_pitch.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/decode_pitch.c",
+      "original_sha256": "b74b8c46973519c2a1ee535ce2f64ac89a93a3c4c0ec2de997d56cc5ca9262fa",
+      "export_sha256": "b74b8c46973519c2a1ee535ce2f64ac89a93a3c4c0ec2de997d56cc5ca9262fa",
+      "bytes": 3717
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/decode_pulses.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/decode_pulses.c",
+      "original_sha256": "58560300a5a4ae0ee2291349a8667cce5ebb9054c4e5056aeed76e0fe2792f10",
+      "export_sha256": "58560300a5a4ae0ee2291349a8667cce5ebb9054c4e5056aeed76e0fe2792f10",
+      "bytes": 5598
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/decoder_set_fs.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/decoder_set_fs.c",
+      "original_sha256": "8cdd79180cf730d77c6e063b625b960c6199e9f75c98101ae5cd16be4dc1e008",
+      "export_sha256": "8cdd79180cf730d77c6e063b625b960c6199e9f75c98101ae5cd16be4dc1e008",
+      "bytes": 4967
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/define.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/define.h",
+      "original_sha256": "10dbeb25a21341de7a17d98c3bc8a1ab9af8e6345c57604180e985dd20619bf1",
+      "export_sha256": "10dbeb25a21341de7a17d98c3bc8a1ab9af8e6345c57604180e985dd20619bf1",
+      "bytes": 10009
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/enc_API.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/enc_API.c",
+      "original_sha256": "3eb171190e2ad0488ef77d00eb7b20eaa1ebc3a2afde7274f8a4f7681e9f261d",
+      "export_sha256": "3eb171190e2ad0488ef77d00eb7b20eaa1ebc3a2afde7274f8a4f7681e9f261d",
+      "bytes": 32873
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/encode_indices.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/encode_indices.c",
+      "original_sha256": "585e886a5e552b7645e20a9bc4139369f96aef254c01d4cbf89b757f6542e594",
+      "export_sha256": "585e886a5e552b7645e20a9bc4139369f96aef254c01d4cbf89b757f6542e594",
+      "bytes": 9359
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/encode_pulses.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/encode_pulses.c",
+      "original_sha256": "892ebd497ff473050344fbe5c9e03e3395fd6cbe07f33ee2770887ddd1b3f06f",
+      "export_sha256": "892ebd497ff473050344fbe5c9e03e3395fd6cbe07f33ee2770887ddd1b3f06f",
+      "bytes": 8839
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/errors.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/errors.h",
+      "original_sha256": "3bbf21416af6475200e55cbfeacf8dccef88455e31352735e4d4fecdda84ddd6",
+      "export_sha256": "3bbf21416af6475200e55cbfeacf8dccef88455e31352735e4d4fecdda84ddd6",
+      "bytes": 3640
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/fixed/arm/warped_autocorrelation_FIX_arm.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/fixed/arm/warped_autocorrelation_FIX_arm.h",
+      "original_sha256": "ea75f0c732c6eb449f4072f5dd89652cc4d34735b7e1f769e78bfc6b2b096505",
+      "export_sha256": "ea75f0c732c6eb449f4072f5dd89652cc4d34735b7e1f769e78bfc6b2b096505",
+      "bytes": 4273
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/fixed/main_FIX.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/fixed/main_FIX.h",
+      "original_sha256": "69c40d33a6da18d946773f2f0b3a02341a85a75182a956633b6c165334852e0b",
+      "export_sha256": "69c40d33a6da18d946773f2f0b3a02341a85a75182a956633b6c165334852e0b",
+      "bytes": 19215
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/fixed/mips/warped_autocorrelation_FIX_mipsr1.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/fixed/mips/warped_autocorrelation_FIX_mipsr1.h",
+      "original_sha256": "ec8df04f301778fc4bfaaf6656ed109e329e276a5cd672d587cbd3c39fd773d1",
+      "export_sha256": "ec8df04f301778fc4bfaaf6656ed109e329e276a5cd672d587cbd3c39fd773d1",
+      "bytes": 8196
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/fixed/structs_FIX.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/fixed/structs_FIX.h",
+      "original_sha256": "cded1e8feb90d50a67df637203e79fcb7ad18010585a4deb8a7398c7e44916a4",
+      "export_sha256": "cded1e8feb90d50a67df637203e79fcb7ad18010585a4deb8a7398c7e44916a4",
+      "bytes": 5226
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/LPC_analysis_filter_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/LPC_analysis_filter_FLP.c",
+      "original_sha256": "5974dbec9c6bba9675e46200ebe784230e5051cf136cf033f518813fee9f84ce",
+      "export_sha256": "5974dbec9c6bba9675e46200ebe784230e5051cf136cf033f518813fee9f84ce",
+      "bytes": 10538
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/LPC_inv_pred_gain_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/LPC_inv_pred_gain_FLP.c",
+      "original_sha256": "1a12491579190a3f424e4faa6b55b8ecfbf308683719dddbd3a1b42959374e1b",
+      "export_sha256": "1a12491579190a3f424e4faa6b55b8ecfbf308683719dddbd3a1b42959374e1b",
+      "bytes": 3289
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/LTP_analysis_filter_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/LTP_analysis_filter_FLP.c",
+      "original_sha256": "12698a0a18e027134c5b6c393fe0b92f0cb7439eccc3fb46c703bbc5d264a8d4",
+      "export_sha256": "12698a0a18e027134c5b6c393fe0b92f0cb7439eccc3fb46c703bbc5d264a8d4",
+      "bytes": 3729
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/LTP_scale_ctrl_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/LTP_scale_ctrl_FLP.c",
+      "original_sha256": "ed03a4bce5d4e6e0922fcbbc6b6f9c64fb57f3b635c8ac8f191f7fae355c5f38",
+      "export_sha256": "ed03a4bce5d4e6e0922fcbbc6b6f9c64fb57f3b635c8ac8f191f7fae355c5f38",
+      "bytes": 3184
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/SigProc_FLP.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/SigProc_FLP.h",
+      "original_sha256": "a1eab2ae1175fe19f72a29daf4ee2cbfcd923378d46c997e714e0b477e90444e",
+      "export_sha256": "a1eab2ae1175fe19f72a29daf4ee2cbfcd923378d46c997e714e0b477e90444e",
+      "bytes": 9825
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/apply_sine_window_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/apply_sine_window_FLP.c",
+      "original_sha256": "0eead745ca4a141bb2a339b2e036bb99a8da436e6b71759285e28d1f96e1041b",
+      "export_sha256": "0eead745ca4a141bb2a339b2e036bb99a8da436e6b71759285e28d1f96e1041b",
+      "bytes": 3437
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/autocorrelation_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/autocorrelation_FLP.c",
+      "original_sha256": "1716a571a70c0b2b350bffd2589bfa517d3c7bf8dd609142bf42afbddb9af3b0",
+      "export_sha256": "1716a571a70c0b2b350bffd2589bfa517d3c7bf8dd609142bf42afbddb9af3b0",
+      "bytes": 2580
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/burg_modified_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/burg_modified_FLP.c",
+      "original_sha256": "6a64de9a833741f42aae79575254ead019a6cb53700ba257e08de80174295617",
+      "export_sha256": "6a64de9a833741f42aae79575254ead019a6cb53700ba257e08de80174295617",
+      "bytes": 7955
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/bwexpander_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/bwexpander_FLP.c",
+      "original_sha256": "38d3892ce5c814d7e48e1e44a4b1844dadf640094a4107f8c5b38c8893471ce5",
+      "export_sha256": "38d3892ce5c814d7e48e1e44a4b1844dadf640094a4107f8c5b38c8893471ce5",
+      "bytes": 2308
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/corrMatrix_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/corrMatrix_FLP.c",
+      "original_sha256": "9a2b722b96fc053d6dc2462d439c5f7ae5f3f3803009f207d49e95491190cd39",
+      "export_sha256": "9a2b722b96fc053d6dc2462d439c5f7ae5f3f3803009f207d49e95491190cd39",
+      "bytes": 4934
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/encode_frame_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/encode_frame_FLP.c",
+      "original_sha256": "4efdb59a51b9b18e155fc06c7464b3e574dba4255f84c860a97341c81f382c7a",
+      "export_sha256": "4efdb59a51b9b18e155fc06c7464b3e574dba4255f84c860a97341c81f382c7a",
+      "bytes": 22658
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/energy_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/energy_FLP.c",
+      "original_sha256": "529e4b119d48e6b32f29e8155c08a23f683a706d2f939022b8bcc626e1ebfd99",
+      "export_sha256": "529e4b119d48e6b32f29e8155c08a23f683a706d2f939022b8bcc626e1ebfd99",
+      "bytes": 2431
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/find_LPC_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/find_LPC_FLP.c",
+      "original_sha256": "478decee219e6722e9d6f8bbd5f7d63426005cbabce98ff37fea69c4b2659c60",
+      "export_sha256": "478decee219e6722e9d6f8bbd5f7d63426005cbabce98ff37fea69c4b2659c60",
+      "bytes": 5504
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/find_LTP_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/find_LTP_FLP.c",
+      "original_sha256": "a0ae23321591d7c44531d98b6d395b5152904a88573fa615c6a51bd039d2e737",
+      "export_sha256": "a0ae23321591d7c44531d98b6d395b5152904a88573fa615c6a51bd039d2e737",
+      "bytes": 3407
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/find_pitch_lags_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/find_pitch_lags_FLP.c",
+      "original_sha256": "701d3c268a7127e5754bc2cb76eca7e65d8c2c1fc9eb9e13ee26b2da421abd7e",
+      "export_sha256": "701d3c268a7127e5754bc2cb76eca7e65d8c2c1fc9eb9e13ee26b2da421abd7e",
+      "bytes": 6486
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/find_pred_coefs_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/find_pred_coefs_FLP.c",
+      "original_sha256": "17b8bd4593264dfe7867072f1194e6078acba2d5854e6d7d5c66db99c4682b3a",
+      "export_sha256": "17b8bd4593264dfe7867072f1194e6078acba2d5854e6d7d5c66db99c4682b3a",
+      "bytes": 6078
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/inner_product_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/inner_product_FLP.c",
+      "original_sha256": "8a59ade632bca67ce002460c4e1e40e455530026aeb06fa8ceb405d75156ec22",
+      "export_sha256": "8a59ade632bca67ce002460c4e1e40e455530026aeb06fa8ceb405d75156ec22",
+      "bytes": 2451
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/k2a_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/k2a_FLP.c",
+      "original_sha256": "3a4d870b0ed0891ec21ad3202cb1430b51b6c5adfd42eeb2fe2245857ea3ccfc",
+      "export_sha256": "3a4d870b0ed0891ec21ad3202cb1430b51b6c5adfd42eeb2fe2245857ea3ccfc",
+      "bytes": 2535
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/main_FLP.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/main_FLP.h",
+      "original_sha256": "623adc0ee645f21f7fd992c4e40c4a379c2f165e0ccff484d6df7da5667ff4d3",
+      "export_sha256": "623adc0ee645f21f7fd992c4e40c4a379c2f165e0ccff484d6df7da5667ff4d3",
+      "bytes": 19524
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/noise_shape_analysis_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/noise_shape_analysis_FLP.c",
+      "original_sha256": "58db4ee733367aae2f357140f1ea8ed4cd4dd3be0f231667fcb3f251f24afc1a",
+      "export_sha256": "58db4ee733367aae2f357140f1ea8ed4cd4dd3be0f231667fcb3f251f24afc1a",
+      "bytes": 15331
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/pitch_analysis_core_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/pitch_analysis_core_FLP.c",
+      "original_sha256": "a9dbf4ed03f1a79a13715ab56d9e8135ba7f02ced6c729dac70642199c9b500e",
+      "export_sha256": "a9dbf4ed03f1a79a13715ab56d9e8135ba7f02ced6c729dac70642199c9b500e",
+      "bytes": 29437
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/process_gains_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/process_gains_FLP.c",
+      "original_sha256": "a25547c792d4654dd0c09e2e6239a50ddb2e5ff10b6b85f759540c4c42fbade4",
+      "export_sha256": "a25547c792d4654dd0c09e2e6239a50ddb2e5ff10b6b85f759540c4c42fbade4",
+      "bytes": 5107
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/regularize_correlations_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/regularize_correlations_FLP.c",
+      "original_sha256": "eec0b68f4fc4b2a64739082b937f2a11e9453544553f0c16e302eca4d02c8745",
+      "export_sha256": "eec0b68f4fc4b2a64739082b937f2a11e9453544553f0c16e302eca4d02c8745",
+      "bytes": 2437
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/residual_energy_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/residual_energy_FLP.c",
+      "original_sha256": "689eed8cd9073486d546a67f4521facae7e4202138c4536b5beaf2e348294ae9",
+      "export_sha256": "689eed8cd9073486d546a67f4521facae7e4202138c4536b5beaf2e348294ae9",
+      "bytes": 5947
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/scale_copy_vector_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/scale_copy_vector_FLP.c",
+      "original_sha256": "1bea4131e7f036320950bfef7bfb69cb0c4a9de3e1b45ae20905d3c6c7a13da7",
+      "export_sha256": "1bea4131e7f036320950bfef7bfb69cb0c4a9de3e1b45ae20905d3c6c7a13da7",
+      "bytes": 2413
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/scale_vector_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/scale_vector_FLP.c",
+      "original_sha256": "a88ffc8aabbf32b99b59160079a51344d38fa67eaeb747754a54b0d17dfaf745",
+      "export_sha256": "a88ffc8aabbf32b99b59160079a51344d38fa67eaeb747754a54b0d17dfaf745",
+      "bytes": 2261
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/schur_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/schur_FLP.c",
+      "original_sha256": "1f7035b3d546cc3cd89ff29b54ac07760bb5734573ffa907807630fd57cb6de2",
+      "export_sha256": "1f7035b3d546cc3cd89ff29b54ac07760bb5734573ffa907807630fd57cb6de2",
+      "bytes": 3065
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/sort_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/sort_FLP.c",
+      "original_sha256": "8e4b046f47318b523d4fa2fbedbf4e7b58544dab929befbe1f11e31d17c43ad2",
+      "export_sha256": "8e4b046f47318b523d4fa2fbedbf4e7b58544dab929befbe1f11e31d17c43ad2",
+      "bytes": 3684
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/structs_FLP.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/structs_FLP.h",
+      "original_sha256": "86e64c236e0fbaab36042c612f28acc6bd510c4ac9bfa39cd42147c83248a865",
+      "export_sha256": "86e64c236e0fbaab36042c612f28acc6bd510c4ac9bfa39cd42147c83248a865",
+      "bytes": 4880
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/warped_autocorrelation_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/warped_autocorrelation_FLP.c",
+      "original_sha256": "8ae489f2562b552a3a4a56b7aca95b8fe3513c03e7be84184548eac3b0e3bd0d",
+      "export_sha256": "8ae489f2562b552a3a4a56b7aca95b8fe3513c03e7be84184548eac3b0e3bd0d",
+      "bytes": 3660
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/float/wrappers_FLP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/float/wrappers_FLP.c",
+      "original_sha256": "04d0ece91c8149cf09f204a0270855a9c297f52743e1d315a24b5dd359ce3a95",
+      "export_sha256": "04d0ece91c8149cf09f204a0270855a9c297f52743e1d315a24b5dd359ce3a95",
+      "bytes": 10535
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/gain_quant.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/gain_quant.c",
+      "original_sha256": "070223b7a20976d91c8f557c5552537db2c452e459483d886f78daf71c5d17b7",
+      "export_sha256": "070223b7a20976d91c8f557c5552537db2c452e459483d886f78daf71c5d17b7",
+      "bytes": 6928
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/init_decoder.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/init_decoder.c",
+      "original_sha256": "67d4da1fa2a546432ba3ce7f815cab5f759c24daff9c11746217e1aca4b0feb0",
+      "export_sha256": "67d4da1fa2a546432ba3ce7f815cab5f759c24daff9c11746217e1aca4b0feb0",
+      "bytes": 3057
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/init_encoder.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/init_encoder.c",
+      "original_sha256": "0c06e1afc8aea2828426b599578f9708b0ea00c6ba3d76d5c2e0d4117e21ddf6",
+      "export_sha256": "0c06e1afc8aea2828426b599578f9708b0ea00c6ba3d76d5c2e0d4117e21ddf6",
+      "bytes": 2930
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/inner_prod_aligned.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/inner_prod_aligned.c",
+      "original_sha256": "11356406441d6257ce6941e408937eaeb22135849e38b551ea78d7bd624130d3",
+      "export_sha256": "11356406441d6257ce6941e408937eaeb22135849e38b551ea78d7bd624130d3",
+      "bytes": 2451
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/interpolate.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/interpolate.c",
+      "original_sha256": "99eb0e43ca938348d5762b3d9c6f0f002933683363ab0e86bfcdcfccdeb93a86",
+      "export_sha256": "99eb0e43ca938348d5762b3d9c6f0f002933683363ab0e86bfcdcfccdeb93a86",
+      "bytes": 2601
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/lin2log.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/lin2log.c",
+      "original_sha256": "75a642c6d99bfe79e2ddc924e9b96bdf3e0ef7359cfa2e28df4606ad4f86750f",
+      "export_sha256": "75a642c6d99bfe79e2ddc924e9b96bdf3e0ef7359cfa2e28df4606ad4f86750f",
+      "bytes": 2219
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/log2lin.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/log2lin.c",
+      "original_sha256": "4ce500b6b3ae8f96a6cce5b93391e85459ec88e640cd8430a32ce7337fed8923",
+      "export_sha256": "4ce500b6b3ae8f96a6cce5b93391e85459ec88e640cd8430a32ce7337fed8923",
+      "bytes": 2636
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/macros.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/macros.h",
+      "original_sha256": "7fb2ce02a79df147f9220a4fbc1effe531305881092f4b7d003057666223ebfd",
+      "export_sha256": "7fb2ce02a79df147f9220a4fbc1effe531305881092f4b7d003057666223ebfd",
+      "bytes": 6501
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/main.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/main.h",
+      "original_sha256": "5ea6800f56e83fc6f15f7b7c8b189c4686a1f81b1cc75e18f580e305d5f455f2",
+      "export_sha256": "5ea6800f56e83fc6f15f7b7c8b189c4686a1f81b1cc75e18f580e305d5f455f2",
+      "bytes": 33034
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/mips/NSQ_mips.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/mips/NSQ_mips.h",
+      "original_sha256": "407e10d3cf4529bfde097833f4b39b30b4cbadc4dc83ae264286aab8e93453a7",
+      "export_sha256": "407e10d3cf4529bfde097833f4b39b30b4cbadc4dc83ae264286aab8e93453a7",
+      "bytes": 5280
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/mips/macros_mipsr1.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/mips/macros_mipsr1.h",
+      "original_sha256": "6058c0aab57ef2bb12c2fd7f62cf34ceebf4a6682a94367c640b88e5b921d97f",
+      "export_sha256": "6058c0aab57ef2bb12c2fd7f62cf34ceebf4a6682a94367c640b88e5b921d97f",
+      "bytes": 3443
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/mips/sigproc_fix_mipsr1.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/mips/sigproc_fix_mipsr1.h",
+      "original_sha256": "0002ac0dd96f0983ef1f01613444819b97eb1e24cefa5e9341327646a400f0f7",
+      "export_sha256": "0002ac0dd96f0983ef1f01613444819b97eb1e24cefa5e9341327646a400f0f7",
+      "bytes": 2212
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/pitch_est_defines.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/pitch_est_defines.h",
+      "original_sha256": "a51197e9131a105cb12547ac520320a5ad9633c9a89dd74848999ca748f18af4",
+      "export_sha256": "a51197e9131a105cb12547ac520320a5ad9633c9a89dd74848999ca748f18af4",
+      "bytes": 4060
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/pitch_est_tables.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/pitch_est_tables.c",
+      "original_sha256": "c0cf34e7d5ced41d7117c345edddc4ecefaf80ef2a55950a3a95582da7e3e334",
+      "export_sha256": "c0cf34e7d5ced41d7117c345edddc4ecefaf80ef2a55950a3a95582da7e3e334",
+      "bytes": 3589
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/process_NLSFs.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/process_NLSFs.c",
+      "original_sha256": "dfd4b5527fd6ff43d6eec50dacfd51a5819fe5ebca2a6797d25548d61c5dfb19",
+      "export_sha256": "dfd4b5527fd6ff43d6eec50dacfd51a5819fe5ebca2a6797d25548d61c5dfb19",
+      "bytes": 5447
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/quant_LTP_gains.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/quant_LTP_gains.c",
+      "original_sha256": "81b85acad8242d5e423377999300c15ab4ec789c52615fa3ff7ac59aa1d0c7fd",
+      "export_sha256": "81b85acad8242d5e423377999300c15ab4ec789c52615fa3ff7ac59aa1d0c7fd",
+      "bytes": 7346
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/resampler.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/resampler.c",
+      "original_sha256": "b75329b716a429b50e937bf7975aedd200543d8a7e4e1c77a4572b2975740ba3",
+      "export_sha256": "b75329b716a429b50e937bf7975aedd200543d8a7e4e1c77a4572b2975740ba3",
+      "bytes": 10146
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/resampler_down2.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/resampler_down2.c",
+      "original_sha256": "0f988cdc80644b0dc0c25b84765bd0f11a2851b1913204db47eb064af6dd4cf1",
+      "export_sha256": "0f988cdc80644b0dc0c25b84765bd0f11a2851b1913204db47eb064af6dd4cf1",
+      "bytes": 3474
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/resampler_down2_3.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/resampler_down2_3.c",
+      "original_sha256": "2ab8318bf4bc64de8491ac0272cdf19c79bf036725b17f21fc870e280b1ebc72",
+      "export_sha256": "2ab8318bf4bc64de8491ac0272cdf19c79bf036725b17f21fc870e280b1ebc72",
+      "bytes": 4765
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/resampler_private.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/resampler_private.h",
+      "original_sha256": "b14e6d03394a911d15eb9860922b7ecdd346d07f728f262d22e42f7bfc17ea3c",
+      "export_sha256": "b14e6d03394a911d15eb9860922b7ecdd346d07f728f262d22e42f7bfc17ea3c",
+      "bytes": 4553
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/resampler_private_AR2.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/resampler_private_AR2.c",
+      "original_sha256": "ae6142c28e724374e0a0f8e988e27ead22c6d52fb4e0ede4467cac3d500b2f2c",
+      "export_sha256": "ae6142c28e724374e0a0f8e988e27ead22c6d52fb4e0ede4467cac3d500b2f2c",
+      "bytes": 2664
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/resampler_private_IIR_FIR.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/resampler_private_IIR_FIR.c",
+      "original_sha256": "584c7b2afbcb56ba03016401408d8eecb1393640eee947d0bae78fc141f425be",
+      "export_sha256": "584c7b2afbcb56ba03016401408d8eecb1393640eee947d0bae78fc141f425be",
+      "bytes": 5231
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/resampler_private_down_FIR.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/resampler_private_down_FIR.c",
+      "original_sha256": "175b7b6863fecff32d9e36e497bbc666e7083ceb35dcca7d40502de58eb4fabd",
+      "export_sha256": "175b7b6863fecff32d9e36e497bbc666e7083ceb35dcca7d40502de58eb4fabd",
+      "bytes": 10897
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/resampler_private_up2_HQ.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/resampler_private_up2_HQ.c",
+      "original_sha256": "f06a982b8856e1575371d147ddb9a03033f0569e8d7f969536133e606ef32a36",
+      "export_sha256": "f06a982b8856e1575371d147ddb9a03033f0569e8d7f969536133e606ef32a36",
+      "bytes": 5367
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/resampler_rom.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/resampler_rom.c",
+      "original_sha256": "ec3ba5c620ee504d0a902290ae54bc8b434754e57e294a501a82757b9c9d6ddd",
+      "export_sha256": "ec3ba5c620ee504d0a902290ae54bc8b434754e57e294a501a82757b9c9d6ddd",
+      "bytes": 4747
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/resampler_rom.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/resampler_rom.h",
+      "original_sha256": "68088e0750482fa05be18d571a02b791576376e3cdc48fd2cc127cf333599efc",
+      "export_sha256": "68088e0750482fa05be18d571a02b791576376e3cdc48fd2cc127cf333599efc",
+      "bytes": 3294
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/resampler_structs.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/resampler_structs.h",
+      "original_sha256": "806a12a9ccfa673e04a31ce1f20e4b715ede4ad3a811419cc1726172df9d2e21",
+      "export_sha256": "806a12a9ccfa673e04a31ce1f20e4b715ede4ad3a811419cc1726172df9d2e21",
+      "bytes": 2614
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/shell_coder.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/shell_coder.c",
+      "original_sha256": "60b5a2786238f669eb48dc9a81c072707a11691be3a73029ceb643a6dee5d7dd",
+      "export_sha256": "60b5a2786238f669eb48dc9a81c072707a11691be3a73029ceb643a6dee5d7dd",
+      "bytes": 7718
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/sigm_Q15.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/sigm_Q15.c",
+      "original_sha256": "bfa177d2ab282ce9b36f46e72603784c0ada059ef43d87d13293b34d205d366f",
+      "export_sha256": "bfa177d2ab282ce9b36f46e72603784c0ada059ef43d87d13293b34d205d366f",
+      "bytes": 3163
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/sort.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/sort.c",
+      "original_sha256": "adf6ce2c63bd04e092e43bece82fb52cd6dc281d2b6bbfdd24f95fd54c27fef1",
+      "export_sha256": "adf6ce2c63bd04e092e43bece82fb52cd6dc281d2b6bbfdd24f95fd54c27fef1",
+      "bytes": 6265
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/stereo_LR_to_MS.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/stereo_LR_to_MS.c",
+      "original_sha256": "36f67d3eff5c77522733bbc9d2c19c2ae3ae96e5b6ee4b4da84734edafe305e9",
+      "export_sha256": "36f67d3eff5c77522733bbc9d2c19c2ae3ae96e5b6ee4b4da84734edafe305e9",
+      "bytes": 12481
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/stereo_MS_to_LR.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/stereo_MS_to_LR.c",
+      "original_sha256": "55298e28fe9248ac067273533140ae73220b4f220222974b1e79accedea9a61a",
+      "export_sha256": "55298e28fe9248ac067273533140ae73220b4f220222974b1e79accedea9a61a",
+      "bytes": 4899
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/stereo_decode_pred.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/stereo_decode_pred.c",
+      "original_sha256": "b852fbd96ea37d0387b523e5aec0526e0afe5d64457c5da44e6d6903cca27e8b",
+      "export_sha256": "b852fbd96ea37d0387b523e5aec0526e0afe5d64457c5da44e6d6903cca27e8b",
+      "bytes": 3417
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/stereo_encode_pred.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/stereo_encode_pred.c",
+      "original_sha256": "405b710c9b7cebcbe49262ee865a75f63fd6375fba565b30c8aee488d09b6e22",
+      "export_sha256": "405b710c9b7cebcbe49262ee865a75f63fd6375fba565b30c8aee488d09b6e22",
+      "bytes": 2885
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/stereo_find_predictor.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/stereo_find_predictor.c",
+      "original_sha256": "b77b33b43ab9f72947d6b853a282b639a633345b30e71e1817f122d487941fa1",
+      "export_sha256": "b77b33b43ab9f72947d6b853a282b639a633345b30e71e1817f122d487941fa1",
+      "bytes": 4374
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/stereo_quant_pred.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/stereo_quant_pred.c",
+      "original_sha256": "8d1895de054a67a8501af9bf977d20be91f3a9efc50d67bd683dd0a09da69732",
+      "export_sha256": "8d1895de054a67a8501af9bf977d20be91f3a9efc50d67bd683dd0a09da69732",
+      "bytes": 3404
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/structs.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/structs.h",
+      "original_sha256": "a59092ef7c40e9802b1c62dd2e2f655bb0d0d5a8ec18af64cdf8aaa3c9f409d3",
+      "export_sha256": "a59092ef7c40e9802b1c62dd2e2f655bb0d0d5a8ec18af64cdf8aaa3c9f409d3",
+      "bytes": 21869
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/sum_sqr_shift.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/sum_sqr_shift.c",
+      "original_sha256": "0a9db7e0b0b5f577ffdc277a03a043dbeac3d3dc9d05abcbc798169c3abfc44f",
+      "export_sha256": "0a9db7e0b0b5f577ffdc277a03a043dbeac3d3dc9d05abcbc798169c3abfc44f",
+      "bytes": 3789
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/table_LSF_cos.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/table_LSF_cos.c",
+      "original_sha256": "9cae32dfdc4ab45e5f288a4fd74cf8bb5dace19c651ec54b6c064024434d52c2",
+      "export_sha256": "9cae32dfdc4ab45e5f288a4fd74cf8bb5dace19c651ec54b6c064024434d52c2",
+      "bytes": 4191
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/tables.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/tables.h",
+      "original_sha256": "ec392c03ba77e7a049fab3c504463f2c6710c4d2c4a777897007a7b0a1b9f959",
+      "export_sha256": "ec392c03ba77e7a049fab3c504463f2c6710c4d2c4a777897007a7b0a1b9f959",
+      "bytes": 7178
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/tables_LTP.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/tables_LTP.c",
+      "original_sha256": "95b4912701d4dfd46f0364603092885818c00604808c9b7f606e40eec34fb3f0",
+      "export_sha256": "95b4912701d4dfd46f0364603092885818c00604808c9b7f606e40eec34fb3f0",
+      "bytes": 7432
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/tables_NLSF_CB_NB_MB.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/tables_NLSF_CB_NB_MB.c",
+      "original_sha256": "94e49118901f9f9e4f09c9c088f6eeb8936f200686517d791440c26c523463f5",
+      "export_sha256": "94e49118901f9f9e4f09c9c088f6eeb8936f200686517d791440c26c523463f5",
+      "bytes": 10785
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/tables_NLSF_CB_WB.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/tables_NLSF_CB_WB.c",
+      "original_sha256": "58511404ed6a4f6a8f5b0051e9328df1b60a8c6d59928382438be2cddabc05d8",
+      "export_sha256": "58511404ed6a4f6a8f5b0051e9328df1b60a8c6d59928382438be2cddabc05d8",
+      "bytes": 14498
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/tables_gain.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/tables_gain.c",
+      "original_sha256": "c91e247a6580cef800e544238b63e19e65a5c4242f77692bab1c722575d67866",
+      "export_sha256": "c91e247a6580cef800e544238b63e19e65a5c4242f77692bab1c722575d67866",
+      "bytes": 2519
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/tables_other.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/tables_other.c",
+      "original_sha256": "189fa4ae766b469a99cbd6c14d2f0871cc5b28df9bd3465b477d048834e50816",
+      "export_sha256": "189fa4ae766b469a99cbd6c14d2f0871cc5b28df9bd3465b477d048834e50816",
+      "bytes": 4782
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/tables_pitch_lag.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/tables_pitch_lag.c",
+      "original_sha256": "0cb26e4e711a16a728aeb3943bf9c23a488de6abd2fe455076f418e325605c4c",
+      "export_sha256": "0cb26e4e711a16a728aeb3943bf9c23a488de6abd2fe455076f418e325605c4c",
+      "bytes": 3066
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/tables_pulses_per_block.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/tables_pulses_per_block.c",
+      "original_sha256": "2fb238cd37048303f2dfa033b1e4c4d6decc427ba81c8eccacae5e19dc7b77fd",
+      "export_sha256": "2fb238cd37048303f2dfa033b1e4c4d6decc427ba81c8eccacae5e19dc7b77fd",
+      "bytes": 11423
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/tuning_parameters.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/tuning_parameters.h",
+      "original_sha256": "752c03100137fb26204db35af2d435912a80fefe848a6aac1f709757d53f204c",
+      "export_sha256": "752c03100137fb26204db35af2d435912a80fefe848a6aac1f709757d53f204c",
+      "bytes": 6191
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/typedef.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/typedef.h",
+      "original_sha256": "a25409c0741545a75f28bf8a51ccdc3a7ba2421e783bd02baafe379e6d43e5b7",
+      "export_sha256": "a25409c0741545a75f28bf8a51ccdc3a7ba2421e783bd02baafe379e6d43e5b7",
+      "bytes": 3522
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/x86/SigProc_FIX_sse.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/x86/SigProc_FIX_sse.h",
+      "original_sha256": "2534456f00468ed99a32b61d29d94f6ad12976f77b7fa60b160932211c9a4580",
+      "export_sha256": "2534456f00468ed99a32b61d29d94f6ad12976f77b7fa60b160932211c9a4580",
+      "bytes": 5274
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/x86/main_sse.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/x86/main_sse.h",
+      "original_sha256": "26199bfd27e6e448170428aa898b40dca9acf5fc58ea2daa2a6923d34431d3b8",
+      "export_sha256": "26199bfd27e6e448170428aa898b40dca9acf5fc58ea2daa2a6923d34431d3b8",
+      "bytes": 20671
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/xtensa/SigProc_FIX_lx7.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/xtensa/SigProc_FIX_lx7.h",
+      "original_sha256": "d820fb71c96e9e67c7d180005461d7ac4f1a7f4e912d8c223e64eadfb86f61c1",
+      "export_sha256": "d820fb71c96e9e67c7d180005461d7ac4f1a7f4e912d8c223e64eadfb86f61c1",
+      "bytes": 1960
+    },
+    {
+      "path": "dependencies/opus-1.6/silk/xtensa/macros_lx7.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk/xtensa/macros_lx7.h",
+      "original_sha256": "c4b58ae99b3d2b75d9cd07f36bad28257da51e67f5212545341782172109ce1d",
+      "export_sha256": "c4b58ae99b3d2b75d9cd07f36bad28257da51e67f5212545341782172109ce1d",
+      "bytes": 3120
+    },
+    {
+      "path": "dependencies/opus-1.6/silk_sources.mk",
+      "origin": "tools/dualsense-build-deps/opus-1.6/silk_sources.mk",
+      "original_sha256": "e834190c31fd9b5d2606c14a1c00a180fa2ac0ea33330eeef0c45d9dc835a90a",
+      "export_sha256": "e834190c31fd9b5d2606c14a1c00a180fa2ac0ea33330eeef0c45d9dc835a90a",
+      "bytes": 4259
+    },
+    {
+      "path": "dependencies/opus-1.6/src/analysis.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/analysis.c",
+      "original_sha256": "d2442fc330fc2576d30df080d68be4aca8803df15edcfcfa48078c13ebbc3ff8",
+      "export_sha256": "d2442fc330fc2576d30df080d68be4aca8803df15edcfcfa48078c13ebbc3ff8",
+      "bytes": 36284
+    },
+    {
+      "path": "dependencies/opus-1.6/src/analysis.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/analysis.h",
+      "original_sha256": "525530813f8650a82df8e3be6f5fe6e2a953d500af81225fc0294971ecdd4a79",
+      "export_sha256": "525530813f8650a82df8e3be6f5fe6e2a953d500af81225fc0294971ecdd4a79",
+      "bytes": 3583
+    },
+    {
+      "path": "dependencies/opus-1.6/src/extensions.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/extensions.c",
+      "original_sha256": "82a896f6067d32cbb489b694f2e90f2dec8208f0a68ca40e1d123e312a1408b5",
+      "export_sha256": "82a896f6067d32cbb489b694f2e90f2dec8208f0a68ca40e1d123e312a1408b5",
+      "bytes": 23462
+    },
+    {
+      "path": "dependencies/opus-1.6/src/mapping_matrix.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/mapping_matrix.c",
+      "original_sha256": "9a3a297f7ecab73c54f8d63cc3146f2ae9971ce7f8a897c3a3037bda163a224a",
+      "export_sha256": "9a3a297f7ecab73c54f8d63cc3146f2ae9971ce7f8a897c3a3037bda163a224a",
+      "bytes": 54289
+    },
+    {
+      "path": "dependencies/opus-1.6/src/mapping_matrix.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/mapping_matrix.h",
+      "original_sha256": "6875882bc9253a056635fe5a7e3bf27f1ff7da76e8302d9fdbf5d1683064e577",
+      "export_sha256": "6875882bc9253a056635fe5a7e3bf27f1ff7da76e8302d9fdbf5d1683064e577",
+      "bytes": 4951
+    },
+    {
+      "path": "dependencies/opus-1.6/src/mlp.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/mlp.c",
+      "original_sha256": "162884422e9b91d368b695aa5f84d74f9585cbf2b13a45e6bbca65df880db06c",
+      "export_sha256": "162884422e9b91d368b695aa5f84d74f9585cbf2b13a45e6bbca65df880db06c",
+      "bytes": 4181
+    },
+    {
+      "path": "dependencies/opus-1.6/src/mlp.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/mlp.h",
+      "original_sha256": "bb553cd83e8081e79244682cce949ad1d6b584232d43eff30a1a254100dba07b",
+      "export_sha256": "bb553cd83e8081e79244682cce949ad1d6b584232d43eff30a1a254100dba07b",
+      "bytes": 2096
+    },
+    {
+      "path": "dependencies/opus-1.6/src/mlp_data.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/mlp_data.c",
+      "original_sha256": "662233815b4d6a626259f9acffa14dcf65d5a2666c76233fd66b9b3e2f86bbaa",
+      "export_sha256": "662233815b4d6a626259f9acffa14dcf65d5a2666c76233fd66b9b3e2f86bbaa",
+      "bytes": 24120
+    },
+    {
+      "path": "dependencies/opus-1.6/src/opus.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/opus.c",
+      "original_sha256": "1cee175636295bbd576ff384b77c31663b04fe09619598a452e067229205ade1",
+      "export_sha256": "1cee175636295bbd576ff384b77c31663b04fe09619598a452e067229205ade1",
+      "bytes": 11274
+    },
+    {
+      "path": "dependencies/opus-1.6/src/opus_decoder.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/opus_decoder.c",
+      "original_sha256": "a4559562cdcddbbf89dab276828df2ab5353fe548ac6697628fbac7c07661c1b",
+      "export_sha256": "a4559562cdcddbbf89dab276828df2ab5353fe548ac6697628fbac7c07661c1b",
+      "bytes": 49604
+    },
+    {
+      "path": "dependencies/opus-1.6/src/opus_encoder.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/opus_encoder.c",
+      "original_sha256": "df1e9f22a4b15bd50c464d520956cb1a793fdfa5f13eb48d1baca54b1417e2fe",
+      "export_sha256": "df1e9f22a4b15bd50c464d520956cb1a793fdfa5f13eb48d1baca54b1417e2fe",
+      "bytes": 119240
+    },
+    {
+      "path": "dependencies/opus-1.6/src/opus_multistream.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/opus_multistream.c",
+      "original_sha256": "8dfa4d943290cbe8161c518ff7ed0440c9645fd38c76d1579bca72deef99340a",
+      "export_sha256": "8dfa4d943290cbe8161c518ff7ed0440c9645fd38c76d1579bca72deef99340a",
+      "bytes": 2683
+    },
+    {
+      "path": "dependencies/opus-1.6/src/opus_multistream_decoder.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/opus_multistream_decoder.c",
+      "original_sha256": "833ee4f41937bf9fcbe6c88a90a2b75a9d9fddba2981825e202e74e71d6ec581",
+      "export_sha256": "833ee4f41937bf9fcbe6c88a90a2b75a9d9fddba2981825e202e74e71d6ec581",
+      "bytes": 15178
+    },
+    {
+      "path": "dependencies/opus-1.6/src/opus_multistream_encoder.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/opus_multistream_encoder.c",
+      "original_sha256": "0cbf54dc3d486c07030da608eeaea5ea389ab1934f5051b8d71a57b729d5f882",
+      "export_sha256": "0cbf54dc3d486c07030da608eeaea5ea389ab1934f5051b8d71a57b729d5f882",
+      "bytes": 39853
+    },
+    {
+      "path": "dependencies/opus-1.6/src/opus_private.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/opus_private.h",
+      "original_sha256": "546ef810679530ec9e1129ca72e6fba29c4eba30ed56737b544525cea58feec8",
+      "export_sha256": "546ef810679530ec9e1129ca72e6fba29c4eba30ed56737b544525cea58feec8",
+      "bytes": 9225
+    },
+    {
+      "path": "dependencies/opus-1.6/src/opus_projection_decoder.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/opus_projection_decoder.c",
+      "original_sha256": "61bf853457a0ad6ad459668e7db072e5e098de93cf99140ed6ea851b134e92a1",
+      "export_sha256": "61bf853457a0ad6ad459668e7db072e5e098de93cf99140ed6ea851b134e92a1",
+      "bytes": 8481
+    },
+    {
+      "path": "dependencies/opus-1.6/src/opus_projection_encoder.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/opus_projection_encoder.c",
+      "original_sha256": "c2774b136e3ff667cc8c8e3a8b49dbd8e592491f5bcbe7bdbc44b08bc41d01a6",
+      "export_sha256": "c2774b136e3ff667cc8c8e3a8b49dbd8e592491f5bcbe7bdbc44b08bc41d01a6",
+      "bytes": 16886
+    },
+    {
+      "path": "dependencies/opus-1.6/src/repacketizer.c",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/repacketizer.c",
+      "original_sha256": "6f4ad09282d8eb3b688af9a0d001ec2f0ef375d5aa54c6e73a28502c7e21eee5",
+      "export_sha256": "6f4ad09282d8eb3b688af9a0d001ec2f0ef375d5aa54c6e73a28502c7e21eee5",
+      "bytes": 13733
+    },
+    {
+      "path": "dependencies/opus-1.6/src/tansig_table.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/src/tansig_table.h",
+      "original_sha256": "835fcdf08d5b92e249fbe9ba6cdd9758688a5fdf134efb9da0e42989e8c18b8a",
+      "export_sha256": "835fcdf08d5b92e249fbe9ba6cdd9758688a5fdf134efb9da0e42989e8c18b8a",
+      "bytes": 2304
+    },
+    {
+      "path": "dependencies/opus-1.6/tests/test_opus_common.h",
+      "origin": "tools/dualsense-build-deps/opus-1.6/tests/test_opus_common.h",
+      "original_sha256": "68decf03368446305f00fb9f5d8dccc8a1afb438febdb6a8dcc498c02b21087e",
+      "export_sha256": "68decf03368446305f00fb9f5d8dccc8a1afb438febdb6a8dcc498c02b21087e",
+      "bytes": 3207
+    },
+    {
+      "path": "native/dualsense-patches/patch_165.py",
+      "origin": "steps/165-dualsense-bt-all-os/src/patch_mod.py",
+      "original_sha256": "80a573cea740fc7c7ad44265d151f94bc66fd30de84c61a41451450e8d8623fd",
+      "export_sha256": "80a573cea740fc7c7ad44265d151f94bc66fd30de84c61a41451450e8d8623fd",
+      "bytes": 5335
+    },
+    {
+      "path": "native/dualsense-patches/patch_166.py",
+      "origin": "steps/166-dualsense-bt-speaker/src/patch_mod.py",
+      "original_sha256": "8b289a3edd4b7c2a485728cf9f730b53ee0bf76aff549c402fa84afb2ae2f871",
+      "export_sha256": "8b289a3edd4b7c2a485728cf9f730b53ee0bf76aff549c402fa84afb2ae2f871",
+      "bytes": 1289
+    },
+    {
+      "path": "native/scripthook/natives_table.h",
+      "origin": "steps/161-dualsense-native/src/natives_table.h",
+      "original_sha256": "ba80f68adbbc19722f720608e4c52f9d3b2ce81ed6528d1d9951bbeb1df600cc",
+      "export_sha256": "ba80f68adbbc19722f720608e4c52f9d3b2ce81ed6528d1d9951bbeb1df600cc",
+      "bytes": 133694
+    },
+    {
+      "path": "native/scripthook/vcsh.c",
+      "origin": "steps/161-dualsense-native/src/vcsh.c",
+      "original_sha256": "a4ab4f4719f014be6b27d0c0acaff95122cc7b330f1fdf7d14e0ba8fdce8df99",
+      "export_sha256": "a4ab4f4719f014be6b27d0c0acaff95122cc7b330f1fdf7d14e0ba8fdce8df99",
+      "bytes": 7296
+    },
+    {
+      "path": "native/scripthook/vcsh.def",
+      "origin": "steps/161-dualsense-native/src/vcsh.def",
+      "original_sha256": "20240915705d000c48a2715d11724b74d8e134ccbc4e0dc1d2adb5b8dbac8f80",
+      "export_sha256": "20240915705d000c48a2715d11724b74d8e134ccbc4e0dc1d2adb5b8dbac8f80",
+      "bytes": 223
+    },
+    {
+      "path": "native/vcaudioheap/audio_heap.h",
+      "origin": "steps/215-shared-audio-heap/src/audio_heap.h",
+      "original_sha256": "f787c5694702a2bd79627cbdf196f395453bb1ff7b95b29bff8acf8d5f7f5c05",
+      "export_sha256": "f787c5694702a2bd79627cbdf196f395453bb1ff7b95b29bff8acf8d5f7f5c05",
+      "bytes": 3069
+    },
+    {
+      "path": "native/vcaudioheap/fixture.c",
+      "origin": "steps/215-shared-audio-heap/src/fixture.c",
+      "original_sha256": "739bbeb0845f21e18e17e2768ea61c775de7f6b13e240d0a863819bb36d9a30f",
+      "export_sha256": "739bbeb0845f21e18e17e2768ea61c775de7f6b13e240d0a863819bb36d9a30f",
+      "bytes": 3236
+    },
+    {
+      "path": "native/vcaudioheap/vcaudioheap.c",
+      "origin": "steps/215-shared-audio-heap/src/vcaudioheap.c",
+      "original_sha256": "e252fcf6eba9586b52227d7d01f1dafef97706635ce4cc163ad05d2c08d10a0f",
+      "export_sha256": "e252fcf6eba9586b52227d7d01f1dafef97706635ce4cc163ad05d2c08d10a0f",
+      "bytes": 1283
+    },
+    {
+      "path": "native/vcmemory/known_scenes.h",
+      "origin": "steps/192-avcng8-wounded-outfits/src/known_scenes.h",
+      "original_sha256": "1589c8473b7a50ac013f71ed7f5a7939a65627e8fa78457b20df7a2fcd6151ab",
+      "export_sha256": "1589c8473b7a50ac013f71ed7f5a7939a65627e8fa78457b20df7a2fcd6151ab",
+      "bytes": 2110
+    },
+    {
+      "path": "native/vcmemory/outfit_select.h",
+      "origin": "steps/192-avcng8-wounded-outfits/src/outfit_select.h",
+      "original_sha256": "1f0f548207609ef644006d136a9200bf6031107f884d36384818dc00b393b8ee",
+      "export_sha256": "1f0f548207609ef644006d136a9200bf6031107f884d36384818dc00b393b8ee",
+      "bytes": 1910
+    },
+    {
+      "path": "native/vcmemory/vcmemory.c",
+      "origin": "steps/192-avcng8-wounded-outfits/src/vcmemory.c",
+      "original_sha256": "f39f40b07ab8efd3b2dac75a18c5a07c6a9f760d3c1090dec96188cdfd27e10d",
+      "export_sha256": "f39f40b07ab8efd3b2dac75a18c5a07c6a9f760d3c1090dec96188cdfd27e10d",
+      "bytes": 19928
+    },
+    {
+      "path": "native/vcmusic/vcmusic.c",
+      "origin": "steps/205-bank-station-weapon-warning/src/vcmusic.c",
+      "original_sha256": "f3f36fd12ec93ffc0097e425618840b30d558687f51a1285d6b089dfe8261fd4",
+      "export_sha256": "f3f36fd12ec93ffc0097e425618840b30d558687f51a1285d6b089dfe8261fd4",
+      "bytes": 23341
+    },
+    {
+      "path": "native/vcsh_loader/AGPL-3.0-reference.txt",
+      "origin": "research/codex-dualsense-bt-audio-2026-11-03/LinuxAudio4Dualsense5/LICENSE",
+      "original_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "export_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "bytes": 34523
+    },
+    {
+      "path": "native/vcsh_loader/ctlaudio.h",
+      "origin": "steps/189-controller-profile-loader-deadlock/src/ctlaudio.h",
+      "original_sha256": "215f82b3cba7a9fe48ddb6e7aa6e32b257c3cf403be98a18010abe1ba9665823",
+      "export_sha256": "215f82b3cba7a9fe48ddb6e7aa6e32b257c3cf403be98a18010abe1ba9665823",
+      "bytes": 27262
+    },
+    {
+      "path": "native/vcsh_loader/ds5extra.h",
+      "origin": "steps/189-controller-profile-loader-deadlock/src/ds5extra.h",
+      "original_sha256": "00d2bf8e66f7cd7a9da58f293234a36cbb3a2c738635952a23907c13cb284b8f",
+      "export_sha256": "00d2bf8e66f7cd7a9da58f293234a36cbb3a2c738635952a23907c13cb284b8f",
+      "bytes": 27144
+    },
+    {
+      "path": "native/vcsh_loader/menusync.h",
+      "origin": "steps/189-controller-profile-loader-deadlock/src/menusync.h",
+      "original_sha256": "e145fe31d2cfb68e37267c7ff49f4b37b548b255ea84841f6374bc2fc6f2c48d",
+      "export_sha256": "e145fe31d2cfb68e37267c7ff49f4b37b548b255ea84841f6374bc2fc6f2c48d",
+      "bytes": 6108
+    },
+    {
+      "path": "native/vcsh_loader/modpatch.h",
+      "origin": "steps/189-controller-profile-loader-deadlock/src/modpatch.h",
+      "original_sha256": "d916a322fb72d479997f8bb6a74310c3f750b49856f5794a8d5357b7e4d60ec3",
+      "export_sha256": "d916a322fb72d479997f8bb6a74310c3f750b49856f5794a8d5357b7e4d60ec3",
+      "bytes": 1957
+    },
+    {
+      "path": "native/vcsh_loader/profile_snapshot.h",
+      "origin": "steps/189-controller-profile-loader-deadlock/src/profile_snapshot.h",
+      "original_sha256": "714ca10e43ae1f8dd4b5eda5bbdfdefd278e8c1e6dcaa1a12b2a68c683837653",
+      "export_sha256": "714ca10e43ae1f8dd4b5eda5bbdfdefd278e8c1e6dcaa1a12b2a68c683837653",
+      "bytes": 4112
+    },
+    {
+      "path": "native/vcsh_loader/vcsh_loader.c",
+      "origin": "steps/189-controller-profile-loader-deadlock/src/vcsh_loader.c",
+      "original_sha256": "d6fb3f313a80ac9a7a523c4044d0088ad21a7d400f038a45d525e22834fce2f5",
+      "export_sha256": "d6fb3f313a80ac9a7a523c4044d0088ad21a7d400f038a45d525e22834fce2f5",
+      "bytes": 6774
+    },
+    {
+      "path": "native/vcsh_loader/vpad.h",
+      "origin": "steps/189-controller-profile-loader-deadlock/src/vpad.h",
+      "original_sha256": "5a1cc1021b0d13cf3d3ac9e7161f8a6d3b4d16550392422d2b976d706a7fd980",
+      "export_sha256": "5a1cc1021b0d13cf3d3ac9e7161f8a6d3b4d16550392422d2b976d706a7fd980",
+      "bytes": 9417
+    },
+    {
+      "path": "scripts/AVERY.scasm",
+      "origin": "project/sources/scripts-live/AVERY.scasm",
+      "original_sha256": "ec6093bbadb7df02fd323f0b0107ee7659695226eb2c966a40d6cc3ae2ad7739",
+      "export_sha256": "ec6093bbadb7df02fd323f0b0107ee7659695226eb2c966a40d6cc3ae2ad7739"
+    },
+    {
+      "path": "scripts/Adrenaline.scasm",
+      "origin": "project/sources/scripts-live/Adrenaline.scasm",
+      "original_sha256": "a2fce1018b93b78c6accd8b739dc38e328114b0e7ae4253ea50c0ea7474507cc",
+      "export_sha256": "a2fce1018b93b78c6accd8b739dc38e328114b0e7ae4253ea50c0ea7474507cc"
+    },
+    {
+      "path": "scripts/BIKE.scasm",
+      "origin": "project/sources/scripts-live/BIKE.scasm",
+      "original_sha256": "d842eb0ffdd1898a34da0d3f9625daeefab53d389dafa741a208cecb75164ab7",
+      "export_sha256": "d842eb0ffdd1898a34da0d3f9625daeefab53d389dafa741a208cecb75164ab7"
+    },
+    {
+      "path": "scripts/COKERUN.scasm",
+      "origin": "project/sources/scripts-live/COKERUN.scasm",
+      "original_sha256": "fd6e28689a251e83ecbf7cc7ce05c1b23e29f43bb65f92c0d3317f5e291ef4c4",
+      "export_sha256": "fd6e28689a251e83ecbf7cc7ce05c1b23e29f43bb65f92c0d3317f5e291ef4c4"
+    },
+    {
+      "path": "scripts/CORTEZ.scasm",
+      "origin": "project/sources/scripts-live/CORTEZ.scasm",
+      "original_sha256": "23178658c89ef7e70b51842549dd96e59c32eece15b6d0c7789d4b76a8661719",
+      "export_sha256": "23178658c89ef7e70b51842549dd96e59c32eece15b6d0c7789d4b76a8661719"
+    },
+    {
+      "path": "scripts/COUNT.scasm",
+      "origin": "project/sources/scripts-live/COUNT.scasm",
+      "original_sha256": "4842e04051899ff91814e916e52aff8be3a3664ae36c32f5fcdc78790aefc477",
+      "export_sha256": "4842e04051899ff91814e916e52aff8be3a3664ae36c32f5fcdc78790aefc477"
+    },
+    {
+      "path": "scripts/CUBAN.scasm",
+      "origin": "project/sources/scripts-live/CUBAN.scasm",
+      "original_sha256": "eb94b1e457f77b045b1102ffe180005a40cac32dbed4660f1034854fec9915ab",
+      "export_sha256": "eb94b1e457f77b045b1102ffe180005a40cac32dbed4660f1034854fec9915ab"
+    },
+    {
+      "path": "scripts/DIAZ.scasm",
+      "origin": "project/sources/scripts-live/DIAZ.scasm",
+      "original_sha256": "454fb12dd76625bbee9cffd8902d4b735aa44309f2ff8a13eda0ccf20b2fbaf7",
+      "export_sha256": "454fb12dd76625bbee9cffd8902d4b735aa44309f2ff8a13eda0ccf20b2fbaf7"
+    },
+    {
+      "path": "scripts/HAITI.scasm",
+      "origin": "project/sources/scripts-live/HAITI.scasm",
+      "original_sha256": "0cb7e0d3e9574b83097b7d7df9305c4add0c649bf22fdb98d7fe543c0e2e4b03",
+      "export_sha256": "0cb7e0d3e9574b83097b7d7df9305c4add0c649bf22fdb98d7fe543c0e2e4b03"
+    },
+    {
+      "path": "scripts/ICECREAM.scasm",
+      "origin": "project/sources/scripts-live/ICECREAM.scasm",
+      "original_sha256": "75cc8c1483c40101b579253ffcee7cfe9dce5f6567f5e70d90b860a0966941a1",
+      "export_sha256": "75cc8c1483c40101b579253ffcee7cfe9dce5f6567f5e70d90b860a0966941a1"
+    },
+    {
+      "path": "scripts/KAUFMAN.scasm",
+      "origin": "project/sources/scripts-live/KAUFMAN.scasm",
+      "original_sha256": "b0e825c74959bdb744ef97a30049238c7b1ed1169e0d8bc312e86a9c2c3789ae",
+      "export_sha256": "b0e825c74959bdb744ef97a30049238c7b1ed1169e0d8bc312e86a9c2c3789ae"
+    },
+    {
+      "path": "scripts/LAWYER.scasm",
+      "origin": "project/sources/scripts-live/LAWYER.scasm",
+      "original_sha256": "fa67d719acab7077639d3a8d1c1a39dfd7076e2f7790a2374a7bcbe702a1010e",
+      "export_sha256": "fa67d719acab7077639d3a8d1c1a39dfd7076e2f7790a2374a7bcbe702a1010e"
+    },
+    {
+      "path": "scripts/MALIBU.scasm",
+      "origin": "project/sources/scripts-live/MALIBU.scasm",
+      "original_sha256": "3b30dc94bce8ebf0c702f2cac84e5a48d3323832272b328b571b8e4459ebcca3",
+      "export_sha256": "3b30dc94bce8ebf0c702f2cac84e5a48d3323832272b328b571b8e4459ebcca3"
+    },
+    {
+      "path": "scripts/PHIL.scasm",
+      "origin": "project/sources/scripts-live/PHIL.scasm",
+      "original_sha256": "fa5f9e799a56e24fc5fb56cf15036bc69f258886a52ae5e55e6739e4ce61fee8",
+      "export_sha256": "fa5f9e799a56e24fc5fb56cf15036bc69f258886a52ae5e55e6739e4ce61fee8"
+    },
+    {
+      "path": "scripts/PRON.scasm",
+      "origin": "project/sources/scripts-live/PRON.scasm",
+      "original_sha256": "77e536fa83dc416f71ef734eaed9b1575d3de8d879d62f096519df29abb39573",
+      "export_sha256": "77e536fa83dc416f71ef734eaed9b1575d3de8d879d62f096519df29abb39573"
+    },
+    {
+      "path": "scripts/PROTECT.scasm",
+      "origin": "project/sources/scripts-live/PROTECT.scasm",
+      "original_sha256": "8c936ab65997a4107c146789a2b2c8ad5503ace5d6a1b0c49f0b7c693d50d967",
+      "export_sha256": "8c936ab65997a4107c146789a2b2c8ad5503ace5d6a1b0c49f0b7c693d50d967"
+    },
+    {
+      "path": "scripts/ROCK.scasm",
+      "origin": "project/sources/scripts-live/ROCK.scasm",
+      "original_sha256": "dada21253a1451fd19eccd51bb685efb1aac2fbe591404f6a9364e961ad5d049",
+      "export_sha256": "dada21253a1451fd19eccd51bb685efb1aac2fbe591404f6a9364e961ad5d049"
+    },
+    {
+      "path": "scripts/STRIP.scasm",
+      "origin": "project/sources/scripts-live/STRIP.scasm",
+      "original_sha256": "9e3ec2dbcb28ca07ecf980aaa1a076b1e5abc7f5e20b5eccd0441781acd101ef",
+      "export_sha256": "9e3ec2dbcb28ca07ecf980aaa1a076b1e5abc7f5e20b5eccd0441781acd101ef"
+    },
+    {
+      "path": "scripts/WORLD.scasm",
+      "origin": "project/sources/scripts-live/WORLD.scasm",
+      "original_sha256": "adba8013611f123fcf139d3632d877ce52ce9e87dbfaa81b6f81b2a2c2d034a3",
+      "export_sha256": "adba8013611f123fcf139d3632d877ce52ce9e87dbfaa81b6f81b2a2c2d034a3"
+    },
+    {
+      "path": "scripts/ambstreams.scasm",
+      "origin": "project/sources/scripts-live/ambstreams.scasm",
+      "original_sha256": "d7786893dca00e4ee935554863201c25a3dc9c42e19d8f838823035160b4820e",
+      "export_sha256": "d7786893dca00e4ee935554863201c25a3dc9c42e19d8f838823035160b4820e"
+    },
+    {
+      "path": "scripts/ambulance.scasm",
+      "origin": "project/sources/scripts-live/ambulance.scasm",
+      "original_sha256": "bee1480e4877500deeafbf1e67ca2388e3ec91caf29cd2899c45a216e45cae4d",
+      "export_sha256": "bee1480e4877500deeafbf1e67ca2388e3ec91caf29cd2899c45a216e45cae4d"
+    },
+    {
+      "path": "scripts/bloodring.scasm",
+      "origin": "project/sources/scripts-live/bloodring.scasm",
+      "original_sha256": "73c430e5df17a68126e0327bf5030e56632dc5ea2b2f94303db436631b251a8b",
+      "export_sha256": "73c430e5df17a68126e0327bf5030e56632dc5ea2b2f94303db436631b251a8b"
+    },
+    {
+      "path": "scripts/bmx.scasm",
+      "origin": "project/sources/scripts-live/bmx.scasm",
+      "original_sha256": "f70001b4783763abdd9b69e294edf90f3d3d50a7f618f52ea7d7272038d4374f",
+      "export_sha256": "f70001b4783763abdd9b69e294edf90f3d3d50a7f618f52ea7d7272038d4374f"
+    },
+    {
+      "path": "scripts/bribestar_wanted.scasm",
+      "origin": "project/sources/scripts-live/bribestar_wanted.scasm",
+      "original_sha256": "9c1d401c887f5fb89f6da0e86485285e4716818fb093d97fd1198a807dc1d088",
+      "export_sha256": "9c1d401c887f5fb89f6da0e86485285e4716818fb093d97fd1198a807dc1d088"
+    },
+    {
+      "path": "scripts/business_sale.scasm",
+      "origin": "project/sources/scripts-live/business_sale.scasm",
+      "original_sha256": "42fc6ede714b7a5f9cf3282fbc85eecbb8b97bd8ec25ee522ded00ec6dc0b2b2",
+      "export_sha256": "42fc6ede714b7a5f9cf3282fbc85eecbb8b97bd8ec25ee522ded00ec6dc0b2b2"
+    },
+    {
+      "path": "scripts/cheats.scasm",
+      "origin": "project/sources/scripts-live/cheats.scasm",
+      "original_sha256": "1e3f84ca44e25612aa24fb01e05b6d9426790c1dda4c34212ebd2aecde9c691d",
+      "export_sha256": "1e3f84ca44e25612aa24fb01e05b6d9426790c1dda4c34212ebd2aecde9c691d"
+    },
+    {
+      "path": "scripts/conecrazy.scasm",
+      "origin": "project/sources/scripts-live/conecrazy.scasm",
+      "original_sha256": "cab704597c87e852b9df1f96ffe9e692f9260421f59c9d6212e31f1ce7a2ba01",
+      "export_sha256": "cab704597c87e852b9df1f96ffe9e692f9260421f59c9d6212e31f1ce7a2ba01"
+    },
+    {
+      "path": "scripts/developer_mode.scasm",
+      "origin": "project/sources/scripts-live/developer_mode.scasm",
+      "original_sha256": "c044511ea9861bc9a65ac14c294de3d054cdf487c0c84c32e6d77d9d7d2f94a3",
+      "export_sha256": "c044511ea9861bc9a65ac14c294de3d054cdf487c0c84c32e6d77d9d7d2f94a3"
+    },
+    {
+      "path": "scripts/firetruck.scasm",
+      "origin": "project/sources/scripts-live/firetruck.scasm",
+      "original_sha256": "760846d3a8800c5827329b6168db42ba0bd33467fdc9a42ed6765b7cb1966f0a",
+      "export_sha256": "760846d3a8800c5827329b6168db42ba0bd33467fdc9a42ed6765b7cb1966f0a"
+    },
+    {
+      "path": "scripts/flash_radar.scasm",
+      "origin": "project/sources/scripts-live/flash_radar.scasm",
+      "original_sha256": "b1c59898a82381837899bcce2a85e34cc3e2a9306d0b6f25f0919ef0b54d0d79",
+      "export_sha256": "b1c59898a82381837899bcce2a85e34cc3e2a9306d0b6f25f0919ef0b54d0d79"
+    },
+    {
+      "path": "scripts/heli.scasm",
+      "origin": "project/sources/scripts-live/heli.scasm",
+      "original_sha256": "658927b38679f63609d3e510af9da9c67702e9f429cfc2093f0ccff63710ef82",
+      "export_sha256": "658927b38679f63609d3e510af9da9c67702e9f429cfc2093f0ccff63710ef82"
+    },
+    {
+      "path": "scripts/intro.scasm",
+      "origin": "project/sources/scripts-live/intro.scasm",
+      "original_sha256": "09124727c0485ce7f7e4517c0e28d6828f5b0875d940505aea0fb17a177defd0",
+      "export_sha256": "09124727c0485ce7f7e4517c0e28d6828f5b0875d940505aea0fb17a177defd0"
+    },
+    {
+      "path": "scripts/kickstart.scasm",
+      "origin": "project/sources/scripts-live/kickstart.scasm",
+      "original_sha256": "488d41fee822e0820a940aaba20c433f14ae8215fd8ea31846ac50bbd453d2b8",
+      "export_sha256": "488d41fee822e0820a940aaba20c433f14ae8215fd8ea31846ac50bbd453d2b8"
+    },
+    {
+      "path": "scripts/loader_script.scasm",
+      "origin": "project/sources/scripts-live/loader_script.scasm",
+      "original_sha256": "1939f70d2571b71aeeb8e7d9fff72fe804bb4355421d555b2af2e79692069b67",
+      "export_sha256": "1939f70d2571b71aeeb8e7d9fff72fe804bb4355421d555b2af2e79692069b67"
+    },
+    {
+      "path": "scripts/main.scasm",
+      "origin": "project/sources/scripts-live/main.scasm",
+      "original_sha256": "4ec4d107e026e7e21f686dfbc9cbcca4ae976472c87369294d49fda5b1058d20",
+      "export_sha256": "4ec4d107e026e7e21f686dfbc9cbcca4ae976472c87369294d49fda5b1058d20"
+    },
+    {
+      "path": "scripts/map_bounds.scasm",
+      "origin": "project/sources/scripts-live/map_bounds.scasm",
+      "original_sha256": "76a5b7517cce8ce7b72d97c77299ac9e2dfd15c52e2fc6cbe021645e8d7043dd",
+      "export_sha256": "76a5b7517cce8ce7b72d97c77299ac9e2dfd15c52e2fc6cbe021645e8d7043dd"
+    },
+    {
+      "path": "scripts/members.txt",
+      "origin": "project/sources/scripts-live/members.txt",
+      "original_sha256": "93eea637f6f2a7faf24770cc9aed73661d1a774c0d458908a332e2d9806f426e",
+      "export_sha256": "bc46be12c17950c6b126be99c159f8408055b3e1e2fd0da07fcdf70d906da621"
+    },
+    {
+      "path": "scripts/mission_complete_01.scasm",
+      "origin": "project/sources/scripts-live/mission_complete_01.scasm",
+      "original_sha256": "67a88400a2aaf32f6573a801951cc53a3a28ad2a2e70c999fe436f7599eb0d8f",
+      "export_sha256": "67a88400a2aaf32f6573a801951cc53a3a28ad2a2e70c999fe436f7599eb0d8f"
+    },
+    {
+      "path": "scripts/mob_phone.scasm",
+      "origin": "project/sources/scripts-live/mob_phone.scasm",
+      "original_sha256": "aaa9bc8382668cf923823f597396f3f91c8cfbe661332566755b0cd247cdc193",
+      "export_sha256": "aaa9bc8382668cf923823f597396f3f91c8cfbe661332566755b0cd247cdc193"
+    },
+    {
+      "path": "scripts/ovalring.scasm",
+      "origin": "project/sources/scripts-live/ovalring.scasm",
+      "original_sha256": "37f6d59947bd23ef19ee6e2b2c3c092ad9eb4115c10bd19ab71ddbb18e323072",
+      "export_sha256": "37f6d59947bd23ef19ee6e2b2c3c092ad9eb4115c10bd19ab71ddbb18e323072"
+    },
+    {
+      "path": "scripts/packages.scasm",
+      "origin": "project/sources/scripts-live/packages.scasm",
+      "original_sha256": "c1b73ffa0169c252f88160a3a5913b0ae6e98c4f68c8d5928ab23dc393afdf6a",
+      "export_sha256": "c1b73ffa0169c252f88160a3a5913b0ae6e98c4f68c8d5928ab23dc393afdf6a"
+    },
+    {
+      "path": "scripts/pcj.scasm",
+      "origin": "project/sources/scripts-live/pcj.scasm",
+      "original_sha256": "fecb29cf74d2ce8794513d135ff3e29ad52a3f1b1af529da46f899b28d284e0b",
+      "export_sha256": "fecb29cf74d2ce8794513d135ff3e29ad52a3f1b1af529da46f899b28d284e0b"
+    },
+    {
+      "path": "scripts/pickups.scasm",
+      "origin": "project/sources/scripts-live/pickups.scasm",
+      "original_sha256": "e1c6cef872a8c8ef1f3a2227274ddbf4db4e2339e1edaf48ebb82099ce55709b",
+      "export_sha256": "e1c6cef872a8c8ef1f3a2227274ddbf4db4e2339e1edaf48ebb82099ce55709b"
+    },
+    {
+      "path": "scripts/pizza.scasm",
+      "origin": "project/sources/scripts-live/pizza.scasm",
+      "original_sha256": "ff85d9431145f784227fdba7b89ec7567fc7d4e4088d1923c42133ec6e889575",
+      "export_sha256": "ff85d9431145f784227fdba7b89ec7567fc7d4e4088d1923c42133ec6e889575"
+    },
+    {
+      "path": "scripts/print_big.scasm",
+      "origin": "project/sources/scripts-live/print_big.scasm",
+      "original_sha256": "7f1acd631e98e72d2a478b671e78a1f727d468929ca5cc7280eca69680a6d36d",
+      "export_sha256": "7f1acd631e98e72d2a478b671e78a1f727d468929ca5cc7280eca69680a6d36d"
+    },
+    {
+      "path": "scripts/puzzle.scasm",
+      "origin": "project/sources/scripts-live/puzzle.scasm",
+      "original_sha256": "6f43d2f3caa1f506a64e6de962aedd357c91899e6ca52faa8d344e461b35296a",
+      "export_sha256": "6f43d2f3caa1f506a64e6de962aedd357c91899e6ca52faa8d344e461b35296a"
+    },
+    {
+      "path": "scripts/range_bootstrap.scasm",
+      "origin": "project/sources/scripts-live/range_bootstrap.scasm",
+      "original_sha256": "d01021f1b451918d9dca8778493c75980b7beb42d147020a8cf8392594778635",
+      "export_sha256": "d01021f1b451918d9dca8778493c75980b7beb42d147020a8cf8392594778635"
+    },
+    {
+      "path": "scripts/rcheli.scasm",
+      "origin": "project/sources/scripts-live/rcheli.scasm",
+      "original_sha256": "c4817afe40d32d66638d84459b14aeb40afb0bc05f55edaad068f16bff13fbd6",
+      "export_sha256": "c4817afe40d32d66638d84459b14aeb40afb0bc05f55edaad068f16bff13fbd6"
+    },
+    {
+      "path": "scripts/rcplne.scasm",
+      "origin": "project/sources/scripts-live/rcplne.scasm",
+      "original_sha256": "02a3083c1c6e7404c89b05a69bb965ba703f2c67a2b39ae053027af518780451",
+      "export_sha256": "02a3083c1c6e7404c89b05a69bb965ba703f2c67a2b39ae053027af518780451"
+    },
+    {
+      "path": "scripts/rcrace.scasm",
+      "origin": "project/sources/scripts-live/rcrace.scasm",
+      "original_sha256": "7a24f1b9adda43c5fbcda25506b9632de6cbdfede46384496a85e15cc0e4df61",
+      "export_sha256": "7a24f1b9adda43c5fbcda25506b9632de6cbdfede46384496a85e15cc0e4df61"
+    },
+    {
+      "path": "scripts/sa_race1.scasm",
+      "origin": "project/sources/scripts-live/sa_race1.scasm",
+      "original_sha256": "99a3b67a8ef84f3f1bb05a919bb3ada5ec0a5697b40d210882430c34adee084a",
+      "export_sha256": "99a3b67a8ef84f3f1bb05a919bb3ada5ec0a5697b40d210882430c34adee084a"
+    },
+    {
+      "path": "scripts/sa_race2.scasm",
+      "origin": "project/sources/scripts-live/sa_race2.scasm",
+      "original_sha256": "ea0c77b1198437c177b0255ceedf609a5e82451e28a3dea795951ca15b1339b4",
+      "export_sha256": "ea0c77b1198437c177b0255ceedf609a5e82451e28a3dea795951ca15b1339b4"
+    },
+    {
+      "path": "scripts/sa_race3.scasm",
+      "origin": "project/sources/scripts-live/sa_race3.scasm",
+      "original_sha256": "2fcaa0b9671cc1932a254566ef09e379ee4cdc9332129d971eaf85f28e1d17f3",
+      "export_sha256": "2fcaa0b9671cc1932a254566ef09e379ee4cdc9332129d971eaf85f28e1d17f3"
+    },
+    {
+      "path": "scripts/sa_race4.scasm",
+      "origin": "project/sources/scripts-live/sa_race4.scasm",
+      "original_sha256": "91dd8230524d566dc7f7c3dd49809c5842f08120b7c73d208d0b62ef157e7fcf",
+      "export_sha256": "91dd8230524d566dc7f7c3dd49809c5842f08120b7c73d208d0b62ef157e7fcf"
+    },
+    {
+      "path": "scripts/sa_race5.scasm",
+      "origin": "project/sources/scripts-live/sa_race5.scasm",
+      "original_sha256": "2b155b3cfef15f2e17b650269afc3de6446ef93d5ab121e8156ab439d8b607c5",
+      "export_sha256": "2b155b3cfef15f2e17b650269afc3de6446ef93d5ab121e8156ab439d8b607c5"
+    },
+    {
+      "path": "scripts/sa_race6.scasm",
+      "origin": "project/sources/scripts-live/sa_race6.scasm",
+      "original_sha256": "da30d7369b762f9f0ef0527a43af0c25d2d4c7b129b9bff9acbb055932595a0b",
+      "export_sha256": "da30d7369b762f9f0ef0527a43af0c25d2d4c7b129b9bff9acbb055932595a0b"
+    },
+    {
+      "path": "scripts/save.scasm",
+      "origin": "project/sources/scripts-live/save.scasm",
+      "original_sha256": "285f5f1b3360a54786215a196908f4f2ee49b290a19bc26341f8d46f5590a0e8",
+      "export_sha256": "285f5f1b3360a54786215a196908f4f2ee49b290a19bc26341f8d46f5590a0e8"
+    },
+    {
+      "path": "scripts/side_quests.scasm",
+      "origin": "project/sources/scripts-live/side_quests.scasm",
+      "original_sha256": "e638f85daa79ac38ebc93a3462c73ba38df74a5866a490fbfc268b8c2f642161",
+      "export_sha256": "e638f85daa79ac38ebc93a3462c73ba38df74a5866a490fbfc268b8c2f642161"
+    },
+    {
+      "path": "scripts/stadium.scasm",
+      "origin": "project/sources/scripts-live/stadium.scasm",
+      "original_sha256": "b655f43e354c0b44f7e5046ccf4392e091b442093c8b6b771e1dd48ed16ebb4b",
+      "export_sha256": "b655f43e354c0b44f7e5046ccf4392e091b442093c8b6b771e1dd48ed16ebb4b"
+    },
+    {
+      "path": "scripts/startup.scasm",
+      "origin": "project/sources/scripts-live/startup.scasm",
+      "original_sha256": "d25f67c897506fc003ea769fa451cb87ffeaa224eebae58f0e9680ef981e7162",
+      "export_sha256": "d25f67c897506fc003ea769fa451cb87ffeaa224eebae58f0e9680ef981e7162"
+    },
+    {
+      "path": "scripts/street_phone.scasm",
+      "origin": "project/sources/scripts-live/street_phone.scasm",
+      "original_sha256": "1c7b8f0c3f8cba318e5fd95caa44bda4d2b962a1d9e5a336a5ce6131b186c148",
+      "export_sha256": "1c7b8f0c3f8cba318e5fd95caa44bda4d2b962a1d9e5a336a5ce6131b186c148"
+    },
+    {
+      "path": "scripts/sunshine_garages.scasm",
+      "origin": "project/sources/scripts-live/sunshine_garages.scasm",
+      "original_sha256": "255c570a6a5ce1c6301c70bc079006c3071b750dfd1ab918290542839babf274",
+      "export_sha256": "255c570a6a5ce1c6301c70bc079006c3071b750dfd1ab918290542839babf274"
+    },
+    {
+      "path": "scripts/sunshine_race.scasm",
+      "origin": "project/sources/scripts-live/sunshine_race.scasm",
+      "original_sha256": "0a05c0c6127fbfa5859603a31507dbaaa43fc8750c6906643a19c2a170d33c2c",
+      "export_sha256": "0a05c0c6127fbfa5859603a31507dbaaa43fc8750c6906643a19c2a170d33c2c"
+    },
+    {
+      "path": "scripts/taxi.scasm",
+      "origin": "project/sources/scripts-live/taxi.scasm",
+      "original_sha256": "1f1207706a1ddf2373452f46ca46ad8fea97cd158a4025092d8f64de43510156",
+      "export_sha256": "1f1207706a1ddf2373452f46ca46ad8fea97cd158a4025092d8f64de43510156"
+    },
+    {
+      "path": "scripts/traffic.scasm",
+      "origin": "project/sources/scripts-live/traffic.scasm",
+      "original_sha256": "dfbe29adba86c0133715bf4beb419cc4bf483e7218854e98e09ae8252ff2ea43",
+      "export_sha256": "dfbe29adba86c0133715bf4beb419cc4bf483e7218854e98e09ae8252ff2ea43"
+    },
+    {
+      "path": "scripts/vc_army.scasm",
+      "origin": "project/sources/scripts-live/vc_army.scasm",
+      "original_sha256": "10098243bb5a4db7d3effca94b2ff6d1774733912fd1cac3deb991307cdc2d30",
+      "export_sha256": "10098243bb5a4db7d3effca94b2ff6d1774733912fd1cac3deb991307cdc2d30"
+    },
+    {
+      "path": "scripts/vc_classichud.scasm",
+      "origin": "project/sources/scripts-live/vc_classichud.scasm",
+      "original_sha256": "0b325653a82ebfde3b4caebd971b3a41d98e02aed3f8e71bfb8dac904b6aff1f",
+      "export_sha256": "0b325653a82ebfde3b4caebd971b3a41d98e02aed3f8e71bfb8dac904b6aff1f"
+    },
+    {
+      "path": "scripts/vc_cutmem.scasm",
+      "origin": "project/sources/scripts-live/vc_cutmem.scasm",
+      "original_sha256": "9fbb54b710d2544c4550ec1bc6495fe98a9c6513a45be3b5ef693fc15f19abd1",
+      "export_sha256": "9fbb54b710d2544c4550ec1bc6495fe98a9c6513a45be3b5ef693fc15f19abd1"
+    },
+    {
+      "path": "scripts/vc_euphoria.scasm",
+      "origin": "project/sources/scripts-live/vc_euphoria.scasm",
+      "original_sha256": "ef8523b2db114c0667bd1f703ac05b6fb062dc8d81a52424a81411d4ed56876b",
+      "export_sha256": "ef8523b2db114c0667bd1f703ac05b6fb062dc8d81a52424a81411d4ed56876b"
+    },
+    {
+      "path": "scripts/vc_fighting.scasm",
+      "origin": "project/sources/scripts-live/vc_fighting.scasm",
+      "original_sha256": "591abc75e3e90e45eb92a90b9b1616ca22a5a9e9672b09b67f49a408272a681b",
+      "export_sha256": "591abc75e3e90e45eb92a90b9b1616ca22a5a9e9672b09b67f49a408272a681b"
+    },
+    {
+      "path": "scripts/vc_food.scasm",
+      "origin": "project/sources/scripts-live/vc_food.scasm",
+      "original_sha256": "921f19afbe2f390b5b4a64ad1b7a8d4c8b5134944ae34b236e5adea9e0764cf2",
+      "export_sha256": "921f19afbe2f390b5b4a64ad1b7a8d4c8b5134944ae34b236e5adea9e0764cf2"
+    },
+    {
+      "path": "scripts/vc_insane.scasm",
+      "origin": "project/sources/scripts-live/vc_insane.scasm",
+      "original_sha256": "6bd77446c5bfa35ab72e51aeeca59dfa60172b83f75a4e0360d6290306740b49",
+      "export_sha256": "6bd77446c5bfa35ab72e51aeeca59dfa60172b83f75a4e0360d6290306740b49"
+    },
+    {
+      "path": "scripts/vc_jump.scasm",
+      "origin": "project/sources/scripts-live/vc_jump.scasm",
+      "original_sha256": "32e0f36cf5203a7f871c6246f9ec8ccd368f007f25966704ff6ccec1e69e0bf7",
+      "export_sha256": "32e0f36cf5203a7f871c6246f9ec8ccd368f007f25966704ff6ccec1e69e0bf7"
+    },
+    {
+      "path": "scripts/vc_lowheal.scasm",
+      "origin": "project/sources/scripts-live/vc_lowheal.scasm",
+      "original_sha256": "bcacab43da5e91548f8e117f6db7802c12053ffb49bba54cee314e86118a5851",
+      "export_sha256": "bcacab43da5e91548f8e117f6db7802c12053ffb49bba54cee314e86118a5851"
+    },
+    {
+      "path": "scripts/vc_menu.scasm",
+      "origin": "project/sources/scripts-live/vc_menu.scasm",
+      "original_sha256": "300eb36243b07979ea1cff04defec743c90b01057c5e5e897041319041658384",
+      "export_sha256": "300eb36243b07979ea1cff04defec743c90b01057c5e5e897041319041658384"
+    },
+    {
+      "path": "scripts/vc_mvoice.scasm",
+      "origin": "project/sources/scripts-live/vc_mvoice.scasm",
+      "original_sha256": "253262aaf17b25df5ffc819cd98ecb99d25e1b22fd936c147844acd71e10d0f9",
+      "export_sha256": "253262aaf17b25df5ffc819cd98ecb99d25e1b22fd936c147844acd71e10d0f9"
+    },
+    {
+      "path": "scripts/vc_native_chute.scasm",
+      "origin": "project/sources/scripts-live/vc_native_chute.scasm",
+      "original_sha256": "96f3d67b0cbb6251732ed13ac803f9e6234ad46221f7deca8165adcf53bdc1f9",
+      "export_sha256": "96f3d67b0cbb6251732ed13ac803f9e6234ad46221f7deca8165adcf53bdc1f9"
+    },
+    {
+      "path": "scripts/vc_office.scasm",
+      "origin": "project/sources/scripts-live/vc_office.scasm",
+      "original_sha256": "e00b1522d329cc584de06c1522cb6d84fc349335a599de5a51ab56e102d901ad",
+      "export_sha256": "e00b1522d329cc584de06c1522cb6d84fc349335a599de5a51ab56e102d901ad"
+    },
+    {
+      "path": "scripts/vc_props.scasm",
+      "origin": "project/sources/scripts-live/vc_props.scasm",
+      "original_sha256": "5b051b138cbf97fb1d76c8cb2a2a7aaed6d1779a39829039b65550e4be3c80c1",
+      "export_sha256": "5b051b138cbf97fb1d76c8cb2a2a7aaed6d1779a39829039b65550e4be3c80c1"
+    },
+    {
+      "path": "scripts/vc_rampage.scasm",
+      "origin": "project/sources/scripts-live/vc_rampage.scasm",
+      "original_sha256": "56bd203e5e3dce48d6c7345acc54b1db756a3189a64628d35ae1f9c40a89116b",
+      "export_sha256": "56bd203e5e3dce48d6c7345acc54b1db756a3189a64628d35ae1f9c40a89116b"
+    },
+    {
+      "path": "scripts/vc_range.scasm",
+      "origin": "project/sources/scripts-live/vc_range.scasm",
+      "original_sha256": "60405d1adb0c8ebeab69713ceec1974b2fdad96ab8f53f78f08e810a227a53f8",
+      "export_sha256": "60405d1adb0c8ebeab69713ceec1974b2fdad96ab8f53f78f08e810a227a53f8"
+    },
+    {
+      "path": "scripts/vc_regen.scasm",
+      "origin": "project/sources/scripts-live/vc_regen.scasm",
+      "original_sha256": "aaecdd91ab6432b232555d66a628456f0f9fb3977977d07cdf1af07c19acf3bf",
+      "export_sha256": "aaecdd91ab6432b232555d66a628456f0f9fb3977977d07cdf1af07c19acf3bf"
+    },
+    {
+      "path": "scripts/vc_revenue.scasm",
+      "origin": "project/sources/scripts-live/vc_revenue.scasm",
+      "original_sha256": "60456d7108532092a69268b9bd48e790a7277a10d4225a5ab47c2ec6c28c8767",
+      "export_sha256": "60456d7108532092a69268b9bd48e790a7277a10d4225a5ab47c2ec6c28c8767"
+    },
+    {
+      "path": "scripts/vc_robbery.scasm",
+      "origin": "project/sources/scripts-live/vc_robbery.scasm",
+      "original_sha256": "5424a91123c7cc6bc8d0093210f93ab3dfc8ae858cea35c411ee1d546c4fd233",
+      "export_sha256": "5424a91123c7cc6bc8d0093210f93ab3dfc8ae858cea35c411ee1d546c4fd233"
+    },
+    {
+      "path": "scripts/vc_security.scasm",
+      "origin": "project/sources/scripts-live/vc_security.scasm",
+      "original_sha256": "0f4f91cdd4a219a756d6df706e9adb37f2c4d01854ae8e93a2c303aad0b79aaf",
+      "export_sha256": "0f4f91cdd4a219a756d6df706e9adb37f2c4d01854ae8e93a2c303aad0b79aaf"
+    },
+    {
+      "path": "scripts/vc_skimmer.scasm",
+      "origin": "project/sources/scripts-live/vc_skimmer.scasm",
+      "original_sha256": "6a63b5b94f3fe81007a7483f5d1b006000f57c3606082000d70c4c2beee8a8bd",
+      "export_sha256": "6a63b5b94f3fe81007a7483f5d1b006000f57c3606082000d70c4c2beee8a8bd"
+    },
+    {
+      "path": "scripts/vc_sounds.scasm",
+      "origin": "project/sources/scripts-live/vc_sounds.scasm",
+      "original_sha256": "c2a4ab7ee0f185dddd54137b515ae3f3bc28e53fdaedf2ad864c744bdf7a1be2",
+      "export_sha256": "c2a4ab7ee0f185dddd54137b515ae3f3bc28e53fdaedf2ad864c744bdf7a1be2"
+    },
+    {
+      "path": "scripts/vc_sparrows.scasm",
+      "origin": "project/sources/scripts-live/vc_sparrows.scasm",
+      "original_sha256": "951a84c4c34f9ee150aec53313e58c264299341d5bf594c35aa297868eeed16b",
+      "export_sha256": "951a84c4c34f9ee150aec53313e58c264299341d5bf594c35aa297868eeed16b"
+    },
+    {
+      "path": "scripts/vc_stats.scasm",
+      "origin": "project/sources/scripts-live/vc_stats.scasm",
+      "original_sha256": "ffce96b1af5ccf9768139df2bb10c5dd987c616a5ba075ae581a39bd0f2add56",
+      "export_sha256": "ffce96b1af5ccf9768139df2bb10c5dd987c616a5ba075ae581a39bd0f2add56"
+    },
+    {
+      "path": "scripts/vc_stunts.scasm",
+      "origin": "project/sources/scripts-live/vc_stunts.scasm",
+      "original_sha256": "e788b241527ec818f54e255524c2fc3edf0757b02e0f114e46a1c3bab42c5994",
+      "export_sha256": "e788b241527ec818f54e255524c2fc3edf0757b02e0f114e46a1c3bab42c5994"
+    },
+    {
+      "path": "scripts/vc_tutorial.scasm",
+      "origin": "project/sources/scripts-live/vc_tutorial.scasm",
+      "original_sha256": "2b0d4e714994635710e8a2d638035af8812d9cdc0ccf5355d7c5171c03ce08a9",
+      "export_sha256": "2b0d4e714994635710e8a2d638035af8812d9cdc0ccf5355d7c5171c03ce08a9"
+    },
+    {
+      "path": "scripts/vigilante.scasm",
+      "origin": "project/sources/scripts-live/vigilante.scasm",
+      "original_sha256": "ad536a86873ffc5f0f79241e7a0401017593c95c3fc12040df6acc83d2bbaf1c",
+      "export_sha256": "ad536a86873ffc5f0f79241e7a0401017593c95c3fc12040df6acc83d2bbaf1c"
+    },
+    {
+      "path": "scripts/wanted_progression.scasm",
+      "origin": "project/sources/scripts-live/wanted_progression.scasm",
+      "original_sha256": "6e76b286c27a89a5760e9914b448e1973ff7d83f7a34e681980800ece43a20e6",
+      "export_sha256": "6e76b286c27a89a5760e9914b448e1973ff7d83f7a34e681980800ece43a20e6"
+    },
+    {
+      "path": "scripts/weap_sounds.scasm",
+      "origin": "project/sources/scripts-live/weap_sounds.scasm",
+      "original_sha256": "e4a5dda8e98c717e8d1bab4065b7c3717ddabc3077d7a8de8cb202f7f77a4630",
+      "export_sha256": "e4a5dda8e98c717e8d1bab4065b7c3717ddabc3077d7a8de8cb202f7f77a4630"
+    },
+    {
+      "path": "tools/scoasm/build_img.py",
+      "origin": "tools/scoasm/build_img.py",
+      "original_sha256": "deb9df081d2a103f54fed0a2826652f27d7a3d2ae45ab734454a18982b8424bc",
+      "export_sha256": "deb9df081d2a103f54fed0a2826652f27d7a3d2ae45ab734454a18982b8424bc"
+    },
+    {
+      "path": "tools/scoasm/natives32.h",
+      "origin": "tools/scoasm/natives32.h",
+      "original_sha256": "0d191ae5200328238f3d1c8c0dad7eb9a5f5fbc79fd32920d7bdfd7447c54892",
+      "export_sha256": "0d191ae5200328238f3d1c8c0dad7eb9a5f5fbc79fd32920d7bdfd7447c54892"
+    },
+    {
+      "path": "tools/scoasm/scoasm.py",
+      "origin": "tools/scoasm/scoasm.py",
+      "original_sha256": "a1fb3f03fcd72ebf2687e5f831144c436a023b9816b4fa625101e53e7398ba85",
+      "export_sha256": "0d2008b79b20e471911c0efb639286218600945f4af4315c4cd007f0162fced6"
+    }
+  ],
+  "export_adaptations": [
+    {
+      "file": "scripts/members.txt",
+      "change": "Set mob_phone.sco and bribestar_wanted.sco resource_type from0 to1, restoring exact current installed/release metadata."
+    },
+    {
+      "file": "tools/scoasm/scoasm.py",
+      "change": "Remove project-local historical-research fallback; require installed FourFury0.13.3."
+    }
+  ],
+  "generated_files": "Portable build/patch/verification helpers, documentation, metadata and checksums were created for this export. Their identities appear in SHA256SUMS.txt.",
+  "scope": "Five native project release modules, exact vendor patch scripts and portable build helpers; source-only public package. VCPhysicsCheck is an optional diagnostic not present in this release, omitted by packaging scope."
+}

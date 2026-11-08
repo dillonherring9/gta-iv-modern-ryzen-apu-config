@@ -1,0 +1,1329 @@
+{
+  "schema_version": 1,
+  "project": "Advanced Vice City Next Gen CE",
+  "scope": "Current release script.img source snapshot; source and file identity only.",
+  "image": {
+    "bytes": 5939200,
+    "sha256": "5da9c42a6b82039aaccac0d468c4d11f2bc672dbf10b1e8bdeaca6de8110ef71",
+    "resource_header": 233,
+    "members": [
+      {
+        "name": "AVERY.sco",
+        "resource_type": 1,
+        "size": 180663,
+        "offset": 4096,
+        "allocated_bytes": 182272,
+        "padding_bytes": 1609,
+        "sha256": "4713b4a706bd63b1b77e54eb37c2672ec55908aa4343a6ad4ec10651585a0d28",
+        "allocation_sha256": "f5f68b07b953fa2a7f7a7a355488999bab3e63614645ba0fa03b3b09cd78a4cd"
+      },
+      {
+        "name": "BIKE.sco",
+        "resource_type": 1,
+        "size": 184443,
+        "offset": 186368,
+        "allocated_bytes": 186368,
+        "padding_bytes": 1925,
+        "sha256": "1c39e39048406d5cea2331450669c06cf130af8c718d77a24cb3b0b59e339853",
+        "allocation_sha256": "339d80e9605cbd7ced7274b19a9b3e497a7f1d9e24f776d92bf3af011b55715b"
+      },
+      {
+        "name": "COKERUN.sco",
+        "resource_type": 1,
+        "size": 39242,
+        "offset": 372736,
+        "allocated_bytes": 40960,
+        "padding_bytes": 1718,
+        "sha256": "52543d75e83f7b358d4999820bb121c9440dad18afee0ac3886f4bc887b0d327",
+        "allocation_sha256": "669893b0601e3ebfbe0131146af5db6c42d7a4c072602941e0fa2fed827aacd9"
+      },
+      {
+        "name": "CORTEZ.sco",
+        "resource_type": 1,
+        "size": 278736,
+        "offset": 413696,
+        "allocated_bytes": 280576,
+        "padding_bytes": 1840,
+        "sha256": "c4dbeee941698bf3a9586d5139d8f57d14fd9c37ca28b7db485f9e4b974be002",
+        "allocation_sha256": "c38226c25b0bcfb69ef62beb8f20962ea3c0f47c74d868c045c1599f09e31db1"
+      },
+      {
+        "name": "COUNT.sco",
+        "resource_type": 1,
+        "size": 234560,
+        "offset": 694272,
+        "allocated_bytes": 235520,
+        "padding_bytes": 960,
+        "sha256": "900b947480d309a8745cdc9691a0916f062e660d97f1aa4a60340e017ce42a1f",
+        "allocation_sha256": "074533f9cd12b5b40c4e0005d3f203c6b660217d8c695515937a3fb283a0e06b"
+      },
+      {
+        "name": "CUBAN.sco",
+        "resource_type": 1,
+        "size": 236707,
+        "offset": 929792,
+        "allocated_bytes": 237568,
+        "padding_bytes": 861,
+        "sha256": "0190f1b882614b38e02824c54b68c8b8a66b52c07799309d4f031dd7ca24b766",
+        "allocation_sha256": "23a843da53680d331cc927bf709105f55dafc1686d7e666ba03864d09b38f11d"
+      },
+      {
+        "name": "DIAZ.sco",
+        "resource_type": 1,
+        "size": 282101,
+        "offset": 1167360,
+        "allocated_bytes": 282624,
+        "padding_bytes": 523,
+        "sha256": "9c56576b7565abf2ff971aa1cef89bba8c9b1267f5b6323c72dd050dca9ed024",
+        "allocation_sha256": "ca4674ca567a18961b19fc70771ed16b436cbe65628fc5c15204f06c2e42aacd"
+      },
+      {
+        "name": "HAITI.sco",
+        "resource_type": 1,
+        "size": 171204,
+        "offset": 1449984,
+        "allocated_bytes": 172032,
+        "padding_bytes": 828,
+        "sha256": "3f49b3c53c0832a35e2bd538c9d57136597c6d76fc77d75b87b1faca25e8d1dd",
+        "allocation_sha256": "397d559690acf6a37411641148b289d280896415ec63f5e8e2cd340396998909"
+      },
+      {
+        "name": "ICECREAM.sco",
+        "resource_type": 1,
+        "size": 36511,
+        "offset": 1622016,
+        "allocated_bytes": 36864,
+        "padding_bytes": 353,
+        "sha256": "917a2b91a8123471a9d8b2edc8d359569ff27547c322c9e195d817fb3c2b2a2a",
+        "allocation_sha256": "3f0a13d4e8fe872e3721ff02789f4d3dc751cdde59d12e58020121003476d45b"
+      },
+      {
+        "name": "KAUFMAN.sco",
+        "resource_type": 1,
+        "size": 69538,
+        "offset": 1658880,
+        "allocated_bytes": 69632,
+        "padding_bytes": 94,
+        "sha256": "7107e6c7492d5a162e7a9e53e7bd81e82a7f21a1629430e4d61c3f5fb23ca48c",
+        "allocation_sha256": "a6de59a99b11c6b21107ebc02077ffdd5d4ad34ddba2822e827e939efac599cd"
+      },
+      {
+        "name": "LAWYER.sco",
+        "resource_type": 1,
+        "size": 206620,
+        "offset": 1728512,
+        "allocated_bytes": 206848,
+        "padding_bytes": 228,
+        "sha256": "153b6ffa900b60267e6de52b7191bb1c7cc1c3d68a8a3153a863fb2fcc5bcfc9",
+        "allocation_sha256": "05637cee999394e30343ef62d4db2bf9d9efc703b482cc6d5f566ae1eeed35e2"
+      },
+      {
+        "name": "MALIBU.sco",
+        "resource_type": 1,
+        "size": 286408,
+        "offset": 1935360,
+        "allocated_bytes": 286720,
+        "padding_bytes": 312,
+        "sha256": "2c6fba1a78c27dc2e92be0456ab203852da192556ea84994a467dfcb1652f6e1",
+        "allocation_sha256": "970a117bcb0fa74a94f69ff57cd40dc35b638f6e90d89890e29cc0fd2455fe3d"
+      },
+      {
+        "name": "PHIL.sco",
+        "resource_type": 1,
+        "size": 155825,
+        "offset": 2222080,
+        "allocated_bytes": 157696,
+        "padding_bytes": 1871,
+        "sha256": "636df49bbb5ef60df61eae0c67f40baba1e15e75c1be6c504c41dff42203993d",
+        "allocation_sha256": "ada207f9b2f96469f5bb8c5d8d1b0cba509aae9ec7dcf35c5928857097fa8679"
+      },
+      {
+        "name": "PRON.sco",
+        "resource_type": 1,
+        "size": 213747,
+        "offset": 2379776,
+        "allocated_bytes": 215040,
+        "padding_bytes": 1293,
+        "sha256": "9b3e54a55ce85939d9fdd6bc57431b38343ee6a15654aa5fe8fad0a4f9898e30",
+        "allocation_sha256": "5ac667efc83f75f3da0c4c1c9145cbcd02601de043ebb417c9617edaa8f9d0df"
+      },
+      {
+        "name": "PROTECT.sco",
+        "resource_type": 1,
+        "size": 201716,
+        "offset": 2594816,
+        "allocated_bytes": 202752,
+        "padding_bytes": 1036,
+        "sha256": "afd2e859a9f976951367d0cec8fb9e1cd39046affe6aac24fea1d996eaaa6a65",
+        "allocation_sha256": "cb7b311ec01dfec6dfd85022334f58360cf41534d233cd784f3b801891f9cc09"
+      },
+      {
+        "name": "ROCK.sco",
+        "resource_type": 1,
+        "size": 159778,
+        "offset": 2797568,
+        "allocated_bytes": 161792,
+        "padding_bytes": 2014,
+        "sha256": "70e199b4d8c9d626d0edaeb761359c0f1e2f3d175ef0993c02e2f1d2667dc20a",
+        "allocation_sha256": "b8753310507d0a884ddb9345eacdff47bc294cc3c88bbad79e4b4b4471bf4aab"
+      },
+      {
+        "name": "STRIP.sco",
+        "resource_type": 1,
+        "size": 110492,
+        "offset": 2959360,
+        "allocated_bytes": 110592,
+        "padding_bytes": 100,
+        "sha256": "bb685a64837d06efd6440e7467de20ed23b1cebe21f51fe5f9336ec3001c3c66",
+        "allocation_sha256": "24a442c60a0411274124b81f555c8feea479686b0e1f2c58ee3c69dd22a242a0"
+      },
+      {
+        "name": "WORLD.sco",
+        "resource_type": 0,
+        "size": 65358,
+        "offset": 3069952,
+        "allocated_bytes": 65536,
+        "padding_bytes": 178,
+        "sha256": "4f3824728e315cef812f8204c7e925b7b6e3c2020df6b1cbe16c8c393528a586",
+        "allocation_sha256": "4ec562ecf306d9dcfc0eb65766f60f23bb7196b3a0c54b632c8408fadcbc06c2"
+      },
+      {
+        "name": "ambstreams.sco",
+        "resource_type": 1,
+        "size": 32961,
+        "offset": 3135488,
+        "allocated_bytes": 34816,
+        "padding_bytes": 1855,
+        "sha256": "a8096dcf2d94838dda9b82dd9323f8bd4d53b50fd2046ebb542973e4f82b86bf",
+        "allocation_sha256": "d7ff2c91fc469f7abe20551456ebf7273e52827bcb1af6af5bd2e84e61fe022f"
+      },
+      {
+        "name": "ambulance.sco",
+        "resource_type": 1,
+        "size": 49340,
+        "offset": 3170304,
+        "allocated_bytes": 51200,
+        "padding_bytes": 1860,
+        "sha256": "157ef049b912045696ff4f3e9536172bb732d086051976d133bfb8fe21ac95ae",
+        "allocation_sha256": "78e112fa3874df571e74e0371f816480fef20c44e2032031919e7cebad52eb11"
+      },
+      {
+        "name": "bloodring.sco",
+        "resource_type": 1,
+        "size": 77386,
+        "offset": 3221504,
+        "allocated_bytes": 77824,
+        "padding_bytes": 438,
+        "sha256": "d7bd3732d120d3f529241075dbd9a824dca54fb02e9f10ad24bf51a67fb62459",
+        "allocation_sha256": "1f856fefd9756d1829ba4e4961adc4a009b2410f9df96048ab8399280297d7e4"
+      },
+      {
+        "name": "bmx.sco",
+        "resource_type": 1,
+        "size": 47075,
+        "offset": 3299328,
+        "allocated_bytes": 47104,
+        "padding_bytes": 29,
+        "sha256": "19b99fe182aad30d7d67b9ba0421b78562301bc85bd313e7d553a38d25b3bb60",
+        "allocation_sha256": "437799b0079362a8e7d94f3f6388541646a2b7ac733b77aaad4bac9ef6257b21"
+      },
+      {
+        "name": "business_sale.sco",
+        "resource_type": 1,
+        "size": 165123,
+        "offset": 3346432,
+        "allocated_bytes": 165888,
+        "padding_bytes": 765,
+        "sha256": "20b57898784d780afabcfd4a7dbb3ae68ba851770425fcbe45b295f3d28e7e68",
+        "allocation_sha256": "b8694ef05e56f1c81f626fd8271d78554b43078279a5772d93ca2fcd59fc5e43"
+      },
+      {
+        "name": "cheats.sco",
+        "resource_type": 0,
+        "size": 64816,
+        "offset": 3512320,
+        "allocated_bytes": 65536,
+        "padding_bytes": 720,
+        "sha256": "6a69eb9a198f61fd8319911d13af24077c2c3cbf1a3f22eb539a54dfb7eb8ac0",
+        "allocation_sha256": "2b648ea36e0837807da393c875611db19ae9ec6be44a53bf8ebb00e148707474"
+      },
+      {
+        "name": "conecrazy.sco",
+        "resource_type": 1,
+        "size": 31603,
+        "offset": 3577856,
+        "allocated_bytes": 32768,
+        "padding_bytes": 1165,
+        "sha256": "2a891dd66a6834686074db375001c5bb13a9f57927fc36d50097022798619be1",
+        "allocation_sha256": "5a1cc5d993f81db8890b8a8445b750d46126d314ccf456a7062e893ec6d6264f"
+      },
+      {
+        "name": "firetruck.sco",
+        "resource_type": 1,
+        "size": 26030,
+        "offset": 3610624,
+        "allocated_bytes": 26624,
+        "padding_bytes": 594,
+        "sha256": "aa2f8b86cf657000d9528ce925955ea6f11b7ca61584baad7ac43aac12a102e6",
+        "allocation_sha256": "e0091d3e71e134337b082ca809af022f3f9c551d8c825f9195f8dd4f890ecf3d"
+      },
+      {
+        "name": "heli.sco",
+        "resource_type": 1,
+        "size": 22249,
+        "offset": 3637248,
+        "allocated_bytes": 22528,
+        "padding_bytes": 279,
+        "sha256": "7ee2b63bb47e656ab1e9de4d8fd619482c7c0d6124fded1597d86e0fb75ae137",
+        "allocation_sha256": "384697d6760110e936e30af15163d0e25f7085fdfb9b13764a19e983ca8ba256"
+      },
+      {
+        "name": "intro.sco",
+        "resource_type": 1,
+        "size": 125067,
+        "offset": 3659776,
+        "allocated_bytes": 126976,
+        "padding_bytes": 1909,
+        "sha256": "0f0e2a44f27689574adccff3a9e711c17770c934e6a03153a8c3228cd08c60bf",
+        "allocation_sha256": "2136cd8d5f12d0110477d322f7ac30ce51cbebe66d7d9d90d9691651504b3e39"
+      },
+      {
+        "name": "kickstart.sco",
+        "resource_type": 1,
+        "size": 61106,
+        "offset": 3786752,
+        "allocated_bytes": 61440,
+        "padding_bytes": 334,
+        "sha256": "eb6c1915b0ffc0c8632b2469913a643382adc6c33fec60d8702dc7002e57d75c",
+        "allocation_sha256": "6ba0bc8a8c3b63a0447bb82f7095e3db5bc645c6a378108c8f379e95c6b430cf"
+      },
+      {
+        "name": "loader_script.sco",
+        "resource_type": 1,
+        "size": 1011,
+        "offset": 3848192,
+        "allocated_bytes": 2048,
+        "padding_bytes": 1037,
+        "sha256": "340126ecf35c0de6c480f0e87977a1597b8509152e449ba41fafe290be00b3e4",
+        "allocation_sha256": "e9449afbe14e77e867c968c41d23c866eab6986b32ce18705a77d54fb8a2a646"
+      },
+      {
+        "name": "main.sco",
+        "resource_type": 0,
+        "size": 24732,
+        "offset": 3850240,
+        "allocated_bytes": 26624,
+        "padding_bytes": 1892,
+        "sha256": "2ad772ae611417e86f9dcc3eb919f223e1ce1a8d2e0aae8763dcb9d18bd2dd33",
+        "allocation_sha256": "c3eb8933f35e6ef185cf9f42d4c19d8234b7ae9b0d8c428e9832445e84f6aa78"
+      },
+      {
+        "name": "map_bounds.sco",
+        "resource_type": 0,
+        "size": 7540,
+        "offset": 3876864,
+        "allocated_bytes": 8192,
+        "padding_bytes": 652,
+        "sha256": "aa1a33df015bbdacdd117cc50569d89a863fde0bd37ae0a8f745d1d3e46bab8f",
+        "allocation_sha256": "a03068e23248231ccbee2ac7c95ddb68957cbc5330bab2e9fad9a2dc0def3f79"
+      },
+      {
+        "name": "mob_phone.sco",
+        "resource_type": 1,
+        "size": 36589,
+        "offset": 3885056,
+        "allocated_bytes": 36864,
+        "padding_bytes": 275,
+        "sha256": "f0af96e1b43291e4278677ee07e1d760b14660b1baae8ce96a10b854a233da21",
+        "allocation_sha256": "ec92a72e2794ec4c6ebceaedb36cf0714fd7ddcd9527bc8d7c90eb4fb2aec571"
+      },
+      {
+        "name": "ovalring.sco",
+        "resource_type": 1,
+        "size": 73453,
+        "offset": 3921920,
+        "allocated_bytes": 73728,
+        "padding_bytes": 275,
+        "sha256": "f18f02ce9f2d68aa474e86334f3e5d25af797af2b4c4b5a634cb3e2e46a1b638",
+        "allocation_sha256": "3e2df3a3f013784bc64d426369613690b4e1112a192e0a134e35e3caed2021fb"
+      },
+      {
+        "name": "packages.sco",
+        "resource_type": 1,
+        "size": 6503,
+        "offset": 3995648,
+        "allocated_bytes": 8192,
+        "padding_bytes": 1689,
+        "sha256": "50e49bab694491d5e7e29b46defd83e0cc0233c9995f9176c894ef1aa153b7f1",
+        "allocation_sha256": "6f5ab6658d64f70f3abd0fe443f4d9fb22f5d995e080d483cd4bf1642257f77d"
+      },
+      {
+        "name": "pcj.sco",
+        "resource_type": 1,
+        "size": 32194,
+        "offset": 4003840,
+        "allocated_bytes": 32768,
+        "padding_bytes": 574,
+        "sha256": "107a05c701a8daeb525882d5e9120d7bb9890beb56d613d7f5735b834dcddbcc",
+        "allocation_sha256": "6c1fed4239fa1fc7312bab331c50a9b546a742ada32eec8e5508545a06f9344b"
+      },
+      {
+        "name": "pickups.sco",
+        "resource_type": 1,
+        "size": 16041,
+        "offset": 4036608,
+        "allocated_bytes": 16384,
+        "padding_bytes": 343,
+        "sha256": "bd7fd9baae0e6feedf8e282343de0d7c586bf4303ab997b85c9e5398f6d16011",
+        "allocation_sha256": "cec824f56b0d4ae9d4ed87f01889c5bc2f45f4a3ad008f21ad381c5d9480b5e7"
+      },
+      {
+        "name": "pizza.sco",
+        "resource_type": 1,
+        "size": 43752,
+        "offset": 4052992,
+        "allocated_bytes": 45056,
+        "padding_bytes": 1304,
+        "sha256": "e6d57195b035fe28e3245ade1a167b787e2294eba59e895a07818ed032fbf502",
+        "allocation_sha256": "f38ea6dea758209121276dacac3049c7141f61db338aa12c76286593b88783bf"
+      },
+      {
+        "name": "puzzle.sco",
+        "resource_type": 0,
+        "size": 209,
+        "offset": 4098048,
+        "allocated_bytes": 2048,
+        "padding_bytes": 1839,
+        "sha256": "fa1d5c659d71bdec982a8a53f8f517ecb52b97d499c290af50f7edec82eeef52",
+        "allocation_sha256": "a8741dc864a73f47314c37d31f24028fdcd34f4caf9ee081142e89643bdbf1ce"
+      },
+      {
+        "name": "rcheli.sco",
+        "resource_type": 1,
+        "size": 19961,
+        "offset": 4100096,
+        "allocated_bytes": 20480,
+        "padding_bytes": 519,
+        "sha256": "6d37063b657f40ac8c803dbfaff78dc3f64c0a99dcb0d1c7262fcc35d7a302dd",
+        "allocation_sha256": "d0cea2a61a7b27c0ea6fbec8fce437c7f5ed699981003b4b366d8cbf32e03aae"
+      },
+      {
+        "name": "rcplne.sco",
+        "resource_type": 1,
+        "size": 46724,
+        "offset": 4120576,
+        "allocated_bytes": 47104,
+        "padding_bytes": 380,
+        "sha256": "898f8ead186e7a5027f7acebb560f4d726e77881fe5fd06eed594210a8949aea",
+        "allocation_sha256": "a25a923678e8938b12ce36d20dbc1aadb4f2959ca948fc536e6f62709b32bb72"
+      },
+      {
+        "name": "rcrace.sco",
+        "resource_type": 1,
+        "size": 50971,
+        "offset": 4167680,
+        "allocated_bytes": 51200,
+        "padding_bytes": 229,
+        "sha256": "9e55793148c9f6b23944aea9dd3810af6d2fb6b92d731f649b8c2d0e17503663",
+        "allocation_sha256": "0c690c2e0547aacffe0d5a711ed97ea5a54b91c142d88c985b6dffb4ad9f0c4e"
+      },
+      {
+        "name": "sa_race1.sco",
+        "resource_type": 1,
+        "size": 65707,
+        "offset": 4218880,
+        "allocated_bytes": 67584,
+        "padding_bytes": 1877,
+        "sha256": "055e35ec79f985b73538692ccb9f357cbac076ca5bfbc5672ca98baf08dc6ca4",
+        "allocation_sha256": "d206105fa5ecb2ec1f9cb8facef82690b32034752ece7366bf80d1f30340b05b"
+      },
+      {
+        "name": "sa_race2.sco",
+        "resource_type": 1,
+        "size": 66099,
+        "offset": 4286464,
+        "allocated_bytes": 67584,
+        "padding_bytes": 1485,
+        "sha256": "aac16b60c369249d3379ebb6d39a6b79e64593789dec3a301404613aaf721d00",
+        "allocation_sha256": "b0900ac0acad7df394a2494f4e34c2a7e99b525cb5988d064a0f8ff526a2fdf6"
+      },
+      {
+        "name": "sa_race3.sco",
+        "resource_type": 1,
+        "size": 75401,
+        "offset": 4354048,
+        "allocated_bytes": 75776,
+        "padding_bytes": 375,
+        "sha256": "5e42fd158253e1b1453a7c5a99a91436c415f3fe283a270401177722ab84c964",
+        "allocation_sha256": "0d69d56bc4a81cc239881a31f2ff9a244ffd26e2aba9b2394c5c83bd29ae1a43"
+      },
+      {
+        "name": "sa_race4.sco",
+        "resource_type": 1,
+        "size": 68125,
+        "offset": 4429824,
+        "allocated_bytes": 69632,
+        "padding_bytes": 1507,
+        "sha256": "de6b1893948f721b388ac60510ade2c5acb84850b7ebe8f15303827e03e72550",
+        "allocation_sha256": "b1fe4bc4c85a0fc18256fdf7da4dc8f2480edfce4a00f64f4e52c9f2531fabe9"
+      },
+      {
+        "name": "sa_race5.sco",
+        "resource_type": 1,
+        "size": 76257,
+        "offset": 4499456,
+        "allocated_bytes": 77824,
+        "padding_bytes": 1567,
+        "sha256": "f298079abfdba36c514277bf2b4b4f872d976ce105c9facd45c5ecd02d9ad3a3",
+        "allocation_sha256": "9c16e1070354f0a389adc0a5b9c9ebcb9c8075fb9447b8592c9babc6fbeef7de"
+      },
+      {
+        "name": "sa_race6.sco",
+        "resource_type": 1,
+        "size": 103877,
+        "offset": 4577280,
+        "allocated_bytes": 104448,
+        "padding_bytes": 571,
+        "sha256": "c3ba4bf510372fba3dff85c4d6f1a6f229641662201c80090600cd5553b462ff",
+        "allocation_sha256": "5da4b7da1634324cc4025202d13545cf20aafca122921c6fe973c0c5397b587a"
+      },
+      {
+        "name": "save.sco",
+        "resource_type": 0,
+        "size": 8859,
+        "offset": 4681728,
+        "allocated_bytes": 10240,
+        "padding_bytes": 1381,
+        "sha256": "c36800e48ed67969eb40e74689d3b30954d9e7b44601e90472bbabc572f038cb",
+        "allocation_sha256": "aa4768498bced4036e346ec3e4c3cf3cc7a3aae64ecb135299c6dd42ef2ada5b"
+      },
+      {
+        "name": "side_quests.sco",
+        "resource_type": 0,
+        "size": 16943,
+        "offset": 4691968,
+        "allocated_bytes": 18432,
+        "padding_bytes": 1489,
+        "sha256": "ad5be939ee4a80cd30d5b646723b7d20b672fb6038ff3e7e51161c096d5417d4",
+        "allocation_sha256": "cf69406232811c5df58986e28753079cae00c213b8b048dd20b0fb8ecd4b1867"
+      },
+      {
+        "name": "stadium.sco",
+        "resource_type": 0,
+        "size": 5030,
+        "offset": 4710400,
+        "allocated_bytes": 6144,
+        "padding_bytes": 1114,
+        "sha256": "28469a2a8cf1187a1b322133a6e7f111d3ddcc481e3b0587c5eee11e194950b8",
+        "allocation_sha256": "eba1eb758391614ef11d86a1ddc86a7623aad14b2f328ede1c89a361d3f9ded7"
+      },
+      {
+        "name": "startup.sco",
+        "resource_type": 0,
+        "size": 269595,
+        "offset": 4716544,
+        "allocated_bytes": 270336,
+        "padding_bytes": 741,
+        "sha256": "e09abaebb193d6bb4813baaa2924d261b7e8e0a3f8f1abde0f56120b6fb8bfa0",
+        "allocation_sha256": "461b657cd7fc4b7983b8ee0e0905ffc39203a13ad9bb8ec2b00cc954db26fb6b"
+      },
+      {
+        "name": "street_phone.sco",
+        "resource_type": 1,
+        "size": 106993,
+        "offset": 4986880,
+        "allocated_bytes": 108544,
+        "padding_bytes": 1551,
+        "sha256": "fa8ffe3c1adecb3929572ca4f1c47d8d59027bbf9345a307c95b954f3d70db7d",
+        "allocation_sha256": "9c72c8ac69ef1650a25dd68bdf525e6c330d8c2b9ee72ecfd460d903c60f1f77"
+      },
+      {
+        "name": "sunshine_garages.sco",
+        "resource_type": 1,
+        "size": 30855,
+        "offset": 5095424,
+        "allocated_bytes": 32768,
+        "padding_bytes": 1913,
+        "sha256": "80e2a8fb7727631970bc46802bedc33bceeea81f96388de727c5cf4bc96a7c5e",
+        "allocation_sha256": "ee3ce2abb3c3da9c2da8ee05d52e6d2eb4d057216e0f1c7a540962d76640b02d"
+      },
+      {
+        "name": "sunshine_race.sco",
+        "resource_type": 0,
+        "size": 17598,
+        "offset": 5128192,
+        "allocated_bytes": 18432,
+        "padding_bytes": 834,
+        "sha256": "2e3313d2443fabfc08e7ff4625a3f800db4f66117c3d9faf9b8d1b578bdc9131",
+        "allocation_sha256": "13f395fc8f60560af63ad45c9a97a3fd4098eb51156b7859fa5c3ca238493157"
+      },
+      {
+        "name": "taxi.sco",
+        "resource_type": 1,
+        "size": 33163,
+        "offset": 5146624,
+        "allocated_bytes": 34816,
+        "padding_bytes": 1653,
+        "sha256": "771e22bf45d43e304c21acbb54c49f33350d7d1a3caaec2c788ec61a72f5e2e7",
+        "allocation_sha256": "efb7e4c95c5c96a368349f960d3fdcd9ebb00576f2fb54330a7f04a08e746f6b"
+      },
+      {
+        "name": "traffic.sco",
+        "resource_type": 0,
+        "size": 2609,
+        "offset": 5181440,
+        "allocated_bytes": 4096,
+        "padding_bytes": 1487,
+        "sha256": "7c68c49ad0fac57389aa7920f8595aba73360c12620361e098921e871681057f",
+        "allocation_sha256": "07c6da21e39f6a1ee69d7451d7e20239ebf82f37a0acd62d2733cfd0ca7adb27"
+      },
+      {
+        "name": "vc_jump.sco",
+        "resource_type": 1,
+        "size": 9385,
+        "offset": 5185536,
+        "allocated_bytes": 10240,
+        "padding_bytes": 855,
+        "sha256": "96380a71f626da5e7884a419362fa4d66cf5b9c0311ada65043b2236a654a697",
+        "allocation_sha256": "a91bff8056c1f869b20c17646536604b6d5fa82269875e32513eb229209d37b1"
+      },
+      {
+        "name": "vigilante.sco",
+        "resource_type": 1,
+        "size": 65685,
+        "offset": 5195776,
+        "allocated_bytes": 67584,
+        "padding_bytes": 1899,
+        "sha256": "fbbbdee2dc095024d3b30c66b9e67c0361077d949c71751f9e6f36bce792674f",
+        "allocation_sha256": "3ae3b71a9f380611fac31230bb97ea5e4ffedb33ca6e038143dfe0f3301e9ffa"
+      },
+      {
+        "name": "weap_sounds.sco",
+        "resource_type": 0,
+        "size": 3277,
+        "offset": 5263360,
+        "allocated_bytes": 4096,
+        "padding_bytes": 819,
+        "sha256": "07fa691dfd62279fa1107465c3d4d125516a34e8b27f5558042d407927d72ad6",
+        "allocation_sha256": "f4ed0b50331ef8525313288f9a6fa84e8d37fe35e0585ae0009c34e8e8554f5b"
+      },
+      {
+        "name": "Adrenaline.sco",
+        "resource_type": 0,
+        "size": 8500,
+        "offset": 5267456,
+        "allocated_bytes": 10240,
+        "padding_bytes": 1740,
+        "sha256": "f2215d8cd8d06db4c7e80528dce113bf8b135eb83ce486fc9aa7d5f2dc4a638b",
+        "allocation_sha256": "40aa634a3d8e1376fd6674f6674f01ff09e7ffe9d168d2d7a19c85c0abcc911a"
+      },
+      {
+        "name": "bribestar_wanted.sco",
+        "resource_type": 1,
+        "size": 12924,
+        "offset": 5277696,
+        "allocated_bytes": 14336,
+        "padding_bytes": 1412,
+        "sha256": "a2ddc9c0d6ec42cf411915633a82e586f5e8349e7a5c53956c74dad763fcd568",
+        "allocation_sha256": "4d9f0000578f18b0b25591b218acef53411435e626a5c9a42976798199dfe729"
+      },
+      {
+        "name": "developer_mode.sco",
+        "resource_type": 0,
+        "size": 1111,
+        "offset": 5292032,
+        "allocated_bytes": 2048,
+        "padding_bytes": 937,
+        "sha256": "ac71427944deae3f3e615e5f7ec544ed3406625c4e7078e6ca5e7b951535195d",
+        "allocation_sha256": "e070777c702ea7d92843f33a7e5cbd69bc74b4dbba52a35bc169561125bf7e06"
+      },
+      {
+        "name": "flash_radar.sco",
+        "resource_type": 0,
+        "size": 280,
+        "offset": 5294080,
+        "allocated_bytes": 2048,
+        "padding_bytes": 1768,
+        "sha256": "b3340653a5422c7642d4ee4d39d39f66f470d42fb65ad1c66db8352f9a2b8465",
+        "allocation_sha256": "7fd8656302e96fa5a9a7c75a64478186bda3f8f857456a1c7ac4da50d3eec6a1"
+      },
+      {
+        "name": "mission_complete_01.sco",
+        "resource_type": 0,
+        "size": 1018,
+        "offset": 5296128,
+        "allocated_bytes": 2048,
+        "padding_bytes": 1030,
+        "sha256": "bf7d9afc192de23bfd8d0699aecf42a33cb8b3389924aceb1f8145a8125a4e7c",
+        "allocation_sha256": "8b8c0820e58a99700d204ab58e5b5f08c58d1f87c2234ac0fc6080039031ac3f"
+      },
+      {
+        "name": "print_big.sco",
+        "resource_type": 0,
+        "size": 7157,
+        "offset": 5298176,
+        "allocated_bytes": 8192,
+        "padding_bytes": 1035,
+        "sha256": "3442b74ecd16962a2887a3a9ac957cb1b2cc185e15798c8be0f287b171cbb2b6",
+        "allocation_sha256": "a102108b064bb173d4312b8242ccbebe6e662f1bd0b25ae98db269e1887fdb19"
+      },
+      {
+        "name": "vc_sounds.sco",
+        "resource_type": 0,
+        "size": 3229,
+        "offset": 5306368,
+        "allocated_bytes": 4096,
+        "padding_bytes": 867,
+        "sha256": "4bee1a3eeaa5531132f94f83971eb7f1cfb4810c87d59a0390351a130651122f",
+        "allocation_sha256": "e97929f058a54e3a6484c549e0068278dd1a6aa6bfc327ee934c6cd5e280e14b"
+      },
+      {
+        "name": "wanted_progression.sco",
+        "resource_type": 0,
+        "size": 1753,
+        "offset": 5310464,
+        "allocated_bytes": 2048,
+        "padding_bytes": 295,
+        "sha256": "68be2c825b57ceb9ecc11de89f3089d40d2fc1295b990f452a206f165facaa2d",
+        "allocation_sha256": "30d22af829fa75c5bb4d3d375531d97b8e3224b7e8d8c620fe45d47424be910c"
+      },
+      {
+        "name": "range_bootstrap.sco",
+        "resource_type": 1,
+        "size": 1046,
+        "offset": 5312512,
+        "allocated_bytes": 2048,
+        "padding_bytes": 1002,
+        "sha256": "39c36271eb47ad43ece7cae9cdcd58ec687398b49c734e2a32e76c3ec7bb9435",
+        "allocation_sha256": "b6aaca87f0a9b401a6f889b729899fcf9688e92cf1446aa65aa3039c9e5c32e1"
+      },
+      {
+        "name": "vc_range.sco",
+        "resource_type": 1,
+        "size": 15403,
+        "offset": 5314560,
+        "allocated_bytes": 16384,
+        "padding_bytes": 981,
+        "sha256": "3161a7631c38747d019e1d1cc0fc988b669219625cd98b1085ba6fafabb4eb95",
+        "allocation_sha256": "507065436437699d2a7d522dbc33a1e030e68837a75dc2a8cb73c79150f4a1a6"
+      },
+      {
+        "name": "vc_stunts.sco",
+        "resource_type": 1,
+        "size": 6495,
+        "offset": 5330944,
+        "allocated_bytes": 8192,
+        "padding_bytes": 1697,
+        "sha256": "0c1a9ede1b236149832f718a9d1a3f922d87044545e13acc459399af780bf8c7",
+        "allocation_sha256": "84b6dcd90cf7cb9d4f36a8cb5b88138b0d51d4cd13e8e7e3ed73153f54722c66"
+      },
+      {
+        "name": "vc_regen.sco",
+        "resource_type": 1,
+        "size": 3131,
+        "offset": 5339136,
+        "allocated_bytes": 4096,
+        "padding_bytes": 965,
+        "sha256": "86c3a74f7ea8663c52934a9610e25114ebb832c3adf19e2036c0b2598b43bd4e",
+        "allocation_sha256": "95076afbd84fe2ccdae8b607c5b10c3b5a21f97d3e51ee5fdb18e3290c8713a6"
+      },
+      {
+        "name": "vc_euphoria.sco",
+        "resource_type": 1,
+        "size": 17015,
+        "offset": 5343232,
+        "allocated_bytes": 18432,
+        "padding_bytes": 1417,
+        "sha256": "d0e14f71cdea905f7ab680a847ed5dcb198a98a70acc043949989e26e7043270",
+        "allocation_sha256": "3bbc7f6a6eaff4d9fd340bdc202383d25c74aea259727e2933081b19ecb791fa"
+      },
+      {
+        "name": "vc_fighting.sco",
+        "resource_type": 1,
+        "size": 11212,
+        "offset": 5361664,
+        "allocated_bytes": 12288,
+        "padding_bytes": 1076,
+        "sha256": "4fdfe3139567a1adb84f2d16755c2b8c7e500003e1d43a4046c4031360a70a6f",
+        "allocation_sha256": "cf4072c82cb61cff258840a7791996223451f2c5b9c93a836ba75955fd1ebc25"
+      },
+      {
+        "name": "vc_menu.sco",
+        "resource_type": 1,
+        "size": 304166,
+        "offset": 5373952,
+        "allocated_bytes": 305152,
+        "padding_bytes": 986,
+        "sha256": "1b12bfedb2535d8fa09a500099e849e761357c56467bc83b3db4da3476390518",
+        "allocation_sha256": "bc2a73b44ba75ac6b362a099fa84bb2cfb8646da20db261bf24938203ede5cf2"
+      },
+      {
+        "name": "vc_sparrows.sco",
+        "resource_type": 1,
+        "size": 4836,
+        "offset": 5679104,
+        "allocated_bytes": 6144,
+        "padding_bytes": 1308,
+        "sha256": "eab1c4f8240ffedd3ae0201719ed71b3f0a4c1d378a8898ff16a1eca6a4e616b",
+        "allocation_sha256": "ce640a2489e430e0f47bea910350dccb1949a6e51110c86b78e00662cbc5d017"
+      },
+      {
+        "name": "vc_cutmem.sco",
+        "resource_type": 1,
+        "size": 161,
+        "offset": 5685248,
+        "allocated_bytes": 2048,
+        "padding_bytes": 1887,
+        "sha256": "cc1eba9125e4f58b61759e77cb82bed71fb242add535db53c722b884d0c0f267",
+        "allocation_sha256": "ce679ea5e9ea998f483bc64baa4997e77b968e50da3a6543a374e6d81f9747ed"
+      },
+      {
+        "name": "vc_army.sco",
+        "resource_type": 1,
+        "size": 25666,
+        "offset": 5687296,
+        "allocated_bytes": 26624,
+        "padding_bytes": 958,
+        "sha256": "0646921d973d27899056b8582346770d78013140b634a9fc943f8397d193ba94",
+        "allocation_sha256": "bfae6b78064363448891ba54970f31f37b312cfb38ff0f18f9a515ff2e7fdae7"
+      },
+      {
+        "name": "vc_rampage.sco",
+        "resource_type": 1,
+        "size": 45060,
+        "offset": 5713920,
+        "allocated_bytes": 47104,
+        "padding_bytes": 2044,
+        "sha256": "56e89761f109dc4992707f9207a75887c7b0b7b674c72467df4071b2fa7f34a3",
+        "allocation_sha256": "ae5ade10ea48d99ed1bc5660416c6ccda1b57e08fba75125496016a959393054"
+      },
+      {
+        "name": "vc_insane.sco",
+        "resource_type": 1,
+        "size": 7084,
+        "offset": 5761024,
+        "allocated_bytes": 8192,
+        "padding_bytes": 1108,
+        "sha256": "1429365bc5451f8f2707faff02b9560cb71575f7d5ddcf2d5bb736face89da16",
+        "allocation_sha256": "54b3e9254c6615b9a8e102559eaef09c4148050731331a4d24bd538236672c58"
+      },
+      {
+        "name": "vc_robbery.sco",
+        "resource_type": 1,
+        "size": 10209,
+        "offset": 5769216,
+        "allocated_bytes": 10240,
+        "padding_bytes": 31,
+        "sha256": "5b86fcb3b4fe2fb462864096d44299ac9f7b023b97cd48249390edc166932e9e",
+        "allocation_sha256": "12eb641661f2b80240d6dfaf8fa7a2a57b17e5fb9c94b8ff4ad7cbdcee303c75"
+      },
+      {
+        "name": "vc_food.sco",
+        "resource_type": 1,
+        "size": 13482,
+        "offset": 5779456,
+        "allocated_bytes": 14336,
+        "padding_bytes": 854,
+        "sha256": "43b8564bdbb21acda871ae66592ace2b574d1d2c07fcd37b73a1a837b6cd74a6",
+        "allocation_sha256": "469351fda37660cb019434d9dea2ae3926a87b53eae2e1911bbc564fbcb6e696"
+      },
+      {
+        "name": "vc_security.sco",
+        "resource_type": 1,
+        "size": 8770,
+        "offset": 5793792,
+        "allocated_bytes": 10240,
+        "padding_bytes": 1470,
+        "sha256": "f9ea4491f82de960df1d9ca40bd3a763d1b01ae4982570d7aceada36518be901",
+        "allocation_sha256": "fdcb94d984367eafd23107b2a3c96675ccd1ec1a88920e5931197da748c08ede"
+      },
+      {
+        "name": "vc_native_chute.sco",
+        "resource_type": 1,
+        "size": 13153,
+        "offset": 5804032,
+        "allocated_bytes": 14336,
+        "padding_bytes": 1183,
+        "sha256": "a3a3e2c38b3006b00ae971db9072f349451068a19bd4740fce5ac516b4bf809c",
+        "allocation_sha256": "d65fc5b03378b57a3f5b7f9a358e08674bfada5405c5f17893f5f62724f1f79e"
+      },
+      {
+        "name": "vc_skimmer.sco",
+        "resource_type": 1,
+        "size": 1824,
+        "offset": 5818368,
+        "allocated_bytes": 2048,
+        "padding_bytes": 224,
+        "sha256": "f57e37069aa154e4ef55134d1e9fe05ac687dfba5762c6d69d5ec94e73ff8693",
+        "allocation_sha256": "d75c4da8a4af5498d6dffa2ac22abf2e1b03906fa7f66a819d98b43d687350d6"
+      },
+      {
+        "name": "vc_office.sco",
+        "resource_type": 1,
+        "size": 2072,
+        "offset": 5820416,
+        "allocated_bytes": 4096,
+        "padding_bytes": 2024,
+        "sha256": "0927fd6ed7c0f001892ac5bec2013546bddc4855a5bc070d45f6866fa784917c",
+        "allocation_sha256": "b474ae67cf360717bcba4a579d48e14d0cfcd30fcf0651bec39a5b19c6750bd3"
+      },
+      {
+        "name": "vc_classichud.sco",
+        "resource_type": 1,
+        "size": 25932,
+        "offset": 5824512,
+        "allocated_bytes": 26624,
+        "padding_bytes": 692,
+        "sha256": "3c896997166f9d43812e761363249cd2afac99989996526f544b8ee1ce74401a",
+        "allocation_sha256": "cd9e2b822ea4c9dc3ae16b88d4d9975a6648582c97f7eee066273d6c38793cc4"
+      },
+      {
+        "name": "vc_lowheal.sco",
+        "resource_type": 1,
+        "size": 2651,
+        "offset": 5851136,
+        "allocated_bytes": 4096,
+        "padding_bytes": 1445,
+        "sha256": "e99b56e0eaf8a14863fbf6dab9ab47cc9372e4d39e26ba86b18268de4ce6b412",
+        "allocation_sha256": "d7d0fcf5506e8120c518ed8ff43dac84f48c3e634584e873ecd090db0eab9291"
+      },
+      {
+        "name": "vc_revenue.sco",
+        "resource_type": 1,
+        "size": 13920,
+        "offset": 5855232,
+        "allocated_bytes": 14336,
+        "padding_bytes": 416,
+        "sha256": "bd91b1d597ddcbd20aca5769aab4ecf3202b552fe14a8f1a242931bf2f6c5043",
+        "allocation_sha256": "d23d249a47e6e0ada255231b66518cd736f6a1549eeccaee89b2d001f1717ead"
+      },
+      {
+        "name": "vc_props.sco",
+        "resource_type": 1,
+        "size": 17643,
+        "offset": 5869568,
+        "allocated_bytes": 18432,
+        "padding_bytes": 789,
+        "sha256": "d717ff52c12db1ddd9a29499091ab788841fd7ccd390f4a2e7674e5c7ccbae7a",
+        "allocation_sha256": "d4d66910423ed2a6315311827a23e948a6982dbbd27b2aafa0a2591b8c24e633"
+      },
+      {
+        "name": "vc_stats.sco",
+        "resource_type": 1,
+        "size": 3733,
+        "offset": 5888000,
+        "allocated_bytes": 4096,
+        "padding_bytes": 363,
+        "sha256": "a3792eb3f61d2e033a939e4337a5cd190db0f21aa4b1a51df24b4dcfeb30b47d",
+        "allocation_sha256": "50ebcba2fed8264f46a16e841aa2944c684e90f846026db03586899f376e3f78"
+      },
+      {
+        "name": "vc_mvoice.sco",
+        "resource_type": 1,
+        "size": 41720,
+        "offset": 5892096,
+        "allocated_bytes": 43008,
+        "padding_bytes": 1288,
+        "sha256": "7f90455397671e93080331fe1fd3d2a418a936cf6d369492ac13165c85497810",
+        "allocation_sha256": "a24e500ce519dcb03b4ed587c66a8fa143f41ee15348a67d9e6671f019c6b294"
+      },
+      {
+        "name": "vc_tutorial.sco",
+        "resource_type": 1,
+        "size": 3698,
+        "offset": 5935104,
+        "allocated_bytes": 4096,
+        "padding_bytes": 398,
+        "sha256": "7c942ec105e179251f544b5ded384b7f3fae5a1965758ae4628c19f99eef4d1b",
+        "allocation_sha256": "4ee4a93e3e1c279c4b3f9a4bd8f567631f0f691f6d4b69700f0afed9906f8557"
+      }
+    ]
+  },
+  "source_files": [
+    {
+      "path": "scripts/AVERY.scasm",
+      "sha256": "ec6093bbadb7df02fd323f0b0107ee7659695226eb2c966a40d6cc3ae2ad7739"
+    },
+    {
+      "path": "scripts/Adrenaline.scasm",
+      "sha256": "a2fce1018b93b78c6accd8b739dc38e328114b0e7ae4253ea50c0ea7474507cc"
+    },
+    {
+      "path": "scripts/BIKE.scasm",
+      "sha256": "d842eb0ffdd1898a34da0d3f9625daeefab53d389dafa741a208cecb75164ab7"
+    },
+    {
+      "path": "scripts/COKERUN.scasm",
+      "sha256": "fd6e28689a251e83ecbf7cc7ce05c1b23e29f43bb65f92c0d3317f5e291ef4c4"
+    },
+    {
+      "path": "scripts/CORTEZ.scasm",
+      "sha256": "23178658c89ef7e70b51842549dd96e59c32eece15b6d0c7789d4b76a8661719"
+    },
+    {
+      "path": "scripts/COUNT.scasm",
+      "sha256": "4842e04051899ff91814e916e52aff8be3a3664ae36c32f5fcdc78790aefc477"
+    },
+    {
+      "path": "scripts/CUBAN.scasm",
+      "sha256": "eb94b1e457f77b045b1102ffe180005a40cac32dbed4660f1034854fec9915ab"
+    },
+    {
+      "path": "scripts/DIAZ.scasm",
+      "sha256": "454fb12dd76625bbee9cffd8902d4b735aa44309f2ff8a13eda0ccf20b2fbaf7"
+    },
+    {
+      "path": "scripts/HAITI.scasm",
+      "sha256": "0cb7e0d3e9574b83097b7d7df9305c4add0c649bf22fdb98d7fe543c0e2e4b03"
+    },
+    {
+      "path": "scripts/ICECREAM.scasm",
+      "sha256": "75cc8c1483c40101b579253ffcee7cfe9dce5f6567f5e70d90b860a0966941a1"
+    },
+    {
+      "path": "scripts/KAUFMAN.scasm",
+      "sha256": "b0e825c74959bdb744ef97a30049238c7b1ed1169e0d8bc312e86a9c2c3789ae"
+    },
+    {
+      "path": "scripts/LAWYER.scasm",
+      "sha256": "fa67d719acab7077639d3a8d1c1a39dfd7076e2f7790a2374a7bcbe702a1010e"
+    },
+    {
+      "path": "scripts/MALIBU.scasm",
+      "sha256": "3b30dc94bce8ebf0c702f2cac84e5a48d3323832272b328b571b8e4459ebcca3"
+    },
+    {
+      "path": "scripts/PHIL.scasm",
+      "sha256": "fa5f9e799a56e24fc5fb56cf15036bc69f258886a52ae5e55e6739e4ce61fee8"
+    },
+    {
+      "path": "scripts/PRON.scasm",
+      "sha256": "77e536fa83dc416f71ef734eaed9b1575d3de8d879d62f096519df29abb39573"
+    },
+    {
+      "path": "scripts/PROTECT.scasm",
+      "sha256": "8c936ab65997a4107c146789a2b2c8ad5503ace5d6a1b0c49f0b7c693d50d967"
+    },
+    {
+      "path": "scripts/ROCK.scasm",
+      "sha256": "dada21253a1451fd19eccd51bb685efb1aac2fbe591404f6a9364e961ad5d049"
+    },
+    {
+      "path": "scripts/STRIP.scasm",
+      "sha256": "9e3ec2dbcb28ca07ecf980aaa1a076b1e5abc7f5e20b5eccd0441781acd101ef"
+    },
+    {
+      "path": "scripts/WORLD.scasm",
+      "sha256": "adba8013611f123fcf139d3632d877ce52ce9e87dbfaa81b6f81b2a2c2d034a3"
+    },
+    {
+      "path": "scripts/ambstreams.scasm",
+      "sha256": "d7786893dca00e4ee935554863201c25a3dc9c42e19d8f838823035160b4820e"
+    },
+    {
+      "path": "scripts/ambulance.scasm",
+      "sha256": "bee1480e4877500deeafbf1e67ca2388e3ec91caf29cd2899c45a216e45cae4d"
+    },
+    {
+      "path": "scripts/bloodring.scasm",
+      "sha256": "73c430e5df17a68126e0327bf5030e56632dc5ea2b2f94303db436631b251a8b"
+    },
+    {
+      "path": "scripts/bmx.scasm",
+      "sha256": "f70001b4783763abdd9b69e294edf90f3d3d50a7f618f52ea7d7272038d4374f"
+    },
+    {
+      "path": "scripts/bribestar_wanted.scasm",
+      "sha256": "9c1d401c887f5fb89f6da0e86485285e4716818fb093d97fd1198a807dc1d088"
+    },
+    {
+      "path": "scripts/business_sale.scasm",
+      "sha256": "42fc6ede714b7a5f9cf3282fbc85eecbb8b97bd8ec25ee522ded00ec6dc0b2b2"
+    },
+    {
+      "path": "scripts/cheats.scasm",
+      "sha256": "1e3f84ca44e25612aa24fb01e05b6d9426790c1dda4c34212ebd2aecde9c691d"
+    },
+    {
+      "path": "scripts/conecrazy.scasm",
+      "sha256": "cab704597c87e852b9df1f96ffe9e692f9260421f59c9d6212e31f1ce7a2ba01"
+    },
+    {
+      "path": "scripts/developer_mode.scasm",
+      "sha256": "c044511ea9861bc9a65ac14c294de3d054cdf487c0c84c32e6d77d9d7d2f94a3"
+    },
+    {
+      "path": "scripts/firetruck.scasm",
+      "sha256": "760846d3a8800c5827329b6168db42ba0bd33467fdc9a42ed6765b7cb1966f0a"
+    },
+    {
+      "path": "scripts/flash_radar.scasm",
+      "sha256": "b1c59898a82381837899bcce2a85e34cc3e2a9306d0b6f25f0919ef0b54d0d79"
+    },
+    {
+      "path": "scripts/heli.scasm",
+      "sha256": "658927b38679f63609d3e510af9da9c67702e9f429cfc2093f0ccff63710ef82"
+    },
+    {
+      "path": "scripts/intro.scasm",
+      "sha256": "09124727c0485ce7f7e4517c0e28d6828f5b0875d940505aea0fb17a177defd0"
+    },
+    {
+      "path": "scripts/kickstart.scasm",
+      "sha256": "488d41fee822e0820a940aaba20c433f14ae8215fd8ea31846ac50bbd453d2b8"
+    },
+    {
+      "path": "scripts/loader_script.scasm",
+      "sha256": "1939f70d2571b71aeeb8e7d9fff72fe804bb4355421d555b2af2e79692069b67"
+    },
+    {
+      "path": "scripts/main.scasm",
+      "sha256": "4ec4d107e026e7e21f686dfbc9cbcca4ae976472c87369294d49fda5b1058d20"
+    },
+    {
+      "path": "scripts/map_bounds.scasm",
+      "sha256": "76a5b7517cce8ce7b72d97c77299ac9e2dfd15c52e2fc6cbe021645e8d7043dd"
+    },
+    {
+      "path": "scripts/mission_complete_01.scasm",
+      "sha256": "67a88400a2aaf32f6573a801951cc53a3a28ad2a2e70c999fe436f7599eb0d8f"
+    },
+    {
+      "path": "scripts/mob_phone.scasm",
+      "sha256": "aaa9bc8382668cf923823f597396f3f91c8cfbe661332566755b0cd247cdc193"
+    },
+    {
+      "path": "scripts/ovalring.scasm",
+      "sha256": "37f6d59947bd23ef19ee6e2b2c3c092ad9eb4115c10bd19ab71ddbb18e323072"
+    },
+    {
+      "path": "scripts/packages.scasm",
+      "sha256": "c1b73ffa0169c252f88160a3a5913b0ae6e98c4f68c8d5928ab23dc393afdf6a"
+    },
+    {
+      "path": "scripts/pcj.scasm",
+      "sha256": "fecb29cf74d2ce8794513d135ff3e29ad52a3f1b1af529da46f899b28d284e0b"
+    },
+    {
+      "path": "scripts/pickups.scasm",
+      "sha256": "e1c6cef872a8c8ef1f3a2227274ddbf4db4e2339e1edaf48ebb82099ce55709b"
+    },
+    {
+      "path": "scripts/pizza.scasm",
+      "sha256": "ff85d9431145f784227fdba7b89ec7567fc7d4e4088d1923c42133ec6e889575"
+    },
+    {
+      "path": "scripts/print_big.scasm",
+      "sha256": "7f1acd631e98e72d2a478b671e78a1f727d468929ca5cc7280eca69680a6d36d"
+    },
+    {
+      "path": "scripts/puzzle.scasm",
+      "sha256": "6f43d2f3caa1f506a64e6de962aedd357c91899e6ca52faa8d344e461b35296a"
+    },
+    {
+      "path": "scripts/range_bootstrap.scasm",
+      "sha256": "d01021f1b451918d9dca8778493c75980b7beb42d147020a8cf8392594778635"
+    },
+    {
+      "path": "scripts/rcheli.scasm",
+      "sha256": "c4817afe40d32d66638d84459b14aeb40afb0bc05f55edaad068f16bff13fbd6"
+    },
+    {
+      "path": "scripts/rcplne.scasm",
+      "sha256": "02a3083c1c6e7404c89b05a69bb965ba703f2c67a2b39ae053027af518780451"
+    },
+    {
+      "path": "scripts/rcrace.scasm",
+      "sha256": "7a24f1b9adda43c5fbcda25506b9632de6cbdfede46384496a85e15cc0e4df61"
+    },
+    {
+      "path": "scripts/sa_race1.scasm",
+      "sha256": "99a3b67a8ef84f3f1bb05a919bb3ada5ec0a5697b40d210882430c34adee084a"
+    },
+    {
+      "path": "scripts/sa_race2.scasm",
+      "sha256": "ea0c77b1198437c177b0255ceedf609a5e82451e28a3dea795951ca15b1339b4"
+    },
+    {
+      "path": "scripts/sa_race3.scasm",
+      "sha256": "2fcaa0b9671cc1932a254566ef09e379ee4cdc9332129d971eaf85f28e1d17f3"
+    },
+    {
+      "path": "scripts/sa_race4.scasm",
+      "sha256": "91dd8230524d566dc7f7c3dd49809c5842f08120b7c73d208d0b62ef157e7fcf"
+    },
+    {
+      "path": "scripts/sa_race5.scasm",
+      "sha256": "2b155b3cfef15f2e17b650269afc3de6446ef93d5ab121e8156ab439d8b607c5"
+    },
+    {
+      "path": "scripts/sa_race6.scasm",
+      "sha256": "da30d7369b762f9f0ef0527a43af0c25d2d4c7b129b9bff9acbb055932595a0b"
+    },
+    {
+      "path": "scripts/save.scasm",
+      "sha256": "285f5f1b3360a54786215a196908f4f2ee49b290a19bc26341f8d46f5590a0e8"
+    },
+    {
+      "path": "scripts/side_quests.scasm",
+      "sha256": "e638f85daa79ac38ebc93a3462c73ba38df74a5866a490fbfc268b8c2f642161"
+    },
+    {
+      "path": "scripts/stadium.scasm",
+      "sha256": "b655f43e354c0b44f7e5046ccf4392e091b442093c8b6b771e1dd48ed16ebb4b"
+    },
+    {
+      "path": "scripts/startup.scasm",
+      "sha256": "d25f67c897506fc003ea769fa451cb87ffeaa224eebae58f0e9680ef981e7162"
+    },
+    {
+      "path": "scripts/street_phone.scasm",
+      "sha256": "1c7b8f0c3f8cba318e5fd95caa44bda4d2b962a1d9e5a336a5ce6131b186c148"
+    },
+    {
+      "path": "scripts/sunshine_garages.scasm",
+      "sha256": "255c570a6a5ce1c6301c70bc079006c3071b750dfd1ab918290542839babf274"
+    },
+    {
+      "path": "scripts/sunshine_race.scasm",
+      "sha256": "0a05c0c6127fbfa5859603a31507dbaaa43fc8750c6906643a19c2a170d33c2c"
+    },
+    {
+      "path": "scripts/taxi.scasm",
+      "sha256": "1f1207706a1ddf2373452f46ca46ad8fea97cd158a4025092d8f64de43510156"
+    },
+    {
+      "path": "scripts/traffic.scasm",
+      "sha256": "dfbe29adba86c0133715bf4beb419cc4bf483e7218854e98e09ae8252ff2ea43"
+    },
+    {
+      "path": "scripts/vc_army.scasm",
+      "sha256": "10098243bb5a4db7d3effca94b2ff6d1774733912fd1cac3deb991307cdc2d30"
+    },
+    {
+      "path": "scripts/vc_classichud.scasm",
+      "sha256": "0b325653a82ebfde3b4caebd971b3a41d98e02aed3f8e71bfb8dac904b6aff1f"
+    },
+    {
+      "path": "scripts/vc_cutmem.scasm",
+      "sha256": "9fbb54b710d2544c4550ec1bc6495fe98a9c6513a45be3b5ef693fc15f19abd1"
+    },
+    {
+      "path": "scripts/vc_euphoria.scasm",
+      "sha256": "ef8523b2db114c0667bd1f703ac05b6fb062dc8d81a52424a81411d4ed56876b"
+    },
+    {
+      "path": "scripts/vc_fighting.scasm",
+      "sha256": "591abc75e3e90e45eb92a90b9b1616ca22a5a9e9672b09b67f49a408272a681b"
+    },
+    {
+      "path": "scripts/vc_food.scasm",
+      "sha256": "921f19afbe2f390b5b4a64ad1b7a8d4c8b5134944ae34b236e5adea9e0764cf2"
+    },
+    {
+      "path": "scripts/vc_insane.scasm",
+      "sha256": "6bd77446c5bfa35ab72e51aeeca59dfa60172b83f75a4e0360d6290306740b49"
+    },
+    {
+      "path": "scripts/vc_jump.scasm",
+      "sha256": "32e0f36cf5203a7f871c6246f9ec8ccd368f007f25966704ff6ccec1e69e0bf7"
+    },
+    {
+      "path": "scripts/vc_lowheal.scasm",
+      "sha256": "bcacab43da5e91548f8e117f6db7802c12053ffb49bba54cee314e86118a5851"
+    },
+    {
+      "path": "scripts/vc_menu.scasm",
+      "sha256": "300eb36243b07979ea1cff04defec743c90b01057c5e5e897041319041658384"
+    },
+    {
+      "path": "scripts/vc_mvoice.scasm",
+      "sha256": "253262aaf17b25df5ffc819cd98ecb99d25e1b22fd936c147844acd71e10d0f9"
+    },
+    {
+      "path": "scripts/vc_native_chute.scasm",
+      "sha256": "96f3d67b0cbb6251732ed13ac803f9e6234ad46221f7deca8165adcf53bdc1f9"
+    },
+    {
+      "path": "scripts/vc_office.scasm",
+      "sha256": "e00b1522d329cc584de06c1522cb6d84fc349335a599de5a51ab56e102d901ad"
+    },
+    {
+      "path": "scripts/vc_props.scasm",
+      "sha256": "5b051b138cbf97fb1d76c8cb2a2a7aaed6d1779a39829039b65550e4be3c80c1"
+    },
+    {
+      "path": "scripts/vc_rampage.scasm",
+      "sha256": "56bd203e5e3dce48d6c7345acc54b1db756a3189a64628d35ae1f9c40a89116b"
+    },
+    {
+      "path": "scripts/vc_range.scasm",
+      "sha256": "60405d1adb0c8ebeab69713ceec1974b2fdad96ab8f53f78f08e810a227a53f8"
+    },
+    {
+      "path": "scripts/vc_regen.scasm",
+      "sha256": "aaecdd91ab6432b232555d66a628456f0f9fb3977977d07cdf1af07c19acf3bf"
+    },
+    {
+      "path": "scripts/vc_revenue.scasm",
+      "sha256": "60456d7108532092a69268b9bd48e790a7277a10d4225a5ab47c2ec6c28c8767"
+    },
+    {
+      "path": "scripts/vc_robbery.scasm",
+      "sha256": "5424a91123c7cc6bc8d0093210f93ab3dfc8ae858cea35c411ee1d546c4fd233"
+    },
+    {
+      "path": "scripts/vc_security.scasm",
+      "sha256": "0f4f91cdd4a219a756d6df706e9adb37f2c4d01854ae8e93a2c303aad0b79aaf"
+    },
+    {
+      "path": "scripts/vc_skimmer.scasm",
+      "sha256": "6a63b5b94f3fe81007a7483f5d1b006000f57c3606082000d70c4c2beee8a8bd"
+    },
+    {
+      "path": "scripts/vc_sounds.scasm",
+      "sha256": "c2a4ab7ee0f185dddd54137b515ae3f3bc28e53fdaedf2ad864c744bdf7a1be2"
+    },
+    {
+      "path": "scripts/vc_sparrows.scasm",
+      "sha256": "951a84c4c34f9ee150aec53313e58c264299341d5bf594c35aa297868eeed16b"
+    },
+    {
+      "path": "scripts/vc_stats.scasm",
+      "sha256": "ffce96b1af5ccf9768139df2bb10c5dd987c616a5ba075ae581a39bd0f2add56"
+    },
+    {
+      "path": "scripts/vc_stunts.scasm",
+      "sha256": "e788b241527ec818f54e255524c2fc3edf0757b02e0f114e46a1c3bab42c5994"
+    },
+    {
+      "path": "scripts/vc_tutorial.scasm",
+      "sha256": "2b0d4e714994635710e8a2d638035af8812d9cdc0ccf5355d7c5171c03ce08a9"
+    },
+    {
+      "path": "scripts/vigilante.scasm",
+      "sha256": "ad536a86873ffc5f0f79241e7a0401017593c95c3fc12040df6acc83d2bbaf1c"
+    },
+    {
+      "path": "scripts/wanted_progression.scasm",
+      "sha256": "6e76b286c27a89a5760e9914b448e1973ff7d83f7a34e681980800ece43a20e6"
+    },
+    {
+      "path": "scripts/weap_sounds.scasm",
+      "sha256": "e4a5dda8e98c717e8d1bab4065b7c3717ddabc3077d7a8de8cb202f7f77a4630"
+    }
+  ],
+  "member_manifest_sha256": "bc46be12c17950c6b126be99c159f8408055b3e1e2fd0da07fcdf70d906da621",
+  "metadata_restoration": [
+    {
+      "member": "mob_phone.sco",
+      "old_resource_type": 0,
+      "current_resource_type": 1
+    },
+    {
+      "member": "bribestar_wanted.sco",
+      "old_resource_type": 0,
+      "current_resource_type": 1
+    }
+  ]
+}
