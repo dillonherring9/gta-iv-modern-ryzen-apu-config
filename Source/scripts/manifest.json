@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "project": "Vice City Actual Next Gen CE",
-  "scope": "Checkpoint-221 release script.img source snapshot; source and file identity only.",
+  "scope": "Checkpoint224 Release.zip script source snapshot; source/member identity and allocation coverage.",
   "image": {
     "bytes": 5967872,
-    "sha256": "45d88ccd17266d11def98ff9715afa82f128d3d8a24a37541c2baf48d439aa64",
+    "sha256": "c5ac224906cb430cfb77df39e14a4bb41ba2aaa3b46311a0d2df28e114f859b8",
     "resource_header": 233,
     "members": [
       {
@@ -730,12 +730,12 @@
       {
         "name": "vc_euphoria.sco",
         "resource_type": 1,
-        "size": 17684,
+        "size": 17852,
         "offset": 5343232,
         "allocated_bytes": 18432,
-        "padding_bytes": 748,
-        "sha256": "bb4d1b6327d18d0687c3e71e85f8cd4e11e99a77d5944605c16b9922ec04b84a",
-        "allocation_sha256": "0c8fad4981ca60ae3a7ee6247e0fab9ba8b031bf444401ee4d7ac7fac02721e5"
+        "padding_bytes": 580,
+        "sha256": "8213cd45469180e5588c97d9f6f200e4b5469544831c62934cd2515db2464789",
+        "allocation_sha256": "5bc62db58784ec9d9d3dc418f242118d4e78884dc9c0f8ed117b8db817ba6b90"
       },
       {
         "name": "vc_fighting.sco",
@@ -930,42 +930,42 @@
       {
         "name": "parachutelauncher.sco",
         "resource_type": 1,
-        "size": 6319,
+        "size": 6501,
         "offset": 5924864,
         "allocated_bytes": 8192,
-        "padding_bytes": 1873,
-        "sha256": "c2c19dfa6cf414c999a246b31f7bd178ae455c6995ef64ec8b78b710559874a0",
-        "allocation_sha256": "fdcee7b256ce40a2b20ca539a8e9b882849098d468ab00f5171893d587504b22"
+        "padding_bytes": 1691,
+        "sha256": "58a903018e23c5f7dcb06a56ed1266c175ff5400298521729b901e30a761a9ec",
+        "allocation_sha256": "ca274d55beffd1634a64d60f7851662c7938798316362a565a6cd438b27ad4f1"
       },
       {
         "name": "parachute_player.sco",
         "resource_type": 1,
-        "size": 23615,
+        "size": 23911,
         "offset": 5933056,
         "allocated_bytes": 24576,
-        "padding_bytes": 961,
-        "sha256": "b6f6bc140250e1d7546e77a211dc390143f49f71cba593fe110c3e795a2d1013",
-        "allocation_sha256": "4774343e951f919194523601054d5455106b1fcdf2c008cb06e5df070dcd375e"
+        "padding_bytes": 665,
+        "sha256": "cee587d331443012406a58ad74851418974e1a4580523eaec917e3c2d780bb49",
+        "allocation_sha256": "2b24c761ff9d0192355e90019b33e22817ca7d8b26b95854d1e23c9d7ab5cf3f"
       },
       {
         "name": "parachute_ai.sco",
         "resource_type": 1,
-        "size": 7795,
+        "size": 8139,
         "offset": 5957632,
         "allocated_bytes": 8192,
-        "padding_bytes": 397,
-        "sha256": "b217f67036e8fcacd2cc6d688e4200089597c40db001b4368619a5c7b8c7ad07",
-        "allocation_sha256": "3945d7187f5f8ce7dcb6706b3f6357c629ebdeef0086ba1dcdcced72b52749dd"
+        "padding_bytes": 53,
+        "sha256": "2cc1cfc1f04eedda15d7a1e70cf7659bb91b98d792aa28b97230b4c2c208599f",
+        "allocation_sha256": "d55f4798e42f59921ebe9396aa2aa3ff96bfb97fbcd221662c970724f963e37f"
       },
       {
         "name": "vc8_parachute.sco",
         "resource_type": 1,
-        "size": 754,
+        "size": 818,
         "offset": 5965824,
         "allocated_bytes": 2048,
-        "padding_bytes": 1294,
-        "sha256": "9d48f076ada858ac015a6bb13d06567f531f3148036b866a9ebfc69a2a3c767a",
-        "allocation_sha256": "70a06d11ff1f92d450a6eec3f5e748117611b741252421103dca4e1636e41946"
+        "padding_bytes": 1230,
+        "sha256": "42c7f49279067dd35d031c7b43bffde9d4664a1e0b69a3e7bce2c292d05276d0",
+        "allocation_sha256": "e64969839384d17faf93d79afbbdabf0a13e6b83094b7f2be1bdac8e64f4402d"
       }
     ]
   },
@@ -1132,15 +1132,15 @@
     },
     {
       "path": "scripts/parachute_ai.scasm",
-      "sha256": "7822c8af09f30d5f1746b485831f94e9831474e850f40ccc2e322ce2b144669f"
+      "sha256": "8280d9dda970736bc1cbc1fa2f0ee8b6aa2bd24326285e518142c8bf9a44703a"
     },
     {
       "path": "scripts/parachute_player.scasm",
-      "sha256": "aa7957d04b290d0a3400c7388edfaa423e2fb597b445f80eb687b3f74e65804c"
+      "sha256": "5399485077174b2d0ccc36a18658f778794ca1a5adb89ee0b1efb883c35df095"
     },
     {
       "path": "scripts/parachutelauncher.scasm",
-      "sha256": "2236a6f440c5f421e1d1a93fa3e8af4f77ca2772fff0e72fcce3a6ede4859f1d"
+      "sha256": "61c54389d706e675ba80ba358694dc8af64e7c25cf42a723f72d662ca3fd1827"
     },
     {
       "path": "scripts/pcj.scasm",
@@ -1240,7 +1240,7 @@
     },
     {
       "path": "scripts/vc8_parachute.scasm",
-      "sha256": "4e969e63648d4e32a304e612fa7b62538e254af61599a450068b756e18db8da0"
+      "sha256": "b3eb82fadda935670eba739bb907699668531c97ea915ece918ff9a1088c350b"
     },
     {
       "path": "scripts/vc_army.scasm",
@@ -1256,7 +1256,7 @@
     },
     {
       "path": "scripts/vc_euphoria.scasm",
-      "sha256": "978f042c7118078f7244b5d3c799ac257ebe27435d03a374a02cfd085774948d"
+      "sha256": "8392b0984fe44624749fbb6eb8294272add3baf4195ccbe611664f4a2051b706"
     },
     {
       "path": "scripts/vc_fighting.scasm",

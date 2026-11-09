@@ -1,6 +1,6 @@
 # Current VCANGCE game scripts
 
-These 96 editable `.scasm` files rebuild the checkpoint-221 VCANGCE
+These 96 editable `.scasm` files rebuild the checkpoint-224 VCANGCE
 `script.img`. They preserve the installed SCO bytecode, including later
 mission fixes. They are assembly source, not the original high level source
 of the port. Earlier recovered C variants are not included because they
@@ -21,6 +21,14 @@ preventing normal gun use while wearing it. The model exclusions are
 mission/player guards remain, as does temporary weapon blocking during
 actual parachute flight. The adapter removes a leftover weapon-41 token;
 the launcher/player do not grant it.
+
+The four parachute scripts use full-width `Push` for 443 positive global
+addresses previously encoded with signed `PushS`. Seven intentional negative
+constants retain their exact operand bytes. `vc_euphoria` protects all 30
+installed parachute states, including `land`, `land_safe`, `land_fast`,
+`chute_off` and the actual `free_fall_deccelerate` name. These five scripts
+contain the checkpoint-224 changes; the other 91 script allocations remain
+byte-identical to checkpoint 221.
 
 Use Python 3.11 or newer, `openssl` in PATH, and `fourfury==0.13.3`. From the
 root of this source export, create an isolated environment and install:
@@ -52,7 +60,7 @@ names come from the bundled SC-CL `natives32.h`; unknown or ambiguous
 functions retain their numeric IDs. The complete third party license
 notice remains in that header.
 
-Two CE-specific constraints matter when modifying the parachute scripts:
+Three CE-specific constraints matter when modifying the parachute scripts:
 
 - Script startup requires an exact supported stack class. The launcher uses
   1,024 words; a 2,048-word request is unsupported in CE 1.2.0.59 and caused
@@ -60,11 +68,19 @@ Two CE-specific constraints matter when modifying the parachute scripts:
   the next available class.
 - Opcode zero is labeled `Nop` by this lossless assembler, but the CE VM
   treats it as an invalid instruction when executed. Two reachable imported
-  zero instructions were removed in this checkpoint. Existing unreachable
+  zero instructions were removed at checkpoint 221. Existing unreachable
   padding remains byte-exact; do not add reachable `Nop` instructions.
+- `PushS` sign-extends its 16-bit operand, with range -32768 to 32767. Use
+  full-width `Push` for positive global addresses above 32767. The old bits
+  for `PushS 60000` execute as -5536; `GetGlobalPs` then addresses memory
+  before global storage. This corrupted Tommy's animation buffers and caused
+  Euphoria recovery crashes even in car-only sessions. The assembler rejects
+  overflow instead of silently accepting an unsigned operand. Preserve real
+  negative constants; replacing every negative immediate would change logic.
 
 The snapshot reproduces the release image exactly; this is a source and
-file identity check. Earlier gameplay reports confirmed save loading,
-wearable pack use with guns, deployment, steering and landing. Exporting
-these sources performs no new gameplay test. Test edited missions in the
-game before distributing them.
+file identity check. After checkpoint 224 the user confirmed windshield-crash
+recovery, automatic wearable pack use with a gun, deployment and landing.
+Earlier reports also confirmed save loading and steering. Exporting these
+sources performs no new gameplay test. Test edited missions in the game
+before distributing them.

@@ -41,13 +41,13 @@ L_inventory_clean:
     CallNative IS_MOBILE_PHONE_CALL_ONGOING 0 1
     JumpFalse @L_phone_idle
     Push_0
-    PushS 60240
+    Push 60240
     GetGlobalPs
     pSet
     Jump @L_phone_done
 L_phone_idle:
     Push_9
-    PushS 60240
+    Push 60240
     GetGlobalPs
     pSet
 L_phone_done:
@@ -64,44 +64,44 @@ L_phone_done:
     ; Exact five-slot array; setting original flag 2792 asks the imported
     ; launcher's own L_00015a routine to reset every shared slot and flag.
     Push_5
-    PushS 60000
+    Push 60000
     GetGlobalPs
     pSet
     Push_1
-    PushS 60100
+    Push 60100
     GetGlobalPs
     pSet
     ; Ambient priority/mission override defaults. The launcher's original
     ; player-control, object-holding, injury and phone checks stay active.
     Push_0
-    PushS 60241
+    Push 60241
     GetGlobalPs
     pSet
     Push_0
-    PushS 60242
+    Push 60242
     GetGlobalPs
     pSet
     ; Original completion array indices 4 and 65 gate Liberty City pickups.
     PushS 66
-    PushS 60250
+    Push 60250
     GetGlobalPs
     pSet
     Push_0
-    PushS 60255
+    Push 60255
     GetGlobalPs
     pSet
     Push_0
-    PushS 60316
+    Push 60316
     GetGlobalPs
     pSet
     Push_0
-    PushS 60320
+    Push 60320
     GetGlobalPs
     pSet
     ; Player history table: five entries of two words, initialized to -1
     ; handles just as expected by the imported player's search routine.
     Push_5
-    PushS 60330
+    Push 60330
     GetGlobalPs
     pSet
     Push_0
@@ -117,7 +117,7 @@ L_history:
     GetLocalPv3
     pGet
     Push_2
-    PushS 60330
+    Push 60330
     GetGlobalPs
     GetArrayPs
     Push_0
@@ -127,7 +127,7 @@ L_history:
     GetLocalPv3
     pGet
     Push_2
-    PushS 60330
+    Push 60330
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -168,14 +168,14 @@ L_aircraft:
     CallNative CONVERT_INT_TO_PLAYERINDEX 1 1
     CallNative IS_PLAYER_CONTROL_ON 1 1
     JumpFalse @L_loop
-    PushS 60242
+    Push 60242
     GetGlobalPs
     pGet
     Push_4
     CmpLE
     JumpFalse @L_loop
     ; Original2800 is the explicit disable-equip flag following L_000e92.
-    PushS 60108
+    Push 60108
     GetGlobalPs
     pGet
     Not
@@ -219,7 +219,7 @@ L_not_rcbaron:
     JumpFalse @L_not_tourmav
     Jump @L_loop
 L_not_tourmav:
-    PushS 60015
+    Push 60015
     GetGlobalPs
     pGet
     JumpFalse @L_equip
@@ -228,71 +228,71 @@ L_equip:
     ; These writes mirror original8 launcher L_0010f9..L_0011cd for slot0.
     GetLocalPv2
     pGet
-    PushS 60001
+    Push 60001
     GetGlobalPs
     pSet
     Push_0
-    PushS 60002
+    Push 60002
     GetGlobalPs
     pSet
     Push_0
-    PushS 60003
+    Push 60003
     GetGlobalPs
     pSet
     PushF 0.0
     PushF 0.0
     PushF 0.0
     Push_3
-    PushS 60004
+    Push 60004
     GetGlobalPs
     FromStack
     Push_0
-    PushS 60016
+    Push 60016
     GetGlobalPs
     pSet
     Push_0
-    PushS 60017
+    Push 60017
     GetGlobalPs
     pSet
     PushF -60.0
-    PushS 60013
+    Push 60013
     GetGlobalPs
     pSet
     PushF -7.0
-    PushS 60014
+    Push 60014
     GetGlobalPs
     pSet
     Push_0
-    PushS 60099
+    Push 60099
     GetGlobalPs
     pSet
     Push_0
-    PushS 60097
+    Push 60097
     GetGlobalPs
     pSet
     Push_1
-    PushS 60093
+    Push 60093
     GetGlobalPs
     pSet
     Push_0
-    PushS 60092
+    Push 60092
     GetGlobalPs
     pSet
     Push_0
-    PushS 60091
+    Push 60091
     GetGlobalPs
     pSet
     Push_0
-    PushS 60094
+    Push 60094
     GetGlobalPs
     pSet
     Push_0
-    PushS 60098
+    Push 60098
     GetGlobalPs
     pSet
     ; Commit active only after every source-contract field is initialized.
     Push_1
-    PushS 60015
+    Push 60015
     GetGlobalPs
     pSet
     Jump @L_loop

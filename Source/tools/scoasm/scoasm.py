@@ -8,6 +8,7 @@
 Exactness rules (so a source rebuilds the identical file): every opcode is written by its own name (short forms
 Push_N / PushS / Push stay distinct), PushF keeps its float bits (`0x...` when the decimal form would not round-trip),
 PushString keeps every byte including padding NULs, data after the code (statics, globals) is kept verbatim.
+PushS is a signed16 immediate; larger positive values require full-width Push.
 Jump/Call/Switch targets become labels, so code can be edited and the assembler relocates everything.
 Encrypted scripts ('scr\\x0e') are re-encrypted with the AES key read from the user's own GTAIV.exe
 (fourfury.crypto.extract_aes_key); no key is stored in this tool. Natives are written by SC-CL natives32.h name
@@ -57,7 +58,7 @@ def decode(code):
         name = OPS[code[pc]]; size, val = 1, None
         if name in JUMPS or name == 'Push': size, val = 5, struct.unpack_from('<i', code, pc + 1)[0]
         elif name == 'PushF': size, val = 5, struct.unpack_from('<I', code, pc + 1)[0]
-        elif name == 'PushS': size, val = 3, struct.unpack_from('<H', code, pc + 1)[0]
+        elif name == 'PushS': size, val = 3, struct.unpack_from('<h', code, pc + 1)[0]
         elif name == 'CallNative': size, val = 7, (code[pc + 1], code[pc + 2], struct.unpack_from('<I', code, pc + 3)[0])
         elif name == 'Function': size, val = 4, (code[pc + 1], struct.unpack_from('<H', code, pc + 2)[0])
         elif name == 'Return': size, val = 3, (code[pc + 1], code[pc + 2])
@@ -168,7 +169,11 @@ def assemble(text, key):
         if op in JUMPS: out += struct.pack('<i', tgt(arg))
         elif op == 'Push': out += struct.pack('<i', int(arg, 0))
         elif op == 'PushF': out += struct.pack('<I', int(arg, 16)) if arg.lower().startswith('0x') else struct.pack('<f', float(arg))
-        elif op == 'PushS': out += struct.pack('<H', int(arg, 0))
+        elif op == 'PushS':
+            value = int(arg, 0)
+            if not -32768 <= value <= 32767:
+                raise ValueError(f'PushS is signed16 in CE; {value} requires full-width Push')
+            out += struct.pack('<h', value)
         elif op == 'CallNative':
             nm, a, r = arg.split(); i = int(nm, 16) if nm.lower().startswith('0x') else unique[nm]
             out += bytes([int(a), int(r)]) + struct.pack('<I', i)

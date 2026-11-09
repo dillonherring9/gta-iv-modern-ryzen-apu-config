@@ -43,6 +43,26 @@ in [scripts/README.md](scripts/README.md). This builds the script archive;
 parachute/suit models, textures, collision and audio are supplied by the
 playable release and are outside this source builder.
 
+The checkpoint-224 assembler models `PushS` as signed 16-bit and rejects
+out-of-range operands. Use full-width `Push` for positive global addresses
+above 32767. For example, `PushS 60000` is invalid source; encoding those bits
+would execute as -5536 in CE and could corrupt memory through `GetGlobalPs`.
+See [scripts/README.md](scripts/README.md) for the other CE constraints.
+
+Check the built archive's signed operands and direct global addresses with:
+
+```sh
+python tools/check_script_contracts.py --exe "/path/to/GTAIV.exe" --image ../VCANGCE-build/scripts/script.img --report ../VCANGCE-build/script-contracts.json
+```
+
+The report must be a new file outside the export and game. An optional
+`--negative-control "/path/to/old/script.img"` verifies that an older broken
+archive is detected and intentional negative short constants are preserved.
+This checks adjacent integer-immediate `GetGlobalPs` operands against the
+archive's declared global storage; computed indices, control flow and gameplay
+require separate review. The export was checked against the checkpoint-221
+negative control, detecting all 443 invalid addresses.
+
 The optional DualSense patch path needs **pefile 2024.8.26** and the supported
 original NodixTech DualSense 1.4 ASI, which is not included:
 

@@ -1,7 +1,10 @@
 # Native project code
 
 These are the exact maintained authoring files for five release modules in
-Vice City Actual Next Gen CE, through checkpoint 221.
+Vice City Actual Next Gen CE at checkpoint 224. Their sources and release
+binaries are unchanged from checkpoint 221; authoring checkpoints are below.
+The checkpoint-223 diagnostic recovery guard was removed when 224 corrected
+the script global-address corruption and restored the exact 220 memory module.
 The portable builder writes fresh outputs and never reads or changes a game.
 Use Python 3.9+ and Zig 0.13.0:
 
@@ -35,10 +38,12 @@ this release source package.
 PE COFF timestamps are normalized to zero in new outputs. Earlier distributed
 modules can have nonzero build timestamps, so raw SHA256 comparison alone is
 insufficient for those modules. The generated `native-build.json` records the
-new output hashes. All five modules were freshly compiled from this package
-and matched the current release byte for byte, including its normalized
-timestamps. The generated Opus library is built from the bundled source.
-This check did not install or replace any release files.
+new output hashes. All five modules were freshly compiled during the
+checkpoint-221 source export and matched the release byte for byte, including
+its normalized timestamps. That exact-build verification is retained because
+these sources and current release bytes are unchanged; this source update
+does not claim a new native compile. The retained check built Opus from the
+bundled source and did not install or replace any release files.
 
 `scripthook/natives_table.h` is the exact generated table used by the maintained
 shim; it originated from the retained SC-CL / IV-SDK native declaration reference.

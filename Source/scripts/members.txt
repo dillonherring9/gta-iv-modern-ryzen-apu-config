@@ -1,5 +1,4 @@
-# script.img member order: name resource_type (IMG v3; header field at 18 = res)
-res 0x00E9
+res 233
 AVERY.sco 1
 BIKE.sco 1
 COKERUN.sco 1

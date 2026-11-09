@@ -1626,7 +1626,7 @@ vc8_anim_next_4:
     GetLocalPs
     pGet
     PushString "parachute\0"
-    PushString "free_fall_decelerate\0"
+    PushString "free_fall_deccelerate\0"
     CallNative IS_CHAR_PLAYING_ANIM 3 1
     JumpFalse @vc8_anim_next_5
     Push_1
@@ -1832,6 +1832,46 @@ vc8_anim_next_24:
     Push_1
     Return 1 1
 vc8_anim_next_25:
+    Push_0
+    GetLocalPs
+    pGet
+    PushString "parachute\0"
+    PushString "land\0"
+    CallNative IS_CHAR_PLAYING_ANIM 3 1
+    JumpFalse @vc8_anim_next_26
+    Push_1
+    Return 1 1
+vc8_anim_next_26:
+    Push_0
+    GetLocalPs
+    pGet
+    PushString "parachute\0"
+    PushString "land_safe\0"
+    CallNative IS_CHAR_PLAYING_ANIM 3 1
+    JumpFalse @vc8_anim_next_27
+    Push_1
+    Return 1 1
+vc8_anim_next_27:
+    Push_0
+    GetLocalPs
+    pGet
+    PushString "parachute\0"
+    PushString "land_fast\0"
+    CallNative IS_CHAR_PLAYING_ANIM 3 1
+    JumpFalse @vc8_anim_next_28
+    Push_1
+    Return 1 1
+vc8_anim_next_28:
+    Push_0
+    GetLocalPs
+    pGet
+    PushString "parachute\0"
+    PushString "chute_off\0"
+    CallNative IS_CHAR_PLAYING_ANIM 3 1
+    JumpFalse @vc8_anim_next_29
+    Push_1
+    Return 1 1
+vc8_anim_next_29:
     Push_0
     Return 1 1
 

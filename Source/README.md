@@ -1,7 +1,7 @@
 # VCANGCE source
 
 Developer sources for **Vice City Actual Next Gen CE** (**VCANGCE**), targeting
-GTA IV Complete Edition **1.2.0.59** and aligned with release checkpoint **221**.
+GTA IV Complete Edition **1.2.0.59** and aligned with release checkpoint **224**.
 Players can find the playable package through the repository's main README
 and release downloads.
 
@@ -16,8 +16,11 @@ The current scripts include the native parachute launcher, player and AI
 controllers, the automatic wearable-aircraft adapter, and the movement
 compatibility adaptation. Entering a full-size plane or helicopter provides
 the pack automatically; RC aircraft are excluded, and the pack does not occupy
-a weapon slot. The CE stack and opcode corrections and native startup-lock
-repairs are included. Existing game features are retained in the release.
+a weapon slot. The scripts correct signed global-address loads that corrupted
+Tommy's animation buffers and crashed Euphoria recovery, and retain the CE
+stack/opcode corrections and native startup-lock repairs. Landing animation
+exclusions are also restored. The user confirmed windshield-crash recovery
+and the automatic pack, gun use, deployment and landing after the correction.
 
 | Start here | Purpose |
 |---|---|
@@ -35,5 +38,5 @@ the game. This source export rebuilds the covered scripts and modules; it does
 not assemble the full playable release or rebuild its map, model, texture and
 audio assets. Read the source status for vendor-source gaps.
 
-Run `python3 tools/verify_source.py` to check the snapshot's file set and
+Run `python3 tools/verify_source.py` to check the published source
 checksums before editing it.

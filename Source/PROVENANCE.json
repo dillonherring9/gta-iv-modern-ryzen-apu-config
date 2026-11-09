@@ -3,8 +3,8 @@
   "project": "Vice City Actual Next Gen CE",
   "snapshot_date": "2026-11-08",
   "game_version": "GTA IV Complete Edition 1.2.0.59",
-  "release_checkpoint": 221,
-  "purpose": "Current maintained script and project-native sources for the VCANGCE release. Origin identifiers are relative paths in the retained authoring archive, not dependencies on that archive.",
+  "release_checkpoint": 224,
+  "purpose": "Maintained script and project-native sources matching Release.zip through checkpoint224. Origin identifiers are relative paths in the retained authoring archive, not dependencies on that archive.",
   "files": [
     {
       "path": "dependencies/opus-1.6/COPYING",
@@ -1998,8 +1998,8 @@
       "path": "native/README.md",
       "origin": "Generated for the VCANGCE public source snapshot; updated from the checkpoint-215 native guide.",
       "original_sha256": null,
-      "export_sha256": "224fb93d6b70b78b29308614aa5dba8ae2e4630fe09f7a27e1e8a72fe1233f2c",
-      "bytes": 3607
+      "export_sha256": "88668c3650d57916fa6098e699ac0d85d6091ad46f3f6cbb6aea6e9e864ec490",
+      "bytes": 4020
     },
     {
       "path": "native/dualsense-patches/patch_165.py",
@@ -2297,10 +2297,10 @@
     },
     {
       "path": "scripts/README.md",
-      "origin": "Generated/updated for current VCANGCE checkpoint221 public build contract.",
+      "origin": "Generated/updated for current VCANGCE checkpoint224 public build contract.",
       "original_sha256": null,
-      "export_sha256": "2af0c3463894a93d5bfbb886eeaaad22a6279d28086b7ee9e36e6c8b19c273e2",
-      "bytes": 3816
+      "export_sha256": "f1d9e2427bbb9af6f061a95784471cc269976886a22e15a939e4a4120e542581",
+      "bytes": 4908
     },
     {
       "path": "scripts/ROCK.scasm",
@@ -2437,10 +2437,10 @@
     },
     {
       "path": "scripts/manifest.json",
-      "origin": "Generated/updated for current VCANGCE checkpoint221 public build contract.",
+      "origin": "Generated/updated for current VCANGCE checkpoint224 public build contract.",
       "original_sha256": null,
-      "export_sha256": "f25fd58ed9127085996575eb918688d3b353d1361c814590255dcafbf3d29317",
-      "bytes": 49355
+      "export_sha256": "a5c585e9f0bc2935772217d97e5e61f673628c66045dfbdddf610740f7d97074",
+      "bytes": 49370
     },
     {
       "path": "scripts/map_bounds.scasm",
@@ -2451,10 +2451,10 @@
     },
     {
       "path": "scripts/members.txt",
-      "origin": "Generated/updated for current VCANGCE checkpoint221 public build contract.",
+      "origin": "Generated/updated for current VCANGCE checkpoint224 public build contract.",
       "original_sha256": null,
-      "export_sha256": "737f17db7c5d1a6ca70ef635ac9220f2b457d0efd9c43579923fa9977935b1d5",
-      "bytes": 1589
+      "export_sha256": "d89312961be214a0066fb84c8eb23ffaa58d26b194ebebd9f2a4ff99f27a7ec6",
+      "bytes": 1505
     },
     {
       "path": "scripts/mission_complete_01.scasm",
@@ -2487,23 +2487,23 @@
     {
       "path": "scripts/parachute_ai.scasm",
       "origin": "project/sources/scripts-live/parachute_ai.scasm",
-      "original_sha256": "7822c8af09f30d5f1746b485831f94e9831474e850f40ccc2e322ce2b144669f",
-      "export_sha256": "7822c8af09f30d5f1746b485831f94e9831474e850f40ccc2e322ce2b144669f",
-      "bytes": 56605
+      "original_sha256": "8280d9dda970736bc1cbc1fa2f0ee8b6aa2bd24326285e518142c8bf9a44703a",
+      "export_sha256": "8280d9dda970736bc1cbc1fa2f0ee8b6aa2bd24326285e518142c8bf9a44703a",
+      "bytes": 56431
     },
     {
       "path": "scripts/parachute_player.scasm",
       "origin": "project/sources/scripts-live/parachute_player.scasm",
-      "original_sha256": "aa7957d04b290d0a3400c7388edfaa423e2fb597b445f80eb687b3f74e65804c",
-      "export_sha256": "aa7957d04b290d0a3400c7388edfaa423e2fb597b445f80eb687b3f74e65804c",
-      "bytes": 141425
+      "original_sha256": "5399485077174b2d0ccc36a18658f778794ca1a5adb89ee0b1efb883c35df095",
+      "export_sha256": "5399485077174b2d0ccc36a18658f778794ca1a5adb89ee0b1efb883c35df095",
+      "bytes": 141270
     },
     {
       "path": "scripts/parachutelauncher.scasm",
       "origin": "project/sources/scripts-live/parachutelauncher.scasm",
-      "original_sha256": "2236a6f440c5f421e1d1a93fa3e8af4f77ca2772fff0e72fcce3a6ede4859f1d",
-      "export_sha256": "2236a6f440c5f421e1d1a93fa3e8af4f77ca2772fff0e72fcce3a6ede4859f1d",
-      "bytes": 38867
+      "original_sha256": "61c54389d706e675ba80ba358694dc8af64e7c25cf42a723f72d662ca3fd1827",
+      "export_sha256": "61c54389d706e675ba80ba358694dc8af64e7c25cf42a723f72d662ca3fd1827",
+      "bytes": 38776
     },
     {
       "path": "scripts/pcj.scasm",
@@ -2676,9 +2676,9 @@
     {
       "path": "scripts/vc8_parachute.scasm",
       "origin": "project/sources/scripts-live/vc8_parachute.scasm",
-      "original_sha256": "4e969e63648d4e32a304e612fa7b62538e254af61599a450068b756e18db8da0",
-      "export_sha256": "4e969e63648d4e32a304e612fa7b62538e254af61599a450068b756e18db8da0",
-      "bytes": 6315
+      "original_sha256": "b3eb82fadda935670eba739bb907699668531c97ea915ece918ff9a1088c350b",
+      "export_sha256": "b3eb82fadda935670eba739bb907699668531c97ea915ece918ff9a1088c350b",
+      "bytes": 6283
     },
     {
       "path": "scripts/vc_army.scasm",
@@ -2704,9 +2704,9 @@
     {
       "path": "scripts/vc_euphoria.scasm",
       "origin": "project/sources/scripts-live/vc_euphoria.scasm",
-      "original_sha256": "978f042c7118078f7244b5d3c799ac257ebe27435d03a374a02cfd085774948d",
-      "export_sha256": "978f042c7118078f7244b5d3c799ac257ebe27435d03a374a02cfd085774948d",
-      "bytes": 83946
+      "original_sha256": "8392b0984fe44624749fbb6eb8294272add3baf4195ccbe611664f4a2051b706",
+      "export_sha256": "8392b0984fe44624749fbb6eb8294272add3baf4195ccbe611664f4a2051b706",
+      "bytes": 84778
     },
     {
       "path": "scripts/vc_fighting.scasm",
@@ -2885,7 +2885,7 @@
     },
     {
       "path": "tools/build_scripts.py",
-      "origin": "Generated/updated for current VCANGCE checkpoint221 public build contract.",
+      "origin": "Generated/updated for current VCANGCE checkpoint224 public build contract.",
       "original_sha256": null,
       "export_sha256": "6695884e36a4416ff43d04f1f3ae98cae5a952d4c19e96d2c5f3a980d5dfa28e",
       "bytes": 7211
@@ -2894,19 +2894,22 @@
       "path": "tools/scoasm/build_img.py",
       "origin": "tools/scoasm/build_img.py",
       "original_sha256": "deb9df081d2a103f54fed0a2826652f27d7a3d2ae45ab734454a18982b8424bc",
-      "export_sha256": "deb9df081d2a103f54fed0a2826652f27d7a3d2ae45ab734454a18982b8424bc"
+      "export_sha256": "deb9df081d2a103f54fed0a2826652f27d7a3d2ae45ab734454a18982b8424bc",
+      "bytes": 1920
     },
     {
       "path": "tools/scoasm/natives32.h",
       "origin": "tools/scoasm/natives32.h",
       "original_sha256": "0d191ae5200328238f3d1c8c0dad7eb9a5f5fbc79fd32920d7bdfd7447c54892",
-      "export_sha256": "0d191ae5200328238f3d1c8c0dad7eb9a5f5fbc79fd32920d7bdfd7447c54892"
+      "export_sha256": "0d191ae5200328238f3d1c8c0dad7eb9a5f5fbc79fd32920d7bdfd7447c54892",
+      "bytes": 266069
     },
     {
       "path": "tools/scoasm/scoasm.py",
       "origin": "tools/scoasm/scoasm.py",
-      "original_sha256": "a1fb3f03fcd72ebf2687e5f831144c436a023b9816b4fa625101e53e7398ba85",
-      "export_sha256": "0d2008b79b20e471911c0efb639286218600945f4af4315c4cd007f0162fced6"
+      "original_sha256": "7b1f24cf406c7c530623fbfa043c265dab60caab9ec07fb29ad90792438b83ea",
+      "export_sha256": "34adcb9bdc9e3ff4901dda21c41c737d4cdcd2ef1a3fef2677d8cf5a08416351",
+      "bytes": 11401
     }
   ],
   "export_adaptations": [
@@ -2916,9 +2919,9 @@
     },
     {
       "file": "tools/scoasm/scoasm.py",
-      "change": "Retains the previous portable export adaptation removing a private historical source fallback; pinned FourFury0.13.3 is the documented dependency."
+      "change": "Retains portable removal of the private historical dependency fallback; requires pinned FourFury0.13.3. Includes the maintained signed16 PushS decode/encode and overflow rejection from checkpoint224."
     }
   ],
-  "generated_files": "Portable build/patch/verification helpers, documentation, metadata and checksums were created for this export. Their identities appear in SHA256SUMS.txt.",
+  "generated_files": "Portable build/patch/verification helpers, documentation, metadata and checksums were created or updated for this export. tools/check_script_contracts.py checks signed operands and immediate global-address bounds; its tested scope is in VALIDATION.json. Generated-file identities appear in SHA256SUMS.txt.",
   "scope": "Five native project release modules,96 exact editable game-script sources, unchanged vendor patch scripts and portable build helpers; source-only package. VCPhysicsCheck is an optional diagnostic excluded from this playable release and this source snapshot."
 }

@@ -270,7 +270,7 @@ L_0001e7:
     Push_1
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 60
@@ -282,7 +282,7 @@ L_0001e7:
     Push_3
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -294,7 +294,7 @@ L_0001e7:
     Push_3
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_24
@@ -318,7 +318,7 @@ L_000252:
     JumpFalse @L_0006f7
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 56
@@ -332,7 +332,7 @@ L_00027a:
     Function 1 3
     GetLocalPv0
     pGet
-    PushS 60098
+    Push 60098
     GetGlobalPs
     pSet
     Return 1 0
@@ -358,7 +358,7 @@ L_0002b1:
     Not
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -368,7 +368,7 @@ L_0002b1:
     CmpEQ
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -474,7 +474,7 @@ L_00040a:
 L_000414:
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -484,7 +484,7 @@ L_000414:
     CmpNE
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -495,7 +495,7 @@ L_000414:
     And
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 64
@@ -720,7 +720,7 @@ L_0005e0:
     Push_0
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -732,7 +732,7 @@ L_0005e0:
     Push_3
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_12
@@ -744,7 +744,7 @@ L_0005e0:
     Push_3
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -756,7 +756,7 @@ L_0005e0:
     Push_3
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_24
@@ -765,7 +765,7 @@ L_0005e0:
     Push_0
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 64
@@ -774,17 +774,17 @@ L_0005e0:
     Push_0
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 68
     Add
     pSet
     Push_0
-    PushS 60110
+    Push 60110
     GetGlobalPs
     pSet
-    PushS 60098
+    Push 60098
     GetGlobalPs
     pGet
     Not
@@ -796,7 +796,7 @@ L_0005e0:
     Push_0
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 60
@@ -805,7 +805,7 @@ L_0005e0:
     Push_0
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 56
@@ -814,7 +814,7 @@ L_0005e0:
     Push_0
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_8
@@ -823,7 +823,7 @@ L_0005e0:
     PushF -60.0
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 48
@@ -832,7 +832,7 @@ L_0005e0:
     PushF -7.0
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 52
@@ -842,14 +842,14 @@ L_0005e0:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_0
     Add
     pSet
     Push_0
-    PushS 60092
+    Push 60092
     GetGlobalPs
     pSet
     Jump @L_0006d4
@@ -906,7 +906,7 @@ L_00072f:
 L_000760:
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 56
@@ -926,7 +926,7 @@ L_000785:
     JumpFalse @L_0007cc
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -936,7 +936,7 @@ L_000785:
     CmpNE
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -971,7 +971,7 @@ L_000802:
     Call @L_0007d1
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 56
@@ -980,7 +980,7 @@ L_000802:
     And
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 68
@@ -995,7 +995,7 @@ L_000802:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 48
@@ -1005,7 +1005,7 @@ L_000802:
     JumpFalse @L_000882
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 48
@@ -1040,7 +1040,7 @@ L_000882:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 52
@@ -1050,7 +1050,7 @@ L_000882:
     JumpFalse @L_0008f2
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 52
@@ -1158,7 +1158,7 @@ L_000955:
 L_000989:
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -1224,7 +1224,7 @@ L_000a5d:
     GetLocalPv3
     pGet
     Push_2
-    PushS 60330
+    Push 60330
     GetGlobalPs
     GetArrayPs
     Push_0
@@ -1239,7 +1239,7 @@ L_000a5d:
     GetLocalPv3
     pGet
     Push_2
-    PushS 60330
+    Push 60330
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -1618,7 +1618,7 @@ L_000e9a:
     GetLocalPv2
     pGet
     And
-    PushS 60099
+    Push 60099
     GetGlobalPs
     pGet
     Or
@@ -1671,7 +1671,7 @@ L_000f38:
 L_000f3e:
     Jump @L_001111
 L_000f43:
-    PushS 60099
+    Push 60099
     GetGlobalPs
     pGet
     Call @L_000292
@@ -1801,7 +1801,7 @@ L_001119:
     pGet
     PushF 20.0
     fCmpGT
-    PushS 60092
+    Push 60092
     GetGlobalPs
     pGet
     GetLocalPv2
@@ -1897,7 +1897,7 @@ L_00120f:
     CallNative IS_CHAR_PLAYING_ANIM 3 1
     Not
     JumpFalse @L_0012a4
-    PushS 60094
+    Push 60094
     GetGlobalPs
     pGet
     JumpFalse @L_001276
@@ -1955,7 +1955,7 @@ L_0012a4:
     ItoF
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -1967,7 +1967,7 @@ L_0012a4:
     ItoF
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -1978,7 +1978,7 @@ L_0012a4:
     Call @L_000292
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -2924,13 +2924,13 @@ L_001ab4:
     GetStaticPs
     CallNative GET_GAME_TIMER 1 0
     Push_0
-    PushS 60110
+    Push 60110
     GetGlobalPs
     pSet
     Push_3
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -2948,7 +2948,7 @@ L_001b23:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -2979,7 +2979,7 @@ L_001b23:
 L_001b8b:
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -3006,7 +3006,7 @@ L_001bc2:
     Call @L_000292
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -3016,7 +3016,7 @@ L_001bc2:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -3026,7 +3026,7 @@ L_001bc2:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -3040,7 +3040,7 @@ L_001bc2:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -3056,7 +3056,7 @@ L_001bc2:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -3072,7 +3072,7 @@ L_001bc2:
     fAdd
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_24
@@ -3085,7 +3085,7 @@ L_001bc2:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -3100,7 +3100,7 @@ L_001bc2:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -3116,7 +3116,7 @@ L_001bc2:
     fAdd
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_24
@@ -3129,7 +3129,7 @@ L_001bc2:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_24
@@ -3140,7 +3140,7 @@ L_001bc2:
     Call @L_000292
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_24
@@ -3150,7 +3150,7 @@ L_001bc2:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_24
@@ -3160,7 +3160,7 @@ L_001bc2:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_24
@@ -3292,7 +3292,7 @@ L_001ebd:
     fAdd
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -3302,7 +3302,7 @@ L_001ebd:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -3317,7 +3317,7 @@ L_001ebd:
     fNeg
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -3330,7 +3330,7 @@ L_001ebd:
     fAdd
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -3360,7 +3360,7 @@ L_001f6c:
     Call @L_000292
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -3504,14 +3504,14 @@ L_002077:
     Push_3
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
     Add
     pSet
     Push_0
-    PushS 60110
+    Push 60110
     GetGlobalPs
     pSet
     Push_0
@@ -3561,7 +3561,7 @@ L_0020d3:
     Push_8
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -3581,7 +3581,7 @@ L_002103:
     Push_1
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -3608,7 +3608,7 @@ L_002150:
     Call @L_00213b
     CallNative IS_PLAYER_CONTROL_ON 1 1
     And
-    PushS 60102
+    Push 60102
     GetGlobalPs
     pGet
     And
@@ -3753,7 +3753,7 @@ L_0021dd:
     GetStaticPs
     pSet
     Push_1
-    PushS 60110
+    Push 60110
     GetGlobalPs
     pSet
 L_00230d:
@@ -3927,7 +3927,7 @@ L_00243f:
     GetStaticPs
     pSet
     Push_1
-    PushS 60110
+    Push 60110
     GetGlobalPs
     pSet
     Call @L_000292
@@ -4079,7 +4079,7 @@ L_002606:
     Push_0
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -4275,7 +4275,7 @@ L_002795:
 L_0027b2:
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 64
@@ -4396,7 +4396,7 @@ L_002863:
     Call @L_0027fe
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -4520,7 +4520,7 @@ L_00293b:
     Call @L_0027fe
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -4547,7 +4547,7 @@ L_0029b8:
     Call @L_0027fe
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -4582,7 +4582,7 @@ L_002a09:
     Call @L_0027fe
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -4602,7 +4602,7 @@ L_002a09:
     fAdd
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -4612,7 +4612,7 @@ L_002a09:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -4626,7 +4626,7 @@ L_002a09:
     JumpFalse @L_002a9e
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -4639,7 +4639,7 @@ L_002a09:
     fSub
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -4651,7 +4651,7 @@ L_002a09:
 L_002a9e:
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -4659,13 +4659,13 @@ L_002a9e:
     Push_8
     Add
     pGet
-    PushS 65356
+    PushS -180
     ItoF
     fCmpLT
     JumpFalse @L_002ad7
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -4678,7 +4678,7 @@ L_002a9e:
     fAdd
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -4689,7 +4689,7 @@ L_002a9e:
 L_002ad7:
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -4716,7 +4716,7 @@ L_002ad7:
     CallNative IS_PED_RAGDOLL 1 1
     Not
     JumpFalse @L_002dfa
-    PushS 60105
+    Push 60105
     GetGlobalPs
     pGet
     Not
@@ -4724,7 +4724,7 @@ L_002ad7:
     Push_23
     GetStaticPs
     pGet
-    PushS 65416
+    PushS -120
     CmpLT
     JumpFalse @L_002bae
     Call @L_000292
@@ -4912,7 +4912,7 @@ L_002dfa:
     Push_1
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 64
@@ -4933,7 +4933,7 @@ L_002e89:
     Not
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -5148,7 +5148,7 @@ L_00314c:
     Push_5
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -5170,7 +5170,7 @@ L_003189:
 L_0031b8:
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -5185,7 +5185,7 @@ L_0031b8:
     Call @L_0028d4
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -5207,7 +5207,7 @@ L_0031b8:
 L_003224:
     Call @L_002e89
 L_003229:
-    PushS 60091
+    Push 60091
     GetGlobalPs
     pGet
     PushS 33
@@ -5216,7 +5216,7 @@ L_003229:
     And
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 64
@@ -5282,7 +5282,7 @@ L_0032d7:
 L_0032e6:
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -6114,7 +6114,7 @@ L_0038e3:
     Call @L_000292
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6137,7 +6137,7 @@ L_0038e3:
     CallNative SHAKE_PAD 3 0
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 64
@@ -6210,7 +6210,7 @@ L_00397d:
     Call @L_000292
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6225,7 +6225,7 @@ L_00397d:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6241,7 +6241,7 @@ L_00397d:
     pGet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6342,7 +6342,7 @@ L_003ad2:
     Push_8
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -6367,7 +6367,7 @@ L_003b4e:
     ItoF
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6379,7 +6379,7 @@ L_003b4e:
     ItoF
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6390,7 +6390,7 @@ L_003b4e:
     Call @L_000292
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6541,7 +6541,7 @@ L_003d42:
     Push_5
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -6591,7 +6591,7 @@ L_003d57:
     Call @L_000292
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6730,7 +6730,7 @@ L_003e79:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6779,7 +6779,7 @@ L_003e79:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6799,7 +6799,7 @@ L_003e79:
     fAdd
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6809,7 +6809,7 @@ L_003e79:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6848,7 +6848,7 @@ L_003e79:
     Call @L_0027fe
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6883,7 +6883,7 @@ L_003e79:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6929,7 +6929,7 @@ L_004022:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6978,7 +6978,7 @@ L_004022:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -6998,7 +6998,7 @@ L_004022:
     fAdd
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7008,7 +7008,7 @@ L_004022:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7024,7 +7024,7 @@ L_004022:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7063,7 +7063,7 @@ L_004022:
 L_004166:
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7138,7 +7138,7 @@ L_0041ec:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7154,7 +7154,7 @@ L_0041ec:
     JumpFalse @L_0042a6
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7322,7 +7322,7 @@ L_004356:
 L_00435c:
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7342,7 +7342,7 @@ L_00435c:
     fSub
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7352,7 +7352,7 @@ L_00435c:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7366,7 +7366,7 @@ L_00435c:
     JumpFalse @L_0043c6
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7379,7 +7379,7 @@ L_00435c:
     fSub
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7391,7 +7391,7 @@ L_00435c:
 L_0043c6:
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7399,13 +7399,13 @@ L_0043c6:
     Push_8
     Add
     pGet
-    PushS 65356
+    PushS -180
     ItoF
     fCmpLT
     JumpFalse @L_0043ff
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7418,7 +7418,7 @@ L_0043c6:
     fAdd
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7435,7 +7435,7 @@ L_0043ff:
     JumpFalse @L_004420
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -7539,7 +7539,7 @@ L_0044c3:
     GetLocalPv6
     ToStack
     Call @L_0033a8
-    PushS 60091
+    Push 60091
     GetGlobalPs
     pGet
     PushS 33
@@ -7772,7 +7772,7 @@ L_004718:
     PushF 1.0
     fCmpGT
     And
-    PushS 60097
+    Push 60097
     GetGlobalPs
     pGet
     Not
@@ -7785,7 +7785,7 @@ L_004718:
 L_004792:
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7803,11 +7803,11 @@ L_004792:
     PushF 1.100000023841858
     fMult
     fCmpLT
-    PushS 60097
+    Push 60097
     GetGlobalPs
     pGet
     Not
-    PushS 60097
+    Push 60097
     GetGlobalPs
     pGet
     Push_24
@@ -7910,7 +7910,7 @@ L_0048a4:
     Call @L_000292
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -7919,7 +7919,7 @@ L_0048a4:
     Add
     pGet
     CallNative SET_CHAR_HEADING 2 0
-    PushS 60093
+    Push 60093
     GetGlobalPs
     pGet
     JumpFalse @L_004a5f
@@ -8069,7 +8069,7 @@ L_004ae4:
     pGet
     Not
     JumpFalse @L_004b39
-    PushS 60341
+    Push 60341
     GetGlobalPs
     pGet
     Push_29
@@ -8098,7 +8098,7 @@ L_004ae4:
     PushS 57
     GetStaticPs
     pGet
-    PushS 60341
+    Push 60341
     GetGlobalPs
     pSet
 L_004b39:
@@ -8113,7 +8113,7 @@ L_004b39:
     Push_7
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -8164,7 +8164,7 @@ L_004b78:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -8179,7 +8179,7 @@ L_004b78:
     pSet
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     PushS 36
@@ -8192,7 +8192,7 @@ L_004b78:
     PushS 33
     GetLocalPs
     pSet
-    PushS 60105
+    Push 60105
     GetGlobalPs
     pGet
     Not
@@ -8312,7 +8312,7 @@ L_004d87:
     Push_22
     GetStaticPs
     pGet
-    PushS 65516
+    PushS -20
     CmpLT
     And
     JumpFalse @L_004df9
@@ -8375,7 +8375,7 @@ L_004e72:
     Push_22
     GetStaticPs
     pGet
-    PushS 65516
+    PushS -20
     CmpLT
     And
     JumpFalse @L_004eee
@@ -8786,7 +8786,7 @@ L_005514:
     Push_8
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -9198,7 +9198,7 @@ L_005999:
     Push_7
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -9219,7 +9219,7 @@ L_0059c8:
     Push_7
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -9243,7 +9243,7 @@ L_005a06:
     JumpFalse @L_005a51
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
@@ -9253,7 +9253,7 @@ L_005a06:
     CmpEQ
     Push_0
     Push_18
-    PushS 60000
+    Push 60000
     GetGlobalPs
     GetArrayPs
     Push_4
