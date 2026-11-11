@@ -1,0 +1,82 @@
+name: Source checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  source-checks:
+    name: Source integrity and native builds
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Verify source checksums
+        run: python3 -I Source/tools/verify_source.py
+
+      - name: Check model order and configuration
+        run: python3 -I Source/tools/check_model_order.py
+
+      - name: Install verified Zig 0.13.0
+        run: |
+          # SHA256 from https://ziglang.org/download/index.json (0.13.0, x86_64-linux).
+          archive="$RUNNER_TEMP/zig-linux-x86_64-0.13.0.tar.xz"
+          curl --fail --location --retry 3 --proto '=https' --tlsv1.2 \
+            https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz \
+            --output "$archive"
+          printf '%s  %s\n' \
+            d45312e61ebcc48032b77bc4cf7fd6915c11fa16e4aad116b66c9468211230ea \
+            "$archive" | sha256sum --check --strict
+          tar --extract --xz --file "$archive" --directory "$RUNNER_TEMP"
+          "$RUNNER_TEMP/zig-linux-x86_64-0.13.0/zig" version
+
+      - name: Build native modules and fixtures
+        run: |
+          python3 -I Source/tools/build_native.py \
+            --zig "$RUNNER_TEMP/zig-linux-x86_64-0.13.0/zig" \
+            --out "$RUNNER_TEMP/native-build" --jobs 2 --fixtures
+
+      - name: Compare native outputs with recorded hashes
+        run: |
+          python3 -I - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          validation = json.loads(Path("Source/VALIDATION.json").read_text())
+          output = Path(os.environ["RUNNER_TEMP"]) / "native-build"
+          modules = validation["native_modules"]
+          if len(modules) != 2 or {row["module"] for row in modules} != {"vccore", "scripthook"}:
+              raise SystemExit("Expected VCCore and ScriptHook validation records")
+          for row in modules:
+              data = (output / row["file"]).read_bytes()
+              actual = hashlib.sha256(data).hexdigest()
+              if len(data) != row["bytes"] or actual != row["rebuilt_sha256"]:
+                  raise SystemExit(f"Native output differs from VALIDATION.json: {row['file']}")
+              print(f"PASS: {row['file']} ({len(data)} bytes, {actual})")
+          for row in validation["native_verification"]["fixtures"]:
+              actual = hashlib.sha256((output / row["file"]).read_bytes()).hexdigest()
+              if actual != row["sha256"]:
+                  raise SystemExit(f"Fixture differs from VALIDATION.json: {row['file']}")
+              print(f"PASS: {row['file']} ({actual})")
+          print("Fixtures were compiled only; gameplay and Windows/Wine execution are separate checks.")
+          PY

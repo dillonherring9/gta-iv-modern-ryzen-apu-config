@@ -1,0 +1,83 @@
+name: Remove backed-up obsolete branch
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/cleanup-obsolete-branch.yml]
+
+permissions: {}
+
+concurrency:
+  group: cleanup-obsolete-readme-branch
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    if: github.repository == 'dillonherring9/gta-iv-modern-ryzen-apu-config'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Delete only the backed-up branch with a commit lease
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PYTHON'
+          import base64
+          import os
+          import subprocess
+          import tempfile
+
+          repository = "dillonherring9/gta-iv-modern-ryzen-apu-config"
+          branch = "refs/heads/ccr-4757a9e5-bnnkcx"
+          expected = "7e6771b21f75d6dad5b9e5b188a6d384402f749d"
+          if os.environ["GITHUB_REPOSITORY"] != repository:
+              raise SystemExit("Unexpected repository")
+          if os.environ["GITHUB_REF"] != "refs/heads/main":
+              raise SystemExit("Cleanup must run from main")
+
+          # The complete old history was saved and verified locally before this
+          # workflow was published. This workflow never changes main or tags.
+          env = os.environ.copy()
+          credential = base64.b64encode(
+              ("x-access-token:" + env.pop("GITHUB_TOKEN")).encode()
+          ).decode()
+          env.update({
+              "GIT_CONFIG_COUNT": "1",
+              "GIT_CONFIG_KEY_0": "http.https://github.com/.extraheader",
+              "GIT_CONFIG_VALUE_0": "AUTHORIZATION: basic " + credential,
+              "GIT_TERMINAL_PROMPT": "0",
+          })
+
+          with tempfile.TemporaryDirectory() as work:
+              def git(*args):
+                  return subprocess.check_output(
+                      ["git", "-C", work, *args], env=env, text=True
+                  ).strip()
+
+              git("init", "--quiet")
+              git("remote", "add", "origin", "https://github.com/" + repository + ".git")
+
+              def heads():
+                  return {
+                      ref: sha for sha, ref in (
+                          line.split() for line in git("ls-remote", "--heads", "origin").splitlines()
+                      )
+                  }
+
+              before = heads()
+              if "refs/heads/main" not in before:
+                  raise SystemExit("Missing main branch; refusing cleanup")
+              if branch in before:
+                  if before[branch] != expected:
+                      raise SystemExit("Obsolete branch changed; refusing deletion")
+                  git("push", "--force-with-lease=" + branch + ":" + expected,
+                      "origin", ":" + branch)
+              after = heads()
+              if branch in after:
+                  raise SystemExit("Obsolete branch still exists")
+              if set(after) != {"refs/heads/main"}:
+                  raise SystemExit("Unexpected branches remain; no other branch was deleted")
+              print("PASS: main is the only branch; no main or tag ref was changed")
+          PYTHON

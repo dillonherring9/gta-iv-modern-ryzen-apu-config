@@ -10,6 +10,16 @@ source snapshot. [PROVENANCE.json](PROVENANCE.json) records origins and export
 adjustments; [VALIDATION.json](VALIDATION.json) records publication checks and
 release comparisons.
 
+The repository's **Source checks** GitHub Actions workflow runs on pushes and
+pull requests to `main`, and can also be started manually. It verifies source
+checksums and model order, then builds the current native modules and both
+fixture executables with Zig 0.13.0. Module sizes and SHA256 hashes, and fixture
+hashes, must match `VALIDATION.json`. It needs no game files and does not run
+gameplay or the Windows fixture executables. After deliberate source or
+documentation edits, refresh the affected `PROVENANCE.json` entries and
+`SHA256SUMS.txt`. If native outputs intentionally change, review and update the
+expected identities in `VALIDATION.json` from a fresh build as well.
+
 Use Python **3.11+**. Native builds require **Zig 0.13.0** and target 32-bit
 Windows. The included Opus subset is built automatically for `VCCore.asi`.
 No downloaded Windows SDK or original game files are needed for native builds.

@@ -124,13 +124,22 @@
     "confirmed": [
       "Existing long-running save loads and plays after the save-safe redo",
       "Ocean View hotel clothes pickup is a folded shirt again in the existing save",
-      "All Pole Position dancers are present"
+      "All Pole Position dancers are present",
+      "All reported development crashes resolved: no-window startup, post-save, windshield-ejection/ragdoll and Riot; Riot completed and next mission started",
+      "Road tyre sounds, Skimmer water takeoff, motorcycle helmets and blue Soiree suit in cutscenes",
+      "New ground textures viewed from the ground and the air",
+      "Later asset, voice and consolidation changes in general play"
     ],
     "retained_prior_reports": [
       "Windshield/ragdoll recovery stays running",
       "Automatic aircraft pack, gun use, deployment, steering and landing"
     ],
-    "scope": "Owner gameplay reports recorded in current245 project state and dated step245 evidence. This publication launches no game and does not certify every mission, save generation, aircraft, platform, visual surface or repeated cold start."
+    "scope": "Owner Linux/Proton gameplay reports recorded on 2026-11-10 in the current checkpoint245 project state. This metadata update and automated source/build checks launch no game.",
+    "untested": [
+      "Strict weapon attribution in some rampages",
+      "Windows",
+      "Steam Deck"
+    ]
   },
   "maintained_project_audit": {
     "pass_number": 14,

@@ -24,8 +24,8 @@
       "path": "BUILDING.md",
       "origin": "export-generated: BUILDING.md",
       "original_sha256": null,
-      "export_sha256": "8d9ea29d457aeb17ad8621adeee4ec5b1757b4952d54ce2b4abfbafd3faccdf5",
-      "bytes": 6552
+      "export_sha256": "16191bcac5e2d732ed7f7c71ebd355d6da11e12432efb41c0678d67ef9a85a81",
+      "bytes": 7236
     },
     {
       "path": "CONTRIBUTING.md",
@@ -52,8 +52,8 @@
       "path": "SOURCE-STATUS.md",
       "origin": "export-generated: SOURCE-STATUS.md",
       "original_sha256": null,
-      "export_sha256": "b5e4ac780a8b27823e26e9d7802452fc73bcf82b313eef63927d086e17c870b3",
-      "bytes": 8049
+      "export_sha256": "ffa3e56aec1be3fe78cdf24df88622836853a8cb0ccf9eb41b55ca6fe3523e62",
+      "bytes": 8534
     },
     {
       "path": "THIRD-PARTY-NOTICES.md",

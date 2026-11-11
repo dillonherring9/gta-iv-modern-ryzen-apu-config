@@ -1,6 +1,6 @@
 # Source status
 
-Snapshot: **10 November 2026**. This export covers maintained code for
+Code snapshot: **10 November 2026**; gameplay status updated **11 November 2026**. This export covers maintained code for
 **Vice City Actual Next Gen CE** through checkpoint **245**, matching the
 locally prepared `VCANGCE.Zip` release's covered scripts, native components and
 included text configuration.
@@ -101,11 +101,17 @@ save: the Ocean View hotel pickup again displays the folded shirt, and all
 Pole Position dancers remain present. The release supports continuing existing
 saves and does not require a new game for these changes.
 
-Later texture, voice and consolidation changes also have static/build evidence;
-they have not all received dedicated gameplay checks. No complete playthrough,
-every aircraft/seat, every save path, every language or all platforms have been
-separately certified. Long-term cold-start reliability and a Riot replay after
-the audio-memory change remain open gameplay checks.
+The owner confirmed on 10 November 2026 that all crashes reported during
+development are resolved in play: the no-window startup, post-save,
+windshield-ejection/ragdoll and Riot failures. Riot was completed and the next
+mission started. Road tyre sounds, Skimmer water takeoff, motorcycle helmets,
+the blue Soiree suit in cutscenes and the new ground textures, viewed from the
+ground and the air, are also confirmed in play testing. Later texture, voice
+and consolidation changes have positive general-play reports alongside their
+static/build evidence. The remaining untested parts are strict weapon
+attribution in some rampages, and Windows and Steam Deck. These gameplay
+observations come from the owner's Linux/Proton reports; this source review
+and the automated build checks do not launch the game.
 
 ## Source scope
 
