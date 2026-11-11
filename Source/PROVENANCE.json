@@ -1,11 +1,151 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "project": "Vice City Actual Next Gen CE",
-  "snapshot_date": "2026-11-08",
-  "game_version": "GTA IV Complete Edition 1.2.0.59",
-  "release_checkpoint": 224,
-  "purpose": "Maintained script and project-native sources matching Release.zip through checkpoint224. Origin identifiers are relative paths in the retained authoring archive, not dependencies on that archive.",
+  "snapshot_date": "2026-11-10",
+  "game_version": "GTA IV Complete Edition1.2.0.59",
+  "release_checkpoint": 245,
+  "purpose": "Current maintained script/native source and model-order configuration snapshot matching VCANGCE.Zip245. Relative origin identifiers document provenance; they are not build dependencies.",
   "files": [
+    {
+      "path": ".gitattributes",
+      "origin": "export-generated: .gitattributes",
+      "original_sha256": null,
+      "export_sha256": "5e7281fe5c73e3e6cc75a629fe9b4ad0fe941fb570456794cfb526fbe1487139",
+      "bytes": 222
+    },
+    {
+      "path": ".gitignore",
+      "origin": "export-generated: .gitignore",
+      "original_sha256": null,
+      "export_sha256": "0e48cb7f25951a8e966f50fd28caecfa99782f7978bb57fe98950fd1523aa10f",
+      "bytes": 195
+    },
+    {
+      "path": "BUILDING.md",
+      "origin": "export-generated: BUILDING.md",
+      "original_sha256": null,
+      "export_sha256": "8d9ea29d457aeb17ad8621adeee4ec5b1757b4952d54ce2b4abfbafd3faccdf5",
+      "bytes": 6552
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "origin": "export-generated: CONTRIBUTING.md",
+      "original_sha256": null,
+      "export_sha256": "d0711a415498a33e24d5d52d646e66e226789b60b62ed6178ff3e4556045da4b",
+      "bytes": 3359
+    },
+    {
+      "path": "CREDITS.md",
+      "origin": "export-generated: CREDITS.md",
+      "original_sha256": null,
+      "export_sha256": "8b72f2fc22abbd42cb17eda7bcaafe7a2845de09ececa2ee7f32ea5927f5c5fe",
+      "bytes": 8626
+    },
+    {
+      "path": "README.md",
+      "origin": "export-generated: README.md",
+      "original_sha256": null,
+      "export_sha256": "ae0b4c0f84952f4bbed819844a2e918ad0bcf9141ccfefed3cef1ffb25d7b760",
+      "bytes": 3713
+    },
+    {
+      "path": "SOURCE-STATUS.md",
+      "origin": "export-generated: SOURCE-STATUS.md",
+      "original_sha256": null,
+      "export_sha256": "b5e4ac780a8b27823e26e9d7802452fc73bcf82b313eef63927d086e17c870b3",
+      "bytes": 8049
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.md",
+      "origin": "export-generated: THIRD-PARTY-NOTICES.md",
+      "original_sha256": null,
+      "export_sha256": "c21ca2ba3892bb19806acf4e0ac4b477ea1f1ad87ebec2526bd2fb0196cf97e1",
+      "bytes": 2746
+    },
+    {
+      "path": "config/README.md",
+      "origin": "export-generated: config/README.md",
+      "original_sha256": null,
+      "export_sha256": "212299e5321f8e3eecf36049490375b6e55cc83d6d3723b4a8a3aa05263193a3",
+      "bytes": 3490
+    },
+    {
+      "path": "config/game/update/common/data/default.dat",
+      "origin": "release/vcangce-245/release/update/common/data/default.dat",
+      "original_sha256": "252000cafdab833502f5852bcc24d958284b27201ec1c11f393c02a81ed9ade5",
+      "export_sha256": "252000cafdab833502f5852bcc24d958284b27201ec1c11f393c02a81ed9ade5",
+      "bytes": 1013
+    },
+    {
+      "path": "config/game/update/common/data/default.ide",
+      "origin": "release/vcangce-245/release/update/common/data/default.ide",
+      "original_sha256": "5182c201313c96faf95d191b41c2210407a4c945a14ce487473e9cbc2c72cbc6",
+      "export_sha256": "5182c201313c96faf95d191b41c2210407a4c945a14ce487473e9cbc2c72cbc6",
+      "bytes": 13250
+    },
+    {
+      "path": "config/game/update/common/data/gta.dat",
+      "origin": "release/vcangce-245/release/update/common/data/gta.dat",
+      "original_sha256": "56f29aac99d7049e4a79b046091c3dcdb9d76c4ee43c7a1dd263a747c9d4aeb2",
+      "export_sha256": "56f29aac99d7049e4a79b046091c3dcdb9d76c4ee43c7a1dd263a747c9d4aeb2",
+      "bytes": 2264
+    },
+    {
+      "path": "config/game/update/common/data/peds.ide",
+      "origin": "release/vcangce-245/release/update/common/data/peds.ide",
+      "original_sha256": "1977723fae7d88c67a00f5882f1556f0da6f39ec792d5c1bcdcf79af51b4260a",
+      "export_sha256": "1977723fae7d88c67a00f5882f1556f0da6f39ec792d5c1bcdcf79af51b4260a",
+      "bytes": 99608
+    },
+    {
+      "path": "config/game/update/common/data/vehicles.ide",
+      "origin": "release/vcangce-245/release/update/common/data/vehicles.ide",
+      "original_sha256": "12ceebf3a087006b7f3f1d2f4d1abfd16afaf5f506182a43a89a1112c271ec1f",
+      "export_sha256": "12ceebf3a087006b7f3f1d2f4d1abfd16afaf5f506182a43a89a1112c271ec1f",
+      "bytes": 22908
+    },
+    {
+      "path": "config/game/update/pc/audio/Config/stationslimit.txt",
+      "origin": "release/vcangce-245/release/update/pc/audio/Config/stationslimit.txt",
+      "original_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+      "export_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+      "bytes": 2
+    },
+    {
+      "path": "config/game/update/pc/data/maps/vc_world/vc_models.ide",
+      "origin": "release/vcangce-245/release/update/pc/data/maps/vc_world/vc_models.ide",
+      "original_sha256": "23471ff2607d04dd231b82e4f7255d0c90babbba107f556881cb3d5f5db170a6",
+      "export_sha256": "23471ff2607d04dd231b82e4f7255d0c90babbba107f556881cb3d5f5db170a6",
+      "bytes": 720110
+    },
+    {
+      "path": "config/game/update/pc/data/maps/vc_world/vc_props.ide",
+      "origin": "release/vcangce-245/release/update/pc/data/maps/vc_world/vc_props.ide",
+      "original_sha256": "dacc1fd0cc536f84e50f803352d4b20b17240e7d2f551cc5fa6353339792e048",
+      "export_sha256": "dacc1fd0cc536f84e50f803352d4b20b17240e7d2f551cc5fa6353339792e048",
+      "bytes": 173772
+    },
+    {
+      "path": "config/manifest.json",
+      "origin": "export-generated: config/manifest.json",
+      "original_sha256": null,
+      "export_sha256": "c017cd30412d71def295f6ac2fb1fa0e2ca589ae74fe2d12ff7aa1e498470ce8",
+      "bytes": 4867
+    },
+    {
+      "path": "config/model-order-224.json",
+      "origin": "export-generated: config/model-order-224.json",
+      "original_sha256": null,
+      "export_sha256": "b32dbf8a446694323fbdbe74790ed344e91e25dc6c054940a8dc8f4bf6c40cbf",
+      "bytes": 277429
+    },
+    {
+      "path": "dependencies/opus-1.6/AVCNGCE-SUBSET.md",
+      "origin": "export-generated: dependencies/opus-1.6/AVCNGCE-SUBSET.md",
+      "original_sha256": null,
+      "export_sha256": "be2a6770396302d0fc52241f3819aade3c35b5a864cecbd07d9accc73fca38d9",
+      "bytes": 864
+    },
     {
       "path": "dependencies/opus-1.6/COPYING",
       "origin": "tools/dualsense-build-deps/opus-1.6/COPYING",
@@ -1996,10 +2136,10 @@
     },
     {
       "path": "native/README.md",
-      "origin": "Generated for the VCANGCE public source snapshot; updated from the checkpoint-215 native guide.",
+      "origin": "export-generated: native/README.md",
       "original_sha256": null,
-      "export_sha256": "88668c3650d57916fa6098e699ac0d85d6091ad46f3f6cbb6aea6e9e864ec490",
-      "bytes": 4020
+      "export_sha256": "4e3f17034a8b2383f685cde4dac7043bf757c959ae4a151c893d6456d71236ed",
+      "bytes": 4930
     },
     {
       "path": "native/dualsense-patches/patch_165.py",
@@ -2063,6 +2203,27 @@
       "original_sha256": "075257dadd4442e286cdf55be4760cee5ecf83b55b96b46706e5e3e83fce7c84",
       "export_sha256": "075257dadd4442e286cdf55be4760cee5ecf83b55b96b46706e5e3e83fce7c84",
       "bytes": 1313
+    },
+    {
+      "path": "native/vccore/fixture.c",
+      "origin": "research/codex-source-241-2026-11-10/staging/Source/native/vccore/fixture.c",
+      "original_sha256": "a35861af697a3c05efdb809853acc215a2fddcb77acf35428edc0d0d4698881a",
+      "export_sha256": "a35861af697a3c05efdb809853acc215a2fddcb77acf35428edc0d0d4698881a",
+      "bytes": 3159
+    },
+    {
+      "path": "native/vccore/startup_log.h",
+      "origin": "steps/220-native-startup-locks/src/startup_log.h",
+      "original_sha256": "b9a15cfcdc255838eda8f0b0a3afc309613ebd5526c640e8be40281fa0b1476a",
+      "export_sha256": "b9a15cfcdc255838eda8f0b0a3afc309613ebd5526c640e8be40281fa0b1476a",
+      "bytes": 1371
+    },
+    {
+      "path": "native/vccore/vccore.c",
+      "origin": "steps/235-native-plugin-consolidation/src/vccore.c",
+      "original_sha256": "5fba3f33ff604e245c2176fa4873dabf4195919f6c1dfdd188730c7f000411bf",
+      "export_sha256": "5fba3f33ff604e245c2176fa4873dabf4195919f6c1dfdd188730c7f000411bf",
+      "bytes": 4218
     },
     {
       "path": "native/vcmemory/known_scenes.h",
@@ -2184,6 +2345,13 @@
       "bytes": 9417
     },
     {
+      "path": "requirements.txt",
+      "origin": "export-generated: requirements.txt",
+      "original_sha256": null,
+      "export_sha256": "05a249a43370cf229d8605fc048bbb5248a6ca0cf0f2e39781d326cb85248018",
+      "bytes": 100
+    },
+    {
       "path": "scripts/AVERY.scasm",
       "origin": "project/sources/scripts-live/AVERY.scasm",
       "original_sha256": "ec6093bbadb7df02fd323f0b0107ee7659695226eb2c966a40d6cc3ae2ad7739",
@@ -2297,10 +2465,10 @@
     },
     {
       "path": "scripts/README.md",
-      "origin": "Generated/updated for current VCANGCE checkpoint224 public build contract.",
+      "origin": "export-generated: scripts/README.md",
       "original_sha256": null,
-      "export_sha256": "f1d9e2427bbb9af6f061a95784471cc269976886a22e15a939e4a4120e542581",
-      "bytes": 4908
+      "export_sha256": "7b3340101ca54fd0de26eb94a08404129c2fbaf30105fb6b91c6c135ac94a71f",
+      "bytes": 6362
     },
     {
       "path": "scripts/ROCK.scasm",
@@ -2312,9 +2480,9 @@
     {
       "path": "scripts/STRIP.scasm",
       "origin": "project/sources/scripts-live/STRIP.scasm",
-      "original_sha256": "9e3ec2dbcb28ca07ecf980aaa1a076b1e5abc7f5e20b5eccd0441781acd101ef",
-      "export_sha256": "9e3ec2dbcb28ca07ecf980aaa1a076b1e5abc7f5e20b5eccd0441781acd101ef",
-      "bytes": 508660
+      "original_sha256": "321b1e881acd5725f00f8202a1e1a089927035d66625c0deda922ec7e9802af7",
+      "export_sha256": "321b1e881acd5725f00f8202a1e1a089927035d66625c0deda922ec7e9802af7",
+      "bytes": 478430
     },
     {
       "path": "scripts/WORLD.scasm",
@@ -2326,9 +2494,9 @@
     {
       "path": "scripts/ambstreams.scasm",
       "origin": "project/sources/scripts-live/ambstreams.scasm",
-      "original_sha256": "d7786893dca00e4ee935554863201c25a3dc9c42e19d8f838823035160b4820e",
-      "export_sha256": "d7786893dca00e4ee935554863201c25a3dc9c42e19d8f838823035160b4820e",
-      "bytes": 155078
+      "original_sha256": "a379038f89a6e161646f30626b50374a48a82553de723bfe1176ebd46e11e759",
+      "export_sha256": "a379038f89a6e161646f30626b50374a48a82553de723bfe1176ebd46e11e759",
+      "bytes": 324891
     },
     {
       "path": "scripts/ambulance.scasm",
@@ -2437,10 +2605,10 @@
     },
     {
       "path": "scripts/manifest.json",
-      "origin": "Generated/updated for current VCANGCE checkpoint224 public build contract.",
+      "origin": "export-generated: scripts/manifest.json",
       "original_sha256": null,
-      "export_sha256": "a5c585e9f0bc2935772217d97e5e61f673628c66045dfbdddf610740f7d97074",
-      "bytes": 49370
+      "export_sha256": "d0beab4351a56dfe60a0a44c19d48b9da0ad5c302528d67e4ddcdd2efb098ba3",
+      "bytes": 1480158
     },
     {
       "path": "scripts/map_bounds.scasm",
@@ -2451,7 +2619,7 @@
     },
     {
       "path": "scripts/members.txt",
-      "origin": "Generated/updated for current VCANGCE checkpoint224 public build contract.",
+      "origin": "export-generated: scripts/members.txt",
       "original_sha256": null,
       "export_sha256": "d89312961be214a0066fb84c8eb23ffaa58d26b194ebebd9f2a4ff99f27a7ec6",
       "bytes": 1505
@@ -2878,24 +3046,52 @@
     },
     {
       "path": "tools/build_native.py",
-      "origin": "Portable public builder updated for VCANGCE from the checkpoint-215 source export.",
+      "origin": "export-generated: tools/build_native.py",
       "original_sha256": null,
-      "export_sha256": "31877932435e72890d0b48379209951cf81ae721e20cdfff6aab855b7f7179a0",
-      "bytes": 6879
+      "export_sha256": "db083bfa6ac29bc9d72893cd72f3e2672bddd083a78ba819f4e646546186d996",
+      "bytes": 8705
     },
     {
       "path": "tools/build_scripts.py",
-      "origin": "Generated/updated for current VCANGCE checkpoint224 public build contract.",
+      "origin": "export-generated: tools/build_scripts.py",
       "original_sha256": null,
-      "export_sha256": "6695884e36a4416ff43d04f1f3ae98cae5a952d4c19e96d2c5f3a980d5dfa28e",
-      "bytes": 7211
+      "export_sha256": "550dfe1625d863e3f4fde36e6690913184f6f4b94096f5a4cf21b6247296bc73",
+      "bytes": 10533
+    },
+    {
+      "path": "tools/check_model_order.py",
+      "origin": "steps/245-dancer-peds-after-objects/src/model_order2.py",
+      "original_sha256": "bbdc65db4c1d59d549ea21604d0f479519b6cca710d83961e6f3266061951e94",
+      "export_sha256": "202c2a84366226caf56a9bc7d5d28d59ab482dcab2aec1e6bb358b291d37ba03",
+      "bytes": 9043
+    },
+    {
+      "path": "tools/check_script_contracts.py",
+      "origin": "export-generated: tools/check_script_contracts.py",
+      "original_sha256": null,
+      "export_sha256": "02e1d0c6d733ef1a998c7515ba130e1a2e992cbe5a0ba5ef1dc3483d84812e2f",
+      "bytes": 9207
+    },
+    {
+      "path": "tools/patch_dualsense.py",
+      "origin": "export-generated: tools/patch_dualsense.py",
+      "original_sha256": null,
+      "export_sha256": "a905f8b2c97e9d7d57b17c9b1673c3c494afec114c17cee11c316a9ce323af9c",
+      "bytes": 2266
+    },
+    {
+      "path": "tools/requirements-patches.txt",
+      "origin": "export-generated: tools/requirements-patches.txt",
+      "original_sha256": null,
+      "export_sha256": "a90de62a285a70c562933715d37e36c4304df5490adb9cf878ffc972b11cd738",
+      "bytes": 18
     },
     {
       "path": "tools/scoasm/build_img.py",
       "origin": "tools/scoasm/build_img.py",
-      "original_sha256": "deb9df081d2a103f54fed0a2826652f27d7a3d2ae45ab734454a18982b8424bc",
-      "export_sha256": "deb9df081d2a103f54fed0a2826652f27d7a3d2ae45ab734454a18982b8424bc",
-      "bytes": 1920
+      "original_sha256": "e943564d016d11df8b863c6ee03a6a2c0de62ab2c82119480042f3cc2cd1a133",
+      "export_sha256": "6334375edd1ce3a752017dcca8a70a1c2a6b755d1a0e4f5105154103d1379eef",
+      "bytes": 6535
     },
     {
       "path": "tools/scoasm/natives32.h",
@@ -2905,23 +3101,32 @@
       "bytes": 266069
     },
     {
+      "path": "tools/scoasm/project_scripts.py",
+      "origin": "tools/scoasm/project_scripts.py",
+      "original_sha256": "44995f181fb4ebf9fdfb520b2ca6f0cd018240f72a2ff6b8a92d5c041046da01",
+      "export_sha256": "44995f181fb4ebf9fdfb520b2ca6f0cd018240f72a2ff6b8a92d5c041046da01",
+      "bytes": 3796
+    },
+    {
       "path": "tools/scoasm/scoasm.py",
       "origin": "tools/scoasm/scoasm.py",
       "original_sha256": "7b1f24cf406c7c530623fbfa043c265dab60caab9ec07fb29ad90792438b83ea",
       "export_sha256": "34adcb9bdc9e3ff4901dda21c41c737d4cdcd2ef1a3fef2677d8cf5a08416351",
       "bytes": 11401
+    },
+    {
+      "path": "tools/verify_source.py",
+      "origin": "export-generated: tools/verify_source.py",
+      "original_sha256": null,
+      "export_sha256": "11b733563f903d419aa8595260d3a15942f66566d40b72687aa0a99c09e4b1c4",
+      "bytes": 1447
     }
   ],
   "export_adaptations": [
-    {
-      "file": "scripts/members.txt",
-      "change": "Recreated all96 member names/order/resource types and resource header from current released script.img; archive metadata and allocations reproduce exactly."
-    },
-    {
-      "file": "tools/scoasm/scoasm.py",
-      "change": "Retains portable removal of the private historical dependency fallback; requires pinned FourFury0.13.3. Includes the maintained signed16 PushS decode/encode and overflow rejection from checkpoint224."
-    }
+    "Portable builders resolve inputs relative to this Source directory; game encryption material is read transiently from an owned executable and is not exported.",
+    "Mixed script builds require the current release resource baseline; preserve4200 noncanonical allocations and assemble96 covered scripts.",
+    "VCCore combines unchanged component translation units behind the maintained dispatcher; optional legacy native outputs remain available for development.",
+    "Eight loader/IDE/station-limit text files and a portable model-order checker capture the245 save-numbering correction. Binary audio/model/texture assets and the complete asset-authoring pipeline are outside this code export."
   ],
-  "generated_files": "Portable build/patch/verification helpers, documentation, metadata and checksums were created or updated for this export. tools/check_script_contracts.py checks signed operands and immediate global-address bounds; its tested scope is in VALIDATION.json. Generated-file identities appear in SHA256SUMS.txt.",
-  "scope": "Five native project release modules,96 exact editable game-script sources, unchanged vendor patch scripts and portable build helpers; source-only package. VCPhysicsCheck is an optional diagnostic excluded from this playable release and this source snapshot."
+  "generated_files": "Documentation, build/verification wrappers, model-order contract and metadata/checksums are curated for this export; all published files except SHA256SUMS itself are covered by the checksum manifest."
 }

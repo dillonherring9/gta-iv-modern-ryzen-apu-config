@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build VCANGCE's five release-native modules without reading or installing a game.
+"""Build VCANGCE's current project-native modules without reading or installing a game.
 
 Requires Python 3.9+ and Zig 0.13.0. All intermediate and compiled files stay
 under --out; sources and bundled dependencies are read only.
@@ -16,7 +16,10 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-MODULES = ("vcmusic", "vcmemory", "vcsh_loader", "scripthook", "vcaudioheap")
+MODULES = ("vccore", "scripthook")
+LEGACY_MODULES = ("vcmusic", "vcmemory", "vcsh_loader", "vcaudioheap")
+CORE_MODULES = (("vcaudioheap", "vcaudioheap.c"), ("vcmemory", "vcmemory.c"),
+                ("vcmusic", "vcmusic.c"), ("vcsh_loader", "vcsh_loader.c"))
 
 
 def run(command):
@@ -79,6 +82,30 @@ def build_opus(zig, output, jobs):
                      "sha256": sha256(library), "bytes": library.stat().st_size}
 
 
+def build_core(base, output, library):
+    """Keep the four unchanged modules in separate translation units."""
+    work = output / "vccore-objects"
+    work.mkdir(parents=True, exist_ok=True)
+    objects = []
+    for module, filename in CORE_MODULES:
+        source = ROOT / "native" / module
+        obj = work / (module + ".o")
+        run([*base, "-fno-common", "-DDllMain=" + module + "_DllMain",
+             "-I" + str(source), "-I" + str(ROOT / "dependencies/opus-1.6/include"),
+             "-c", "-o", str(obj), str(source / filename)])
+        objects.append(obj)
+    source = ROOT / "native/vccore"
+    obj = work / "vccore.o"
+    run([*base, "-fno-common", "-I" + str(source), "-c", "-o", str(obj),
+         str(source / "vccore.c")])
+    objects.append(obj)
+    target = output / "VCCore.asi"
+    run([base[0], "cc", "-target", "x86-windows-gnu", "-O2", "-shared", "-s",
+         "-o", str(target), *map(str, objects), str(library), "-lpsapi", "-lsetupapi",
+         "-lhid", "-lole32", "-lwinmm"])
+    return target
+
+
 def build(args):
     compiler = shutil.which(args.zig)
     if not compiler:
@@ -95,14 +122,17 @@ def build(args):
     library = None
     report = {"compiler_version": version, "target": "x86-windows-gnu",
               "pe_coff_timestamp": 0, "modules": {}}
-    if "vcsh_loader" in chosen:
+    if any(module in chosen for module in ("vcsh_loader", "vccore")):
         library, report["opus"] = build_opus(compiler, output, args.jobs)
     base = [compiler, "cc", "-target", "x86-windows-gnu", "-O2",
             "-Wall", "-Wextra", "-Wno-misleading-indentation"]
     for module in chosen:
         source = ROOT / "native" / module
         extra = []
-        if module == "vcmusic":
+        if module == "vccore":
+            target = build_core(base, output, library)
+            name = target.name
+        elif module == "vcmusic":
             name, inputs, flags = "VCMusic.asi", [source / "vcmusic.c"], []
         elif module == "vcmemory":
             name, inputs = "VCMemory.asi", [source / "vcmemory.c"]
@@ -117,10 +147,11 @@ def build(args):
         else:
             name, inputs = "VCAudioHeap.asi", [source / "vcaudioheap.c"]
             flags = []
-        target = output / name
-        command = [*base, *flags, "-shared", "-s", "-o", str(target),
-                   *map(str, inputs), *extra]
-        run(command)
+        if module != "vccore":
+            target = output / name
+            command = [*base, *flags, "-shared", "-s", "-o", str(target),
+                       *map(str, inputs), *extra]
+            run(command)
         normalize_pe_timestamp(target)
         for suffix in (".lib", ".pdb"):
             target.with_suffix(suffix).unlink(missing_ok=True)
@@ -128,12 +159,15 @@ def build(args):
                                      "sha256": sha256(target)}
         print(name + " " + sha256(target), flush=True)
     if args.fixtures:
-        fixture = output / "vcaudioheap-fixture.exe"
-        run([*base, "-s", "-Wall", "-Wextra", "-Werror",
-             str(ROOT / "native/vcaudioheap/fixture.c"), "-o", str(fixture)])
-        normalize_pe_timestamp(fixture)
-        report["fixture"] = {"file": fixture.name, "sha256": sha256(fixture),
-                             "status": "Built; run explicitly under Windows or Wine."}
+        report["fixtures"] = []
+        for module in ("vcaudioheap", "vccore"):
+            fixture = output / (module + "-fixture.exe")
+            fixture_flags = ["-Wno-unused-function"] if module == "vccore" else []
+            run([*base, "-s", "-Wall", "-Wextra", "-Werror", *fixture_flags,
+                 str(ROOT / "native" / module / "fixture.c"), "-o", str(fixture)])
+            normalize_pe_timestamp(fixture)
+            report["fixtures"].append({"file": fixture.name, "sha256": sha256(fixture),
+                                       "status": "Built; run explicitly under Windows or Wine."})
     (output / "native-build.json").write_text(json.dumps(report, indent=2) + "\n")
 
 
@@ -141,9 +175,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--zig", default="zig", help="Zig 0.13.0 executable")
     parser.add_argument("--out", default=str(ROOT / "build/native"), help="Build output directory")
-    parser.add_argument("--module", choices=("all", *MODULES), default="all")
+    parser.add_argument("--module", choices=("all", *MODULES, *LEGACY_MODULES), default="all",
+                        help="Default: current VCCore + ScriptHook ABI DLL. Legacy IDs build historical standalone ASIs.")
     parser.add_argument("--jobs", type=int, default=4, help="Parallel Opus compiler jobs")
-    parser.add_argument("--fixtures", action="store_true", help="Also build the audio-heap guard fixture")
+    parser.add_argument("--fixtures", action="store_true",
+                        help="Also build isolated audio-heap and VCCore dispatcher fixtures")
     args = parser.parse_args()
     if args.jobs < 1:
         parser.error("--jobs must be at least 1")

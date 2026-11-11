@@ -25,7 +25,8 @@ Vice City Actual Next Gen CE brings together the work of many creators. The orig
 - **Rockstar Games / The Ballad of Gay Tony** — the original parachute scripts, models, animations and sounds used by the native parachute integration supplied through 8.0 and adapted for CE here.
 - **LotsofEds / ServalEd** — [MoveImprove](https://github.com/LotsofEds/MoveImproveIV-SDK), whose parachute animation/ragdoll compatibility predicate is translated into the existing native movement script.
 - **mmtsrn1** — [New Tire Skid Sound / BeamNG Sound Mod V2](https://www.beamng.com/threads/new-tire-skid-sound-updated.9056/), adapted into the road-skid sounds and matching controller audio.
-- **metalwars** and **Kevin1230san** — the Pole Position nude dancer models.
+- **metalwars** and **Kevin1230san** — the Pole Position nude dancer models, including the source models used for the added dancer variations.
+- **BrynnaDaRosa** — **Playboy Bunny Niko Bellic**, the source of the black bunny ears, bow-tie collar and cuffs adapted for two Pole Position dancers. The original author’s page is [Brynna on Patreon](https://www.patreon.com/Brynna).
 - **CGP** — Enhanced Fighting And Euphoria, with features rebuilt natively here.
 - **catsmackaroo, ItsClonkAndre and LibertyTweaks contributors** — [LibertyTweaks](https://github.com/catsmackaroo/LibertyTweaks), with selected features reimplemented natively; **Zolika1351** — ZMenu, a reference for the F7 menu.
 - **Arcenciel1991** — [GTA VC Actual NextGen Japanese Translation](https://www.nexusmods.com/grandtheftautovicecity/mods/695), including its Japanese font.

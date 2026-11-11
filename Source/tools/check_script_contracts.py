@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check signed PushS and direct-immediate globals in a 96-script VCANGCE IMG.
+"""Check signed PushS and direct-immediate globals in the 96 canonical scripts of a VCANGCE IMG.
 
 Requires the same fourfury/openssl dependencies as build_scripts.py. This is a
 focused bytecode audit, not a proof of computed indices or gameplay behavior.
@@ -65,7 +65,7 @@ def immediate(name: str, value: object) -> int | None:
 
 
 def audit_image(data: bytes, key: bytes) -> dict:
-    image = build_scripts.inspect_image(data)
+    image = build_scripts.inspect_image(data, canonical_only=True)
     decoded, declarations = [], []
     for member in image["members"]:
         name, start, size = member["name"], member["offset"], member["size"]
@@ -122,7 +122,7 @@ def constant_signature(audit: dict) -> Counter:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--exe", type=Path, required=True, help="your owned GTAIV.exe, read only")
-    parser.add_argument("--image", type=Path, required=True, help="current 96-member script.img, read only")
+    parser.add_argument("--image", type=Path, required=True, help="current mixed or 96-member script.img, read only")
     parser.add_argument("--negative-control", type=Path, help="optional older image expected to fail the global-range audit")
     parser.add_argument("--report", type=Path, help="new JSON file outside this source export and the game")
     args = parser.parse_args()
@@ -145,7 +145,7 @@ def main() -> int:
         passed = not current["invalid_immediate_global_refs"]
         result = dict(schema_version=1, result="PASS" if passed else "FAIL",
                       signed_operands=boundaries, current_image=current,
-                      scope="Direct adjacent integer-immediate GetGlobalPs operands only; computed indices, control flow, native behavior and gameplay are not proved. Global bound comes from the encrypted archive's sole nonzero SCO global-storage header. No key or local input paths are recorded.")
+                      scope="Direct adjacent integer-immediate GetGlobalPs operands only; computed indices, control flow, native behavior and gameplay are not proved. Global bound comes from the canonical scripts' sole nonzero SCO global-storage header. Network scripts and non-SCO resources are excluded by the explicit 96-member source manifest. No key or local input paths are recorded.")
         if control:
             old = audit_image(control.read_bytes(), key)
             preserved = constant_signature(current) == constant_signature(old)

@@ -1,146 +1,82 @@
 {
-  "schema_version": 1,
-  "snapshot_date": "2026-11-08",
-  "target": "x86-windows-gnu",
+  "schema_version": 2,
+  "release_checkpoint": 245,
+  "release_archive": {
+    "file": "VCANGCE.Zip",
+    "bytes": 8608466670,
+    "sha256": "2d61d36df0b901dca19d995531a6791f1c470924bda9a970cdd382afcb91cdff",
+    "scope": "User-prepared245 playable package; source publication does not upload or modify release assets."
+  },
   "script_image": {
-    "file": "update/common/data/cdimages/script.img",
-    "sha256": "c5ac224906cb430cfb77df39e14a4bb41ba2aaa3b46311a0d2df28e114f859b8",
-    "members": 96,
-    "whole_image_exact_match_to_release": true,
-    "member_bytes_metadata_and_allocations_exact": true,
-    "bytes": 5967872,
-    "verification_scope": "Fresh build from all96 exported sources with the portable builder and documented pinned dependency, compared byte-for-byte against Release.zip payload; all member metadata and allocated padding match."
+    "bytes": 859693056,
+    "sha256": "68fb5dd25c4e8f2406545634f7eeff87bd6b4484bc854039d49d4e824cd8b604",
+    "container_members": 4296,
+    "canonical_scripts": 96,
+    "network_scripts": 21,
+    "other_resources": 4179,
+    "verification_scope": "Fresh assembly from all96 exported sources plus the current release resource baseline; complete byte-for-byte identity with live and release245 image, every member and allocated byte.",
+    "preserved_resources": {
+      "result": "PASS",
+      "complete_allocations": 4200,
+      "additional_scripts": 21,
+      "other_resources": 4179,
+      "exact_order_types_flags_and_allocations": true,
+      "scope": "Every noncanonical member is preserved, including all 21 network SCOs and 4,179 other resources. Sector offsets may relocate if an edited canonical SCO changes allocation size."
+    }
   },
   "native_modules": [
     {
-      "file": "VCMusic.asi",
-      "bytes": 57856,
-      "release_sha256": "0078d8acc3f3dbc18ea0046cf10e393593a6b55a69693994db0069737a199c56",
-      "rebuilt_sha256": "0078d8acc3f3dbc18ea0046cf10e393593a6b55a69693994db0069737a199c56",
-      "exact_raw_match": true,
-      "exact_timestamp_normalized_match": true,
-      "difference_count": 0,
-      "verification_scope": "Retained checkpoint221 fresh exact-build result; source/build inputs and current release binary identity rechecked unchanged for224. Not recompiled during this source update."
+      "module": "vccore",
+      "file": "VCCore.asi",
+      "bytes": 527360,
+      "release_sha256": "742c351873a5355958fb890457fbf22f4dfaa97fa013ed461b4bbb5892e00f7c",
+      "rebuilt_sha256": "742c351873a5355958fb890457fbf22f4dfaa97fa013ed461b4bbb5892e00f7c",
+      "verification_scope": "Fresh Zig0.13.0 compile from the exported source and bundled Opus subset; exact current245 release and live bytes."
     },
     {
-      "file": "VCMemory.asi",
-      "bytes": 48128,
-      "release_sha256": "5ad580be6c58661dac25e4aa8831e6f74ac6926f49fa2b8391d38173b31028fb",
-      "rebuilt_sha256": "5ad580be6c58661dac25e4aa8831e6f74ac6926f49fa2b8391d38173b31028fb",
-      "exact_raw_match": true,
-      "exact_timestamp_normalized_match": true,
-      "difference_count": 0,
-      "verification_scope": "Retained checkpoint221 fresh exact-build result; source/build inputs and current release binary identity rechecked unchanged for224. Not recompiled during this source update."
-    },
-    {
-      "file": "VCScriptHook.asi",
-      "bytes": 493056,
-      "release_sha256": "c52896b80abfaa9e4f69dfc95c3653d9e46ec07087ec96f6d183641e8bac835c",
-      "rebuilt_sha256": "c52896b80abfaa9e4f69dfc95c3653d9e46ec07087ec96f6d183641e8bac835c",
-      "exact_raw_match": true,
-      "exact_timestamp_normalized_match": true,
-      "difference_count": 0,
-      "verification_scope": "Retained checkpoint221 fresh exact-build result; source/build inputs and current release binary identity rechecked unchanged for224. Not recompiled during this source update."
-    },
-    {
+      "module": "scripthook",
       "file": "ScriptHook.dll",
       "bytes": 133632,
       "release_sha256": "5071926931d9f82285cb0e7fade442fd9cf7743877109201980f08b6926bf1b9",
       "rebuilt_sha256": "5071926931d9f82285cb0e7fade442fd9cf7743877109201980f08b6926bf1b9",
-      "exact_raw_match": true,
-      "exact_timestamp_normalized_match": true,
-      "difference_count": 0,
-      "verification_scope": "Retained checkpoint221 fresh exact-build result; source/build inputs and current release binary identity rechecked unchanged for224. Not recompiled during this source update."
-    },
-    {
-      "file": "VCAudioHeap.asi",
-      "bytes": 33280,
-      "release_sha256": "9dbe0eae16c6c5f1909efed2955d44a8a5d68b772b65ba02631c45a185105b7c",
-      "rebuilt_sha256": "9dbe0eae16c6c5f1909efed2955d44a8a5d68b772b65ba02631c45a185105b7c",
-      "exact_raw_match": true,
-      "exact_timestamp_normalized_match": true,
-      "difference_count": 0,
-      "verification_scope": "Retained checkpoint221 fresh exact-build result; source/build inputs and current release binary identity rechecked unchanged for224. Not recompiled during this source update."
+      "verification_scope": "Fresh Zig0.13.0 compile from the exported source and bundled Opus subset; exact current245 release and live bytes."
     }
   ],
-  "compiler": {
-    "name": "Zig",
-    "version": "0.13.0",
-    "retained_compiler_sha256": "7f9e3a661e909d5188d1b8b14f082b98a19c323a30d43bfdd1b2893ed37273e0"
-  },
-  "dependencies": {
-    "fourfury": "0.13.3",
-    "openssl_required": true,
-    "opus": {
-      "version": "1.6",
-      "upstream": "https://github.com/xiph/opus/tree/v1.6",
-      "source_archive_sha256": "a9f9f04196174e4a1bdb5e0c5a85e36ebbd45a18cbbbb8be5024c59b3c001964",
-      "translation_units": 137
-    },
-    "pefile_optional_patches": "2024.8.26"
-  },
-  "dualsense_patch": {
-    "status": "PASS",
-    "input_sha256": "ba15d63140a05359b762abe1bdde09bda7f6204bec33b2614e19d2602e72a8b4",
-    "final_sha256": "03bae1ada2e9b9503233f10810118c4bb37d9ee152371abbf38f5130999240eb",
-    "exact_release_match": true,
-    "vendor_binary_included": false,
-    "verification_scope": "Retained exact chain result from2026-11-07; both exported patch scripts, original supported input identity and current release output identity are unchanged."
-  },
-  "native_fixture": {
-    "status": "Retained checkpoint221 fixture compile, not newly compiled or run during224 source update. Prior installed-step fixtures and gameplay reports are separate.",
-    "sha256": "8f9b56000ab77a58ce2c6fc78efd70dbefaa301dbc9994bf7c9f96bdd87cf749"
-  },
-  "gameplay": {
-    "reported_date": "2026-11-08",
-    "release_checkpoint": 224,
-    "confirmed": [
-      "Same high-speed windshield-ejection/rolling test stays running normally",
-      "Automatic aircraft pack and holding a gun while wearing it",
-      "Parachute deployment and landing"
-    ],
-    "prior_221_confirmed": [
-      "Save loads and Tommy can play",
-      "Parachute steering"
-    ],
-    "scope": "Owner gameplay reports after224 impact/parachute correction; source publication does not launch the game. Individual aircraft/seat, mission, language, platform, terrain appearance and long-term repeated cold-start coverage remain separately unestablished."
-  },
-  "project": "Vice City Actual Next Gen CE",
-  "release_checkpoint": 224,
   "native_verification": {
     "status": "PASS",
-    "code_files_unchanged_from_221": 26,
-    "binary_hashes_rechecked": 5,
-    "build_helper_unchanged": true,
-    "retained_exact_build_checkpoint": 221,
-    "dependency_files_unchanged_from_221": 285
-  },
-  "signed_operand_repair": {
-    "positive_global_loads_widened": 443,
-    "intentional_negative_constants_operand_bytes_preserved": 7,
-    "protected_parachute_animation_names": 30,
-    "failed_223_native_guard_absent": true,
-    "tooling": "PushS signed16 decoding/encoding and overflow rejection; portable check_script_contracts.py audits immediate global-address bounds and includes old221 negative control. Computed indices are reported separately and require runtime/dataflow review."
-  },
-  "release_archive": {
-    "file": "Release.zip",
-    "bytes": 8500386545,
-    "sha256": "fdd061a4e8c69bf0bb8af22e146ee00e881d3c405009217b83665e267e74afc4",
-    "scope": "Playable release identity; no game assets or binaries included in this source export."
+    "compiler_version": "0.13.0",
+    "target": "x86-windows-gnu",
+    "pe_coff_timestamp": 0,
+    "opus": {
+      "version": "1.6",
+      "source_count": 137,
+      "sha256": "446dec2d419c07fc95279f4d1df9ea93d1a005ce2da22bc7de5a8504416b5e18",
+      "bytes": 2977474
+    },
+    "fixtures": [
+      {
+        "file": "vcaudioheap-fixture.exe",
+        "sha256": "8f9b56000ab77a58ce2c6fc78efd70dbefaa301dbc9994bf7c9f96bdd87cf749",
+        "status": "Built; run explicitly under Windows or Wine."
+      },
+      {
+        "file": "vccore-fixture.exe",
+        "sha256": "dd84279d316554bf21f2a3d013258a3fcc7972d54b27d8b405f7c00f0b60801e",
+        "status": "Built; run explicitly under Windows or Wine."
+      }
+    ],
+    "scope": "Current two native outputs freshly compiled and compared with release/live. Optional fixtures were compiled but not run during publication."
   },
   "script_contracts": {
     "result": "PASS",
-    "tool": "tools/check_script_contracts.py",
-    "tool_sha256": "97831297610f79be9a5ccfadc3e850715fb613de3f9c6d76108d2ab74c4bb9b5",
-    "current_image_sha256": "c5ac224906cb430cfb77df39e14a4bb41ba2aaa3b46311a0d2df28e114f859b8",
+    "current_image_sha256": "68fb5dd25c4e8f2406545634f7eeff87bd6b4484bc854039d49d4e824cd8b604",
     "global_storage": {
       "member": "startup.sco",
       "words": 65055
     },
-    "direct_immediate_global_refs": 5273,
-    "computed_or_other_global_refs": 0,
+    "direct_immediate_global_refs": 5278,
     "invalid_immediate_global_refs": 0,
-    "negative_short_constants": 7,
+    "intentional_negative_short_constants": 7,
     "negative_control_sha256": "45d88ccd17266d11def98ff9715afa82f128d3d8a24a37541c2baf48d439aa64",
     "negative_control_invalid_refs": 443,
     "negative_constant_operands_preserved": true,
@@ -170,6 +106,42 @@
         65535
       ]
     },
-    "scope": "Direct adjacent integer-immediate GetGlobalPs operands only; computed indices, control flow, native behavior and gameplay are not proved. Global bound comes from the encrypted archive's sole nonzero SCO global-storage header. No key or local input paths are recorded."
-  }
+    "scope": "Direct adjacent integer-immediate GetGlobalPs operands only; computed indices, control flow, native behavior and gameplay are not proved. Global bound comes from the canonical scripts' sole nonzero SCO global-storage header. Network scripts and non-SCO resources are excluded by the explicit 96-member source manifest. No key or local input paths are recorded."
+  },
+  "model_order_contract": {
+    "result": "PASS",
+    "tool": "tools/check_model_order.py",
+    "manifest": "config/manifest.json",
+    "legacy_models": 5740,
+    "appended_dancers": 8,
+    "total_models": 5748,
+    "station_limit": 10,
+    "scope": "One shared model list includes peds; default hier entries are excluded and only MLO headers count. Original posted224 model sequence is the exact prefix, with dancer07\u201314 appended last. Radio241station-list change is undone."
+  },
+  "gameplay": {
+    "current_checkpoint": 245,
+    "reported_date": "2026-11-10",
+    "confirmed": [
+      "Existing long-running save loads and plays after the save-safe redo",
+      "Ocean View hotel clothes pickup is a folded shirt again in the existing save",
+      "All Pole Position dancers are present"
+    ],
+    "retained_prior_reports": [
+      "Windshield/ragdoll recovery stays running",
+      "Automatic aircraft pack, gun use, deployment, steering and landing"
+    ],
+    "scope": "Owner gameplay reports recorded in current245 project state and dated step245 evidence. This publication launches no game and does not certify every mission, save generation, aircraft, platform, visual surface or repeated cold start."
+  },
+  "maintained_project_audit": {
+    "pass_number": 14,
+    "commands": 38,
+    "failures": 0,
+    "flags": 0,
+    "scope": "Retained latest245 project audit, separate from fresh source-export builds."
+  },
+  "source_gaps": [
+    "Game executables, compiled plugins and binary game assets are excluded.",
+    "The21 network scripts and4179 other mixed-IMG resources are preserved from the user-supplied release baseline, not rebuilt from original source here.",
+    "Vendor modules and full map/model/texture/collision/audio authoring are outside the curated code/config export."
+  ]
 }

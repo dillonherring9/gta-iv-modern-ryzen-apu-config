@@ -1,82 +1,128 @@
 # Source status
 
-Snapshot: **8 November 2026**. This export covers maintained code for
-**Vice City Actual Next Gen CE** through checkpoint **224**.
+Snapshot: **10 November 2026**. This export covers maintained code for
+**Vice City Actual Next Gen CE** through checkpoint **245**, matching the
+locally prepared `VCANGCE.Zip` release's covered scripts, native components and
+included text configuration.
 
 ## Covered code
 
-- All **96** current SCO scripts are editable assembly, including the three
-  imported parachute controllers, the wearable-aircraft adapter and movement
-  compatibility changes. Five scripts change from checkpoint 221: the four
-  parachute scripts correct signed global addressing, and `vc_euphoria`
-  restores landing exclusions and the installed deceleration animation name.
-- Five release-native modules are included: `VCMusic.asi`, `VCMemory.asi`,
-  `VCScriptHook.asi`, `ScriptHook.dll` and `VCAudioHeap.asi`. Their current
-  authoring sources include the checkpoint 219–220 startup-lock repairs and
-  are unchanged from the checkpoint-221 source export. Checkpoint 224 restores
-  that exact `VCMemory.asi`; the unsuccessful checkpoint-223 diagnostic guard
-  is absent.
+- All **96** current SCO scripts are editable assembly, including the imported
+  parachute controllers, wearable-aircraft adapter, movement compatibility
+  changes and expanded Pole Position behavior. The later club changes preserve
+  Vice City's asset progression while adding pole/table dancers, two floor
+  dancers and GTA IV-style private lap dances. Their required models, accessories
+  and other binary assets belong to the playable release.
+- The five maintained native component sources are included: audio heap, memory,
+  music, controller loader and ScriptHook shim. Four unchanged module sources
+  are now linked behind the checkpoint-235 dispatcher as **VCCore.asi**;
+  **ScriptHook.dll** remains separate for its ABI. Earlier standalone builds
+  remain selectable for development. Existing settings and startup repairs are
+  retained; the unsuccessful checkpoint-223 diagnostic guard is absent.
 - The two hash-guarded DualSense patches are included. The original vendor
   binary and its full source are not included.
+- The [configuration snapshot](config/README.md) contains the current text
+  loaders, IDE model definitions and radio station limit, together with a
+  frozen posted-release model-order baseline and a read-only checker. It
+  records the save-safe model layout installed by checkpoint 245.
 
-The current installed/release script image SHA256 is
-`c5ac224906cb430cfb77df39e14a4bb41ba2aaa3b46311a0d2df28e114f859b8`.
-[scripts/manifest.json](scripts/manifest.json) records member metadata and
-source hashes. Native builds write `native-build.json` with output identities.
+The checkpoint-245 mixed `script.img` SHA256 is
+`68fb5dd25c4e8f2406545634f7eeff87bd6b4484bc854039d49d4e824cd8b604`.
+Its **4,296** members comprise **96** covered gameplay scripts, **21** unchanged
+network scripts and **4,179** other resources. The latter **4,200** members are
+preserved from a user-supplied, hash-guarded release archive during a build;
+their bytes are not embedded in this source export.
+[scripts/manifest.json](scripts/manifest.json) records the complete image and
+canonical script projection. Native builds write `native-build.json` with
+output identities. The current VCCore release SHA256 is
+`742c351873a5355958fb890457fbf22f4dfaa97fa013ed461b4bbb5892e00f7c`.
 
 ## Reproduction results
 
-| Component | Verified result |
+| Component | Fresh export result |
 |---|---|
-| All 96 SCO scripts | Fresh assembly from this export reproduces every member and the complete current installed/release `script.img`, including metadata and padding |
-| `VCMusic.asi`, `VCMemory.asi`, `VCScriptHook.asi`, `ScriptHook.dll`, `VCAudioHeap.asi` | Retained checkpoint-221 fresh Zig 0.13.0 builds exactly match the unchanged current release bytes, including zero PE COFF timestamps; the retained verification rebuilt Opus from the bundled source subset |
-| `GTA_IV_DualSense.asi` | The unchanged two-patch chain has retained verification against the supported original 1.4 binary; full vendor source is not included |
+| All 96 gameplay SCOs and mixed `script.img` | Fresh assembly plus the supplied release resource baseline reproduces the complete 859,693,056-byte archive exactly, including all 4,200 preserved allocations |
+| `VCCore.asi` and `ScriptHook.dll` | A fresh Zig 0.13.0 build exactly matches the current release bytes; the bundled Opus subset is freshly compiled across 137 translation units |
+| Text configuration | Snapshot identities match checkpoint 245; the checker preserves the original 5,740 model definitions in order and verifies eight appended dancer peds |
 
-[VALIDATION.json](VALIDATION.json) records these export comparisons and their
-scope. The maintained checkpoint also passed executable-backed signed-operand
-and stack/opcode checks, 23 compiled aircraft fixtures and 34 movement-predicate
-cases. Those runtime-development checks are separate from source-export
-builds. This update freshly rebuilds the script archive; native source, output
-identities and earlier exact-build verification are retained. The audio-heap
-fixture was compiled during the checkpoint-221 export and was not run as part
-of that publication.
+The 96-member canonical script projection SHA256 is
+`f56d49387acfe5fef534d10f2dde41b3f82f2f88b1e7648c2a3f0695be59f5d4`.
+The current ScriptHook SHA256 is
+`5071926931d9f82285cb0e7fade442fd9cf7743877109201980f08b6926bf1b9`.
+[VALIDATION.json](VALIDATION.json) records publication-specific build results,
+archive comparisons, input identities and their scope.
+
+The current maintained checkpoint passed audit pass 14: **38 commands, zero
+failures and zero flags**. Earlier pass-10 source comparisons and 117 SCO
+roundtrips, and an isolated rollback of changes 241 through 235, remain
+historical evidence for the unchanged code and consolidation work. The
+checkpoint-241 radio change was subsequently undone. Maintained-project audits
+are separate from the publication-specific checks recorded in the validation
+file. Builds, parser checks and isolated fixtures do not establish gameplay
+success.
+
+The unchanged DualSense two-patch chain has retained verification against the
+supported original 1.4 binary. Full vendor source is not included. Earlier
+checkpoint-224 executable-backed verification detected the signed-global
+negative control, and covered 23 compiled aircraft fixtures and 34 movement
+predicate cases.
 
 ## Current behavior and evidence
 
 The parachute is automatically wearable in full-size planes and helicopters,
 excludes the two RC aircraft, and lets the player keep a gun without selecting
-a parachute weapon. The imported controller's unsupported stack request and
-two reachable invalid CE opcodes were corrected. Checkpoint 224 changes 443
-positive global-address loads to full-width `Push`: CE sign-extends the
-16-bit `PushS` operand, so `PushS 60000` accessed global index -5536 and
-overwrote Tommy's animation buffers. Seven intentional negative constants
-retain their original operand bytes. The movement predicate now covers all
-30 protected parachute animation names, including landing and the installed
-`free_fall_deccelerate` spelling. Native startup logging and
+a parachute weapon. The retained correction changes 443 positive global-address
+loads to full-width `Push`: CE sign-extends the 16-bit `PushS` operand, so the old
+`PushS 60000` accessed global index -5536 and overwrote Tommy's animation buffers.
+Seven intentional negative constants retain their operand bytes. The movement
+predicate covers all 30 protected parachute animation names, including landing
+and the installed `free_fall_deccelerate` spelling. Native startup logging and
 settings reads were revised after live thread captures established loader-lock
-cycles. These changes retain the existing content and controller features.
+cycles.
 
-After checkpoint 224 the project owner confirmed that the same high-speed
-windshield-ejection/rolling test stays running normally. A read-only monitored
-impact session kept both sets of 118 player animation-channel headers valid
-during play. The owner then confirmed automatic aircraft pack, holding a gun
-while wearing it, deployment and landing. Earlier reports covered save loading,
-play and parachute steering. These are observed gameplay reports and monitored
-runtime evidence; they do not certify every aircraft/seat, mission, language or
-platform, or long-term repeated cold-start reliability.
+The owner confirmed that the previously crashing high-speed windshield-ejection
+and rolling test stays running normally, and confirmed automatic aircraft pack,
+gun use while wearing it, deployment and landing. A read-only monitored impact
+session retained valid player animation-channel headers during play. Earlier
+reports covered save loading, normal play and steering. Pole Position received
+positive club-entry and general-play reports after its accessory correction.
+
+The checkpoint-241 radio station-list retry broke the owner's existing saves
+and was undone. The current release retains the previous station list and
+station limit of **10**. The two appended car-sound definitions from checkpoint
+233 remain; the save-breaking radio-list import is absent.
+
+Checkpoint 245 restores the posted checkpoint-224 model order and appends the
+eight new dancer definitions after all existing models. Peds and objects share
+one model-number list. Inserting new peds ahead of the objects, and later
+removing definitions, made saved pickups draw unrelated models even though
+collecting them still worked. The owner tested checkpoint 245 with an existing
+save: the Ocean View hotel pickup again displays the folded shirt, and all
+Pole Position dancers remain present. The release supports continuing existing
+saves and does not require a new game for these changes.
+
+Later texture, voice and consolidation changes also have static/build evidence;
+they have not all received dedicated gameplay checks. No complete playthrough,
+every aircraft/seat, every save path, every language or all platforms have been
+separately certified. Long-term cold-start reliability and a Riot replay after
+the audio-memory change remain open gameplay checks.
 
 ## Source scope
 
-This is a curated source export, not a complete release build system. The
-96 assembly sources preserve current compiled scripts; they are not a
-collection of all original C or .NET projects. Historical recovered C script
-variants are excluded because bulk rebuilding them can discard later fixes.
+This is a curated code export. The 96 assembly sources preserve the current
+compiled scripts; they do not provide all original C or .NET projects.
+Historical recovered C variants are excluded because bulk rebuilding them can
+discard later fixes.
 
-Parachute, blue Soiree suit and other map/model/texture/collision/audio assets
-are not included or regenerated by these builders. Current credits identify
-the upstream 8.0 material, Rockstar/TBoGT parachute work and MoveImprove
-compatibility reference. Their attribution does not imply that their full
-original source projects are present here.
+The checkpoint-245 release also includes archive/map-definition consolidation,
+language-table merging, retained radio/audio data, texture/voice repairs, new
+club models/accessories, parachute and blue Soiree assets, ground mapping and
+other community content. The included text configuration records the current
+loader and model-definition state. Those binary integrations and their full
+asset-authoring pipeline are not included or regenerated by these builders.
+The mixed-image builder preserves the release's resource allocations rather
+than rebuilding them. Current credits retain the upstream authors and development references;
+this does not imply that their full original projects are present here.
 
 FusionFix and its D3D9 proxy have retained matching-version reference source
 outside this export; exact binary reproduction was not established here.
