@@ -2,11 +2,11 @@
 
 **Play Grand Theft Auto: Vice City inside Grand Theft Auto IV.** Tommy Vercetti's story and the whole neon-lit 1986 city, rebuilt with GTA IV's lighting, physics and Euphoria animation, HD artwork, extra islands, the classic side activities and restored dialogue. It comes as one download that you copy into your own copy of **GTA IV: The Complete Edition**.
 
-**Build 247** · for **GTA IV: The Complete Edition 1.2.0.59** · download **VCANGCE.Zip** from [Releases](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/releases/latest)
+**Build 254** · for **GTA IV: The Complete Edition 1.2.0.59** · download **VCANGCE.Zip** from [Releases](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/releases/latest)
 
 - [What this is](#what-this-is)
 - [What makes this version different](#what-makes-this-version-different)
-- [New in build 247](#new-in-build-247)
+- [New in build 254](#new-in-build-254)
 - [What you need](#what-you-need)
 - [Installation, step by step](#installation-step-by-step)
 - [Controls](#controls)
@@ -59,16 +59,23 @@ What you get with this version:
 - **One package, set up and checked together.** Every file is listed with a checksum, and updates keep your existing saves working (see [Saves](#saves)).
 - **Windows, Linux and Steam Deck.** Setup steps for each are below.
 
-## New in build 247
+## New in build 254
 
-- **No more music over the helicopter.** Earlier builds played a long music track whenever you flew a helicopter or plane. It was easy to mistake for the near-death music, and it drowned out the radio and the rotor and engine sounds. That flying music is now off, so in the air you hear the radio and the aircraft itself. The death music still plays when you die or your health drops to 10% or below, and the chase music still starts at three wanted stars. If you liked the flying music, see [Settings](#settings) to turn it back on.
-- **Your saves carry over.** Only that one music setting changed since build 245, so saves from builds 245 and 224 keep working.
+Everything new since build 247:
 
-Build 245, the previous update, added:
+- **The Rhino is indestructible.** Gunfire, explosions, fire, crashes and melee no longer damage the tank. Its tyres can't burst and its body doesn't dent. This applies to every Rhino, including the army's tanks at six wanted stars.
+- **Pizza Boy throws the pizzas.** Tommy throws each pizza from the scooter with a real throwing animation. The box flies to the customer, who walks over and picks it up. A pizza that lands in the water, keeps rolling or lands too far away doesn't count, and the customer waits for your next throw.
+- **Cutscenes leave the world alone.** Earlier builds cleared nearby traffic, pedestrians and loose objects when a cutscene started, and could remove a car you'd parked nearby. GTA IV's own streaming now manages memory around cutscenes, so nothing is cleared away when one starts. Your outfit still carries into cutscenes.
+- **Less waiting behind loading screens.** While a loading screen is already showing, the game no longer stops for extra screen refreshes on every frame behind it. This fix comes from FusionFix's development version, ahead of its next release.
+- **GTA IV's graphics safeguard is back on.** Mjolnir IV still tunes how the game uses your CPU, but it no longer switches off the game's own check that keeps graphics settings within its memory budget.
+- **No more trees growing out of the pavement.** 134 palms that stood straight on sidewalks, roads and concrete with no planter or soil around them are gone, including the row in front of the Ocean View Hotel. Potted palms, and trees in grass, sand, soil or planters, stay.
+- **Distant lights work in Vice City.** Turn on **Settings → Display → Distant Lights** for streetlights, traffic and lamp glows across the city at night. The road-lights data from the Vice City conversion carried Liberty City's index, so it couldn't draw Vice City's roads; it's rebuilt for Vice City's streets.
+- **Your saves carry over.** Saves from builds 247, 245 and 224 keep working.
 
-- **A fuller Pole Position club.** All 12 dance poles are occupied, and two floor dancers offer GTA IV-style private lap dances. Vice City's original payment, dialogue and club-ownership progression are kept, and two dancers wear black bunny accessories.
-- Corrected textures for pedestrians, the player and map objects, and fixes to Washington Beach decals, vehicle colours, engine sounds and pedestrian voices.
-- A simpler file layout. Game archives, map files and language tables are merged, and four of the project's plugins are combined into one, `VCCore.asi`.
+Earlier updates:
+
+- **Build 247:** the music that played whenever you flew a helicopter or plane is off, so in the air you hear the radio and the aircraft. It was easy to mistake for the near-death music. See [Settings](#settings) to turn it back on.
+- **Build 245:** all 12 Pole Position poles are occupied, and two floor dancers offer GTA IV-style private lap dances, with Vice City's payment, dialogue and club-ownership progression kept. Two dancers wear black bunny accessories. It also corrected textures for pedestrians, the player and map objects, fixed Washington Beach decals, vehicle colours, engine sounds and pedestrian voices, and combined four of the project's plugins into one, `VCCore.asi`.
 
 ## What you need
 
@@ -149,8 +156,8 @@ This tells Proton to load the mod's loader. In Lutris, add the DLL override `din
 
 ### Updating from an earlier build
 
-- **From build 245:** copy the new `release` contents over your installation as in step 5. The only game file that changed is `plugins/VCMusic.ini`.
-- **From build 224 or earlier:** before you copy, delete `plugins/VCAudioHeap.asi`, `plugins/VCMemory.asi`, `plugins/VCMusic.asi` and `plugins/VCScriptHook.asi`. They're now combined into `plugins/VCCore.asi`, which switches itself off while any of the old files is present. Copying doesn't delete them, so remove them by hand. Keep the `.ini` files and `ScriptHook.dll` from the new package.
+- **From build 247 or 245:** copy the new `release` contents over your installation as in step 5. You can then delete `plugins/VCMemory.ini`; it's no longer used, and the cutscene outfit setting is now in `plugins/VCCutscene.ini`.
+- **From build 224 or earlier:** before you copy, delete `plugins/VCAudioHeap.asi`, `plugins/VCMemory.asi`, `plugins/VCMusic.asi` and `plugins/VCScriptHook.asi`. They're now combined into `plugins/VCCore.asi`, which switches itself off while any of the old files is present. Copying doesn't delete them, so remove them by hand, along with the unused `plugins/VCMemory.ini`. Keep the other `.ini` files and `ScriptHook.dll` from the new package.
 
 Your saves keep working either way.
 
@@ -197,6 +204,7 @@ The full Vice City story runs in GTA IV's engine. The Everglades and Gator Keys 
 - **35 rampages** at their 2002 locations. Each gives you a weapon, a briefing, a countdown and a kill counter, and vehicle rampages count vehicles destroyed.
 - **Hidden packages** at their original spots, including the mall and the police station, with the classic rewards such as the chainsaw, Python, flamethrower and minigun.
 - **Business income:** businesses you own earn money every day. Walk into their gold **$** pickup to collect it.
+- **Pizza Boy** deliveries thrown from the scooter: the customer walks over and picks up the box, and only a pizza that reaches them counts.
 - **Shop hold-ups** at 12 stores, food counters that heal you, Leaf Links golf-course security, the Downtown shooting range, insane stunt bonuses and wheelie and stoppie bonuses.
 - **Completion out of 154.** Rampages, the shooting range and shop hold-ups count toward it. Robbing all 12 tracked shops shows **15** stores on the statistics page and gives the one-time completion point.
 - **The Vice City statistics page:** rampages, shops, properties, assets, money collected, people saved, fires put out, pizzas delivered, hidden packages, answered phone calls and your best paramedic and firefighter levels. People saved and fires put out count each rescue and each fire, not completed levels.
@@ -226,6 +234,7 @@ Pickups keep Vice City's familiar shapes: the adrenaline pill, rampage skull, bu
 - **People and objects have realistic weights.** Tommy weighs 92 kg (203 lb). Street furniture, bins, bags, benches, signs, hydrants and glass have matching weights.
 - **More time for odd jobs.** Paramedic, Firefighter, Vigilante, Pizza Boy, Taxi and Bloodring timers allow for the more realistic handling.
 - **Seaplanes work on water.** The Skimmer floats, idles and takes off from water, and the Sea Sparrow can land on it. You can't drown while seated in either.
+- **The Rhino is indestructible.** Nothing damages it, its tyres can't burst and it doesn't dent. That includes the army's tanks.
 - **Rhino tank shells explode.** In **Phnom Penh '86** the helicopters, and in **Supply & Demand** the boat, have double health and explode when their health runs out.
 - **A wearable parachute.** Get into any full-size plane or helicopter, in any seat, and Tommy puts on a parachute pack. He can still hold and fire guns while wearing it. Jump, press **Sprint** to open the canopy, steer with the movement controls and press **Enter Vehicle** to cut away. The canopy, pack, animations, landing and sounds come from *The Ballad of Gay Tony*.
 - **The 1978 Ford Fairmont police car,** restored weapons and animations, and 20 guns tuned for damage, fire rate, magazine size and range. Rifles pierce armour.
@@ -266,8 +275,9 @@ Native PlayStation 5 DualSense support, built into the game. DS4Windows, ViGEm a
 - **HD vehicles** from Proper HD Era Vehicles, with detailed textures, badges and logos.
 - **HD characters and world:** Tommy, cutscene characters, pedestrians in 1980s clothing, props, vegetation, roads and buildings, and improved interiors.
 - **Atmosphere:** turquoise ocean and pools, Mint ocean water, a Miami sky and colour grading, Project Thunder lightning and storms, and Xbox-style rain droplets on the camera.
+- **Distant lights** at night: streetlights, traffic and lamp glows across Vice City. Turn them on in **Settings → Display → Distant Lights**.
 - **DLSS and FSR upscaling** through DLSS-IV, with FusionFix's fixes and options for GTA IV.
-- **Smoother running:** Mjolnir IV tunes how the game uses your CPU and turns off GTA IV's automatic quality limiter. Around cutscenes, the mod clears nearby traffic, pedestrians and loose objects to keep memory free. Mission characters and your current vehicle stay. An empty car you parked nearby may be removed when a cutscene starts.
+- **Smoother running:** Mjolnir IV tunes how the game uses your CPU. GTA IV's own streaming and graphics safeguards manage memory, including around cutscenes, so nothing is cleared away when a cutscene starts. Loading screens skip a redundant wait, a fix from FusionFix's development version.
 
 ### Languages
 
@@ -283,7 +293,7 @@ Play the mod as supplied first. If you add other mods later, back up a working c
 | `plugins/GTA_IV_DualSense.ini` (created on first start) | Trigger and haptic strength, effects, menu light-bar colour and brightness, player LEDs, touchpad gestures, gyro aiming and motion steering. |
 | `plugins/VCScriptHook.ini` | `[ControllerAudio]`: speaker, Bluetooth audio, haptic strength, siren and heartbeat volume, and which effects reach the speaker. `[Lightbar]`: health colours and police flashing. |
 | `plugins/AudioMap.ini` | Which controller sounds and haptics each vehicle and weapon uses. |
-| `plugins/VCMemory.ini` | Cutscene clean-up radius and limits, the traffic pause, and `[Outfits]` cutscene outfit matching. It also adds Japanese to the language menu. |
+| `plugins/VCCutscene.ini` | `[Outfits]`: whether Tommy's current outfit carries into cutscenes. |
 
 **Turning the flying music back on:** open `plugins/VCMusic.ini` in a text editor. In the `[Flying]` section, change `Enabled=0` to `Enabled=1` and save.
 
@@ -295,14 +305,14 @@ Play the mod as supplied first. If you add other mods later, back up a working c
 
 Save at a safehouse, or anywhere outside a mission with **F7 → Gameplay Tweaks → Save Game Now**. Saves are stored in `Documents\Rockstar Games\GTA IV\Profiles\`; with Proton, that folder is inside the game's Proton prefix. A save keeps the parked cars it was created with.
 
-**Updating keeps your saves.** Saves from builds 245 and 224 load and play normally in build 247, so you don't need to start a new game. Back up your saves before any update anyway.
+**Updating keeps your saves.** Saves from builds 247, 245 and 224 load and play normally in build 254, so you don't need to start a new game. Back up your saves before any update anyway.
 
 Why this works: a GTA IV save remembers two things from the mod.
 
 - **The radio station list.** If an update changed the stations, older saves would stop loading.
 - **The model number of every pickup a script placed** (clothes, health, armour, hidden packages and so on). A save remembers these pickups by their position in the game's model list, not by name. If an update inserted or removed models ahead of them, the pickups in older saves would look like the wrong object, though they could still be collected.
 
-This build keeps both exactly as in builds 224 and 245. Models that were added later, such as the extra Pole Position dancers, come after all the others. That's also why two changes tried during development were left out: a nine-station radio update and a clean-up of unused model definitions. Both would have affected existing saves.
+This build keeps both exactly as in builds 224, 245 and 247. Models that were added later, such as the extra Pole Position dancers, come after all the others. That's also why two changes tried during development were left out: a nine-station radio update and a clean-up of unused model definitions. Both would have affected existing saves.
 
 ## Troubleshooting
 
@@ -318,7 +328,7 @@ The simplest way is to uninstall GTA IV, delete what's left of its folder and re
 
 ## Source code
 
-The repository's [Source folder](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/tree/main/Source) holds the code for this build: all 96 gameplay scripts, the source of the `VCCore.asi` and `ScriptHook.dll` plugins with their build tools, the loader and model-definition files, and the model-order checker that keeps saves compatible. Building from it reproduces this build's script archive, `VCCore.asi` and `ScriptHook.dll` exactly. Textures, models, sound and other game assets are only in the release download.
+The repository's [Source folder](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/tree/main/Source) holds the code for this build: all 96 gameplay scripts, the source of the `VCCore.asi` and `ScriptHook.dll` plugins with their build tools, the Mjolnir patch, the loader and model-definition files, and the model-order checker that keeps saves compatible. Building from it reproduces this build's script archive, `VCCore.asi`, `ScriptHook.dll` and patched `Mjolnir_IV.asi` exactly. Textures, models, sound and other game assets are only in the release download.
 
 ## About this project
 
@@ -340,7 +350,7 @@ Vice City Actual Next Gen CE brings together the work of many creators. The orig
 
 ### Engine fixes, mod loader and graphics
 
-- **ThirteenAG and FusionFix contributors** — [FusionFix](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix), the [Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader) and [Xbox Rain Droplets](https://github.com/ThirteenAG/XboxRainDroplets).
+- **ThirteenAG and FusionFix contributors** — [FusionFix](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix), the [Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader) and [Xbox Rain Droplets](https://github.com/ThirteenAG/XboxRainDroplets). The loading-screen improvement from FusionFix's development version ([commit ed3ace4](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/commit/ed3ace47581c171f20d4557caaedfd7c89750ff7), GPL-3.0) is adapted into `VCCore.asi`.
 - **ChunkLeChuck** — [DLSS-IV](https://github.com/ChunkLeChuck/DLSSIV). Its bundled components retain their own notices, including AMD FidelityFX, NVIDIA DLSS, Intel XeSS, DXVK and Khronos/Vulkan components; see `DLSSIV/licenses`.
 - **llamacomma** — [Mjolnir IV](https://github.com/llamacomma/Mjolnir_IV), adapted for this build (MIT).
 
