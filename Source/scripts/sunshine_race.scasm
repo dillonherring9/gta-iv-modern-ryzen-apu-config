@@ -1,0 +1,6115 @@
+; sunshine_race.sco - GTA IV SCO assembly source (scoasm). Rebuild: scoasm.py asm sunshine_race.scasm --exe GTAIV.exe
+; original sha256 2e3313d2443fabfc08e7ff4625a3f800db4f66117c3d9faf9b8d1b578bdc9131
+.script sunshine_race.sco
+.encrypted 1
+.statics 29
+.globals 0
+.flags 0x00000000
+.signature 0x7E204400
+
+.code
+
+    Function 0 2
+    Call @L_00180f
+L_000009:
+    Push 0
+    CallNative WAIT 1 0
+    Jump @L_000009
+    Return 0 0
+
+L_00001d:
+    Function 0 6
+    Push 0
+    Push 4
+    GetLocalPs
+    pSet
+    Call @L_0043b7
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    CallNative PLAYER_HAS_CHAR 1 1
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 5
+    GetLocalPs
+    pSet
+    Push 0
+    Push 5
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_000079
+    Jump @L_000099
+L_000079:
+    Call @L_0043b7
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    CallNative GET_PLAYER_CHAR 2 0
+L_000099:
+    Push 4
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Return 0 1
+
+L_0000e9:
+    Function 7 29
+    Push 0
+    GetLocalPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 1
+    GetLocalPs
+    pGet
+    Push 10
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 11
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 12
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 13
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 14
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    Push 15
+    GetLocalPs
+    pSet
+    Push 16
+    GetLocalPs
+    CallNative GET_GAME_TIMER 1 0
+    Push 12
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 17
+    GetLocalPs
+    pSet
+    PushF 0.20000000298023224
+    Push 18
+    GetLocalPs
+    pSet
+    Push 64
+    Push 19
+    GetLocalPs
+    pSet
+    Push 16
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    ItoF
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 6.2831854820251465
+    fMult
+    Push 22
+    GetLocalPs
+    pSet
+    Push 19
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    ItoF
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    fDiv
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative SIN 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pSet
+    Push 18
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 17
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    fMult
+    Push 22
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    fMult
+    Push 22
+    GetLocalPs
+    pSet
+    Push 17
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    fSub
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 10
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 11
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pSet
+    Push 21
+    GetLocalPs
+    pGet
+    Push 25
+    GetLocalPs
+    pSet
+    Push 13
+    GetLocalPs
+    pGet
+    Push 26
+    GetLocalPs
+    pSet
+    Push 14
+    GetLocalPs
+    pGet
+    Push 27
+    GetLocalPs
+    pSet
+    Push 15
+    GetLocalPs
+    pGet
+    Push 28
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pGet
+    Push 25
+    GetLocalPs
+    pGet
+    Push 26
+    GetLocalPs
+    pGet
+    Push 27
+    GetLocalPs
+    pGet
+    Push 28
+    GetLocalPs
+    pGet
+    CallNative DRAW_CHECKPOINT 7 0
+    Push 21
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 0.9300000071525574
+    fMult
+    Push 22
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 10
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pSet
+    Push 11
+    GetLocalPs
+    pGet
+    Push 25
+    GetLocalPs
+    pSet
+    Push 13
+    GetLocalPs
+    pGet
+    Push 26
+    GetLocalPs
+    pSet
+    Push 14
+    GetLocalPs
+    pGet
+    Push 27
+    GetLocalPs
+    pSet
+    Push 15
+    GetLocalPs
+    pGet
+    Push 28
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pGet
+    Push 25
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 26
+    GetLocalPs
+    pGet
+    Push 27
+    GetLocalPs
+    pGet
+    Push 28
+    GetLocalPs
+    pGet
+    CallNative DRAW_CHECKPOINT 7 0
+    Push 21
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 0.8600000143051147
+    fMult
+    Push 22
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 10
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pSet
+    Push 11
+    GetLocalPs
+    pGet
+    Push 25
+    GetLocalPs
+    pSet
+    Push 13
+    GetLocalPs
+    pGet
+    Push 26
+    GetLocalPs
+    pSet
+    Push 14
+    GetLocalPs
+    pGet
+    Push 27
+    GetLocalPs
+    pSet
+    Push 15
+    GetLocalPs
+    pGet
+    Push 28
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pGet
+    Push 25
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 26
+    GetLocalPs
+    pGet
+    Push 27
+    GetLocalPs
+    pGet
+    Push 28
+    GetLocalPs
+    pGet
+    CallNative DRAW_CHECKPOINT 7 0
+    Return 7 0
+
+L_000498:
+    Function 5 25
+    Push 0
+    GetLocalPs
+    pGet
+    Push 7
+    GetLocalPs
+    pSet
+    Push 1
+    GetLocalPs
+    pGet
+    Push 8
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 10
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 11
+    GetLocalPs
+    pSet
+    Push 7
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    fCmpLT
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00052b
+    Jump @L_000568
+L_00052b:
+    Push 7
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 15
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 17
+    GetLocalPs
+    pSet
+    Jump @L_0005a0
+L_000568:
+    Push 9
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 15
+    GetLocalPs
+    pSet
+    Push 7
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 17
+    GetLocalPs
+    pSet
+L_0005a0:
+    Push 8
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 10
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    fCmpLT
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0005e9
+    Jump @L_000626
+L_0005e9:
+    Push 8
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 16
+    GetLocalPs
+    pSet
+    Push 10
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 18
+    GetLocalPs
+    pSet
+    Jump @L_00065e
+L_000626:
+    Push 10
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 16
+    GetLocalPs
+    pSet
+    Push 8
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 18
+    GetLocalPs
+    pSet
+L_00065e:
+    Push 15
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 17
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    fAdd
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 2.0
+    fDiv
+    Push 22
+    GetLocalPs
+    pSet
+    Push 19
+    GetLocalPs
+    Push 0
+    Add
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    pSet
+    Push 16
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 18
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    fAdd
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 2.0
+    fDiv
+    Push 22
+    GetLocalPs
+    pSet
+    Push 19
+    GetLocalPs
+    Push 4
+    Add
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    pSet
+    Push 19
+    GetLocalPs
+    Push 8
+    Add
+    Push 22
+    GetLocalPs
+    pSet
+    Push 11
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    pSet
+    Push 19
+    GetLocalPs
+    Push 0
+    Add
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 17
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    fSub
+    Push 22
+    GetLocalPs
+    pSet
+    Push 19
+    GetLocalPs
+    Push 4
+    Add
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 18
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pGet
+    fSub
+    Push 23
+    GetLocalPs
+    pSet
+    PushF -0.0
+    Push 23
+    GetLocalPs
+    pGet
+    fSub
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    fCmpGT
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00082b
+    Jump @L_000884
+L_00082b:
+    Push 19
+    GetLocalPs
+    Push 0
+    Add
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 17
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    fSub
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 13
+    GetLocalPs
+    pSet
+    Jump @L_0008ec
+L_000884:
+    Push 19
+    GetLocalPs
+    Push 4
+    Add
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 18
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    fSub
+    Push 22
+    GetLocalPs
+    pSet
+    PushF -0.0
+    Push 22
+    GetLocalPs
+    pGet
+    fSub
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 13
+    GetLocalPs
+    pSet
+L_0008ec:
+    Push 13
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 14
+    GetLocalPs
+    pSet
+    Push 14
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 12
+    GetLocalPs
+    pSet
+    Push 12
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Return 5 1
+
+    Function 8 27
+    Push 0
+    GetLocalPs
+    pGet
+    Push 10
+    GetLocalPs
+    pSet
+    Push 1
+    GetLocalPs
+    pGet
+    Push 11
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 12
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 13
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 14
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 15
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    Push 16
+    GetLocalPs
+    pSet
+    Push 7
+    GetLocalPs
+    pGet
+    Push 17
+    GetLocalPs
+    pSet
+    Push 17
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 20
+    GetLocalPs
+    pSet
+    Push 0
+    Push 20
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0009e9
+    Jump @L_000b48
+L_0009e9:
+    Push 12
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pSet
+    Push 15
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pGet
+    fAdd
+    Push 20
+    GetLocalPs
+    pSet
+    Push 11
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pSet
+    Push 14
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 21
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    fAdd
+    Push 21
+    GetLocalPs
+    pSet
+    Push 12
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 15
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    fSub
+    Push 22
+    GetLocalPs
+    pSet
+    Push 11
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 14
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pGet
+    fSub
+    Push 23
+    GetLocalPs
+    pSet
+    Push 13
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pGet
+    Call @L_000498
+    Push 20
+    GetLocalPs
+    pSet
+    Push 11
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pSet
+    Push 12
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 13
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 21
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 252
+    Push 138
+    Push 242
+    Call @L_0000e9
+L_000b48:
+    Push 10
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pSet
+    Push 11
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pSet
+    Push 12
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 13
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 14
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pSet
+    Push 15
+    GetLocalPs
+    pGet
+    Push 25
+    GetLocalPs
+    pSet
+    Push 16
+    GetLocalPs
+    pGet
+    Push 26
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pGet
+    Push 25
+    GetLocalPs
+    pGet
+    Push 26
+    GetLocalPs
+    pGet
+    Push 0
+    CallNative LOCATE_CHAR_IN_CAR_3D 8 1
+    Push 20
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 20
+    GetLocalPs
+    pSet
+    Push 0
+    Push 20
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_000c19
+    Jump @L_000c2a
+L_000c19:
+    Push 1
+    Push 19
+    GetLocalPs
+    pSet
+    Jump @L_000c36
+L_000c2a:
+    Push 0
+    Push 19
+    GetLocalPs
+    pSet
+L_000c36:
+    Push 19
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 18
+    GetLocalPs
+    pSet
+    Push 18
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Return 8 1
+
+    Function 8 27
+    Push 0
+    GetLocalPs
+    pGet
+    Push 10
+    GetLocalPs
+    pSet
+    Push 1
+    GetLocalPs
+    pGet
+    Push 11
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 12
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 13
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 14
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 15
+    GetLocalPs
+    pSet
+    Push 6
+    GetLocalPs
+    pGet
+    Push 16
+    GetLocalPs
+    pSet
+    Push 7
+    GetLocalPs
+    pGet
+    Push 17
+    GetLocalPs
+    pSet
+    Push 17
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 20
+    GetLocalPs
+    pSet
+    Push 0
+    Push 20
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_000d17
+    Jump @L_000e76
+L_000d17:
+    Push 12
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pSet
+    Push 15
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pGet
+    fAdd
+    Push 20
+    GetLocalPs
+    pSet
+    Push 11
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pSet
+    Push 14
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 21
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    fAdd
+    Push 21
+    GetLocalPs
+    pSet
+    Push 12
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 15
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    fSub
+    Push 22
+    GetLocalPs
+    pSet
+    Push 11
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 14
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pGet
+    fSub
+    Push 23
+    GetLocalPs
+    pSet
+    Push 13
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pGet
+    Call @L_000498
+    Push 20
+    GetLocalPs
+    pSet
+    Push 11
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pSet
+    Push 12
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 13
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 21
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 252
+    Push 138
+    Push 242
+    Call @L_0000e9
+L_000e76:
+    Push 10
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pSet
+    Push 11
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pSet
+    Push 12
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 13
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 14
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pSet
+    Push 15
+    GetLocalPs
+    pGet
+    Push 25
+    GetLocalPs
+    pSet
+    Push 16
+    GetLocalPs
+    pGet
+    Push 26
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 21
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pGet
+    Push 25
+    GetLocalPs
+    pGet
+    Push 26
+    GetLocalPs
+    pGet
+    Push 0
+    CallNative LOCATE_CHAR_ANY_MEANS_3D 8 1
+    Push 20
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 20
+    GetLocalPs
+    pSet
+    Push 0
+    Push 20
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_000f47
+    Jump @L_000f58
+L_000f47:
+    Push 1
+    Push 19
+    GetLocalPs
+    pSet
+    Jump @L_000f64
+L_000f58:
+    Push 0
+    Push 19
+    GetLocalPs
+    pSet
+L_000f64:
+    Push 19
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 18
+    GetLocalPs
+    pSet
+    Push 18
+    GetLocalPs
+    pGet
+    Push 20
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Return 8 1
+
+L_000f98:
+    Function 0 2
+    CallNative DO_AUTO_SAVE 0 0
+    Push 500
+    CallNative WAIT 1 0
+    Return 0 0
+
+L_000fb2:
+    Function 0 11
+    Push 93
+    CallNative GET_FLOAT_STAT 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    GetStaticPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    PushF 1.0
+    fCmpEQ
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001010
+    Jump @L_00110f
+L_001010:
+    PushString "sa_race1\0"
+    CallNative REQUEST_SCRIPT 1 0
+    Jump @L_001033
+L_001027:
+    Push 0
+    CallNative WAIT 1 0
+L_001033:
+    PushString "sa_race1\0"
+    CallNative HAS_SCRIPT_LOADED 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001027
+    PushString "sa_race1\0"
+    Push 1024
+    CallNative START_NEW_SCRIPT 2 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    PushString "sa_race1\0"
+    CallNative MARK_SCRIPT_AS_NO_LONGER_NEEDED 1 0
+    Jump @L_0010c1
+L_0010b5:
+    Push 0
+    CallNative WAIT 1 0
+L_0010c1:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    CallNative IS_THREAD_ACTIVE 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0010b5
+    Jump @L_001722
+L_00110f:
+    Push 0
+    GetStaticPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    PushF 2.0
+    fCmpEQ
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001148
+    Jump @L_001247
+L_001148:
+    PushString "sa_race2\0"
+    CallNative REQUEST_SCRIPT 1 0
+    Jump @L_00116b
+L_00115f:
+    Push 0
+    CallNative WAIT 1 0
+L_00116b:
+    PushString "sa_race2\0"
+    CallNative HAS_SCRIPT_LOADED 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00115f
+    PushString "sa_race2\0"
+    Push 1024
+    CallNative START_NEW_SCRIPT 2 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    PushString "sa_race2\0"
+    CallNative MARK_SCRIPT_AS_NO_LONGER_NEEDED 1 0
+    Jump @L_0011f9
+L_0011ed:
+    Push 0
+    CallNative WAIT 1 0
+L_0011f9:
+    Push 4
+    GetLocalPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    CallNative IS_THREAD_ACTIVE 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0011ed
+    Jump @L_001722
+L_001247:
+    Push 0
+    GetStaticPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    PushF 3.0
+    fCmpEQ
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001280
+    Jump @L_00137f
+L_001280:
+    PushString "sa_race3\0"
+    CallNative REQUEST_SCRIPT 1 0
+    Jump @L_0012a3
+L_001297:
+    Push 0
+    CallNative WAIT 1 0
+L_0012a3:
+    PushString "sa_race3\0"
+    CallNative HAS_SCRIPT_LOADED 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001297
+    PushString "sa_race3\0"
+    Push 1024
+    CallNative START_NEW_SCRIPT 2 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    PushString "sa_race3\0"
+    CallNative MARK_SCRIPT_AS_NO_LONGER_NEEDED 1 0
+    Jump @L_001331
+L_001325:
+    Push 0
+    CallNative WAIT 1 0
+L_001331:
+    Push 5
+    GetLocalPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    CallNative IS_THREAD_ACTIVE 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001325
+    Jump @L_001722
+L_00137f:
+    Push 0
+    GetStaticPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    PushF 4.0
+    fCmpEQ
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0013b8
+    Jump @L_0014b7
+L_0013b8:
+    PushString "sa_race4\0"
+    CallNative REQUEST_SCRIPT 1 0
+    Jump @L_0013db
+L_0013cf:
+    Push 0
+    CallNative WAIT 1 0
+L_0013db:
+    PushString "sa_race4\0"
+    CallNative HAS_SCRIPT_LOADED 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0013cf
+    PushString "sa_race4\0"
+    Push 1024
+    CallNative START_NEW_SCRIPT 2 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 6
+    GetLocalPs
+    pSet
+    PushString "sa_race4\0"
+    CallNative MARK_SCRIPT_AS_NO_LONGER_NEEDED 1 0
+    Jump @L_001469
+L_00145d:
+    Push 0
+    CallNative WAIT 1 0
+L_001469:
+    Push 6
+    GetLocalPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    CallNative IS_THREAD_ACTIVE 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00145d
+    Jump @L_001722
+L_0014b7:
+    Push 0
+    GetStaticPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    PushF 5.0
+    fCmpEQ
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0014f0
+    Jump @L_0015ef
+L_0014f0:
+    PushString "sa_race5\0"
+    CallNative REQUEST_SCRIPT 1 0
+    Jump @L_001513
+L_001507:
+    Push 0
+    CallNative WAIT 1 0
+L_001513:
+    PushString "sa_race5\0"
+    CallNative HAS_SCRIPT_LOADED 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001507
+    PushString "sa_race5\0"
+    Push 1024
+    CallNative START_NEW_SCRIPT 2 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 7
+    GetLocalPs
+    pSet
+    PushString "sa_race5\0"
+    CallNative MARK_SCRIPT_AS_NO_LONGER_NEEDED 1 0
+    Jump @L_0015a1
+L_001595:
+    Push 0
+    CallNative WAIT 1 0
+L_0015a1:
+    Push 7
+    GetLocalPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    CallNative IS_THREAD_ACTIVE 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001595
+    Jump @L_001722
+L_0015ef:
+    Push 0
+    GetStaticPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    PushF 6.0
+    fCmpEQ
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001628
+    Jump @L_001722
+L_001628:
+    PushString "sa_race6\0"
+    CallNative REQUEST_SCRIPT 1 0
+    Jump @L_00164b
+L_00163f:
+    Push 0
+    CallNative WAIT 1 0
+L_00164b:
+    PushString "sa_race6\0"
+    CallNative HAS_SCRIPT_LOADED 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00163f
+    PushString "sa_race6\0"
+    Push 1024
+    CallNative START_NEW_SCRIPT 2 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 8
+    GetLocalPs
+    pSet
+    PushString "sa_race6\0"
+    CallNative MARK_SCRIPT_AS_NO_LONGER_NEEDED 1 0
+    Jump @L_0016d9
+L_0016cd:
+    Push 0
+    CallNative WAIT 1 0
+L_0016d9:
+    Push 8
+    GetLocalPs
+    pGet
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    CallNative IS_THREAD_ACTIVE 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0016cd
+L_001722:
+    Push 0
+    Push 33
+    GetGlobalPs
+    pSet
+    Push 1000
+    CallNative WAIT 1 0
+    Push 93
+    CallNative GET_FLOAT_STAT 1 1
+    Push 9
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 10
+    GetLocalPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 10
+    GetLocalPs
+    pGet
+    fCmpNE
+    Push 9
+    GetLocalPs
+    pSet
+    Push 0
+    Push 9
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001788
+    Jump @L_00178d
+L_001788:
+    Call @L_000f98
+L_00178d:
+    Return 0 0
+
+L_001790:
+    Function 0 2
+    Push 255
+    Push 255
+    Push 255
+    Push 255
+    CallNative SET_TEXT_COLOUR 4 0
+    PushF 0.75
+    PushF 1.2999999523162842
+    CallNative SET_TEXT_SCALE 2 0
+    Push 1
+    Push 1
+    Push 1
+    Push 1
+    Push 255
+    CallNative SET_TEXT_EDGE 5 0
+    Push 0
+    Push 1
+    Push 1
+    Push 1
+    Push 255
+    CallNative SET_TEXT_DROPSHADOW 5 0
+    Push 1
+    CallNative SET_TEXT_CENTRE 1 0
+    Return 0 0
+
+L_00180f:
+    Function 0 25
+    Push -616962269
+    Push 9
+    GetLocalPs
+    pSet
+    Push 1514104124
+    Push 10
+    GetLocalPs
+    pSet
+    Push 1953929642
+    Push 11
+    GetLocalPs
+    pSet
+    Push -2068039115
+    Push 12
+    GetLocalPs
+    pSet
+    Push -1762009424
+    Push 13
+    GetLocalPs
+    pSet
+    Push -1585253438
+    Push 14
+    GetLocalPs
+    pSet
+    PushF 999.0
+    Push 1
+    GetStaticPs
+    pSet
+    PushF 90.0
+    Push 2
+    GetStaticPs
+    pSet
+    PushF 999.0
+    Push 3
+    GetStaticPs
+    pSet
+    PushF 90.0
+    Push 4
+    GetStaticPs
+    pSet
+    PushF 999.0
+    Push 5
+    GetStaticPs
+    pSet
+    PushF 90.0
+    Push 6
+    GetStaticPs
+    pSet
+    PushF 999.0
+    Push 7
+    GetStaticPs
+    pSet
+    PushF 90.0
+    Push 8
+    GetStaticPs
+    pSet
+    PushF 999.0
+    Push 9
+    GetStaticPs
+    pSet
+    PushF 90.0
+    Push 10
+    GetStaticPs
+    pSet
+    PushF 999.0
+    Push 11
+    GetStaticPs
+    pSet
+    PushF 90.0
+    Push 12
+    GetStaticPs
+    pSet
+L_0018eb:
+    Push 0
+    CallNative WAIT 1 0
+    Push 33
+    GetGlobalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001930
+    Jump @L_0043af
+L_001930:
+    Push 95
+    GetGlobalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001969
+    Jump @L_0043af
+L_001969:
+    PushF -534.6950073242188
+    PushF -294.2869873046875
+    PushF 0.7386260032653809
+    PushF 1.5
+    Push 252
+    Push 138
+    Push 242
+    Call @L_0000e9
+    Call @L_00001d
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 13
+    GetStaticPs
+    Push 14
+    GetStaticPs
+    Push 15
+    GetStaticPs
+    CallNative GET_CHAR_COORDINATES 4 0
+    Push 15
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 14
+    GetStaticPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 13
+    GetStaticPs
+    pGet
+    Push 24
+    GetLocalPs
+    pSet
+    Push 24
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -534.6950073242188
+    PushF -294.2869873046875
+    PushF 0.7386260032653809
+    Push 16
+    GetStaticPs
+    CallNative GET_DISTANCE_BETWEEN_COORDS_3D 7 0
+    Push 16
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 1.5
+    fCmpLT
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001a51
+    Jump @L_0043af
+L_001a51:
+    Call @L_00001d
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative IS_CHAR_SITTING_IN_ANY_CAR 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001a9d
+    Jump @L_0043af
+L_001a9d:
+    Push 1
+    Push 33
+    GetGlobalPs
+    pSet
+    PushF 1.0
+    Push 17
+    GetStaticPs
+    pSet
+    PushF 1.0
+    Push 18
+    GetStaticPs
+    pSet
+    PushF 2.0
+    Push 19
+    GetStaticPs
+    pSet
+    PushF 0.0
+    Push 20
+    GetStaticPs
+    pSet
+    PushString "TAXI1\0"
+    Push 6
+    CallNative LOAD_ADDITIONAL_TEXT 2 0
+    PushString "sunshine_map\0"
+    CallNative LOAD_TXD 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    ItoF
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 21
+    GetStaticPs
+    pSet
+    Push 21
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    FtoI
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushString "race_map\0"
+    CallNative GET_TEXTURE 2 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 22
+    GetStaticPs
+    pSet
+    Push 9
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative REQUEST_MODEL 1 0
+    Push 10
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative REQUEST_MODEL 1 0
+    Push 11
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative REQUEST_MODEL 1 0
+    Push 12
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative REQUEST_MODEL 1 0
+    Push 13
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative REQUEST_MODEL 1 0
+    Push 14
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative REQUEST_MODEL 1 0
+    Jump @L_001c2b
+L_001c1f:
+    Push 0
+    CallNative WAIT 1 0
+L_001c2b:
+    Push 9
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative HAS_MODEL_LOADED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001c1f
+    Push 10
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative HAS_MODEL_LOADED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001c1f
+    Push 11
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative HAS_MODEL_LOADED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001c1f
+    Jump @L_001d17
+L_001d0b:
+    Push 0
+    CallNative WAIT 1 0
+L_001d17:
+    Push 12
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative HAS_MODEL_LOADED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001d0b
+    Push 13
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative HAS_MODEL_LOADED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001d0b
+    Push 14
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative HAS_MODEL_LOADED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001d0b
+    Push 9
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.551025390625
+    PushF -294.2139892578125
+    PushF -0.6315900087356567
+    Push 3
+    GetLocalPs
+    Push 1
+    CallNative CREATE_OBJECT_NO_OFFSET 6 0
+    Push 10
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.551025390625
+    PushF -294.2139892578125
+    PushF -0.6315900087356567
+    Push 4
+    GetLocalPs
+    Push 1
+    CallNative CREATE_OBJECT_NO_OFFSET 6 0
+    Push 11
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.551025390625
+    PushF -294.2139892578125
+    PushF -0.6315900087356567
+    Push 5
+    GetLocalPs
+    Push 1
+    CallNative CREATE_OBJECT_NO_OFFSET 6 0
+    Push 12
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.551025390625
+    PushF -294.2139892578125
+    PushF -0.6315900087356567
+    Push 6
+    GetLocalPs
+    Push 1
+    CallNative CREATE_OBJECT_NO_OFFSET 6 0
+    Push 13
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.551025390625
+    PushF -294.2139892578125
+    PushF -0.6315900087356567
+    Push 7
+    GetLocalPs
+    Push 1
+    CallNative CREATE_OBJECT_NO_OFFSET 6 0
+    Push 14
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.551025390625
+    PushF -294.2139892578125
+    PushF -0.6315900087356567
+    Push 8
+    GetLocalPs
+    Push 1
+    CallNative CREATE_OBJECT_NO_OFFSET 6 0
+    Push 18
+    GetLocalPs
+    CallNative GET_SCRIPT_RENDERTARGET_RENDER_ID 1 0
+    Push 18
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative SET_TEXT_RENDER_ID 1 0
+    Push 22
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 0.5
+    PushF 0.5
+    PushF 1.0
+    PushF 1.0
+    PushF 0.0
+    Push 255
+    Push 255
+    Push 255
+    Push 255
+    CallNative DRAW_SPRITE 10 0
+    Push 14
+    Push 19
+    GetLocalPs
+    CallNative CREATE_CAM 2 0
+    Call @L_0043b7
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    Push 0
+    Push 0
+    CallNative SET_PLAYER_CONTROL_ADVANCED 4 0
+    Push 19
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF 3.631589889526367
+    CallNative POINT_CAM_AT_COORD 4 0
+    Push 19
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -535.2509765625
+    PushF -294.2139892578125
+    PushF 3.631589889526367
+    CallNative SET_CAM_POS 4 0
+    Push 19
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 1
+    CallNative SET_CAM_ACTIVE 2 0
+    Push 19
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CallNative SET_CAM_PROPAGATE 2 0
+    Push 1
+    Push 1
+    CallNative ACTIVATE_SCRIPTED_CAMS 2 0
+    Push 21
+    GetLocalPs
+    CallNative GET_GAME_CAM 1 0
+    Push 3
+    Push 20
+    GetLocalPs
+    CallNative CREATE_CAM 2 0
+    Push 20
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 1
+    Push 1
+    Push 1
+    Push 1
+    CallNative SET_CAM_INTERP_STYLE_DETAILED 5 0
+    Push 19
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 21
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 20
+    GetLocalPs
+    pGet
+    Push 24
+    GetLocalPs
+    pSet
+    Push 24
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 500
+    Push 0
+    CallNative SET_CAM_INTERP_STYLE_CORE 5 0
+    Push 20
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 1
+    CallNative SET_CAM_ACTIVE 2 0
+    Push 20
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 1
+    CallNative SET_CAM_PROPAGATE 2 0
+    Push 1
+    Push 1
+    CallNative ACTIVATE_SCRIPTED_CAMS 2 0
+    Push 1
+    CallNative SET_WIDESCREEN_BORDERS 1 0
+    Call @L_00001d
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -590.2150268554688
+    PushF -298.28399658203125
+    PushF 1.571969985961914
+    CallNative SET_CHAR_COORDINATES 4 0
+L_0021b3:
+    Push 0
+    CallNative WAIT 1 0
+    Push 19
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 1.0
+    fCmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0021f8
+    Jump @L_002242
+L_0021f8:
+    CallNative TIMERA 0 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 3000
+    CmpGT
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002231
+    Jump @L_00223d
+L_002231:
+    PushF 2.0
+    Push 19
+    GetStaticPs
+    pSet
+L_00223d:
+    Jump @L_0022a6
+L_002242:
+    Push 19
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 2.0
+    fCmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00227b
+    Jump @L_0022a6
+L_00227b:
+    CallNative CLEAR_HELP 0 0
+    PushString "VC2_RACE_HELP1\0"
+    CallNative PRINT_HELP_FOREVER 1 0
+    PushF 0.0
+    Push 19
+    GetStaticPs
+    pSet
+L_0022a6:
+    Push 0
+    Push 11
+    CallNative IS_BUTTON_PRESSED 2 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002322
+    Push 1
+    CallNative IS_GAME_KEYBOARD_NAV_RIGHT_PRESSED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002322
+    Jump @L_002502
+L_002322:
+    Push 0
+    CallNative SETTIMERA 1 0
+L_00232e:
+    Push 0
+    CallNative WAIT 1 0
+    Push 0
+    Push 11
+    CallNative IS_BUTTON_PRESSED 2 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0023b6
+    Push 1
+    CallNative IS_GAME_KEYBOARD_NAV_RIGHT_PRESSED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0023b6
+    Jump @L_0023ef
+L_0023b6:
+    CallNative TIMERA 0 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 600
+    CmpGT
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00246b
+    Jump @L_002466
+L_0023ef:
+    Push 0
+    Push 11
+    CallNative IS_BUTTON_PRESSED 2 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00246b
+    Push 1
+    CallNative IS_GAME_KEYBOARD_NAV_RIGHT_PRESSED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00246b
+L_002466:
+    Jump @L_00232e
+L_00246b:
+    Push 17
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 6.0
+    fCmpLT
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0024a4
+    Jump @L_0024e5
+L_0024a4:
+    Push 17
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 1.0
+    fAdd
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 17
+    GetStaticPs
+    pSet
+    PushF 1.0
+    Push 18
+    GetStaticPs
+    pSet
+    Jump @L_0024fd
+L_0024e5:
+    PushF 1.0
+    Push 17
+    GetStaticPs
+    pSet
+    PushF 1.0
+    Push 18
+    GetStaticPs
+    pSet
+L_0024fd:
+    Jump @L_002a0e
+L_002502:
+    Push 0
+    Push 10
+    CallNative IS_BUTTON_PRESSED 2 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00257e
+    Push 1
+    CallNative IS_GAME_KEYBOARD_NAV_LEFT_PRESSED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00257e
+    Jump @L_00275e
+L_00257e:
+    Push 0
+    CallNative SETTIMERA 1 0
+L_00258a:
+    Push 0
+    CallNative WAIT 1 0
+    Push 0
+    Push 10
+    CallNative IS_BUTTON_PRESSED 2 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002612
+    Push 1
+    CallNative IS_GAME_KEYBOARD_NAV_LEFT_PRESSED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002612
+    Jump @L_00264b
+L_002612:
+    CallNative TIMERA 0 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 600
+    CmpGT
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0026c7
+    Jump @L_0026c2
+L_00264b:
+    Push 0
+    Push 10
+    CallNative IS_BUTTON_PRESSED 2 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0026c7
+    Push 1
+    CallNative IS_GAME_KEYBOARD_NAV_LEFT_PRESSED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0026c7
+L_0026c2:
+    Jump @L_00258a
+L_0026c7:
+    Push 17
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 1.0
+    fCmpGT
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002700
+    Jump @L_002741
+L_002700:
+    Push 17
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 1.0
+    fSub
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 17
+    GetStaticPs
+    pSet
+    PushF 1.0
+    Push 18
+    GetStaticPs
+    pSet
+    Jump @L_002759
+L_002741:
+    PushF 6.0
+    Push 17
+    GetStaticPs
+    pSet
+    PushF 1.0
+    Push 18
+    GetStaticPs
+    pSet
+L_002759:
+    Jump @L_002a0e
+L_00275e:
+    Push 0
+    Push 17
+    CallNative IS_BUTTON_PRESSED 2 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003538
+    Push 2
+    Push 182
+    CallNative IS_CONTROL_PRESSED 2 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00280e
+    CallNative IS_USING_CONTROLLER 0 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003538
+L_00280e:
+    Push 0
+    Push 16
+    CallNative IS_BUTTON_PRESSED 2 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0028c3
+    Push 2
+    Push 181
+    CallNative IS_CONTROL_PRESSED 2 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002a0e
+    CallNative IS_USING_CONTROLLER 0 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0028c3
+    Jump @L_002a0e
+L_0028c3:
+    Call @L_0043b7
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 2
+    GetLocalPs
+    CallNative STORE_SCORE 2 0
+    Push 2
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    ItoF
+    Push 22
+    GetLocalPs
+    pSet
+    Push 23
+    GetStaticPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pGet
+    fCmpGE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00293b
+    Jump @L_00299e
+L_00293b:
+    Push 23
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    PushF -0.0
+    Push 22
+    GetLocalPs
+    pGet
+    fSub
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    FtoI
+    Push 22
+    GetLocalPs
+    pSet
+    Call @L_0043b7
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative ADD_SCORE 2 0
+    PushF 1.0
+    Push 20
+    GetStaticPs
+    pSet
+    Jump @L_003538
+L_00299e:
+    Push 19
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 0.0
+    fCmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0029d7
+    Jump @L_002a0e
+L_0029d7:
+    CallNative CLEAR_HELP 0 0
+    PushString "VC2_RACE_HELP2\0"
+    CallNative PRINT_HELP_FOREVER 1 0
+    Push 0
+    CallNative SETTIMERA 1 0
+    PushF 1.0
+    Push 19
+    GetStaticPs
+    pSet
+L_002a0e:
+    Push 18
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 1.0
+    fCmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002a47
+    Jump @L_003533
+L_002a47:
+    PushF 0.0
+    Push 18
+    GetStaticPs
+    pSet
+    Push 18
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative SET_TEXT_RENDER_ID 1 0
+    Push 17
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 1.0
+    fCmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002aa8
+    Jump @L_002c0b
+L_002aa8:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF 3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 4
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 5
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 6
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 7
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 8
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    PushF 1.0
+    Push 0
+    GetStaticPs
+    pSet
+    PushF 1.0
+    Push 24
+    GetStaticPs
+    pSet
+    PushF 100.0
+    Push 23
+    GetStaticPs
+    pSet
+    Push 1
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 25
+    GetStaticPs
+    pSet
+    Push 2
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 26
+    GetStaticPs
+    pSet
+    Jump @L_003412
+L_002c0b:
+    Push 17
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 2.0
+    fCmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002c44
+    Jump @L_002da7
+L_002c44:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 4
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF 3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 5
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 6
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 7
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 8
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    PushF 2.0
+    Push 0
+    GetStaticPs
+    pSet
+    PushF 1.0
+    Push 24
+    GetStaticPs
+    pSet
+    PushF 500.0
+    Push 23
+    GetStaticPs
+    pSet
+    Push 3
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 25
+    GetStaticPs
+    pSet
+    Push 4
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 26
+    GetStaticPs
+    pSet
+    Jump @L_003412
+L_002da7:
+    Push 17
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 3.0
+    fCmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002de0
+    Jump @L_002f43
+L_002de0:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 4
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 5
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF 3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 6
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 7
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 8
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    PushF 3.0
+    Push 0
+    GetStaticPs
+    pSet
+    PushF 1.0
+    Push 24
+    GetStaticPs
+    pSet
+    PushF 1000.0
+    Push 23
+    GetStaticPs
+    pSet
+    Push 5
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 25
+    GetStaticPs
+    pSet
+    Push 6
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 26
+    GetStaticPs
+    pSet
+    Jump @L_003412
+L_002f43:
+    Push 17
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 4.0
+    fCmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002f7c
+    Jump @L_0030df
+L_002f7c:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 4
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 5
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 6
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF 3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 7
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 8
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    PushF 4.0
+    Push 0
+    GetStaticPs
+    pSet
+    PushF 1.0
+    Push 24
+    GetStaticPs
+    pSet
+    PushF 2000.0
+    Push 23
+    GetStaticPs
+    pSet
+    Push 7
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 25
+    GetStaticPs
+    pSet
+    Push 8
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 26
+    GetStaticPs
+    pSet
+    Jump @L_003412
+L_0030df:
+    Push 17
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 5.0
+    fCmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003118
+    Jump @L_00327b
+L_003118:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 4
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 5
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 6
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 7
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF 3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 8
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    PushF 5.0
+    Push 0
+    GetStaticPs
+    pSet
+    PushF 1.0
+    Push 24
+    GetStaticPs
+    pSet
+    PushF 5000.0
+    Push 23
+    GetStaticPs
+    pSet
+    Push 9
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 25
+    GetStaticPs
+    pSet
+    Push 10
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 26
+    GetStaticPs
+    pSet
+    Jump @L_003412
+L_00327b:
+    Push 17
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 6.0
+    fCmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0032b4
+    Jump @L_003412
+L_0032b4:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 4
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 5
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 6
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 7
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF -3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 8
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -532.6510009765625
+    PushF -294.2139892578125
+    PushF 3.631589889526367
+    CallNative SET_OBJECT_COORDINATES 4 0
+    PushF 6.0
+    Push 0
+    GetStaticPs
+    pSet
+    PushF 1.0
+    Push 24
+    GetStaticPs
+    pSet
+    PushF 10000.0
+    Push 23
+    GetStaticPs
+    pSet
+    Push 11
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 25
+    GetStaticPs
+    pSet
+    Push 12
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 26
+    GetStaticPs
+    pSet
+L_003412:
+    Call @L_001790
+    Push 17
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    FtoI
+    Push 22
+    GetLocalPs
+    pSet
+    PushF 0.7509765625
+    PushF 0.01171875
+    PushString "NE_SA_RACE1\0"
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative DISPLAY_TEXT_WITH_NUMBER 4 0
+    Call @L_001790
+    Push 24
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    FtoI
+    Push 22
+    GetLocalPs
+    pSet
+    PushF 0.7509765625
+    PushF 0.134765625
+    PushString "NE_SA_RACE2\0"
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative DISPLAY_TEXT_WITH_NUMBER 4 0
+    Call @L_001790
+    Push 23
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    FtoI
+    Push 22
+    GetLocalPs
+    pSet
+    PushF 0.7509765625
+    PushF 0.2578125
+    PushString "NE_SA_RACE3\0"
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative DISPLAY_TEXT_WITH_NUMBER 4 0
+    Push 22
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 0.5
+    PushF 0.5
+    PushF 1.0
+    PushF 1.0
+    PushF 0.0
+    Push 255
+    Push 255
+    Push 255
+    Push 255
+    CallNative DRAW_SPRITE 10 0
+L_003533:
+    Jump @L_0021b3
+L_003538:
+    Push 22
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative RELEASE_TEXTURE 1 0
+    Push 21
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    FtoI
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative REMOVE_TXD 1 0
+    CallNative CLEAR_HELP 0 0
+    Push 3
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -504.6099853515625
+    PushF -287.3500061035156
+    PushF -3.609999895095825
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 4
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -504.6099853515625
+    PushF -287.3500061035156
+    PushF -3.609999895095825
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 5
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -504.6099853515625
+    PushF -287.3500061035156
+    PushF -3.609999895095825
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 6
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -504.6099853515625
+    PushF -287.3500061035156
+    PushF -3.609999895095825
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 7
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -504.6099853515625
+    PushF -287.3500061035156
+    PushF -3.609999895095825
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Push 8
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -504.6099853515625
+    PushF -287.3500061035156
+    PushF -3.609999895095825
+    CallNative SET_OBJECT_COORDINATES 4 0
+    Call @L_00001d
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -590.2150268554688
+    PushF -298.28399658203125
+    PushF 1.571969985961914
+    CallNative SET_CHAR_COORDINATES 4 0
+    Push 90
+    CallNative WAIT 1 0
+    Call @L_00001d
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -536.1920166015625
+    PushF -295.5069885253906
+    PushF 0.839273989200592
+    CallNative SET_CHAR_COORDINATES 4 0
+    Push 20
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 0.0
+    fCmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00371f
+    Jump @L_0037a9
+L_00371f:
+    Push 0
+    Push 0
+    CallNative ACTIVATE_SCRIPTED_CAMS 2 0
+    Push 19
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative DESTROY_CAM 1 0
+    Push 20
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative DESTROY_CAM 1 0
+    Push 0
+    CallNative SET_WIDESCREEN_BORDERS 1 0
+    Call @L_0043b7
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 1
+    Push 1
+    Push 1
+    CallNative SET_PLAYER_CONTROL_ADVANCED 4 0
+    Push 0
+    Push 33
+    GetGlobalPs
+    pSet
+L_0037a9:
+    Push 3
+    GetLocalPs
+    CallNative DELETE_OBJECT 1 0
+    Push 4
+    GetLocalPs
+    CallNative DELETE_OBJECT 1 0
+    Push 5
+    GetLocalPs
+    CallNative DELETE_OBJECT 1 0
+    Push 6
+    GetLocalPs
+    CallNative DELETE_OBJECT 1 0
+    Push 7
+    GetLocalPs
+    CallNative DELETE_OBJECT 1 0
+    Push 8
+    GetLocalPs
+    CallNative DELETE_OBJECT 1 0
+    Push 3
+    GetLocalPs
+    CallNative MARK_OBJECT_AS_NO_LONGER_NEEDED 1 0
+    Push 4
+    GetLocalPs
+    CallNative MARK_OBJECT_AS_NO_LONGER_NEEDED 1 0
+    Push 5
+    GetLocalPs
+    CallNative MARK_OBJECT_AS_NO_LONGER_NEEDED 1 0
+    Push 6
+    GetLocalPs
+    CallNative MARK_OBJECT_AS_NO_LONGER_NEEDED 1 0
+    Push 7
+    GetLocalPs
+    CallNative MARK_OBJECT_AS_NO_LONGER_NEEDED 1 0
+    Push 8
+    GetLocalPs
+    CallNative MARK_OBJECT_AS_NO_LONGER_NEEDED 1 0
+    Push 9
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative MARK_MODEL_AS_NO_LONGER_NEEDED 1 0
+    Push 10
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative MARK_MODEL_AS_NO_LONGER_NEEDED 1 0
+    Push 11
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative MARK_MODEL_AS_NO_LONGER_NEEDED 1 0
+    Push 12
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative MARK_MODEL_AS_NO_LONGER_NEEDED 1 0
+    Push 13
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative MARK_MODEL_AS_NO_LONGER_NEEDED 1 0
+    Push 14
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative MARK_MODEL_AS_NO_LONGER_NEEDED 1 0
+    Push 20
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 1.0
+    fCmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003926
+    Jump @L_0043af
+L_003926:
+    Push 100
+    CallNative WAIT 1 0
+    Push 16
+    GetLocalPs
+    Push 17
+    GetLocalPs
+    CallNative GET_TIME_OF_DAY 2 0
+    Push 16
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 21
+    CmpLE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00397e
+    Jump @L_004300
+L_00397e:
+    Push 16
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 4
+    CmpGT
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0039b7
+    Jump @L_004300
+L_0039b7:
+    Push 14
+    Push 19
+    GetLocalPs
+    CallNative CREATE_CAM 2 0
+    Push 19
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -542.8880004882812
+    PushF -335.20001220703125
+    PushF 8.442999839782715
+    CallNative SET_CAM_POS 4 0
+    Push 19
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -580.0
+    PushF -489.63800048828125
+    PushF 85.29100036621094
+    CallNative POINT_CAM_AT_COORD 4 0
+    Push 19
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 80.20001220703125
+    CallNative SET_CAM_FOV 2 0
+    Push 19
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 1
+    CallNative SET_CAM_ACTIVE 2 0
+    Push 19
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 1
+    CallNative SET_CAM_PROPAGATE 2 0
+    Push 1
+    Push 1
+    CallNative ACTIVATE_SCRIPTED_CAMS 2 0
+    Push 1
+    CallNative SET_WIDESCREEN_BORDERS 1 0
+    Push 0
+    CallNative SETTIMERA 1 0
+    PushF 1.0
+    Push 27
+    GetStaticPs
+    pSet
+    PushF -580.0
+    Push 28
+    GetStaticPs
+    pSet
+L_003ac3:
+    Push 0
+    CallNative WAIT 1 0
+    Push 1
+    CallNative DISABLE_PAUSE_MENU 1 0
+    Call @L_00001d
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative IS_CHAR_DEAD 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_004120
+    Call @L_00001d
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative HAS_CHAR_BEEN_ARRESTED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_004120
+    Push 61
+    CallNative IS_GAME_KEYBOARD_KEY_PRESSED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_004120
+    Push 57
+    CallNative IS_GAME_KEYBOARD_KEY_PRESSED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_004120
+    Push 42
+    CallNative IS_GAME_KEYBOARD_KEY_PRESSED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_004120
+    Push 54
+    CallNative IS_GAME_KEYBOARD_KEY_PRESSED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_004120
+    Push 28
+    CallNative IS_GAME_KEYBOARD_KEY_PRESSED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_004120
+    CallNative TIMERA 0 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 30
+    CmpGT
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003cbf
+    Jump @L_00411b
+L_003cbf:
+    Push 0
+    CallNative SETTIMERA 1 0
+    Push 16
+    GetLocalPs
+    Push 17
+    GetLocalPs
+    CallNative GET_TIME_OF_DAY 2 0
+    Push 28
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 19
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -489.63800048828125
+    PushF 85.29100036621094
+    CallNative POINT_CAM_AT_COORD 4 0
+    Push 28
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 0.800000011920929
+    fAdd
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 28
+    GetStaticPs
+    pSet
+    Push 27
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 75.0
+    fCmpLT
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003d82
+    Jump @L_003dfc
+L_003d82:
+    Push 27
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 1.0
+    fAdd
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 27
+    GetStaticPs
+    pSet
+    Push 17
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 2
+    Add
+    Push 22
+    GetLocalPs
+    pSet
+    Push 16
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative FORWARD_TO_TIME_OF_DAY 2 0
+    Jump @L_0040e7
+L_003dfc:
+    Push 27
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 350.0
+    fCmpGE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003ede
+    Push 27
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 73.0
+    fCmpLE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003ede
+    Push 27
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 2.0
+    fAdd
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 27
+    GetStaticPs
+    pSet
+    Push 17
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 3
+    Add
+    Push 22
+    GetLocalPs
+    pSet
+    Push 16
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative FORWARD_TO_TIME_OF_DAY 2 0
+    Jump @L_0040e7
+L_003ede:
+    Push 27
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 850.0
+    fCmpGE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003fc0
+    Push 27
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 345.0
+    fCmpLE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003fc0
+    Push 27
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 2.0
+    fAdd
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 27
+    GetStaticPs
+    pSet
+    Push 17
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 5
+    Add
+    Push 22
+    GetLocalPs
+    pSet
+    Push 16
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative FORWARD_TO_TIME_OF_DAY 2 0
+    Jump @L_0040e7
+L_003fc0:
+    Push 27
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 1150.0
+    fCmpGE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0040a2
+    Push 27
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 845.0
+    fCmpLE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0040a2
+    Push 27
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 2.0
+    fAdd
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 27
+    GetStaticPs
+    pSet
+    Push 17
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 7
+    Add
+    Push 22
+    GetLocalPs
+    pSet
+    Push 16
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative FORWARD_TO_TIME_OF_DAY 2 0
+    Jump @L_0040e7
+L_0040a2:
+    Push 17
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 8
+    Add
+    Push 22
+    GetLocalPs
+    pSet
+    Push 16
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative FORWARD_TO_TIME_OF_DAY 2 0
+L_0040e7:
+    Push 16
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 22
+    CmpEQ
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_004120
+L_00411b:
+    Jump @L_003ac3
+L_004120:
+    Push 800
+    CallNative DO_SCREEN_FADE_OUT 1 0
+    Push 0
+    CallNative SETTIMERA 1 0
+L_004138:
+    Push 1
+    CallNative DISABLE_PAUSE_MENU 1 0
+    CallNative TIMERA 0 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 30
+    CmpGT
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00417d
+    Jump @L_0041f4
+L_00417d:
+    Push 28
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 19
+    GetLocalPs
+    pGet
+    Push 23
+    GetLocalPs
+    pSet
+    Push 23
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF -489.63800048828125
+    PushF 85.29100036621094
+    CallNative POINT_CAM_AT_COORD 4 0
+    Push 28
+    GetStaticPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    PushF 0.800000011920929
+    fAdd
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 28
+    GetStaticPs
+    pSet
+    Push 0
+    CallNative SETTIMERA 1 0
+L_0041f4:
+    CallNative IS_SCREEN_FADED_OUT 0 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0042c7
+    Call @L_00001d
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative IS_CHAR_DEAD 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0042c7
+    Call @L_00001d
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative HAS_CHAR_BEEN_ARRESTED 1 1
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 22
+    GetLocalPs
+    pSet
+    Push 0
+    Push 22
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0042c7
+    Push 0
+    CallNative WAIT 1 0
+    Jump @L_004138
+L_0042c7:
+    Push 0
+    CallNative SETTIMERA 1 0
+    Push 17
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative FORWARD_TO_TIME_OF_DAY 2 0
+    Push 800
+    CallNative DO_SCREEN_FADE_IN 1 0
+L_004300:
+    PushString "string\0"
+    PushString "VC2_RACE_TEXT10\0"
+    Push 3500
+    Push 1
+    CallNative PRINT_STRING_IN_STRING 4 0
+    Push 0
+    Push 0
+    CallNative ACTIVATE_SCRIPTED_CAMS 2 0
+    Push 19
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative DESTROY_CAM 1 0
+    Push 20
+    GetLocalPs
+    pGet
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    CallNative DESTROY_CAM 1 0
+    Push 0
+    CallNative SET_WIDESCREEN_BORDERS 1 0
+    Call @L_0043b7
+    Push 22
+    GetLocalPs
+    pSet
+    Push 22
+    GetLocalPs
+    pGet
+    Push 1
+    Push 1
+    Push 1
+    CallNative SET_PLAYER_CONTROL_ADVANCED 4 0
+    Call @L_000fb2
+L_0043af:
+    Jump @L_0018eb
+    Return 0 0
+
+L_0043b7:
+    Function 0 5
+    CallNative GET_PLAYER_ID 0 1
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Return 0 1
+
+.data   ; statics + globals and any trailing bytes, verbatim
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9700000000636f6d70696c656420757369
+    6e672073636f636c20627920416c6578616e64657220426c616465

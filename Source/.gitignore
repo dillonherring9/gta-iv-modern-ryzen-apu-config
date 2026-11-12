@@ -1,0 +1,21 @@
+# Local environments, caches and build outputs
+.venv/
+__pycache__/
+*.py[cod]
+.zig-cache/
+zig-cache/
+zig-out/
+/build/
+*.o
+*.obj
+*.a
+*.lib
+*.asi
+*.dll
+*.exe
+*.sco
+*.img
+*.zip
+*.Zip
+*.log
+.DS_Store

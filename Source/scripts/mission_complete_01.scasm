@@ -1,0 +1,346 @@
+; mission_complete_01.sco - GTA IV SCO assembly source (scoasm). Rebuild: scoasm.py asm mission_complete_01.scasm --exe GTAIV.exe
+; original sha256 bf7d9afc192de23bfd8d0699aecf42a33cb8b3389924aceb1f8145a8125a4e7c
+.script mission_complete_01.sco
+.encrypted 1
+.statics 0
+.globals 0
+.flags 0x00000000
+.signature 0x7E204400
+
+.code
+
+    Function 0 5
+    Jump @L_000015
+L_000009:
+    Push 0
+    CallNative WAIT 1 0
+L_000015:
+    PushString "GPS/MISSION_COMPLETE_1\0"
+    CallNative REQUEST_AMBIENT_AUDIO_BANK 1 1
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 4
+    GetLocalPs
+    pSet
+    Push 0
+    Push 4
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_000009
+    Push 0
+    Push 2
+    GetLocalPs
+    pSet
+    Call @L_00029b
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    CallNative IS_CHAR_SITTING_IN_ANY_CAR 1 1
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 4
+    GetLocalPs
+    pSet
+    Push 0
+    Push 4
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0000ba
+    Jump @L_0000da
+L_0000ba:
+    Call @L_00029b
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 2
+    GetLocalPs
+    CallNative STORE_CAR_CHAR_IS_IN_NO_SAVE 2 0
+L_0000da:
+    Push 2
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    CallNative DOES_VEHICLE_EXIST 1 1
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 4
+    GetLocalPs
+    pSet
+    Push 0
+    Push 4
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_000128
+    Jump @L_000149
+L_000128:
+    Push 2
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 0
+    CallNative SET_LOUD_VEHICLE_RADIO 2 0
+L_000149:
+    CallNative DISABLE_FRONTEND_RADIO 0 0
+    CallNative GET_SOUND_ID 0 1
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    PushString "MISSION_COMPLETE_01\0"
+    CallNative PLAY_SOUND_FRONTEND 2 0
+    Jump @L_0001af
+L_0001a3:
+    Push 0
+    CallNative WAIT 1 0
+L_0001af:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    CallNative HAS_SOUND_FINISHED 1 1
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 4
+    GetLocalPs
+    pSet
+    Push 0
+    Push 4
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0001a3
+    Push 2
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    CallNative DOES_VEHICLE_EXIST 1 1
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 4
+    GetLocalPs
+    pSet
+    Push 0
+    Push 4
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_000246
+    Jump @L_000267
+L_000246:
+    Push 2
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 1
+    CallNative SET_LOUD_VEHICLE_RADIO 2 0
+L_000267:
+    CallNative ENABLE_FRONTEND_RADIO 0 0
+    Push 3
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    CallNative RELEASE_SOUND_ID 1 0
+    CallNative AMBIENT_AUDIO_BANK_NO_LONGER_NEEDED 0 0
+    CallNative TERMINATE_THIS_SCRIPT 0 0
+    Return 0 0
+
+L_00029b:
+    Function 0 6
+    Push 0
+    Push 4
+    GetLocalPs
+    pSet
+    Call @L_000367
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    CallNative PLAYER_HAS_CHAR 1 1
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 5
+    GetLocalPs
+    pSet
+    Push 0
+    Push 5
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0002f7
+    Jump @L_000317
+L_0002f7:
+    Call @L_000367
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    CallNative GET_PLAYER_CHAR 2 0
+L_000317:
+    Push 4
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Return 0 1
+
+L_000367:
+    Function 0 5
+    CallNative GET_PLAYER_ID 0 1
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Return 0 1
+
+.data   ; statics + globals and any trailing bytes, verbatim
+    636f6d70696c6564207573696e672073636f636c20627920416c6578616e6465
+    7220426c616465

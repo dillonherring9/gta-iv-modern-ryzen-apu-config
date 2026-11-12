@@ -1,0 +1,4391 @@
+; pickups.sco - GTA IV SCO assembly source (scoasm). Rebuild: scoasm.py asm pickups.scasm --exe GTAIV.exe
+; original sha256 bd7fd9baae0e6feedf8e282343de0d7c586bf4303ab997b85c9e5398f6d16011
+.script pickups.sco
+.encrypted 1
+.statics 155
+.globals 0
+.flags 0x00000000
+.signature 0x7E204400
+
+.code
+
+    Function 0 2
+    CallNative THIS_SCRIPT_SHOULD_BE_SAVED 0 0
+    Call @L_00023d
+    Push 2000
+    CallNative WAIT 1 0
+L_00001c:
+    Push 0
+    CallNative WAIT 1 0
+    Jump @L_00001c
+    Return 0 0
+
+L_000030:
+    Function 0 6
+    Push 0
+    Push 4
+    GetLocalPs
+    pSet
+    Call @L_003baa
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    CallNative PLAYER_HAS_CHAR 1 1
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 5
+    GetLocalPs
+    pSet
+    Push 0
+    Push 5
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00008c
+    Jump @L_0000ac
+L_00008c:
+    Call @L_003baa
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    CallNative GET_PLAYER_CHAR 2 0
+L_0000ac:
+    Push 4
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Return 0 1
+
+L_0000fc:
+    Function 1 6
+    Push 0
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    Push 500
+    CallNative DO_SCREEN_FADE_OUT 1 0
+L_00011a:
+    Push 0
+    CallNative WAIT 1 0
+    CallNative IS_SCREEN_FADED_OUT 0 1
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 4
+    GetLocalPs
+    pSet
+    Push 0
+    Push 4
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00015f
+    Jump @L_00011a
+L_00015f:
+    Call @L_003baa
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 2
+    CallNative IS_WANTED_LEVEL_GREATER 2 1
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 4
+    GetLocalPs
+    pSet
+    Push 0
+    Push 4
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0001b0
+    Jump @L_0001e9
+L_0001b0:
+    Call @L_003baa
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 0
+    CallNative ALTER_WANTED_LEVEL 2 0
+    Call @L_003baa
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    CallNative APPLY_WANTED_LEVEL_CHANGE_NOW 1 0
+L_0001e9:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Call @L_000030
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 1
+    Push 4
+    GetLocalPs
+    pGet
+    Push 0
+    CallNative SET_CHAR_COMPONENT_VARIATION 4 0
+    Push 500
+    CallNative WAIT 1 0
+    Push 500
+    CallNative DO_SCREEN_FADE_IN 1 0
+    Return 1 0
+
+L_00023d:
+    Function 0 3
+    Push 1040104843
+    Push 2
+    Push 1
+    PushF 551.7000122070312
+    PushF -1013.0999755859375
+    PushF 4.7779998779296875
+    PushF 90.0
+    PushF 0.0
+    PushF 0.0
+    Push 0
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -575490643
+    Push 2
+    Push 300
+    PushF -926.010009765625
+    PushF -209.1999969482422
+    PushF 8.847999572753906
+    PushF 90.0
+    PushF 0.0
+    PushF 90.0
+    Push 1
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1443084780
+    Push 2
+    Push 300
+    PushF -562.0999755859375
+    PushF -650.5700073242188
+    PushF 8.835000038146973
+    PushF 80.0
+    PushF 0.0
+    PushF 0.0
+    Push 2
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 141961522
+    Push 2
+    Push 300
+    PushF -1311.9000244140625
+    PushF 245.87100219726562
+    PushF 24.05699920654297
+    PushF -90.0
+    PushF -80.0
+    PushF 90.0
+    Push 3
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -490993035
+    Push 2
+    Push 300
+    PushF 448.4960021972656
+    PushF 1677.8499755859375
+    PushF 18.73699951171875
+    PushF 78.83599853515625
+    PushF 0.3370000123977661
+    PushF -24.594999313354492
+    Push 4
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 897930585
+    Push 2
+    Push 300
+    PushF 400.20001220703125
+    PushF 1552.199951171875
+    PushF 6.5980000495910645
+    PushF -85.0
+    PushF 5.0
+    PushF 0.0
+    Push 5
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1889119415
+    Push 2
+    Push 300
+    PushF -309.1000061035156
+    PushF -416.33099365234375
+    PushF 3.882999897003174
+    PushF -90.0
+    PushF 0.0
+    PushF 0.0
+    Push 6
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -777009973
+    Push 2
+    Push 300
+    PushF -582.0999755859375
+    PushF -861.4929809570312
+    PushF 6.0269999504089355
+    PushF 75.0
+    PushF -75.0
+    PushF -90.0
+    Push 7
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1345134469
+    Push 2
+    Push 300
+    PushF -278.0169982910156
+    PushF -934.989990234375
+    PushF 5.2270002365112305
+    PushF 90.0
+    PushF 0.0
+    PushF 0.0
+    Push 8
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -490993035
+    Push 2
+    Push 300
+    PushF -112.91100311279297
+    PushF 1227.5999755859375
+    PushF 5.085999965667725
+    PushF -90.0
+    PushF 0.0
+    PushF 0.0
+    Push 9
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -2001451511
+    Push 2
+    Push 30
+    PushF -320.33099365234375
+    PushF 1881.9599609375
+    PushF 6.3379998207092285
+    PushF -16.4060001373291
+    PushF -24.250999450683594
+    PushF 5.127999782562256
+    Push 10
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1316253204
+    Push 2
+    Push 1
+    PushF 528.1259765625
+    PushF 809.666015625
+    PushF 15.803999900817871
+    PushF 5.0
+    PushF 0.0
+    PushF 0.0
+    Push 11
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1554952292
+    Push 2
+    Push 100
+    PushF -750.5089721679688
+    PushF 471.5820007324219
+    PushF 5.449999809265137
+    PushF -90.0
+    PushF 0.0
+    PushF 45.0
+    Push 12
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -923155309
+    Push 2
+    Push 14
+    PushF -872.22900390625
+    PushF 709.0830078125
+    PushF 5.504000186920166
+    PushF 90.0
+    PushF 0.0
+    PushF 0.0
+    Push 13
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 897930585
+    Push 2
+    Push 300
+    PushF -548.18701171875
+    PushF 656.6270141601562
+    PushF 3.5980000495910645
+    PushF -90.0
+    PushF -75.0
+    PushF 90.0
+    Push 14
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 993473937
+    Push 9
+    Push 10
+    PushF -506.79998779296875
+    PushF 68.0999984741211
+    PushF 4.88700008392334
+    PushF 100.0
+    PushF 0.0
+    PushF 0.0
+    Push 15
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 583488944
+    Push 100
+    Push 20
+    PushF -681.2999877929688
+    PushF -68.22699737548828
+    PushF 20.45199966430664
+    PushF -90.0
+    PushF -75.0
+    PushF 90.0
+    Push 16
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 897930585
+    Push 2
+    Push 300
+    PushF -786.5830078125
+    PushF -108.5999984741211
+    PushF 6.814000129699707
+    PushF 57.05400085449219
+    PushF -72.03600311279297
+    PushF 34.26599884033203
+    Push 17
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -777009973
+    Push 2
+    Push 300
+    PushF -113.64900207519531
+    PushF 110.11000061035156
+    PushF 5.241000175476074
+    PushF 85.0
+    PushF 0.0
+    PushF 0.0
+    Push 18
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1556357958
+    Push 2
+    Push 1
+    PushF 492.6080017089844
+    PushF 72.3740005493164
+    PushF 6.51800012588501
+    PushF 0.0
+    PushF 50.0
+    PushF 0.0
+    Push 19
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1889119415
+    Push 2
+    Push 400
+    PushF -41.25790023803711
+    PushF -38.20000076293945
+    PushF 7.304999828338623
+    PushF 90.0
+    PushF -75.0
+    PushF 0.0
+    Push 20
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1040104843
+    Push 2
+    Push 1
+    PushF -120.39099884033203
+    PushF -13.892999649047852
+    PushF 5.704999923706055
+    PushF 0.0
+    PushF 95.0
+    PushF 90.0
+    Push 21
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 993473937
+    Push 2
+    Push 10
+    PushF 796.7689819335938
+    PushF 32.55500030517578
+    PushF 6.363999843597412
+    PushF -115.0
+    PushF 0.0
+    PushF 0.0
+    Push 22
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -490993035
+    Push 2
+    Push 200
+    PushF 720.9010009765625
+    PushF 583.7009887695312
+    PushF 4.685999870300293
+    PushF 90.0
+    PushF 0.0
+    PushF 0.0
+    Push 23
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -196312163
+    Push 2
+    Push 17
+    PushF 773.5
+    PushF 283.5
+    PushF 6.429999828338623
+    PushF 90.0
+    PushF 0.0
+    PushF 0.0
+    Push 24
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 2087858952
+    Push 2
+    Push 10
+    PushF 988.5759887695312
+    PushF 738.7570190429688
+    PushF 8.4350004196167
+    PushF 95.0
+    PushF 0.0
+    PushF 0.0
+    Push 25
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 467469635
+    Push 2
+    Push 30
+    PushF 851.9000244140625
+    PushF 1126.31005859375
+    PushF 12.82960033416748
+    PushF -90.0
+    PushF -75.0
+    PushF 90.0
+    Push 26
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1773134426
+    Push 2
+    Push 1
+    PushF 657.010009765625
+    PushF -674.5
+    PushF 5.164000034332275
+    PushF 90.0
+    PushF 0.0
+    PushF 45.0
+    Push 27
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1758564455
+    Push 2
+    Push 1
+    PushF 640.1640014648438
+    PushF -721.4010009765625
+    PushF 6.144999980926514
+    PushF 0.0
+    PushF 15.0
+    PushF 0.0
+    Push 28
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1846597315
+    Push 2
+    Push 300
+    PushF 1001.9000244140625
+    PushF 83.70099639892578
+    PushF 5.068999767303467
+    PushF -85.07599639892578
+    PushF 0.03700000047683716
+    PushF 74.13300323486328
+    Push 29
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1846597315
+    Push 2
+    Push 300
+    PushF 476.5419921875
+    PushF -426.20001220703125
+    PushF 16.35700035095215
+    PushF 63.696998596191406
+    PushF -78.83100128173828
+    PushF 26.739999771118164
+    Push 30
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -490993035
+    Push 2
+    Push 300
+    PushF 590.0
+    PushF -362.3009948730469
+    PushF 6.348999977111816
+    PushF -90.0
+    PushF 0.0
+    PushF 0.0
+    Push 31
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -196312163
+    Push 2
+    Push 300
+    PushF 205.1510009765625
+    PushF -784.9420166015625
+    PushF 3.0759999752044678
+    PushF 90.0
+    PushF 0.0
+    PushF 45.0
+    Push 32
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1358810680
+    Push 2
+    Push 1000
+    PushF 461.9800109863281
+    PushF -797.197021484375
+    PushF 7.7210001945495605
+    PushF 0.0
+    PushF 0.0
+    PushF -100.0
+    Push 33
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 286107995
+    Push 2
+    Push 1
+    PushF 905.926025390625
+    PushF 1546.6099853515625
+    PushF 14.27400016784668
+    PushF -95.0
+    PushF 15.0
+    PushF 85.0
+    Push 34
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1344092285
+    Push 2
+    Push 1
+    PushF 836.9240112304688
+    PushF 46.75600051879883
+    PushF 6.888999938964844
+    PushF -95.0
+    PushF 15.0
+    PushF 85.0
+    Push 35
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1581490726
+    Push 2
+    Push 1
+    PushF -242.28500366210938
+    PushF -947.8510131835938
+    PushF 7.954999923706055
+    PushF -95.0
+    PushF 15.0
+    PushF 85.0
+    Push 36
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 549598480
+    Push 2
+    Push 200
+    PushF 753.948974609375
+    PushF 556.0059814453125
+    PushF 4.9120001792907715
+    PushF -95.0
+    PushF 15.0
+    PushF 85.0
+    Push 37
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 549598480
+    Push 2
+    Push 200
+    PushF -136.82200622558594
+    PushF 112.79499816894531
+    PushF 6.250999927520752
+    PushF -95.0
+    PushF 15.0
+    PushF 85.0
+    Push 38
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -777009973
+    Push 2
+    Push 300
+    PushF -192.86000061035156
+    PushF 1417.217041015625
+    PushF 5.697999954223633
+    PushF -95.0
+    PushF 15.0
+    PushF 85.0
+    Push 39
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -378035981
+    Push 2
+    Push 1
+    PushF 256.18798828125
+    PushF 48.249000549316406
+    PushF 5.394999980926514
+    PushF -95.0
+    PushF 15.0
+    PushF 85.0
+    Push 40
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1804055222
+    Push 2
+    Push 1000
+    PushF -208.10899353027344
+    PushF -2.8540000915527344
+    PushF 18.30500030517578
+    PushF -95.0
+    PushF 15.0
+    PushF 85.0
+    Push 41
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1556357958
+    Push 2
+    Push 1
+    PushF 840.5989990234375
+    PushF 633.8920288085938
+    PushF 6.385000228881836
+    PushF 95.0
+    PushF 0.0
+    PushF 0.0
+    Push 42
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 736414894
+    Push 2
+    Push 120
+    PushF 378.989990234375
+    PushF -875.0809936523438
+    PushF 4.423999786376953
+    PushF 90.0
+    PushF 0.0
+    PushF 0.0
+    Push 43
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1776135843
+    Push 2
+    Push 600
+    PushF 550.9829711914062
+    PushF -297.427001953125
+    PushF 10.109999656677246
+    PushF 90.0
+    PushF 0.0
+    PushF 20.0
+    Push 44
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1112987286
+    Push 2
+    Push 200
+    PushF 437.7279968261719
+    PushF -743.9149780273438
+    PushF 4.428999900817871
+    PushF 90.0
+    PushF 0.0
+    PushF 20.0
+    Push 45
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 34
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mall_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 35
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "cop_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -221.6009979248047
+    PushF -972.3619995117188
+    PushF 2.4860000610351562
+    PushF 0.0
+    PushF 0.0
+    PushF -20.0
+    Push 46
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -258.260986328125
+    PushF -748.4719848632812
+    PushF 5.021999835968018
+    PushF -90.0
+    PushF 0.0
+    PushF 0.0
+    Push 47
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF 208.08700561523438
+    PushF -623.8690185546875
+    PushF 3.4590001106262207
+    PushF 95.98300170898438
+    PushF -4.77400016784668
+    PushF -45.06399917602539
+    Push 48
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF 318.3269958496094
+    PushF -446.0740051269531
+    PushF 5.168000221252441
+    PushF 0.0
+    PushF 0.0
+    PushF -50.0
+    Push 49
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -968.0020141601562
+    PushF -332.3949890136719
+    PushF 15.818699836730957
+    PushF 0.0
+    PushF 0.0
+    PushF 30.0
+    Push 50
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF 889.2000122070312
+    PushF 61.60100173950195
+    PushF 10.665300369262695
+    PushF 90.0
+    PushF 0.0
+    PushF 0.0
+    Push 51
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -492.1000061035156
+    PushF -105.30000305175781
+    PushF 9.943110466003418
+    PushF -90.0
+    PushF 0.0
+    PushF 0.0
+    Push 52
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF 30.944000244140625
+    PushF -56.44499969482422
+    PushF 6.668000221252441
+    PushF 0.0
+    PushF 0.0
+    PushF -90.0
+    Push 53
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF 25.326000213623047
+    PushF -33.987998962402344
+    PushF 14.805000305175781
+    PushF 0.0
+    PushF 0.0
+    PushF -40.0
+    Push 54
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -281.4339904785156
+    PushF 30.115999221801758
+    PushF 6.296999931335449
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    Push 55
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -453.1709899902344
+    PushF 48.32500076293945
+    PushF 8.345999717712402
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    Push 56
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -420.6109924316406
+    PushF 453.6300048828125
+    PushF 7.014999866485596
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    Push 57
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -711.6309814453125
+    PushF 586.864013671875
+    PushF 6.708000183105469
+    PushF 0.0
+    PushF 0.0
+    PushF 90.0
+    Push 58
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -855.6749877929688
+    PushF 616.5919799804688
+    PushF 21.530000686645508
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    Push 59
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF 517.0859985351562
+    PushF 940.4409790039062
+    PushF 14.967000007629395
+    PushF 0.0
+    PushF 0.0
+    PushF 70.0
+    Push 60
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF 811.458984375
+    PushF 999.218017578125
+    PushF 5.677999973297119
+    PushF 90.0
+    PushF 0.0
+    PushF 25.0
+    Push 61
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF 905.0490112304688
+    PushF 1228.0899658203125
+    PushF 7.020999908447266
+    PushF 0.0
+    PushF 0.0
+    PushF -3.0
+    Push 62
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF 820.1439819335938
+    PushF 1290.760009765625
+    PushF 6.894000053405762
+    PushF 0.0
+    PushF 0.0
+    PushF 90.0
+    Push 63
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -399.7659912109375
+    PushF 1271.3900146484375
+    PushF 6.550000190734863
+    PushF 0.0
+    PushF 0.0
+    PushF -5.0
+    Push 64
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF 443.70098876953125
+    PushF 1632.010009765625
+    PushF 10.595999717712402
+    PushF 90.0
+    PushF 0.0
+    PushF 0.0
+    Push 65
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF 818.43798828125
+    PushF 1745.280029296875
+    PushF 14.621000289916992
+    PushF 90.0
+    PushF 0.0
+    PushF -40.0
+    Push 66
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -387.4100036621094
+    PushF 1666.780029296875
+    PushF 6.846700191497803
+    PushF 0.0
+    PushF 0.0
+    PushF -25.0
+    Push 67
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -388.8009948730469
+    PushF 1677.81005859375
+    PushF 20.13599967956543
+    PushF 90.0
+    PushF 0.0
+    PushF 0.0
+    Push 68
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -239.6929931640625
+    PushF 1797.8199462890625
+    PushF 19.518999099731445
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    Push 69
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1069950328
+    Push 2
+    Push 200
+    PushF -45.10100173950195
+    PushF 1971.5009765625
+    PushF 10.029000282287598
+    PushF -65.03700256347656
+    PushF -4.923999786376953
+    PushF -89.12999725341797
+    Push 70
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 54
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mansion_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 66
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mall_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF 438.2409973144531
+    PushF -706.2000122070312
+    PushF 13.152099609375
+    PushF -14.9399995803833
+    PushF -1.2899999618530273
+    PushF -94.80000305175781
+    Push 71
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF -299.6960144042969
+    PushF -763.14501953125
+    PushF 6.317999839782715
+    PushF 90.0
+    PushF 0.0
+    PushF 0.0
+    Push 72
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF 638.7009887695312
+    PushF -352.70098876953125
+    PushF 6.241000175476074
+    PushF 90.0
+    PushF -180.0
+    PushF 90.0
+    Push 73
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF -745.572998046875
+    PushF -382.3009948730469
+    PushF 8.833000183105469
+    PushF -15.0
+    PushF 0.0
+    PushF 90.0
+    Push 74
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF -735.8090209960938
+    PushF 75.60099792480469
+    PushF 4.701000213623047
+    PushF -15.0
+    PushF 0.0
+    PushF -90.0
+    Push 75
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF 582.9910278320312
+    PushF 183.1009979248047
+    PushF 2.7339999675750732
+    PushF -10.0
+    PushF 0.0
+    PushF -90.0
+    Push 76
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF 953.3920288085938
+    PushF 361.7560119628906
+    PushF 7.90500020980835
+    PushF -90.07099914550781
+    PushF 1.6510000228881836
+    PushF -86.18299865722656
+    Push 77
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF -625.9010009765625
+    PushF 292.3999938964844
+    PushF 12.220000267028809
+    PushF -90.0
+    PushF 0.0
+    PushF -35.0
+    Push 78
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF -1260.9599609375
+    PushF 243.60000610351562
+    PushF 23.700000762939453
+    PushF -10.0
+    PushF 0.0
+    PushF -90.0
+    Push 79
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF 863.801025390625
+    PushF 692.8259887695312
+    PushF 5.738999843597412
+    PushF -14.944999694824219
+    PushF 1.2929999828338623
+    PushF -155.1699981689453
+    Push 80
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF 850.5819702148438
+    PushF 1052.6309814453125
+    PushF 6.263999938964844
+    PushF -90.0
+    PushF 0.0
+    PushF 0.0
+    Push 81
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF 362.20098876953125
+    PushF 1043.6009521484375
+    PushF 5.639999866485596
+    PushF -90.0
+    PushF 0.0
+    PushF 0.0
+    Push 82
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF -192.50100708007812
+    PushF 1155.8900146484375
+    PushF 5.627999782562256
+    PushF -15.0
+    PushF 0.0
+    PushF 0.0
+    Push 83
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF -488.9010009765625
+    PushF 1256.6099853515625
+    PushF 5.061999797821045
+    PushF -15.0
+    PushF 0.0
+    PushF 0.0
+    Push 84
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF 783.2009887695312
+    PushF 1417.800048828125
+    PushF 19.492000579833984
+    PushF -90.0
+    PushF 0.0
+    PushF 0.0
+    Push 85
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF 475.79998779296875
+    PushF 1484.1009521484375
+    PushF 4.9629998207092285
+    PushF -90.0
+    PushF 0.0
+    PushF 0.0
+    Push 86
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF 968.2999877929688
+    PushF 1748.219970703125
+    PushF 12.95300006866455
+    PushF -15.0
+    PushF 0.0
+    PushF 0.0
+    Push 87
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF -134.01199340820312
+    PushF 1903.3299560546875
+    PushF 10.793899536132812
+    PushF -90.0
+    PushF 0.0
+    PushF 0.0
+    Push 88
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 0
+    Push 89
+    GetStaticPs
+    pSet
+    Push 0
+    Push 90
+    GetStaticPs
+    pSet
+    Push 0
+    Push 91
+    GetStaticPs
+    pSet
+    Push 0
+    Push 92
+    GetStaticPs
+    pSet
+    Push 0
+    Push 93
+    GetStaticPs
+    pSet
+    Push 0
+    Push 94
+    GetStaticPs
+    pSet
+    Push 0
+    Push 95
+    GetStaticPs
+    pSet
+    Push 0
+    Push 96
+    GetStaticPs
+    pSet
+    Push 0
+    Push 97
+    GetStaticPs
+    pSet
+    Push 0
+    Push 98
+    GetStaticPs
+    pSet
+    Push 0
+    Push 99
+    GetStaticPs
+    pSet
+    Push 0
+    Push 100
+    GetStaticPs
+    pSet
+    Push 0
+    Push 101
+    GetStaticPs
+    pSet
+    Push 0
+    Push 102
+    GetStaticPs
+    pSet
+    Push 0
+    Push 103
+    GetStaticPs
+    pSet
+    Push 0
+    Push 104
+    GetStaticPs
+    pSet
+    Push 0
+    Push 105
+    GetStaticPs
+    pSet
+    Push 0
+    Push 106
+    GetStaticPs
+    pSet
+    Push 0
+    Push 107
+    GetStaticPs
+    pSet
+    Push 0
+    Push 108
+    GetStaticPs
+    pSet
+    Push 0
+    Push 109
+    GetStaticPs
+    pSet
+    Push 0
+    Push 110
+    GetStaticPs
+    pSet
+    Push 0
+    Push 111
+    GetStaticPs
+    pSet
+    Push 0
+    Push 112
+    GetStaticPs
+    pSet
+L_001829:
+    Push 0
+    CallNative WAIT 1 0
+    Push 66
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 1
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00186e
+    Jump @L_0019b8
+L_00186e:
+    Push 105
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0018a7
+    Jump @L_0019b8
+L_0018a7:
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF 658.0809936523438
+    PushF -738.7529907226562
+    PushF 13.234199523925781
+    PushF -11.166000366210938
+    PushF 0.25200000405311584
+    PushF 64.53800201416016
+    Push 113
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF 95.22470092773438
+    PushF -38.347900390625
+    PushF 5.573770046234131
+    PushF -10.0
+    PushF 0.0
+    PushF 90.0
+    Push 114
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1758615024
+    Push 2
+    Push 100
+    PushF -393.3380126953125
+    PushF 1895.5899658203125
+    PushF 60.70429992675781
+    PushF -15.0
+    PushF 0.0
+    PushF 0.0
+    Push 115
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 114
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mansion_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 113
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "ocean_view_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 105
+    GetStaticPs
+    pSet
+L_0019b8:
+    Push 66
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 2
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0019f1
+    Jump @L_001b3b
+L_0019f1:
+    Push 106
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001a2a
+    Jump @L_001b3b
+L_001a2a:
+    Push -1358810680
+    Push 2
+    Push 1000
+    PushF 654.8809814453125
+    PushF -737.8909912109375
+    PushF 13.372900009155273
+    PushF -2.117000102996826
+    PushF 4.531000137329102
+    PushF 64.91600036621094
+    Push 116
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1358810680
+    Push 2
+    Push 1000
+    PushF 102.31300354003906
+    PushF -35.28929901123047
+    PushF 5.728759765625
+    PushF 0.0
+    PushF 0.0
+    PushF 0.0
+    Push 117
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1358810680
+    Push 2
+    Push 1000
+    PushF -385.3320007324219
+    PushF 1895.7900390625
+    PushF 60.86650085449219
+    PushF 0.0
+    PushF 0.0
+    PushF -40.0
+    Push 118
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 117
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mansion_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 116
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "ocean_view_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 106
+    GetStaticPs
+    pSet
+L_001b3b:
+    Push 66
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 3
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001b74
+    Jump @L_001cbe
+L_001b74:
+    Push 107
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001bad
+    Jump @L_001cbe
+L_001bad:
+    Push 1554952292
+    Push 2
+    Push 24
+    PushF 654.7379760742188
+    PushF -738.5419921875
+    PushF 13.292400360107422
+    PushF -91.63800048828125
+    PushF -0.1469999998807907
+    PushF 87.5790023803711
+    Push 119
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1554952292
+    Push 2
+    Push 24
+    PushF 101.02799987792969
+    PushF -35.03969955444336
+    PushF 5.604410171508789
+    PushF -84.56500244140625
+    PushF -0.01899999938905239
+    PushF 4.980999946594238
+    Push 120
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1554952292
+    Push 2
+    Push 24
+    PushF -394.5050048828125
+    PushF 1895.02001953125
+    PushF 60.73529815673828
+    PushF -90.0
+    PushF 0.0
+    PushF 0.0
+    Push 121
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 120
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mansion_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 119
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "ocean_view_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 107
+    GetStaticPs
+    pSet
+L_001cbe:
+    Push 66
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 4
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001cf7
+    Jump @L_001e41
+L_001cf7:
+    Push 108
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001d30
+    Jump @L_001e41
+L_001d30:
+    Push -777009973
+    Push 2
+    Push 60
+    PushF 654.4130249023438
+    PushF -740.5850219726562
+    PushF 13.292400360107422
+    PushF -91.63800048828125
+    PushF -0.1469999998807907
+    PushF 87.5790023803711
+    Push 122
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -777009973
+    Push 2
+    Push 60
+    PushF 99.01920318603516
+    PushF -35.23609924316406
+    PushF 5.601799964904785
+    PushF -85.0
+    PushF -5.0
+    PushF 40.0
+    Push 123
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -777009973
+    Push 2
+    Push 60
+    PushF -392.62200927734375
+    PushF 1894.949951171875
+    PushF 60.73529815673828
+    PushF -90.0
+    PushF 0.0
+    PushF 30.0
+    Push 124
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 123
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mansion_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 122
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "ocean_view_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 108
+    GetStaticPs
+    pSet
+L_001e41:
+    Push 66
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 5
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001e7a
+    Jump @L_001fc4
+L_001e7a:
+    Push 109
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001eb3
+    Jump @L_001fc4
+L_001eb3:
+    Push 583488944
+    Push 2
+    Push 28
+    PushF 654.405029296875
+    PushF -739.7429809570312
+    PushF 13.660099983215332
+    PushF 90.0
+    PushF -65.0
+    PushF 160.0
+    Push 125
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 583488944
+    Push 2
+    Push 28
+    PushF 95.2833023071289
+    PushF -35.034698486328125
+    PushF 6.044899940490723
+    PushF 90.0
+    PushF -105.0
+    PushF 0.0
+    Push 126
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 583488944
+    Push 2
+    Push 28
+    PushF -402.1199951171875
+    PushF 1895.1800537109375
+    PushF 60.75389862060547
+    PushF -90.0
+    PushF 0.0
+    PushF 90.0
+    Push 127
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 126
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mansion_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 125
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "ocean_view_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 109
+    GetStaticPs
+    pSet
+L_001fc4:
+    Push 66
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 6
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_001ffd
+    Jump @L_002147
+L_001ffd:
+    Push 110
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002036
+    Jump @L_002147
+L_002036:
+    Push -1804055222
+    Push 2
+    Push 500
+    PushF 658.5759887695312
+    PushF -738.166015625
+    PushF 13.681500434875488
+    PushF 101.69599914550781
+    PushF -64.53600311279297
+    PushF 74.41300201416016
+    Push 128
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1804055222
+    Push 2
+    Push 500
+    PushF 95.26519775390625
+    PushF -36.4557991027832
+    PushF 6.025370121002197
+    PushF -90.0
+    PushF -75.0
+    PushF -180.0
+    Push 129
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push -1804055222
+    Push 2
+    Push 500
+    PushF -403.2250061035156
+    PushF 1894.989990234375
+    PushF 61.15439987182617
+    PushF -90.0
+    PushF -75.0
+    PushF 90.0
+    Push 130
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 129
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mansion_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 128
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "ocean_view_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 110
+    GetStaticPs
+    pSet
+L_002147:
+    Push 66
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 7
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002180
+    Jump @L_0022ca
+L_002180:
+    Push 111
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0021b9
+    Jump @L_0022ca
+L_0021b9:
+    Push 1443084780
+    Push 2
+    Push 8
+    PushF 654.458984375
+    PushF -739.1680297851562
+    PushF 13.84119987487793
+    PushF -87.29399871826172
+    PushF -112.76100158691406
+    PushF -17.117000579833984
+    Push 131
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1443084780
+    Push 2
+    Push 8
+    PushF 97.34529876708984
+    PushF -34.790199279785156
+    PushF 6.195720195770264
+    PushF -90.0
+    PushF -75.0
+    PushF 90.0
+    Push 132
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1443084780
+    Push 2
+    Push 8
+    PushF -404.1969909667969
+    PushF 1894.6099853515625
+    PushF 60.73860168457031
+    PushF -80.0
+    PushF 0.0
+    PushF 0.0
+    Push 133
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 132
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mansion_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 131
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "ocean_view_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 111
+    GetStaticPs
+    pSet
+L_0022ca:
+    Push 23
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 6
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002303
+    Jump @L_002382
+L_002303:
+    Push 112
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00233c
+    Jump @L_002382
+L_00233c:
+    Push 141961522
+    Push 2
+    Push 100
+    PushF -751.1695556640625
+    PushF 635.619873046875
+    PushF 11.525825500488281
+    PushF 90.0
+    PushF 0.0
+    PushF 180.0
+    Push 134
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1
+    Push 112
+    GetStaticPs
+    pSet
+L_002382:
+    Push 104
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0023bb
+    Jump @L_002414
+L_0023bb:
+    Push 0
+    CallNative GET_FLOAT_STAT 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushF 100.0
+    fCmpGE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0023f9
+    Jump @L_002414
+L_0023f9:
+    PushString "CUNTY\0"
+    CallNative PRINT_HELP 1 0
+    Push 1
+    Push 104
+    GetStaticPs
+    pSet
+L_002414:
+    Push 64
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00244d
+    Jump @L_0024f9
+L_00244d:
+    Push 89
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002486
+    Jump @L_0024f9
+L_002486:
+    Push 491026550
+    Push 2
+    Push 0
+    PushF 663.8200073242188
+    PushF -734.4349975585938
+    PushF 14.589900016784668
+    PushF 0.0
+    PushF 0.0
+    PushF 96.0
+    Push 135
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 135
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "ocean_view_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 89
+    GetStaticPs
+    pSet
+L_0024f9:
+    Push 64
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 1
+    CmpGT
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002532
+    Jump @L_0025de
+L_002532:
+    Push 90
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00256b
+    Jump @L_0025de
+L_00256b:
+    Push -1617887983
+    Push 2
+    Push 0
+    PushF 662.6790161132812
+    PushF -728.2310180664062
+    PushF 14.541199684143066
+    PushF 0.0
+    PushF 0.0
+    PushF -14.0
+    Push 136
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 136
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "ocean_view_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 90
+    GetStaticPs
+    pSet
+L_0025de:
+    Push 64
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 4
+    CmpGT
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002617
+    Jump @L_0026bd
+L_002617:
+    Push 91
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002650
+    Jump @L_0026bd
+L_002650:
+    Push -1302715741
+    Push 2
+    Push 0
+    PushF 800.2069702148438
+    PushF 1609.8499755859375
+    PushF 13.998299598693848
+    PushF 0.0
+    PushF -1.100000023841858
+    PushF 120.0
+    Push 137
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 137
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mall_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 91
+    GetStaticPs
+    pSet
+L_0026bd:
+    Push 43
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 1
+    CmpGT
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0026f6
+    Jump @L_002775
+L_0026f6:
+    Push 92
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00272f
+    Jump @L_002775
+L_00272f:
+    Push -1540979140
+    Push 2
+    Push 0
+    PushF 534.2349853515625
+    PushF 791.448974609375
+    PushF 16.11440086364746
+    PushF -1.5
+    PushF 5.400000095367432
+    PushF 0.0
+    Push 138
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1
+    Push 92
+    GetStaticPs
+    pSet
+L_002775:
+    Push 43
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 4
+    CmpGT
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0027ae
+    Jump @L_00282d
+L_0027ae:
+    Push 93
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0027e7
+    Jump @L_00282d
+L_0027e7:
+    Push -688591912
+    Push 2
+    Push 0
+    PushF -594.0399780273438
+    PushF 103.52899932861328
+    PushF 5.75993013381958
+    PushF 31.683000564575195
+    PushF 0.9879999756813049
+    PushF 94.33300018310547
+    Push 139
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1
+    Push 93
+    GetStaticPs
+    pSet
+L_00282d:
+    Push 92
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 2
+    CmpGT
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002866
+    Jump @L_00290b
+L_002866:
+    Push 94
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00289f
+    Jump @L_00290b
+L_00289f:
+    Push 512228053
+    Push 2
+    Push 0
+    PushF 837.6279907226562
+    PushF 46.06439971923828
+    PushF 6.788400173187256
+    PushF 0.0
+    PushF 0.0
+    PushF -50.0
+    Push 140
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 140
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "cop_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 94
+    GetStaticPs
+    pSet
+L_00290b:
+    Push 92
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 5
+    CmpGT
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002944
+    Jump @L_0029c3
+L_002944:
+    Push 95
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00297d
+    Jump @L_0029c3
+L_00297d:
+    Push -319449167
+    Push 2
+    Push 0
+    PushF 899.4349975585938
+    PushF 477.3169860839844
+    PushF 10.490900039672852
+    PushF 0.0
+    PushF 0.0
+    PushF 120.0
+    Push 141
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1
+    Push 95
+    GetStaticPs
+    pSet
+L_0029c3:
+    Push 40
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 1
+    CmpGT
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0029fc
+    Jump @L_002aa2
+L_0029fc:
+    Push 96
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002a35
+    Jump @L_002aa2
+L_002a35:
+    Push 557416504
+    Push 2
+    Push 0
+    PushF 842.739990234375
+    PushF 1578.9599609375
+    PushF 20.590299606323242
+    PushF 0.0
+    PushF 0.0
+    PushF -30.0
+    Push 142
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 142
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mall_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 96
+    GetStaticPs
+    pSet
+L_002aa2:
+    Push 99
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002adb
+    Jump @L_002be9
+L_002adb:
+    Push 97
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002b14
+    Jump @L_002be9
+L_002b14:
+    Push 258104458
+    Push 2
+    Push 0
+    PushF 508.99200439453125
+    PushF -916.9119873046875
+    PushF 5.337230205535889
+    PushF 0.0
+    PushF 0.0
+    PushF -165.0
+    Push 143
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 258104458
+    Push 2
+    Push 0
+    PushF 55.86349868774414
+    PushF -60.85879898071289
+    PushF 20.488100051879883
+    PushF 0.0
+    PushF 0.0
+    PushF -110.0
+    Push 144
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 143
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "stripclb_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 144
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mansion_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 97
+    GetStaticPs
+    pSet
+L_002be9:
+    Push 81
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 4
+    CmpGT
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002c22
+    Jump @L_002ca1
+L_002c22:
+    Push 98
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002c5b
+    Jump @L_002ca1
+L_002c5b:
+    Push -1688778946
+    Push 2
+    Push 0
+    PushF -485.18701171875
+    PushF 1416.449951171875
+    PushF 5.721549987792969
+    PushF 0.0
+    PushF 0.0
+    PushF 65.0
+    Push 145
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1
+    Push 98
+    GetStaticPs
+    pSet
+L_002ca1:
+    Push 99
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002cda
+    Jump @L_002d20
+L_002cda:
+    Push -1277593534
+    Push 2
+    Push 0
+    PushF -766.2050170898438
+    PushF 210.27699279785156
+    PushF 5.980909824371338
+    PushF 0.0
+    PushF 0.0
+    PushF -30.0
+    Push 146
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1
+    Push 99
+    GetStaticPs
+    pSet
+L_002d20:
+    Push 104
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 1
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002d59
+    Jump @L_002e02
+L_002d59:
+    Push 100
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002d92
+    Jump @L_002e02
+L_002d92:
+    Push -960225769
+    Push 2
+    Push 0
+    PushF 59.4208984375
+    PushF -59.51750183105469
+    PushF 20.201499938964844
+    PushF 0.0
+    PushF 0.0
+    PushF -175.0
+    Push 147
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 147
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mansion_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 100
+    GetStaticPs
+    pSet
+L_002e02:
+    Push 63
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 6
+    CmpGT
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002e3b
+    Jump @L_002f48
+L_002e3b:
+    Push 101
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002e74
+    Jump @L_002f48
+L_002e74:
+    Push -776784907
+    Push 2
+    Push 0
+    PushF 25.405500411987305
+    PushF -31.694299697875977
+    PushF 14.702099800109863
+    PushF 0.0
+    PushF 0.0
+    PushF -115.0
+    Push 148
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 289846207
+    Push 2
+    Push 0
+    PushF 32.33259963989258
+    PushF -31.836200714111328
+    PushF 13.960200309753418
+    PushF 0.0
+    PushF 0.0
+    PushF 45.0
+    Push 149
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 148
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mansion_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 149
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mansion_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 101
+    GetStaticPs
+    pSet
+L_002f48:
+    Push 79
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002f81
+    Jump @L_00302a
+L_002f81:
+    Push 102
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_002fba
+    Jump @L_00302a
+L_002fba:
+    Push 491026550
+    Push 2
+    Push 0
+    PushF 50.45349884033203
+    PushF -60.21179962158203
+    PushF 20.252500534057617
+    PushF 0.0
+    PushF 0.0
+    PushF -70.0
+    Push 150
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 150
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    PushString "mansion_int\0"
+    CallNative ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME 2 0
+    Push 1
+    Push 102
+    GetStaticPs
+    pSet
+L_00302a:
+    Push 44
+    GetGlobalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003063
+    Jump @L_0030e2
+L_003063:
+    Push 103
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00309c
+    Jump @L_0030e2
+L_00309c:
+    Push 491026550
+    Push 2
+    Push 0
+    PushF -383.0220031738281
+    PushF 1895.6199951171875
+    PushF 60.694698333740234
+    PushF 0.0
+    PushF 0.0
+    PushF -35.0
+    Push 151
+    GetStaticPs
+    CallNative CREATE_PICKUP_ROTATE 10 0
+    Push 1
+    Push 103
+    GetStaticPs
+    pSet
+L_0030e2:
+    Push 135
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003174
+    Push 135
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00329d
+L_003174:
+    Push 150
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003206
+    Push 150
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00329d
+L_003206:
+    Push 151
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0032a7
+    Push 151
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00329d
+    Jump @L_0032a7
+L_00329d:
+    Push 0
+    Call @L_0000fc
+L_0032a7:
+    Push 136
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0032f5
+    Jump @L_00334d
+L_0032f5:
+    Push 136
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003343
+    Jump @L_00334d
+L_003343:
+    Push 1
+    Call @L_0000fc
+L_00334d:
+    Push 137
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00339b
+    Jump @L_0033f3
+L_00339b:
+    Push 137
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0033e9
+    Jump @L_0033f3
+L_0033e9:
+    Push 2
+    Call @L_0000fc
+L_0033f3:
+    Push 138
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003441
+    Jump @L_003499
+L_003441:
+    Push 138
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00348f
+    Jump @L_003499
+L_00348f:
+    Push 3
+    Call @L_0000fc
+L_003499:
+    Push 139
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0034e7
+    Jump @L_00353f
+L_0034e7:
+    Push 139
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003535
+    Jump @L_00353f
+L_003535:
+    Push 4
+    Call @L_0000fc
+L_00353f:
+    Push 140
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00358d
+    Jump @L_0035e5
+L_00358d:
+    Push 140
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0035db
+    Jump @L_0035e5
+L_0035db:
+    Push 5
+    Call @L_0000fc
+L_0035e5:
+    Push 141
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003633
+    Jump @L_00368b
+L_003633:
+    Push 141
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003681
+    Jump @L_00368b
+L_003681:
+    Push 6
+    Call @L_0000fc
+L_00368b:
+    Push 142
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0036d9
+    Jump @L_003731
+L_0036d9:
+    Push 142
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003727
+    Jump @L_003731
+L_003727:
+    Push 7
+    Call @L_0000fc
+L_003731:
+    Push 143
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0037c3
+    Push 143
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00385a
+L_0037c3:
+    Push 144
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003864
+    Push 144
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00385a
+    Jump @L_003864
+L_00385a:
+    Push 8
+    Call @L_0000fc
+L_003864:
+    Push 145
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0038b2
+    Jump @L_00390a
+L_0038b2:
+    Push 145
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003900
+    Jump @L_00390a
+L_003900:
+    Push 9
+    Call @L_0000fc
+L_00390a:
+    Push 146
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003958
+    Jump @L_0039b0
+L_003958:
+    Push 146
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0039a6
+    Jump @L_0039b0
+L_0039a6:
+    Push 10
+    Call @L_0000fc
+L_0039b0:
+    Push 147
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0039fe
+    Jump @L_003a56
+L_0039fe:
+    Push 147
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003a4c
+    Jump @L_003a56
+L_003a4c:
+    Push 13
+    Call @L_0000fc
+L_003a56:
+    Push 148
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003aa4
+    Jump @L_003afc
+L_003aa4:
+    Push 148
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003af2
+    Jump @L_003afc
+L_003af2:
+    Push 11
+    Call @L_0000fc
+L_003afc:
+    Push 149
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative HAS_PICKUP_BEEN_COLLECTED 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003b4a
+    Jump @L_003ba2
+L_003b4a:
+    Push 149
+    GetStaticPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    CallNative DOES_PICKUP_EXIST 1 1
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 0
+    CmpNE
+    Push 2
+    GetLocalPs
+    pSet
+    Push 0
+    Push 2
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_003b98
+    Jump @L_003ba2
+L_003b98:
+    Push 12
+    Call @L_0000fc
+L_003ba2:
+    Jump @L_001829
+    Return 0 0
+
+L_003baa:
+    Function 0 5
+    CallNative GET_PLAYER_ID 0 1
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Push 2
+    GetLocalPs
+    pSet
+    Push 2
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 4
+    GetLocalPs
+    pGet
+    Return 0 1
+
+.data   ; statics + globals and any trailing bytes, verbatim
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    20094b5d897cd228d6395cc4b89feb9720094b5d897cd228d6395cc4b89feb97
+    000000000000000000000000636f6d70696c6564207573696e672073636f636c
+    20627920416c6578616e64657220426c616465

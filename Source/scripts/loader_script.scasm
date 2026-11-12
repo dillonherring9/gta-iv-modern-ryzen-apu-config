@@ -1,0 +1,212 @@
+; loader_script.sco - GTA IV SCO assembly source (scoasm). Rebuild: scoasm.py asm loader_script.scasm --exe GTAIV.exe
+; original sha256 340126ecf35c0de6c480f0e87977a1597b8509152e449ba41fafe290be00b3e4
+.script loader_script.sco
+.encrypted 1
+.statics 0
+.globals 0
+.flags 0x00000000
+.signature 0x7E204400
+
+.code
+
+    Function 0 2
+    CallNative THIS_SCRIPT_SHOULD_BE_SAVED 0 0
+L_00000b:
+    PushString "traffic\0"
+    Call @L_000289
+    PushString "LAWYER\0"
+    Call @L_000289
+    PushString "AVERY\0"
+    Call @L_000289
+    PushString "CORTEZ\0"
+    Call @L_000289
+    PushString "DIAZ\0"
+    Call @L_000289
+    PushString "PROTECT\0"
+    Call @L_000289
+    PushString "KAUFMAN\0"
+    Call @L_000289
+    PushString "ROCK\0"
+    Call @L_000289
+    PushString "BIKE\0"
+    Call @L_000289
+    PushString "PRON\0"
+    Call @L_000289
+    PushString "COKERUN\0"
+    Call @L_000289
+    PushString "ICECREAM\0"
+    Call @L_000289
+    PushString "MALIBU\0"
+    Call @L_000289
+    PushString "WORLD\0"
+    Call @L_000289
+    PushString "bribestar_wanted\0"
+    Call @L_000289
+    PushString "adrenaline\0"
+    Call @L_000289
+    PushString "PHIL\0"
+    Call @L_000289
+    PushString "COUNT\0"
+    Call @L_000289
+    PushString "CUBAN\0"
+    Call @L_000289
+    PushString "HAITI\0"
+    Call @L_000289
+    PushString "street_phone\0"
+    Call @L_000289
+    PushString "sunshine_garages\0"
+    Call @L_000289
+    PushString "sunshine_race\0"
+    Call @L_000289
+    PushString "STRIP\0"
+    Call @L_000289
+    PushString "business_sale\0"
+    Call @L_000289
+    PushString "pickups\0"
+    Call @L_000289
+    PushString "stadium\0"
+    Call @L_000289
+    PushString "packages\0"
+    Call @L_000289
+    PushString "save\0"
+    Call @L_000289
+    PushString "mob_phone\0"
+    Call @L_000289
+    PushString "intro\0"
+    Call @L_000289
+    PushString "map_bounds\0"
+    Call @L_000289
+    PushString "ambstreams\0"
+    Call @L_000289
+    PushString "weap_sounds\0"
+    Call @L_000289
+    PushString "side_quests\0"
+    Call @L_000289
+    PushString "cheats\0"
+    Call @L_000289
+    PushString "vc_sounds\0"
+    Call @L_000289
+    PushString "vc_jump\0"
+    Call @L_000289
+    PushString "range_bootstrap\0\0\0\0"
+    Call @L_000289
+    Push 100
+    CallNative WAIT 1 0
+    Jump @L_00000b
+    Return 0 0
+
+L_000289:
+    Function 1 6
+    Push 0
+    GetLocalPs
+    pGet
+    Push 3
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    CallNative GET_NUMBER_OF_INSTANCES_OF_STREAMED_SCRIPT 1 1
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 5
+    GetLocalPs
+    pSet
+    Push 0
+    Push 5
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_0002e9
+    Jump @L_0003b1
+L_0002e9:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    CallNative REQUEST_SCRIPT 1 0
+    Jump @L_000316
+L_00030a:
+    Push 0
+    CallNative WAIT 1 0
+L_000316:
+    Push 3
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    CallNative HAS_SCRIPT_LOADED 1 1
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 0
+    CmpEQ
+    Push 5
+    GetLocalPs
+    pSet
+    Push 0
+    Push 5
+    GetLocalPs
+    pGet
+    CmpEQ
+    JumpFalse @L_00030a
+    Push 3
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 1024
+    CallNative START_NEW_SCRIPT 2 1
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    Push 4
+    GetLocalPs
+    pSet
+    Push 3
+    GetLocalPs
+    pGet
+    Push 5
+    GetLocalPs
+    pSet
+    Push 5
+    GetLocalPs
+    pGet
+    CallNative MARK_SCRIPT_AS_NO_LONGER_NEEDED 1 0
+L_0003b1:
+    Return 1 0
+
+.data   ; statics + globals and any trailing bytes, verbatim
+    636f6d70696c6564207573696e672073636f636c20627920416c6578616e6465
+    7220426c616465
