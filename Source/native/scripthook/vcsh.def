@@ -1,7 +1,0 @@
-LIBRARY ScriptHook.dll
-EXPORTS
-    ??0NativeThread@@QAE@XZ=sh_ctor
-    ?RegisterThread@ScriptHookManager@@SAXPAVNativeThread@@@Z=sh_register
-    ?GetNativeAddress@Game@@SAPAXPBD@Z=sh_native
-    VCSH_Frame
-    VCSH_TestTick
