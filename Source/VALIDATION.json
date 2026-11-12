@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "release_checkpoint": 252,
+  "release_checkpoint": 254,
   "release_archive": {
     "file": "VCANGCE.Zip",
-    "bytes": 8608468913,
-    "sha256": "de74ec3b35744bbfebdc33460e0a573ee7831e0af97c64b821b85b8d66f583dc",
-    "scope": "User-prepared 252 playable package; source publication does not upload or modify release assets."
+    "bytes": 8608468952,
+    "sha256": "050d3026a680475af6f41df453db0a959423efd5bafab5cc8e85d1c491293fc3",
+    "scope": "User-prepared 254 playable package; source publication does not upload or modify release assets."
   },
   "script_image": {
     "bytes": 859693056,
@@ -14,7 +14,7 @@
     "canonical_scripts": 96,
     "network_scripts": 21,
     "other_resources": 4179,
-    "verification_scope": "Fresh assembly from all96 exported sources plus the current release resource baseline; complete byte-for-byte identity with live and release252 image, every member and allocated byte.",
+    "verification_scope": "Fresh assembly from all96 exported sources plus the current release resource baseline; complete byte-for-byte identity with live and release252/254 (unchanged) image, every member and allocated byte.",
     "preserved_resources": {
       "result": "PASS",
       "complete_allocations": 4200,
@@ -31,7 +31,7 @@
       "bytes": 533504,
       "release_sha256": "906fe70328aad3afc50787bf9c595bfdfcec4cb407b2f91599e1ce9b4cf95985",
       "rebuilt_sha256": "906fe70328aad3afc50787bf9c595bfdfcec4cb407b2f91599e1ce9b4cf95985",
-      "verification_scope": "Fresh Zig0.13.0 compile from the exported source and bundled Opus subset; exact current252 release and live bytes."
+      "verification_scope": "Fresh Zig0.13.0 compile from the exported source and bundled Opus subset; exact current252/254 (unchanged) release and live bytes."
     },
     {
       "module": "scripthook",
@@ -39,7 +39,7 @@
       "bytes": 133632,
       "release_sha256": "5071926931d9f82285cb0e7fade442fd9cf7743877109201980f08b6926bf1b9",
       "rebuilt_sha256": "5071926931d9f82285cb0e7fade442fd9cf7743877109201980f08b6926bf1b9",
-      "verification_scope": "Fresh Zig0.13.0 compile from the exported source and bundled Opus subset; exact current252 release and live bytes."
+      "verification_scope": "Fresh Zig0.13.0 compile from the exported source and bundled Opus subset; exact current252/254 (unchanged) release and live bytes."
     }
   ],
   "native_verification": {
@@ -120,7 +120,7 @@
     "scope": "One shared model list includes peds; default hier entries are excluded and only MLO headers count. Original posted224 model sequence is the exact prefix, with dancer07\u201314 appended last. Radio241station-list change is undone."
   },
   "gameplay": {
-    "current_checkpoint": 252,
+    "current_checkpoint": 254,
     "reported_date": "2026-11-11",
     "confirmed": [
       "Existing long-running save loads and plays after the save-safe redo",
@@ -148,7 +148,7 @@
     "commands": 38,
     "failures": 0,
     "flags": 0,
-    "scope": "Retained checkpoint-245 project audit; checkpoints 248-252 add per-step repeat builds, fixtures and full live integrity checks, separate from fresh source-export builds."
+    "scope": "Retained checkpoint-245 project audit; checkpoints 248-252 add per-step repeat builds, fixtures and full live integrity checks, separate from fresh source-export builds. Checkpoints 253-254 change release map data only (tree placement heights, distant-lights index)."
   },
   "source_gaps": [
     "Game executables, compiled plugins and binary game assets are excluded.",

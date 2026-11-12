@@ -1,8 +1,8 @@
-# Configuration sources (checkpoint 252)
+# Configuration sources (checkpoint 254)
 
 This authoring snapshot contains the **eight text files** that define the
 checkpoint-245 model load order and radio station limit, unchanged through
-checkpoint 252. Every byte matches the current playable release and the maintained live-file manifest. It includes
+checkpoint 254. Every byte matches the current playable release and the maintained live-file manifest. It includes
 the two consolidated map IDEs and the save-numbering repair; it is not a
 complete game overlay. Other files named by the DATs, models, audio, textures,
 placement data and the owned GTA IV CE installation come from the playable

@@ -1,8 +1,8 @@
 # VCANGCE source
 
 Developer sources for **Vice City Actual Next Gen CE** (**VCANGCE**), targeting
-GTA IV Complete Edition **1.2.0.59** and aligned with release checkpoint **252**
-(build 252). Players can find the playable package through the repository's
+GTA IV Complete Edition **1.2.0.59** and aligned with release checkpoint **254**
+(build 254). Players can find the playable package through the repository's
 main README and release downloads.
 
 This folder contains all **96 current game-script assembly sources**, the
@@ -33,7 +33,8 @@ filenames. Checkpoint 252 replaces the old memory module with outfit/language-on
 VCCutscene, which no longer clears the world around cutscenes, and adds two
 modules: a guarded backport of FusionFix's ed3ace loading-screen fix and VCAPC,
 which makes every APC/Rhino indestructible. Earlier signed-global,
-ragdoll-recovery and startup-lock repairs remain included.
+ragdoll-recovery and startup-lock repairs remain included. Checkpoints 253-254 change only release map
+data (sidewalk trees removed, Vice City distant-lights index rebuilt); see the source status.
 
 | Start here | Purpose |
 |---|---|
@@ -45,10 +46,10 @@ ragdoll-recovery and startup-lock repairs remain included.
 | [config/](config/) | Current text configuration, original model-order baseline and save-safety checks |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Changes and useful verification |
 | [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) | Component notices and licensing scope |
-| [CREDITS.md](CREDITS.md) | Checkpoint-252 release credits |
+| [CREDITS.md](CREDITS.md) | Checkpoint-254 release credits |
 
 The current `script.img` also holds preserved network scripts and game resources.
-To rebuild it, supply the checkpoint-252 archive with `--resources-from`; the
+To rebuild it, supply the checkpoint-254 archive with `--resources-from`; the
 builder replaces the 96 covered scripts and preserves all other allocations.
 See [BUILDING.md](BUILDING.md) for the complete command.
 

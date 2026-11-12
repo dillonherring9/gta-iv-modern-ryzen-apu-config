@@ -3,8 +3,8 @@
   "project": "Vice City Actual Next Gen CE",
   "snapshot_date": "2026-11-11",
   "game_version": "GTA IV Complete Edition1.2.0.59",
-  "release_checkpoint": 252,
-  "purpose": "Current maintained script/native source and model-order configuration snapshot matching VCANGCE.Zip 252. Relative origin identifiers document provenance; they are not build dependencies.",
+  "release_checkpoint": 254,
+  "purpose": "Current maintained script/native source and model-order configuration snapshot matching VCANGCE.Zip 254. Relative origin identifiers document provenance; they are not build dependencies.",
   "files": [
     {
       "path": ".gitattributes",
@@ -24,7 +24,7 @@
       "path": "BUILDING.md",
       "origin": "export-generated: BUILDING.md",
       "original_sha256": null,
-      "export_sha256": "75c6afee0844606c2f674f14dca69278d98bc2f84758d6e0116dd17539afb7d9",
+      "export_sha256": "a80182e059384c1482849980cdcc9356eee2aedfb1e91102d25fc5173055362a",
       "bytes": 7304
     },
     {
@@ -45,28 +45,28 @@
       "path": "README.md",
       "origin": "export-generated: README.md",
       "original_sha256": null,
-      "export_sha256": "d728e84dddbc7e33f33570a998b174c775c9a005d90323981a9d22fb73b569af",
-      "bytes": 3913
+      "export_sha256": "f4c75c639e2366b4221c0ed8532db09d5fa920ceed303e59a32b3af4e60277e6",
+      "bytes": 4051
     },
     {
       "path": "SOURCE-STATUS.md",
       "origin": "export-generated: SOURCE-STATUS.md",
       "original_sha256": null,
-      "export_sha256": "e5ab439b193a77493c53581acfb836eece82acda74f0bbf8af4756eee952a55d",
-      "bytes": 9393
+      "export_sha256": "8468eac0de3732a8d8894995491579efaef9fa21b680dc6dcae6fcba83c5489e",
+      "bytes": 9859
     },
     {
       "path": "THIRD-PARTY-NOTICES.md",
       "origin": "export-generated: THIRD-PARTY-NOTICES.md",
       "original_sha256": null,
-      "export_sha256": "538ad3916e275a609d7a1accdb8ffe17091de93441bfac944dd1ff8f8b9d6fba",
+      "export_sha256": "ac05005d5edc3800d8ec1b6d87054f57cba8f2dcc8e05266d851130f637391f0",
       "bytes": 3139
     },
     {
       "path": "config/README.md",
       "origin": "export-generated: config/README.md",
       "original_sha256": null,
-      "export_sha256": "99cc60441972ff0ab2cfb734f724fb4777274415a5777e3addda7c1bf972c9a3",
+      "export_sha256": "f0c44d48a4867c8f769c6ef2d89f2424e4ecf07666161148aea1f1e349852bf4",
       "bytes": 3526
     },
     {
@@ -2138,7 +2138,7 @@
       "path": "native/README.md",
       "origin": "export-generated: native/README.md",
       "original_sha256": null,
-      "export_sha256": "5b19346755a3e6cdebb31e0dd9e31830c0d72cc0eb74cd5c1b7b62901cdc5326",
+      "export_sha256": "9a0ed3003b21a1950a3b5f4872e3b59847159db5039b2b22550ab59c141e6227",
       "bytes": 6443
     },
     {
@@ -2572,8 +2572,8 @@
       "path": "scripts/README.md",
       "origin": "export-generated: scripts/README.md",
       "original_sha256": null,
-      "export_sha256": "b16489f9261b3b3be56eca3feba45fa659c560f0c87d10f799cca23b4c56352b",
-      "bytes": 6627
+      "export_sha256": "95514f2fd0cbf79ba258c14d79c033912e840977a59601f918688584198ce8e6",
+      "bytes": 6649
     },
     {
       "path": "scripts/ROCK.scasm",
@@ -2712,7 +2712,7 @@
       "path": "scripts/manifest.json",
       "origin": "export-generated: scripts/manifest.json",
       "original_sha256": null,
-      "export_sha256": "6e23097ea74966ef866d5f7aafdc9ffac9eed9e39d992910c0eb5e706903ab70",
+      "export_sha256": "bb207004cda83c5e3ca22f4b8e412c8bd3344f154c701c0315531ebfb5d57858",
       "bytes": 1480154
     },
     {

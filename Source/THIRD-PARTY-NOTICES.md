@@ -4,7 +4,7 @@ This export preserves component notices and introduces no blanket license.
 Existing notices apply to their respective material; files without an explicit
 license receive no new license here. Publication does not transfer ownership
 of the original games, conversion, native API references or community work.
-See the checkpoint-252 release [CREDITS.md](CREDITS.md) for attribution.
+See the checkpoint-254 release [CREDITS.md](CREDITS.md) for attribution.
 
 | Material | Retained notice or provenance |
 |---|---|

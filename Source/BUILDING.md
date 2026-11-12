@@ -58,7 +58,7 @@ library only; no game installation or save files are needed:
 python3 -I tools/check_model_order.py
 ```
 
-To check an extracted checkpoint-252 release or an installed game instead:
+To check an extracted checkpoint-254 release or an installed game instead:
 
 ```sh
 python3 -I tools/check_model_order.py --root "/path/to/release" --report ../VCANGCE-build/model-order.json
@@ -81,7 +81,7 @@ These checks establish configuration identities and order, not gameplay.
 
 Script builds need `openssl` in PATH and the pinned **FourFury 0.13.3** from
 `requirements.txt`. Supply your own GTA IV CE executable to read its encryption
-key and the **checkpoint-252** release archive as a read-only resource baseline:
+key and the **checkpoint-254** release archive as a read-only resource baseline:
 
 ```sh
 python tools/build_scripts.py --exe "/path/to/GTAIV.exe" --resources-from "/path/to/release/update/common/data/cdimages/script.img" --out ../VCANGCE-build/scripts --compare "/path/to/release/update/common/data/cdimages/script.img"

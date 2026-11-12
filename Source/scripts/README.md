@@ -1,12 +1,12 @@
 # Current VCANGCE game scripts
 
-These 96 editable `.scasm` files are the current checkpoint252 gameplay
+These 96 editable `.scasm` files are the current checkpoint254 gameplay
 sources used by `VCANGCE.Zip`. They preserve the installed SCO bytecode,
 including mission, parachute, Pole Position dancer, lap dance and pizza changes.
 They are assembly source, not the original high level source of the port.
 Earlier recovered C variants cannot rebuild the current missions wholesale.
 
-The checkpoint252 `script.img` is a mixed resource container: 96 current
+The checkpoint254 `script.img` is a mixed resource container: 96 current
 gameplay SCOs, 21 unchanged network SCOs and 4,179 other resources, 4,296
 members in total. A new build **requires the matching release's script.img**
 as its read-only resource baseline. The builder replaces only the 96 named
@@ -34,7 +34,7 @@ python tools/build_scripts.py --help
 python tools/build_scripts.py --exe "/path/to/GTAIV.exe" --resources-from "/path/to/release/update/common/data/cdimages/script.img" --out "../VCANGCE-build/scripts" --compare "/path/to/release/update/common/data/cdimages/script.img"
 ```
 
-The resource baseline must have checkpoint252 SHA256
+The resource baseline must have checkpoint254 (unchanged since 252) SHA256
 `ddb8dc6f3d1944f92fd92d96a36839464a6885ce26e003e8a6092ffd74517d3a`.
 On Windows, activate `.venv\Scripts\activate` and ensure `openssl.exe` is
 available in PATH. The assembler reads the encryption key from your own game

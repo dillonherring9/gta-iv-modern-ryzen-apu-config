@@ -1,7 +1,7 @@
 # Source status
 
 Code snapshot: **11 November 2026**. This export covers maintained code for
-**Vice City Actual Next Gen CE** through checkpoint **252**, matching the
+**Vice City Actual Next Gen CE** through checkpoint **254**, matching the
 locally prepared `VCANGCE.Zip` release's covered scripts, native components and
 included text configuration.
 
@@ -28,9 +28,9 @@ included text configuration.
   loaders, IDE model definitions and radio station limit, together with a
   frozen posted-release model-order baseline and a read-only checker. It
   records the save-safe model layout installed by checkpoint 245, unchanged
-  through checkpoint 252.
+  through checkpoint 254.
 
-The checkpoint-252 mixed `script.img` SHA256 is
+The checkpoint-254 mixed `script.img` (unchanged since 252) SHA256 is
 `ddb8dc6f3d1944f92fd92d96a36839464a6885ce26e003e8a6092ffd74517d3a`.
 Its **4,296** members comprise **96** covered gameplay scripts, **21** unchanged
 network scripts and **4,179** other resources. The latter **4,200** members are
@@ -47,7 +47,7 @@ output identities. The current VCCore release SHA256 is
 |---|---|
 | All 96 gameplay SCOs and mixed `script.img` | Fresh assembly plus the supplied release resource baseline reproduces the complete 859,693,056-byte archive exactly, including all 4,200 preserved allocations |
 | `VCCore.asi` and `ScriptHook.dll` | A fresh Zig 0.13.0 build exactly matches the current release bytes; the bundled Opus subset is freshly compiled across 137 translation units |
-| Text configuration | Snapshot identities match checkpoint 252 (unchanged since 245); the checker preserves the original 5,740 model definitions in order and verifies eight appended dancer peds |
+| Text configuration | Snapshot identities match checkpoint 254 (unchanged since 245); the checker preserves the original 5,740 model definitions in order and verifies eight appended dancer peds |
 
 The 96-member canonical script projection SHA256 is
 `a3902018583d569e56574b105bb91ac96d7e728e8fd3b04f5249d9ccee86d59e`.
@@ -80,6 +80,11 @@ patch. Fresh builds from this export reproduce its VCCore, ScriptHook and
 `script.img` exactly; both compiled fixtures pass under Wine. The owner ran
 build 252: every VCCore module logged active, all 14 VCAPC vehicle natives
 resolved, and Mjolnir logged GTA IV's own quality check as active.
+
+Checkpoints 253 and 254 change only binary map data in the release, so this export's code, scripts and
+configuration are unchanged. Step 253 moves 134 trees that stood on bare sidewalk, road or concrete (no planter
+or soil) below the map, changing only their placement heights. Step 254 rebuilds the block index of Vice City's
+`distantlights.dat`, which had carried Liberty City's tables, so FusionFix's Distant Lights draw Vice City's roads.
 
 The parachute is automatically wearable in full-size planes and helicopters,
 excludes the two RC aircraft, and lets the player keep a gun without selecting
@@ -132,7 +137,7 @@ compiled scripts; they do not provide all original C or .NET projects.
 Historical recovered C variants are excluded because bulk rebuilding them can
 discard later fixes.
 
-The checkpoint-252 release also includes archive/map-definition consolidation,
+The checkpoint-254 release also includes archive/map-definition consolidation,
 language-table merging, retained radio/audio data, texture/voice repairs, new
 club models/accessories, parachute and blue Soiree assets, ground mapping and
 other community content. The included text configuration records the current

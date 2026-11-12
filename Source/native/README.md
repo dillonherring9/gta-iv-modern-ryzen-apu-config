@@ -1,7 +1,7 @@
 # Native project code
 
 These maintained authoring files reproduce the two project-native modules in
-VCANGCE at checkpoint 252: `VCCore.asi` and `ScriptHook.dll`. The portable
+VCANGCE at checkpoint 254: `VCCore.asi` and `ScriptHook.dll`. The portable
 builder writes fresh outputs without reading or changing an installed game.
 Use Python 3.11+ and Zig 0.13.0 from the source folder root:
 
