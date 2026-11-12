@@ -1,0 +1,158 @@
+{
+  "schema_version": 2,
+  "release_checkpoint": 252,
+  "release_archive": {
+    "file": "VCANGCE.Zip",
+    "bytes": 8608468913,
+    "sha256": "de74ec3b35744bbfebdc33460e0a573ee7831e0af97c64b821b85b8d66f583dc",
+    "scope": "User-prepared 252 playable package; source publication does not upload or modify release assets."
+  },
+  "script_image": {
+    "bytes": 859693056,
+    "sha256": "ddb8dc6f3d1944f92fd92d96a36839464a6885ce26e003e8a6092ffd74517d3a",
+    "container_members": 4296,
+    "canonical_scripts": 96,
+    "network_scripts": 21,
+    "other_resources": 4179,
+    "verification_scope": "Fresh assembly from all96 exported sources plus the current release resource baseline; complete byte-for-byte identity with live and release252 image, every member and allocated byte.",
+    "preserved_resources": {
+      "result": "PASS",
+      "complete_allocations": 4200,
+      "additional_scripts": 21,
+      "other_resources": 4179,
+      "exact_order_types_flags_and_allocations": true,
+      "scope": "Every noncanonical member is preserved, including all 21 network SCOs and 4,179 other resources. Sector offsets may relocate if an edited canonical SCO changes allocation size."
+    }
+  },
+  "native_modules": [
+    {
+      "module": "vccore",
+      "file": "VCCore.asi",
+      "bytes": 533504,
+      "release_sha256": "906fe70328aad3afc50787bf9c595bfdfcec4cb407b2f91599e1ce9b4cf95985",
+      "rebuilt_sha256": "906fe70328aad3afc50787bf9c595bfdfcec4cb407b2f91599e1ce9b4cf95985",
+      "verification_scope": "Fresh Zig0.13.0 compile from the exported source and bundled Opus subset; exact current252 release and live bytes."
+    },
+    {
+      "module": "scripthook",
+      "file": "ScriptHook.dll",
+      "bytes": 133632,
+      "release_sha256": "5071926931d9f82285cb0e7fade442fd9cf7743877109201980f08b6926bf1b9",
+      "rebuilt_sha256": "5071926931d9f82285cb0e7fade442fd9cf7743877109201980f08b6926bf1b9",
+      "verification_scope": "Fresh Zig0.13.0 compile from the exported source and bundled Opus subset; exact current252 release and live bytes."
+    }
+  ],
+  "native_verification": {
+    "status": "PASS",
+    "compiler_version": "0.13.0",
+    "target": "x86-windows-gnu",
+    "pe_coff_timestamp": 0,
+    "opus": {
+      "version": "1.6",
+      "source_count": 137,
+      "sha256": "cae0b7342599dcf400b8cdc929e7e2d2f2fd508264928e0d73cda6711c501768",
+      "bytes": 3034950,
+      "note": "Intermediate static library; its SHA256 depends on the build directory path. VCCore.asi and ScriptHook.dll are path-independent and must match native_modules exactly."
+    },
+    "fixtures": [
+      {
+        "file": "vcaudioheap-fixture.exe",
+        "sha256": "8f9b56000ab77a58ce2c6fc78efd70dbefaa301dbc9994bf7c9f96bdd87cf749",
+        "status": "Built; passed under Wine (Proton) before publication; CI compiles only."
+      },
+      {
+        "file": "vccore-fixture.exe",
+        "sha256": "9bd4792cc6d377d27440960b50c57ee2240de08f1166ac9e7283741fab3cdf52",
+        "status": "Built; passed under Wine (Proton) before publication; CI compiles only."
+      }
+    ],
+    "scope": "Current two native outputs freshly compiled and compared with release/live; both fixtures compiled and run under Wine before publication."
+  },
+  "script_contracts": {
+    "result": "PASS",
+    "current_image_sha256": "ddb8dc6f3d1944f92fd92d96a36839464a6885ce26e003e8a6092ffd74517d3a",
+    "global_storage": {
+      "member": "startup.sco",
+      "words": 65055
+    },
+    "direct_immediate_global_refs": 5278,
+    "invalid_immediate_global_refs": 0,
+    "intentional_negative_short_constants": 7,
+    "negative_control_sha256": "45d88ccd17266d11def98ff9715afa82f128d3d8a24a37541c2baf48d439aa64",
+    "negative_control_invalid_refs": 443,
+    "negative_constant_operands_preserved": true,
+    "signed_operands": {
+      "result": "PASS",
+      "signed_roundtrips": [
+        -32768,
+        -180,
+        -120,
+        -20,
+        -1,
+        0,
+        32767
+      ],
+      "rejected_short_operands": [
+        -32769,
+        32768,
+        60000,
+        60240,
+        65535
+      ],
+      "full_width_roundtrips": [
+        32768,
+        60000,
+        60240,
+        60341,
+        65535
+      ]
+    },
+    "scope": "Direct adjacent integer-immediate GetGlobalPs operands only; computed indices, control flow, native behavior and gameplay are not proved. Global bound comes from the canonical scripts' sole nonzero SCO global-storage header. Network scripts and non-SCO resources are excluded by the explicit 96-member source manifest. No key or local input paths are recorded."
+  },
+  "model_order_contract": {
+    "result": "PASS",
+    "tool": "tools/check_model_order.py",
+    "manifest": "config/manifest.json",
+    "legacy_models": 5740,
+    "appended_dancers": 8,
+    "total_models": 5748,
+    "station_limit": 10,
+    "scope": "One shared model list includes peds; default hier entries are excluded and only MLO headers count. Original posted224 model sequence is the exact prefix, with dancer07\u201314 appended last. Radio241station-list change is undone."
+  },
+  "gameplay": {
+    "current_checkpoint": 252,
+    "reported_date": "2026-11-11",
+    "confirmed": [
+      "Existing long-running save loads and plays after the save-safe redo",
+      "Ocean View hotel clothes pickup is a folded shirt again in the existing save",
+      "All Pole Position dancers are present",
+      "All reported development crashes resolved: no-window startup, post-save, windshield-ejection/ragdoll and Riot; Riot completed and next mission started",
+      "Road tyre sounds, Skimmer water takeoff, motorcycle helmets and blue Soiree suit in cutscenes",
+      "New ground textures viewed from the ground and the air",
+      "Later asset, voice and consolidation changes in general play",
+      "Build 252 launched: every VCCore module logged active, all 14 VCAPC vehicle natives resolved, and Mjolnir logged GTA IV's native quality check active"
+    ],
+    "retained_prior_reports": [
+      "Windshield/ragdoll recovery stays running",
+      "Automatic aircraft pack, gun use, deployment, steering and landing"
+    ],
+    "scope": "Owner Linux/Proton gameplay reports recorded through 2026-11-11 in the project state. This metadata update and automated source/build checks launch no game.",
+    "untested": [
+      "Strict weapon attribution in some rampages",
+      "Windows",
+      "Steam Deck"
+    ]
+  },
+  "maintained_project_audit": {
+    "pass_number": 14,
+    "commands": 38,
+    "failures": 0,
+    "flags": 0,
+    "scope": "Retained checkpoint-245 project audit; checkpoints 248-252 add per-step repeat builds, fixtures and full live integrity checks, separate from fresh source-export builds."
+  },
+  "source_gaps": [
+    "Game executables, compiled plugins and binary game assets are excluded.",
+    "The21 network scripts and4179 other mixed-IMG resources are preserved from the user-supplied release baseline, not rebuilt from original source here.",
+    "Vendor modules and full map/model/texture/collision/audio authoring are outside the curated code/config export."
+  ]
+}
