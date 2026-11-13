@@ -1,12 +1,12 @@
-# Vice City Actual Next Gen CE
+# Vice City Actual Next Gen CE — Build 264 (Now with 64-Bit Rendering)
 
 **Play Grand Theft Auto: Vice City inside Grand Theft Auto IV.** Tommy Vercetti's story and the whole neon-lit 1986 city, rebuilt with GTA IV's lighting, physics and Euphoria animation, HD artwork, extra islands, the classic side activities and restored dialogue. It comes as one download that you copy into your own copy of **GTA IV: The Complete Edition**.
 
-**Build 254** · for **GTA IV: The Complete Edition 1.2.0.59** · download **VCANGCE.Zip** from [Releases](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/releases/latest)
+**Complete mod package** · for **GTA IV: The Complete Edition 1.2.0.59** · download **Build264.zip** from [Releases](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/releases/latest)
 
 - [What this is](#what-this-is)
 - [What makes this version different](#what-makes-this-version-different)
-- [New in build 254](#new-in-build-254)
+- [64-bit rendering, explained](#64-bit-rendering-explained)
 - [What you need](#what-you-need)
 - [Installation, step by step](#installation-step-by-step)
 - [Controls](#controls)
@@ -24,7 +24,7 @@
 
 **Grand Theft Auto: Vice City** is Rockstar's 2002 game. It's set in a city based on 1980s Miami, and you play Tommy Vercetti, who builds a criminal empire after a drug deal goes wrong.
 
-**Grand Theft Auto IV** is Rockstar's 2008 game. It has a much newer engine, with realistic lighting, weighty vehicle physics and **Euphoria**, which makes characters stumble, fall and react to hits instead of playing canned animations. **The Complete Edition** (often shortened to **CE**) is the version sold today on Steam and the Rockstar Games Launcher. It includes GTA IV and its *Episodes from Liberty City*. Its current version is **1.2.0.59**.
+**Grand Theft Auto IV** is Rockstar's 2008 game. It has a much newer engine, with realistic lighting, weighty vehicle physics and **Euphoria**, which makes characters stumble, fall and react to hits instead of playing canned animations. **The Complete Edition** (often shortened to **CE**) is the version sold today on Steam and the Rockstar Games Launcher. It includes GTA IV and its *Episodes from Liberty City*. This package targets version **1.2.0.59**.
 
 A **total conversion** replaces a game's world and story with another one. This mod swaps GTA IV's Liberty City for Vice City and its missions, characters, vehicles, radio and sound, all running in GTA IV's engine.
 
@@ -34,7 +34,7 @@ A **total conversion** replaces a game's world and story with another one. This 
 - work by other modders, such as FusionFix (fixes for GTA IV itself) and DLSS-IV (modern upscaling), all included and set up;
 - this project's own work: the classic Vice City activities rebuilt as native game scripts, restored dialogue, tuned handling, native PlayStation 5 DualSense support, a wearable parachute and many fixes.
 
-You download one archive, extract it and copy its contents into your GTA IV folder. You don't need to find, install or combine any other mod. This is an unofficial fan project. You need your own copy of GTA IV: The Complete Edition, and no Rockstar game files are included.
+You download one archive, extract it and copy its contents into your GTA IV folder. You don't need to find, install or combine any other mod. This is an unofficial fan project. You need your own copy of GTA IV: The Complete Edition, and the base GTA IV executable and complete base game are not included.
 
 ## What makes this version different
 
@@ -57,33 +57,34 @@ What you get with this version:
 - **Vehicles handle like what they are.** Each car is tuned toward the real vehicle its model represents, so a Countach-style Infernus and a Humvee-style Patriot drive very differently.
 - **Native DualSense support:** adaptive triggers, haptics, sound from the controller speaker and a light bar that tracks health and police. DS4Windows and Steam Input aren't needed.
 - **One package, set up and checked together.** Every file is listed with a checksum, and updates keep your existing saves working (see [Saves](#saves)).
-- **Windows, Linux and Steam Deck.** Setup steps for each are below.
+- **Setup instructions for Windows, Linux and Steam Deck** are included below.
 
-## New in build 254
+## 64-bit rendering, explained
 
-Everything new since build 247:
+**VCRender moves the graphics work into a separate 64-bit process.** GTA IV still supplies the gameplay, missions, physics and its Direct3D 9 commands. The included host renders those commands through **DXVK and Vulkan**, then displays the finished picture in the game window. You launch GTA IV normally; the host starts automatically.
 
-- **The Rhino is indestructible.** Gunfire, explosions, fire, crashes and melee no longer damage the tank. Its tyres can't burst and its body doesn't dent. This applies to every Rhino, including the army's tanks at six wanted stars.
-- **Pizza Boy throws the pizzas.** Tommy throws each pizza from the scooter with a real throwing animation. The box flies to the customer, who walks over and picks it up. A pizza that lands in the water, keeps rolling or lands too far away doesn't count, and the customer waits for your next throw.
-- **Cutscenes leave the world alone.** Earlier builds cleared nearby traffic, pedestrians and loose objects when a cutscene started, and could remove a car you'd parked nearby. GTA IV's own streaming now manages memory around cutscenes, so nothing is cleared away when one starts. Your outfit still carries into cutscenes.
-- **Less waiting behind loading screens.** While a loading screen is already showing, the game no longer stops for extra screen refreshes on every frame behind it. This fix comes from FusionFix's development version, ahead of its next release.
-- **GTA IV's graphics safeguard is back on.** Mjolnir IV still tunes how the game uses your CPU, but it no longer switches off the game's own check that keeps graphics settings within its memory budget.
-- **No more trees growing out of the pavement.** 134 palms that stood straight on sidewalks, roads and concrete with no planter or soil around them are gone, including the row in front of the Ocean View Hotel. Potted palms, and trees in grass, sand, soil or planters, stay.
-- **Distant lights work in Vice City.** Turn on **Settings → Display → Distant Lights** for streetlights, traffic and lamp glows across the city at night. The road-lights data from the Vice City conversion carried Liberty City's index, so it couldn't draw Vice City's roads; it's rebuilt for Vice City's streets.
-- **Your saves carry over.** Saves from builds 247, 245 and 224 keep working.
+The benefit is memory headroom: the graphics driver and its GPU mappings no longer take space inside the 32-bit game process. This lets the package provide a larger texture budget while keeping address-space safety limits. **GTA IV itself remains 32-bit**; this is not a replacement 64-bit GTAIV.exe and it does not give the engine unlimited memory.
 
-Earlier updates:
+The renderer also includes:
 
-- **Build 247:** the music that played whenever you flew a helicopter or plane is off, so in the air you hear the radio and the aircraft. It was easy to mistake for the near-death music. See [Settings](#settings) to turn it back on.
-- **Build 245:** all 12 Pole Position poles are occupied, and two floor dancers offer GTA IV-style private lap dances, with Vice City's payment, dialogue and club-ownership progression kept. Two dancers wear black bunny accessories. It also corrected textures for pedestrians, the player and map objects, fixed Washington Beach decals, vehicle colours, engine sounds and pedestrian voices, and combined four of the project's plugins into one, `VCCore.asi`.
+- **Paired 64-bit upscaling.** The included DLSS-IV client supplies the scene, depth and motion data; its 64-bit helper performs the upscale before the HUD. **FSR 3.1 is the path used and verified with this build.** DLSS-IV is the component's name; an NVIDIA RTX card is not required for FSR. NVIDIA DLSS requires RTX hardware and has not been verified with VCRender.
+- **GPU-side synchronization** for the upscaler, with a fallback and a watchdog if the helper stops responding.
+- **One frame ahead by default,** keeping the game's rendering queue short to reduce added input delay.
+- **Space for large texture dictionaries.** Blocks above 8 MiB, and blocks the original physical-resource heap cannot fit, can use a separate pool. It is capped at 512 MiB and preserves at least 600 MiB of free game address space. This addresses the fragmented-heap failure that repeatedly unloaded roads and buildings.
+- **Correct allocation failures and streaming diagnostics,** so the game receives real graphics errors and the logs can identify a resource that fails to load.
+
+The installed build has run with the pool and FSR active, including a display reset and clean exit. These features improve memory handling; frame rate still depends on your CPU, GPU, resolution and graphics settings.
+
+**Which Graphics API should I select?** Leave **Vulkan** selected and **Anti-aliasing Off**. VCRender already uses the included DXVK/Vulkan host. With the host running, that API menu setting does not switch it to a different renderer; it selects the fallback if the host cannot start. No separate DXVK installation is needed.
 
 ## What you need
 
 - **GTA IV: The Complete Edition, version 1.2.0.59**, from Steam or the Rockstar Games Launcher. Let it update fully. To check the version on Windows, right-click `GTAIV.exe`, choose **Properties → Details** and look for **File version 1.2.0.59**.
-- **Disk space:** the download is about **8.6 GB** and the extracted mod about **9.9 GB**. Keep about **30 GB** free while installing, on top of the game itself and your backups.
+- **Disk space:** allow about **9 GB** for the download and **10 GB** for the extracted mod. Keep about **30 GB** free while installing, in addition to the base game and your backups. Joining split parts creates another copy of the download, so allow extra space if you use that method.
+- **A 64-bit operating system and a recent graphics driver compatible with DXVK 3.x.** A Vulkan 1.3-capable GPU is required, with the extensions used by the bundled DXVK. See [DXVK driver support](https://github.com/doitsujin/dxvk/wiki/Driver-support); Vulkan 1.3 support alone is not a compatibility guarantee.
 - **7-Zip** to extract the download: [7-zip.org](https://www.7-zip.org/) on Windows. On Linux and Steam Deck you can use the commands in step 3 instead.
-- **Windows:** the [Microsoft Visual C++ Redistributable **x86**](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist/). Many PCs already have it. Install the x86 one even on 64-bit Windows.
-- **Linux and Steam Deck:** Proton, Steam's built-in compatibility layer for Windows games.
+- **Windows:** install both the [Microsoft Visual C++ Redistributable **x86 and x64**](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist/). The game-side plugins need x86; the 64-bit upscaler dependencies need x64.
+- **Linux and Steam Deck:** a current Proton version and graphics drivers that support the included DXVK 3.x. Proton provides compatibility for both the 32-bit game and its 64-bit host; use a 64-bit/WoW64 prefix if configuring Wine manually.
 - **Optional:** a PlayStation 5 DualSense controller. Keyboard and mouse, Xbox and other controllers work with GTA IV's normal controls.
 
 ## Installation, step by step
@@ -98,25 +99,25 @@ Earlier updates:
 ### 2. Download
 
 1. Open the [latest release](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/releases/latest) and scroll down to **Assets**.
-2. Download **all five parts**, `VCANGCE.Zip.001` to `VCANGCE.Zip.005`, into the **same folder**. Don't rename them. Together they form one ZIP file; none of them works alone.
+2. Download **all five parts**, `Build264.zip.001` to `Build264.zip.005`, into the **same folder**. Don't rename them. Together they form one ZIP file; none of them works alone.
 3. Don't download **Source code (zip)** or **Source code (tar.gz)**. GitHub adds those automatically, and they don't contain the game files.
 
-If someone gave you the single full **VCANGCE.Zip** instead, use that file and skip the parts.
+If someone gave you the single full **Build264.zip** instead, use that file and skip the parts.
 
 ### 3. Extract
 
-**Windows:** install 7-Zip. Right-click `VCANGCE.Zip.001` and choose **7-Zip → Extract files…** (on Windows 11, choose **Show more options** first). Choose a new empty folder, for example `C:\VCANGCE`, and click **OK**. 7-Zip reads all five parts by itself; only open `.001`. Windows' built-in ZIP tool can't open split archives.
+**Windows:** install 7-Zip. Right-click `Build264.zip.001` and choose **7-Zip → Extract files…** (on Windows 11, choose **Show more options** first). Choose a new empty folder, for example `C:\VCANGCE`, and click **OK**. 7-Zip reads all five parts by itself; only open `.001`. Windows' built-in ZIP tool can't open split archives.
 
 **Linux or Steam Deck:** open a terminal in the download folder. On Steam Deck, use **Konsole** in Desktop Mode. If 7-Zip is installed:
 
 ```sh
-7z x VCANGCE.Zip.001 -oVCANGCE
+7z x Build264.zip.001 -oVCANGCE
 ```
 
-Without 7-Zip, join the parts into the full ZIP and extract that with any archive tool, such as Ark:
+If your installed command is `7zz`, use that instead of `7z`. Without 7-Zip, join the parts into the full ZIP and extract that with an archive tool such as Ark:
 
 ```sh
-cat VCANGCE.Zip.00[1-5] > VCANGCE.Zip
+cat Build264.zip.00[1-5] > Build264.zip
 ```
 
 Either way, you get a folder named **`release`**. It contains `update`, `plugins`, `DLSSIV`, several loose files, `README.md` and `CREDITS.md`.
@@ -149,17 +150,16 @@ This tells Proton to load the mod's loader. In Lutris, add the DLL override `din
 ### 7. Play
 
 1. Start the game normally.
-2. In **Settings → Display**, set **Graphics API** to **Vulkan** and **Anti-aliasing** to **Off**. The included DLSS-IV upscaler needs both. Which of DLSS or FSR you can choose depends on your graphics card.
+2. In **Settings → Display**, leave **Graphics API** on **Vulkan** and set **Anti-aliasing** to **Off**. The supplied renderer and upscaler start automatically. Use your monitor's normal resolution; the upscaler can render the scene internally at a lower resolution.
 3. Choose **New Game**, or load your save. A new game starts the activities, statistics and parked cars from their intended beginning.
 
-**Optional, checking the download:** `PARTS-SHA256SUMS.txt` lists the checksum of each part, and `VCANGCE.Zip.sha256` lists the checksum of the full ZIP. Inside `release`, `SHA256SUMS.txt` lists every mod file. On Linux, run `sha256sum -c SHA256SUMS.txt` in that folder.
+**Optional, checking the download:** `PARTS-SHA256SUMS.txt` lists the checksum of each part, and `Build264.zip.sha256` lists the checksum of the full ZIP. Inside `release`, `SHA256SUMS.txt` lists every mod file. On Linux, run `sha256sum -c SHA256SUMS.txt` in that folder.
 
-### Updating from an earlier build
+### If this folder already contains mods
 
-- **From build 247 or 245:** copy the new `release` contents over your installation as in step 5. You can then delete `plugins/VCMemory.ini`; it's no longer used, and the cutscene outfit setting is now in `plugins/VCCutscene.ini`.
-- **From build 224 or earlier:** before you copy, delete `plugins/VCAudioHeap.asi`, `plugins/VCMemory.asi`, `plugins/VCMusic.asi` and `plugins/VCScriptHook.asi`. They're now combined into `plugins/VCCore.asi`, which switches itself off while any of the old files is present. Copying doesn't delete them, so remove them by hand, along with the unused `plugins/VCMemory.ini`. Keep the other `.ini` files and `ScriptHook.dll` from the new package.
+A clean GTA IV CE folder is the supported starting point. Keep your saves separately, remove the old mod installation completely, and install this full package. Merely copying files over an unknown mod stack can leave conflicting plugins behind.
 
-Your saves keep working either way.
+For an existing VCANGCE installation, the former standalone `plugins/VCAudioHeap.asi`, `plugins/VCMemory.asi`, `plugins/VCMusic.asi` and `plugins/VCScriptHook.asi` have been combined into `VCCore.asi`. Remove those four old files if present; `VCCore.asi` disables itself while any remain. `plugins/VCMemory.ini` is obsolete. Keep the new package's `ScriptHook.dll`, `VCScriptHook.ini`, `VCMusic.ini` and `VCCutscene.ini`. Use the complete matching VCRender folder and plugin from this package, rather than mixing renderer files from another installation.
 
 ### DualSense setup
 
@@ -276,7 +276,7 @@ Native PlayStation 5 DualSense support, built into the game. DS4Windows, ViGEm a
 - **HD characters and world:** Tommy, cutscene characters, pedestrians in 1980s clothing, props, vegetation, roads and buildings, and improved interiors.
 - **Atmosphere:** turquoise ocean and pools, Mint ocean water, a Miami sky and colour grading, Project Thunder lightning and storms, and Xbox-style rain droplets on the camera.
 - **Distant lights** at night: streetlights, traffic and lamp glows across Vice City. Turn them on in **Settings → Display → Distant Lights**.
-- **DLSS and FSR upscaling** through DLSS-IV, with FusionFix's fixes and options for GTA IV.
+- **FSR 3.1 upscaling through the paired DLSS-IV client and 64-bit helper,** alongside FusionFix's graphics fixes and options. See [64-bit rendering](#64-bit-rendering-explained) for the distinction between the component name and verified backend.
 - **Smoother running:** Mjolnir IV tunes how the game uses your CPU. GTA IV's own streaming and graphics safeguards manage memory, including around cutscenes, so nothing is cleared away when a cutscene starts. Loading screens skip a redundant wait, a fix from FusionFix's development version.
 
 ### Languages
@@ -289,11 +289,19 @@ Play the mod as supplied first. If you add other mods later, back up a working c
 
 | File in the game folder | What you can change |
 |---|---|
+| `plugins/VCRender.ini` | The renderer, borderless/fullscreen handling, frame queue, extra texture budget, bounded physical-resource pool, diagnostics and whether the paired upscaler loads. |
+| `DLSS-IV.cfg` | Upscaling quality, custom render scale and sharpening. These settings belong to the paired DLSS-IV client; see the notes below. |
 | `plugins/VCMusic.ini` | Music and restored sounds: chase, death and flying music on or off, their volume and fade times, the wanted level that starts the chase music, and the volume of the restored voices. |
 | `plugins/GTA_IV_DualSense.ini` (created on first start) | Trigger and haptic strength, effects, menu light-bar colour and brightness, player LEDs, touchpad gestures, gyro aiming and motion steering. |
 | `plugins/VCScriptHook.ini` | `[ControllerAudio]`: speaker, Bluetooth audio, haptic strength, siren and heartbeat volume, and which effects reach the speaker. `[Lightbar]`: health colours and police flashing. |
 | `plugins/AudioMap.ini` | Which controller sounds and haptics each vehicle and weapon uses. |
 | `plugins/VCCutscene.ini` | `[Outfits]`: whether Tommy's current outfit carries into cutscenes. |
+
+**Upscaling:** `quality=1` in `DLSS-IV.cfg` is the supplied Quality preset, rendering at about two thirds of output width and height. `custom=0` keeps that preset; `sharpness=0` adds no extra sharpening. Close the game before editing and restart afterward. To request the documented FSR 3.1 path explicitly, set `upscaler=1` and `fsr_version=3`. The supplied automatic selection settings are retained. The configuration also describes upstream features. NVIDIA DLSS has not been verified with VCRender, and FSR 4 and frame generation are not advertised here. **HDR output is unavailable through VCRender's current display path; leave `hdr=0`.**
+
+**Native-resolution rendering:** in `plugins/VCRender.ini`, set `[Upscaler] Enabled=0` to keep VCRender but turn off its paired upscaler. Higher internal resolution increases GPU work. Restore `Enabled=1` to enable the upscaler again.
+
+**Renderer queue and memory:** `MaxFramesAhead=1` is the supplied low-latency queue setting. Leave the texture budget and physical-pool limits at their defaults unless diagnosing a specific problem. Raising them cannot remove the 32-bit engine's address-space limit. Keep `plugins/global.ini`: it prevents the original root DLSS-IV plugin from loading a second time while VCRender loads its paired client.
 
 **Turning the flying music back on:** open `plugins/VCMusic.ini` in a text editor. In the `[Flying]` section, change `Enabled=0` to `Enabled=1` and save.
 
@@ -305,22 +313,21 @@ Play the mod as supplied first. If you add other mods later, back up a working c
 
 Save at a safehouse, or anywhere outside a mission with **F7 → Gameplay Tweaks → Save Game Now**. Saves are stored in `Documents\Rockstar Games\GTA IV\Profiles\`; with Proton, that folder is inside the game's Proton prefix. A save keeps the parked cars it was created with.
 
-**Updating keeps your saves.** Saves from builds 247, 245 and 224 load and play normally in build 254, so you don't need to start a new game. Back up your saves before any update anyway.
+**Existing VCANGCE saves are retained.** Back them up before installing. The established radio-station order and pickup-model numbering are preserved, so the renderer changes do not require a new game. A save also retains its existing parked-car population. Saves from unrelated Vice City conversions or unmodded GTA IV are not interchangeable with this package.
 
-Why this works: a GTA IV save remembers two things from the mod.
-
-- **The radio station list.** If an update changed the stations, older saves would stop loading.
-- **The model number of every pickup a script placed** (clothes, health, armour, hidden packages and so on). A save remembers these pickups by their position in the game's model list, not by name. If an update inserted or removed models ahead of them, the pickups in older saves would look like the wrong object, though they could still be collected.
-
-This build keeps both exactly as in builds 224, 245 and 247. Models that were added later, such as the extra Pole Position dancers, come after all the others. That's also why two changes tried during development were left out: a nine-station radio update and a clean-up of unused model definitions. Both would have affected existing saves.
+A new game is available if you want the city, activities and statistics initialized from the beginning. Keep your backup outside the game folder before reinstalling or changing mods.
 
 ## Troubleshooting
 
-- **The game starts as normal GTA IV, in Liberty City.** The mod didn't load. Check that `GTAIV.exe`, `dinput8.dll`, `update` and `plugins` are in the same folder. On Linux and Steam Deck, set the launch option from step 6.
-- **The game closes or won't start.** Make sure the game folder had no other mods and that, on Windows, the **x86** Visual C++ Redistributable is installed. If you updated from build 224 or older, delete the four old `.asi` files listed under [Updating from an earlier build](#updating-from-an-earlier-build).
-- **DLSS or FSR options are missing.** Set **Graphics API** to **Vulkan** and **Anti-aliasing** to **Off**, then restart the game. With an NVIDIA card on Proton, add `PROTON_ENABLE_NVAPI=1` in front of the launch option.
-- **The DualSense isn't detected.** Connect it before starting the game. On Linux and Steam Deck, turn off Steam Input for the game and add `SDL_GAMECONTROLLER_IGNORE_DEVICES=` as described in [DualSense setup](#dualsense-setup).
-- **Reporting a problem:** open an issue on the [GitHub page](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/issues). Say what system you play on, which mission or place you were in and what you did just before. Attach the `.log` files from the `plugins` folder, copied before you start the game again, because each launch replaces them.
+- **7-Zip says a volume is missing or the archive is corrupt.** Confirm that `Build264.zip.001` through `.005` are together, with their exact original names. Check `PARTS-SHA256SUMS.txt` and download a failing part again. Extract only from `.001`.
+- **The game starts as normal GTA IV in Liberty City.** Check that `GTAIV.exe`, `dinput8.dll`, `update` and `plugins` are together. On Proton, use the launch option in step 6. Do not leave the files inside an extra `release` folder.
+- **The game closes or cannot start.** Start with a clean CE 1.2.0.59 installation, the complete matching package and current GPU drivers. On Windows, install both the x86 and x64 Visual C++ Redistributables. Check for the four old standalone plugins listed above. A 32-bit operating system cannot run the host.
+- **No upscaling or an unexpectedly soft picture.** Keep Anti-aliasing Off, restart after changing settings, and check `DLSS-IV.cfg` quality/custom scale. FSR 3.1 is the verified VCRender path; the component's DLSS-IV name does not require an NVIDIA card. For an explicit FSR request, use `upscaler=1` and `fsr_version=3`. Do not install a second DLSS-IV or replace the paired files.
+- **I changed DirectX/Vulkan and the picture stayed the same.** That is expected while VCRender's host is running. Leave Vulkan selected; the menu setting controls the fallback rather than the active host.
+- **Loading artwork disappears at a particular resolution.** Apply/reset the display setting and try another supported resolution or your monitor's native resolution. The artwork layout can depend on the resolution.
+- **Missing roads or buildings after prolonged travel.** Keep the renderer's default memory limits, copy the logs before restarting, and report the location and route. The new allocation pool targets a known fragmented-heap cause; other streaming failures need their own log evidence.
+- **The DualSense is not detected.** Connect it before starting. On Linux/Steam Deck, turn off Steam Input and add `SDL_GAMECONTROLLER_IGNORE_DEVICES=` as described in [DualSense setup](#dualsense-setup).
+- **Reporting a problem:** open a [GitHub issue](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/issues) with your OS, GPU/driver, resolution, mission/location and actions before the problem. Copy logs before relaunching: `plugins/VCRender.log`, `plugins/VCRender/logs/`, `plugins/VCRender/VCBridge-upscale-helper.log`, `DLSS-IV.log` and relevant plugin logs. A new launch can replace them. Include a screenshot if it helps show the issue.
 
 ## Uninstalling
 
@@ -328,7 +335,9 @@ The simplest way is to uninstall GTA IV, delete what's left of its folder and re
 
 ## Source code
 
-The repository's [Source folder](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/tree/main/Source) holds the code for this build: all 96 gameplay scripts, the source of the `VCCore.asi` and `ScriptHook.dll` plugins with their build tools, the Mjolnir patch, the loader and model-definition files, and the model-order checker that keeps saves compatible. Building from it reproduces this build's script archive, `VCCore.asi`, `ScriptHook.dll` and patched `Mjolnir_IV.asi` exactly. Textures, models, sound and other game assets are only in the release download.
+The repository's [Source folder](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/tree/main/Source) contains the previously published **build 254** source snapshot, including gameplay scripts and native plugin work. **Build 264 adds VCRender work that is not yet part of that public snapshot.** The automatic GitHub “Source code” downloads are source archives, not this complete playable package. Download the five `Build264.zip` parts for the game files.
+
+Textures, models and sound are distributed through the release package with their creator credits and bundled notices.
 
 ## About this project
 
@@ -409,6 +418,16 @@ Vice City Actual Next Gen CE brings together the work of many creators. The orig
 ### Earlier prototypes
 
 Earlier project prototypes used **Nixolas1**’s 2009 GTA IV parachute behavior reference, **Quechus13**’s canopy models, and **gongel**’s [GTA V backpack port](https://www.nexusmods.com/gta4/mods/888). Those controller, canopy and backpack implementations have been replaced by the native 8.0-derived integration in this release; this acknowledgment preserves their development contribution.
+
+### VCRender, 64-bit rendering and paired upscaling
+
+- **Vice City Actual Next Gen CE project contributors** — VCRender's 32-bit client and 64-bit renderer, the paired DLSS-IV integration, Vulkan interop, GPU-side synchronization, texture-budget safety, streaming diagnostics and physical-resource allocation work. This is the project's renderer; GTA IV itself remains a 32-bit game.
+- **Philip Rebohle, Joshua Ashton and DXVK contributors** — [DXVK](https://github.com/doitsujin/dxvk), the Direct3D-to-Vulkan implementation used by the 64-bit host. The bundled x64 Direct3D 9 and DXGI libraries are unmodified DXVK v3.1.1-97-ga78a467cadb22be-pcos from **Proton-CachyOS**; see `plugins/VCRender/LICENSE-DXVK.txt`.
+- **Chunk / ChunkLeChuck** — the paired [DLSS-IV](https://github.com/ChunkLeChuck/DLSSIV) client and helper used by VCRender's upscaling path (Apache-2.0), with project integration changes. Its original notice is preserved at `plugins/VCRender/NOTICE-DLSS-IV.txt` and its licence at `plugins/VCRender/LICENSE-DLSS-IV.txt`.
+- **Advanced Micro Devices, Inc. and GPUOpen contributors** — [AMD FidelityFX Super Resolution](https://github.com/GPUOpen-LibrariesAndSDKs/FidelityFX-SDK), including the FSR 3.1.5 upscaler and RCAS sharpening components. AMD notices remain in `DLSSIV/licenses` and the paired DLSS-IV notice.
+- **Jean-Laurent ROUZIES** — [DLSS5-Feeder](https://github.com/jlrouzies-fr/DLSS5-Feeder) transport/protocol headers (MIT), with portions derived from **NIGos**' dlss5-dx11-bridge (MIT); the original notices are retained. These protocol names describe technical dependencies, not a claim that this package includes DLSS 5.
+- **The Khronos Group, LunarG and Valve** — Vulkan headers and related interfaces; the original header notices are retained. **Tatsuyuki Ishi** — [LatencyFleX](https://github.com/ishitatsuyuki/LatencyFleX), acknowledged in the paired DLSS-IV notice (Apache-2.0).
+- **gutbash** — [b-bridge](https://github.com/gutbash/b-bridge), an earlier out-of-process rendering research/reference used during this project's development. VCRender's core is project code; its Vulkan/upscaler integration carries forward the project's own earlier bridge work and the separately credited transport dependencies above.
 
 ### Corrections
 
