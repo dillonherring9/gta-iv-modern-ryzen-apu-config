@@ -1,7 +1,7 @@
 # Native project code
 
-These maintained authoring files reproduce the two project-native modules in
-VCANGCE at checkpoint 254: `VCCore.asi` and `ScriptHook.dll`. The portable
+The original native builder reproduces these two project-native modules in
+VCANGCE at checkpoint 269: `VCCore.asi` and `ScriptHook.dll`. The portable
 builder writes fresh outputs without reading or changing an installed game.
 Use Python 3.11+ and Zig 0.13.0 from the source folder root:
 
@@ -9,7 +9,7 @@ Use Python 3.11+ and Zig 0.13.0 from the source folder root:
 python3 -I tools/build_native.py --zig /path/to/zig --out ../VCANGCE-build/native
 ```
 
-The default builds both current modules. Use `--module vccore` or
+The default builds both VCCore/ScriptHook modules. Use `--module vccore` or
 `--module scripthook` to build one. Opus 1.6 is compiled from the bundled source
 for VCCore; no Windows SDK download or game files are needed.
 
@@ -101,3 +101,12 @@ CPU fixes. Standard-library Python only:
 ```sh
 python3 -I native/mjolnir-patch/patch_mjolnir.py /path/to/original/Mjolnir_IV.asi ../VCANGCE-build/Mjolnir_IV.asi
 ```
+
+## Build 269 graphics modules
+
+[VCRender](vcrender/README.md) and [paired DLSS-IV](paired-dlssiv/README.md)
+are separate from VCCore and use their own portable Zig 0.15.2 builders. The
+32-bit client, 64-bit host and paired upscaler must be used as the compatible
+set described there. Root `DLSS-IV.asi` is disabled by the packaged `global.ini`;
+VCRender explicitly loads the paired client. Release DXVK, AMD and other vendor
+runtime libraries remain in the playable download, outside this source export.

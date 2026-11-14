@@ -1,0 +1,7 @@
+/build/
+__pycache__/
+/source/dlssiv/external/ngx/include/
+/source/dlssiv/external/ngx/lib/
+/source/dlssiv/external/ngx/LICENSE-NVIDIA-DLSS-SDK.txt
+/source/dlssiv/external/xess/inc/
+/source/dlssiv/external/xess/LICENSE-Intel-XeSS.txt

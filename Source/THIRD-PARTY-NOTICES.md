@@ -4,7 +4,7 @@ This export preserves component notices and introduces no blanket license.
 Existing notices apply to their respective material; files without an explicit
 license receive no new license here. Publication does not transfer ownership
 of the original games, conversion, native API references or community work.
-See the checkpoint-254 release [CREDITS.md](CREDITS.md) for attribution.
+See the checkpoint-269 release [CREDITS.md](CREDITS.md) for attribution.
 
 | Material | Retained notice or provenance |
 |---|---|
@@ -31,3 +31,21 @@ The script builder
 reads preserved resources from a user-supplied release archive; it does not
 embed them here. Other release component licenses remain with their respective
 distributions.
+
+## VCRender and paired DLSS-IV additions
+
+The project VCRender client/host source retains its own file notices and imports
+the applicable DXVK interop, DLSS-IV transport and Khronos Vulkan declarations.
+The paired upscaler is adapted from ChunkLeChuck's DLSS-IV (Apache-2.0) and
+retains its LICENSE/NOTICE and component notices. DLSS5-Feeder transport headers
+retain the MIT notices of Jean-Laurent ROUZIES and their upstream contributors.
+AMD FidelityFX interface headers retain AMD's MIT notice; the Vulkan header
+subset retains Khronos's applicable licence notices. See the notices inside
+[native/vcrender](native/vcrender/README.md) and
+[native/paired-dlssiv](native/paired-dlssiv/README.md) for the included source subsets.
+
+NVIDIA NGX and Intel XeSS SDK libraries are not redistributed in this source
+export. Documented fetch tools obtain those separate development dependencies
+under their upstream terms. The release's DXVK and AMD runtime DLLs also remain
+separate compiled components; the source export neither renames nor claims
+ownership of them. No blanket project licence is added by this publication.

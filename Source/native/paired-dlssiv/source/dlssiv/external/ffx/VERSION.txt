@@ -1,0 +1,73 @@
+AMD FidelityFX SDK ffx-api headers, tag v2.3.0, MIT, in ffx_api_2.3.0/ in the SDK's
+own layout (api/include, upscalers/include, framegeneration/include: they include
+each other by those paths). Fetched 2026-09-24 from GPUOpen-LibrariesAndSDKs/
+FidelityFX-SDK. Headers only. The helper compiles against them since the frame
+generation revival's phase 1A (2026-09-24) and loads the runtime below through
+ffx_api_loader.h, so the runtime can change without a rebuild. The upscale
+descriptions are field for field the 1.1.4 ones; the one function that compiles
+differently is AMD's inline ffxApiGetResourceDX12 (tools/fg-off-allowed.txt).
+The loader header wants PLATFORM_WINDOWS defined (the helper defines it before it).
+
+ffx_api/ holds the tag v1.1.4 (FSR 3.1.4) headers, fetched 2026-09-04, MIT,
+compiled into nothing since 2026-09-24; kept because docs/POSTMORTEM-FRAME-
+GENERATION.md and FSR-FRAMEGEN.md cite them. Removing the folder is a later tidy.
+
+THE RUNTIME THAT SHIPS, since 1.0.4 (owner, 2026-09-21). Not committed
+(*.dll is gitignored); package.ps1 pins each file by size, MD5 and AMD's
+Authenticode signature and refuses to package anything else:
+
+  amd_fidelityfx_loader_dx12.dll      39,184 bytes  08561837C75E2F9374E48B2320F473B2
+  amd_fidelityfx_upscaler_dx12.dll  57,664,272 bytes  C9B73B38F9F2744C7096DE53429DB6EB
+  amd_ags_x64.dll                    179,408 bytes  9352802FAE8E6FF020AFD9257F33AF23
+
+The loader and the upscaler: AMD FSR SDK 2.4.0 (FSR 4.1.2) since 1.1, taken
+unmodified from AMD's official minimal package v2.4.0.zip (254,235,565 bytes,
+SHA-256 27120e3bbe0d0b30213825ad40f19077563f04f04572e252109a392d5fb522cb,
+GitHub GPUOpen-LibrariesAndSDKs/FidelityFX-SDK, tag v2.4.0, downloaded
+2026-10-29 with the owner's approval), Kits/FidelityFX/signedbin. The upscaler's
+file version is 4.1.2.4555: FSR 4.1.2 and FSR 3.1.6 by AMD's release notes. The
+loader holds no effect code. AGS is the 2.3.0 file, the same bytes as the 2.4.0
+package's Kits/OpenSource/amd/ags. All three Authenticode-valid, signed by
+Advanced Micro Devices. 1.0.4 to 1.0.9 shipped the SDK 2.3.0 pair (loader 26,376
+bytes DE911B016F4849D4DC7A358058C9E3CB, upscaler 28,761,864 bytes
+429D308876434A1247F40BD543EFDDDB, FSR 4 and FSR 3.1.5). Their terms: AMD's
+2.4.0 license.md, in LICENSE-AMD-FidelityFX-SDK.txt (PART 1) with the headers'
+MIT text (PART 2). AGS is MIT: LICENSE-AMD-AGS.txt, from
+GPUOpen-LibrariesAndSDKs/AGS_SDK.
+
+THE FRAME GENERATION LIBRARY, same folder of the same archive, extracted 2026-09-24
+with the owner's approval. NOT PACKAGED, AND NO SHIPPED HELPER LOADS IT (2026-10-25):
+a shipped helper runs frame generation on the mod's own library, dlssiv-fg.dll,
+which this project builds from this SDK's public source (build-ffx-own.ps1 -Target
+dlssiv-fg, from ffx_api_2.3.0/ here, every file of it MIT by AMD's license.md),
+held to tools/ffx-own/RECORD-dlssiv-fg-cut.txt; package.ps1 -Ship packages that
+library and must not pin this one (tools/ffx_pin.py refuses a pin there). This
+file stays for the development helper's AMD twin (the kit's twin legs) and the desk
+tools that stage it, by the pin below (tools/ffx_pin.py):
+
+  amd_fidelityfx_framegeneration_dx12.dll  40,085,776 bytes  6A12BC4DC82AE11E81C37930B439F6C9
+
+Authenticode-valid, Advanced Micro Devices. What phase 1A measured of it (DECISIONS
+2026-09-24 "PHASE 1A"): it offers one frame generation provider, "3.1.6" (id
+0xF600000000C01006) on the 4090 and embeds two more names, "3.1.7" (the frame
+interpolation swapchain, not used) and "4.0.1" (the ML frame generation, with FP8
+kernels: offered on RDNA 4 by the evidence, hidden here as FSR 4 upscaling is); the
+create accepts the 0x0e version description (FFX_FRAMEGENERATION_VERSION 4.0.1) and
+phase 2 links it; it needs neither amd_acs_x64.dll nor amd_ags_x64.dll; it imports
+timeBeginPeriod, timeEndPeriod and timeGetDevCaps from WINMM but never calls
+timeBeginPeriod headless; a context is 487 MiB at 4K FP16 (207 aliasable) and
+214 MiB at 1440p 8-bit (97 aliasable) by its own figure; it creates in about 0.4 s
+on a cold driver shader cache and in 35 to 45 ms warm.
+
+amd_fidelityfx_dx12.dll (SDK 1.1.4's monolithic library, FSR 3.1.4, 6,675,664
+bytes, MD5 49230AD94ED6169933CD0457501D9CB4) shipped from 1.0 to 1.0.3 and is
+NOT packaged from 1.0.4 (owner, 2026-09-21: "people will report if they have
+issues, then we can reintroduce it as a fallback"). The helper still loads it
+when the loader is absent, so bringing it back is a package.ps1 change only.
+
+ffx_api/ffx_framegeneration.h (1.1.4) was added 2026-09-06 and compiled into nothing
+after the removal of 2026-09-09 (docs/POSTMORTEM-FRAME-GENERATION.md). The 2.3.0
+ffx_framegeneration.h IS compiled into the helper since 2026-09-24: host/fg_smoke.h in
+development builds (--fgsmoke=N), the production context from the revival's phase 2.
+Frame generation is a separate effect from upscaling with its own context, so it
+needs no new entry points: ffxLoadFunctions resolves the same five.

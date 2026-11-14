@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "project": "Vice City Actual Next Gen CE",
-  "snapshot_date": "2026-11-11",
+  "snapshot_date": "2026-11-13",
   "game_version": "GTA IV Complete Edition1.2.0.59",
-  "release_checkpoint": 254,
-  "purpose": "Current maintained script/native source and model-order configuration snapshot matching VCANGCE.Zip 254. Relative origin identifiers document provenance; they are not build dependencies.",
+  "release_checkpoint": 269,
+  "purpose": "Maintained script/native/renderer sources and exact packaged public text defaults matching VCANGCE-269.zip; relative origins document provenance, not build dependencies.",
   "files": [
     {
       "path": ".gitattributes",
@@ -24,8 +24,8 @@
       "path": "BUILDING.md",
       "origin": "export-generated: BUILDING.md",
       "original_sha256": null,
-      "export_sha256": "a80182e059384c1482849980cdcc9356eee2aedfb1e91102d25fc5173055362a",
-      "bytes": 7304
+      "export_sha256": "45d9c09b7f3cc18cedffc35c9f8a7d3916a40ba942517f302e818b2f4e45cd7a",
+      "bytes": 8241
     },
     {
       "path": "CONTRIBUTING.md",
@@ -36,91 +36,175 @@
     },
     {
       "path": "CREDITS.md",
-      "origin": "release/vcangce-252/CREDITS.md",
-      "original_sha256": "a7ce35e4260377be502cff7b5d9e989c862c75c1ef82947a5d17c93da76b8860",
-      "export_sha256": "a7ce35e4260377be502cff7b5d9e989c862c75c1ef82947a5d17c93da76b8860",
-      "bytes": 9286
+      "origin": "release/vcangce-269/CREDITS.md",
+      "original_sha256": "c1937d2c036edc349c802378f9f8d42f4b985ce69cce1bd8e31e9c4c97855472",
+      "export_sha256": "c1937d2c036edc349c802378f9f8d42f4b985ce69cce1bd8e31e9c4c97855472",
+      "bytes": 11556
     },
     {
       "path": "README.md",
       "origin": "export-generated: README.md",
       "original_sha256": null,
-      "export_sha256": "f4c75c639e2366b4221c0ed8532db09d5fa920ceed303e59a32b3af4e60277e6",
-      "bytes": 4051
+      "export_sha256": "98b71bc43f659254b0ea99eb7f378510e1e2d07c2d38389a4d27a98470dd26e1",
+      "bytes": 5768
     },
     {
       "path": "SOURCE-STATUS.md",
       "origin": "export-generated: SOURCE-STATUS.md",
       "original_sha256": null,
-      "export_sha256": "8468eac0de3732a8d8894995491579efaef9fa21b680dc6dcae6fcba83c5489e",
-      "bytes": 9859
+      "export_sha256": "03d9c6de87c0bd224b669d6ab7b36a36ffe683826ab62bcd8f39a9df42a7851a",
+      "bytes": 13053
     },
     {
       "path": "THIRD-PARTY-NOTICES.md",
       "origin": "export-generated: THIRD-PARTY-NOTICES.md",
       "original_sha256": null,
-      "export_sha256": "ac05005d5edc3800d8ec1b6d87054f57cba8f2dcc8e05266d851130f637391f0",
-      "bytes": 3139
+      "export_sha256": "9fac0fac585c48c50f33120d221659c372a793aeaf8e79b66b0154b1a5a5e3ba",
+      "bytes": 4256
     },
     {
       "path": "config/README.md",
       "origin": "export-generated: config/README.md",
       "original_sha256": null,
-      "export_sha256": "f0c44d48a4867c8f769c6ef2d89f2424e4ecf07666161148aea1f1e349852bf4",
-      "bytes": 3526
+      "export_sha256": "aecb0c29ae20ddb4b3819f323d06f4f629dc39516609756e9fd848c0e8ddb5d9",
+      "bytes": 4222
+    },
+    {
+      "path": "config/game/DLSS-IV.cfg",
+      "origin": "release/vcangce-269/release/DLSS-IV.cfg",
+      "original_sha256": "27d83df684dc6b6c821dc898a2df2f2761adee499791c896cfdb37a02e10246a",
+      "export_sha256": "27d83df684dc6b6c821dc898a2df2f2761adee499791c896cfdb37a02e10246a",
+      "bytes": 8570
+    },
+    {
+      "path": "config/game/d3d9.cfg",
+      "origin": "release/vcangce-269/release/d3d9.cfg",
+      "original_sha256": "e8b090ca6093b98ddc1eb48e2bc767d370809cdb505b073b51464c16047c23f9",
+      "export_sha256": "e8b090ca6093b98ddc1eb48e2bc767d370809cdb505b073b51464c16047c23f9",
+      "bytes": 14
+    },
+    {
+      "path": "config/game/plugins/AudioMap.ini",
+      "origin": "release/vcangce-269/release/plugins/AudioMap.ini",
+      "original_sha256": "8aee0e309f048b9a1460ce205dff6e571a7e67adf68a155aebafdfc414c8290e",
+      "export_sha256": "8aee0e309f048b9a1460ce205dff6e571a7e67adf68a155aebafdfc414c8290e",
+      "bytes": 5979
+    },
+    {
+      "path": "config/game/plugins/GTAIV.EFLC.FusionFix.ini",
+      "origin": "release/vcangce-269/release/plugins/GTAIV.EFLC.FusionFix.ini",
+      "original_sha256": "d9368f2c67383bb966fd84b340575403e2e20fd83a0d328ff45f2c4cf670ac72",
+      "export_sha256": "d9368f2c67383bb966fd84b340575403e2e20fd83a0d328ff45f2c4cf670ac72",
+      "bytes": 8949
+    },
+    {
+      "path": "config/game/plugins/GTAIV.XboxRainDroplets.ini",
+      "origin": "release/vcangce-269/release/plugins/GTAIV.XboxRainDroplets.ini",
+      "original_sha256": "0845501cc6691cde740ba9102b0359bfe60ca9777e08ee1a096cc4a4aa5af5a6",
+      "export_sha256": "0845501cc6691cde740ba9102b0359bfe60ca9777e08ee1a096cc4a4aa5af5a6",
+      "bytes": 184
+    },
+    {
+      "path": "config/game/plugins/ProjectThunderCE.ini",
+      "origin": "release/vcangce-269/release/plugins/ProjectThunderCE.ini",
+      "original_sha256": "7bb784f77e7f79d15a1695ac1eb94f3bfc8110cc4497c753714996cc7b066bb5",
+      "export_sha256": "7bb784f77e7f79d15a1695ac1eb94f3bfc8110cc4497c753714996cc7b066bb5",
+      "bytes": 8849
+    },
+    {
+      "path": "config/game/plugins/VCCutscene.ini",
+      "origin": "release/vcangce-269/release/plugins/VCCutscene.ini",
+      "original_sha256": "905dc60b6257b0830b1b15c8edf19d6096df56de365b74468fbd8428ea73238c",
+      "export_sha256": "905dc60b6257b0830b1b15c8edf19d6096df56de365b74468fbd8428ea73238c",
+      "bytes": 178
+    },
+    {
+      "path": "config/game/plugins/VCMusic.ini",
+      "origin": "release/vcangce-269/release/plugins/VCMusic.ini",
+      "original_sha256": "8d1b68b4b945b9d9f05dd5e5db11ac073dbb36861e0d5ad9e615c510713840e8",
+      "export_sha256": "8d1b68b4b945b9d9f05dd5e5db11ac073dbb36861e0d5ad9e615c510713840e8",
+      "bytes": 854
+    },
+    {
+      "path": "config/game/plugins/VCRender/dxvk.conf",
+      "origin": "release/vcangce-269/release/plugins/VCRender/dxvk.conf",
+      "original_sha256": "6c1de84974ffba7df6a9cf7476bf08907f2b91865a2f6a6bd3ee2edb64ebbeff",
+      "export_sha256": "6c1de84974ffba7df6a9cf7476bf08907f2b91865a2f6a6bd3ee2edb64ebbeff",
+      "bytes": 239
+    },
+    {
+      "path": "config/game/plugins/VCRender.ini",
+      "origin": "release/vcangce-269/release/plugins/VCRender.ini",
+      "original_sha256": "d67683ad4872958ad39c1d6dbe77adc8930cb370c20f97d6dd049ec967982c9c",
+      "export_sha256": "d67683ad4872958ad39c1d6dbe77adc8930cb370c20f97d6dd049ec967982c9c",
+      "bytes": 3251
+    },
+    {
+      "path": "config/game/plugins/VCScriptHook.ini",
+      "origin": "release/vcangce-269/release/plugins/VCScriptHook.ini",
+      "original_sha256": "78df286076f128633656825e13d6161a5d6565616ebe0edfbbaae31c099f0aec",
+      "export_sha256": "78df286076f128633656825e13d6161a5d6565616ebe0edfbbaae31c099f0aec",
+      "bytes": 2068
+    },
+    {
+      "path": "config/game/plugins/global.ini",
+      "origin": "release/vcangce-269/release/plugins/global.ini",
+      "original_sha256": "23131273ab91fb85bb3f1b67c86a90efda5e0d93cd161a8febc5ddeec7279a3a",
+      "export_sha256": "23131273ab91fb85bb3f1b67c86a90efda5e0d93cd161a8febc5ddeec7279a3a",
+      "bytes": 325
     },
     {
       "path": "config/game/update/common/data/default.dat",
-      "origin": "release/vcangce-245/release/update/common/data/default.dat",
+      "origin": "release/vcangce-269/release/update/common/data/default.dat",
       "original_sha256": "252000cafdab833502f5852bcc24d958284b27201ec1c11f393c02a81ed9ade5",
       "export_sha256": "252000cafdab833502f5852bcc24d958284b27201ec1c11f393c02a81ed9ade5",
       "bytes": 1013
     },
     {
       "path": "config/game/update/common/data/default.ide",
-      "origin": "release/vcangce-245/release/update/common/data/default.ide",
+      "origin": "release/vcangce-269/release/update/common/data/default.ide",
       "original_sha256": "5182c201313c96faf95d191b41c2210407a4c945a14ce487473e9cbc2c72cbc6",
       "export_sha256": "5182c201313c96faf95d191b41c2210407a4c945a14ce487473e9cbc2c72cbc6",
       "bytes": 13250
     },
     {
       "path": "config/game/update/common/data/gta.dat",
-      "origin": "release/vcangce-245/release/update/common/data/gta.dat",
+      "origin": "release/vcangce-269/release/update/common/data/gta.dat",
       "original_sha256": "56f29aac99d7049e4a79b046091c3dcdb9d76c4ee43c7a1dd263a747c9d4aeb2",
       "export_sha256": "56f29aac99d7049e4a79b046091c3dcdb9d76c4ee43c7a1dd263a747c9d4aeb2",
       "bytes": 2264
     },
     {
       "path": "config/game/update/common/data/peds.ide",
-      "origin": "release/vcangce-245/release/update/common/data/peds.ide",
+      "origin": "release/vcangce-269/release/update/common/data/peds.ide",
       "original_sha256": "1977723fae7d88c67a00f5882f1556f0da6f39ec792d5c1bcdcf79af51b4260a",
       "export_sha256": "1977723fae7d88c67a00f5882f1556f0da6f39ec792d5c1bcdcf79af51b4260a",
       "bytes": 99608
     },
     {
       "path": "config/game/update/common/data/vehicles.ide",
-      "origin": "release/vcangce-245/release/update/common/data/vehicles.ide",
+      "origin": "release/vcangce-269/release/update/common/data/vehicles.ide",
       "original_sha256": "12ceebf3a087006b7f3f1d2f4d1abfd16afaf5f506182a43a89a1112c271ec1f",
       "export_sha256": "12ceebf3a087006b7f3f1d2f4d1abfd16afaf5f506182a43a89a1112c271ec1f",
       "bytes": 22908
     },
     {
       "path": "config/game/update/pc/audio/Config/stationslimit.txt",
-      "origin": "release/vcangce-245/release/update/pc/audio/Config/stationslimit.txt",
+      "origin": "release/vcangce-269/release/update/pc/audio/Config/stationslimit.txt",
       "original_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
       "export_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
       "bytes": 2
     },
     {
       "path": "config/game/update/pc/data/maps/vc_world/vc_models.ide",
-      "origin": "release/vcangce-245/release/update/pc/data/maps/vc_world/vc_models.ide",
+      "origin": "release/vcangce-269/release/update/pc/data/maps/vc_world/vc_models.ide",
       "original_sha256": "23471ff2607d04dd231b82e4f7255d0c90babbba107f556881cb3d5f5db170a6",
       "export_sha256": "23471ff2607d04dd231b82e4f7255d0c90babbba107f556881cb3d5f5db170a6",
       "bytes": 720110
     },
     {
       "path": "config/game/update/pc/data/maps/vc_world/vc_props.ide",
-      "origin": "release/vcangce-245/release/update/pc/data/maps/vc_world/vc_props.ide",
+      "origin": "release/vcangce-269/release/update/pc/data/maps/vc_world/vc_props.ide",
       "original_sha256": "dacc1fd0cc536f84e50f803352d4b20b17240e7d2f551cc5fa6353339792e048",
       "export_sha256": "dacc1fd0cc536f84e50f803352d4b20b17240e7d2f551cc5fa6353339792e048",
       "bytes": 173772
@@ -129,8 +213,8 @@
       "path": "config/manifest.json",
       "origin": "export-generated: config/manifest.json",
       "original_sha256": null,
-      "export_sha256": "c017cd30412d71def295f6ac2fb1fa0e2ca589ae74fe2d12ff7aa1e498470ce8",
-      "bytes": 4867
+      "export_sha256": "28d5918d0ba3dbfc13e6430b709e374a1e48c1275b1fb7476434c06f22d3997f",
+      "bytes": 4899
     },
     {
       "path": "config/model-order-224.json",
@@ -138,6 +222,13 @@
       "original_sha256": null,
       "export_sha256": "b32dbf8a446694323fbdbe74790ed344e91e25dc6c054940a8dc8f4bf6c40cbf",
       "bytes": 277429
+    },
+    {
+      "path": "config/runtime-defaults.json",
+      "origin": "export-generated: config/runtime-defaults.json",
+      "original_sha256": null,
+      "export_sha256": "eb346de8645d2ac054bd25d9d8279008112b929c47f8608400c6ee9864a1e9d6",
+      "bytes": 2924
     },
     {
       "path": "dependencies/opus-1.6/AVCNGCE-SUBSET.md",
@@ -2138,8 +2229,8 @@
       "path": "native/README.md",
       "origin": "export-generated: native/README.md",
       "original_sha256": null,
-      "export_sha256": "9a0ed3003b21a1950a3b5f4872e3b59847159db5039b2b22550ab59c141e6227",
-      "bytes": 6443
+      "export_sha256": "04b7d5c7a762150e28940e813a9e1a5ca9ccad2b94f670a3fc0ed0b0699b3e12",
+      "bytes": 6956
     },
     {
       "path": "native/dualsense-patches/patch_165.py",
@@ -2161,6 +2252,2281 @@
       "original_sha256": "ee417498bf8103becbc14447ffc1f2c96bac0cea877c09782efccfa209f2f7f7",
       "export_sha256": "ee417498bf8103becbc14447ffc1f2c96bac0cea877c09782efccfa209f2f7f7",
       "bytes": 4929
+    },
+    {
+      "path": "native/paired-dlssiv/.gitignore",
+      "origin": "export-generated: native/paired-dlssiv/.gitignore",
+      "original_sha256": null,
+      "export_sha256": "87d9c686a06300ec4e4bffa98918c4656543992bc201393a6cfcbc7460ff5d6d",
+      "bytes": 233
+    },
+    {
+      "path": "native/paired-dlssiv/README.md",
+      "origin": "export-generated: native/paired-dlssiv/README.md",
+      "original_sha256": null,
+      "export_sha256": "e2f1542fee6e7e3cc8e0f38eb645b88c37dbd9e4bf9d88af62b3fc301dbb7ff1",
+      "bytes": 5578
+    },
+    {
+      "path": "native/paired-dlssiv/REPRODUCIBILITY.json",
+      "origin": "export-generated: native/paired-dlssiv/REPRODUCIBILITY.json",
+      "original_sha256": null,
+      "export_sha256": "213b4433ca61115b310d0e96f35dc7e75f1ae7992f4c0a17aba556fc66876d22",
+      "bytes": 2371
+    },
+    {
+      "path": "native/paired-dlssiv/SDK-PINS.json",
+      "origin": "export-generated: native/paired-dlssiv/SDK-PINS.json",
+      "original_sha256": null,
+      "export_sha256": "db72f5e1a0aea5e93895a5f394968985120e9d934196ea34e2cb2a890ad29312",
+      "bytes": 3740
+    },
+    {
+      "path": "native/paired-dlssiv/build.py",
+      "origin": "export-generated: native/paired-dlssiv/build.py",
+      "original_sha256": null,
+      "export_sha256": "acf6e261c1e23be08190b63816259dd0818e53eae9707d677bf65a1893c80c33",
+      "bytes": 5178
+    },
+    {
+      "path": "native/paired-dlssiv/fetch-sdks.py",
+      "origin": "export-generated: native/paired-dlssiv/fetch-sdks.py",
+      "original_sha256": null,
+      "export_sha256": "bb767c2a3ba45680eba3bc175e5c4411db7b10f78fa306d868f3d5f8fa4d228b",
+      "bytes": 3465
+    },
+    {
+      "path": "native/paired-dlssiv/source/bridge/src/vc_upscale_wire.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/bridge/src/vc_upscale_wire.h",
+      "original_sha256": "bf29ba604cb3ade86772e958f0079b7f1f6d417a01ceac70a9614f9b53d3b218",
+      "export_sha256": "bf29ba604cb3ade86772e958f0079b7f1f6d417a01ceac70a9614f9b53d3b218",
+      "bytes": 4729
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/DLSS-IV.cfg",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/DLSS-IV.cfg",
+      "original_sha256": "0f6459858145cb535e523377a0b3bc0618cb130f361600d34af15381645f15e0",
+      "export_sha256": "0f6459858145cb535e523377a0b3bc0618cb130f361600d34af15381645f15e0",
+      "bytes": 8878
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/LICENSE",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/LICENSE",
+      "original_sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "export_sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "bytes": 11560
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/NOTICE",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/NOTICE",
+      "original_sha256": "dc141a9b9e37b9aed61b1591ac03c51db35262ba11aad43419daa72bc3893e58",
+      "export_sha256": "dc141a9b9e37b9aed61b1591ac03c51db35262ba11aad43419daa72bc3893e58",
+      "bytes": 3752
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/README.md",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/README.md",
+      "original_sha256": "52e36cf32c75449736ba505585d175ecbd532a37473ad451c3a36f933da57662",
+      "export_sha256": "52e36cf32c75449736ba505585d175ecbd532a37473ad451c3a36f933da57662",
+      "bytes": 5172
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/dxvk/LICENSE-DXVK.txt",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/dxvk/LICENSE-DXVK.txt",
+      "original_sha256": "8221f636c9298344a6a98a4aa38c15b616d62126d2b0cf40ddc0ba50a57f1f3c",
+      "export_sha256": "8221f636c9298344a6a98a4aa38c15b616d62126d2b0cf40ddc0ba50a57f1f3c",
+      "bytes": 1098
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/dxvk/VERSION.txt",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/dxvk/VERSION.txt",
+      "original_sha256": "b9f62c8059b46c0aade5dcbd1741483dc64e75da71d407d37848ff0160c6395b",
+      "export_sha256": "b9f62c8059b46c0aade5dcbd1741483dc64e75da71d407d37848ff0160c6395b",
+      "bytes": 1883
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/LICENSE-AMD-AGS.txt",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/LICENSE-AMD-AGS.txt",
+      "original_sha256": "975c6be76e0bd7ea68819cda55c1b108ee83dfa69c10412167d1e6fa6c397c42",
+      "export_sha256": "975c6be76e0bd7ea68819cda55c1b108ee83dfa69c10412167d1e6fa6c397c42",
+      "bytes": 1113
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/LICENSE-AMD-FidelityFX-SDK.txt",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/LICENSE-AMD-FidelityFX-SDK.txt",
+      "original_sha256": "095f5b93efda19f08bf855f93dae74787fd4f87ba3413f59e1a5076cfa0a217f",
+      "export_sha256": "095f5b93efda19f08bf855f93dae74787fd4f87ba3413f59e1a5076cfa0a217f",
+      "bytes": 69178
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/MANIFEST-ffx_api_2.3.0.txt",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/MANIFEST-ffx_api_2.3.0.txt",
+      "original_sha256": "08e39ab2684f59994010731ab9aa50d9eb3deef738099b62be32c958309ab9bd",
+      "export_sha256": "08e39ab2684f59994010731ab9aa50d9eb3deef738099b62be32c958309ab9bd",
+      "bytes": 22545
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/VERSION.txt",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/VERSION.txt",
+      "original_sha256": "722bbb4835a94c7243079b628a5a8c9627961e828bece68fe09f99eebcf76203",
+      "export_sha256": "722bbb4835a94c7243079b628a5a8c9627961e828bece68fe09f99eebcf76203",
+      "bytes": 5052
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/3rdpartynotice.md",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/3rdpartynotice.md",
+      "original_sha256": "94401a90486d1b53b528bb7f845a7b8daf7227b60eb7c0fc3b8c5571ba202a27",
+      "export_sha256": "94401a90486d1b53b528bb7f845a7b8daf7227b60eb7c0fc3b8c5571ba202a27",
+      "bytes": 2441
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/include/dx12/ffx_api_dx12.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/include/dx12/ffx_api_dx12.h",
+      "original_sha256": "c9afbc3c4c673723e9e5369a666f0ff54560543b5a93537f8ff453bf1c3bf530",
+      "export_sha256": "c9afbc3c4c673723e9e5369a666f0ff54560543b5a93537f8ff453bf1c3bf530",
+      "bytes": 11323
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/include/ffx_api.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/include/ffx_api.h",
+      "original_sha256": "e1a9d1b559eaf75f4cb401f1c43a66e2f3dc9621abfeb58b9c6fac56443177fd",
+      "export_sha256": "e1a9d1b559eaf75f4cb401f1c43a66e2f3dc9621abfeb58b9c6fac56443177fd",
+      "bytes": 10726
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/include/ffx_api.hpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/include/ffx_api.hpp",
+      "original_sha256": "e1fab07fa9ab489db74813e6b754fc91dad6ded68870ab558002e92b6a32566a",
+      "export_sha256": "e1fab07fa9ab489db74813e6b754fc91dad6ded68870ab558002e92b6a32566a",
+      "bytes": 5884
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/include/ffx_api_loader.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/include/ffx_api_loader.h",
+      "original_sha256": "18d1901dbbc881e8131b91c65ad44bb3b4a1de6c31435d5b75236f16727ba80e",
+      "export_sha256": "18d1901dbbc881e8131b91c65ad44bb3b4a1de6c31435d5b75236f16727ba80e",
+      "bytes": 2977
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/include/ffx_api_types.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/include/ffx_api_types.h",
+      "original_sha256": "cc0adc0ffc804dd7cd03c39c15581b575e416383177ffe95060201d52cc0fc49",
+      "export_sha256": "cc0adc0ffc804dd7cd03c39c15581b575e416383177ffe95060201d52cc0fc49",
+      "bytes": 13636
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_api.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_api.cpp",
+      "original_sha256": "e9822d3d4b9d31f7fa6eca9adeb915cc6e79343be391812355da19e5777cd11f",
+      "export_sha256": "e9822d3d4b9d31f7fa6eca9adeb915cc6e79343be391812355da19e5777cd11f",
+      "bytes": 7398
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_api_helper.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_api_helper.h",
+      "original_sha256": "a6c83a35f0268aabaa7757ad0ef9b32a740202ccb54da56085fd06df540144a4",
+      "export_sha256": "a6c83a35f0268aabaa7757ad0ef9b32a740202ccb54da56085fd06df540144a4",
+      "bytes": 3804
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_assert.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_assert.cpp",
+      "original_sha256": "7f5555001f5c83446b83ecb2002bab93a7490ac909f72bf7023b660234854d26",
+      "export_sha256": "7f5555001f5c83446b83ecb2002bab93a7490ac909f72bf7023b660234854d26",
+      "bytes": 2655
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_assert.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_assert.h",
+      "original_sha256": "6da2b0dce28ef6c9433d7cf74d12ba60ba70d20d2424f796f0074089e24f72ed",
+      "export_sha256": "6da2b0dce28ef6c9433d7cf74d12ba60ba70d20d2424f796f0074089e24f72ed",
+      "bytes": 5299
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_backends.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_backends.h",
+      "original_sha256": "36595345af24366f05f8d4a1bf56b7101e786a52c84b557cf0ba3dc90709d73e",
+      "export_sha256": "36595345af24366f05f8d4a1bf56b7101e786a52c84b557cf0ba3dc90709d73e",
+      "bytes": 1967
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_error.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_error.h",
+      "original_sha256": "2afbd90bf097c2438bb7cf7ccf87eee8f9a85d8479b3c6fa6cdfd2ba67089aaa",
+      "export_sha256": "2afbd90bf097c2438bb7cf7ccf87eee8f9a85d8479b3c6fa6cdfd2ba67089aaa",
+      "bytes": 4260
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_interface.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_interface.h",
+      "original_sha256": "9377a94813a65683354f4a8219c4b97290b62be667be4f6a0990ababc19ff89e",
+      "export_sha256": "9377a94813a65683354f4a8219c4b97290b62be667be4f6a0990ababc19ff89e",
+      "bytes": 29277
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_internal_types.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_internal_types.h",
+      "original_sha256": "3f72acabc56fb1ffab57dd08c5ca8db23d61a045c86043a6b17c1d74dac9ed79",
+      "export_sha256": "3f72acabc56fb1ffab57dd08c5ca8db23d61a045c86043a6b17c1d74dac9ed79",
+      "bytes": 50689
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_message.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_message.cpp",
+      "original_sha256": "01a529ace5c1f4b399aafeda75ec604413d541588649a4e7ceef09447d992854",
+      "export_sha256": "01a529ace5c1f4b399aafeda75ec604413d541588649a4e7ceef09447d992854",
+      "bytes": 2747
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_message.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_message.h",
+      "original_sha256": "1febaa648b19e41a580b7cf767ea5da40e0c86ac60b7c6ed8b1f70a8bc238b4b",
+      "export_sha256": "1febaa648b19e41a580b7cf767ea5da40e0c86ac60b7c6ed8b1f70a8bc238b4b",
+      "bytes": 3354
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_object_management.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_object_management.cpp",
+      "original_sha256": "8185e6d15daecadf2d50e179acdfdbc1e4322d036d2ed82e5f7602fc19940e18",
+      "export_sha256": "8185e6d15daecadf2d50e179acdfdbc1e4322d036d2ed82e5f7602fc19940e18",
+      "bytes": 2155
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_object_management.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_object_management.h",
+      "original_sha256": "62424c85f937b290a0a434d57d22f50783cd5fe399bb96f46b20e987efcc4567",
+      "export_sha256": "62424c85f937b290a0a434d57d22f50783cd5fe399bb96f46b20e987efcc4567",
+      "bytes": 1769
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_provider.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_provider.h",
+      "original_sha256": "541041cd9727460d4c2a922fdac0c1dd2d7895077314f8c7eecc171ef8a4b5a0",
+      "export_sha256": "541041cd9727460d4c2a922fdac0c1dd2d7895077314f8c7eecc171ef8a4b5a0",
+      "bytes": 11115
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_query_fallback.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_query_fallback.cpp",
+      "original_sha256": "8bfb949908aa2e9230acbdde1f89a92d597c6c4034bc90906a097f9de8de4bf9",
+      "export_sha256": "8bfb949908aa2e9230acbdde1f89a92d597c6c4034bc90906a097f9de8de4bf9",
+      "bytes": 11002
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_util.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/ffx_util.h",
+      "original_sha256": "8670a8cb1ccbcaa9b006e4bff3297b18fb9c05a323438b40b871eadb1994f898",
+      "export_sha256": "8670a8cb1ccbcaa9b006e4bff3297b18fb9c05a323438b40b871eadb1994f898",
+      "bytes": 7355
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_common_types.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_common_types.h",
+      "original_sha256": "30b4f299e48eddaa64d9ad56c259fc13688fa5bc5735475c84d9ae10fd94907c",
+      "export_sha256": "30b4f299e48eddaa64d9ad56c259fc13688fa5bc5735475c84d9ae10fd94907c",
+      "bytes": 16164
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_core.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_core.h",
+      "original_sha256": "db3268fc71b7663ca4b51504998602dde9e91262385efbf81acdc9a790133a4d",
+      "export_sha256": "db3268fc71b7663ca4b51504998602dde9e91262385efbf81acdc9a790133a4d",
+      "bytes": 2522
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_core_cpu.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_core_cpu.h",
+      "original_sha256": "f22644d3942e7ae05c9986d93e8c1527effb9741e4f6e4766d15a6be40cee96f",
+      "export_sha256": "f22644d3942e7ae05c9986d93e8c1527effb9741e4f6e4766d15a6be40cee96f",
+      "bytes": 15402
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_core_gpu_common.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_core_gpu_common.h",
+      "original_sha256": "2df061c94b04bb4dedb6931a9e8241c1aa94eae826c506a75851a7f72ea4f4e8",
+      "export_sha256": "2df061c94b04bb4dedb6931a9e8241c1aa94eae826c506a75851a7f72ea4f4e8",
+      "bytes": 87727
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_core_gpu_common_half.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_core_gpu_common_half.h",
+      "original_sha256": "1f7368a8cd327c87c6b8031cf8c2aa32a6c46bb39d8fadf151212dcfd5d61900",
+      "export_sha256": "1f7368a8cd327c87c6b8031cf8c2aa32a6c46bb39d8fadf151212dcfd5d61900",
+      "bytes": 98319
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_core_hlsl.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_core_hlsl.h",
+      "original_sha256": "c14a6bcb12f40284412b54c584bc86d424e5231fc579211008bcda547c3d5d05",
+      "export_sha256": "c14a6bcb12f40284412b54c584bc86d424e5231fc579211008bcda547c3d5d05",
+      "bytes": 61821
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_core_portability.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/api/internal/gpu/ffx_core_portability.h",
+      "original_sha256": "217281792d09b88ad122055a6361a9303ccbce22238172fa6b30df7978d38968",
+      "export_sha256": "217281792d09b88ad122055a6361a9303ccbce22238172fa6b30df7978d38968",
+      "bytes": 1682
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/backend/dx12/d3dx12.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/backend/dx12/d3dx12.h",
+      "original_sha256": "2d1904bea11d84f336cc6836db8e6190deb3f337aa5eb1f5f8ac1eb0a38a4e0d",
+      "export_sha256": "2d1904bea11d84f336cc6836db8e6190deb3f337aa5eb1f5f8ac1eb0a38a4e0d",
+      "bytes": 343137
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/backend/dx12/ffx_backends_dx12.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/backend/dx12/ffx_backends_dx12.cpp",
+      "original_sha256": "f54a52cff36f4d2f52e93c54dd8d6d0c2798c6ebb26657e77404828ec17bd865",
+      "export_sha256": "f54a52cff36f4d2f52e93c54dd8d6d0c2798c6ebb26657e77404828ec17bd865",
+      "bytes": 6853
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/backend/dx12/ffx_dx12.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/backend/dx12/ffx_dx12.cpp",
+      "original_sha256": "3f6ffa9079caa62a10abb4e108fc833c34b555bc1affcec0007dbc623536be77",
+      "export_sha256": "3f6ffa9079caa62a10abb4e108fc833c34b555bc1affcec0007dbc623536be77",
+      "bytes": 186870
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/backend/dx12/ffx_dx12.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/backend/dx12/ffx_dx12.h",
+      "original_sha256": "d0ec99d44b99aac1d60dc2c1a7d282660d604a59174ab6d627f06a0890716b04",
+      "export_sha256": "d0ec99d44b99aac1d60dc2c1a7d282660d604a59174ab6d627f06a0890716b04",
+      "bytes": 21729
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/docs/license.md",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/docs/license.md",
+      "original_sha256": "6757f2fec461238da6f84f83536ec195e8c036b1773a06f6f34301b9ed8c0963",
+      "export_sha256": "6757f2fec461238da6f84f83536ec195e8c036b1773a06f6f34301b9ed8c0963",
+      "bytes": 60891
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/dx12/BuildFrameInterpolationShaders.bat",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/dx12/BuildFrameInterpolationShaders.bat",
+      "original_sha256": "3f3cc0eaa2708084d263b65ec3291d0f61a6e9b41ca91ffff74ab4f86c8e92ea",
+      "export_sha256": "3f3cc0eaa2708084d263b65ec3291d0f61a6e9b41ca91ffff74ab4f86c8e92ea",
+      "bytes": 3884
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/dx12/BuildOpticalFlowShaders.bat",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/dx12/BuildOpticalFlowShaders.bat",
+      "original_sha256": "c873509ff7832fbb50c74fe90e0051f9a782e6cc31156e987640c46bf58a7cbe",
+      "export_sha256": "c873509ff7832fbb50c74fe90e0051f9a782e6cc31156e987640c46bf58a7cbe",
+      "bytes": 3403
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/ffx_frameinterpolation.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/ffx_frameinterpolation.h",
+      "original_sha256": "5559c37416b211fc87cd19efda1773dbc2543e8bba662471798dacc88dea7f01",
+      "export_sha256": "5559c37416b211fc87cd19efda1773dbc2543e8bba662471798dacc88dea7f01",
+      "bytes": 24899
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/ffx_opticalflow.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/ffx_opticalflow.h",
+      "original_sha256": "bf9639213ff1c26fde1b1d417da7bb0d2ef0c5c9542c1783101b8437bd5ea3f1",
+      "export_sha256": "bf9639213ff1c26fde1b1d417da7bb0d2ef0c5c9542c1783101b8437bd5ea3f1",
+      "bytes": 12938
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/ffx_provider_fsr3framegeneration.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/ffx_provider_fsr3framegeneration.h",
+      "original_sha256": "c40ff1d7836c5154a8bed7fefeb009f4aa9d86a2d28dd4ee883c773f3813d312",
+      "export_sha256": "c40ff1d7836c5154a8bed7fefeb009f4aa9d86a2d28dd4ee883c773f3813d312",
+      "bytes": 2065
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation.h",
+      "original_sha256": "e5c2a1e86a079014bdbfd52a49534aa2540ecfe62ded10006d1b6b9e6d799fbf",
+      "export_sha256": "e5c2a1e86a079014bdbfd52a49534aa2540ecfe62ded10006d1b6b9e6d799fbf",
+      "bytes": 8181
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_callbacks_hlsl.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_callbacks_hlsl.h",
+      "original_sha256": "67a3b562a34b666ed348ebdff510c804916fa61e0096d7f012702c103804007c",
+      "export_sha256": "67a3b562a34b666ed348ebdff510c804916fa61e0096d7f012702c103804007c",
+      "bytes": 31891
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_common.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_common.h",
+      "original_sha256": "5779ae7b19938d820ce2beb25a1d47620d4f34c330de8ec6e8c1b30da96f2533",
+      "export_sha256": "5779ae7b19938d820ce2beb25a1d47620d4f34c330de8ec6e8c1b30da96f2533",
+      "bytes": 16208
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_compute_game_vector_field_inpainting_pyramid.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_compute_game_vector_field_inpainting_pyramid.h",
+      "original_sha256": "b0fb4338ea5c4b15de71e22e882a5d1c48b9c4b1ac74edd49d519c39c52d8a6a",
+      "export_sha256": "b0fb4338ea5c4b15de71e22e882a5d1c48b9c4b1ac74edd49d519c39c52d8a6a",
+      "bytes": 4079
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_compute_inpainting_pyramid.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_compute_inpainting_pyramid.h",
+      "original_sha256": "8e55241c61503c4c589e029e14b46ad7c157f8c2ee170d9b3003e2309772bcac",
+      "export_sha256": "8e55241c61503c4c589e029e14b46ad7c157f8c2ee170d9b3003e2309772bcac",
+      "bytes": 4062
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_debug_view.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_debug_view.h",
+      "original_sha256": "d19cc2482a171426371794e0e09fd80dd4b8109e890a4aa8846383dd4adb8837",
+      "export_sha256": "d19cc2482a171426371794e0e09fd80dd4b8109e890a4aa8846383dd4adb8837",
+      "bytes": 6143
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_disocclusion_mask.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_disocclusion_mask.h",
+      "original_sha256": "e156ca8598ef92fa6925bfa51932668a558692a3fe361117f3308ebe2ba87733",
+      "export_sha256": "e156ca8598ef92fa6925bfa51932668a558692a3fe361117f3308ebe2ba87733",
+      "bytes": 7366
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_game_motion_vector_field.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_game_motion_vector_field.h",
+      "original_sha256": "829cc267e56efd8b5e3e36143d97a3c75d831fa1303b521711d415049cc82e10",
+      "export_sha256": "829cc267e56efd8b5e3e36143d97a3c75d831fa1303b521711d415049cc82e10",
+      "bytes": 6801
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_inpainting.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_inpainting.h",
+      "original_sha256": "46f5a5fe4188565a2fe30a5c00c7d1996f1c4a50f751f608dc1ea026b542aa57",
+      "export_sha256": "46f5a5fe4188565a2fe30a5c00c7d1996f1c4a50f751f608dc1ea026b542aa57",
+      "bytes": 5282
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_optical_flow_vector_field.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_optical_flow_vector_field.h",
+      "original_sha256": "64c592f53b9a1c445e2cb43019a0916fe709da3d366ce12cb3ccb4d97d62189d",
+      "export_sha256": "64c592f53b9a1c445e2cb43019a0916fe709da3d366ce12cb3ccb4d97d62189d",
+      "bytes": 5304
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_reconstruct_dilated_velocity_and_previous_depth.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_reconstruct_dilated_velocity_and_previous_depth.h",
+      "original_sha256": "891192c74a20a06d5f83257f02b8b70c1837eb08e18acd113da3cc96f6962d7c",
+      "export_sha256": "891192c74a20a06d5f83257f02b8b70c1837eb08e18acd113da3cc96f6962d7c",
+      "bytes": 4783
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_reconstruct_previous_depth.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_reconstruct_previous_depth.h",
+      "original_sha256": "a88e3c02a913d174f0db13e260c03cac356db1296b8aeef45f5d23432da0faf5",
+      "export_sha256": "a88e3c02a913d174f0db13e260c03cac356db1296b8aeef45f5d23432da0faf5",
+      "bytes": 3002
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_resources.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_resources.h",
+      "original_sha256": "f36b388fc733363fff0e0007d16ac69a9ee16eb3eb4357d9e68261208a0e2156",
+      "export_sha256": "f36b388fc733363fff0e0007d16ac69a9ee16eb3eb4357d9e68261208a0e2156",
+      "bytes": 6643
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_setup.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_setup.h",
+      "original_sha256": "4b8a307102fdd226ac33186bab9887e72f6e5e8e493b637847a9b6fad226be35",
+      "export_sha256": "4b8a307102fdd226ac33186bab9887e72f6e5e8e493b637847a9b6fad226be35",
+      "bytes": 2057
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_callbacks_hlsl.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_callbacks_hlsl.h",
+      "original_sha256": "4fc10dd23ac5d923309f05a6f476e760d97c89f45cc6947ffe3417fac0f4d7fe",
+      "export_sha256": "4fc10dd23ac5d923309f05a6f476e760d97c89f45cc6947ffe3417fac0f4d7fe",
+      "bytes": 25015
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_common.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_common.h",
+      "original_sha256": "8eb5ac2032c2a9b3c6bdcc9badd1034c41f9d8ffc1cb57c52ad7c726ff3b7667",
+      "export_sha256": "8eb5ac2032c2a9b3c6bdcc9badd1034c41f9d8ffc1cb57c52ad7c726ff3b7667",
+      "bytes": 3449
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_compute_luminance_pyramid.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_compute_luminance_pyramid.h",
+      "original_sha256": "054f800edb3ef704e8df631d4b7eb979e25da307cd69cb6e4491b8d2caa64f8b",
+      "export_sha256": "054f800edb3ef704e8df631d4b7eb979e25da307cd69cb6e4491b8d2caa64f8b",
+      "bytes": 3246
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_compute_optical_flow_v5.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_compute_optical_flow_v5.h",
+      "original_sha256": "513841786f7ab3cc81dd62f49851660b61f1d6d37912b4317f4401ff9fb0825b",
+      "export_sha256": "513841786f7ab3cc81dd62f49851660b61f1d6d37912b4317f4401ff9fb0825b",
+      "bytes": 10887
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_compute_scd_divergence.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_compute_scd_divergence.h",
+      "original_sha256": "a4e57ff611e85b7e436e8f27fd201f9e76fcf75bdb19d22c46b64d7e414b8ce3",
+      "export_sha256": "a4e57ff611e85b7e436e8f27fd201f9e76fcf75bdb19d22c46b64d7e414b8ce3",
+      "bytes": 6875
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_filter_optical_flow_v5.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_filter_optical_flow_v5.h",
+      "original_sha256": "acd462dfe85d1487b74c727abfaf311602fbd47c6d7a88e0b86713a50cd8904d",
+      "export_sha256": "acd462dfe85d1487b74c727abfaf311602fbd47c6d7a88e0b86713a50cd8904d",
+      "bytes": 2122
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_generate_scd_histogram.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_generate_scd_histogram.h",
+      "original_sha256": "2f01747c9784055836449cc6d5ee72da6a35edea75d1840d0ec8c1928391a2c9",
+      "export_sha256": "2f01747c9784055836449cc6d5ee72da6a35edea75d1840d0ec8c1928391a2c9",
+      "bytes": 3652
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_prepare_luma.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_prepare_luma.h",
+      "original_sha256": "611da9fef5880103a49e3e0864c6ca8e39675a90137a84dacdbc387a7e761e9b",
+      "export_sha256": "611da9fef5880103a49e3e0864c6ca8e39675a90137a84dacdbc387a7e761e9b",
+      "bytes": 3977
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_resources.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_resources.h",
+      "original_sha256": "60abbadedb676ccf3c220dba536cac4a91fc992da235e65e72d01a3d88af05dd",
+      "export_sha256": "60abbadedb676ccf3c220dba536cac4a91fc992da235e65e72d01a3d88af05dd",
+      "bytes": 3604
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_scale_optical_flow_advanced_v5.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_scale_optical_flow_advanced_v5.h",
+      "original_sha256": "73a40e7419edb3b4df539d5e8bf980995a9a018850bcf7db0aa37f0356dc9b3e",
+      "export_sha256": "73a40e7419edb3b4df539d5e8bf980995a9a018850bcf7db0aa37f0356dc9b3e",
+      "bytes": 3598
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/spd/ffx_spd.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/include/gpu/spd/ffx_spd.h",
+      "original_sha256": "4d3b02d58b215f7d0d3fcdc4cabfa8f2cd03a8efdde12f770c2142b1ccc81033",
+      "export_sha256": "4d3b02d58b215f7d0d3fcdc4cabfa8f2cd03a8efdde12f770c2142b1ccc81033",
+      "bytes": 42614
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_frameinterpolation.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_frameinterpolation.cpp",
+      "original_sha256": "0fdd7849dce3538832a00c330f3ed2f7b12aa8bdeca384523daa8937d10ffca7",
+      "export_sha256": "0fdd7849dce3538832a00c330f3ed2f7b12aa8bdeca384523daa8937d10ffca7",
+      "bytes": 83848
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_frameinterpolation_private.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_frameinterpolation_private.h",
+      "original_sha256": "93f880b08c5e24338d1be63cd030211e10bf4d2c30b49b1abfafa4dece732cea",
+      "export_sha256": "93f880b08c5e24338d1be63cd030211e10bf4d2c30b49b1abfafa4dece732cea",
+      "bytes": 6235
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_frameinterpolation_shaderblobs.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_frameinterpolation_shaderblobs.cpp",
+      "original_sha256": "741ad3f655e0194d4fb3d991df064d392f0830f76c48ef9b6c0d7380e8f0f78e",
+      "export_sha256": "741ad3f655e0194d4fb3d991df064d392f0830f76c48ef9b6c0d7380e8f0f78e",
+      "bytes": 18579
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_frameinterpolation_shaderblobs.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_frameinterpolation_shaderblobs.h",
+      "original_sha256": "60ddd46d061ffb5123c94a07e551083e33c7398262c672510cd2bb324a19d330",
+      "export_sha256": "60ddd46d061ffb5123c94a07e551083e33c7398262c672510cd2bb324a19d330",
+      "bytes": 1765
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_opticalflow.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_opticalflow.cpp",
+      "original_sha256": "abda2764920f1867c609b5372c6904bcfc63b5881ea1c4b40ea2227284a07740",
+      "export_sha256": "abda2764920f1867c609b5372c6904bcfc63b5881ea1c4b40ea2227284a07740",
+      "bytes": 77099
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_opticalflow_private.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_opticalflow_private.h",
+      "original_sha256": "33057db51016e5f1d461ce6ab09c29be0129f24763db73eaa0a8202883cef4a5",
+      "export_sha256": "33057db51016e5f1d461ce6ab09c29be0129f24763db73eaa0a8202883cef4a5",
+      "bytes": 4468
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_opticalflow_shaderblobs.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_opticalflow_shaderblobs.cpp",
+      "original_sha256": "e7e74de41db3cde82386dc9763b34588b1f23b0351981217163e08dffbf7a1a6",
+      "export_sha256": "e7e74de41db3cde82386dc9763b34588b1f23b0351981217163e08dffbf7a1a6",
+      "bytes": 12285
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_opticalflow_shaderblobs.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_opticalflow_shaderblobs.h",
+      "original_sha256": "cd61771e5185b6d6c1f9991cc20ae9662270e6c9af0fa8decbb64ced240d3e3a",
+      "export_sha256": "cd61771e5185b6d6c1f9991cc20ae9662270e6c9af0fa8decbb64ced240d3e3a",
+      "bytes": 1736
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_provider_fsr3framegeneration.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_provider_fsr3framegeneration.cpp",
+      "original_sha256": "4471d55f098e079a70105ff26813f2f55f5719381d825dd3875f5ebd2a6651d4",
+      "export_sha256": "4471d55f098e079a70105ff26813f2f55f5719381d825dd3875f5ebd2a6651d4",
+      "bytes": 46133
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_compute_game_vector_field_inpainting_pyramid_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_compute_game_vector_field_inpainting_pyramid_pass.hlsl",
+      "original_sha256": "d77fc8b7964541ead4f949dd0aaf14f7074cb6c1353eaa4d28544bfbfb22e6d0",
+      "export_sha256": "d77fc8b7964541ead4f949dd0aaf14f7074cb6c1353eaa4d28544bfbfb22e6d0",
+      "bytes": 4013
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_compute_inpainting_pyramid_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_compute_inpainting_pyramid_pass.hlsl",
+      "original_sha256": "6110c2e9c124cbffbfeb8ce1be2f3af659396b926e7f23087977f441940722b0",
+      "export_sha256": "6110c2e9c124cbffbfeb8ce1be2f3af659396b926e7f23087977f441940722b0",
+      "bytes": 3836
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_debug_view_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_debug_view_pass.hlsl",
+      "original_sha256": "a57b960711619476ed8a9edc6787826b9865d03ea998ff450018f08d42239086",
+      "export_sha256": "a57b960711619476ed8a9edc6787826b9865d03ea998ff450018f08d42239086",
+      "bytes": 3215
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_disocclusion_mask_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_disocclusion_mask_pass.hlsl",
+      "original_sha256": "f3d4fb828e41acde4231b2e84a82598c1b0478cfec9eeb246cc29c77ef7dd60c",
+      "export_sha256": "f3d4fb828e41acde4231b2e84a82598c1b0478cfec9eeb246cc29c77ef7dd60c",
+      "bytes": 3065
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_game_motion_vector_field_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_game_motion_vector_field_pass.hlsl",
+      "original_sha256": "24f81f154caa8fc5d16e85f88ff95c57e6efc3687cb22cd617b84fc0ceea7be1",
+      "export_sha256": "24f81f154caa8fc5d16e85f88ff95c57e6efc3687cb22cd617b84fc0ceea7be1",
+      "bytes": 2986
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_inpainting_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_inpainting_pass.hlsl",
+      "original_sha256": "a7b76063cbc089568ba479cc9338831cb23a4c090ff7740c8271baca15c18135",
+      "export_sha256": "a7b76063cbc089568ba479cc9338831cb23a4c090ff7740c8271baca15c18135",
+      "bytes": 2888
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_optical_flow_vector_field_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_optical_flow_vector_field_pass.hlsl",
+      "original_sha256": "db91ea6099a46e9c741422e579a67d37ddcfc456750246d6d6666edaf3077f8a",
+      "export_sha256": "db91ea6099a46e9c741422e579a67d37ddcfc456750246d6d6666edaf3077f8a",
+      "bytes": 2997
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_pass.hlsl",
+      "original_sha256": "cb6dfea9d25e8261b8599b0cbeefe1ab82625d7219d81b14955c34c57ebe324a",
+      "export_sha256": "cb6dfea9d25e8261b8599b0cbeefe1ab82625d7219d81b14955c34c57ebe324a",
+      "bytes": 3295
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_reconstruct_and_dilate_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_reconstruct_and_dilate_pass.hlsl",
+      "original_sha256": "3837cb9a4189066a008fee398dd06e563d100a10b7df4a7689394b2a3b95e6bf",
+      "export_sha256": "3837cb9a4189066a008fee398dd06e563d100a10b7df4a7689394b2a3b95e6bf",
+      "bytes": 2933
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_reconstruct_previous_depth_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_reconstruct_previous_depth_pass.hlsl",
+      "original_sha256": "4d3f1e123777dd54734f469aee71487a9de1cce11da877e2247f6fcbc8e6caab",
+      "export_sha256": "4d3f1e123777dd54734f469aee71487a9de1cce11da877e2247f6fcbc8e6caab",
+      "bytes": 2829
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_setup_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_setup_pass.hlsl",
+      "original_sha256": "3fe17accbd59a33209893475c8e3016ca66614e370f09c4eab848a557ac36685",
+      "export_sha256": "3fe17accbd59a33209893475c8e3016ca66614e370f09c4eab848a557ac36685",
+      "bytes": 2980
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_compute_luminance_pyramid_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_compute_luminance_pyramid_pass.hlsl",
+      "original_sha256": "40b219141c1f76db05b21cb317fdd82473b543cc98c579d1e1535882339b050f",
+      "export_sha256": "40b219141c1f76db05b21cb317fdd82473b543cc98c579d1e1535882339b050f",
+      "bytes": 2850
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_compute_optical_flow_advanced_pass_v5.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_compute_optical_flow_advanced_pass_v5.hlsl",
+      "original_sha256": "b7c96ac4f49ccac1019c07c16675ace639d16c5e09587060388a9f9ee60ef25b",
+      "export_sha256": "b7c96ac4f49ccac1019c07c16675ace639d16c5e09587060388a9f9ee60ef25b",
+      "bytes": 2851
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_compute_scd_divergence_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_compute_scd_divergence_pass.hlsl",
+      "original_sha256": "c5503f08a736542bfafffaf8c8864ab341eb4d4f7d02b6ec4cea2d31d6a7e0ce",
+      "export_sha256": "c5503f08a736542bfafffaf8c8864ab341eb4d4f7d02b6ec4cea2d31d6a7e0ce",
+      "bytes": 2872
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_filter_optical_flow_pass_v5.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_filter_optical_flow_pass_v5.hlsl",
+      "original_sha256": "f7c976b33f59c62c5107c79a2af605ce6c224c557b25239d18bd82cb42b60d83",
+      "export_sha256": "f7c976b33f59c62c5107c79a2af605ce6c224c557b25239d18bd82cb42b60d83",
+      "bytes": 2616
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_generate_scd_histogram_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_generate_scd_histogram_pass.hlsl",
+      "original_sha256": "c7763a1c7967d466aa6c17e6fd4efc3f52ca940ca804f7b569ccd0b79ecb7a3c",
+      "export_sha256": "c7763a1c7967d466aa6c17e6fd4efc3f52ca940ca804f7b569ccd0b79ecb7a3c",
+      "bytes": 2530
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_prepare_luma_pass.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_prepare_luma_pass.hlsl",
+      "original_sha256": "456d647ef971d55984fbe4c46ef34b696a2fb4f7256f13da1c67f6bbf15ee196",
+      "export_sha256": "456d647ef971d55984fbe4c46ef34b696a2fb4f7256f13da1c67f6bbf15ee196",
+      "bytes": 2155
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_scale_optical_flow_advanced_pass_v5.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_scale_optical_flow_advanced_pass_v5.hlsl",
+      "original_sha256": "35dde5a6a349b377f125a47fc8853b203ee01ca908cc8b5565e8a3984139d278",
+      "export_sha256": "35dde5a6a349b377f125a47fc8853b203ee01ca908cc8b5565e8a3984139d278",
+      "bytes": 2562
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/include/dx12/ffx_api_framegeneration_dx12.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/include/dx12/ffx_api_framegeneration_dx12.h",
+      "original_sha256": "d533810bbd6fd4f87dfa2c1657c1457c7b1597b66345827d375b081d67127f66",
+      "export_sha256": "d533810bbd6fd4f87dfa2c1657c1457c7b1597b66345827d375b081d67127f66",
+      "bytes": 10575
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/include/ffx_framegeneration.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/include/ffx_framegeneration.h",
+      "original_sha256": "e6c42f8a38aab2c7c4fc6931545a8e5463fdf87349902ec9687d9fe4949a0566",
+      "export_sha256": "e6c42f8a38aab2c7c4fc6931545a8e5463fdf87349902ec9687d9fe4949a0566",
+      "bytes": 26206
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/include/ffx_framegeneration.hpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/include/ffx_framegeneration.hpp",
+      "original_sha256": "826ba0a0385971ff5aa5651b51d4f4315c1ec40cbc391e2c4b48f4fe00a449cb",
+      "export_sha256": "826ba0a0385971ff5aa5651b51d4f4315c1ec40cbc391e2c4b48f4fe00a449cb",
+      "bytes": 5786
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/include/ffx_framegeneration_api_types.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/include/ffx_framegeneration_api_types.h",
+      "original_sha256": "396596af3df63310674e8036abd2ad0fcd061e61334e7a2c76653a2be3c686b4",
+      "export_sha256": "396596af3df63310674e8036abd2ad0fcd061e61334e7a2c76653a2be3c686b4",
+      "bytes": 4976
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/internal/ffx_framegeneration_internal.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/framegeneration/internal/ffx_framegeneration_internal.h",
+      "original_sha256": "0f9caeb657c3cd965d11e97d3c3229fc7204afd540a7c6821974b64ba3605338",
+      "export_sha256": "0f9caeb657c3cd965d11e97d3c3229fc7204afd540a7c6821974b64ba3605338",
+      "bytes": 12983
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/upscalers/fsr3/include/gpu/fsr2/ffx_fsr2_resources.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/upscalers/fsr3/include/gpu/fsr2/ffx_fsr2_resources.h",
+      "original_sha256": "7f3889688ed223311230d76f5644ce1bc8e7d9e0528c861c8292856e39725aae",
+      "export_sha256": "7f3889688ed223311230d76f5644ce1bc8e7d9e0528c861c8292856e39725aae",
+      "bytes": 7863
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/upscalers/fsr3/include/gpu/fsr3/ffx_fsr3_resources.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/upscalers/fsr3/include/gpu/fsr3/ffx_fsr3_resources.h",
+      "original_sha256": "a4ba8c087b5afd97691e2f276102a6c6667c377962de78c9f4a02286e04830b1",
+      "export_sha256": "a4ba8c087b5afd97691e2f276102a6c6667c377962de78c9f4a02286e04830b1",
+      "bytes": 2996
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ffx/ffx_api_2.3.0/upscalers/include/ffx_upscale.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ffx/ffx_api_2.3.0/upscalers/include/ffx_upscale.h",
+      "original_sha256": "65be36d5653eb71c10379e0204f7bb7cd6a8aeec96e6f8cffc5f59ffeb1f89bf",
+      "export_sha256": "65be36d5653eb71c10379e0204f7bb7cd6a8aeec96e6f8cffc5f59ffeb1f89bf",
+      "bytes": 19313
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/ngx/VERSION.txt",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/ngx/VERSION.txt",
+      "original_sha256": "85efb29b0d3e9ef76cd4143c3554de02df0dd2d9e0fcaf6551a52b213f6615f1",
+      "export_sha256": "85efb29b0d3e9ef76cd4143c3554de02df0dd2d9e0fcaf6551a52b213f6615f1",
+      "bytes": 940
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/LICENSE-Khronos-Vulkan-Headers.txt",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/src/third_party/vulkan/LICENSE-Khronos-Vulkan-Headers.txt",
+      "original_sha256": "c46f1a15086ef1f94856e3606b2297742d738471c055a72a42c8356ae0409c9e",
+      "export_sha256": "c46f1a15086ef1f94856e3606b2297742d738471c055a72a42c8356ae0409c9e",
+      "bytes": 1422
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/LICENSE-Vulkan-Headers.md",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/src/third_party/vulkan/LICENSE-Vulkan-Headers.md",
+      "original_sha256": "a2d4407962c909f84807774cbfe9fad05a1ebe972472c08ed5ad43d482afd288",
+      "export_sha256": "a2d4407962c909f84807774cbfe9fad05a1ebe972472c08ed5ad43d482afd288",
+      "bytes": 514
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/VERSION.txt",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/src/third_party/vulkan/VERSION.txt",
+      "original_sha256": "c84f4d4ba4bb6ba40a843c8f59ea5b9d4b1994f6c146d8c144b839c952f67599",
+      "export_sha256": "c84f4d4ba4bb6ba40a843c8f59ea5b9d4b1994f6c146d8c144b839c952f67599",
+      "bytes": 120
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_av1std.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_av1std.h",
+      "original_sha256": "110d61f53214322f4d0aec8f77a7cec40c1517829b125c0d01d6fc9fdf0fdd83",
+      "export_sha256": "110d61f53214322f4d0aec8f77a7cec40c1517829b125c0d01d6fc9fdf0fdd83",
+      "bytes": 17088
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_av1std_decode.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_av1std_decode.h",
+      "original_sha256": "fa2e85e9669f1666badfab9211de9dbe279bc2adc3ed095635313712ced9219d",
+      "export_sha256": "fa2e85e9669f1666badfab9211de9dbe279bc2adc3ed095635313712ced9219d",
+      "bytes": 4366
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_av1std_encode.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_av1std_encode.h",
+      "original_sha256": "5bb49198ac7a63c810115c62c9ab44b2e60f20c60869a68a813730f30777db5f",
+      "export_sha256": "5bb49198ac7a63c810115c62c9ab44b2e60f20c60869a68a813730f30777db5f",
+      "bytes": 6129
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_h264std.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_h264std.h",
+      "original_sha256": "84d669c6010443e268f940e57a26e3ff0c4050c9c434b79efaaa1bfa3d3d203c",
+      "export_sha256": "84d669c6010443e268f940e57a26e3ff0c4050c9c434b79efaaa1bfa3d3d203c",
+      "bytes": 14275
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_h264std_decode.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_h264std_decode.h",
+      "original_sha256": "fbee59666126c323b2bacc0b4b2c6fd1d1a28ced72e4c6791026a730f05bc129",
+      "export_sha256": "fbee59666126c323b2bacc0b4b2c6fd1d1a28ced72e4c6791026a730f05bc129",
+      "bytes": 2807
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_h264std_encode.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_h264std_encode.h",
+      "original_sha256": "cd7e050bc0062d791a5e4e3cc97efdd4b9b3838214168785743fb48ebd5a041a",
+      "export_sha256": "cd7e050bc0062d791a5e4e3cc97efdd4b9b3838214168785743fb48ebd5a041a",
+      "bytes": 7032
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_h265std.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_h265std.h",
+      "original_sha256": "d3ae5c05dca0765d950e53aa1aafc9526be8be6be72b373803c70c94086665a1",
+      "export_sha256": "d3ae5c05dca0765d950e53aa1aafc9526be8be6be72b373803c70c94086665a1",
+      "bytes": 23892
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_h265std_decode.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_h265std_decode.h",
+      "original_sha256": "4ce92dc8ff11f8f9652b01713992f1235b6c88694a658b8fe8777ac7c79fb5df",
+      "export_sha256": "4ce92dc8ff11f8f9652b01713992f1235b6c88694a658b8fe8777ac7c79fb5df",
+      "bytes": 2503
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_h265std_encode.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_h265std_encode.h",
+      "original_sha256": "182114ca162aae8b3c1ed3c9693852126b2dda009712e387a1ab6f475ab8058e",
+      "export_sha256": "182114ca162aae8b3c1ed3c9693852126b2dda009712e387a1ab6f475ab8058e",
+      "bytes": 7626
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_vp9std.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_vp9std.h",
+      "original_sha256": "b4a35526ddf93652c6244e26a71f6d2d9536c0bd5aebde35ed777d1cd8a64978",
+      "export_sha256": "b4a35526ddf93652c6244e26a71f6d2d9536c0bd5aebde35ed777d1cd8a64978",
+      "bytes": 5542
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_vp9std_decode.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vk_video/vulkan_video_codec_vp9std_decode.h",
+      "original_sha256": "ac1ac9e1494a26855e327001fa6ffa26020eb5bf852dab1ea3e89939ced3d5ee",
+      "export_sha256": "ac1ac9e1494a26855e327001fa6ffa26020eb5bf852dab1ea3e89939ced3d5ee",
+      "bytes": 2446
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vk_video/vulkan_video_codecs_common.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vk_video/vulkan_video_codecs_common.h",
+      "original_sha256": "cf775e4d74384e3d4ed5657fb7d87faa4a7eaf6fee21f4f4113640565494a924",
+      "export_sha256": "cf775e4d74384e3d4ed5657fb7d87faa4a7eaf6fee21f4f4113640565494a924",
+      "bytes": 703
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vk_icd.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vk_icd.h",
+      "original_sha256": "46a46bf9bb5176becff061262f1093c1caa9ef33a2ec6f3432e8b1da1ce2c436",
+      "export_sha256": "46a46bf9bb5176becff061262f1093c1caa9ef33a2ec6f3432e8b1da1ce2c436",
+      "bytes": 8472
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vk_layer.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vk_layer.h",
+      "original_sha256": "5ad88b2b4108855d6c53d81da654a5663953e2102fb1f6e3ba47b2d7f8c95ade",
+      "export_sha256": "5ad88b2b4108855d6c53d81da654a5663953e2102fb1f6e3ba47b2d7f8c95ade",
+      "bytes": 7373
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vk_platform.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vk_platform.h",
+      "original_sha256": "1fc08c530b46e587295aafb19493eb9d434e963f7e48d3a323adbee06f59976c",
+      "export_sha256": "1fc08c530b46e587295aafb19493eb9d434e963f7e48d3a323adbee06f59976c",
+      "bytes": 2915
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan.h",
+      "original_sha256": "2d1a6f00bfdcddbe1c68bf5f574a0fc4cf95c4be9eae683123b6db8af9d1a1de",
+      "export_sha256": "2d1a6f00bfdcddbe1c68bf5f574a0fc4cf95c4be9eae683123b6db8af9d1a1de",
+      "bytes": 1722
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_android.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_android.h",
+      "original_sha256": "4f5afd4b0b31b655b7e6a27d9954ab232f0f3cd8bfa6a340335ba939d20648c7",
+      "export_sha256": "4f5afd4b0b31b655b7e6a27d9954ab232f0f3cd8bfa6a340335ba939d20648c7",
+      "bytes": 6496
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_beta.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_beta.h",
+      "original_sha256": "cbee78bfb43fb7faac49e1da0d8b7c46132036ea6c021469650f2e57888da505",
+      "export_sha256": "cbee78bfb43fb7faac49e1da0d8b7c46132036ea6c021469650f2e57888da505",
+      "bytes": 17794
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_core.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_core.h",
+      "original_sha256": "1b456a20b98605a03a5c880c5f2495f1a59f1eb17ba7fbc4b83c15e15a92eb8c",
+      "export_sha256": "1b456a20b98605a03a5c880c5f2495f1a59f1eb17ba7fbc4b83c15e15a92eb8c",
+      "bytes": 1382559
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_directfb.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_directfb.h",
+      "original_sha256": "e68438c77132d629ce6c05eae7f21ff8818a6b743b2adcdeaee2c1669f7bc4e9",
+      "export_sha256": "e68438c77132d629ce6c05eae7f21ff8818a6b743b2adcdeaee2c1669f7bc4e9",
+      "bytes": 2018
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_fuchsia.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_fuchsia.h",
+      "original_sha256": "46915b5d3390cf9d6c46baa13fa6792b7f8c172187d00662d7843cd0bba2b8f0",
+      "export_sha256": "46915b5d3390cf9d6c46baa13fa6792b7f8c172187d00662d7843cd0bba2b8f0",
+      "bytes": 13189
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_ggp.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_ggp.h",
+      "original_sha256": "be82c59a2459d70a6ceaab715d7c3470a61cc791131babb7e70f66906bffb23a",
+      "export_sha256": "be82c59a2459d70a6ceaab715d7c3470a61cc791131babb7e70f66906bffb23a",
+      "bytes": 2008
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_ios.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_ios.h",
+      "original_sha256": "cd5a5f1b33ca5904d08df8a90ac41c8be5ac604d30e023b8036f19430f56c151",
+      "export_sha256": "cd5a5f1b33ca5904d08df8a90ac41c8be5ac604d30e023b8036f19430f56c151",
+      "bytes": 1409
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_macos.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_macos.h",
+      "original_sha256": "d7ff1957e199b1c2e128c148d5e66637e5e49dae35ec5a97db87fca5e02d4c04",
+      "export_sha256": "d7ff1957e199b1c2e128c148d5e66637e5e49dae35ec5a97db87fca5e02d4c04",
+      "bytes": 1441
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_metal.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_metal.h",
+      "original_sha256": "ae36aacf5139410c9608e702e56d42770a5ba264f0e9dfc9ef52605bda4be47f",
+      "export_sha256": "ae36aacf5139410c9608e702e56d42770a5ba264f0e9dfc9ef52605bda4be47f",
+      "bytes": 8317
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_ohos.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_ohos.h",
+      "original_sha256": "005aaa229cf9961e3edc09a0f47c9c3593cbc57ca15a9cacbb521bef27455b7e",
+      "export_sha256": "005aaa229cf9961e3edc09a0f47c9c3593cbc57ca15a9cacbb521bef27455b7e",
+      "bytes": 4233
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_screen.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_screen.h",
+      "original_sha256": "06563ce3cdbda16f74976fabf42132d514625f53dec7974fa9330972990edfb7",
+      "export_sha256": "06563ce3cdbda16f74976fabf42132d514625f53dec7974fa9330972990edfb7",
+      "bytes": 4314
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_ubm.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_ubm.h",
+      "original_sha256": "aae80e021e1122a157923177676dc2a9447bd9bd970e3d80cec043f981d26605",
+      "export_sha256": "aae80e021e1122a157923177676dc2a9447bd9bd970e3d80cec043f981d26605",
+      "bytes": 1937
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_vi.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_vi.h",
+      "original_sha256": "2adb9ae5b758783548e79398f3ecad65af1e536bbeb701b3628ede54467999ec",
+      "export_sha256": "2adb9ae5b758783548e79398f3ecad65af1e536bbeb701b3628ede54467999ec",
+      "bytes": 1382
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_wayland.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_wayland.h",
+      "original_sha256": "f9b46a0805eeea61b42c2a52d783cf65690ad330c1869ac422c4a2b81adcebaf",
+      "export_sha256": "f9b46a0805eeea61b42c2a52d783cf65690ad330c1869ac422c4a2b81adcebaf",
+      "bytes": 2018
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_win32.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_win32.h",
+      "original_sha256": "9dc4d69efa98e5d2b94458c60861b963ab5fe18b7af6be20ec7e6c020086c1d5",
+      "export_sha256": "9dc4d69efa98e5d2b94458c60861b963ab5fe18b7af6be20ec7e6c020086c1d5",
+      "bytes": 16136
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_xcb.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_xcb.h",
+      "original_sha256": "ba4bfcef79ec4479aa6309d206cb075fbcfec1c9b625ffae39531a49904a08ef",
+      "export_sha256": "ba4bfcef79ec4479aa6309d206cb075fbcfec1c9b625ffae39531a49904a08ef",
+      "bytes": 2033
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_xlib.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_xlib.h",
+      "original_sha256": "cdd0677b5a5130994630c8fa21f6cdc2655cf5310bc416f332c5b8d386eed06f",
+      "export_sha256": "cdd0677b5a5130994630c8fa21f6cdc2655cf5310bc416f332c5b8d386eed06f",
+      "bytes": 2014
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/vulkan/vulkan/vulkan_xlib_xrandr.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/vulkan/vulkan/vulkan_xlib_xrandr.h",
+      "original_sha256": "d2131832eecbd4e53cac6cf67ecae05b655fbe0fb8543440d7b285b3495d2ae7",
+      "export_sha256": "d2131832eecbd4e53cac6cf67ecae05b655fbe0fb8543440d7b285b3495d2ae7",
+      "bytes": 1554
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/external/xess/VERSION.txt",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/external/xess/VERSION.txt",
+      "original_sha256": "924d65a34025925c2867045ad072f165be864fc20d78d9167f760279adde25d9",
+      "export_sha256": "924d65a34025925c2867045ad072f165be864fc20d78d9167f760279adde25d9",
+      "bytes": 945
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/ffx-own/glue/dlssiv_fg.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/ffx-own/glue/dlssiv_fg.h",
+      "original_sha256": "e952eb6a6ab86cfcb997c03f0f7a4c2daffb1e58b5e5744101c052d391fb21b0",
+      "export_sha256": "e952eb6a6ab86cfcb997c03f0f7a4c2daffb1e58b5e5744101c052d391fb21b0",
+      "bytes": 16708
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/host/dlssiv-helper.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/host/dlssiv-helper.cpp",
+      "original_sha256": "8385e9466af04853e7698e9887861ea24a91aebc349aee7707b2bda23bb1812d",
+      "export_sha256": "8385e9466af04853e7698e9887861ea24a91aebc349aee7707b2bda23bb1812d",
+      "bytes": 166074
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/host/dlssiv-helper.rc",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/host/dlssiv-helper.rc",
+      "original_sha256": "49471170a62e31c6742a806893764a3d5c5ed6b7ce394215367b4756358ea29f",
+      "export_sha256": "49471170a62e31c6742a806893764a3d5c5ed6b7ce394215367b4756358ea29f",
+      "bytes": 1227
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/host/fg_cap.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/host/fg_cap.h",
+      "original_sha256": "6c91b8238b12e4859cc7aa89889d0f8a51d114384d95b31945815c7111c26064",
+      "export_sha256": "6c91b8238b12e4859cc7aa89889d0f8a51d114384d95b31945815c7111c26064",
+      "bytes": 52955
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/host/fg_cost.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/host/fg_cost.h",
+      "original_sha256": "f7791598dac0ab1fd2c59abf1b184add8ae8a9bc3be6f4fce5f023dd0b15bdc0",
+      "export_sha256": "f7791598dac0ab1fd2c59abf1b184add8ae8a9bc3be6f4fce5f023dd0b15bdc0",
+      "bytes": 31458
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/host/fg_host.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/host/fg_host.h",
+      "original_sha256": "e780fb0ab091ff0fe447c8512a82980eb9d0630045fcb879330f521c555613aa",
+      "export_sha256": "e780fb0ab091ff0fe447c8512a82980eb9d0630045fcb879330f521c555613aa",
+      "bytes": 112380
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/host/fg_lib.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/host/fg_lib.h",
+      "original_sha256": "d8cf9d5f022966edc47a49d55944b2014515f39ce2a5d81eae068924ac99bee2",
+      "export_sha256": "d8cf9d5f022966edc47a49d55944b2014515f39ce2a5d81eae068924ac99bee2",
+      "bytes": 21984
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/host/fg_own.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/host/fg_own.h",
+      "original_sha256": "189db8c3c9c779cf049ee02a3a2e2ccfb8d62cd9836d3696aa931daaea0f31c9",
+      "export_sha256": "189db8c3c9c779cf049ee02a3a2e2ccfb8d62cd9836d3696aa931daaea0f31c9",
+      "bytes": 39735
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/host/fg_sha.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/host/fg_sha.h",
+      "original_sha256": "dfd5b9931aa689ca11b04bbbe011496b135f4d6df0182da46f00396c2c4e8f66",
+      "export_sha256": "dfd5b9931aa689ca11b04bbbe011496b135f4d6df0182da46f00396c2c4e8f66",
+      "bytes": 5895
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/host/fsr4_test.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/host/fsr4_test.h",
+      "original_sha256": "3eaffa8008e730ae43397059ecf962f522e1f7ed2cd07560ad25eaa57524119b",
+      "export_sha256": "3eaffa8008e730ae43397059ecf962f522e1f7ed2cd07560ad25eaa57524119b",
+      "bytes": 12706
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/host/pipe_reader.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/host/pipe_reader.h",
+      "original_sha256": "5a316ba71c7e11c89e63d35f406e3075935cbc11c486bb3bd5abb9141f69dca7",
+      "export_sha256": "5a316ba71c7e11c89e63d35f406e3075935cbc11c486bb3bd5abb9141f69dca7",
+      "bytes": 1929
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/host/xess_host.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/host/xess_host.h",
+      "original_sha256": "903aa0bb13611e3cabf0b9690517e328f9fd20eba3b7c70c11f494816b101bf5",
+      "export_sha256": "903aa0bb13611e3cabf0b9690517e328f9fd20eba3b7c70c11f494816b101bf5",
+      "bytes": 34060
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/DLSS-IV.cpp",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/DLSS-IV.cpp",
+      "original_sha256": "5121a463ae01ba8c325943eba610730f5cd19b8e42f6e81698bc38342d7e6ac8",
+      "export_sha256": "5121a463ae01ba8c325943eba610730f5cd19b8e42f6e81698bc38342d7e6ac8",
+      "bytes": 735722
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/DLSS-IV.rc",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/DLSS-IV.rc",
+      "original_sha256": "ca45baafed79ce792c422dc1ba96637814d335f933fa87ecf71df371cd86308c",
+      "export_sha256": "ca45baafed79ce792c422dc1ba96637814d335f933fa87ecf71df371cd86308c",
+      "bytes": 1121
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/bonehash.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/bonehash.h",
+      "original_sha256": "e480ab8db295f5e362bac114fb9a86450e7b2429285940145a011553e90d0eca",
+      "export_sha256": "e480ab8db295f5e362bac114fb9a86450e7b2429285940145a011553e90d0eca",
+      "bytes": 1309
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/cpu_place.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/cpu_place.h",
+      "original_sha256": "6f228703578b6e7a9fd184ecf799d3a342652941c70cd25e5887b7dd71ff8ed0",
+      "export_sha256": "6f228703578b6e7a9fd184ecf799d3a342652941c70cd25e5887b7dd71ff8ed0",
+      "bytes": 21118
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/devthread/devthread.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/devthread/devthread.h",
+      "original_sha256": "fca7e993a654d34b9f8b18fa2b642946a46548f2794a8ca1d7f5cd68357206f8",
+      "export_sha256": "fca7e993a654d34b9f8b18fa2b642946a46548f2794a8ca1d7f5cd68357206f8",
+      "bytes": 575
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/devthread/dt_bbs.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/devthread/dt_bbs.h",
+      "original_sha256": "d4d5a2b58f866011237ab00c4f83d023de356e6c6272ea2011478c0d448b451c",
+      "export_sha256": "d4d5a2b58f866011237ab00c4f83d023de356e6c6272ea2011478c0d448b451c",
+      "bytes": 18950
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/devthread/dt_bbs_top.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/devthread/dt_bbs_top.h",
+      "original_sha256": "b4919654b7abf59755ebf4875672e17b0a3ad50bcff2e4067da89e08cf4324b3",
+      "export_sha256": "b4919654b7abf59755ebf4875672e17b0a3ad50bcff2e4067da89e08cf4324b3",
+      "bytes": 2426
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/devthread/dt_core.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/devthread/dt_core.h",
+      "original_sha256": "3c45dcfb26e353a1a1edb9725e745d27cfdf49bc49cd5a36295c73316b4df8d5",
+      "export_sha256": "3c45dcfb26e353a1a1edb9725e745d27cfdf49bc49cd5a36295c73316b4df8d5",
+      "bytes": 53245
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/devthread/dt_device_rec.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/devthread/dt_device_rec.h",
+      "original_sha256": "da34b7a042c4db044b0e65620fdc1b5af618d5f90202ddd67e303b4b6c37cec3",
+      "export_sha256": "da34b7a042c4db044b0e65620fdc1b5af618d5f90202ddd67e303b4b6c37cec3",
+      "bytes": 40029
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/devthread/dt_device_sync.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/devthread/dt_device_sync.h",
+      "original_sha256": "11ad3c48a0ffb9d726f373650bc094084bd54c98553e8842b0ba16ccf896e9b4",
+      "export_sha256": "11ad3c48a0ffb9d726f373650bc094084bd54c98553e8842b0ba16ccf896e9b4",
+      "bytes": 39553
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/devthread/dt_install.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/devthread/dt_install.h",
+      "original_sha256": "26e635d369c3d49afd8543108dae935e899c3d89f034c61cc0c1ff23f0a3663e",
+      "export_sha256": "26e635d369c3d49afd8543108dae935e899c3d89f034c61cc0c1ff23f0a3663e",
+      "bytes": 69280
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/devthread/dt_res.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/devthread/dt_res.h",
+      "original_sha256": "82a96dacf2afbeb7c81f0fff68a6fb35cfe1d2eb325bbf17f2385660bd19a640",
+      "export_sha256": "82a96dacf2afbeb7c81f0fff68a6fb35cfe1d2eb325bbf17f2385660bd19a640",
+      "bytes": 50488
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/devthread/dt_sbtab.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/devthread/dt_sbtab.h",
+      "original_sha256": "e49ca5679fb12e52864e4d317cdeec070ac165995802d0df1ebd13771d5d7e67",
+      "export_sha256": "e49ca5679fb12e52864e4d317cdeec070ac165995802d0df1ebd13771d5d7e67",
+      "bytes": 43887
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/devthread/dt_shadow.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/devthread/dt_shadow.h",
+      "original_sha256": "585532f13325305a97c08d4a57a59d54ca02e3058ca36ded8cf0229647a40a34",
+      "export_sha256": "585532f13325305a97c08d4a57a59d54ca02e3058ca36ded8cf0229647a40a34",
+      "bytes": 32410
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/devthread/dt_trk.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/devthread/dt_trk.h",
+      "original_sha256": "8ea157e44f4869ebeab75874f1d235a8286d8a89e2e751de883ff0f332248d06",
+      "export_sha256": "8ea157e44f4869ebeab75874f1d235a8286d8a89e2e751de883ff0f332248d06",
+      "bytes": 26823
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/ds_bracket.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/ds_bracket.h",
+      "original_sha256": "e11d7d2fa801a7f854b2d940e841c2a9861edc3a5886084c09af27c318e30200",
+      "export_sha256": "e11d7d2fa801a7f854b2d940e841c2a9861edc3a5886084c09af27c318e30200",
+      "bytes": 4711
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/dxvk/d3d9_interfaces.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/dxvk/d3d9_interfaces.h",
+      "original_sha256": "7fbe43b0a6da6afb8b0c050ad7cb4ff5ac547a9e5492c0aac68c9cd3b459835a",
+      "export_sha256": "7fbe43b0a6da6afb8b0c050ad7cb4ff5ac547a9e5492c0aac68c9cd3b459835a",
+      "bytes": 11627
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/dxvk/dxvk_interop_min.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/dxvk/dxvk_interop_min.h",
+      "original_sha256": "12f124f213c8edb374b6246ca9ad59d2e2ef6a9404d5cf198c334300da945852",
+      "export_sha256": "12f124f213c8edb374b6246ca9ad59d2e2ef6a9404d5cf198c334300da945852",
+      "bytes": 5653
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_arm.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_arm.h",
+      "original_sha256": "6fc1ce52545093a2cdd4e6ff600c54e20a44e7792586978245465db5e750119c",
+      "export_sha256": "6fc1ce52545093a2cdd4e6ff600c54e20a44e7792586978245465db5e750119c",
+      "bytes": 18414
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_arm_life.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_arm_life.h",
+      "original_sha256": "bae4af4e64dec232aa7680d4e7515dc21d4b9f447176d2970598fae8dda48405",
+      "export_sha256": "bae4af4e64dec232aa7680d4e7515dc21d4b9f447176d2970598fae8dda48405",
+      "bytes": 71279
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_client.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_client.h",
+      "original_sha256": "89421d2e73ebb53e5f4c01b230f10e1f039f65d774235a9ed31ec7b1aee19240",
+      "export_sha256": "89421d2e73ebb53e5f4c01b230f10e1f039f65d774235a9ed31ec7b1aee19240",
+      "bytes": 25644
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_cond.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_cond.h",
+      "original_sha256": "48aadefe6e3942df4f36d968f5950580d65bab00cd8375d002c8bb69b3f0ee3e",
+      "export_sha256": "48aadefe6e3942df4f36d968f5950580d65bab00cd8375d002c8bb69b3f0ee3e",
+      "bytes": 71856
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_ffwatch.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_ffwatch.h",
+      "original_sha256": "35d252ddb479c1ed1b400c05c8b543291038f63212ab116185f8c8378a61eb98",
+      "export_sha256": "35d252ddb479c1ed1b400c05c8b543291038f63212ab116185f8c8378a61eb98",
+      "bytes": 4609
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_fixrule.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_fixrule.h",
+      "original_sha256": "4f51227a6a6937f1e8d0945d667c7220e533c1db2e588bb16eee8e18e767d7d0",
+      "export_sha256": "4f51227a6a6937f1e8d0945d667c7220e533c1db2e588bb16eee8e18e767d7d0",
+      "bytes": 1441
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_fixsay.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_fixsay.h",
+      "original_sha256": "1418b16442529527de37e5058481bdbb1112f90180bfecb50b901c2d80060892",
+      "export_sha256": "1418b16442529527de37e5058481bdbb1112f90180bfecb50b901c2d80060892",
+      "bytes": 4351
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_hud.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_hud.h",
+      "original_sha256": "cff9ca33a012f25022628df8eb21fc6be3e0f9d2fe14f780908f8f0ce652259f",
+      "export_sha256": "cff9ca33a012f25022628df8eb21fc6be3e0f9d2fe14f780908f8f0ce652259f",
+      "bytes": 41822
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_hud_rule.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_hud_rule.h",
+      "original_sha256": "b40833450ee1a86bc224b2e1d96ead17080295ab5ac36aea09f8cc2a40986a11",
+      "export_sha256": "b40833450ee1a86bc224b2e1d96ead17080295ab5ac36aea09f8cc2a40986a11",
+      "bytes": 7268
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_hud_sdr.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_hud_sdr.h",
+      "original_sha256": "6f4084a44028ecb5210ef7e7c148ae1244525ec3eea995956e2d1a1a44999656",
+      "export_sha256": "6f4084a44028ecb5210ef7e7c148ae1244525ec3eea995956e2d1a1a44999656",
+      "bytes": 5917
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_hud_sdr_d3d.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_hud_sdr_d3d.h",
+      "original_sha256": "1763d619d1fb864c458082446b65b2b2472ddddcc2377a8ffa5a4ddb9482e294",
+      "export_sha256": "1763d619d1fb864c458082446b65b2b2472ddddcc2377a8ffa5a4ddb9482e294",
+      "bytes": 1086
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_law.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_law.h",
+      "original_sha256": "b57a52bf402db87da0fdc4c5e5f2586cca36375b58c1d252bed69acf9d48605f",
+      "export_sha256": "b57a52bf402db87da0fdc4c5e5f2586cca36375b58c1d252bed69acf9d48605f",
+      "bytes": 19015
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_linux.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_linux.h",
+      "original_sha256": "804baaae9d10713aac98618eee2cd2f85c13b635e95329730b188620ff86396f",
+      "export_sha256": "804baaae9d10713aac98618eee2cd2f85c13b635e95329730b188620ff86396f",
+      "bytes": 8275
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_linux_rule.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_linux_rule.h",
+      "original_sha256": "e822c599c647a26634a8d4cc99aaba014efb678bd33bdc00325d8dd4c132cd34",
+      "export_sha256": "e822c599c647a26634a8d4cc99aaba014efb678bd33bdc00325d8dd4c132cd34",
+      "bytes": 4021
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_machine.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_machine.h",
+      "original_sha256": "802eaccb4110a0db09222c936afe35f66c0e2500f192bae38f832ecc99886847",
+      "export_sha256": "802eaccb4110a0db09222c936afe35f66c0e2500f192bae38f832ecc99886847",
+      "bytes": 23098
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_machine_armed.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_machine_armed.h",
+      "original_sha256": "e55fa41adeb3793ca9fd30d980dd88b34daac3b5272d2bb57b07a7301472d579",
+      "export_sha256": "e55fa41adeb3793ca9fd30d980dd88b34daac3b5272d2bb57b07a7301472d579",
+      "bytes": 108886
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_machine_placer.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_machine_placer.h",
+      "original_sha256": "26c97461e22622bfece94c36886979ff13b6b2457aece3f604d46ec9912a7133",
+      "export_sha256": "26c97461e22622bfece94c36886979ff13b6b2457aece3f604d46ec9912a7133",
+      "bytes": 15640
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_machine_render.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_machine_render.h",
+      "original_sha256": "9e582d2094ad0479566477824823e0d04a792c418c4daa6a38497c0398b073b0",
+      "export_sha256": "9e582d2094ad0479566477824823e0d04a792c418c4daa6a38497c0398b073b0",
+      "bytes": 32384
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_machine_state.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_machine_state.h",
+      "original_sha256": "8c7a9c302e9185cd12082720db32baab4ff49f8b4c63de7ac1cacb13ea0f5420",
+      "export_sha256": "8c7a9c302e9185cd12082720db32baab4ff49f8b4c63de7ac1cacb13ea0f5420",
+      "bytes": 44256
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_machine_worker.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_machine_worker.h",
+      "original_sha256": "56aff368b91ddbb9ccd6bdfd90b2e9dc4b9c30ca4aff0307400360b6ae2f3698",
+      "export_sha256": "56aff368b91ddbb9ccd6bdfd90b2e9dc4b9c30ca4aff0307400360b6ae2f3698",
+      "bytes": 21267
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_plan.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_plan.h",
+      "original_sha256": "759b996256dc77d21ddbfefee2cbf19b43eb9b0cf4e90773187099ce0aa54730",
+      "export_sha256": "759b996256dc77d21ddbfefee2cbf19b43eb9b0cf4e90773187099ce0aa54730",
+      "bytes": 8330
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_product.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_product.h",
+      "original_sha256": "e6cfe25ac802797847954d01a2c23d6e1131f3fcb540c1c3a49951d003157f21",
+      "export_sha256": "e6cfe25ac802797847954d01a2c23d6e1131f3fcb540c1c3a49951d003157f21",
+      "bytes": 22137
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_ship.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_ship.h",
+      "original_sha256": "b62d7d3be2d8619d6767ae1691bce521fbd4d96f04dbc71ba61e4c3a089697c0",
+      "export_sha256": "b62d7d3be2d8619d6767ae1691bce521fbd4d96f04dbc71ba61e4c3a089697c0",
+      "bytes": 10756
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_threads.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_threads.h",
+      "original_sha256": "800f9ff7f2f79da6372c3094b607f048dc7a92ce28671ed5bc5f03a9344e58b2",
+      "export_sha256": "800f9ff7f2f79da6372c3094b607f048dc7a92ce28671ed5bc5f03a9344e58b2",
+      "bytes": 3271
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_vklines.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_vklines.h",
+      "original_sha256": "11ac465bd8401d1076e3229e6eff56afa225436917cca6fc871e180164623118",
+      "export_sha256": "11ac465bd8401d1076e3229e6eff56afa225436917cca6fc871e180164623118",
+      "bytes": 25624
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_web.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_web.h",
+      "original_sha256": "2855c4e6dc62ed31a77a4e365f2ce2ab734b8b4353db235f12f58784b98fa732",
+      "export_sha256": "2855c4e6dc62ed31a77a4e365f2ce2ab734b8b4353db235f12f58784b98fa732",
+      "bytes": 2043
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_web_rule.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_web_rule.h",
+      "original_sha256": "da5af7efb2ad34f797f1335311ef4344a801b7025e500f2d7a2b9668648e5459",
+      "export_sha256": "da5af7efb2ad34f797f1335311ef4344a801b7025e500f2d7a2b9668648e5459",
+      "bytes": 4880
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/fg_xport.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/fg_xport.h",
+      "original_sha256": "5244d58df5c712007221e7ed7186fb20d0a7fb1c145fc6d5ed83cf4bfacb2d00",
+      "export_sha256": "5244d58df5c712007221e7ed7186fb20d0a7fb1c145fc6d5ed83cf4bfacb2d00",
+      "bytes": 31058
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_cga_g10_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_cga_g10_ps.h",
+      "original_sha256": "73d629c0c43c5e8b69fd7ef235ad74fdcf37afda45861405d9a2b0c4fef452aa",
+      "export_sha256": "73d629c0c43c5e8b69fd7ef235ad74fdcf37afda45861405d9a2b0c4fef452aa",
+      "bytes": 166990
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_cga_g10_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_cga_g10_ps.hlsl",
+      "original_sha256": "4247baaeee2167ac4cc0826bdbdbfa04ecb71e84419684fb42dffb79e75a6b0b",
+      "export_sha256": "4247baaeee2167ac4cc0826bdbdbfa04ecb71e84419684fb42dffb79e75a6b0b",
+      "bytes": 292
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_cga_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_cga_ps.h",
+      "original_sha256": "2aeed3c23afc7c9738107fbf188b25a60802f80e5cac67e12e0ffcb600eb886b",
+      "export_sha256": "2aeed3c23afc7c9738107fbf188b25a60802f80e5cac67e12e0ffcb600eb886b",
+      "bytes": 142857
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_cga_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_cga_ps.hlsl",
+      "original_sha256": "63356fe9eeceb2ac90332ae63c8f6b6e32fe1e5a426b0efe21ba6179b2fc50ab",
+      "export_sha256": "63356fe9eeceb2ac90332ae63c8f6b6e32fe1e5a426b0efe21ba6179b2fc50ab",
+      "bytes": 254
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_g10_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_g10_ps.h",
+      "original_sha256": "f4f68632197fcd90a60d6f7f6df1c3227ada8c1bdf03d014ed4fab396687df98",
+      "export_sha256": "f4f68632197fcd90a60d6f7f6df1c3227ada8c1bdf03d014ed4fab396687df98",
+      "bytes": 159314
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_g10_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_g10_ps.hlsl",
+      "original_sha256": "ede3dbcb43d5456c021f11b45469d14560d5c738df0ea5cc8aa7e8308238e51f",
+      "export_sha256": "ede3dbcb43d5456c021f11b45469d14560d5c738df0ea5cc8aa7e8308238e51f",
+      "bytes": 270
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_cga_g10_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_cga_g10_ps.h",
+      "original_sha256": "9bdad77573d23351eb9bc1ea308a8815a6534aa8bf3209d26bd7f4f8b94eedab",
+      "export_sha256": "9bdad77573d23351eb9bc1ea308a8815a6534aa8bf3209d26bd7f4f8b94eedab",
+      "bytes": 169311
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_cga_g10_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_cga_g10_ps.hlsl",
+      "original_sha256": "3494792fc02e865e992e3bec21e83aba78d7c5e303093bedd02cf8a91f59733c",
+      "export_sha256": "3494792fc02e865e992e3bec21e83aba78d7c5e303093bedd02cf8a91f59733c",
+      "bytes": 350
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_cga_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_cga_ps.h",
+      "original_sha256": "2733c195e0f9188be874164380129777c37c788a54128a42e24a53eb74a1d0b6",
+      "export_sha256": "2733c195e0f9188be874164380129777c37c788a54128a42e24a53eb74a1d0b6",
+      "bytes": 145308
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_cga_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_cga_ps.hlsl",
+      "original_sha256": "0b2a8552721d1b18c8b51c08bad5b1593013aa381957e1cad54431620d874e59",
+      "export_sha256": "0b2a8552721d1b18c8b51c08bad5b1593013aa381957e1cad54431620d874e59",
+      "bytes": 312
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_g10_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_g10_ps.h",
+      "original_sha256": "9370657f8ae678cf1a817e19118fec69d5da3c230129c36b0360c4ef098efdc0",
+      "export_sha256": "9370657f8ae678cf1a817e19118fec69d5da3c230129c36b0360c4ef098efdc0",
+      "bytes": 161433
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_g10_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_g10_ps.hlsl",
+      "original_sha256": "31c85068393c6dc8489bce0731d0ea527cd2637818d52ad52e3821a53ff803a9",
+      "export_sha256": "31c85068393c6dc8489bce0731d0ea527cd2637818d52ad52e3821a53ff803a9",
+      "bytes": 328
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_ps.h",
+      "original_sha256": "1ac7f96641822c070369aaa59dd59f9c29c313aa2f959bb14d2331f92a7122f9",
+      "export_sha256": "1ac7f96641822c070369aaa59dd59f9c29c313aa2f959bb14d2331f92a7122f9",
+      "bytes": 141748
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_ov_ps.hlsl",
+      "original_sha256": "0960e79d1a2e2bfaea9e45cce0d1493e6b6841d059ae19411792f01523a847c7",
+      "export_sha256": "0960e79d1a2e2bfaea9e45cce0d1493e6b6841d059ae19411792f01523a847c7",
+      "bytes": 290
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_ps.h",
+      "original_sha256": "9706eb4c83cffb631361eff53ea32e77ec928fd730c27692f081c54a1942efa3",
+      "export_sha256": "9706eb4c83cffb631361eff53ea32e77ec928fd730c27692f081c54a1942efa3",
+      "bytes": 138851
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/fg/shaders/hdr_fgmrt_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/fg/shaders/hdr_fgmrt_ps.hlsl",
+      "original_sha256": "3e2ef8ba1201df142487b8c29cf03303823573620f25489f0cfe71358f28190e",
+      "export_sha256": "3e2ef8ba1201df142487b8c29cf03303823573620f25489f0cfe71358f28190e",
+      "bytes": 232
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/hdr.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/hdr.h",
+      "original_sha256": "16da52474fb2fa435d1d29901e59bb75fea4f1dfa2980a851ca8e5374a1acfff",
+      "export_sha256": "16da52474fb2fa435d1d29901e59bb75fea4f1dfa2980a851ca8e5374a1acfff",
+      "bytes": 42872
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/hdr_cga.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/hdr_cga.h",
+      "original_sha256": "224e6e2c041fd906c356c9b627104735498736a9955764e44372c33841ac39fc",
+      "export_sha256": "224e6e2c041fd906c356c9b627104735498736a9955764e44372c33841ac39fc",
+      "bytes": 26771
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/hdr_encode.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/hdr_encode.h",
+      "original_sha256": "bb922806fb97b48f2ff5ab0ecb83c30ca0c70e1d29931c77e259a8a36a319030",
+      "export_sha256": "bb922806fb97b48f2ff5ab0ecb83c30ca0c70e1d29931c77e259a8a36a319030",
+      "bytes": 73518
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/hdr_xbox_gamma.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/hdr_xbox_gamma.h",
+      "original_sha256": "ae822cc4438ad7ae502af5eb688b4a599c7985b56b881ffa38c8200b9cef4c8f",
+      "export_sha256": "ae822cc4438ad7ae502af5eb688b4a599c7985b56b881ffa38c8200b9cef4c8f",
+      "bytes": 3955
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/notice.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/notice.h",
+      "original_sha256": "26187abbcc0f9ca1705de990f255b13e608a7c0724b3685d4daef84bf5a7077e",
+      "export_sha256": "26187abbcc0f9ca1705de990f255b13e608a7c0724b3685d4daef84bf5a7077e",
+      "bytes": 17834
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/LICENSE-AMD-FSR1.txt",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/LICENSE-AMD-FSR1.txt",
+      "original_sha256": "4527628462244e17f07bd7d11a4471e5d7e596be933896b76967de4c8f6e8364",
+      "export_sha256": "4527628462244e17f07bd7d11a4471e5d7e596be933896b76967de4c8f6e8364",
+      "bytes": 1468
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_cga.hlsli",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_cga.hlsli",
+      "original_sha256": "747dc35684f740dc0b9ce20bbd191986c74f8897c8f9a997729f398df2ebb309",
+      "export_sha256": "747dc35684f740dc0b9ce20bbd191986c74f8897c8f9a997729f398df2ebb309",
+      "bytes": 2858
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_cgablit_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_cgablit_ps.h",
+      "original_sha256": "6a8bf09749824584581959c856b6e1c7e184cce0a5d1e69c7ebfadd35d17242b",
+      "export_sha256": "6a8bf09749824584581959c856b6e1c7e184cce0a5d1e69c7ebfadd35d17242b",
+      "bytes": 8051
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_cgablit_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_cgablit_ps.hlsl",
+      "original_sha256": "d62d816e7cc36169031962c57f4f8c45b6518a1cb2acbf90c7b7f89c0fbbdb4c",
+      "export_sha256": "d62d816e7cc36169031962c57f4f8c45b6518a1cb2acbf90c7b7f89c0fbbdb4c",
+      "bytes": 685
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_cgaproof_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_cgaproof_ps.h",
+      "original_sha256": "df86ba9900c2945ce31355708bd2236583db992c6af36e58d7a0c5f9a4c5ec37",
+      "export_sha256": "df86ba9900c2945ce31355708bd2236583db992c6af36e58d7a0c5f9a4c5ec37",
+      "bytes": 15584
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_cgaproof_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_cgaproof_ps.hlsl",
+      "original_sha256": "6b122fa0e59c8785559bef856682cbd4f025cf20da798d9802cfa4a1f9dac1cf",
+      "export_sha256": "6b122fa0e59c8785559bef856682cbd4f025cf20da798d9802cfa4a1f9dac1cf",
+      "bytes": 3106
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_cgprobe_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_cgprobe_ps.h",
+      "original_sha256": "8349c50f6b5c846b64b7294b190f499b799ddfbe09b46e20093cfd60a94d7ec9",
+      "export_sha256": "8349c50f6b5c846b64b7294b190f499b799ddfbe09b46e20093cfd60a94d7ec9",
+      "bytes": 39081
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_cgprobe_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_cgprobe_ps.hlsl",
+      "original_sha256": "0f13f68afb65bd2b84a679339d11cb6b789983c0b4906461a1f11e5c69ea97e8",
+      "export_sha256": "0f13f68afb65bd2b84a679339d11cb6b789983c0b4906461a1f11e5c69ea97e8",
+      "bytes": 2080
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_common.hlsli",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_common.hlsli",
+      "original_sha256": "c4ca0f6a22b9dff76e791f05e49e30356c34b3ccf5980cedc799788598a4c437",
+      "export_sha256": "c4ca0f6a22b9dff76e791f05e49e30356c34b3ccf5980cedc799788598a4c437",
+      "bytes": 20453
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_debug_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_debug_ps.h",
+      "original_sha256": "f946d649b49557cd60cac6f833a66f4166560a4604cdf81a397defe97698a37b",
+      "export_sha256": "f946d649b49557cd60cac6f833a66f4166560a4604cdf81a397defe97698a37b",
+      "bytes": 89241
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_debug_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_debug_ps.hlsl",
+      "original_sha256": "5ef560ecf0d3b79ac0686331908ee053b67838964b924a9308d1608e35ff9b48",
+      "export_sha256": "5ef560ecf0d3b79ac0686331908ee053b67838964b924a9308d1608e35ff9b48",
+      "bytes": 6509
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_encode_cga_g10_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_encode_cga_g10_ps.h",
+      "original_sha256": "4d8b542d94ddd741cf91a3b36d326210d25379919052b8b9ac68608b6f1b3c57",
+      "export_sha256": "4d8b542d94ddd741cf91a3b36d326210d25379919052b8b9ac68608b6f1b3c57",
+      "bytes": 91372
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_encode_cga_g10_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_encode_cga_g10_ps.hlsl",
+      "original_sha256": "637b5bb193d3b5daf231b47615eab9deb0164e3e6f4c94e6f5a4c5b81389c217",
+      "export_sha256": "637b5bb193d3b5daf231b47615eab9deb0164e3e6f4c94e6f5a4c5b81389c217",
+      "bytes": 526
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_encode_cga_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_encode_cga_ps.h",
+      "original_sha256": "68da9c7f74e5b95ab72e533320340025b7bc2d761f4477527766d5b45bb66c92",
+      "export_sha256": "68da9c7f74e5b95ab72e533320340025b7bc2d761f4477527766d5b45bb66c92",
+      "bytes": 77329
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_encode_cga_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_encode_cga_ps.hlsl",
+      "original_sha256": "211619f1776af47b009b7982e213587b5f86aa9f3260ac7bf3984140c90443a1",
+      "export_sha256": "211619f1776af47b009b7982e213587b5f86aa9f3260ac7bf3984140c90443a1",
+      "bytes": 733
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_encode_g10_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_encode_g10_ps.h",
+      "original_sha256": "ffc00415fdcb4d4fa01df2288c309debd46c48c47ece84481ba738521b7c1ba6",
+      "export_sha256": "ffc00415fdcb4d4fa01df2288c309debd46c48c47ece84481ba738521b7c1ba6",
+      "bytes": 81855
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_encode_g10_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_encode_g10_ps.hlsl",
+      "original_sha256": "3ad3130f90587be2c707e2673578fc5c2a92fe19a5f96714576b34307e13f561",
+      "export_sha256": "3ad3130f90587be2c707e2673578fc5c2a92fe19a5f96714576b34307e13f561",
+      "bytes": 569
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_encode_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_encode_ps.h",
+      "original_sha256": "da217ee7d7687172758f18ce1fb10f3cf2c0572a39a0d2722bb9360ca59989a4",
+      "export_sha256": "da217ee7d7687172758f18ce1fb10f3cf2c0572a39a0d2722bb9360ca59989a4",
+      "bytes": 72136
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_encode_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_encode_ps.hlsl",
+      "original_sha256": "9a4ebb6cf04096a8a0b8f1eddf6e43cd1fff8c41c4c1f2396d82bbcb654a38ec",
+      "export_sha256": "9a4ebb6cf04096a8a0b8f1eddf6e43cd1fff8c41c4c1f2396d82bbcb654a38ec",
+      "bytes": 13854
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_lutprofile_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_lutprofile_ps.h",
+      "original_sha256": "947c5483d646b89fe5dc3c7ede9f049e58b8f6eb47db13f3e505083e7998edb6",
+      "export_sha256": "947c5483d646b89fe5dc3c7ede9f049e58b8f6eb47db13f3e505083e7998edb6",
+      "bytes": 14196
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/hdr_lutprofile_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/hdr_lutprofile_ps.hlsl",
+      "original_sha256": "5deb364e824fc80898d35a6d22d5429c7059d985dcd87a57353febbbb4fa3644",
+      "export_sha256": "5deb364e824fc80898d35a6d22d5429c7059d985dcd87a57353febbbb4fa3644",
+      "bytes": 1220
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_corona_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_corona_ps.h",
+      "original_sha256": "b0179383cdeac9bb555486a880e4576f0ebdfdd8ad04766c75c4d496381a06c7",
+      "export_sha256": "b0179383cdeac9bb555486a880e4576f0ebdfdd8ad04766c75c4d496381a06c7",
+      "bytes": 5497
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_corona_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_corona_ps.hlsl",
+      "original_sha256": "87cd10fd0649def9a6b56439032d76fd3d7bef1255c6acdc93925372ecc1d312",
+      "export_sha256": "87cd10fd0649def9a6b56439032d76fd3d7bef1255c6acdc93925372ecc1d312",
+      "bytes": 2891
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_dedither_count_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_dedither_count_ps.h",
+      "original_sha256": "0676b75525e468b6e153677e2b966dcf97dcecb6f6d8b7ef15dea703263136eb",
+      "export_sha256": "0676b75525e468b6e153677e2b966dcf97dcecb6f6d8b7ef15dea703263136eb",
+      "bytes": 2810
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_dedither_count_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_dedither_count_ps.hlsl",
+      "original_sha256": "84e4d6cf22a06a6427ac006754427e032fe2fa6fb515e51920cf9926bb9a2984",
+      "export_sha256": "84e4d6cf22a06a6427ac006754427e032fe2fa6fb515e51920cf9926bb9a2984",
+      "bytes": 1046
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_dedither_home_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_dedither_home_ps.h",
+      "original_sha256": "4928e7a2ba3db52fc446765247a323bf207bceb1b126f837f1613fd3f67963ba",
+      "export_sha256": "4928e7a2ba3db52fc446765247a323bf207bceb1b126f837f1613fd3f67963ba",
+      "bytes": 3706
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_dedither_home_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_dedither_home_ps.hlsl",
+      "original_sha256": "fa592236fec9837ad1b8ed4e0f50e99908598ed792ebcd060368524c8ccec05f",
+      "export_sha256": "fa592236fec9837ad1b8ed4e0f50e99908598ed792ebcd060368524c8ccec05f",
+      "bytes": 1036
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_dedither_probe_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_dedither_probe_ps.h",
+      "original_sha256": "4ae9f3ea6bca325847462db8dfeff6173526820f144e7f9ec391903bb4efa936",
+      "export_sha256": "4ae9f3ea6bca325847462db8dfeff6173526820f144e7f9ec391903bb4efa936",
+      "bytes": 9606
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_dedither_probe_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_dedither_probe_ps.hlsl",
+      "original_sha256": "ed35be671a935009e6ffb35b0d949b6a1d266e327f8e9f9e3e01eaca74709828",
+      "export_sha256": "ed35be671a935009e6ffb35b0d949b6a1d266e327f8e9f9e3e01eaca74709828",
+      "bytes": 2362
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_dedither_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_dedither_ps.h",
+      "original_sha256": "ffdbbd7722e67d06090e8835e6888d7044dbfa2ca1870a8d955db22c5274d840",
+      "export_sha256": "ffdbbd7722e67d06090e8835e6888d7044dbfa2ca1870a8d955db22c5274d840",
+      "bytes": 9760
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_dedither_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_dedither_ps.hlsl",
+      "original_sha256": "b6b3d484b2dedab6dfa0288ea63a97943d4491ebdfc08970be46bad91c190639",
+      "export_sha256": "b6b3d484b2dedab6dfa0288ea63a97943d4491ebdfc08970be46bad91c190639",
+      "bytes": 5028
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_dedither_view_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_dedither_view_ps.h",
+      "original_sha256": "fde4826af11a844fa01f98a2cbb652d6fa5b6e1d540e61c343f016c63d654ccc",
+      "export_sha256": "fde4826af11a844fa01f98a2cbb652d6fa5b6e1d540e61c343f016c63d654ccc",
+      "bytes": 8312
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_dedither_view_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_dedither_view_ps.hlsl",
+      "original_sha256": "ba59d9566cfa599c1aeca67e798e402458fe91a50105122a7205d89bedcec3a0",
+      "export_sha256": "ba59d9566cfa599c1aeca67e798e402458fe91a50105122a7205d89bedcec3a0",
+      "bytes": 295
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_fs_vs.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_fs_vs.h",
+      "original_sha256": "6329085ceadf52d2e8a81086903f3cbd429d6f0cc6a9f164f86dc1a54553e008",
+      "export_sha256": "6329085ceadf52d2e8a81086903f3cbd429d6f0cc6a9f164f86dc1a54553e008",
+      "bytes": 994
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_fs_vs.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_fs_vs.hlsl",
+      "original_sha256": "389dd95d95f997a0e8358cb490b1b506483c798cf0e49bf00d3181500bff97cb",
+      "export_sha256": "389dd95d95f997a0e8358cb490b1b506483c798cf0e49bf00d3181500bff97cb",
+      "bytes": 361
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_guides_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_guides_ps.h",
+      "original_sha256": "e8824d9dc8b1921a69e69649515802828655ce6b59f0deaae3559c9ab12a5e12",
+      "export_sha256": "e8824d9dc8b1921a69e69649515802828655ce6b59f0deaae3559c9ab12a5e12",
+      "bytes": 13316
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_guides_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_guides_ps.hlsl",
+      "original_sha256": "8f003140017e45a2873fcb27b33dac2a0c56a47d84f3d77373c6cd1ff4600832",
+      "export_sha256": "8f003140017e45a2873fcb27b33dac2a0c56a47d84f3d77373c6cd1ff4600832",
+      "bytes": 5279
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_mask_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_mask_ps.h",
+      "original_sha256": "cb0c19a30a9007986d17660bb62537177f175ed0fa96546032d247f0de114481",
+      "export_sha256": "cb0c19a30a9007986d17660bb62537177f175ed0fa96546032d247f0de114481",
+      "bytes": 4700
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_mask_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_mask_ps.hlsl",
+      "original_sha256": "36614201bd2b3bce7c769d1a00aecd31796e54d08dcc0584a97601ba2234cd3d",
+      "export_sha256": "36614201bd2b3bce7c769d1a00aecd31796e54d08dcc0584a97601ba2234cd3d",
+      "bytes": 1556
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_notice_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_notice_ps.h",
+      "original_sha256": "ff1a051c9d67ed4f8fbf562d51c64b1dbcee109e30fd263857289cae64562cca",
+      "export_sha256": "ff1a051c9d67ed4f8fbf562d51c64b1dbcee109e30fd263857289cae64562cca",
+      "bytes": 3079
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_notice_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_notice_ps.hlsl",
+      "original_sha256": "219c21bab6e22aef04709044a6bd259ce33b955544a61ca9377755c0547b7330",
+      "export_sha256": "219c21bab6e22aef04709044a6bd259ce33b955544a61ca9377755c0547b7330",
+      "bytes": 820
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_rain_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_rain_ps.h",
+      "original_sha256": "6192fd45cb7ccfc34cdd3f70cca163aab92a06ed495003ce35c08de96804125e",
+      "export_sha256": "6192fd45cb7ccfc34cdd3f70cca163aab92a06ed495003ce35c08de96804125e",
+      "bytes": 2927
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_rain_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_rain_ps.hlsl",
+      "original_sha256": "f60c0941bdd738f4ca433257b73bcc11a06ca5b24ff28b8a3e1346aa9ea8d0ec",
+      "export_sha256": "f60c0941bdd738f4ca433257b73bcc11a06ca5b24ff28b8a3e1346aa9ea8d0ec",
+      "bytes": 1384
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_steady_home_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_steady_home_ps.h",
+      "original_sha256": "95dea56b4558835a913e6b2aeb947ff5d84332602c95b5bcab18d70c48612e3e",
+      "export_sha256": "95dea56b4558835a913e6b2aeb947ff5d84332602c95b5bcab18d70c48612e3e",
+      "bytes": 3378
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_steady_home_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_steady_home_ps.hlsl",
+      "original_sha256": "cb9e877138768063c13cfd00420ab2ff51e24652ef8c15d145b45a99b2482194",
+      "export_sha256": "cb9e877138768063c13cfd00420ab2ff51e24652ef8c15d145b45a99b2482194",
+      "bytes": 1161
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_steady_probe_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_steady_probe_ps.h",
+      "original_sha256": "48bad9fd349380296fe09d5fcd3229d24eaf8667357fd9a8b7ce80dbcfa32352",
+      "export_sha256": "48bad9fd349380296fe09d5fcd3229d24eaf8667357fd9a8b7ce80dbcfa32352",
+      "bytes": 2584
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_steady_probe_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_steady_probe_ps.hlsl",
+      "original_sha256": "c94ae964e301d6d9166269330de1eaa4ec996ea9a45c4be24b3667b712d4bcc7",
+      "export_sha256": "c94ae964e301d6d9166269330de1eaa4ec996ea9a45c4be24b3667b712d4bcc7",
+      "bytes": 553
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_steady_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_steady_ps.h",
+      "original_sha256": "5bfba81f88e862ac2bc79163e20d08b3090233a692367e291b45526c5f93ad06",
+      "export_sha256": "5bfba81f88e862ac2bc79163e20d08b3090233a692367e291b45526c5f93ad06",
+      "bytes": 16176
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/ivt_steady_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/ivt_steady_ps.hlsl",
+      "original_sha256": "d59d2a870d9f06cf7339d602adb35263489e323011d6fb7da429edd552a8e422",
+      "export_sha256": "d59d2a870d9f06cf7339d602adb35263489e323011d6fb7da429edd552a8e422",
+      "bytes": 5782
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/rcas_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/rcas_ps.h",
+      "original_sha256": "ed7049d3564f6d99a5cd24f61dda386883ab323d3fedd4289bc44b5cabfd9957",
+      "export_sha256": "ed7049d3564f6d99a5cd24f61dda386883ab323d3fedd4289bc44b5cabfd9957",
+      "bytes": 12344
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/rcas_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/rcas_ps.hlsl",
+      "original_sha256": "00b29e4e5757e47e02783d652cae5c44db346335966dbc50fe065a7b6b50698f",
+      "export_sha256": "00b29e4e5757e47e02783d652cae5c44db346335966dbc50fe065a7b6b50698f",
+      "bytes": 5825
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_dmg.hlsli",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_dmg.hlsli",
+      "original_sha256": "f8b65451f4f97849d2698d0b559711254fb756fb77209e0496d76375256aba1c",
+      "export_sha256": "f8b65451f4f97849d2698d0b559711254fb756fb77209e0496d76375256aba1c",
+      "bytes": 3247
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_dmg_vs.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_dmg_vs.h",
+      "original_sha256": "22df52d6870940f0dd358b7998aa3b6e14250a981afac6c28c5f25a2dba66dea",
+      "export_sha256": "22df52d6870940f0dd358b7998aa3b6e14250a981afac6c28c5f25a2dba66dea",
+      "bytes": 18055
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_dmg_vs.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_dmg_vs.hlsl",
+      "original_sha256": "f37c4f02cd8b1164b26dc7b17ee37ddc7bccf98c75b42ed744a9792ba2c48856",
+      "export_sha256": "f37c4f02cd8b1164b26dc7b17ee37ddc7bccf98c75b42ed744a9792ba2c48856",
+      "bytes": 170
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_ps.h",
+      "original_sha256": "ddac956df054f10b04d2fa0da9cb43deea2c09e68446ea41565e3799512d4d58",
+      "export_sha256": "ddac956df054f10b04d2fa0da9cb43deea2c09e68446ea41565e3799512d4d58",
+      "bytes": 4677
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_ps.hlsl",
+      "original_sha256": "b5dcb54e75b250c51957740ee4e529608d2c7d9d316c4da7a7ac66e25862309d",
+      "export_sha256": "b5dcb54e75b250c51957740ee4e529608d2c7d9d316c4da7a7ac66e25862309d",
+      "bytes": 2944
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_skin_dmg_vs.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_skin_dmg_vs.h",
+      "original_sha256": "29858e7519f382c7a79166dcfcc90dfcca5255bd0a73a4043e4a21a6a9fa3bd0",
+      "export_sha256": "29858e7519f382c7a79166dcfcc90dfcca5255bd0a73a4043e4a21a6a9fa3bd0",
+      "bytes": 22917
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_skin_dmg_vs.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_skin_dmg_vs.hlsl",
+      "original_sha256": "476f23231d395daf3eb41dffa1a3a4b628ac88c3b3ed5d3a06620aa1d27b31a8",
+      "export_sha256": "476f23231d395daf3eb41dffa1a3a4b628ac88c3b3ed5d3a06620aa1d27b31a8",
+      "bytes": 182
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_skin_prev_dmg_vs.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_skin_prev_dmg_vs.h",
+      "original_sha256": "0ef0f2002c4837a5c9f728a02f8d3b906ea26e24ce525063b9f29d9d1707bbd2",
+      "export_sha256": "0ef0f2002c4837a5c9f728a02f8d3b906ea26e24ce525063b9f29d9d1707bbd2",
+      "bytes": 29799
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_skin_prev_dmg_vs.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_skin_prev_dmg_vs.hlsl",
+      "original_sha256": "1bebc7dd87771eefd10b3ab876e68c965464201724b14659ab0b683b97bcd806",
+      "export_sha256": "1bebc7dd87771eefd10b3ab876e68c965464201724b14659ab0b683b97bcd806",
+      "bytes": 219
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_skin_prev_vs.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_skin_prev_vs.h",
+      "original_sha256": "41b84b59808f1221de218a746287bca2cfd6e604b211ab986a363df7063f96d3",
+      "export_sha256": "41b84b59808f1221de218a746287bca2cfd6e604b211ab986a363df7063f96d3",
+      "bytes": 16055
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_skin_prev_vs.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_skin_prev_vs.hlsl",
+      "original_sha256": "649dba5cb99f4090f5f9311726623499789e47ba1a4f8070c3bbe4299523899a",
+      "export_sha256": "649dba5cb99f4090f5f9311726623499789e47ba1a4f8070c3bbe4299523899a",
+      "bytes": 3985
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_skin_vs.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_skin_vs.h",
+      "original_sha256": "1ad7d2ac81dabd4ad1934c3b03e8548e29c255b0a52f01347148dcb83c63adce",
+      "export_sha256": "1ad7d2ac81dabd4ad1934c3b03e8548e29c255b0a52f01347148dcb83c63adce",
+      "bytes": 9097
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_skin_vs.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_skin_vs.hlsl",
+      "original_sha256": "9cb9c590754a265717ff3be896d9b061dd61064e864d7c5c6949adf147abe291",
+      "export_sha256": "9cb9c590754a265717ff3be896d9b061dd61064e864d7c5c6949adf147abe291",
+      "bytes": 2985
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_vs.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_vs.h",
+      "original_sha256": "419b6059eac00338744fe249d6210d948fd9ffefaa36164038e8644a4e00d3b7",
+      "export_sha256": "419b6059eac00338744fe249d6210d948fd9ffefaa36164038e8644a4e00d3b7",
+      "bytes": 4002
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/velocity_vs.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/velocity_vs.hlsl",
+      "original_sha256": "d4ce798d3f5981d0839bf0240804e89243c10bcb6de9a7b068a299b78233da66",
+      "export_sha256": "d4ce798d3f5981d0839bf0240804e89243c10bcb6de9a7b068a299b78233da66",
+      "bytes": 1790
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/vtf_test_ps.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/vtf_test_ps.h",
+      "original_sha256": "89187844ee08d8d1eef5de67ade982c76f03b7732accc0431d402567c1fe0cff",
+      "export_sha256": "89187844ee08d8d1eef5de67ade982c76f03b7732accc0431d402567c1fe0cff",
+      "bytes": 904
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/vtf_test_ps.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/vtf_test_ps.hlsl",
+      "original_sha256": "1420ee59de3f75c70ecdbebb4fcca6e5d6d8d5a022fa782d2ae0f90c402e1428",
+      "export_sha256": "1420ee59de3f75c70ecdbebb4fcca6e5d6d8d5a022fa782d2ae0f90c402e1428",
+      "bytes": 264
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/vtf_test_vs.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/vtf_test_vs.h",
+      "original_sha256": "9254fbe1c330f374a33904c9a4c7285ba5e8d5ab97fcfd5926743141e420334d",
+      "export_sha256": "9254fbe1c330f374a33904c9a4c7285ba5e8d5ab97fcfd5926743141e420334d",
+      "bytes": 2973
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/shaders/vtf_test_vs.hlsl",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/shaders/vtf_test_vs.hlsl",
+      "original_sha256": "bcfb26d8dc9e069807bb8fb3da231ae64dd7c528af574d464d5918a5745e8f46",
+      "export_sha256": "bcfb26d8dc9e069807bb8fb3da231ae64dd7c528af574d464d5918a5745e8f46",
+      "bytes": 1295
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/third_party/latencyflex/LICENSE",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/third_party/latencyflex/LICENSE",
+      "original_sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "export_sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "bytes": 11560
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/third_party/latencyflex/latencyflex.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/third_party/latencyflex/latencyflex.h",
+      "original_sha256": "3e4c5a0c2b4fa2f13432ff7918cd6a3f641118d5ddb897e877a2900535807421",
+      "export_sha256": "3e4c5a0c2b4fa2f13432ff7918cd6a3f641118d5ddb897e877a2900535807421",
+      "bytes": 13183
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/DlssIvTransport.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/DlssIvTransport.h",
+      "original_sha256": "00ad911268741ac5a83668694d92cd90f7e644aad7bf1ed7f21042776ac2a152",
+      "export_sha256": "00ad911268741ac5a83668694d92cd90f7e644aad7bf1ed7f21042776ac2a152",
+      "bytes": 364196
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/LICENSE-DLSS5-Feeder.txt",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/LICENSE-DLSS5-Feeder.txt",
+      "original_sha256": "1ce240e402901fb81eb82a60a6bafd2fb913cd5746860b0a4ec52a5acb49ced7",
+      "export_sha256": "1ce240e402901fb81eb82a60a6bafd2fb913cd5746860b0a4ec52a5acb49ced7",
+      "bytes": 1210
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/corona_pass.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/corona_pass.h",
+      "original_sha256": "e99f4fa6276afa5c2cc88ffeb273c46ca2ae3cdcda0bc91601fabb072136bf62",
+      "export_sha256": "e99f4fa6276afa5c2cc88ffeb273c46ca2ae3cdcda0bc91601fabb072136bf62",
+      "bytes": 5315
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/dedither_pass.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/dedither_pass.h",
+      "original_sha256": "de119dad0cb577b497ec2b34d872b894035593db55bb3b64c714afb408fe1781",
+      "export_sha256": "de119dad0cb577b497ec2b34d872b894035593db55bb3b64c714afb408fe1781",
+      "bytes": 4482
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/dlssiv_layout.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/dlssiv_layout.h",
+      "original_sha256": "cc733e000d3b9ce401368215eb16932519f5aaf5918a88464bdc8893bc7c664e",
+      "export_sha256": "cc733e000d3b9ce401368215eb16932519f5aaf5918a88464bdc8893bc7c664e",
+      "bytes": 198
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/feed_fg.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/feed_fg.h",
+      "original_sha256": "017c226c50c46cbbade7456dd6759fca2e86dd0a44a3c4c5c04cd1aafdb2d1b7",
+      "export_sha256": "017c226c50c46cbbade7456dd6759fca2e86dd0a44a3c4c5c04cd1aafdb2d1b7",
+      "bytes": 9356
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/feed_ipc.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/feed_ipc.h",
+      "original_sha256": "db1f9d62d1ad392016a9b083ebfa474e2a702f2f5f73665b794799b44540a260",
+      "export_sha256": "db1f9d62d1ad392016a9b083ebfa474e2a702f2f5f73665b794799b44540a260",
+      "bytes": 21577
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/feed_vk.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/feed_vk.h",
+      "original_sha256": "7c74bddcabbe09c61287ad9235c28b4880b0a53c488049ee468dd3cad9a6ae3b",
+      "export_sha256": "7c74bddcabbe09c61287ad9235c28b4880b0a53c488049ee468dd3cad9a6ae3b",
+      "bytes": 22995
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/ivt_latency.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/ivt_latency.h",
+      "original_sha256": "2a0746d95057128c1fc447f536a87b0e45044fe9d57e8d4c5d3eb4e218c39719",
+      "export_sha256": "2a0746d95057128c1fc447f536a87b0e45044fe9d57e8d4c5d3eb4e218c39719",
+      "bytes": 13108
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/mask_pass.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/mask_pass.h",
+      "original_sha256": "b4ec7ec6c035cbaacc653cc9da0b39eb84c846c8458b5e5f898e20871e08e4c7",
+      "export_sha256": "b4ec7ec6c035cbaacc653cc9da0b39eb84c846c8458b5e5f898e20871e08e4c7",
+      "bytes": 1650
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/notice_pass.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/notice_pass.h",
+      "original_sha256": "5cd646e48e373feb69828ac30f29a912e09c1eb46bd0c7ec764599dd6a9c4cfb",
+      "export_sha256": "5cd646e48e373feb69828ac30f29a912e09c1eb46bd0c7ec764599dd6a9c4cfb",
+      "bytes": 7952
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/present_gate.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/present_gate.h",
+      "original_sha256": "57519c6be188600c42248114f7248845f216381c9413bdd9e8ac4eade12b3926",
+      "export_sha256": "57519c6be188600c42248114f7248845f216381c9413bdd9e8ac4eade12b3926",
+      "bytes": 8087
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/quad_uv.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/quad_uv.h",
+      "original_sha256": "3f56882ae2f101fe7fc584ff98b395a5a212c05d22d45fbda0a8e24f5275bdb8",
+      "export_sha256": "3f56882ae2f101fe7fc584ff98b395a5a212c05d22d45fbda0a8e24f5275bdb8",
+      "bytes": 5991
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/rain_pass.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/rain_pass.h",
+      "original_sha256": "e1747e9bb0991bf9d1b71a6f4cb894eac3fefac18747dce6b410f31f9a0b290c",
+      "export_sha256": "e1747e9bb0991bf9d1b71a6f4cb894eac3fefac18747dce6b410f31f9a0b290c",
+      "bytes": 1983
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/transport/steady_depth_pass.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/transport/steady_depth_pass.h",
+      "original_sha256": "d65d1a2245cd1546c433b24f3a459d35b2bf0896697a0d5eb9f032e21c8343b5",
+      "export_sha256": "d65d1a2245cd1546c433b24f3a459d35b2bf0896697a0d5eb9f032e21c8343b5",
+      "bytes": 5890
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/vc_server_upscale.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/vc_server_upscale.h",
+      "original_sha256": "5c31fc740be5eb90c0d4164f83762c3836b2bfde325456137585d6af223aa5f4",
+      "export_sha256": "5c31fc740be5eb90c0d4164f83762c3836b2bfde325456137585d6af223aa5f4",
+      "bytes": 8394
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/vel_dmg.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/vel_dmg.h",
+      "original_sha256": "4f19f3f5c22833f0cf65d1a4c1058c023cba8f0765d554ca9a0c8d680ef54e03",
+      "export_sha256": "4f19f3f5c22833f0cf65d1a4c1058c023cba8f0765d554ca9a0c8d680ef54e03",
+      "bytes": 1741
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/source/version.h",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/source/version.h",
+      "original_sha256": "1ac31de6526c25ba2f95d699d5fcde0f0d00200b95a2b5957cba33470f4f4245",
+      "export_sha256": "1ac31de6526c25ba2f95d699d5fcde0f0d00200b95a2b5957cba33470f4f4245",
+      "bytes": 334
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/tools/fetch-ngx.ps1",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/tools/fetch-ngx.ps1",
+      "original_sha256": "08f20f4625f97a273044d28e77bff4c3835b6dcb25b2a10a3e6079f3c8ee91ce",
+      "export_sha256": "08f20f4625f97a273044d28e77bff4c3835b6dcb25b2a10a3e6079f3c8ee91ce",
+      "bytes": 10272
+    },
+    {
+      "path": "native/paired-dlssiv/source/dlssiv/tools/fetch-xess.ps1",
+      "origin": "research/codex-bbridge-standalone-2026-11-11/source/dlssiv/tools/fetch-xess.ps1",
+      "original_sha256": "aa945ffa0578ae1e9fd7bf44a1d4775ad027db9938aca23faedc245b45fea426",
+      "export_sha256": "aa945ffa0578ae1e9fd7bf44a1d4775ad027db9938aca23faedc245b45fea426",
+      "bytes": 12013
     },
     {
       "path": "native/scripthook/natives_table.h",
@@ -2387,6 +4753,664 @@
       "bytes": 23450
     },
     {
+      "path": "native/vcrender/.gitignore",
+      "origin": "export-generated: native/vcrender/.gitignore",
+      "original_sha256": null,
+      "export_sha256": "0cf256cc9234b415f912f5b0e9f8c9364688466041611047cd3f599c35f4efa6",
+      "bytes": 21
+    },
+    {
+      "path": "native/vcrender/LICENSE-DXVK.txt",
+      "origin": "../gta-vice-city/drive_c/Program Files/Rockstar Games/Grand Theft Auto IV/plugins/VCRender/LICENSE-DXVK.txt",
+      "original_sha256": "1399803710e1223e2205894b969d16b4180f84b58f148a7a2d793e96a45f5a6a",
+      "export_sha256": "1399803710e1223e2205894b969d16b4180f84b58f148a7a2d793e96a45f5a6a",
+      "bytes": 1169
+    },
+    {
+      "path": "native/vcrender/README.md",
+      "origin": "export-generated: native/vcrender/README.md",
+      "original_sha256": null,
+      "export_sha256": "93ddaac788448eae551e64a36ca32f28216c7d0300b8a242d3f66701e3aa41bd",
+      "bytes": 4872
+    },
+    {
+      "path": "native/vcrender/REPRODUCIBILITY.json",
+      "origin": "export-generated: native/vcrender/REPRODUCIBILITY.json",
+      "original_sha256": null,
+      "export_sha256": "d61a34ffda36e0b5fdadb8bee1550326438940452cc7e38b778e334188f1b7d0",
+      "bytes": 1618
+    },
+    {
+      "path": "native/vcrender/build.py",
+      "origin": "export-generated: native/vcrender/build.py",
+      "original_sha256": null,
+      "export_sha256": "b4a8ae964a66a1e4825a689db22e5efb50f4ae25c6db4086dbc90a0cc775e4ea",
+      "bytes": 4191
+    },
+    {
+      "path": "native/vcrender/defaults/VCRender.ini",
+      "origin": "steps/264-vcrender-physical-pool/src/VCRender.ini",
+      "original_sha256": "d67683ad4872958ad39c1d6dbe77adc8930cb370c20f97d6dd049ec967982c9c",
+      "export_sha256": "d67683ad4872958ad39c1d6dbe77adc8930cb370c20f97d6dd049ec967982c9c",
+      "bytes": 3251
+    },
+    {
+      "path": "native/vcrender/defaults/dxvk.conf",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/package/dxvk.conf",
+      "original_sha256": "6c1de84974ffba7df6a9cf7476bf08907f2b91865a2f6a6bd3ee2edb64ebbeff",
+      "export_sha256": "6c1de84974ffba7df6a9cf7476bf08907f2b91865a2f6a6bd3ee2edb64ebbeff",
+      "bytes": 239
+    },
+    {
+      "path": "native/vcrender/defaults/global.ini",
+      "origin": "steps/256-vcrender-64bit-renderer/built/game/plugins/global.ini",
+      "original_sha256": "23131273ab91fb85bb3f1b67c86a90efda5e0d93cd161a8febc5ddeec7279a3a",
+      "export_sha256": "23131273ab91fb85bb3f1b67c86a90efda5e0d93cd161a8febc5ddeec7279a3a",
+      "bytes": 325
+    },
+    {
+      "path": "native/vcrender/src/client/vcr_budget.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/client/vcr_budget.cpp",
+      "original_sha256": "490bc827ae4bab369f62f24ca217401427cf74cdd0681719472d166b55f28555",
+      "export_sha256": "490bc827ae4bab369f62f24ca217401427cf74cdd0681719472d166b55f28555",
+      "bytes": 10617
+    },
+    {
+      "path": "native/vcrender/src/client/vcr_channel.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/client/vcr_channel.cpp",
+      "original_sha256": "d550268ab71c8bb5644c9536a9c2b81e24ae014f38d276682375eab3f21ba1c9",
+      "export_sha256": "d550268ab71c8bb5644c9536a9c2b81e24ae014f38d276682375eab3f21ba1c9",
+      "bytes": 23521
+    },
+    {
+      "path": "native/vcrender/src/client/vcr_client.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/client/vcr_client.h",
+      "original_sha256": "f8b940586638c4b4fce94902c13a48fd3feaa11582b93bf8e5e8d25cdbb6ca4e",
+      "export_sha256": "f8b940586638c4b4fce94902c13a48fd3feaa11582b93bf8e5e8d25cdbb6ca4e",
+      "bytes": 39738
+    },
+    {
+      "path": "native/vcrender/src/client/vcr_d3d9.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/client/vcr_d3d9.cpp",
+      "original_sha256": "a718ad5303fa31abfe27f404134fb1333f9821061f36a43d3735954903e41c63",
+      "export_sha256": "a718ad5303fa31abfe27f404134fb1333f9821061f36a43d3735954903e41c63",
+      "bytes": 7934
+    },
+    {
+      "path": "native/vcrender/src/client/vcr_device.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/client/vcr_device.cpp",
+      "original_sha256": "3761d3fea7eb60ce6d7b6abd4d12b72f60d4f9ab5604a1333db2308e1a93eef3",
+      "export_sha256": "3761d3fea7eb60ce6d7b6abd4d12b72f60d4f9ab5604a1333db2308e1a93eef3",
+      "bytes": 77722
+    },
+    {
+      "path": "native/vcrender/src/client/vcr_dxgi.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/client/vcr_dxgi.cpp",
+      "original_sha256": "fdb2f3c2d6abe797eb317bbab74dc18bc27f7b851117ebc9930e4ff16f0f3894",
+      "export_sha256": "fdb2f3c2d6abe797eb317bbab74dc18bc27f7b851117ebc9930e4ff16f0f3894",
+      "bytes": 15106
+    },
+    {
+      "path": "native/vcrender/src/client/vcr_interop.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/client/vcr_interop.cpp",
+      "original_sha256": "52e5551d62a3fdfa9a449aed7f5feac7d11ec325fad4d1fd0997af1bf752abfe",
+      "export_sha256": "52e5551d62a3fdfa9a449aed7f5feac7d11ec325fad4d1fd0997af1bf752abfe",
+      "bytes": 34754
+    },
+    {
+      "path": "native/vcrender/src/client/vcr_physpool.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/client/vcr_physpool.cpp",
+      "original_sha256": "f440ea65fd360d07150248ca24222455ec2ee02ab638b66298ff26889faa95a4",
+      "export_sha256": "f440ea65fd360d07150248ca24222455ec2ee02ab638b66298ff26889faa95a4",
+      "bytes": 13205
+    },
+    {
+      "path": "native/vcrender/src/client/vcr_present.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/client/vcr_present.cpp",
+      "original_sha256": "dedf381f251094e030ec53b0d331b0dc375417f1b9816518195d9fe9670d5f32",
+      "export_sha256": "dedf381f251094e030ec53b0d331b0dc375417f1b9816518195d9fe9670d5f32",
+      "bytes": 11610
+    },
+    {
+      "path": "native/vcrender/src/client/vcr_resources.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/client/vcr_resources.cpp",
+      "original_sha256": "d15af78333a0178ab87dd45f5534a0979b08c7629ae7734c1ee2477b04f9b903",
+      "export_sha256": "d15af78333a0178ab87dd45f5534a0979b08c7629ae7734c1ee2477b04f9b903",
+      "bytes": 38310
+    },
+    {
+      "path": "native/vcrender/src/client/vcr_streamdiag.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/client/vcr_streamdiag.cpp",
+      "original_sha256": "0c1b8440fcccf7d7002c2b3f4689871fe6d34027e65d1986daf7819e067cd6b7",
+      "export_sha256": "0c1b8440fcccf7d7002c2b3f4689871fe6d34027e65d1986daf7819e067cd6b7",
+      "bytes": 8009
+    },
+    {
+      "path": "native/vcrender/src/client/vcr_util.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/client/vcr_util.cpp",
+      "original_sha256": "27131062739cf913496ff7dc3934b3e71cb0752b733155e63223845633750a12",
+      "export_sha256": "27131062739cf913496ff7dc3934b3e71cb0752b733155e63223845633750a12",
+      "bytes": 8483
+    },
+    {
+      "path": "native/vcrender/src/client/vcr_window.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/client/vcr_window.cpp",
+      "original_sha256": "27cee4a73ff7b09e8200c56168da9074ee7797fe610e807ff228a913829835d7",
+      "export_sha256": "27cee4a73ff7b09e8200c56168da9074ee7797fe610e807ff228a913829835d7",
+      "bytes": 14434
+    },
+    {
+      "path": "native/vcrender/src/server/vcr_host.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/server/vcr_host.cpp",
+      "original_sha256": "fe1b541236a5c5dd6a24c08f865a7b1d0c1b1ea788722caf46dd2babe9786576",
+      "export_sha256": "fe1b541236a5c5dd6a24c08f865a7b1d0c1b1ea788722caf46dd2babe9786576",
+      "bytes": 64754
+    },
+    {
+      "path": "native/vcrender/src/server/vcr_host_vk.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/server/vcr_host_vk.cpp",
+      "original_sha256": "f2254f01af397a16cdf0e9283a5fc7859ffeb22aa6e3c88910ea40ebe978de96",
+      "export_sha256": "f2254f01af397a16cdf0e9283a5fc7859ffeb22aa6e3c88910ea40ebe978de96",
+      "bytes": 25440
+    },
+    {
+      "path": "native/vcrender/src/server/vcr_host_vk.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/server/vcr_host_vk.h",
+      "original_sha256": "c5973b683ea9c0dbc4b3e53be8f34c1438e216a402b399e8398aeaaf6db514bf",
+      "export_sha256": "c5973b683ea9c0dbc4b3e53be8f34c1438e216a402b399e8398aeaaf6db514bf",
+      "bytes": 1150
+    },
+    {
+      "path": "native/vcrender/src/shared/vcr_maps.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/shared/vcr_maps.h",
+      "original_sha256": "3d2fdf84d87507769d8a39e13ecddf697a363fa9f64f1a2f033743c83945d88f",
+      "export_sha256": "3d2fdf84d87507769d8a39e13ecddf697a363fa9f64f1a2f033743c83945d88f",
+      "bytes": 4082
+    },
+    {
+      "path": "native/vcrender/src/shared/vcr_proto.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/shared/vcr_proto.h",
+      "original_sha256": "97d895c3672595c1a88702ba101d4d46997f95fe90b48bd909860ee39a28c768",
+      "export_sha256": "97d895c3672595c1a88702ba101d4d46997f95fe90b48bd909860ee39a28c768",
+      "bytes": 10409
+    },
+    {
+      "path": "native/vcrender/src/shared/vcr_vk_wire.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/shared/vcr_vk_wire.h",
+      "original_sha256": "154336a179e147ae40489ed5e76d6ed9b30ff4597f8d5594bbc9a2be4d8fba97",
+      "export_sha256": "154336a179e147ae40489ed5e76d6ed9b30ff4597f8d5594bbc9a2be4d8fba97",
+      "bytes": 3507
+    },
+    {
+      "path": "native/vcrender/src/third_party/LICENSE-DXVK.txt",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/LICENSE-DXVK.txt",
+      "original_sha256": "a5cb1a6ded7d2d7e92d550ba28edd21be2d1d4044662b399887351023e30ce64",
+      "export_sha256": "a5cb1a6ded7d2d7e92d550ba28edd21be2d1d4044662b399887351023e30ce64",
+      "bytes": 1074
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/LICENSE-Khronos-Vulkan-Headers.txt",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/LICENSE-Khronos-Vulkan-Headers.txt",
+      "original_sha256": "c46f1a15086ef1f94856e3606b2297742d738471c055a72a42c8356ae0409c9e",
+      "export_sha256": "c46f1a15086ef1f94856e3606b2297742d738471c055a72a42c8356ae0409c9e",
+      "bytes": 1422
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/LICENSE-Vulkan-Headers.md",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/LICENSE-Vulkan-Headers.md",
+      "original_sha256": "a2d4407962c909f84807774cbfe9fad05a1ebe972472c08ed5ad43d482afd288",
+      "export_sha256": "a2d4407962c909f84807774cbfe9fad05a1ebe972472c08ed5ad43d482afd288",
+      "bytes": 514
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/VERSION.txt",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/VERSION.txt",
+      "original_sha256": "c84f4d4ba4bb6ba40a843c8f59ea5b9d4b1994f6c146d8c144b839c952f67599",
+      "export_sha256": "c84f4d4ba4bb6ba40a843c8f59ea5b9d4b1994f6c146d8c144b839c952f67599",
+      "bytes": 120
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vk_video/vulkan_video_codec_av1std.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vk_video/vulkan_video_codec_av1std.h",
+      "original_sha256": "110d61f53214322f4d0aec8f77a7cec40c1517829b125c0d01d6fc9fdf0fdd83",
+      "export_sha256": "110d61f53214322f4d0aec8f77a7cec40c1517829b125c0d01d6fc9fdf0fdd83",
+      "bytes": 17088
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vk_video/vulkan_video_codec_av1std_decode.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vk_video/vulkan_video_codec_av1std_decode.h",
+      "original_sha256": "fa2e85e9669f1666badfab9211de9dbe279bc2adc3ed095635313712ced9219d",
+      "export_sha256": "fa2e85e9669f1666badfab9211de9dbe279bc2adc3ed095635313712ced9219d",
+      "bytes": 4366
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vk_video/vulkan_video_codec_av1std_encode.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vk_video/vulkan_video_codec_av1std_encode.h",
+      "original_sha256": "5bb49198ac7a63c810115c62c9ab44b2e60f20c60869a68a813730f30777db5f",
+      "export_sha256": "5bb49198ac7a63c810115c62c9ab44b2e60f20c60869a68a813730f30777db5f",
+      "bytes": 6129
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vk_video/vulkan_video_codec_h264std.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vk_video/vulkan_video_codec_h264std.h",
+      "original_sha256": "84d669c6010443e268f940e57a26e3ff0c4050c9c434b79efaaa1bfa3d3d203c",
+      "export_sha256": "84d669c6010443e268f940e57a26e3ff0c4050c9c434b79efaaa1bfa3d3d203c",
+      "bytes": 14275
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vk_video/vulkan_video_codec_h264std_decode.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vk_video/vulkan_video_codec_h264std_decode.h",
+      "original_sha256": "fbee59666126c323b2bacc0b4b2c6fd1d1a28ced72e4c6791026a730f05bc129",
+      "export_sha256": "fbee59666126c323b2bacc0b4b2c6fd1d1a28ced72e4c6791026a730f05bc129",
+      "bytes": 2807
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vk_video/vulkan_video_codec_h264std_encode.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vk_video/vulkan_video_codec_h264std_encode.h",
+      "original_sha256": "cd7e050bc0062d791a5e4e3cc97efdd4b9b3838214168785743fb48ebd5a041a",
+      "export_sha256": "cd7e050bc0062d791a5e4e3cc97efdd4b9b3838214168785743fb48ebd5a041a",
+      "bytes": 7032
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vk_video/vulkan_video_codec_h265std.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vk_video/vulkan_video_codec_h265std.h",
+      "original_sha256": "d3ae5c05dca0765d950e53aa1aafc9526be8be6be72b373803c70c94086665a1",
+      "export_sha256": "d3ae5c05dca0765d950e53aa1aafc9526be8be6be72b373803c70c94086665a1",
+      "bytes": 23892
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vk_video/vulkan_video_codec_h265std_decode.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vk_video/vulkan_video_codec_h265std_decode.h",
+      "original_sha256": "4ce92dc8ff11f8f9652b01713992f1235b6c88694a658b8fe8777ac7c79fb5df",
+      "export_sha256": "4ce92dc8ff11f8f9652b01713992f1235b6c88694a658b8fe8777ac7c79fb5df",
+      "bytes": 2503
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vk_video/vulkan_video_codec_h265std_encode.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vk_video/vulkan_video_codec_h265std_encode.h",
+      "original_sha256": "182114ca162aae8b3c1ed3c9693852126b2dda009712e387a1ab6f475ab8058e",
+      "export_sha256": "182114ca162aae8b3c1ed3c9693852126b2dda009712e387a1ab6f475ab8058e",
+      "bytes": 7626
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vk_video/vulkan_video_codec_vp9std.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vk_video/vulkan_video_codec_vp9std.h",
+      "original_sha256": "b4a35526ddf93652c6244e26a71f6d2d9536c0bd5aebde35ed777d1cd8a64978",
+      "export_sha256": "b4a35526ddf93652c6244e26a71f6d2d9536c0bd5aebde35ed777d1cd8a64978",
+      "bytes": 5542
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vk_video/vulkan_video_codec_vp9std_decode.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vk_video/vulkan_video_codec_vp9std_decode.h",
+      "original_sha256": "ac1ac9e1494a26855e327001fa6ffa26020eb5bf852dab1ea3e89939ced3d5ee",
+      "export_sha256": "ac1ac9e1494a26855e327001fa6ffa26020eb5bf852dab1ea3e89939ced3d5ee",
+      "bytes": 2446
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vk_video/vulkan_video_codecs_common.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vk_video/vulkan_video_codecs_common.h",
+      "original_sha256": "cf775e4d74384e3d4ed5657fb7d87faa4a7eaf6fee21f4f4113640565494a924",
+      "export_sha256": "cf775e4d74384e3d4ed5657fb7d87faa4a7eaf6fee21f4f4113640565494a924",
+      "bytes": 703
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vk_icd.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vk_icd.h",
+      "original_sha256": "46a46bf9bb5176becff061262f1093c1caa9ef33a2ec6f3432e8b1da1ce2c436",
+      "export_sha256": "46a46bf9bb5176becff061262f1093c1caa9ef33a2ec6f3432e8b1da1ce2c436",
+      "bytes": 8472
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vk_layer.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vk_layer.h",
+      "original_sha256": "5ad88b2b4108855d6c53d81da654a5663953e2102fb1f6e3ba47b2d7f8c95ade",
+      "export_sha256": "5ad88b2b4108855d6c53d81da654a5663953e2102fb1f6e3ba47b2d7f8c95ade",
+      "bytes": 7373
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vk_platform.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vk_platform.h",
+      "original_sha256": "1fc08c530b46e587295aafb19493eb9d434e963f7e48d3a323adbee06f59976c",
+      "export_sha256": "1fc08c530b46e587295aafb19493eb9d434e963f7e48d3a323adbee06f59976c",
+      "bytes": 2915
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan.h",
+      "original_sha256": "2d1a6f00bfdcddbe1c68bf5f574a0fc4cf95c4be9eae683123b6db8af9d1a1de",
+      "export_sha256": "2d1a6f00bfdcddbe1c68bf5f574a0fc4cf95c4be9eae683123b6db8af9d1a1de",
+      "bytes": 1722
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_android.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_android.h",
+      "original_sha256": "4f5afd4b0b31b655b7e6a27d9954ab232f0f3cd8bfa6a340335ba939d20648c7",
+      "export_sha256": "4f5afd4b0b31b655b7e6a27d9954ab232f0f3cd8bfa6a340335ba939d20648c7",
+      "bytes": 6496
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_beta.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_beta.h",
+      "original_sha256": "cbee78bfb43fb7faac49e1da0d8b7c46132036ea6c021469650f2e57888da505",
+      "export_sha256": "cbee78bfb43fb7faac49e1da0d8b7c46132036ea6c021469650f2e57888da505",
+      "bytes": 17794
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_core.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_core.h",
+      "original_sha256": "1b456a20b98605a03a5c880c5f2495f1a59f1eb17ba7fbc4b83c15e15a92eb8c",
+      "export_sha256": "1b456a20b98605a03a5c880c5f2495f1a59f1eb17ba7fbc4b83c15e15a92eb8c",
+      "bytes": 1382559
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_directfb.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_directfb.h",
+      "original_sha256": "e68438c77132d629ce6c05eae7f21ff8818a6b743b2adcdeaee2c1669f7bc4e9",
+      "export_sha256": "e68438c77132d629ce6c05eae7f21ff8818a6b743b2adcdeaee2c1669f7bc4e9",
+      "bytes": 2018
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_fuchsia.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_fuchsia.h",
+      "original_sha256": "46915b5d3390cf9d6c46baa13fa6792b7f8c172187d00662d7843cd0bba2b8f0",
+      "export_sha256": "46915b5d3390cf9d6c46baa13fa6792b7f8c172187d00662d7843cd0bba2b8f0",
+      "bytes": 13189
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_ggp.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_ggp.h",
+      "original_sha256": "be82c59a2459d70a6ceaab715d7c3470a61cc791131babb7e70f66906bffb23a",
+      "export_sha256": "be82c59a2459d70a6ceaab715d7c3470a61cc791131babb7e70f66906bffb23a",
+      "bytes": 2008
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_ios.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_ios.h",
+      "original_sha256": "cd5a5f1b33ca5904d08df8a90ac41c8be5ac604d30e023b8036f19430f56c151",
+      "export_sha256": "cd5a5f1b33ca5904d08df8a90ac41c8be5ac604d30e023b8036f19430f56c151",
+      "bytes": 1409
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_macos.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_macos.h",
+      "original_sha256": "d7ff1957e199b1c2e128c148d5e66637e5e49dae35ec5a97db87fca5e02d4c04",
+      "export_sha256": "d7ff1957e199b1c2e128c148d5e66637e5e49dae35ec5a97db87fca5e02d4c04",
+      "bytes": 1441
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_metal.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_metal.h",
+      "original_sha256": "ae36aacf5139410c9608e702e56d42770a5ba264f0e9dfc9ef52605bda4be47f",
+      "export_sha256": "ae36aacf5139410c9608e702e56d42770a5ba264f0e9dfc9ef52605bda4be47f",
+      "bytes": 8317
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_ohos.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_ohos.h",
+      "original_sha256": "005aaa229cf9961e3edc09a0f47c9c3593cbc57ca15a9cacbb521bef27455b7e",
+      "export_sha256": "005aaa229cf9961e3edc09a0f47c9c3593cbc57ca15a9cacbb521bef27455b7e",
+      "bytes": 4233
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_screen.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_screen.h",
+      "original_sha256": "06563ce3cdbda16f74976fabf42132d514625f53dec7974fa9330972990edfb7",
+      "export_sha256": "06563ce3cdbda16f74976fabf42132d514625f53dec7974fa9330972990edfb7",
+      "bytes": 4314
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_ubm.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_ubm.h",
+      "original_sha256": "aae80e021e1122a157923177676dc2a9447bd9bd970e3d80cec043f981d26605",
+      "export_sha256": "aae80e021e1122a157923177676dc2a9447bd9bd970e3d80cec043f981d26605",
+      "bytes": 1937
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_vi.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_vi.h",
+      "original_sha256": "2adb9ae5b758783548e79398f3ecad65af1e536bbeb701b3628ede54467999ec",
+      "export_sha256": "2adb9ae5b758783548e79398f3ecad65af1e536bbeb701b3628ede54467999ec",
+      "bytes": 1382
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_wayland.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_wayland.h",
+      "original_sha256": "f9b46a0805eeea61b42c2a52d783cf65690ad330c1869ac422c4a2b81adcebaf",
+      "export_sha256": "f9b46a0805eeea61b42c2a52d783cf65690ad330c1869ac422c4a2b81adcebaf",
+      "bytes": 2018
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_win32.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_win32.h",
+      "original_sha256": "9dc4d69efa98e5d2b94458c60861b963ab5fe18b7af6be20ec7e6c020086c1d5",
+      "export_sha256": "9dc4d69efa98e5d2b94458c60861b963ab5fe18b7af6be20ec7e6c020086c1d5",
+      "bytes": 16136
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_xcb.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_xcb.h",
+      "original_sha256": "ba4bfcef79ec4479aa6309d206cb075fbcfec1c9b625ffae39531a49904a08ef",
+      "export_sha256": "ba4bfcef79ec4479aa6309d206cb075fbcfec1c9b625ffae39531a49904a08ef",
+      "bytes": 2033
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_xlib.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_xlib.h",
+      "original_sha256": "cdd0677b5a5130994630c8fa21f6cdc2655cf5310bc416f332c5b8d386eed06f",
+      "export_sha256": "cdd0677b5a5130994630c8fa21f6cdc2655cf5310bc416f332c5b8d386eed06f",
+      "bytes": 2014
+    },
+    {
+      "path": "native/vcrender/src/third_party/vulkan/vulkan/vulkan_xlib_xrandr.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/third_party/vulkan/vulkan/vulkan_xlib_xrandr.h",
+      "original_sha256": "d2131832eecbd4e53cac6cf67ecae05b655fbe0fb8543440d7b285b3495d2ae7",
+      "export_sha256": "d2131832eecbd4e53cac6cf67ecae05b655fbe0fb8543440d7b285b3495d2ae7",
+      "bytes": 1554
+    },
+    {
+      "path": "native/vcrender/src/upscale/LICENSE-DLSS-IV.txt",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/upscale/LICENSE-DLSS-IV.txt",
+      "original_sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "export_sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "bytes": 11560
+    },
+    {
+      "path": "native/vcrender/src/upscale/LICENSE-DLSS5-Feeder.txt",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/upscale/LICENSE-DLSS5-Feeder.txt",
+      "original_sha256": "1ce240e402901fb81eb82a60a6bafd2fb913cd5746860b0a4ec52a5acb49ced7",
+      "export_sha256": "1ce240e402901fb81eb82a60a6bafd2fb913cd5746860b0a4ec52a5acb49ced7",
+      "bytes": 1210
+    },
+    {
+      "path": "native/vcrender/src/upscale/NOTICE-DLSS-IV.txt",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/upscale/NOTICE-DLSS-IV.txt",
+      "original_sha256": "dc141a9b9e37b9aed61b1591ac03c51db35262ba11aad43419daa72bc3893e58",
+      "export_sha256": "dc141a9b9e37b9aed61b1591ac03c51db35262ba11aad43419daa72bc3893e58",
+      "bytes": 3752
+    },
+    {
+      "path": "native/vcrender/src/upscale/dxvk_interop_min.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/upscale/dxvk_interop_min.h",
+      "original_sha256": "93f077bb55ef7443090ec27a1b61e884d15375638953f3f93c0de2e5821d1be3",
+      "export_sha256": "93f077bb55ef7443090ec27a1b61e884d15375638953f3f93c0de2e5821d1be3",
+      "bytes": 6145
+    },
+    {
+      "path": "native/vcrender/src/upscale/feed_ipc.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/upscale/feed_ipc.h",
+      "original_sha256": "db1f9d62d1ad392016a9b083ebfa474e2a702f2f5f73665b794799b44540a260",
+      "export_sha256": "db1f9d62d1ad392016a9b083ebfa474e2a702f2f5f73665b794799b44540a260",
+      "bytes": 21577
+    },
+    {
+      "path": "native/vcrender/src/upscale/feed_vk.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/upscale/feed_vk.h",
+      "original_sha256": "7c74bddcabbe09c61287ad9235c28b4880b0a53c488049ee468dd3cad9a6ae3b",
+      "export_sha256": "7c74bddcabbe09c61287ad9235c28b4880b0a53c488049ee468dd3cad9a6ae3b",
+      "bytes": 22995
+    },
+    {
+      "path": "native/vcrender/src/upscale/vc_upscale_server.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/upscale/vc_upscale_server.cpp",
+      "original_sha256": "2c4350eede5e22ca37fa2214d8b2567f4a8fa5c55060ed65b2201f37425d723c",
+      "export_sha256": "2c4350eede5e22ca37fa2214d8b2567f4a8fa5c55060ed65b2201f37425d723c",
+      "bytes": 41557
+    },
+    {
+      "path": "native/vcrender/src/upscale/vc_upscale_server.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/upscale/vc_upscale_server.h",
+      "original_sha256": "355d2a4d400308351a2e4a5d90f835f0618d510f8389049895251f4a2db83459",
+      "export_sha256": "355d2a4d400308351a2e4a5d90f835f0618d510f8389049895251f4a2db83459",
+      "bytes": 1163
+    },
+    {
+      "path": "native/vcrender/src/upscale/vc_upscale_wire.h",
+      "origin": "research/codex-review-fixes-2026-11-13/renderer/src/upscale/vc_upscale_wire.h",
+      "original_sha256": "3452e32f8aa20bb5e41f15c57085f85d6da8464cb3731595bf16ca9c9adf3b98",
+      "export_sha256": "3452e32f8aa20bb5e41f15c57085f85d6da8464cb3731595bf16ca9c9adf3b98",
+      "bytes": 5075
+    },
+    {
+      "path": "native/vcrender/tests/REVIEW-TESTS.md",
+      "origin": "export-generated: native/vcrender/tests/REVIEW-TESTS.md",
+      "original_sha256": null,
+      "export_sha256": "b0d0c463781d3b8849991ba6ae7b39050d6551a7f05a15be674d3ce3ac67f4a8",
+      "bytes": 1938
+    },
+    {
+      "path": "native/vcrender/tests/borderless_regression.cpp",
+      "origin": "research/codex-launch-portability-2026-11-13/focus-probe/borderless_regression.cpp",
+      "original_sha256": "cf5815df4ae382439733057560a4ae574e434871192cc6c9ca7b308007537838",
+      "export_sha256": "cf5815df4ae382439733057560a4ae574e434871192cc6c9ca7b308007537838",
+      "bytes": 8022
+    },
+    {
+      "path": "native/vcrender/tests/budget_test.cpp",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/tests/budget_test.cpp",
+      "original_sha256": "d28bdf23b50328c9ce9950346853a4f90e69ca093b090b9df097d133823215c7",
+      "export_sha256": "d28bdf23b50328c9ce9950346853a4f90e69ca093b090b9df097d133823215c7",
+      "bytes": 7392
+    },
+    {
+      "path": "native/vcrender/tests/capture_slot.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/capture_slot.cpp",
+      "original_sha256": "cf368d7e15192bea0a5c050259236efe72847c1fd606b795ed4b3278cfac766e",
+      "export_sha256": "02a7dc6a48e87e259d47247b93564da3fc8d0f65db53d1805c50069064d841db",
+      "bytes": 2295
+    },
+    {
+      "path": "native/vcrender/tests/dxgi_test.cpp",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/tests/dxgi_test.cpp",
+      "original_sha256": "aec536225782816101d752865bd0266d8186fc48325e66e27c1329ec9d32109d",
+      "export_sha256": "aec536225782816101d752865bd0266d8186fc48325e66e27c1329ec9d32109d",
+      "bytes": 3734
+    },
+    {
+      "path": "native/vcrender/tests/ex_surface.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/ex_surface.cpp",
+      "original_sha256": "49e7a26fd91baef760a9adf9cffd000cbd8d059c7558b05283ef3e3b9d366b6d",
+      "export_sha256": "49e7a26fd91baef760a9adf9cffd000cbd8d059c7558b05283ef3e3b9d366b6d",
+      "bytes": 1461
+    },
+    {
+      "path": "native/vcrender/tests/latency_test.cpp",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/tests/latency_test.cpp",
+      "original_sha256": "0231563b0a65f1f39f2b036e969db8034bbd567a3016f5606582e2dfc8f0905c",
+      "export_sha256": "0231563b0a65f1f39f2b036e969db8034bbd567a3016f5606582e2dfc8f0905c",
+      "bytes": 3144
+    },
+    {
+      "path": "native/vcrender/tests/mapping_retry.cpp",
+      "origin": "research/codex-ultra-review-268-2026-11-13/map-probe.cpp",
+      "original_sha256": "624fd1e0cce405beb3eb0460e96018c7980f1634a1f47fd5ea0053849089950f",
+      "export_sha256": "624fd1e0cce405beb3eb0460e96018c7980f1634a1f47fd5ea0053849089950f",
+      "bytes": 5665
+    },
+    {
+      "path": "native/vcrender/tests/phase3_test.cpp",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/tests/phase3_test.cpp",
+      "original_sha256": "75548c20658335b32aa02b1b83f9aee3058629fa6ff05e975dc3f96808307a1a",
+      "export_sha256": "75548c20658335b32aa02b1b83f9aee3058629fa6ff05e975dc3f96808307a1a",
+      "bytes": 27148
+    },
+    {
+      "path": "native/vcrender/tests/physpool_test.cpp",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/tests/physpool_test.cpp",
+      "original_sha256": "381d9651b4dbfce8380992a9c536d8f2eb12c81514c2fdb8ce5da1c895aafe20",
+      "export_sha256": "381d9651b4dbfce8380992a9c536d8f2eb12c81514c2fdb8ce5da1c895aafe20",
+      "bytes": 18372
+    },
+    {
+      "path": "native/vcrender/tests/present_soak.cpp",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/tests/present_soak.cpp",
+      "original_sha256": "d0919ccbec24cbdd1ac23e2b37ca01709cf36757a5a38506bcf7a422d1341dd3",
+      "export_sha256": "d0919ccbec24cbdd1ac23e2b37ca01709cf36757a5a38506bcf7a422d1341dd3",
+      "bytes": 2330
+    },
+    {
+      "path": "native/vcrender/tests/proxy_host.cpp",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/tests/proxy_host.cpp",
+      "original_sha256": "bffa8e59a28bce04ce284373250ec8382df9b5ff56eb936648b0054bfac814ba",
+      "export_sha256": "bffa8e59a28bce04ce284373250ec8382df9b5ff56eb936648b0054bfac814ba",
+      "bytes": 4750
+    },
+    {
+      "path": "native/vcrender/tests/quarantine.cpp",
+      "origin": "research/codex-review-fixes-2026-11-13/quarantine-probe.cpp",
+      "original_sha256": "c3e14c82cf62dc846b2eadc15e0d1df66199603ccd2cfc4269d5cc6f5a02d509",
+      "export_sha256": "70ef21a393d1a2d057e288ce4102791cb4f37d89957266d3f63ff55c271ec94d",
+      "bytes": 13138
+    },
+    {
+      "path": "native/vcrender/tests/reset_surface.cpp",
+      "origin": "research/codex-ultra-review-268-2026-11-13/reset_surface_probe.cpp",
+      "original_sha256": "8c6144b267cbe0d9d8dc854daacc0bec814e867b33847d6c52667e98f00c5c37",
+      "export_sha256": "8c6144b267cbe0d9d8dc854daacc0bec814e867b33847d6c52667e98f00c5c37",
+      "bytes": 2687
+    },
+    {
+      "path": "native/vcrender/tests/retained_backbuffer.cpp",
+      "origin": "research/codex-ultra-review-268-2026-11-13/retained_backbuffer.cpp",
+      "original_sha256": "62d44c3edaa278a11f51a8ec6920783ec460067c45304014dbed08a4e9e2a44e",
+      "export_sha256": "62d44c3edaa278a11f51a8ec6920783ec460067c45304014dbed08a4e9e2a44e",
+      "bytes": 2628
+    },
+    {
+      "path": "native/vcrender/tests/retained_swapchain.cpp",
+      "origin": "research/codex-launch-portability-2026-11-13/swapchain-probe/swapchain_probe.cpp",
+      "original_sha256": "02e65e035fa60f1f10f44d6eeeee95e6861b75aa82d418b1ae408d6e171958d1",
+      "export_sha256": "02e65e035fa60f1f10f44d6eeeee95e6861b75aa82d418b1ae408d6e171958d1",
+      "bytes": 5773
+    },
+    {
+      "path": "native/vcrender/tests/startup_handoff.cpp",
+      "origin": "research/codex-launch-portability-2026-11-13/focus-probe/engine_minimize_probe.cpp",
+      "original_sha256": "d9702393bb22a5c65f85f080c3e8a0544ac762df397753fcc79e6a0355c331d5",
+      "export_sha256": "d9702393bb22a5c65f85f080c3e8a0544ac762df397753fcc79e6a0355c331d5",
+      "bytes": 6638
+    },
+    {
+      "path": "native/vcrender/tests/streamdiag_test.cpp",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/tests/streamdiag_test.cpp",
+      "original_sha256": "41118447355c96c3f73ca0b44a02d4db3a9658e958abe64e4e67d6acdf995606",
+      "export_sha256": "41118447355c96c3f73ca0b44a02d4db3a9658e958abe64e4e67d6acdf995606",
+      "bytes": 8761
+    },
+    {
+      "path": "native/vcrender/tests/vcr_perf.cpp",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/tests/vcr_perf.cpp",
+      "original_sha256": "feece6a41b0b3aab04c5e1840e17256898517046c79b74072246c5675a626ffe",
+      "export_sha256": "feece6a41b0b3aab04c5e1840e17256898517046c79b74072246c5675a626ffe",
+      "bytes": 5632
+    },
+    {
+      "path": "native/vcrender/tests/vcr_test.cpp",
+      "origin": "research/codex-completeness-audit-2026-11-13/renderer-fix/tests/vcr_test.cpp",
+      "original_sha256": "a7e6b299fbc7695e8bdbccff62245fb1d8422a921cfaf1aab6da3904bb6344f0",
+      "export_sha256": "a7e6b299fbc7695e8bdbccff62245fb1d8422a921cfaf1aab6da3904bb6344f0",
+      "bytes": 27482
+    },
+    {
       "path": "native/vcsh_loader/AGPL-3.0-reference.txt",
       "origin": "research/codex-dualsense-bt-audio-2026-11-03/LinuxAudio4Dualsense5/LICENSE",
       "original_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
@@ -2572,8 +5596,8 @@
       "path": "scripts/README.md",
       "origin": "export-generated: scripts/README.md",
       "original_sha256": null,
-      "export_sha256": "95514f2fd0cbf79ba258c14d79c033912e840977a59601f918688584198ce8e6",
-      "bytes": 6649
+      "export_sha256": "a939bbc5e7edc2d3eea4af56818ed3eada0c81951937bd2b4d36c38ede4fec97",
+      "bytes": 6653
     },
     {
       "path": "scripts/ROCK.scasm",
@@ -2712,8 +5736,8 @@
       "path": "scripts/manifest.json",
       "origin": "export-generated: scripts/manifest.json",
       "original_sha256": null,
-      "export_sha256": "bb207004cda83c5e3ca22f4b8e412c8bd3344f154c701c0315531ebfb5d57858",
-      "bytes": 1480154
+      "export_sha256": "da9e9ec0e49741223f89f206774763861d2cf7df310bfd64874893609dbf368b",
+      "bytes": 1480162
     },
     {
       "path": "scripts/map_bounds.scasm",
@@ -3232,7 +6256,10 @@
     "Mixed script builds require the current release resource baseline; preserve4200 noncanonical allocations and assemble96 covered scripts.",
     "VCCore combines six component translation units behind the maintained dispatcher, linked in the project build order so outputs match the release bytes; optional legacy native outputs, including the superseded standalone VCMemory, remain available for development.",
     "Eight loader/IDE/station-limit text files and a portable model-order checker capture the245 save-numbering correction. Binary audio/model/texture assets and the complete asset-authoring pipeline are outside this code export.",
-    "Checkpoint 252 adds VCCutscene (248), the GPL-3.0 FusionFix ed3ace loading-screen backport with its upstream source and license (251), VCAPC (252) and the exact-input Mjolnir quality-check patch (249)."
+    "Checkpoint 252 adds VCCutscene (248), the GPL-3.0 FusionFix ed3ace loading-screen backport with its upstream source and license (251), VCAPC (252) and the exact-input Mjolnir quality-check patch (249).",
+    "Build 264 adds self-contained VCRender and paired DLSS-IV source with portable Zig0.15.2 builders; externally licensed SDK binaries and all compiled release/runtime assets remain excluded.",
+    "All 12 packaged INI/CFG/CONF defaults are copied from the frozen release; personal live settings are not exported. Existing 96 scripts, VCCore/ScriptHook and eight model/radio text files are unchanged since 254.",
+    "Build269 overlays the exact installed renderer source/protocol4 and portable builder preserving compiler flags/object order; review test includes are made relative. Existing scripts/legacy native sources and paired implementation inputs remain unchanged."
   ],
   "generated_files": "Documentation, build/verification wrappers, model-order contract and metadata/checksums are curated for this export; all published files except SHA256SUMS itself are covered by the checksum manifest."
 }

@@ -1,0 +1,31 @@
+// DLSS-IV.asi's version resource (2026-09-21). No CompanyName, by the owner's choice. The number is source\version.h's.
+#include <winver.h>
+#include "version.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION    DLSSIV_VER_MAJOR, DLSSIV_VER_MINOR, DLSSIV_VER_PATCH, DLSSIV_VER_REV
+ PRODUCTVERSION DLSSIV_VER_MAJOR, DLSSIV_VER_MINOR, DLSSIV_VER_PATCH, DLSSIV_VER_REV
+ FILEFLAGSMASK  VS_FFI_FILEFLAGSMASK
+ FILEFLAGS      0
+ FILEOS         VOS_NT_WINDOWS32
+ FILETYPE       VFT_DLL
+ FILESUBTYPE    VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription",  "DLSS-IV: DLSS and FSR for Grand Theft Auto IV"
+            VALUE "FileVersion",      DLSSIV_VER_STR
+            VALUE "InternalName",     "DLSS-IV"
+            VALUE "LegalCopyright",   "Apache License 2.0"
+            VALUE "OriginalFilename", "DLSS-IV.asi"
+            VALUE "ProductName",      "DLSS-IV"
+            VALUE "ProductVersion",   DLSSIV_VER_STR
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

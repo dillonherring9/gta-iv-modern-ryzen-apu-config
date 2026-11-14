@@ -1,0 +1,80 @@
+{
+  "schema": 1,
+  "release_checkpoint": 269,
+  "snapshot_date": "2026-11-13",
+  "scope": "Exact packaged runtime text defaults; not an installable standalone game or personal live settings.",
+  "files": [
+    {
+      "path": "DLSS-IV.cfg",
+      "bytes": 8570,
+      "sha256": "27d83df684dc6b6c821dc898a2df2f2761adee499791c896cfdb37a02e10246a",
+      "origin": "release/vcangce-269/release/DLSS-IV.cfg"
+    },
+    {
+      "path": "d3d9.cfg",
+      "bytes": 14,
+      "sha256": "e8b090ca6093b98ddc1eb48e2bc767d370809cdb505b073b51464c16047c23f9",
+      "origin": "release/vcangce-269/release/d3d9.cfg"
+    },
+    {
+      "path": "plugins/AudioMap.ini",
+      "bytes": 5979,
+      "sha256": "8aee0e309f048b9a1460ce205dff6e571a7e67adf68a155aebafdfc414c8290e",
+      "origin": "release/vcangce-269/release/plugins/AudioMap.ini"
+    },
+    {
+      "path": "plugins/GTAIV.EFLC.FusionFix.ini",
+      "bytes": 8949,
+      "sha256": "d9368f2c67383bb966fd84b340575403e2e20fd83a0d328ff45f2c4cf670ac72",
+      "origin": "release/vcangce-269/release/plugins/GTAIV.EFLC.FusionFix.ini"
+    },
+    {
+      "path": "plugins/GTAIV.XboxRainDroplets.ini",
+      "bytes": 184,
+      "sha256": "0845501cc6691cde740ba9102b0359bfe60ca9777e08ee1a096cc4a4aa5af5a6",
+      "origin": "release/vcangce-269/release/plugins/GTAIV.XboxRainDroplets.ini"
+    },
+    {
+      "path": "plugins/ProjectThunderCE.ini",
+      "bytes": 8849,
+      "sha256": "7bb784f77e7f79d15a1695ac1eb94f3bfc8110cc4497c753714996cc7b066bb5",
+      "origin": "release/vcangce-269/release/plugins/ProjectThunderCE.ini"
+    },
+    {
+      "path": "plugins/VCCutscene.ini",
+      "bytes": 178,
+      "sha256": "905dc60b6257b0830b1b15c8edf19d6096df56de365b74468fbd8428ea73238c",
+      "origin": "release/vcangce-269/release/plugins/VCCutscene.ini"
+    },
+    {
+      "path": "plugins/VCMusic.ini",
+      "bytes": 854,
+      "sha256": "8d1b68b4b945b9d9f05dd5e5db11ac073dbb36861e0d5ad9e615c510713840e8",
+      "origin": "release/vcangce-269/release/plugins/VCMusic.ini"
+    },
+    {
+      "path": "plugins/VCRender/dxvk.conf",
+      "bytes": 239,
+      "sha256": "6c1de84974ffba7df6a9cf7476bf08907f2b91865a2f6a6bd3ee2edb64ebbeff",
+      "origin": "release/vcangce-269/release/plugins/VCRender/dxvk.conf"
+    },
+    {
+      "path": "plugins/VCRender.ini",
+      "bytes": 3251,
+      "sha256": "d67683ad4872958ad39c1d6dbe77adc8930cb370c20f97d6dd049ec967982c9c",
+      "origin": "release/vcangce-269/release/plugins/VCRender.ini"
+    },
+    {
+      "path": "plugins/VCScriptHook.ini",
+      "bytes": 2068,
+      "sha256": "78df286076f128633656825e13d6161a5d6565616ebe0edfbbaae31c099f0aec",
+      "origin": "release/vcangce-269/release/plugins/VCScriptHook.ini"
+    },
+    {
+      "path": "plugins/global.ini",
+      "bytes": 325,
+      "sha256": "23131273ab91fb85bb3f1b67c86a90efda5e0d93cd161a8febc5ddeec7279a3a",
+      "origin": "release/vcangce-269/release/plugins/global.ini"
+    }
+  ]
+}

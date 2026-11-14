@@ -1,11 +1,12 @@
-# Vice City Actual Next Gen CE — Build 264 (Now with 64-Bit Rendering)
+# Vice City Actual Next Gen CE — Build 269 (64-Bit Rendering & Startup Fixes)
 
 **Play Grand Theft Auto: Vice City inside Grand Theft Auto IV.** Tommy Vercetti's story and the whole neon-lit 1986 city, rebuilt with GTA IV's lighting, physics and Euphoria animation, HD artwork, extra islands, the classic side activities and restored dialogue. It comes as one download that you copy into your own copy of **GTA IV: The Complete Edition**.
 
-**Complete mod package** · for **GTA IV: The Complete Edition 1.2.0.59** · download **Build264.zip** from [Releases](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/releases/latest)
+**Complete mod package** · for **GTA IV: The Complete Edition 1.2.0.59** · download **VCANGCE-269.zip** from [Releases](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/releases/latest)
 
 - [What this is](#what-this-is)
 - [What makes this version different](#what-makes-this-version-different)
+- [What changed in Build 269](#what-changed-in-build-269)
 - [64-bit rendering, explained](#64-bit-rendering-explained)
 - [What you need](#what-you-need)
 - [Installation, step by step](#installation-step-by-step)
@@ -59,6 +60,17 @@ What you get with this version:
 - **One package, set up and checked together.** Every file is listed with a checksum, and updates keep your existing saves working (see [Saves](#saves)).
 - **Setup instructions for Windows, Linux and Steam Deck** are included below.
 
+## What changed in Build 269
+
+This is the complete package through step 269. No earlier release or window patch is required. It retains Build 264's large-texture pool and adds the following renderer fixes:
+
+- **Startup window handling:** a bounded automatic handoff restores the game's main window if GTA IV minimizes it during borderless startup. Once a frame has been accepted, it respects later manual minimization. Borderless Alt-Tab handling is also improved.
+- **Display changes and recovery:** retained backbuffers and swapchains have correct lifetimes across display resets, and a temporary frame-mapping failure can recover without another reset.
+- **Safer FSR shutdown:** failed helper shutdown is reported honestly, and the renderer blocks further resets while preserving resources that are unsafe to tear down. Front-buffer captures keep their shared frame slot pinned until the copy completes.
+- **Matching renderer pair:** the updated game-side plugin and 64-bit host use protocol 4 and reject mismatched versions. Copy both from this package together.
+
+**Verification:** current isolated GPU tests cover renderer behavior, retained resources, mapping recovery, capture timing and FSR shutdown. The preceding step 268 was also launched as the real game in nested Gamescope and the user confirmed the menu/gameplay loaded. That result carries forward startup evidence; step 269 has not had a separate actual-game run. Full Steam Gaming Mode launcher integration and the original prolonged-drive/helicopter texture-failure scenario still need their own confirmation. No new frame-rate claim is made.
+
 ## 64-bit rendering, explained
 
 **VCRender moves the graphics work into a separate 64-bit process.** GTA IV still supplies the gameplay, missions, physics and its Direct3D 9 commands. The included host renders those commands through **DXVK and Vulkan**, then displays the finished picture in the game window. You launch GTA IV normally; the host starts automatically.
@@ -67,13 +79,13 @@ The benefit is memory headroom: the graphics driver and its GPU mappings no long
 
 The renderer also includes:
 
-- **Paired 64-bit upscaling.** The included DLSS-IV client supplies the scene, depth and motion data; its 64-bit helper performs the upscale before the HUD. **FSR 3.1 is the path used and verified with this build.** DLSS-IV is the component's name; an NVIDIA RTX card is not required for FSR. NVIDIA DLSS requires RTX hardware and has not been verified with VCRender.
+- **Paired 64-bit upscaling.** The included DLSS-IV client supplies the scene, depth and motion data; its 64-bit helper performs the upscale before the HUD. **FSR 3.1 is the path exercised in earlier game sessions and the current isolated tests.** DLSS-IV is the component's name; an NVIDIA RTX card is not required for FSR. NVIDIA DLSS requires RTX hardware and has not been verified with VCRender.
 - **GPU-side synchronization** for the upscaler, with a fallback and a watchdog if the helper stops responding.
 - **One frame ahead by default,** keeping the game's rendering queue short to reduce added input delay.
 - **Space for large texture dictionaries.** Blocks above 8 MiB, and blocks the original physical-resource heap cannot fit, can use a separate pool. It is capped at 512 MiB and preserves at least 600 MiB of free game address space. This addresses the fragmented-heap failure that repeatedly unloaded roads and buildings.
 - **Correct allocation failures and streaming diagnostics,** so the game receives real graphics errors and the logs can identify a resource that fails to load.
 
-The installed build has run with the pool and FSR active, including a display reset and clean exit. These features improve memory handling; frame rate still depends on your CPU, GPU, resolution and graphics settings.
+Earlier game sessions recorded the pool and FSR active, a display reset and clean exit. See the Build 269 verification limits above. These features improve memory handling; frame rate still depends on your CPU, GPU, resolution and graphics settings.
 
 **Which Graphics API should I select?** Leave **Vulkan** selected and **Anti-aliasing Off**. VCRender already uses the included DXVK/Vulkan host. With the host running, that API menu setting does not switch it to a different renderer; it selects the fallback if the host cannot start. No separate DXVK installation is needed.
 
@@ -99,25 +111,25 @@ The installed build has run with the pool and FSR active, including a display re
 ### 2. Download
 
 1. Open the [latest release](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/releases/latest) and scroll down to **Assets**.
-2. Download **all five parts**, `Build264.zip.001` to `Build264.zip.005`, into the **same folder**. Don't rename them. Together they form one ZIP file; none of them works alone.
+2. Download **all five parts**, `VCANGCE-269.zip.001` to `VCANGCE-269.zip.005`, into the **same folder**. Don't rename them. Together they form one ZIP file; none of them works alone.
 3. Don't download **Source code (zip)** or **Source code (tar.gz)**. GitHub adds those automatically, and they don't contain the game files.
 
-If someone gave you the single full **Build264.zip** instead, use that file and skip the parts.
+If someone gave you the single full **VCANGCE-269.zip** instead, use that file and skip the parts.
 
 ### 3. Extract
 
-**Windows:** install 7-Zip. Right-click `Build264.zip.001` and choose **7-Zip → Extract files…** (on Windows 11, choose **Show more options** first). Choose a new empty folder, for example `C:\VCANGCE`, and click **OK**. 7-Zip reads all five parts by itself; only open `.001`. Windows' built-in ZIP tool can't open split archives.
+**Windows:** install 7-Zip. Right-click `VCANGCE-269.zip.001` and choose **7-Zip → Extract files…** (on Windows 11, choose **Show more options** first). Choose a new empty folder, for example `C:\VCANGCE`, and click **OK**. 7-Zip reads all five parts by itself; only open `.001`. Windows' built-in ZIP tool can't open split archives.
 
 **Linux or Steam Deck:** open a terminal in the download folder. On Steam Deck, use **Konsole** in Desktop Mode. If 7-Zip is installed:
 
 ```sh
-7z x Build264.zip.001 -oVCANGCE
+7z x VCANGCE-269.zip.001 -oVCANGCE
 ```
 
 If your installed command is `7zz`, use that instead of `7z`. Without 7-Zip, join the parts into the full ZIP and extract that with an archive tool such as Ark:
 
 ```sh
-cat Build264.zip.00[1-5] > Build264.zip
+cat VCANGCE-269.zip.00[1-5] > VCANGCE-269.zip
 ```
 
 Either way, you get a folder named **`release`**. It contains `update`, `plugins`, `DLSSIV`, several loose files, `README.md` and `CREDITS.md`.
@@ -153,7 +165,7 @@ This tells Proton to load the mod's loader. In Lutris, add the DLL override `din
 2. In **Settings → Display**, leave **Graphics API** on **Vulkan** and set **Anti-aliasing** to **Off**. The supplied renderer and upscaler start automatically. Use your monitor's normal resolution; the upscaler can render the scene internally at a lower resolution.
 3. Choose **New Game**, or load your save. A new game starts the activities, statistics and parked cars from their intended beginning.
 
-**Optional, checking the download:** `PARTS-SHA256SUMS.txt` lists the checksum of each part, and `Build264.zip.sha256` lists the checksum of the full ZIP. Inside `release`, `SHA256SUMS.txt` lists every mod file. On Linux, run `sha256sum -c SHA256SUMS.txt` in that folder.
+**Optional, checking the download:** `PARTS-SHA256SUMS.txt` lists the checksum of each part, and `VCANGCE-269.zip.sha256` lists the checksum of the full ZIP. Inside `release`, `SHA256SUMS.txt` lists every mod file. On Linux, run `sha256sum -c SHA256SUMS.txt` in that folder.
 
 ### If this folder already contains mods
 
@@ -319,8 +331,9 @@ A new game is available if you want the city, activities and statistics initiali
 
 ## Troubleshooting
 
-- **7-Zip says a volume is missing or the archive is corrupt.** Confirm that `Build264.zip.001` through `.005` are together, with their exact original names. Check `PARTS-SHA256SUMS.txt` and download a failing part again. Extract only from `.001`.
+- **7-Zip says a volume is missing or the archive is corrupt.** Confirm that `VCANGCE-269.zip.001` through `.005` are together, with their exact original names. Check `PARTS-SHA256SUMS.txt` and download a failing part again. Extract only from `.001`.
 - **The game starts as normal GTA IV in Liberty City.** Check that `GTAIV.exe`, `dinput8.dll`, `update` and `plugins` are together. On Proton, use the launch option in step 6. Do not leave the files inside an extra `release` folder.
+- **Only a tiny IV icon appears during startup.** Build 269 includes the bounded main-window handoff for the reproduced minimized-window case. Use the complete matching renderer pair. Full Steam Gaming Mode integration remains unconfirmed; save the logs and state whether the same installation works in Desktop Mode or Lutris.
 - **The game closes or cannot start.** Start with a clean CE 1.2.0.59 installation, the complete matching package and current GPU drivers. On Windows, install both the x86 and x64 Visual C++ Redistributables. Check for the four old standalone plugins listed above. A 32-bit operating system cannot run the host.
 - **No upscaling or an unexpectedly soft picture.** Keep Anti-aliasing Off, restart after changing settings, and check `DLSS-IV.cfg` quality/custom scale. FSR 3.1 is the verified VCRender path; the component's DLSS-IV name does not require an NVIDIA card. For an explicit FSR request, use `upscaler=1` and `fsr_version=3`. Do not install a second DLSS-IV or replace the paired files.
 - **I changed DirectX/Vulkan and the picture stayed the same.** That is expected while VCRender's host is running. Leave Vulkan selected; the menu setting controls the fallback rather than the active host.
@@ -335,7 +348,9 @@ The simplest way is to uninstall GTA IV, delete what's left of its folder and re
 
 ## Source code
 
-The repository's [Source folder](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/tree/main/Source) contains the previously published **build 254** source snapshot, including gameplay scripts and native plugin work. **Build 264 adds VCRender work that is not yet part of that public snapshot.** The automatic GitHub “Source code” downloads are source archives, not this complete playable package. Download the five `Build264.zip` parts for the game files.
+The repository's [Source folder](https://github.com/dillonherring9/gta-iv-modern-ryzen-apu-config/tree/main/Source) is updated for **Build 269**, including the current gameplay/native-plugin sources and the VCRender client/host source used for this package. Its source index and provenance records identify the corresponding inputs and runtime files. The automatic GitHub “Source code” downloads are source archives, not the complete playable package. Download all five `VCANGCE-269.zip` parts for the game files.
+
+Renderer code is in `Source/native/vcrender`, paired upscaler code in `Source/native/paired-dlssiv`, and public text defaults in `Source/config/game`. See `Source/BUILDING.md` and `Source/SOURCE-STATUS.md` for build instructions and provenance.
 
 Textures, models and sound are distributed through the release package with their creator credits and bundled notices.
 

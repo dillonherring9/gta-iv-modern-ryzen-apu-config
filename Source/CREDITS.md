@@ -74,6 +74,16 @@ Vice City Actual Next Gen CE brings together the work of many creators. The orig
 
 Earlier project prototypes used **Nixolas1**’s 2009 GTA IV parachute behavior reference, **Quechus13**’s canopy models, and **gongel**’s [GTA V backpack port](https://www.nexusmods.com/gta4/mods/888). Those controller, canopy and backpack implementations have been replaced by the native 8.0-derived integration in this release; this acknowledgment preserves their development contribution.
 
+### VCRender, 64-bit rendering and paired upscaling
+
+- **Vice City Actual Next Gen CE project contributors** — VCRender's 32-bit client and 64-bit renderer, the paired DLSS-IV integration, Vulkan interop, GPU-side synchronization, texture-budget safety, streaming diagnostics and physical-resource allocation work. This is the project's renderer; GTA IV itself remains a 32-bit game.
+- **Philip Rebohle, Joshua Ashton and DXVK contributors** — [DXVK](https://github.com/doitsujin/dxvk), the Direct3D-to-Vulkan implementation used by the 64-bit host. The bundled x64 Direct3D 9 and DXGI libraries are unmodified DXVK v3.1.1-97-ga78a467cadb22be-pcos from **Proton-CachyOS**; see `plugins/VCRender/LICENSE-DXVK.txt`.
+- **Chunk / ChunkLeChuck** — the paired [DLSS-IV](https://github.com/ChunkLeChuck/DLSSIV) client and helper used by VCRender's upscaling path (Apache-2.0), with project integration changes. Its original notice is preserved at `plugins/VCRender/NOTICE-DLSS-IV.txt` and its licence at `plugins/VCRender/LICENSE-DLSS-IV.txt`.
+- **Advanced Micro Devices, Inc. and GPUOpen contributors** — [AMD FidelityFX Super Resolution](https://github.com/GPUOpen-LibrariesAndSDKs/FidelityFX-SDK), including the FSR 3.1.5 upscaler and RCAS sharpening components. AMD notices remain in `DLSSIV/licenses` and the paired DLSS-IV notice.
+- **Jean-Laurent ROUZIES** — [DLSS5-Feeder](https://github.com/jlrouzies-fr/DLSS5-Feeder) transport/protocol headers (MIT), with portions derived from **NIGos**' dlss5-dx11-bridge (MIT); the original notices are retained. These protocol names describe technical dependencies, not a claim that this package includes DLSS 5.
+- **The Khronos Group, LunarG and Valve** — Vulkan headers and related interfaces; the original header notices are retained. **Tatsuyuki Ishi** — [LatencyFleX](https://github.com/ishitatsuyuki/LatencyFleX), acknowledged in the paired DLSS-IV notice (Apache-2.0).
+- **gutbash** — [b-bridge](https://github.com/gutbash/b-bridge), an earlier out-of-process rendering research/reference used during this project's development. VCRender's core is project code; its Vulkan/upscaler integration carries forward the project's own earlier bridge work and the separately credited transport dependencies above.
+
 ### Corrections
 
 If a name or contribution is missing or incorrect, please open a GitHub issue with the original mod link or readme so the credit can be corrected. This is an unofficial fan project; these credits do not imply endorsement by the original authors.

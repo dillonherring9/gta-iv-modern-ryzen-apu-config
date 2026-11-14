@@ -1,8 +1,8 @@
-# Configuration sources (checkpoint 254)
+# Configuration sources (checkpoint 269)
 
-This authoring snapshot contains the **eight text files** that define the
+This authoring snapshot retains the **eight text files** that define the
 checkpoint-245 model load order and radio station limit, unchanged through
-checkpoint 254. Every byte matches the current playable release and the maintained live-file manifest. It includes
+checkpoint 269. Every byte matches the current playable release and the maintained live-file manifest. It includes
 the two consolidated map IDEs and the save-numbering repair; it is not a
 complete game overlay. Other files named by the DATs, models, audio, textures,
 placement data and the owned GTA IV CE installation come from the playable
@@ -55,3 +55,15 @@ single universal conversion between those positions and all save-record fields.
 After intentional authoring changes, retain the old prefix and review any
 updated checkpoint manifest separately; the supplied checker verifies this
 published snapshot exactly.
+
+## Packaged runtime defaults
+
+[runtime-defaults.json](runtime-defaults.json) separately indexes all **12**
+packaged `.ini`, `.cfg` and `.conf` files, including `VCRender.ini`, the ASI
+loader's `global.ini`, private DXVK settings and the paired upscaler configuration.
+These bytes come from the frozen Build269 release, including clean controller
+speaker defaults, rather than personal live settings. The model-order checker
+continues to validate its eight model/radio text files; runtime defaults are
+covered by the overall source checksum manifest and the separate defaults index.
+With VCRender active, the in-game DirectX/Vulkan selector chooses only the
+fallback; the package keeps `API = 1`.

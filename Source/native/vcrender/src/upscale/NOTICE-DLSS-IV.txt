@@ -1,0 +1,79 @@
+DLSS-IV
+Copyright 2026 Chunk
+
+DLSS-IV is a mod for Grand Theft Auto IV and Episodes from Liberty City.
+Downloads, questions and bug reports: https://www.nexusmods.com/games/gta4/mods/1430
+
+DLSS-IV is licensed under the Apache License, Version 2.0 (LICENSE). It
+contains or is built with the following third-party work, each under its own
+licence.
+
+
+NVIDIA DLSS SDK
+  dlssiv-helper.exe is compiled against the NVIDIA DLSS SDK headers and
+  linked with its import library. Neither is in this repository:
+  tools/fetch-ngx.ps1 fetches them from https://github.com/NVIDIA/DLSS, and
+  they are under NVIDIA's licence (fetched with them as
+  external/ngx/LICENSE-NVIDIA-DLSS-SDK.txt).
+  This software contains source code provided by NVIDIA Corporation.
+
+Intel XeSS SDK
+  dlssiv-helper.exe is compiled against Intel's XeSS headers and loads
+  Intel's libxess.dll at run time. Neither is in this repository:
+  tools/fetch-xess.ps1 takes them from Intel's release at
+  https://github.com/intel/xess, under the Intel Simplified Software License
+  (fetched with them as external/xess/LICENSE-Intel-XeSS.txt).
+  Intel(R) Xe Super Sampling (XeSS) SDK: Copyright (C) 2025 Intel Corporation
+  Intel, the Intel logo, and other Intel marks are trademarks of Intel
+  Corporation or its subsidiaries. Other names and brands may be claimed as
+  the property of others.
+
+AMD FidelityFX SDK 2.3.0
+  external/ffx: the ffx-api headers and the source of AMD's frame
+  interpolation, optical flow and DirectX 12 backend. dlssiv-fg.dll is built
+  from that source with this project's own changes (ffx-own/).
+  MIT, Copyright (C) Advanced Micro Devices, Inc.
+  Licence: external/ffx/LICENSE-AMD-FidelityFX-SDK.txt (part 1)
+  Source: https://github.com/GPUOpen-LibrariesAndSDKs/FidelityFX-SDK
+
+AMD FidelityFX Super Resolution 1: the RCAS sharpening filter
+  source/shaders/rcas_ps.hlsl, ported to HLSL and modified.
+  MIT, Copyright (c) 2021 Advanced Micro Devices, Inc.
+  Licence: source/shaders/LICENSE-AMD-FSR1.txt
+
+DLSS5-Feeder
+  source/transport/feed_ipc.h and feed_vk.h, since modified.
+  MIT, Copyright (c) 2026 Jean-Laurent ROUZIES. Portions derive from
+  dlss5-dx11-bridge, Copyright (c) 2026 NIGos, MIT.
+  Licence: source/transport/LICENSE-DLSS5-Feeder.txt
+  Source: https://github.com/jlrouzies-fr/DLSS5-Feeder
+
+LatencyFleX
+  source/third_party/latencyflex/latencyflex.h, unmodified.
+  Apache-2.0, Copyright 2021 Tatsuyuki Ishi.
+  Licence: source/third_party/latencyflex/LICENSE
+  Source: https://github.com/ishitatsuyuki/LatencyFleX
+
+Khronos Vulkan-Headers
+  external/vulkan, headers only, taken under MIT from their
+  "Apache-2.0 OR MIT" grant.
+  Copyright 2014-2026 The Khronos Group Inc., Copyright 2015-2023 LunarG,
+  Inc., Copyright 2015-2023 Valve Corporation.
+  Licence: external/vulkan/LICENSE-Khronos-Vulkan-Headers.txt
+
+DXVK
+  source/dxvk: the declarations of DXVK's D3D9 Vulkan interop and extension
+  interfaces (dxvk_interop_min.h is transcribed from d3d9_interfaces.h,
+  DXVK's own header, kept beside it).
+  zlib/libpng, Copyright (c) 2017 Philip Rebohle, Copyright (c) 2019 Joshua
+  Ashton, Copyright (c) 2019 Robin Kertels, Copyright (c) 2023 Jeffrey
+  Ellison.
+  Licence: external/dxvk/LICENSE-DXVK.txt
+
+GTAIV.EFLC.FusionShaders and GTAIV.EFLC.FusionFix
+  source/hdr_xbox_gamma.h holds the 256 values of the Xbox 360 gamma curve
+  published with GTAIV.EFLC.FusionShaders. The HDR path repeats the
+  arithmetic of FusionFix's console gamma pass, and the dither pass makes the
+  decision of the game's stipple filter and reads the mark FusionFix's
+  shaders write; both were written again for this project from those rules,
+  with its own names. Credited to their authors.

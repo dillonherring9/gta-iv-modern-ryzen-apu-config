@@ -1,0 +1,11 @@
+Intel XeSS SDK 3.0.2 (published 2026-07-24), from
+https://github.com/intel/xess/releases/download/v3.0.2/XeSS_SDK_3.0.2.zip
+  the zip: 76,839,749 bytes, SHA-256 88b8a373f30e33f3558a77a93e634f11b8132fc3047ea1a8edeead32b8471990
+
+None of Intel's files are in this repository (Intel Simplified Software License). tools\fetch-xess.ps1 takes them
+from that zip, checks it and each file, and puts them here; git ignores them:
+  inc/xess/*.h                    the public headers build-host.ps1 compiles against
+  LICENSE-Intel-XeSS.txt          the zip's LICENSE.txt, the Intel Simplified Software License (Version October 2022)
+  libxess.dll                     bin/libxess.dll, 77,795,704 bytes, SHA-256 251659dd84a3e84de67c886a4186e01f3eca49b00641906fe38bb6b807e5d5b7
+                                  (only with -Runtime: the helper loads it by its full path at run time, so the build
+                                  does not need it)

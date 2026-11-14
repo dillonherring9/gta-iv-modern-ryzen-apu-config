@@ -1,0 +1,37 @@
+{
+  "result": "PASS",
+  "checkpoint": 269,
+  "outputs": [
+    {
+      "file": "VCRender.asi",
+      "relative_runtime_path": "plugins/VCRender.asi",
+      "bytes": 423424,
+      "rebuilt_sha256": "9c5bfa2b4c95d3cea118fe86c80a7656f1065e3408d086d66ed50fbd38951a6a",
+      "release_sha256": "9c5bfa2b4c95d3cea118fe86c80a7656f1065e3408d086d66ed50fbd38951a6a",
+      "matches_release": true,
+      "compiler_version": "Zig 0.15.2 / Clang 20.1.2",
+      "scope": "Fresh portable cross-build from this exported Build269 renderer source; exact release and installed runtime match; no game launch.",
+      "verified_checkpoint": 269,
+      "fresh_build": true
+    },
+    {
+      "file": "VCRenderHost.exe",
+      "relative_runtime_path": "plugins/VCRender/VCRenderHost.exe",
+      "bytes": 374272,
+      "rebuilt_sha256": "2857db28c21730f957237230c270916a033905bd38dfaf544aec9b99988d7d3b",
+      "release_sha256": "2857db28c21730f957237230c270916a033905bd38dfaf544aec9b99988d7d3b",
+      "matches_release": true,
+      "compiler_version": "Zig 0.15.2 / Clang 20.1.2",
+      "scope": "Fresh portable cross-build from this exported Build269 renderer source; exact release and installed runtime match; no game launch.",
+      "verified_checkpoint": 269,
+      "fresh_build": true
+    }
+  ],
+  "toolchain": {
+    "host": "Linux x86_64",
+    "zig": "0.15.2",
+    "clang": "20.1.2",
+    "zig_executable_sha256": "2858dc89dbbfdd08cceda1b841e7fd0a793a1a67b49f150bc3d0d1de44ed7f51"
+  },
+  "scope": "Fresh exact269 renderer client/host cross-build. Existing paired264 reproduction is retained separately; no gameplay test is claimed."
+}

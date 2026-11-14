@@ -58,7 +58,7 @@ library only; no game installation or save files are needed:
 python3 -I tools/check_model_order.py
 ```
 
-To check an extracted checkpoint-254 release or an installed game instead:
+To check an extracted checkpoint-269 release or an installed game instead:
 
 ```sh
 python3 -I tools/check_model_order.py --root "/path/to/release" --report ../VCANGCE-build/model-order.json
@@ -81,7 +81,7 @@ These checks establish configuration identities and order, not gameplay.
 
 Script builds need `openssl` in PATH and the pinned **FourFury 0.13.3** from
 `requirements.txt`. Supply your own GTA IV CE executable to read its encryption
-key and the **checkpoint-254** release archive as a read-only resource baseline:
+key and the **checkpoint-269** release archive as a read-only resource baseline:
 
 ```sh
 python tools/build_scripts.py --exe "/path/to/GTAIV.exe" --resources-from "/path/to/release/update/common/data/cdimages/script.img" --out ../VCANGCE-build/scripts --compare "/path/to/release/update/common/data/cdimages/script.img"
@@ -132,3 +132,18 @@ final release hash. It preserves the input and refuses an existing output.
 Builds do not copy runtime libraries, settings or content into a game. The
 release supplies the models, textures, collision, language tables and audio
 needed by the current scripts; these builders do not regenerate that content.
+
+## Build 269 renderer and paired upscaler
+
+The renderer uses **Zig 0.15.2**, separately from the unchanged Zig 0.13.0
+VCCore/ScriptHook builder above. Follow [VCRender's build instructions](native/vcrender/README.md)
+and [the paired DLSS-IV instructions](native/paired-dlssiv/README.md). Those
+portable builders resolve source inputs within this export and write separate
+outputs; they do not install files into the game. Vendor SDK binaries are not
+embedded in the source export; use the documented fetch path and applicable licences.
+
+The repository's existing Source checks workflow still validates the unchanged
+VCCore/ScriptHook build and model contract. The build-269 renderer and paired
+upscaler have their own local export verification in `renderer_verification`
+in [VALIDATION.json](VALIDATION.json); that evidence is separate from the existing
+GitHub Actions job and does not imply gameplay was run during source publication.

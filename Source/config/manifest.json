@@ -1,62 +1,62 @@
 {
   "schema": 1,
-  "checkpoint": "245-dancer-peds-after-objects",
-  "snapshot_date": "2026-11-10",
+  "checkpoint": "269-vcrender-review-repairs",
+  "snapshot_date": "2026-11-13",
   "files": [
     {
       "path": "update/common/data/default.dat",
       "bytes": 1013,
       "sha256": "252000cafdab833502f5852bcc24d958284b27201ec1c11f393c02a81ed9ade5",
-      "origin": "release/vcangce-245/release/update/common/data/default.dat",
+      "origin": "release/vcangce-269/release/update/common/data/default.dat",
       "live_manifest": "project/manifests/runtime-files.json"
     },
     {
       "path": "update/common/data/gta.dat",
       "bytes": 2264,
       "sha256": "56f29aac99d7049e4a79b046091c3dcdb9d76c4ee43c7a1dd263a747c9d4aeb2",
-      "origin": "release/vcangce-245/release/update/common/data/gta.dat",
+      "origin": "release/vcangce-269/release/update/common/data/gta.dat",
       "live_manifest": "project/manifests/runtime-files.json"
     },
     {
       "path": "update/common/data/default.ide",
       "bytes": 13250,
       "sha256": "5182c201313c96faf95d191b41c2210407a4c945a14ce487473e9cbc2c72cbc6",
-      "origin": "release/vcangce-245/release/update/common/data/default.ide",
+      "origin": "release/vcangce-269/release/update/common/data/default.ide",
       "live_manifest": "project/manifests/runtime-files.json"
     },
     {
       "path": "update/common/data/vehicles.ide",
       "bytes": 22908,
       "sha256": "12ceebf3a087006b7f3f1d2f4d1abfd16afaf5f506182a43a89a1112c271ec1f",
-      "origin": "release/vcangce-245/release/update/common/data/vehicles.ide",
+      "origin": "release/vcangce-269/release/update/common/data/vehicles.ide",
       "live_manifest": "project/manifests/runtime-files.json"
     },
     {
       "path": "update/common/data/peds.ide",
       "bytes": 99608,
       "sha256": "1977723fae7d88c67a00f5882f1556f0da6f39ec792d5c1bcdcf79af51b4260a",
-      "origin": "release/vcangce-245/release/update/common/data/peds.ide",
+      "origin": "release/vcangce-269/release/update/common/data/peds.ide",
       "live_manifest": "project/manifests/runtime-files.json"
     },
     {
       "path": "update/pc/data/maps/vc_world/vc_props.ide",
       "bytes": 173772,
       "sha256": "dacc1fd0cc536f84e50f803352d4b20b17240e7d2f551cc5fa6353339792e048",
-      "origin": "release/vcangce-245/release/update/pc/data/maps/vc_world/vc_props.ide",
+      "origin": "release/vcangce-269/release/update/pc/data/maps/vc_world/vc_props.ide",
       "live_manifest": "project/manifests/runtime-files.json"
     },
     {
       "path": "update/pc/data/maps/vc_world/vc_models.ide",
       "bytes": 720110,
       "sha256": "23471ff2607d04dd231b82e4f7255d0c90babbba107f556881cb3d5f5db170a6",
-      "origin": "release/vcangce-245/release/update/pc/data/maps/vc_world/vc_models.ide",
+      "origin": "release/vcangce-269/release/update/pc/data/maps/vc_world/vc_models.ide",
       "live_manifest": "project/manifests/runtime-files.json"
     },
     {
       "path": "update/pc/audio/Config/stationslimit.txt",
       "bytes": 2,
       "sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
-      "origin": "release/vcangce-245/release/update/pc/audio/Config/stationslimit.txt",
+      "origin": "release/vcangce-269/release/update/pc/audio/Config/stationslimit.txt",
       "live_manifest": "project/manifests/runtime-files.json"
     }
   ],
@@ -143,5 +143,6 @@
     "eight_dancers_last": true,
     "maintained_step245_parser_matches": true,
     "scope": "Full ordered (section,name) definitions, not merely object-only or ped-only lists; no universal saved-index offset asserted."
-  }
+  },
+  "model_layout_checkpoint": 245
 }

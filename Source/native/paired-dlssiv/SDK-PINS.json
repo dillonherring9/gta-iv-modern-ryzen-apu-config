@@ -1,0 +1,96 @@
+{
+  "ngx": {
+    "files": [
+      {
+        "destination": "include/nvsdk_ngx.h",
+        "upstream": "include/nvsdk_ngx.h",
+        "normalized_sha256": "f6014a256f9d75ccec1278ac6e23d596b398a76cc3960048ca1a274b378b1989"
+      },
+      {
+        "destination": "include/nvsdk_ngx_defs.h",
+        "upstream": "include/nvsdk_ngx_defs.h",
+        "normalized_sha256": "ea23f33497cd274860d1c25a97644fce807dcb0037c594547203343103fad03e"
+      },
+      {
+        "destination": "include/nvsdk_ngx_defs_dlssd.h",
+        "upstream": "include/nvsdk_ngx_defs_dlssd.h",
+        "normalized_sha256": "d2fde340db2189c89bce093bc1edd7b3579df48decac329218a98a9c5fd46018"
+      },
+      {
+        "destination": "include/nvsdk_ngx_helpers.h",
+        "upstream": "include/nvsdk_ngx_helpers.h",
+        "normalized_sha256": "2d5661f8b5ab55e1223e485f24146274d48077e09051873826b653d4384fe7d8"
+      },
+      {
+        "destination": "include/nvsdk_ngx_params.h",
+        "upstream": "include/nvsdk_ngx_params.h",
+        "normalized_sha256": "943bc8cc5cdae03b6303016fbad3183636f2335ae27a2d18776798c3b4efabbc"
+      },
+      {
+        "destination": "include/nvsdk_ngx_params_dlssd.h",
+        "upstream": "include/nvsdk_ngx_params_dlssd.h",
+        "normalized_sha256": "d41e3ba8f1d72583b55273092c99bf426dc4a0d46de827229e25d5b1325a370e"
+      },
+      {
+        "destination": "LICENSE-NVIDIA-DLSS-SDK.txt",
+        "upstream": "LICENSE.txt",
+        "normalized_sha256": "21b5daec892b12bea692e66bc8fe45cf5902ccaf3a7b831e78050d8859881c37"
+      }
+    ],
+    "base": "https://raw.githubusercontent.com/NVIDIA/DLSS/{ref}/",
+    "default_ref": "main",
+    "library": {
+      "destination": "lib/nvsdk_ngx_s.lib",
+      "upstream": "lib/Windows_x86_64/x64/nvsdk_ngx_s.lib",
+      "bytes": 4740514,
+      "sha256": "36eab29264c2a06456ba8415f20086aea36f0cbb314d020085cb288cc06bb9ae"
+    }
+  },
+  "xess": {
+    "files": [
+      {
+        "destination": "inc/xess/xess.h",
+        "upstream": "inc/xess/xess.h",
+        "normalized_sha256": "d01a1be9be0672b17a093a7333f78016418efe2382c17cca699e463aee8ba5cc"
+      },
+      {
+        "destination": "inc/xess/xess_d3d11.h",
+        "upstream": "inc/xess/xess_d3d11.h",
+        "normalized_sha256": "ce06710b2cbd3c99046c0e80d63e224c72ab3e26e29c4721d662acae6582e29a"
+      },
+      {
+        "destination": "inc/xess/xess_d3d12.h",
+        "upstream": "inc/xess/xess_d3d12.h",
+        "normalized_sha256": "d43e3da0c241464e9c9dbe46be229250f4c94c697f2b2ea49f092f2fde5586af"
+      },
+      {
+        "destination": "inc/xess/xess_d3d12_debug.h",
+        "upstream": "inc/xess/xess_d3d12_debug.h",
+        "normalized_sha256": "807c178e4c760cc1c9e23ede4400b0119e54830c3cd9aef36532038105284307"
+      },
+      {
+        "destination": "inc/xess/xess_debug.h",
+        "upstream": "inc/xess/xess_debug.h",
+        "normalized_sha256": "dac7e3cf84b8b38af2edc659b0594bf16eeaef8493cf6a40926fb5c8a307da3e"
+      },
+      {
+        "destination": "inc/xess/xess_vk.h",
+        "upstream": "inc/xess/xess_vk.h",
+        "normalized_sha256": "6b2b219c5c1592741625c65477698937829d0a74cb5f5db7a649ff7acd42b8ac"
+      },
+      {
+        "destination": "inc/xess/xess_vk_debug.h",
+        "upstream": "inc/xess/xess_vk_debug.h",
+        "normalized_sha256": "993933c0cf64e0d5b03674aed83edd352bd024fb85bdfbfc6cd07456bac40c4e"
+      },
+      {
+        "destination": "LICENSE-Intel-XeSS.txt",
+        "upstream": "LICENSE.txt",
+        "normalized_sha256": "e15ca2a10f34d836cfff59922c35dd9277ae8068353abb588c851f9d16d4737d"
+      }
+    ],
+    "url": "https://github.com/intel/xess/releases/download/v3.0.2/XeSS_SDK_3.0.2.zip",
+    "bytes": 76839749,
+    "sha256": "88b8a373f30e33f3558a77a93e634f11b8132fc3047ea1a8edeead32b8471990"
+  }
+}

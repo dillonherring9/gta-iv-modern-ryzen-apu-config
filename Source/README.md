@@ -1,16 +1,17 @@
 # VCANGCE source
 
 Developer sources for **Vice City Actual Next Gen CE** (**VCANGCE**), targeting
-GTA IV Complete Edition **1.2.0.59** and aligned with release checkpoint **254**
-(build 254). Players can find the playable package through the repository's
+GTA IV Complete Edition **1.2.0.59** and aligned with release checkpoint **269**
+(build 269). Players can find the playable package through the repository's
 main README and release downloads.
 
 This folder contains all **96 current game-script assembly sources**, the
 maintained native module sources and the dispatcher that combines six of them
 into **VCCore.asi**, the Mjolnir quality-check patch, the two project DualSense
 binary patches, portable build
-tools and the Opus source subset used by the controller loader. Default native
-builds produce **VCCore.asi** and **ScriptHook.dll**. Game executables, compiled
+tools and the Opus source subset used by the controller loader. The existing Zig 0.13.0 native builder produces **VCCore.asi** and **ScriptHook.dll**.
+The separate renderer builders produce **VCRender.asi**, **VCRenderHost.exe**,
+and the paired **dlssiv-client.dll** and **dlssiv-helper-bridge.exe**, using Zig 0.15.2. Game executables, compiled
 plugins and binary game assets are supplied separately. Some scripts were
 reconstructed from current bytecode; the export does not contain every original
 author's high-level source.
@@ -46,10 +47,10 @@ data (sidewalk trees removed, Vice City distant-lights index rebuilt); see the s
 | [config/](config/) | Current text configuration, original model-order baseline and save-safety checks |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Changes and useful verification |
 | [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) | Component notices and licensing scope |
-| [CREDITS.md](CREDITS.md) | Checkpoint-254 release credits |
+| [CREDITS.md](CREDITS.md) | Checkpoint-269 release credits |
 
 The current `script.img` also holds preserved network scripts and game resources.
-To rebuild it, supply the checkpoint-254 archive with `--resources-from`; the
+To rebuild it, supply the checkpoint-269 archive with `--resources-from`; the
 builder replaces the 96 covered scripts and preserves all other allocations.
 See [BUILDING.md](BUILDING.md) for the complete command.
 
@@ -62,3 +63,26 @@ Read the source status for vendor-source gaps and current gameplay evidence.
 
 Run `python3 tools/verify_source.py` to check the published source checksums
 before editing it.
+
+## Build 269 renderer sources
+
+[Native VCRender](native/vcrender/README.md) contains the current 32-bit client
+and 64-bit host, including backend allocation errors (262), failed-load diagnostics
+(263) and the physical resource pool (264). [Paired DLSS-IV](native/paired-dlssiv/README.md)
+contains the matching adapted upscaler client/helper and their build instructions.
+GTAIV.exe remains 32-bit; rendering and upscaling execute in external 64-bit processes.
+The export does not convert the game executable or remove every engine memory limit.
+
+The 96 scripts, VCCore, ScriptHook, model numbering and radio baseline are unchanged
+from build 254. Earlier exact-build results for those files remain dated evidence.
+[VALIDATION.json](VALIDATION.json) separates them from new renderer export checks.
+The exact packaged text settings are in [config/runtime-defaults.json](config/runtime-defaults.json).
+No game executable, compiled plugin, release asset or generated gameplay log is included.
+
+Build 269 also contains retained-swapchain identity after Reset (266), borderless
+activation handling (267), a bounded one-time startup-window handoff (268), and
+review repairs to implicit surfaces, mapping retry, capture ownership and FSR
+failure quarantine (269). Client and host now require renderer protocol 4.
+Actual nested Gamescope startup/menu/gameplay was confirmed on 268; 269 has
+isolated regression coverage, with actual-game and full Steam Gaming Mode
+confirmation still pending. See SOURCE-STATUS.md for the evidence boundary.

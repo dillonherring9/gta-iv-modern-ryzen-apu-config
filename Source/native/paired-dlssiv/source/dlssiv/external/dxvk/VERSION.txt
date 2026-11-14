@@ -1,0 +1,32 @@
+DXVK 3.1.1, the official release (github.com/doitsujin/dxvk), zlib/libpng. (3.1 until 2026-09-19.)
+
+x32/d3d9.dll is dxvk-3.1.1/x32/d3d9.dll extracted unmodified from the owner's
+dxvk-3.1.1.tar.gz (18,041,512 bytes, MD5 dfca4e1ee1399ebd365c1b1b919dc78a,
+file dated 2026-09-17): 7,856,142 bytes, MD5 093943dbadc00725ed39bb25b22c9dfa,
+and it names itself v3.1.1. It is byte for byte the vulkan.dll the owner has
+played on in both game folders. THE SAME SIZE TO THE BYTE AS 3.1's
+(MD5 3069b49c82640b7b1f252ca58fe89ead): only the hash tells the two apart.
+VENDORED NOT COMMITTED (.gitignore);
+package.ps1 verifies the size and MD5 before it ships it.
+
+IT SHIPS AS vulkan.dll, NOT d3d9.dll. On a FusionFix install d3d9.dll is
+FusionFix's own D3D9 proxy: it reads d3d9.cfg ([MAIN] API = 1) and loads DXVK
+under the name vulkan.dll. Shipping ours overwrites FusionFix's bundled copy,
+by the owner's decision on 2026-09-10.
+
+Verified before it was adopted (docs/OUTSTANDING-2026-09-10.md, section 3):
+every DXVK interface the mod uses has the same GUID, method order and
+parameters in 3.1 as in source/dxvk/dxvk_interop_min.h and hdr_encode.h; a
+full session ran clean on it; the HDR staircase passed on it.
+
+THE MOD ITSELF accepts any 3.1.x (DLSS-IV.cpp, LogDxvkVersion: "3.1" then end or
+a dot), so nothing in the code moved with this.
+
+LICENSE-DXVK.txt is DXVK's LICENSE at tag v3.1, AND IT IS v3.1.1's TOO. Checked
+2026-09-19 against raw.githubusercontent.com/doitsujin/dxvk/v3.1.1/LICENSE:
+upstream's file is byte for byte the same at both tags (1,074 bytes, MD5
+e1c22399f5cab679bedf6fb87b8ed4a4), and this copy is that text with CRLF line
+endings and nothing else different.
+It was fetched 2026-09-10 from
+raw.githubusercontent.com/doitsujin/dxvk/v3.1/LICENSE (1,074 bytes). The
+release tarball carries no licence file, so this is the copy that travels.

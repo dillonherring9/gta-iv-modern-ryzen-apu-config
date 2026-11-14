@@ -1,0 +1,14 @@
+NVIDIA DLSS SDK, from NVIDIA/DLSS on GitHub (main, taken 2026-09-03).
+
+None of NVIDIA's files are in this repository. The NVIDIA DLSS SDK licence permits distributing the SDK incorporated
+into a built application, and forbids subjecting it to an open source licence (section 3.e) or distributing it as a
+stand-alone product (section 3.b). tools\fetch-ngx.ps1 puts them here, and git ignores them:
+
+  include\nvsdk_ngx*.h            the six headers build-host.ps1 compiles against
+  lib\nvsdk_ngx_s.lib             the static-CRT import library build-host.ps1 links (4,740,514 bytes,
+                                  MD5 16933B6EAA970224BCE203C8BE71B532)
+  LICENSE-NVIDIA-DLSS-SDK.txt     NVIDIA's LICENSE.txt
+
+"main" is not a pin. The hashes in tools\fetch-ngx.ps1 are: a fetch that returns other files is refused.
+
+The DLSS runtime, nvngx_dlss.dll, is not needed to build. A player gets it with the mod from the Nexus page.

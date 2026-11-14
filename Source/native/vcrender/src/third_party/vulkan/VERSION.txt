@@ -1,0 +1,1 @@
+KhronosGroup/Vulkan-Headers vulkan-sdk-1.4.357.0, include/vulkan/*.h and include/vk_video/*.h only, fetched 2026-09-02

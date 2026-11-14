@@ -1,0 +1,46 @@
+{
+  "result": "PASS",
+  "fresh_build": true,
+  "checkpoint": 264,
+  "outputs": [
+    {
+      "file": "dlssiv-client.dll",
+      "relative_runtime_path": "plugins/VCRender/dlssiv-client.dll",
+      "bytes": 1191936,
+      "rebuilt_sha256": "b71acebec3935229f23baee2bfa897b9624c4024cb6460c4abaf31a78782f552",
+      "release_sha256": "b71acebec3935229f23baee2bfa897b9624c4024cb6460c4abaf31a78782f552",
+      "matches_release": true,
+      "compiler_version": "Zig 0.15.2 / Clang 20.1.2",
+      "scope": "fresh cross-build from exported source; no game install"
+    },
+    {
+      "file": "dlssiv-helper-bridge.exe",
+      "relative_runtime_path": "plugins/VCRender/dlssiv-helper-bridge.exe",
+      "bytes": 332288,
+      "rebuilt_sha256": "a3f500ff812dff919018512fba7967d7b233d3b7dce6287406129e17f4b48d7f",
+      "release_sha256": "a3f500ff812dff919018512fba7967d7b233d3b7dce6287406129e17f4b48d7f",
+      "matches_release": true,
+      "compiler_version": "Zig 0.15.2 / Clang 20.1.2",
+      "scope": "fresh cross-build from exported source; no game install"
+    }
+  ],
+  "toolchain": {
+    "host": "Linux x86_64",
+    "zig": "0.15.2",
+    "clang": "20.1.2",
+    "zig_executable_sha256": "2858dc89dbbfdd08cceda1b841e7fd0a793a1a67b49f150bc3d0d1de44ed7f51",
+    "lld": "22.1.8",
+    "lld_executable_sha256": "2fb44dd81f694f227964b67d60df9520f0c875505dcff1f3aae8e64b163f1621",
+    "xwin": "0.10.0",
+    "microsoft_acquisition_manifest": "VisualStudio.17.Release/17.14.44+37827.9",
+    "microsoft_crt_header_package": "14.44.35220",
+    "microsoft_desktop_crt_library_package": "14.44.35226",
+    "vulkan_headers": "vulkan-sdk-1.4.357.0",
+    "amd_api_headers": "v2.3.0",
+    "ngx_library_sha256": "36eab29264c2a06456ba8415f20086aea36f0cbb314d020085cb288cc06bb9ae",
+    "intel_xess_sdk": "3.0.2"
+  },
+  "scope": "All four project renderer/upscaler binaries rebuilt byte-identically from the exported source. Vendor DXVK/AMD/NVIDIA/Intel runtime DLLs and game assets are not rebuilt. SDKs are excluded and separately acquired using retained hash pins/licence notices. Gameplay regression evidence is retained separately; this is a source-build verification.",
+  "retained_for_checkpoint": 269,
+  "carry_forward_scope": "Fresh exact264 source build retained; all implementation inputs and both current269 runtime outputs rechecked byte-identical. No new paired compile claimed."
+}

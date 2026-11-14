@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "project": "Vice City Actual Next Gen CE",
-  "release_checkpoint": 254,
-  "scope": "Checkpoint254 VCANGCE.Zip current gameplay assembly sources; the mixed runtime IMG also contains preserved network scripts and model/texture/cutscene resources.",
+  "release_checkpoint": 269,
+  "scope": "Checkpoint269 VCANGCE-269.zip current gameplay assembly sources; the mixed runtime IMG also contains preserved network scripts and model/texture/cutscene resources.",
   "mixed_container": true,
   "image": {
     "bytes": 859693056,
@@ -40603,7 +40603,7 @@
   ],
   "build_dependency": {
     "path": "update/common/data/cdimages/script.img",
-    "origin": "Matching VCANGCE.Zip release payload, supplied via --resources-from",
+    "origin": "Matching VCANGCE-269.zip release payload, supplied via --resources-from",
     "sha256": "ddb8dc6f3d1944f92fd92d96a36839464a6885ce26e003e8a6092ffd74517d3a",
     "bytes": 859693056,
     "reason": "No game assets or network SCO binaries are embedded in this source export. All 4,200 noncanonical allocations must be preserved from the matching release."

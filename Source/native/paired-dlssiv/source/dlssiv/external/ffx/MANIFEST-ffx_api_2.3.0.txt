@@ -1,0 +1,127 @@
+# AMD'S FILES IN external\ffx\ffx_api_2.3.0 (2026-10-06, the own build of AMD's frame generation, stage 1a)
+#
+# AMD FidelityFX SDK, public MIT source, in the SDK's own layout: ffx_api_2.3.0\ here is Kits/FidelityFX/ there.
+# repository: https://github.com/GPUOpen-LibrariesAndSDKs/FidelityFX-SDK
+# tag: v2.3.0
+# commit: 60f4ea81909200d8542eca14dccb2628b763a9a3
+# tree: 9db364dd6d49f71bd2026f56763001f2ad3bf783
+#
+# Every file is the tag's, byte for byte, AMD's LF line endings included: src\DLSS-IV\.gitattributes keeps git's
+# line-ending conversion out of the folder. No file of AMD's is patched. What the build needs and AMD does not publish
+# is in files of our own under src\DLSS-IV\ffx-own (the provider list, two stubs, a one-macro pix3.h, the generated
+# shader headers).
+#
+# tools\ffx-own\ffx_manifest.py checks this list offline. The id is git's: sha1 of "blob <size>", a zero byte and the
+# bytes, which is the id AMD's repository shows for the path at the tag. A file in the folder that is not listed here
+# fails the check.
+#
+# use:
+#   own     read by the own build: compiled by build-ffx-own.ps1 or by tools\ffx-own\gen_shaders.py, or included by a
+#           file that is. The own build reads no other file of AMD's.
+#   helper  in the folder since 2026-09-24 for dlssiv-helper.exe, and read by our probe; the own build does not read
+#           it. Six more of the helper's eight headers are rows "own": both read them.
+#   notice  AMD's licence and its list of third-party components.
+#   record  AMD's two shader build scripts: the dxc arguments gen_shaders.py repeats are theirs. They are not run
+#           (they call FidelityFX_SC.exe, which AMD does not publish at this tag).
+#
+# backend/dx12/d3dx12.h is Microsoft's (MIT, its notice at its head), as AMD's tree carries it.
+#
+# use  git blob id                                 size  path at the tag  path under external\ffx
+notice 2c2061077425a8590b8c066ae6c6addf27d4e172    2441 3rdpartynotice.md ffx_api_2.3.0/3rdpartynotice.md
+own    1b711807c597630f4a8d2dfa2572a845c069829a   11323 Kits/FidelityFX/api/include/dx12/ffx_api_dx12.h ffx_api_2.3.0/api/include/dx12/ffx_api_dx12.h
+own    484ec23fa38a34c9061451cffd9f420ec2f7c1e8   10726 Kits/FidelityFX/api/include/ffx_api.h ffx_api_2.3.0/api/include/ffx_api.h
+own    bda66b2cee5eae0f0e24eec3d9fd80b6d3caa307    5884 Kits/FidelityFX/api/include/ffx_api.hpp ffx_api_2.3.0/api/include/ffx_api.hpp
+helper ac05ec4bbd5d338643825d81c0ffccd5fbbd1c3e    2977 Kits/FidelityFX/api/include/ffx_api_loader.h ffx_api_2.3.0/api/include/ffx_api_loader.h
+own    07c0da20c8ae370caaa8bc674e7f22df83cbf163   13636 Kits/FidelityFX/api/include/ffx_api_types.h ffx_api_2.3.0/api/include/ffx_api_types.h
+own    f377b722da697644bb8868f8aa49bd7d0198f286    7398 Kits/FidelityFX/api/internal/ffx_api.cpp ffx_api_2.3.0/api/internal/ffx_api.cpp
+own    85c47124890e0d45cec1c05fe4a7c782c2860db9    3804 Kits/FidelityFX/api/internal/ffx_api_helper.h ffx_api_2.3.0/api/internal/ffx_api_helper.h
+own    25791b9daf8fc74d7cf4dfb3cb70a532da314151    2655 Kits/FidelityFX/api/internal/ffx_assert.cpp ffx_api_2.3.0/api/internal/ffx_assert.cpp
+own    f397618762c955731dd0fe372b5f24e08e0a92e2    5299 Kits/FidelityFX/api/internal/ffx_assert.h ffx_api_2.3.0/api/internal/ffx_assert.h
+own    cca8cb8ebc9b1afab6c16110a934b012b727af5c    1967 Kits/FidelityFX/api/internal/ffx_backends.h ffx_api_2.3.0/api/internal/ffx_backends.h
+own    7b286c1db36465bcbc60ee4a2417cd4571fc152b    4260 Kits/FidelityFX/api/internal/ffx_error.h ffx_api_2.3.0/api/internal/ffx_error.h
+own    9c2dba221f6b8e01a2bb50e7cac1826bce5354aa   29277 Kits/FidelityFX/api/internal/ffx_interface.h ffx_api_2.3.0/api/internal/ffx_interface.h
+own    85439154ceb542562333004012397f7b2c1a4078   50689 Kits/FidelityFX/api/internal/ffx_internal_types.h ffx_api_2.3.0/api/internal/ffx_internal_types.h
+own    eaac527eed8e6d32cae0009c15a7985643fbc3b8    2747 Kits/FidelityFX/api/internal/ffx_message.cpp ffx_api_2.3.0/api/internal/ffx_message.cpp
+own    d01d39afe7962ede28ad879f6c826506db1c85cb    3354 Kits/FidelityFX/api/internal/ffx_message.h ffx_api_2.3.0/api/internal/ffx_message.h
+own    c22b3c999288f814ef6dd67f6603922b50090bcd    2155 Kits/FidelityFX/api/internal/ffx_object_management.cpp ffx_api_2.3.0/api/internal/ffx_object_management.cpp
+own    ee2aabdcb92d1fecb57492083fb920170877a140    1769 Kits/FidelityFX/api/internal/ffx_object_management.h ffx_api_2.3.0/api/internal/ffx_object_management.h
+own    7f8d5407a1669a4c03901fcce7d1571c11913b1c   11115 Kits/FidelityFX/api/internal/ffx_provider.h ffx_api_2.3.0/api/internal/ffx_provider.h
+own    50094f2c6aac5a318a33b4f9cb5658f2159953b7   11002 Kits/FidelityFX/api/internal/ffx_query_fallback.cpp ffx_api_2.3.0/api/internal/ffx_query_fallback.cpp
+own    9311944990aa1e4dd2d3bb82dbb3b67d781032ef    7355 Kits/FidelityFX/api/internal/ffx_util.h ffx_api_2.3.0/api/internal/ffx_util.h
+own    076e2828973f4300962a8124bac22f48a071213c   16164 Kits/FidelityFX/api/internal/gpu/ffx_common_types.h ffx_api_2.3.0/api/internal/gpu/ffx_common_types.h
+own    fdeecf6cd9c00ebf589c34a26321206199c8fe11    2522 Kits/FidelityFX/api/internal/gpu/ffx_core.h ffx_api_2.3.0/api/internal/gpu/ffx_core.h
+own    ed254147c9174f74b1cca1792b721cc705a6f442   15402 Kits/FidelityFX/api/internal/gpu/ffx_core_cpu.h ffx_api_2.3.0/api/internal/gpu/ffx_core_cpu.h
+own    4ef2dbd23ade02da7cf95da1d90de3c22b646ae0   87727 Kits/FidelityFX/api/internal/gpu/ffx_core_gpu_common.h ffx_api_2.3.0/api/internal/gpu/ffx_core_gpu_common.h
+own    3270ab12048df507fac0bcbde4e1859ecc028747   98319 Kits/FidelityFX/api/internal/gpu/ffx_core_gpu_common_half.h ffx_api_2.3.0/api/internal/gpu/ffx_core_gpu_common_half.h
+own    d617c5bbc8c6820fb91d9817db4824c60aca2668   61821 Kits/FidelityFX/api/internal/gpu/ffx_core_hlsl.h ffx_api_2.3.0/api/internal/gpu/ffx_core_hlsl.h
+own    b488f5c97a72e61c5c48b41a09274681a3eea702    1682 Kits/FidelityFX/api/internal/gpu/ffx_core_portability.h ffx_api_2.3.0/api/internal/gpu/ffx_core_portability.h
+own    56b7f2ea35740276d6143a482110b83f1bf85d00  343137 Kits/FidelityFX/backend/dx12/d3dx12.h ffx_api_2.3.0/backend/dx12/d3dx12.h
+own    9496787b0478de830b571a3f6b8ab1bc53a19357    6853 Kits/FidelityFX/backend/dx12/ffx_backends_dx12.cpp ffx_api_2.3.0/backend/dx12/ffx_backends_dx12.cpp
+own    83bf8e97bd40f38e27f2ecd1256856ea65144dee  186870 Kits/FidelityFX/backend/dx12/ffx_dx12.cpp ffx_api_2.3.0/backend/dx12/ffx_dx12.cpp
+own    66e43c0af4b295a72cfe7d20b11a42d48e475344   21729 Kits/FidelityFX/backend/dx12/ffx_dx12.h ffx_api_2.3.0/backend/dx12/ffx_dx12.h
+notice a80304f4edb2a86ae349e39872ea9c87a39c6f97   60891 Kits/FidelityFX/docs/license.md ffx_api_2.3.0/docs/license.md
+record 67e8c4a13a88b68e090749296c4f6121ad23028d    3884 Kits/FidelityFX/framegeneration/fsr3/dx12/BuildFrameInterpolationShaders.bat ffx_api_2.3.0/framegeneration/fsr3/dx12/BuildFrameInterpolationShaders.bat
+record 28067fefadab384ce6633f59b4377c1cc69b153b    3403 Kits/FidelityFX/framegeneration/fsr3/dx12/BuildOpticalFlowShaders.bat ffx_api_2.3.0/framegeneration/fsr3/dx12/BuildOpticalFlowShaders.bat
+own    6927911dd7549460d20317d08e9b7af143ed846e   24899 Kits/FidelityFX/framegeneration/fsr3/include/ffx_frameinterpolation.h ffx_api_2.3.0/framegeneration/fsr3/include/ffx_frameinterpolation.h
+own    15a76f0b7b71c8829d61b351dd0942de537381f7   12938 Kits/FidelityFX/framegeneration/fsr3/include/ffx_opticalflow.h ffx_api_2.3.0/framegeneration/fsr3/include/ffx_opticalflow.h
+own    986e950a7a29878e2808f404fdd95e50a9999669    2065 Kits/FidelityFX/framegeneration/fsr3/include/ffx_provider_fsr3framegeneration.h ffx_api_2.3.0/framegeneration/fsr3/include/ffx_provider_fsr3framegeneration.h
+own    93f4907eb1ec92301a8bf09d9d51b03600ca72e1    8181 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation.h
+own    58c9ba8ea70c1b627b351d7640c55bcd766d7267   31891 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_callbacks_hlsl.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_callbacks_hlsl.h
+own    afa5c5c93929e0a07bfeee738c58db38eb6e3701   16208 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_common.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_common.h
+own    f5d351372559b984a2487ca246958fbb7dac15ea    4079 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_compute_game_vector_field_inpainting_pyramid.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_compute_game_vector_field_inpainting_pyramid.h
+own    22635c141a58ea24c835699297167f9f5bca43f1    4062 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_compute_inpainting_pyramid.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_compute_inpainting_pyramid.h
+own    fcf360decfa2e4a9a67a75c5b9489dfe756551ae    6143 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_debug_view.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_debug_view.h
+own    1ee2cf93f4cbe91fd10ff92f309e6ac771dc3402    7366 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_disocclusion_mask.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_disocclusion_mask.h
+own    03ca2fa51707ff92bccda9c785090640188c9c4b    6801 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_game_motion_vector_field.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_game_motion_vector_field.h
+own    d87d1c819f02ccdaa9f4c84121c11d08b99cede9    5282 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_inpainting.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_inpainting.h
+own    a4c033269fc8c869ffea9e8c0cbd7fe50761b488    5304 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_optical_flow_vector_field.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_optical_flow_vector_field.h
+own    9f4de643d6ff8895b127c105cc468e2abcf4d64f    4783 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_reconstruct_dilated_velocity_and_previous_depth.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_reconstruct_dilated_velocity_and_previous_depth.h
+own    38bf02dce17f406a70990c0cf725dc33e7e1e70c    3002 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_reconstruct_previous_depth.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_reconstruct_previous_depth.h
+own    d32049b91ec523d71c90f53ec3a2560b8a4bff61    6643 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_resources.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_resources.h
+own    f4d67672b3c95d19fc6bb53f70db15ffa413a5ab    2057 Kits/FidelityFX/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_setup.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/frameinterpolation/ffx_frameinterpolation_setup.h
+own    777649ca4d043e98ab36d70c72018018e7c0ec9b   25015 Kits/FidelityFX/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_callbacks_hlsl.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_callbacks_hlsl.h
+own    beefe5b06833573f856400bed100c7355f7a7f6b    3449 Kits/FidelityFX/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_common.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_common.h
+own    5e5ee53414f89e9d5e3dc004b0bcf7da510a63c9    3246 Kits/FidelityFX/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_compute_luminance_pyramid.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_compute_luminance_pyramid.h
+own    a96184e9e019624d2b090d5c276f734fad5ea748   10887 Kits/FidelityFX/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_compute_optical_flow_v5.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_compute_optical_flow_v5.h
+own    9e66e8e1026bcd34f6328dc115cf2b9bd4516753    6875 Kits/FidelityFX/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_compute_scd_divergence.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_compute_scd_divergence.h
+own    d26e08bf943cd9d1ed2d696b044f7c1e7386cd3b    2122 Kits/FidelityFX/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_filter_optical_flow_v5.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_filter_optical_flow_v5.h
+own    5492fa8bb7f73fab924b2cb8f81aa742045098b2    3652 Kits/FidelityFX/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_generate_scd_histogram.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_generate_scd_histogram.h
+own    52ff3d4443b86a04f85446447abac4d92617673b    3977 Kits/FidelityFX/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_prepare_luma.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_prepare_luma.h
+own    a17d46802fdd43de94d1c0c0e69999a1ab41eaaf    3604 Kits/FidelityFX/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_resources.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_resources.h
+own    9a22fa2cd2142216cce02714e94c52b5cfd10d07    3598 Kits/FidelityFX/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_scale_optical_flow_advanced_v5.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/opticalflow/ffx_opticalflow_scale_optical_flow_advanced_v5.h
+own    c1ed5371ed472b76d45def59960a8ef52e5565a6   42614 Kits/FidelityFX/framegeneration/fsr3/include/gpu/spd/ffx_spd.h ffx_api_2.3.0/framegeneration/fsr3/include/gpu/spd/ffx_spd.h
+own    c0831bab2cb7fd568e251912adaa57e34bef803a   83848 Kits/FidelityFX/framegeneration/fsr3/internal/ffx_frameinterpolation.cpp ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_frameinterpolation.cpp
+own    079ed4ae16680eb6b7922684795995117f5b628a    6235 Kits/FidelityFX/framegeneration/fsr3/internal/ffx_frameinterpolation_private.h ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_frameinterpolation_private.h
+own    c3cbf1a85841a83fa8b09fdf64e377257092deb1   18579 Kits/FidelityFX/framegeneration/fsr3/internal/ffx_frameinterpolation_shaderblobs.cpp ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_frameinterpolation_shaderblobs.cpp
+own    cbf3b413c7b19937df5837470c4666a38dfc26f8    1765 Kits/FidelityFX/framegeneration/fsr3/internal/ffx_frameinterpolation_shaderblobs.h ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_frameinterpolation_shaderblobs.h
+own    ce00929f69438d438af9e3ab234d864998e3e1b2   77099 Kits/FidelityFX/framegeneration/fsr3/internal/ffx_opticalflow.cpp ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_opticalflow.cpp
+own    c3371ad1c1f5274bdbd8023412b36b146256d5b3    4468 Kits/FidelityFX/framegeneration/fsr3/internal/ffx_opticalflow_private.h ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_opticalflow_private.h
+own    04ebcf72d5d91cc02432689102366e25912be727   12285 Kits/FidelityFX/framegeneration/fsr3/internal/ffx_opticalflow_shaderblobs.cpp ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_opticalflow_shaderblobs.cpp
+own    77e1731021ec2262f174cc2cc39e7ba1cc9b1c4e    1736 Kits/FidelityFX/framegeneration/fsr3/internal/ffx_opticalflow_shaderblobs.h ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_opticalflow_shaderblobs.h
+own    37b7e42af2d4d59995642faf5724727c367ebd71   46133 Kits/FidelityFX/framegeneration/fsr3/internal/ffx_provider_fsr3framegeneration.cpp ffx_api_2.3.0/framegeneration/fsr3/internal/ffx_provider_fsr3framegeneration.cpp
+own    ba3ca2a5e52dbb5efe7bbbf9131b2aec7bcf4fa8    4013 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_compute_game_vector_field_inpainting_pyramid_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_compute_game_vector_field_inpainting_pyramid_pass.hlsl
+own    3fb91cfb8d13e754df6c73477da4bc0d3c53fed1    3836 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_compute_inpainting_pyramid_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_compute_inpainting_pyramid_pass.hlsl
+own    264d1a0057d8362a9b558d9d59dee3b92c67248e    3215 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_debug_view_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_debug_view_pass.hlsl
+own    ff921ccbe825e80a49110611d0729638d9b6873b    3065 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_disocclusion_mask_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_disocclusion_mask_pass.hlsl
+own    92e221631f145108ae757c79685b324fb99d1331    2986 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_game_motion_vector_field_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_game_motion_vector_field_pass.hlsl
+own    660f31763421e272da52b79d5fda0da5ab56d779    2888 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_inpainting_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_inpainting_pass.hlsl
+own    f029c7e8a1abf566cdc16725939a69efc512a1eb    2997 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_optical_flow_vector_field_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_optical_flow_vector_field_pass.hlsl
+own    46f6bc49ffc44749d30487776367940f12b53306    3295 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_pass.hlsl
+own    eda4db065d6083ca6a7bb54ceaad1d1e08da18c4    2933 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_reconstruct_and_dilate_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_reconstruct_and_dilate_pass.hlsl
+own    0c2bb581ad281881ee31682e2aa40a7d76ac6f29    2829 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_reconstruct_previous_depth_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_reconstruct_previous_depth_pass.hlsl
+own    7757963c0d64fb9b2896adbadf17241b02b18049    2980 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_setup_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_frameinterpolation_setup_pass.hlsl
+own    c7789679da66f1e1c4eca396d85c9a5b52e23b47    2850 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_opticalflow_compute_luminance_pyramid_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_compute_luminance_pyramid_pass.hlsl
+own    27733a308c282a80bc096f4d144b0b8a0d9e4647    2851 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_opticalflow_compute_optical_flow_advanced_pass_v5.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_compute_optical_flow_advanced_pass_v5.hlsl
+own    3a304ef86f22873f3314e7c190dcac783c7cfc27    2872 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_opticalflow_compute_scd_divergence_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_compute_scd_divergence_pass.hlsl
+own    1e923e36347a57865fc34bd870892ee0fc5ec793    2616 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_opticalflow_filter_optical_flow_pass_v5.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_filter_optical_flow_pass_v5.hlsl
+own    93e348c654ce739b108044cc073552972a8e3c4e    2530 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_opticalflow_generate_scd_histogram_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_generate_scd_histogram_pass.hlsl
+own    d7fec0c6feeafa51d573342addad7491b3ac6541    2155 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_opticalflow_prepare_luma_pass.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_prepare_luma_pass.hlsl
+own    a5a8de0eaef64dbc2554bb6fca62baabb1b14b27    2562 Kits/FidelityFX/framegeneration/fsr3/internal/shaders/ffx_opticalflow_scale_optical_flow_advanced_pass_v5.hlsl ffx_api_2.3.0/framegeneration/fsr3/internal/shaders/ffx_opticalflow_scale_optical_flow_advanced_pass_v5.hlsl
+own    8bc71ca2628552aa544abc8b205f267713916d1c   10575 Kits/FidelityFX/framegeneration/include/dx12/ffx_api_framegeneration_dx12.h ffx_api_2.3.0/framegeneration/include/dx12/ffx_api_framegeneration_dx12.h
+own    5ca5486460744e4357e30d3d273d7f12019fb5b1   26206 Kits/FidelityFX/framegeneration/include/ffx_framegeneration.h ffx_api_2.3.0/framegeneration/include/ffx_framegeneration.h
+own    baac01b2b5ec4ef220e62eb3fae26ef7784f25c1    5786 Kits/FidelityFX/framegeneration/include/ffx_framegeneration.hpp ffx_api_2.3.0/framegeneration/include/ffx_framegeneration.hpp
+own    e7e514ddb6666753de3b14f720d8e6774339b0b9    4976 Kits/FidelityFX/framegeneration/include/ffx_framegeneration_api_types.h ffx_api_2.3.0/framegeneration/include/ffx_framegeneration_api_types.h
+own    1c3c075ac73b6e1d5cad7abc156c2cfcef2dc7a8   12983 Kits/FidelityFX/framegeneration/internal/ffx_framegeneration_internal.h ffx_api_2.3.0/framegeneration/internal/ffx_framegeneration_internal.h
+own    ba4bd1c5274f3943a93dd5443a736450ad1b2361    7863 Kits/FidelityFX/upscalers/fsr3/include/gpu/fsr2/ffx_fsr2_resources.h ffx_api_2.3.0/upscalers/fsr3/include/gpu/fsr2/ffx_fsr2_resources.h
+own    4858a7dff27072f05ce45e6d9d90ed84b7c118bb    2996 Kits/FidelityFX/upscalers/fsr3/include/gpu/fsr3/ffx_fsr3_resources.h ffx_api_2.3.0/upscalers/fsr3/include/gpu/fsr3/ffx_fsr3_resources.h
+helper 021ac23c179265752f5e6b66ef8487d8c12d17e9   19313 Kits/FidelityFX/upscalers/include/ffx_upscale.h ffx_api_2.3.0/upscalers/include/ffx_upscale.h
